@@ -1,0 +1,178 @@
+{
+  "schema": "evo-edu.notebook.reasoning_scaffold.v1",
+  "id": "notebook.concepts.allele-frequency-change",
+  "title": "Allele Frequency Change",
+  "created": "2026-05-13",
+  "updated": "2026-05-13",
+  "status": "pilot-reviewed-scaffold",
+  "derived_from": {
+    "paper": "Inverse Knowledge Search over Verifiable Reasoning: Synthesizing a Scientific Encyclopedia from a Long Chains-of-Thought Knowledge Base",
+    "local_note": "[redacted private source locator]",
+    "method_adapted": [
+      "Keep reviewed reasoning records separate from polished prose.",
+      "Retrieve by concept targets and nearby reasoning, not only by title keywords.",
+      "Expose only concise, checkable explanations rather than raw hidden chains of thought."
+    ]
+  },
+  "concept_targets": [
+    "allele frequency",
+    "population genetics",
+    "genetic drift",
+    "natural selection",
+    "migration",
+    "mutation",
+    "fixation",
+    "loss",
+    "Hardy-Weinberg expectation"
+  ],
+  "site_links": [
+    {
+      "kind": "pack",
+      "title": "Population Change",
+      "url": "/evo/packs/population-change/"
+    },
+    {
+      "kind": "app",
+      "title": "Allele Tracker",
+      "url": "/apps/allele-tracker/"
+    },
+    {
+      "kind": "guide",
+      "title": "Allele Tracker Study Guide",
+      "url": "/apps/allele-tracker/study-guide.html"
+    },
+    {
+      "kind": "research_tool",
+      "title": "Literature Explorer",
+      "url": "/apps/literature-explorer/"
+    }
+  ],
+  "records": [
+    {
+      "id": "afc-001",
+      "type": "definition-check",
+      "question": "What counts as evolution in population genetics?",
+      "answer_summary": "A population has evolved when allele frequencies change across generations. Individual organisms change during life, but they do not evolve in this population-genetic sense.",
+      "verification_prompt": "Name the population, allele, starting frequency, later frequency, and generation interval.",
+      "misconception_guard": "Do not describe a single organism adapting during its lifetime as allele-frequency evolution.",
+      "didactopus_prompt_seed": "Rewrite the claim so the population, allele, and generation comparison are explicit."
+    },
+    {
+      "id": "afc-002",
+      "type": "mechanism-contrast",
+      "question": "How is selection different from drift?",
+      "answer_summary": "Selection is biased by heritable differences in reproductive success. Drift is sampling change that is not directed by allele advantage.",
+      "verification_prompt": "Compare repeated runs under the same conditions. Does the same directional pattern persist, or do outcomes vary strongly among trials?",
+      "misconception_guard": "A directional-looking graph from one run is not enough to infer selection.",
+      "didactopus_prompt_seed": "State one observation that supports selection and one observation that would make drift more plausible."
+    },
+    {
+      "id": "afc-003",
+      "type": "scale-check",
+      "question": "Why does drift matter more in small populations?",
+      "answer_summary": "Random sampling error is larger when fewer individuals contribute to the next generation, so allele frequencies can jump, disappear, or fix more quickly.",
+      "verification_prompt": "Run the same initial frequency with small and large population sizes and compare fixation or loss across repeated trials.",
+      "misconception_guard": "Do not treat drift as weak selection; it is chance sampling, not preference for a trait.",
+      "didactopus_prompt_seed": "Explain why two small-population runs with the same settings can end differently."
+    },
+    {
+      "id": "afc-004",
+      "type": "application",
+      "question": "What does migration change?",
+      "answer_summary": "Migration changes allele frequencies when migrants carry allele frequencies different from the receiving population. It can homogenize populations or introduce alleles absent locally.",
+      "verification_prompt": "Track source and recipient populations before and after migration; compare whether their frequencies moved closer together.",
+      "misconception_guard": "Migration is not automatically evolution unless it changes heritable composition across generations.",
+      "didactopus_prompt_seed": "Describe how the evidence would differ between migration and independent selection in both populations."
+    },
+    {
+      "id": "afc-005",
+      "type": "source-of-variation",
+      "question": "Why include mutation if the short-term frequency effect is small?",
+      "answer_summary": "Mutation introduces new heritable variants. Its immediate frequency effect may be small, but it supplies variation that drift, selection, and migration can later alter.",
+      "verification_prompt": "Identify whether the allele existed before the run and whether later mechanisms changed its frequency.",
+      "misconception_guard": "Mutation is not the same thing as selection, and it does not need to be beneficial to enter the population.",
+      "didactopus_prompt_seed": "Separate the source of a new allele from the later reason its frequency changed."
+    },
+    {
+      "id": "afc-006",
+      "type": "equilibrium-baseline",
+      "question": "Why use Hardy-Weinberg expectations?",
+      "answer_summary": "Hardy-Weinberg expectations provide a baseline for genotype frequencies under restrictive assumptions. Deviations help learners ask which assumptions may have been violated.",
+      "verification_prompt": "List the assumptions being used as a null model before naming the evolutionary force.",
+      "misconception_guard": "Do not treat Hardy-Weinberg as a claim that real populations never evolve.",
+      "didactopus_prompt_seed": "Use the baseline to frame one testable question rather than as an answer."
+    },
+    {
+      "id": "afc-007",
+      "type": "evidence-check",
+      "question": "What evidence is needed before claiming an allele is adaptive?",
+      "answer_summary": "A rising allele frequency alone is not enough. The claim needs evidence tying the allele to heritable variation in survival or reproduction in the relevant environment.",
+      "verification_prompt": "Ask what trait effect, fitness difference, environmental context, and alternative mechanisms have been checked.",
+      "misconception_guard": "Avoid assuming every common allele is beneficial.",
+      "didactopus_prompt_seed": "Name a competing explanation and a model run or source that could test it."
+    },
+    {
+      "id": "afc-008",
+      "type": "model-limits",
+      "question": "What can an Allele Tracker run prove?",
+      "answer_summary": "A simulation can show whether a mechanism is sufficient to produce a pattern under specified assumptions. It does not by itself prove that the same mechanism caused a real historical case.",
+      "verification_prompt": "State the assumptions, parameter values, and missing real-world evidence.",
+      "misconception_guard": "Do not move from model sufficiency to historical proof without source evidence.",
+      "didactopus_prompt_seed": "Write one sentence about what the model shows and one sentence about what remains unknown."
+    },
+    {
+      "id": "afc-009",
+      "type": "revision",
+      "question": "When should a learner revise an explanation?",
+      "answer_summary": "Revise when repeated trials, changed parameters, or source evidence make the original mechanism less plausible than an alternative or mixed explanation.",
+      "verification_prompt": "Identify which observation conflicted with the first explanation and what replacement explanation fits better.",
+      "misconception_guard": "Revision is not failure; it is the expected response to better evidence.",
+      "didactopus_prompt_seed": "Keep the original prediction visible and add a one-sentence revision after the new run."
+    },
+    {
+      "id": "afc-010",
+      "type": "concept-bridge",
+      "question": "How does this concept connect to the rest of evolution?",
+      "answer_summary": "Allele-frequency change links inheritance, variation, population structure, ecology, and long-term evolutionary patterns. It provides the measurable bridge between mechanism and historical change.",
+      "verification_prompt": "Connect the allele-level explanation to a trait, population, environment, and timescale.",
+      "misconception_guard": "Do not reduce evolution to allele counts alone when trait function, ecology, and history are also relevant.",
+      "didactopus_prompt_seed": "Map the claim from allele to trait to population to evidence."
+    }
+  ],
+  "citegeist_source_slots": [
+    {
+      "slot": "hardy-weinberg-baseline",
+      "needed_for": "Hardy-Weinberg expectations and null-model framing",
+      "candidate_queries": [
+        "Hardy 1908 Mendelian proportions mixed population",
+        "Weinberg 1908 genotype frequencies population equilibrium"
+      ],
+      "review_status": "pending"
+    },
+    {
+      "slot": "genetic-drift-foundations",
+      "needed_for": "Drift, population size, fixation, and sampling effects",
+      "candidate_queries": [
+        "Wright 1931 evolution in Mendelian populations genetic drift",
+        "Kimura 1968 evolutionary rate at molecular level neutral mutation"
+      ],
+      "review_status": "pending"
+    },
+    {
+      "slot": "selection-foundations",
+      "needed_for": "Selection as heritable differences in reproductive success",
+      "candidate_queries": [
+        "Fisher 1930 genetical theory natural selection",
+        "Haldane 1932 causes of evolution selection"
+      ],
+      "review_status": "pending"
+    }
+  ],
+  "doclift_use": "Use this JSON as a fixture for extracting stable concept records from longer Notebook prose, app guides, and bibliography notes.",
+  "groundrecall_use": "Store revisions and unresolved source-slot decisions as durable notes so future Notebook expansion can retrieve the rationale.",
+  "next_review_steps": [
+    "Backfill reviewed citations through CiteGeist or Literature Explorer.",
+    "Add one worked Allele Tracker example with parameter values and screenshots.",
+    "Connect records to pathway pages for middle-school, high-school, and self-learner audiences."
+  ]
+}

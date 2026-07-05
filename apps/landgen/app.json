@@ -1,0 +1,11 @@
+{
+  "slug": "landgen",
+  "title": "Landscape Genetics Simulator",
+  "published": false,
+  "visibility": "legacy",
+  "role": "Legacy implementation directory for the public Gene Flow Mapper route.",
+  "category": "population-genetics",
+  "entrypoint": "/apps/landgen/index.html",
+  "description": "Retained behind the public Gene Flow Mapper framing.",
+  "legacy_names": ["landgen", "Landscape Genetics Simulator"]
+}

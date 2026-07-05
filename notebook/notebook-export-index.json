@@ -1,0 +1,29 @@
+{
+  "schema": "evo-edu.notebook.export_index.v1",
+  "id": "evo-edu.notebook.export-index",
+  "title": "Notebook Export Index",
+  "updated": "2026-05-14",
+  "intent": "List the currently discoverable Notebook bundles and their export artifacts so the Notebook stack does not assume a single current path.",
+  "default_bundle_id": "foundations-first-ring",
+  "bundle_discovery_root": "/notebook/learning-paths",
+  "bundle_naming_rule": "<bundle-id>.json plus matching .didactopus.json and .selection-policy.json",
+  "bundles": [
+    {
+      "bundle_id": "foundations-first-ring",
+      "paths": {
+        "learning_path": "/notebook/learning-paths/foundations-first-ring.json",
+        "didactopus_learning_sequence": "/notebook/learning-paths/foundations-first-ring.didactopus.json",
+        "selection_policy": "/notebook/learning-paths/foundations-first-ring.selection-policy.json",
+        "export_manifest": "/notebook/learning-paths/foundations-first-ring.export-manifest.json",
+        "export_status_json": "/notebook/learning-paths/foundations-first-ring.export-status.json",
+        "export_status_markdown": "/notebook/learning-paths/foundations-first-ring.export-status.md"
+      },
+      "counts": {
+        "learning_path_steps": 8
+      }
+    }
+  ],
+  "derived_counts": {
+    "bundle_total": 1
+  }
+}

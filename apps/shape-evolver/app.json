@@ -1,0 +1,59 @@
+{
+  "slug": "shape-evolver",
+  "title": "Shape Evolver",
+  "published": true,
+  "visibility": "public",
+  "role": "Explore how small inherited changes and repeated selection can reshape evolving forms.",
+  "category": "artificial-life",
+  "entrypoint": "/apps/shape-evolver/",
+  "description": "An interactive biomorph-style tool for exploring variation, inheritance, constraint, and visible change over time.",
+  "legacy_names": [
+    "Biomorphs"
+  ],
+  "pages": {
+    "landing": "/apps/shape-evolver/",
+    "application": "/apps/shape-evolver/app/",
+    "study_guide": "/apps/shape-evolver/study-guide.html",
+    "curriculum_alignment": "/apps/shape-evolver/curriculum-alignment.html",
+    "about": "/apps/shape-evolver/about.html"
+  },
+  "implementation": {
+    "engine": "biomorphs",
+    "source_path": "/apps/biomorphs/",
+    "launch_target": "/apps/biomorphs/app.html",
+    "notes": "The Shape Evolver public route now uses the newer Biomorph implementation as its current interactive engine."
+  },
+  "api": {
+    "status": "prototype",
+    "family": "artificial-life",
+    "docs": "/apps/api/artificial-life/",
+    "module": "/apps/api/artificial-life/artificial-life.js",
+    "notes": "A shared browser and node-consumable API module now exists for the artificial-life remediation family."
+  },
+  "tests": {
+    "status": "prototype",
+    "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/artificial-life/artificial-life.test.js",
+    "notes": "A node-based contract test suite now exercises the shared artificial-life family API module."
+  },
+  "status": {
+    "landing": "standardized",
+    "application": "current-biomorph-runtime",
+    "study_guide": "present",
+    "curriculum_alignment": "present",
+    "api": "prototype",
+    "tests": "prototype"
+  },
+  "provenance": {
+    "summary": "Public evo-edu framing over the current Biomorph implementation.",
+    "details": "Shape Evolver is the evo-edu public route for biomorph-style artificial selection. It now launches the newer Biomorph implementation, which adds a parent plus 3x3 litter workflow, mutation legends, save/import/export support, automated fitness evaluators, development animation, and curriculum support pages.",
+    "lineage": [
+      "Public evo-edu route: Shape Evolver",
+      "Current implementation directory: /apps/biomorphs/",
+      "Current launch target: /apps/biomorphs/app.html"
+    ],
+    "limits": [
+      "The runtime is a pedagogical browser model, not a biological-development simulator.",
+      "The displayed forms are generated phenotypes controlled by simplified integer genes."
+    ]
+  }
+}

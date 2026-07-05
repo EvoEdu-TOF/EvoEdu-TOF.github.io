@@ -1,0 +1,11 @@
+{
+  "slug": "tsp",
+  "title": "TSP",
+  "published": false,
+  "visibility": "legacy",
+  "role": "Underlying implementation directory for the public Route Optimizer route.",
+  "category": "artificial-life",
+  "entrypoint": "/apps/tsp/jstsp.html",
+  "description": "Retained behind the public Route Optimizer framing.",
+  "legacy_names": ["Traveling Salesperson GA"]
+}

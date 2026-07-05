@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Network Builder Teacher Guide - evo-edu.org</title>
+  <link rel="stylesheet" href="/shared/evo-edu.css">
+  <script src="/shared/evo-shell.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-topbar">
+      <div class="brand-block">
+        <span class="brand-mark">Artificial Life</span>
+        <a href="/">evo-edu.org</a>
+        <p class="brand-summary">Steiner-style network design app for systems and optimization exploration.</p>
+      </div>
+      <nav class="site-nav" data-evo-nav></nav>
+    </header>
+    <section class="hero-card">
+      <p class="eyebrow">Teacher Guide</p>
+      <h1>Network Builder teacher guide</h1>
+      <p class="lede lede-strong">Use this guide to frame Network Builder as a model of heuristic network search and iterative improvement, not as a black-box solver.</p>
+      <div class="hero-actions">
+        <a class="button-link" href="/apps/network-builder/app/">Open application</a>
+        <a class="button-link-secondary" href="/apps/network-builder/study-guide.html">Learner guide</a>
+        <a class="button-link-secondary" href="/apps/network-builder/standards.html">Standards and alignment</a>
+      </div>
+    </section>
+    <section class="content-card">
+      <p class="section-kicker">Lesson Framing</p>
+      <div class="path-grid">
+        <article class="path-card"><h3>Teacher emphasis</h3><ul class="plain-list"><li>Position the app as an example of optimization in a large solution space.</li><li>Have learners compare repeated runs rather than relying on one dramatic network.</li><li>Keep model limitations visible: this is an optimization model, not a direct biology simulator.</li></ul></article>
+        <article class="path-card"><h3>Suggested sequence</h3><ul class="plain-list"><li>Run the default terminal set once.</li><li>Change one search parameter at a time.</li><li>Discuss why some settings produce better cost trends without proving a globally best network.</li></ul></article>
+      </div>
+    </section>
+    <section class="content-card">
+      <p class="section-kicker">Discussion Moves</p>
+      <div class="path-grid">
+        <article class="path-card"><h3>Questions to ask</h3><ul class="plain-list"><li>What changed when population size increased?</li><li>When did higher mutation seem helpful, and when did it make progress noisy?</li><li>How did terminal placement change the shape of a good network?</li></ul></article>
+        <article class="path-card"><h3>Model-limit reminders</h3><ul class="plain-list"><li>The app uses a simple evolutionary search strategy, not a proof of globally optimal Steiner trees.</li><li>Manual terminal placement is useful for thought experiments, but click accuracy is imperfect.</li><li>Use the results as evidence about search behavior, not as a claim that evolution literally solves network planning problems.</li></ul></article>
+      </div>
+    </section>
+    <footer class="footer-card">
+      <div><h3>Network Builder teacher guide</h3><p>This page separates teacher moves from the learner guide so instructional use is clearer and easier to adapt.</p></div>
+      <small>Updated May 20, 2026</small>
+    </footer>
+  </div>
+</body>
+</html>

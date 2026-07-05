@@ -1,0 +1,66 @@
+{
+  "slug": "network-builder",
+  "title": "Network Builder",
+  "published": true,
+  "visibility": "public",
+  "role": "Explore how search and optimization can build shorter, more efficient networks from the same set of points.",
+  "category": "artificial-life",
+  "entrypoint": "/apps/network-builder/",
+  "description": "An interactive network-design tool for comparing efficiency, tradeoffs, and optimization strategies.",
+  "legacy_names": [
+    "Steiner Tree GA",
+    "steiner"
+  ],
+  "pages": {
+    "landing": "/apps/network-builder/",
+    "application": "/apps/network-builder/app/",
+    "study_guide": "/apps/network-builder/study-guide.html",
+    "curriculum_alignment": "/apps/network-builder/curriculum-alignment.html",
+    "teacher_guide": "/apps/network-builder/teacher-guide.html",
+    "standards": "/apps/network-builder/standards.html",
+    "about": "/apps/network-builder/about.html"
+  },
+  "implementation": {
+    "legacy_hub": "/apps/steiner/",
+    "launch_target": "/apps/steiner/jssteiner.html"
+  },
+  "api": {
+    "status": "prototype",
+    "family": "artificial-life",
+    "docs": "/apps/api/artificial-life/",
+    "module": "/apps/api/artificial-life/artificial-life.js",
+    "notes": "A shared browser and node-consumable API module now exists for the artificial-life remediation family."
+  },
+  "tests": {
+    "status": "prototype",
+    "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/artificial-life/artificial-life.test.js",
+    "notes": "A node-based contract test suite now exercises the shared artificial-life family API module."
+  },
+  "status": {
+    "landing": "standardized",
+    "application": "direct-workbench",
+    "study_guide": "present",
+    "teacher_guide": "present",
+    "standards": "present",
+    "curriculum_alignment": "present",
+    "api": "prototype",
+    "tests": "prototype"
+  },
+  "provenance": {
+    "summary": "Public evo-edu route over the older Steiner-style network optimization implementation, now with a direct workbench and separated support surfaces.",
+    "details": "Network Builder is built on a JavaScript and HTML Steiner-style network optimization demo. The older implementation presented the search directly from the /apps/steiner/ route. The current evo-edu route now adds a direct responsive workbench, separated support pages, and clearer provenance around that implementation.",
+    "lineage": [
+      "Public evo-edu route: Network Builder",
+      "Current direct workbench: /apps/network-builder/app/",
+      "Legacy implementation directory preserved as archive: /apps/steiner/",
+      "Legacy launch target: /apps/steiner/jssteiner.html",
+      "Legacy implementation note: the older page identifies the demo as a ChatGPT-assisted implementation of Dave Thomas's Steiner Tree problem description and PandasThumb discussion"
+    ],
+    "limits": [
+      "The workbench demonstrates heuristic network search behavior, but it is not a proof-producing Steiner-tree optimizer.",
+      "The implementation still assumes a fixed small number of additional Steiner points.",
+      "Manual terminal placement click accuracy still needs improvement.",
+      "The app is useful for systems and optimization discussion, but it should not be over-read as a model of literal biological evolution."
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "slug": "popdyn",
+  "title": "Population Dynamics",
+  "published": false,
+  "visibility": "legacy",
+  "role": "Underlying implementation directory for the public Life Cycle Modeler route.",
+  "category": "ecology",
+  "entrypoint": "/apps/popdyn/popdyn2.html",
+  "description": "Retained behind the public Life Cycle Modeler framing.",
+  "legacy_names": ["Population Dynamics"]
+}

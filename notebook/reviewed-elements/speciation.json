@@ -1,0 +1,669 @@
+{
+  "schema": "evo-edu.notebook.reviewed_elements.v1",
+  "generated": "2026-06-30",
+  "concept_id": "notebook.concepts.speciation",
+  "items": [
+    {
+      "id": "staged.claim.eldredge-gould.allopatric-fossil-expectations.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.speciation",
+      "title": "Allopatric Speciation Changes What Fossil Sequences Should Look Like",
+      "body": "Eldredge and Gould support teaching that fossil gaps are not always just missing data: if new species often arise in small, peripheral isolates, local fossil sequences may show stasis and abrupt replacement rather than a smooth local transformation series.",
+      "source_anchors": [
+        {
+          "source_id": "eldredge-gould-punctuated-equilibria-1972",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "eldredge-gould-punctuated-equilibria-1972",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Useful for a later fossil record or macroevolution page; keep as reviewed sidecar until public prose can present competing models carefully."
+      },
+      "promotion_targets": [
+        "notebook/concepts/speciation.html",
+        "notebook/concepts/common-descent.html"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.claim.futuyma.gene-flow-barriers-speciation.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.speciation",
+      "title": "Restricted Gene Flow Lets Populations Diverge Toward Speciation",
+      "body": "Futuyma supports connecting speciation to population structure: when gene flow is restricted, local populations can diverge under selection and drift, and continued divergence can produce reproductive isolation and independent evolutionary paths.",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Good bridge between gene flow, drift, natural selection, and the speciation concept page."
+      },
+      "promotion_targets": [
+        "notebook/concepts/speciation.html",
+        "notebook/concepts/genetic-drift.html",
+        "notebook/concepts/natural-selection.html"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.claim.mayr.speciation-isolating-mechanisms.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.speciation",
+      "title": "Speciation Centers On Effective Isolating Mechanisms",
+      "body": "Mayr's What Evolution Is supports the Notebook framing that speciation is not just difference accumulation; for biological species, it involves the acquisition of effective isolating mechanisms, often shaped by geography, ecology, and restricted gene flow.",
+      "source_anchors": [
+        {
+          "source_id": "mayr-what-evolution-is-2002",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as the main current source-trail anchor for speciation foundations and gene-flow/reproductive-isolation explanation."
+      },
+      "promotion_targets": [
+        "notebook/concepts/speciation.html",
+        "notebook/concepts/speciation.scaffold.json"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.example.futuyma.allopolyploid-speciation.001",
+      "kind": "example",
+      "concept_id": "notebook.concepts.speciation",
+      "title": "Allopolyploidy Shows A Hybrid Route Into New Lineages",
+      "body": "Futuyma's discussion of plant hybridization supports using allopolyploidy as a speciation example: hybrid genomes can become reproductively distinct and sometimes found lineages that later diversify, while the chromosomal change alone is not a complete explanation for every later taxonomic difference.",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Useful for showing that speciation mechanisms are plural; keep the caveat that polyploidy does not by itself explain all later divergence."
+      },
+      "promotion_targets": [
+        "notebook/concepts/speciation.html",
+        "notebook/concepts/mutation.html",
+        "notebook/concepts/common-descent.html"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.question.eldredge-gould.fossil-break-model-comparison.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.speciation",
+      "title": "When Is a Fossil Break Evidence Rather Than Just Missing Data?",
+      "body": "A local fossil column shows long morphological stability, then the sudden appearance of a closely related form with no local series of intermediates. What additional geographic, stratigraphic, and morphological evidence would help distinguish a missing-record explanation from an allopatric-speciation explanation?",
+      "source_anchors": [
+        {
+          "source_id": "eldredge-gould-punctuated-equilibria-1972",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "eldredge-gould-punctuated-equilibria-1972",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "eldredge-gould-punctuated-equilibria-1972",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Eldredge and Gould's model-comparison argument. Use as a speciation and fossil-record assessment prompt, not as a claim that every fossil discontinuity has the same cause."
+      },
+      "promotion_targets": [
+        "notebook/concepts/speciation.html",
+        "notebook/concepts/common-descent.html"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "state the phyletic-gradualist missing-record interpretation",
+          "state the allopatric-speciation interpretation involving peripheral isolates",
+          "ask whether geographic variation is more informative than a single local column",
+          "look for stasis within local samples and abrupt appearance without intergradation",
+          "avoid treating every gap as either automatic evidence of evolution or automatic evidence of missing preservation"
+        ],
+        "coverage_note": "This turns the existing Eldredge-Gould claim into a reviewed learner task about comparing explanatory models for fossil patterns."
+      },
+      "mathematical_structure": {
+        "kind": "comparative model-prediction framework",
+        "formal_statement": "Compare observed morphology across geographic samples and stratigraphic levels against two predicted patterns: local gradual transformation versus geographic isolation followed by abrupt local appearance.",
+        "notation_status": "conceptualized; no numerical fossil-character model is imposed",
+        "assumptions": [
+          "samples can be compared across local stratigraphic levels",
+          "geographic distribution data are available or explicitly missing",
+          "morphological characters used for comparison are defined consistently",
+          "model comparison requires predictions, not just post hoc labels"
+        ],
+        "biological_interpretation": "The same local fossil break can support different explanations unless geography, time correlation, and character patterns are considered together."
+      },
+      "question_type": "model comparison",
+      "source_context": {
+        "source_section": "Implications of allopatric speciation for the fossil record; Application of allopatric concepts to paleontological examples",
+        "textbook_prompt_role": "source-mined fossil-record reasoning probe",
+        "edition_or_volume_year": "1972"
+      }
+    },
+    {
+      "id": "staged.question.eldredge-gould.local-column-speciation-inference.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.speciation",
+      "title": "What Should A Local Fossil Column Show?",
+      "body": "A local rock column contains a long-running fossil species and then a closely related form appears abruptly. Under an allopatric-speciation interpretation, what pattern would you expect in the local column, and why would that differ from a phyletic-gradualist expectation?",
+      "source_anchors": [
+        {
+          "source_id": "eldredge-gould-punctuated-equilibria-1972",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Eldredge and Gould's contrast between allopatric speciation and phyletic gradualism. Use as a fossil-record inference prompt."
+      },
+      "promotion_targets": [
+        "notebook/concepts/speciation.html",
+        "notebook/concepts/common-descent.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "state that allopatric speciation can occur in a small peripheral isolate outside the sampled local column",
+          "predict abrupt appearance of a descendant form in the local record if it migrates into the ancestral range",
+          "avoid expecting continuous local intergradation as the default under allopatric speciation",
+          "contrast this with phyletic gradualism, which predicts slow local transformation",
+          "identify geography as an essential dimension of the inference, not just stratigraphic position",
+          "treat fossil pattern as a test of model predictions rather than direct observation of mechanism"
+        ],
+        "coverage_note": "This adds a reviewed speciation probe that connects paleontological pattern to allopatric-process expectations."
+      },
+      "mathematical_structure": {
+        "kind": "qualitative model prediction",
+        "formal_statement": "If a descendant species originated in an unsampled peripheral isolate, a local fossil column through the ancestral range may show stasis followed by abrupt appearance rather than gradual local transformation.",
+        "notation_status": "not applicable",
+        "assumptions": [
+          "fossil sampling is local or regionally incomplete",
+          "the model being tested is allopatric speciation rather than sympatric transformation",
+          "morphological differences can be compared consistently across samples",
+          "geographic and stratigraphic information are both available"
+        ],
+        "biological_interpretation": "Speciation models make different predictions for what paleontologists should expect to see in local sequences."
+      },
+      "question_type": "model comparison",
+      "source_context": {
+        "source_section": "Implications of allopatric speciation for the fossil record",
+        "textbook_prompt_role": "source-mined model-comparison probe",
+        "edition_or_volume_year": "1972"
+      }
+    },
+    {
+      "id": "staged.question.futuyma.hybridization-polyploidy-speciation.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.speciation",
+      "title": "Hybridization And Polyploidy In Speciation",
+      "body": "Why can hybridization and polyploidy be especially important in plant speciation, and what evidence would distinguish a new hybrid species from ordinary gene flow between related species?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Builds on the existing Futuyma allopolyploid example and extends it into an assessment prompt."
+      },
+      "promotion_targets": [
+        "notebook/concepts/speciation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "hybridization can combine divergent genomes",
+          "polyploidy can create immediate reproductive isolation",
+          "evidence should distinguish stable independently reproducing lineages from transient introgression",
+          "plants often tolerate chromosomal changes differently than many animal lineages"
+        ],
+        "coverage_note": "This prompt is supported by existing speciation and allopolyploid staging but may need a clearer public worked example later."
+      },
+      "question_type": "evidence interpretation",
+      "source_context": {
+        "source_section": "FOR DISCUSSION AND THOUGHT",
+        "textbook_prompt_role": "end-of-section discussion question",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.mayr-1982.biological-species-concept-yardstick.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.speciation",
+      "title": "What Changed When Species Became Populations, Not Types?",
+      "body": "Mayr argues that the biological species concept required more than naming visible differences. What changes when species are treated as population-level reproductive communities rather than fixed types, and why does that still not give a simple recipe for delimiting every real species taxon?",
+      "source_anchors": [
+        {
+          "source_id": "mayr-growth-biological-thought-1982",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-growth-biological-thought-1982",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-growth-biological-thought-1982",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-growth-biological-thought-1982",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-25",
+        "notes": "Paraphrased from regenerated pdftotext output and checked against page images from part 004. Use as a bridge from population thinking to species concepts and speciation evidence."
+      },
+      "promotion_targets": [
+        "notebook/concepts/speciation.html",
+        "notebook/concepts/population-thinking.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "explain that species are treated as populations or groups of populations, not as idealized fixed types",
+          "distinguish a reproductive gap from mere degree of morphological difference",
+          "treat the biological species concept as relational: populations are compared by interbreeding, reproductive isolation, and ecological coexistence",
+          "avoid using morphology alone as a decisive species criterion because sibling species and conspicuous morphs can break that shortcut",
+          "state the simplification: exercises may make reproductive isolation, niche relation, and geography clear, while real species delimitation often requires inference across imperfect evidence",
+          "recognize that isolating mechanisms protect population integrity, not necessarily every individual case, so occasional hybridization does not automatically erase species status"
+        ],
+        "coverage_note": "This gives the speciation concept a historical and philosophical bridge from population thinking into evidence-based species delimitation."
+      },
+      "mathematical_structure": {
+        "kind": "category criterion versus taxon delimitation",
+        "formal_statement": "Treat species status as a population-level relation: candidate taxa A and B are evaluated by reproductive isolation R(A,B), gene flow m(A,B), morphological difference D(A,B), and ecological coexistence E(A,B), with D alone insufficient for categorical assignment.",
+        "notation_status": "qualitative source normalized as an evidence-model prompt",
+        "assumptions": [
+          "species are population-level entities",
+          "reproductive isolation is assessed at the population level",
+          "morphological differences can be misleading if used alone",
+          "ecological coexistence and niche relation can matter, especially where reproductive-isolation evidence is limited",
+          "real delimitation cases may require inference beyond a clean exercise setup"
+        ],
+        "biological_interpretation": "The biological species concept changes the unit of analysis from type-like similarity to population relations, while leaving real-world delimitation as an evidence problem."
+      },
+      "question_type": "conceptual boundary probe",
+      "source_context": {
+        "source_section": "Microtaxonomy, the science of species",
+        "textbook_prompt_role": "canonical historical argument converted into a species-concept boundary question",
+        "edition_or_volume_year": "1982 local scan, part 004"
+      }
+    },
+    {
+      "id": "staged.question.mayr-1988.species-status-inference-boundary.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.speciation",
+      "title": "When Is Species Status An Inference Rather Than A Direct Observation?",
+      "body": "A learner compares two separated populations that look very similar, or two fossil samples separated in time. Why does Mayr treat species status in such cases as an inference guided by a species concept rather than as a direct observation, and what evidence can strengthen or weaken that inference?",
+      "source_anchors": [
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-26",
+        "notes": "Staged from a local OCR/page-image pass over Mayr 1988 part 007. The item supports the evidence workbench prerequisite distinction between observing a phenomenon and attributing a causal or taxonomic explanation from partial evidence."
+      },
+      "promotion_targets": [
+        "notebook/concepts/speciation.html",
+        "notebook/concepts/population-thinking.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "expected_answer_path": [
+          "Distinguish directly observed coexistence and noninterbreeding from inferred species status across space or time.",
+          "State that the biological species concept can act as a yardstick for inference, not an automatic naming rule.",
+          "Treat morphological similarity or difference as evidence-bearing but not decisive by itself.",
+          "Use additional evidence such as distribution, ecological role, life history, gene flow, genotype cohesion, stabilizing selection, and isolating mechanisms.",
+          "Recognize that isolated populations must be assessed by inferred reproductive relation before they are treated as separate species or parts of one larger species.",
+          "State the simplification when a worked case makes reproductive evidence, geography, or continuity unusually clear; real taxonomic cases often remain provisional."
+        ],
+        "misconceptions_checked": [
+          "Treating species status as something directly read off morphology alone.",
+          "Assuming every named species boundary has the same kind or strength of evidence.",
+          "Forgetting that geographic or temporal separation often turns reproductive relation into an inference problem.",
+          "Hiding simplified exercise conditions that make a particular species-status answer easy to find."
+        ]
+      },
+      "mathematical_structure": {
+        "kind": "inference from partial evidence",
+        "formal_statement": "For separated candidate populations A and B, species-status inference depends on evidence about reproductive relation R(A,B), gene flow m(A,B), morphology D(A,B), ecological role E(A,B), continuity C(A,B), and isolating mechanisms I(A,B); D alone is not sufficient."
+      },
+      "question_type": "species-concept inference guardrail",
+      "source_context": {
+        "source_id": "mayr-new-philosophy-biology-1988",
+        "source_title": "Toward a New Philosophy of Biology: Observations of an Evolutionist",
+        "source_author": "Ernst Mayr",
+        "source_year": "1988",
+        "source_section": "Part Six, Species; essays 19 and 20",
+        "edition_or_volume_year": "1988 local scan, part 007",
+        "textbook_prompt_role": "canonical concept-history argument converted into an evidence-boundary question",
+        "anchors": [
+          "[redacted private source locator]",
+          "[redacted private source locator]",
+          "[redacted private source locator]",
+          "[redacted private source locator]",
+          "[redacted private source locator]"
+        ]
+      }
+    },
+    {
+      "id": "staged.question.mayr.geographic-isolate-speciation-evidence.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.speciation",
+      "title": "What Makes A Geographic Isolate An Incipient Species?",
+      "body": "Mayr treats geographic isolates, not just named subspecies, as the key units to study during geographic speciation. What evidence would show that an isolated population is moving toward species status, and why are isolating mechanisms central to that judgment?",
+      "source_anchors": [
+        {
+          "source_id": "mayr-animal-species-ch16-1963",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-animal-species-ch16-1963",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-animal-species-ch16-1963",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-animal-species-ch16-1963",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from local OCR of the chapter scan. Keep as a focused speciation evidence question: it reinforces existing Mayr 2002 speciation coverage with narrower 1963 geographic-speciation provenance."
+      },
+      "promotion_targets": [
+        "notebook/concepts/speciation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "identify a geographic isolate as a population separated from the parental population by a barrier or distance that restricts gene flow",
+          "explain why a named subspecies is not automatically the unit of speciation analysis",
+          "look for divergence in traits that affect reproductive isolation, ecological compatibility, or mate recognition",
+          "ask whether isolation persists or strengthens if contact is restored",
+          "recognize borderline cases, partial overlap, and secondary hybrid zones as evidence-bearing stages rather than failures of the concept",
+          "avoid treating a single visible difference or local adaptation as sufficient evidence of completed speciation"
+        ],
+        "coverage_note": "This strengthens the speciation concept by tying geographic isolation to evidence for reproductive isolation and species-level gaps."
+      },
+      "mathematical_structure": {
+        "kind": "gene-flow and reproductive-isolation threshold",
+        "formal_statement": "For an isolated population I and parental population P, speciation evidence increases when gene flow m between I and P remains low long enough for divergence D to accumulate and reproductive isolation R to persist if external barriers are reduced.",
+        "notation_status": "qualitative source normalized as a population-structure model",
+        "assumptions": [
+          "a population has been geographically isolated from a parental population",
+          "gene flow is restricted during isolation",
+          "traits relevant to reproductive isolation or ecological compatibility can diverge",
+          "secondary contact provides evidence about whether isolation is complete, partial, or absent"
+        ],
+        "biological_interpretation": "Geographic speciation is assessed by population structure, restricted gene flow, accumulating divergence, and the development of isolating mechanisms."
+      },
+      "question_type": "evidence interpretation",
+      "source_context": {
+        "source_section": "Chapter 16, Geographic Speciation",
+        "textbook_prompt_role": "canonical source argument converted into a coverage question",
+        "edition_or_volume_year": "1963 chapter scan"
+      }
+    },
+    {
+      "id": "staged.question.mayr.overlap-sympatric-causation-guardrail.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.speciation",
+      "title": "Does Range Overlap Prove Sympatric Speciation?",
+      "body": "A learner finds two closely related species living together on an island or overlapping at the edge of their ranges. Why is that observation not, by itself, evidence that speciation happened sympatrically, and what extra evidence would help distinguish multiple invasion, secondary contact after geographic isolation, marginal overlap, or speciation by distance?",
+      "source_anchors": [
+        {
+          "source_id": "mayr-animal-species-ch16-1963",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-animal-species-ch16-1963",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-animal-species-ch16-1963",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-animal-species-ch16-1963",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-animal-species-ch16-1963",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-25",
+        "notes": "Paraphrased from regenerated OCR and visually checked page images. Keep this as an evidence/causation guardrail: observed co-occurrence or overlap must not be converted directly into a causal claim about sympatric speciation."
+      },
+      "promotion_targets": [
+        "notebook/concepts/speciation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "separate the observed phenomenon, current range overlap or co-occurrence, from the historical cause that produced it",
+          "treat sympatric speciation as one hypothesis, not the default conclusion from overlap",
+          "consider multiple invasion, secondary contact after geographic isolation, marginal overlap after divergence, and circular overlap/speciation by distance as alternative explanations",
+          "ask whether source populations, barriers, gene flow, hybridization, and the geography of intermediate populations support one explanation more strongly than another",
+          "recognize superspecies and semispecies as evidence-bearing intermediate categories rather than clean species/subspecies boxes",
+          "state the simplification in exercises: a worked example may make geography, timing, and gene-flow conditions unusually clear even though real cases often require harder reconstruction"
+        ],
+        "coverage_note": "This fills a foundational evidence-workbench gap for speciation: learners need to distinguish an observation from causal attribution before evaluating speciation scenarios."
+      },
+      "mathematical_structure": {
+        "kind": "competing causal hypotheses over the same observation",
+        "formal_statement": "For an observed overlap O between related forms, compare hypotheses H_sympatric, H_multiple_invasion, H_secondary_contact, and H_distance by asking which predicts the observed geography G, gene flow m, reproductive isolation R, and intermediate-population structure I.",
+        "notation_status": "qualitative source normalized as a model-comparison prompt",
+        "assumptions": [
+          "current geographic overlap is observable",
+          "historical process must be inferred from additional evidence",
+          "different causal histories can produce similar present-day distributions",
+          "exercise cases may simplify geography and evidence so that one hypothesis is easier to discriminate"
+        ],
+        "biological_interpretation": "The same pattern of co-occurrence can arise by different historical routes, so speciation inference depends on comparing expected evidence across causal hypotheses."
+      },
+      "question_type": "causal inference guardrail",
+      "source_context": {
+        "source_section": "Chapter 16, Geographic Speciation",
+        "textbook_prompt_role": "canonical source argument converted into a causation and evidence-boundary question",
+        "edition_or_volume_year": "1963 chapter scan"
+      }
+    },
+    {
+      "id": "staged.question.pianka.archipelago-speciation-adaptive-radiation.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.speciation",
+      "title": "Why Do Archipelagos Favor Radiation?",
+      "body": "Galapagos finches diversified across many islands, while a comparable solitary island supports one generalist finch lineage. How do geographic isolation, reduced gene flow, different island environments, and occasional interisland colonization help explain that contrast?",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Pianka's fourth-edition island ecology discussion. Use as a speciation probe that connects geography, gene flow, selection, and niche diversification."
+      },
+      "promotion_targets": [
+        "notebook/concepts/speciation.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/concepts/common-descent.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "state that archipelagos can isolate populations on different islands",
+          "connect reduced gene flow to independent divergence and possible speciation",
+          "connect different island environments to divergent selection and adaptation",
+          "explain that occasional interisland colonization can bring related forms into competition and promote niche diversification",
+          "contrast this with a solitary island where one gene pool may remain unsplit and a generalist lineage may persist",
+          "avoid treating adaptive radiation as caused by selection alone without population subdivision"
+        ],
+        "coverage_note": "This strengthens the speciation page by adding an ecological geography case that links isolation and adaptive radiation."
+      },
+      "mathematical_structure": {
+        "kind": "causal model comparison",
+        "formal_statement": "Adaptive radiation is favored when population subdivision reduces gene flow and distinct environments or competitive contexts create divergent selection among descendant populations.",
+        "notation_status": "not applicable",
+        "assumptions": [
+          "islands are sufficiently isolated to reduce routine gene flow",
+          "colonists can establish persistent populations",
+          "island environments and ecological opportunities differ",
+          "phylogenetic evidence supports descent from a common ancestral colonist"
+        ],
+        "biological_interpretation": "Speciation and adaptive diversification depend on both geography and ecological opportunity."
+      },
+      "question_type": "causal explanation",
+      "source_context": {
+        "source_section": "Islands as Ecological Experiments",
+        "textbook_prompt_role": "source-mined causal explanation question",
+        "edition_or_volume_year": "1988 fourth edition"
+      }
+    },
+    {
+      "id": "staged.question.speciation.gene-flow-barrier-check.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.speciation",
+      "title": "What Would Keep Diverging Populations Apart?",
+      "body": "Two local populations differ in a visible trait. What evidence would help decide whether they are still exchanging enough genes to remain one evolutionary population, or whether barriers and divergence are moving them toward speciation?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as a bridge prompt from gene flow and population structure into reproductive isolation."
+      },
+      "promotion_targets": [
+        "notebook/concepts/speciation.html",
+        "notebook/concepts/population-thinking.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true
+    }
+  ],
+  "summary": {
+    "reviewed_total": 13,
+    "claims": 3,
+    "examples": 1,
+    "questions": 9
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "slug": "literature-explorer",
+  "title": "Literature Explorer",
+  "published": true,
+  "visibility": "planned",
+  "role": "Extend a topic through literature search, bibliography growth, and evidence-trail building.",
+  "category": "research-support",
+  "entrypoint": "/apps/literature-explorer/",
+  "description": "A research-support tool for finding related literature, building reading lists, and expanding bibliographies with CiteGeist support.",
+  "legacy_names": ["CiteGeist"],
+  "pages": {
+    "landing": "/apps/literature-explorer/",
+    "application": "/apps/literature-explorer/app/",
+    "study_guide": "/apps/literature-explorer/study-guide.html",
+    "curriculum_alignment": "/apps/literature-explorer/curriculum-alignment.html"
+  },
+  "implementation": {
+    "external_hub": "/opt/www/dev/CiteGeist",
+    "public_role": "A metadata-driven research support surface for topic expansion and bibliography discovery."
+  },
+  "api": {
+    "status": "available",
+    "family": "research-support",
+    "docs": "/opt/www/dev/CiteGeist/README.md",
+    "notes": "Public evo-edu surface remains a guided wrapper around the existing CiteGeist codebase and API workflow."
+  },
+  "tests": {
+    "status": "available",
+    "runner": "See /opt/www/dev/CiteGeist",
+    "notes": "The underlying CiteGeist codebase already has its own test suite."
+  },
+  "status": {
+    "landing": "standardized",
+    "application": "standardized-wrapper",
+    "study_guide": "present",
+    "curriculum_alignment": "present",
+    "api": "available",
+    "tests": "available"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "schema": "evo-edu.notebook.reasoning_scaffold.v1",
+  "id": "notebook.concepts.common-descent",
+  "title": "Common Descent",
+  "created": "2026-05-14",
+  "updated": "2026-05-14",
+  "status": "pilot-reviewed-scaffold",
+  "concept_targets": [
+    "common descent",
+    "shared ancestry",
+    "branching history",
+    "nested similarity",
+    "lineage splitting",
+    "comparative evidence",
+    "historical inference"
+  ],
+  "site_links": [
+    {
+      "kind": "concept",
+      "title": "Speciation",
+      "url": "/notebook/concepts/speciation.html"
+    },
+    {
+      "kind": "concept",
+      "title": "Adaptation",
+      "url": "/notebook/concepts/adaptation.html"
+    },
+    {
+      "kind": "concept",
+      "title": "Natural Selection",
+      "url": "/notebook/concepts/natural-selection.html"
+    },
+    {
+      "kind": "research_tool",
+      "title": "Literature Explorer",
+      "url": "/apps/literature-explorer/"
+    }
+  ],
+  "records": [
+    {
+      "id": "cd-001",
+      "type": "definition-check",
+      "question": "What does common descent claim?",
+      "answer_summary": "Common descent claims that lineages of organisms trace back through shared ancestors in a branching history.",
+      "verification_prompt": "State what ancestry pattern is being claimed and what evidence supports branching rather than isolated similarity.",
+      "misconception_guard": "Do not reduce common descent to a claim that everything simply looks alike.",
+      "didactopus_prompt_seed": "Rewrite the claim so the branching ancestry pattern is explicit."
+    },
+    {
+      "id": "cd-002",
+      "type": "pattern-check",
+      "question": "Why is branching important?",
+      "answer_summary": "Branching explains why some inherited traits are shared broadly, others only in smaller groups, and differences emerge in patterned ways.",
+      "verification_prompt": "Ask whether the evidence fits a nested branching pattern or only a scattered resemblance list.",
+      "misconception_guard": "Do not treat one similarity as enough to establish the larger historical pattern.",
+      "didactopus_prompt_seed": "Describe how broad and narrower trait groupings support a branching history."
+    },
+    {
+      "id": "cd-003",
+      "type": "nested-evidence",
+      "question": "Why are nested similarities more important than isolated resemblances?",
+      "answer_summary": "A strong ancestry claim depends on many traits fitting a coherent branching pattern, not just on one eye-catching resemblance.",
+      "verification_prompt": "Compare whether multiple traits and evidence streams support the same grouping pattern.",
+      "misconception_guard": "Do not let a single dramatic feature outweigh the overall pattern.",
+      "didactopus_prompt_seed": "State one visible resemblance and then explain why the larger nested pattern matters more."
+    },
+    {
+      "id": "cd-004",
+      "type": "bridge-check",
+      "question": "How does speciation connect to common descent?",
+      "answer_summary": "Speciation supplies the repeated lineage-splitting events that, over long timescales, generate the larger tree of shared ancestry.",
+      "verification_prompt": "Explain how many local lineage splits accumulate into a larger branching historical pattern.",
+      "misconception_guard": "Do not treat speciation and common descent as unrelated topics.",
+      "didactopus_prompt_seed": "Rewrite the explanation so local lineage splitting and larger shared ancestry are shown as connected."
+    },
+    {
+      "id": "cd-005",
+      "type": "multi-evidence-check",
+      "question": "Why use many lines of evidence?",
+      "answer_summary": "Because common descent is a historical claim, confidence grows when fossils, genetics, development, anatomy, and geography support the same branching picture.",
+      "verification_prompt": "Name at least two different evidence streams and how they support the same history.",
+      "misconception_guard": "Do not act as if one evidence stream must carry the whole case alone.",
+      "didactopus_prompt_seed": "List two evidence types and explain how they converge on the same ancestry claim."
+    }
+  ],
+  "citegeist_source_slots": [
+    {
+      "slot": "common-descent-foundations",
+      "needed_for": "Foundational treatments of common descent and branching ancestry",
+      "candidate_queries": [
+        "Darwin common descent branching ancestry classic treatment",
+        "shared ancestry branching evolution foundational explanation"
+      ],
+      "review_status": "pending"
+    },
+    {
+      "slot": "common-descent-evidence",
+      "needed_for": "Explanatory treatments of nested evidence from genetics, anatomy, fossils, and development",
+      "candidate_queries": [
+        "common descent nested hierarchy evidence genetics anatomy fossils",
+        "shared ancestry comparative evidence educational explanation"
+      ],
+      "review_status": "pending"
+    }
+  ],
+  "doclift_use": "Use this JSON as a fixture for concept pages that move from population mechanisms and lineage splitting into broader historical inference.",
+  "groundrecall_use": "Store rationale, pending source-slot work, and revision notes about ancestry evidence so later Notebook pages can reuse the same multi-evidence structure.",
+  "next_review_steps": [
+    "Backfill reviewed sources for foundational and explanatory treatments of common descent.",
+    "Add one worked comparison between nested ancestry evidence and a misleading superficial similarity.",
+    "Link this page into later Notebook pages on fossil history, deep time, and macroevolution."
+  ]
+}

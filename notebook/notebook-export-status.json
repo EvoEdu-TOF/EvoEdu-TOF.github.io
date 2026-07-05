@@ -1,0 +1,208 @@
+{
+  "schema": "evo-edu.notebook.export_status.v1",
+  "manifest": "[redacted private source locator]",
+  "bundle_id": "foundations-first-ring",
+  "export_ready": true,
+  "required_artifacts": [
+    {
+      "kind": "landing_page",
+      "path": "/notebook/index.html",
+      "exists": true
+    },
+    {
+      "kind": "export_index",
+      "path": "/notebook/notebook-export-index.json",
+      "exists": true
+    },
+    {
+      "kind": "staging_workflow",
+      "path": "/notebook/docs/conceptual-extraction-workflow.md",
+      "exists": true
+    },
+    {
+      "kind": "reviewed_elements_index",
+      "path": "/notebook/reviewed-elements/index.json",
+      "exists": true
+    },
+    {
+      "kind": "learning_path",
+      "path": "/notebook/learning-paths/foundations-first-ring.json",
+      "exists": true
+    },
+    {
+      "kind": "didactopus_learning_sequence",
+      "path": "/notebook/learning-paths/foundations-first-ring.didactopus.json",
+      "exists": true
+    },
+    {
+      "kind": "selection_policy",
+      "path": "/notebook/learning-paths/foundations-first-ring.selection-policy.json",
+      "exists": true
+    },
+    {
+      "kind": "bundle_contract",
+      "path": "/notebook/notebook-course-bundle-contract.json",
+      "exists": true
+    },
+    {
+      "kind": "mode_contract",
+      "path": "/notebook/notebook-pack-mode-contract.json",
+      "exists": true
+    }
+  ],
+  "concept_artifacts": [
+    {
+      "concept_id": "notebook.concepts.allele-frequency-change",
+      "html": "/notebook/concepts/allele-frequency-change.html",
+      "html_exists": true,
+      "scaffold": "/notebook/concepts/allele-frequency-change.scaffold.json",
+      "scaffold_exists": true
+    },
+    {
+      "concept_id": "notebook.concepts.hardy-weinberg-equilibrium",
+      "html": "/notebook/concepts/hardy-weinberg-equilibrium.html",
+      "html_exists": true,
+      "scaffold": "/notebook/concepts/hardy-weinberg-equilibrium.scaffold.json",
+      "scaffold_exists": true
+    },
+    {
+      "concept_id": "notebook.concepts.genetic-drift",
+      "html": "/notebook/concepts/genetic-drift.html",
+      "html_exists": true,
+      "scaffold": "/notebook/concepts/genetic-drift.scaffold.json",
+      "scaffold_exists": true
+    },
+    {
+      "concept_id": "notebook.concepts.natural-selection",
+      "html": "/notebook/concepts/natural-selection.html",
+      "html_exists": true,
+      "scaffold": "/notebook/concepts/natural-selection.scaffold.json",
+      "scaffold_exists": true
+    },
+    {
+      "concept_id": "notebook.concepts.mutation",
+      "html": "/notebook/concepts/mutation.html",
+      "html_exists": true,
+      "scaffold": "/notebook/concepts/mutation.scaffold.json",
+      "scaffold_exists": true
+    },
+    {
+      "concept_id": "notebook.concepts.adaptation",
+      "html": "/notebook/concepts/adaptation.html",
+      "html_exists": true,
+      "scaffold": "/notebook/concepts/adaptation.scaffold.json",
+      "scaffold_exists": true
+    },
+    {
+      "concept_id": "notebook.concepts.speciation",
+      "html": "/notebook/concepts/speciation.html",
+      "html_exists": true,
+      "scaffold": "/notebook/concepts/speciation.scaffold.json",
+      "scaffold_exists": true
+    },
+    {
+      "concept_id": "notebook.concepts.common-descent",
+      "html": "/notebook/concepts/common-descent.html",
+      "html_exists": true,
+      "scaffold": "/notebook/concepts/common-descent.scaffold.json",
+      "scaffold_exists": true
+    }
+  ],
+  "public_surface": {
+    "schema": "evo-edu.notebook.public_surface_status.v1",
+    "checks": [
+      {
+        "label": "Shared evo shell multilingual support",
+        "path": "/shared/evo-shell.js",
+        "status": "pass",
+        "failures": []
+      },
+      {
+        "label": "Site home loads shared shell",
+        "path": "/index.html",
+        "status": "pass",
+        "failures": []
+      },
+      {
+        "label": "Translation status page",
+        "path": "/translation-status/index.html",
+        "status": "pass",
+        "failures": []
+      },
+      {
+        "label": "Notebook beginner route page",
+        "path": "/notebook/beginner-route.html",
+        "status": "pass",
+        "failures": []
+      },
+      {
+        "label": "Notebook population thinking page",
+        "path": "/notebook/concepts/population-thinking.html",
+        "status": "pass",
+        "failures": []
+      },
+      {
+        "label": "Notebook landing page",
+        "path": "/notebook/index.html",
+        "status": "pass",
+        "failures": []
+      },
+      {
+        "label": "Notebook overview page",
+        "path": "/notebook/overview.html",
+        "status": "pass",
+        "failures": []
+      },
+      {
+        "label": "Notebook concepts page",
+        "path": "/notebook/concepts/index.html",
+        "status": "pass",
+        "failures": []
+      },
+      {
+        "label": "Notebook learning paths page",
+        "path": "/notebook/learning-paths/index.html",
+        "status": "pass",
+        "failures": []
+      },
+      {
+        "label": "Notebook source trails page",
+        "path": "/notebook/source-trails/index.html",
+        "status": "pass",
+        "failures": []
+      },
+      {
+        "label": "Notebook concept navigation",
+        "path": "/notebook/concepts/allele-frequency-change.html",
+        "status": "pass",
+        "failures": []
+      }
+    ],
+    "summary": {
+      "total": 11,
+      "passed": 11,
+      "failed": 0
+    }
+  },
+  "reviewed_elements": {
+    "schema": "evo-edu.notebook.reviewed_elements_status.v1",
+    "path": "/notebook/reviewed-elements/index.json",
+    "status": "pass",
+    "failures": [],
+    "summary": {
+      "reviewed_total": 123,
+      "pending_total": 0
+    }
+  },
+  "summary": {
+    "required_total": 9,
+    "required_present": 9,
+    "concept_total": 8,
+    "concept_complete": 8,
+    "public_total": 11,
+    "public_passed": 11,
+    "public_failed": 0,
+    "reviewed_elements_total": 123,
+    "staged_pending_total": 0
+  }
+}

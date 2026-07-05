@@ -1,0 +1,58 @@
+{
+  "slug": "grid-world-survival",
+  "title": "Grid-World Survival",
+  "published": false,
+  "visibility": "planned",
+  "role": "Legacy grid-world survival demonstration withheld from public navigation until the underlying implementation is brought up to standard.",
+  "category": "artificial-life",
+  "entrypoint": "/apps/grid-world-survival/",
+  "description": "Grid-world selection demo currently kept out of the public catalog while remediation of the underlying implementation continues.",
+  "legacy_names": [
+    "gw",
+    "Survival in Grid-World"
+  ],
+  "pages": {
+    "landing": "/apps/grid-world-survival/",
+    "application": "/apps/grid-world-survival/app/",
+    "study_guide": "/apps/grid-world-survival/study-guide.html",
+    "curriculum_alignment": "/apps/grid-world-survival/curriculum-alignment.html",
+    "about": "/apps/grid-world-survival/about.html"
+  },
+  "implementation": {
+    "legacy_hub": "/apps/gw/",
+    "launch_target": "/apps/gw/"
+  },
+  "api": {
+    "status": "prototype",
+    "family": "artificial-life",
+    "docs": "/apps/api/artificial-life/",
+    "module": "/apps/api/artificial-life/artificial-life.js",
+    "notes": "A shared browser and node-consumable API module now exists for the artificial-life remediation family."
+  },
+  "tests": {
+    "status": "prototype",
+    "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/artificial-life/artificial-life.test.js",
+    "notes": "A node-based contract test suite now exercises the shared artificial-life family API module."
+  },
+  "status": {
+    "landing": "standardized",
+    "application": "standardized-wrapper",
+    "study_guide": "present",
+    "curriculum_alignment": "present",
+    "api": "prototype",
+    "tests": "prototype"
+  },
+  "provenance": {
+    "summary": "Legacy grid-world route currently withheld from the public catalog.",
+    "details": "Grid-World Survival is still backed by the older gw implementation and is currently excluded from public evo-edu navigation because the underlying app is not yet at the same documentation and implementation standard as the other remediated tools.",
+    "lineage": [
+      "Public evo-edu route: Grid-World Survival",
+      "Legacy implementation directory: /apps/gw/",
+      "Current launch target: /apps/gw/"
+    ],
+    "limits": [
+      "Not currently published in the live evo-edu app catalog.",
+      "Requires deeper implementation remediation before it should return to public navigation."
+    ]
+  }
+}

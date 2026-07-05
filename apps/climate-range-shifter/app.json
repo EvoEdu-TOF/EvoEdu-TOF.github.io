@@ -1,0 +1,63 @@
+{
+  "slug": "climate-range-shifter",
+  "title": "Climate Range Shifter",
+  "published": true,
+  "visibility": "public",
+  "role": "Explore how shifting climate conditions can move habitats and reshape where organisms can persist.",
+  "category": "ecology",
+  "entrypoint": "/apps/climate-range-shifter/",
+  "description": "An interactive climate-and-range-change model for comparing mismatch, movement, and environmental response.",
+  "legacy_names": [
+    "crs"
+  ],
+  "pages": {
+    "landing": "/apps/climate-range-shifter/",
+    "application": "/apps/climate-range-shifter/app/",
+    "study_guide": "/apps/climate-range-shifter/study-guide.html",
+    "teacher_guide": "/apps/climate-range-shifter/teacher-guide.html",
+    "standards": "/apps/climate-range-shifter/standards.html",
+    "curriculum_alignment": "/apps/climate-range-shifter/standards.html",
+    "about": "/apps/climate-range-shifter/about.html"
+  },
+  "implementation": {
+    "legacy_hub": "/apps/climate-range-shifter/launch.html",
+    "launch_target": "/apps/climate-range-shifter/app/",
+    "legacy_target": "/apps/climate-range-shifter/webapp.html"
+  },
+  "api": {
+    "status": "prototype",
+    "family": "ecology",
+    "docs": "/apps/api/ecology/",
+    "module": "/apps/api/ecology/ecology.js",
+    "notes": "A shared browser and node-consumable API module now exists for the ecology remediation family."
+  },
+  "tests": {
+    "status": "prototype",
+    "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/ecology/ecology.test.js",
+    "notes": "A node-based contract test suite now exercises the shared ecology family API module."
+  },
+  "status": {
+    "landing": "standardized",
+    "application": "responsive-direct",
+    "study_guide": "present",
+    "teacher_guide": "present",
+    "standards": "present",
+    "curriculum_alignment": "present",
+    "api": "prototype",
+    "tests": "prototype"
+  },
+  "provenance": {
+    "summary": "Public evo-edu framing over the legacy climate-range-shifter implementation.",
+    "details": "Climate Range Shifter is the evo-edu public route for the climate-linked range-change model family. The remediation pass now includes a responsive direct public workbench using the shared ecology API while preserving the earlier placeholder route as a legacy prototype.",
+    "lineage": [
+      "Public evo-edu route: Climate Range Shifter",
+      "Legacy implementation directory: /apps/climate-range-shifter/",
+      "Current launch target: /apps/climate-range-shifter/app/",
+      "Legacy prototype route: /apps/climate-range-shifter/webapp.html"
+    ],
+    "limits": [
+      "The earlier placeholder runtime remains available as a legacy prototype route.",
+      "Broader test coverage and deeper ecological model refinement are still pending."
+    ]
+  }
+}

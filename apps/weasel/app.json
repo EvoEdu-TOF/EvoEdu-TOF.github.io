@@ -1,0 +1,11 @@
+{
+  "slug": "weasel",
+  "title": "Weasel",
+  "published": false,
+  "visibility": "legacy",
+  "role": "Underlying implementation directory for the public Cumulative Selection Explorer route.",
+  "category": "artificial-life",
+  "entrypoint": "/apps/weasel/weaselui.html",
+  "description": "Retained behind the public Cumulative Selection Explorer framing.",
+  "legacy_names": ["Weasel Program"]
+}

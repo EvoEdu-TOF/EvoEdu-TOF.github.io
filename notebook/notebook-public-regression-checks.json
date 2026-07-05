@@ -1,0 +1,129 @@
+{
+  "checks": [
+    {
+      "label": "Shared evo shell multilingual support",
+      "path": "/shared/evo-shell.js",
+      "required_strings": [
+        "Español",
+        "Français",
+        "Deutsch",
+        "Português",
+        "/translation-status/"
+      ]
+    },
+    {
+      "label": "Site home loads shared shell",
+      "path": "/index.html",
+      "required_strings": [
+        "/shared/evo-shell.js"
+      ]
+    },
+    {
+      "label": "Translation status page",
+      "path": "/translation-status/index.html",
+      "required_strings": [
+        "Translation Queue",
+        "Español",
+        "Français",
+        "Deutsch",
+        "Português",
+        "Open queue JSON"
+      ]
+    },
+    {
+      "label": "Notebook beginner route page",
+      "path": "/notebook/beginner-route.html",
+      "required_strings": [
+        "/shared/evo-shell.js",
+        "A first route through the Notebook for a new learner",
+        "Step 1: Introduction",
+        "Step 2: Population Thinking",
+        "Step 3: Allele Frequency Change",
+        "Step 4: Genetic Drift",
+        "Step 5: Natural Selection"
+      ]
+    },
+    {
+      "label": "Notebook population thinking page",
+      "path": "/notebook/concepts/population-thinking.html",
+      "required_strings": [
+        "<!DOCTYPE html>",
+        "/shared/evo-edu.css",
+        "/shared/evo-shell.js",
+        "Population Thinking",
+        "What is population thinking?",
+        "If You Remember Only Three Things",
+        "population-thinking.scaffold.json"
+      ]
+    },
+    {
+      "label": "Notebook landing page",
+      "path": "/notebook/index.html",
+      "required_strings": [
+        "/shared/evo-shell.js",
+        "Notebook Sections",
+        "Start With The Beginner Route",
+        "Open Overview",
+        "Open Concepts",
+        "Open Paths",
+        "Open Source Trails"
+      ]
+    },
+    {
+      "label": "Notebook overview page",
+      "path": "/notebook/overview.html",
+      "required_strings": [
+        "What the Notebook is for",
+        "Browse concepts",
+        "Browse learning paths",
+        "Punctuated Equilibria"
+      ]
+    },
+    {
+      "label": "Notebook concepts page",
+      "path": "/notebook/concepts/index.html",
+      "required_strings": [
+        "Population Thinking",
+        "First-ring core evolution concepts",
+        "Allele Frequency Change",
+        "Common Descent",
+        "Companion scaffolds"
+      ]
+    },
+    {
+      "label": "Notebook learning paths page",
+      "path": "/notebook/learning-paths/index.html",
+      "required_strings": [
+        "Foundations First Ring",
+        "Open path JSON",
+        "Open Didactopus JSON",
+        "Open export manifest",
+        "Open export index"
+      ]
+    },
+    {
+      "label": "Notebook source trails page",
+      "path": "/notebook/source-trails/index.html",
+      "required_strings": [
+        "Grounding status should be visible, not hidden",
+        "Open short bibliography JSON",
+        "Open export status",
+        "Open bundle status"
+      ]
+    },
+    {
+      "label": "Notebook concept navigation",
+      "path": "/notebook/concepts/allele-frequency-change.html",
+      "required_strings": [
+        "<!DOCTYPE html>",
+        "/shared/evo-edu.css",
+        "/shared/evo-shell.js",
+        "Notebook Home",
+        "Overview",
+        "Concepts",
+        "Learning Paths",
+        "Source Trails"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "slug": "crs",
+  "title": "Climate Range Shifter Legacy Route",
+  "published": false,
+  "visibility": "legacy",
+  "role": "Legacy implementation directory for Climate Range Shifter.",
+  "category": "ecology",
+  "entrypoint": "/apps/crs/launch.html",
+  "description": "Retained behind the public Climate Range Shifter route.",
+  "legacy_names": ["Climate Range Shifter"]
+}

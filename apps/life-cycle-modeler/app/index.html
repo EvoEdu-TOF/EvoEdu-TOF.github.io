@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Life Cycle Modeler Application - evo-edu.org</title>
+  <link rel="stylesheet" href="/shared/evo-edu.css">
+  <script src="/shared/evo-shell.js" defer></script>
+  <script src="/apps/api/population-genetics/population-genetics.js"></script>
+  <style>
+    .lifecycle-app {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      align-items: start;
+    }
+    .lifecycle-panel {
+      background: #fff;
+      border: 1px solid #d6deea;
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      padding: 1.25rem;
+      display: grid;
+      gap: 1rem;
+    }
+    .lifecycle-panel h2,
+    .lifecycle-panel h3,
+    .lifecycle-panel p {
+      margin: 0;
+    }
+    .lifecycle-panel p,
+    .lifecycle-panel li {
+      line-height: 1.55;
+    }
+    .action-grid,
+    .status-grid,
+    .starter-grid,
+    .notes-grid,
+    .param-grid,
+    .table-grid {
+      display: grid;
+      gap: 0.85rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .app-button,
+    .app-upload-label,
+    .message-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 3rem;
+      padding: 0.8rem 1rem;
+      border: 1px solid #205a9e;
+      border-radius: 12px;
+      background: #205a9e;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .app-button.secondary,
+    .app-upload-label.secondary,
+    .message-toggle {
+      background: #f6f9fc;
+      color: #1f2937;
+      border-color: #c5d1e0;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .status-card,
+    .starter-card,
+    .note-card,
+    .table-card {
+      background: #f6f9fc;
+      border: 1px solid #d6deea;
+      border-radius: 14px;
+      padding: 0.95rem 1rem;
+    }
+    .status-card strong,
+    .starter-card strong,
+    .note-card strong,
+    .table-card strong {
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+    .settings-form,
+    .message-list {
+      display: grid;
+      gap: 0.85rem;
+    }
+    .param-row {
+      display: grid;
+      gap: 0.35rem;
+    }
+    .param-row label {
+      font-weight: 700;
+      color: #243447;
+    }
+    .param-row input {
+      width: 100%;
+      min-height: 2.8rem;
+      padding: 0.65rem 0.7rem;
+      border: 1px solid #c7d3e1;
+      border-radius: 10px;
+      font: inherit;
+      box-sizing: border-box;
+    }
+    .plot-box {
+      min-height: 420px;
+      border: 1px solid #d6deea;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+      padding: 1rem;
+    }
+    .plot-box svg {
+      width: 100%;
+      height: 360px;
+      display: block;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      font-size: 0.95rem;
+    }
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .legend-swatch {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      display: inline-block;
+    }
+    .legend-stage1 { background: #1f78b4; }
+    .legend-stage2 { background: #33a02c; }
+    .legend-stage3 { background: #e31a1c; }
+    .legend-total { background: #7c3aed; }
+    .inline-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+    .inline-links a {
+      color: #205a9e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .message-item {
+      background: #fff;
+      border-left: 4px solid #205a9e;
+      border-radius: 10px;
+      padding: 0.75rem 0.85rem;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+    }
+    @media (max-width: 1024px) {
+      .lifecycle-app {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 640px) {
+      .action-grid,
+      .status-grid,
+      .starter-grid,
+      .notes-grid,
+      .param-grid,
+      .table-grid {
+        grid-template-columns: 1fr;
+      }
+      .plot-box {
+        min-height: 320px;
+      }
+      .plot-box svg {
+        height: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-topbar">
+      <div class="brand-block">
+        <span class="brand-mark">Population Ecology</span>
+        <a href="/">evo-edu.org</a>
+        <p class="brand-summary">Stage- and age-structured population modeling resources for growth, decline, survivorship, and fecundity.</p>
+      </div>
+      <nav class="site-nav" data-evo-nav></nav>
+    </header>
+
+    <section class="hero-card">
+      <p class="eyebrow">Application</p>
+      <div class="hero-grid">
+        <div>
+          <h1>Life Cycle Modeler</h1>
+          <p class="lede lede-strong">Use a direct responsive matrix-model workbench to compare stage-specific survival and fecundity, while preserving the older popdyn route as a legacy reference.</p>
+          <div class="hero-actions">
+            <a class="button-link" href="/apps/life-cycle-modeler/study-guide.html">Learner guide</a>
+            <a class="button-link-secondary" href="/apps/life-cycle-modeler/teacher-guide.html">Teacher guide</a>
+            <a class="button-link-secondary" href="/apps/life-cycle-modeler/about.html">About and provenance</a>
+            <a class="button-link-secondary" href="/apps/popdyn/popdyn_ia.html" target="_blank" rel="noopener">Open legacy popdyn</a>
+          </div>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <strong>First challenge</strong>
+            <span>Run the defaults, then lower juvenile survival and compare whether long-term totals change more than when you lower adult fecundity.</span>
+          </div>
+          <div class="stat-card">
+            <strong>Key habit</strong>
+            <span>Ask which stage matters most to growth or decline instead of treating all individuals as interchangeable.</span>
+          </div>
+          <div class="stat-card">
+            <strong>Legacy memorialized</strong>
+            <span>The older popdyn route remains available as a legacy reference while this direct workbench replaces the iframe workflow.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="lifecycle-app" class="lifecycle-app">
+      <section class="lifecycle-panel">
+        <div>
+          <p class="section-kicker">Run Actions</p>
+          <h2>Controls you will use first</h2>
+          <p class="settings-note">Keep run, save, export, and import actions separate from the life-history parameters so the first useful comparison is clear.</p>
+        </div>
+        <div class="action-grid">
+          <button class="app-button" type="button" id="runButton">Run Projection</button>
+          <button class="app-button secondary" type="button" id="resetButton">Reset Defaults</button>
+          <button class="app-button secondary" type="button" id="saveButton">Save Summary JSON</button>
+          <button class="app-button secondary" type="button" id="exportButton">Export Settings</button>
+          <label class="app-upload-label secondary" for="settingsImport">Import Settings</label>
+          <input class="visually-hidden" id="settingsImport" type="file" accept="application/json">
+        </div>
+
+        <div>
+          <p class="section-kicker">Current Run Status</p>
+          <div class="status-grid">
+            <div class="status-card">
+              <strong>Final total</strong>
+              <span id="statusTotal">0.0</span>
+            </div>
+            <div class="status-card">
+              <strong>Growth trend</strong>
+              <span id="statusTrend">steady</span>
+            </div>
+            <div class="status-card">
+              <strong>Largest stage</strong>
+              <span id="statusLargestStage">Stage 1</span>
+            </div>
+            <div class="status-card">
+              <strong>Final stage count</strong>
+              <span id="statusStages">3</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="section-kicker">Try This First</p>
+          <div class="starter-grid">
+            <div class="starter-card">
+              <strong>Step 1</strong>
+              <span>Run the defaults and decide whether the population grows, stabilizes, or declines.</span>
+            </div>
+            <div class="starter-card">
+              <strong>Step 2</strong>
+              <span>Reduce Stage 1 survival and compare the final total.</span>
+            </div>
+            <div class="starter-card">
+              <strong>Step 3</strong>
+              <span>Restore Stage 1, then reduce fecundity and compare which change mattered more.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lifecycle-panel">
+        <div>
+          <p class="section-kicker">Main Display</p>
+          <h2>Stage structure and total population over time</h2>
+          <p class="settings-note">The stage lines show how each life stage changes across steps. The purple line tracks the total population so you can compare stage structure with overall growth or decline.</p>
+        </div>
+        <div class="plot-box">
+          <svg id="lifeCycleChart" viewBox="0 0 760 360" aria-label="Life Cycle Modeler chart" role="img"></svg>
+        </div>
+        <div class="legend">
+          <span class="legend-item"><span class="legend-swatch legend-stage1"></span> Stage 1</span>
+          <span class="legend-item"><span class="legend-swatch legend-stage2"></span> Stage 2</span>
+          <span class="legend-item"><span class="legend-swatch legend-stage3"></span> Stage 3</span>
+          <span class="legend-item"><span class="legend-swatch legend-total"></span> Total population</span>
+        </div>
+        <div class="notes-grid">
+          <div class="note-card">
+            <strong>What to notice</strong>
+            <span>A small change in one stage can reshape long-term totals more than a larger-looking change elsewhere.</span>
+          </div>
+          <div class="note-card">
+            <strong>Compare mechanisms</strong>
+            <span>Change one survival or fecundity term at a time so you can identify which stage drives the difference.</span>
+          </div>
+          <div class="note-card">
+            <strong>Notebook links</strong>
+            <span class="inline-links">
+              <a href="/notebook/concepts/adaptation.html">Adaptation</a>
+              <a href="/notebook/concepts/common-descent.html">Common Descent</a>
+            </span>
+          </div>
+        </div>
+        <div class="table-grid">
+          <div class="table-card">
+            <strong>Step snapshots</strong>
+            <div id="snapshotTable"></div>
+          </div>
+          <div class="table-card">
+            <strong>Interpretation prompt</strong>
+            <p id="interpretationText">Run the baseline case first, then compare one changed parameter.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="lifecycle-panel">
+        <div>
+          <p class="section-kicker">Settings</p>
+          <h2>Life-history parameters</h2>
+          <p class="settings-note">These values control three stages through fecundity, survival, recurrence, and starting population. Use them to model different demographic strategies.</p>
+        </div>
+        <form class="settings-form" id="settingsForm">
+          <div class="param-grid">
+            <div class="param-row">
+              <label for="steps">Projection steps</label>
+              <input id="steps" name="steps" type="number" min="1" max="40" step="1" value="12">
+            </div>
+            <div class="param-row">
+              <label for="population0">Stage 1 population</label>
+              <input id="population0" name="population0" type="number" min="0" max="200" step="1" value="20">
+            </div>
+            <div class="param-row">
+              <label for="population1">Stage 2 population</label>
+              <input id="population1" name="population1" type="number" min="0" max="200" step="1" value="12">
+            </div>
+            <div class="param-row">
+              <label for="population2">Stage 3 population</label>
+              <input id="population2" name="population2" type="number" min="0" max="200" step="1" value="6">
+            </div>
+            <div class="param-row">
+              <label for="fecundity0">Stage 1 fecundity</label>
+              <input id="fecundity0" name="fecundity0" type="number" min="0" max="4" step="0.1" value="0">
+            </div>
+            <div class="param-row">
+              <label for="fecundity1">Stage 2 fecundity</label>
+              <input id="fecundity1" name="fecundity1" type="number" min="0" max="4" step="0.1" value="1.2">
+            </div>
+            <div class="param-row">
+              <label for="fecundity2">Stage 3 fecundity</label>
+              <input id="fecundity2" name="fecundity2" type="number" min="0" max="4" step="0.1" value="0.5">
+            </div>
+            <div class="param-row">
+              <label for="survival0">Stage 1 survival to Stage 2</label>
+              <input id="survival0" name="survival0" type="number" min="0" max="1" step="0.05" value="0.5">
+            </div>
+            <div class="param-row">
+              <label for="survival1">Stage 2 survival to Stage 3</label>
+              <input id="survival1" name="survival1" type="number" min="0" max="1" step="0.05" value="0.7">
+            </div>
+            <div class="param-row">
+              <label for="recurrence0">Stage 2 recurrence</label>
+              <input id="recurrence0" name="recurrence0" type="number" min="0" max="1" step="0.05" value="0">
+            </div>
+            <div class="param-row">
+              <label for="recurrence1">Stage 3 recurrence</label>
+              <input id="recurrence1" name="recurrence1" type="number" min="0" max="1" step="0.05" value="0.2">
+            </div>
+          </div>
+        </form>
+
+        <div>
+          <button class="message-toggle" type="button" id="messageToggle">Show messages</button>
+          <div class="message-list" id="messageList" hidden></div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer-card">
+      <div>
+        <h3>Life Cycle Modeler application</h3>
+        <p>This direct workbench now uses the shared population-genetics API instead of an iframe wrapper, while the older popdyn route remains available as a legacy reference.</p>
+      </div>
+      <small>Updated May 16, 2026</small>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      const defaults = {
+        steps: 12,
+        population0: 20,
+        population1: 12,
+        population2: 6,
+        fecundity0: 0,
+        fecundity1: 1.2,
+        fecundity2: 0.5,
+        survival0: 0.5,
+        survival1: 0.7,
+        recurrence0: 0,
+        recurrence1: 0.2,
+      };
+      const chart = document.getElementById('lifeCycleChart');
+      const form = document.getElementById('settingsForm');
+      const messageList = document.getElementById('messageList');
+      const messageToggle = document.getElementById('messageToggle');
+      let messagesOpen = false;
+      let currentResult = null;
+
+      function getParams() {
+        return {
+          steps: Number(form.steps.value),
+          population: [
+            Number(form.population0.value),
+            Number(form.population1.value),
+            Number(form.population2.value),
+          ],
+          fecundity: [
+            Number(form.fecundity0.value),
+            Number(form.fecundity1.value),
+            Number(form.fecundity2.value),
+          ],
+          survival: [
+            Number(form.survival0.value),
+            Number(form.survival1.value),
+          ],
+          recurrence: [
+            Number(form.recurrence0.value),
+            Number(form.recurrence1.value),
+          ],
+        };
+      }
+
+      function setDefaults() {
+        Object.entries(defaults).forEach(([key, value]) => {
+          form[key].value = value;
+        });
+      }
+
+      function addMessage(text) {
+        const item = document.createElement('div');
+        item.className = 'message-item';
+        item.textContent = text;
+        messageList.prepend(item);
+      }
+
+      function setMessagesOpen(open) {
+        messagesOpen = open;
+        messageList.hidden = !open;
+        messageToggle.textContent = open ? 'Hide messages' : 'Show messages';
+      }
+
+      function buildSeries(result) {
+        const stages = result.history[0].length;
+        const series = Array.from({ length: stages }, () => []);
+        result.history.forEach((vector) => {
+          vector.forEach((value, index) => {
+            series[index].push(value);
+          });
+        });
+        return series;
+      }
+
+      function pointsFor(values, width, height, xPad, yPad, maxValue) {
+        const maxStep = Math.max(1, values.length - 1);
+        return values.map((value, index) => {
+          const x = xPad + (index / maxStep) * (width - xPad * 2);
+          const y = height - yPad - ((value / maxValue) * (height - yPad * 2));
+          return `${x.toFixed(2)},${y.toFixed(2)}`;
+        }).join(' ');
+      }
+
+      function drawChart(result) {
+        const width = 760;
+        const height = 360;
+        const xPad = 56;
+        const yPad = 32;
+        const stageSeries = buildSeries(result);
+        const maxValue = Math.max(
+          ...result.totals,
+          ...stageSeries.flat(),
+          1
+        );
+        const stage1 = pointsFor(stageSeries[0], width, height, xPad, yPad, maxValue);
+        const stage2 = pointsFor(stageSeries[1], width, height, xPad, yPad, maxValue);
+        const stage3 = pointsFor(stageSeries[2], width, height, xPad, yPad, maxValue);
+        const totals = pointsFor(result.totals, width, height, xPad, yPad, maxValue);
+        chart.innerHTML = `
+          <rect x="0" y="0" width="${width}" height="${height}" fill="#ffffff"></rect>
+          <line x1="${xPad}" y1="${height - yPad}" x2="${width - xPad}" y2="${height - yPad}" stroke="#9aa9bc" stroke-width="2"></line>
+          <line x1="${xPad}" y1="${yPad}" x2="${xPad}" y2="${height - yPad}" stroke="#9aa9bc" stroke-width="2"></line>
+          <polyline fill="none" stroke="#1f78b4" stroke-width="4" points="${stage1}"></polyline>
+          <polyline fill="none" stroke="#33a02c" stroke-width="4" points="${stage2}"></polyline>
+          <polyline fill="none" stroke="#e31a1c" stroke-width="4" points="${stage3}"></polyline>
+          <polyline fill="none" stroke="#7c3aed" stroke-width="4" points="${totals}"></polyline>
+          <text x="${xPad}" y="${yPad - 8}" fill="#475569" font-size="14">population count</text>
+          <text x="${width - xPad - 28}" y="${height - 8}" fill="#475569" font-size="14">step</text>
+        `;
+      }
+
+      function updateStatus(result) {
+        const finalTotal = result.totals[result.totals.length - 1];
+        const firstTotal = result.totals[0];
+        const finalPopulation = result.finalPopulation;
+        const largestStageIndex = finalPopulation.reduce((best, value, index, array) =>
+          value > array[best] ? index : best, 0);
+        document.getElementById('statusTotal').textContent = finalTotal.toFixed(1);
+        document.getElementById('statusTrend').textContent =
+          finalTotal > firstTotal * 1.05 ? 'growing' : finalTotal < firstTotal * 0.95 ? 'declining' : 'near steady';
+        document.getElementById('statusLargestStage').textContent = `Stage ${largestStageIndex + 1}`;
+        document.getElementById('statusStages').textContent = String(finalPopulation.length);
+
+        const checkpoints = [0, Math.floor(result.history.length / 2), result.history.length - 1]
+          .map((index) => ({ index, vector: result.history[index], total: result.totals[index] }))
+          .filter((entry) => entry.vector);
+        document.getElementById('snapshotTable').innerHTML = checkpoints.map((entry) => `
+          <p><strong>Step ${entry.index}</strong>: total ${entry.total.toFixed(1)} | S1 ${entry.vector[0].toFixed(1)} | S2 ${entry.vector[1].toFixed(1)} | S3 ${entry.vector[2].toFixed(1)}</p>
+        `).join('');
+
+        const message = finalTotal > firstTotal * 1.2
+          ? 'The population is growing under these life-history assumptions. Test which stage change would slow that growth most.'
+          : finalTotal < firstTotal * 0.8
+            ? 'The population is declining under these assumptions. Compare whether survival or fecundity changes drive the decline more strongly.'
+            : 'The total population is comparatively steady. Test whether that balance holds after changing one stage-specific parameter.';
+        document.getElementById('interpretationText').textContent = message;
+      }
+
+      function runSimulation() {
+        const api = window.evoEduApis && window.evoEduApis.populationGenetics && window.evoEduApis.populationGenetics.lifeCycleModeler;
+        if (!api) {
+          addMessage('Shared population-genetics API is not available on this page.');
+          setMessagesOpen(true);
+          return;
+        }
+        currentResult = api.projectPopulation(getParams());
+        drawChart(currentResult);
+        updateStatus(currentResult);
+        addMessage(`Ran ${currentResult.params.steps} projection steps with stage-specific survival and fecundity settings.`);
+      }
+
+      function resetDefaults() {
+        setDefaults();
+        runSimulation();
+        addMessage('Restored default settings.');
+      }
+
+      function downloadBlob(filename, content, type) {
+        const blob = new Blob([content], { type });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = filename;
+        link.click();
+        URL.revokeObjectURL(url);
+      }
+
+      document.getElementById('runButton').addEventListener('click', runSimulation);
+      document.getElementById('resetButton').addEventListener('click', resetDefaults);
+      document.getElementById('saveButton').addEventListener('click', function () {
+        if (!currentResult) {
+          runSimulation();
+        }
+        downloadBlob('life-cycle-modeler-summary.json', JSON.stringify(currentResult, null, 2), 'application/json');
+        addMessage('Saved current run summary as JSON.');
+      });
+      document.getElementById('exportButton').addEventListener('click', function () {
+        downloadBlob('life-cycle-modeler-settings.json', JSON.stringify(getParams(), null, 2), 'application/json');
+        addMessage('Exported current settings.');
+      });
+      document.getElementById('settingsImport').addEventListener('change', function (event) {
+        const file = event.target.files && event.target.files[0];
+        if (!file) {
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = function () {
+          try {
+            const imported = JSON.parse(reader.result);
+            Object.keys(defaults).forEach((key) => {
+              if (imported[key] !== undefined) {
+                form[key].value = Array.isArray(imported[key]) ? defaults[key] : imported[key];
+              }
+            });
+            if (Array.isArray(imported.population)) {
+              form.population0.value = imported.population[0] ?? defaults.population0;
+              form.population1.value = imported.population[1] ?? defaults.population1;
+              form.population2.value = imported.population[2] ?? defaults.population2;
+            }
+            if (Array.isArray(imported.fecundity)) {
+              form.fecundity0.value = imported.fecundity[0] ?? defaults.fecundity0;
+              form.fecundity1.value = imported.fecundity[1] ?? defaults.fecundity1;
+              form.fecundity2.value = imported.fecundity[2] ?? defaults.fecundity2;
+            }
+            if (Array.isArray(imported.survival)) {
+              form.survival0.value = imported.survival[0] ?? defaults.survival0;
+              form.survival1.value = imported.survival[1] ?? defaults.survival1;
+            }
+            if (Array.isArray(imported.recurrence)) {
+              form.recurrence0.value = imported.recurrence[0] ?? defaults.recurrence0;
+              form.recurrence1.value = imported.recurrence[1] ?? defaults.recurrence1;
+            }
+            runSimulation();
+            addMessage('Imported settings from JSON.');
+          } catch (error) {
+            addMessage('Could not import settings file.');
+            setMessagesOpen(true);
+          }
+        };
+        reader.readAsText(file);
+      });
+      messageToggle.addEventListener('click', function () {
+        setMessagesOpen(!messagesOpen);
+      });
+
+      setDefaults();
+      setMessagesOpen(false);
+      runSimulation();
+    })();
+  </script>
+</body>
+</html>

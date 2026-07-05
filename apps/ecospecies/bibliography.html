@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EcoSpecies Bibliography</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="site-brand">
+          <p class="site-brand-mark">Open Species Archive</p>
+          <a href="./index.html" class="site-brand-link">EcoSpecies Atlas</a>
+          <p class="site-brand-summary">Public field atlas for historical species life-history materials.</p>
+        </div>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="./index.html">Atlas</a>
+          <a href="./bibliography.html">Bibliography</a>
+        </nav>
+      </div>
+    </header>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">EcoSpecies Atlas</p>
+        <h1>Bibliography</h1>
+        <p class="lede">
+          A site-wide bibliography for the EcoSpecies atlas, including imported references and citations added during review.
+        </p>
+        <div class="auth-bar auth-panel-row">
+          <input id="bibliography-search" type="search" placeholder="Search title, author, DOI, or abstract">
+          <button id="bibliography-download" type="button" class="secondary-button">Download BibTeX</button>
+          <p id="bibliography-status" class="auth-status">Loading bibliography...</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div id="bibliography-list" class="public-citation-list"></div>
+      </section>
+    </main>
+    <script src="./bibliography.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mendel.js with Navbar (PopG-Style)</title>
+    <!-- Include Plotly from CDN or local copy -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            width: 100%;
+            background-color: #f2f2f2;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0.5rem 1rem;
+        }
+        nav a {
+            margin-right: 1rem;
+            text-decoration: none;
+            color: #333;
+        }
+        #content {
+            padding: 1rem;
+        }
+        #controls {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#help">Help</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <div id="content">
+        <h1>Mendel.js Simulation (PopG-Style)</h1>
+        <p>
+            This version simulates a <strong>single-locus, two-allele</strong> population genetics model similar to PopG.
+            It uses random mating, selection on a single locus, symmetrical mutation, and genetic drift via binomial sampling.
+        </p>
+        <div id="controls">
+            <!-- We reuse the existing controls, though some are repurposed here -->
+            <label for="populationSize">Population Size (N):</label>
+            <input type="number" id="populationSize" value="1000" min="1">
+
+            <label for="genomeSize">(unused) Selection Coefficient:</label>
+            <input type="number" id="genomeSize" value="100" min="0" max="100" title="Interpreted as a percentage of selection coefficient.">
+
+            <label for="mutationRate">Mutation Rate (u):</label>
+            <input type="number" step="0.001" id="mutationRate" value="0.01" min="0">
+
+            <label for="generations">Generations:</label>
+            <input type="number" id="generations" value="100" min="1">
+            <button onclick="startSimulation()">Start Simulation</button>
+        </div>
+        <div id="chart"></div>
+    </div>
+
+    <!-- The Worker Code -->
+    <script type="text/javascript" id="workerScript">
+        const code = `self.onmessage = function(e) {\n    const params = e.data;\n    const result = runSingleLocusSimulation(params);\n    self.postMessage(result);\n};\n\n/**\n * runSingleLocusSimulation implements a basic PopG-like single-locus model with:\n * - symmetrical mutation (u) for A->a and a->A\n * - selection at a single locus (dominance h=0.5, s=some user-defined)\n * - binomial sampling for drift (diploid population)\n * - default initial allele frequency p=0.5\n */\nfunction runSingleLocusSimulation(params) {\n    // Interpret user inputs\n    const N = params.populationSize; // population size\n    const generations = params.generations;\n    const u = params.mutationRate; // symmetrical mutation rate\n\n    // Interpreting 'genomeSize' input as a stand-in for selection coefficient, s.\n    // e.g., if user sets 100 => s=0.1, 50 => s=0.05, etc.\n    const s = parseFloat(params.genomeSize) / 1000; // scale it down a bit\n    // Dominance\n    const h = 0.5;\n\n    // Starting allele frequency for A\n    let p = 0.5;\n\n    // Prepare results array\n    let results = [];\n\n    for (let gen = 0; gen < generations; gen++) {\n        // 1. Compute fitness values\n        const WAA = 1.0;\n        const WAa = 1.0 - h * s;\n        const Waa = 1.0 - s;\n        const q = 1.0 - p;\n\n        // 2. Mean population fitness (Wbar)\n        const Wbar = (p * p * WAA) + (2 * p * q * WAa) + (q * q * Waa);\n\n        // 3. Genotype frequencies after selection\n        const freqAA = (p * p * WAA) / Wbar;\n        const freqAa = (2 * p * q * WAa) / Wbar;\n        // const freqaa = (q * q * Waa) / Wbar; // not strictly needed for pSel\n\n        // 4. Allele frequency after selection (before mutation)\n        const pSel = freqAA + 0.5 * freqAa;\n\n        // 5. Incorporate symmetrical mutation: pMut = pSel*(1-u) + (1-pSel)*u\n        const pMut = pSel * (1 - u) + (1 - pSel) * u;\n\n        // 6. Genetic drift: binomial sampling of 2N alleles\n        let X = 0;\n        for (let i = 0; i < 2 * N; i++) {\n            if (Math.random() < pMut) {\n                X++;\n            }\n        }\n        const pNext = X / (2 * N);\n\n        // Store results for plotting\n        results.push({\n            generation: gen,\n            alleleFreq: pNext,\n            avgFitness: Wbar,\n            populationSize: N\n        });\n\n        // Next generation's p\n        p = pNext;\n    }\n\n    return results;\n}\n`;
+        // Create a blob from code string
+        const blob = new Blob([code], { type: 'application/javascript' });
+        window.mendelWorkerURL = URL.createObjectURL(blob);
+    </script>
+
+    <script>
+        let worker;
+        function startSimulation() {
+            if (worker) {
+                worker.terminate();
+            }
+            worker = new Worker(window.mendelWorkerURL);
+
+            const params = {
+                populationSize: parseInt(document.getElementById('populationSize').value, 10),
+                genomeSize: parseFloat(document.getElementById('genomeSize').value), // used as stand-in for s
+                mutationRate: parseFloat(document.getElementById('mutationRate').value),
+                generations: parseInt(document.getElementById('generations').value, 10)
+            };
+
+            worker.onmessage = function(e) {
+                const results = e.data;
+                plotResults(results);
+            };
+
+            worker.postMessage(params);
+        }
+
+        function plotResults(results) {
+            const traceAlleleFreq = {
+                x: results.map(r => r.generation),
+                y: results.map(r => r.alleleFreq),
+                mode: 'lines+markers',
+                type: 'scatter',
+                name: 'Allele Frequency (A)'
+            };
+            const traceAvgFitness = {
+                x: results.map(r => r.generation),
+                y: results.map(r => r.avgFitness),
+                mode: 'lines+markers',
+                type: 'scatter',
+                name: 'Average Fitness',
+                yaxis: 'y2'
+            };
+
+            const layout = {
+                title: 'PopG-Style Single-Locus Simulation',
+                xaxis: { title: 'Generation' },
+                yaxis: { title: 'Allele Frequency (p)' },
+                yaxis2: {
+                    title: 'Average Fitness',
+                    overlaying: 'y',
+                    side: 'right'
+                }
+            };
+
+            Plotly.newPlot('chart', [traceAlleleFreq, traceAvgFitness], layout);
+        }
+    </script>
+</body>
+</html>

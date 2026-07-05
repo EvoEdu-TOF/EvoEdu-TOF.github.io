@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hebbian Pattern Associator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    input[type=number] { width: 4em; }
+    .matrix { margin-bottom: 1em; }
+    .matrix input { width: 3em; margin: 0.1em; }
+    .output { margin-top: 1em; }
+    .weights-table td, .weights-table th { padding: 0.2em 0.5em; border: 1px solid #ccc; }
+    .weights-table { border-collapse: collapse; }
+  </style>
+</head>
+<body>
+  <h1>Hebbian Pattern Associator</h1>
+  <p>Enter input and target output patterns (use 1 and -1):</p>
+
+  <div class="matrix">
+    <label>Input Pattern:</label><br>
+    <input type="number" id="in0" value="1">
+    <input type="number" id="in1" value="-1">
+    <input type="number" id="in2" value="1">
+  </div>
+
+  <div class="matrix">
+    <label>Target Output Pattern:</label><br>
+    <input type="number" id="out0" value="1">
+    <input type="number" id="out1" value="-1">
+  </div>
+
+  <button onclick="trainHebbian()">Train</button>
+
+  <div class="output">
+    <h3>Weight Matrix (W = y * xᵀ)</h3>
+    <table class="weights-table" id="weights"></table>
+  </div>
+
+  <script>
+    function trainHebbian() {
+      const x = [
+        parseFloat(document.getElementById('in0').value),
+        parseFloat(document.getElementById('in1').value),
+        parseFloat(document.getElementById('in2').value),
+      ];
+
+      const y = [
+        parseFloat(document.getElementById('out0').value),
+        parseFloat(document.getElementById('out1').value),
+      ];
+
+      const W = y.map(y_i => x.map(x_j => y_i * x_j));
+
+      const table = document.getElementById('weights');
+      table.innerHTML = '';
+      W.forEach(row => {
+        const tr = document.createElement('tr');
+        row.forEach(val => {
+          const td = document.createElement('td');
+          td.textContent = val.toFixed(2);
+          tr.appendChild(td);
+        });
+        table.appendChild(tr);
+      });
+    }
+  </script>
+</body>
+</html>
+

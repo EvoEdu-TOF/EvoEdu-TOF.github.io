@@ -1,0 +1,1588 @@
+{
+  "schema": "evo-edu.notebook.reviewed_elements.v1",
+  "generated": "2026-06-30",
+  "concept_id": "notebook.concepts.natural-selection",
+  "items": [
+    {
+      "id": "staged.claim.darwin.natural-selection-foundations.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "Natural Selection Requires Variation, Inheritance, and Differential Survival",
+      "body": "Darwin's Origin, 1859 first edition, supports the core Notebook model of natural selection: more organisms are born than can survive, heritable variation exists, and variants profitable under local conditions tend to persist and propagate.",
+      "source_anchors": [
+        {
+          "source_id": "darwin-origin-of-species-1859-first-edition",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Foundational source for the selection-foundations slot; pair with Mayr/Pianka for modern population-genetic framing."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/adaptation.html"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.claim.dobzhansky.selection-not-purposeful-selector.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "Natural Selection Is Differential Reproduction, Not A Purposeful Selector",
+      "body": "Dobzhansky, Ayala, Stebbins, and Valentine support a guardrail that natural selection is an outcome of organism-environment interactions and differential reproduction, not a purposeful chooser and not necessarily literal combat among organisms.",
+      "source_anchors": [
+        {
+          "source_id": "dobzhansky-ayala-stebbins-valentine-evolution-1977",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Promote as a misconception guard for natural selection and adaptation pages."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.claim.dobzhansky.synthetic-theory-integration.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "The Synthetic Theory Connects Selection With Multiple Biological Fields",
+      "body": "Dobzhansky, Ayala, Stebbins, and Valentine support presenting modern evolutionary theory as a synthesis that joins Darwinian selection with genetics and is continually expanded by ecology, systematics, molecular biology, and paleobiology.",
+      "source_anchors": [
+        {
+          "source_id": "dobzhansky-ayala-stebbins-valentine-evolution-1977",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Useful as an overview bridge from the first-ring concepts into later molecular, ecological, and fossil-evidence paths."
+      },
+      "promotion_targets": [
+        "notebook/overview.html",
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/common-descent.html"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.claim.futuyma.hard-selection-artificial-selection-bridge.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "Hard Selection Can Resemble Artificial Selection",
+      "body": "Futuyma's response-to-selection chapter supports a bridge between artificial selection and some natural-selection cases: when survival depends on possessing a specific character state, hard selection can resemble an experimenter selecting a trait threshold.",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as a higher-level natural-selection record after learners have basic differential reproduction. It should not imply that all natural selection is hard selection or experimentally threshold-like."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/allele-frequency-change.html"
+      ],
+      "source_path_redacted": true,
+      "mathematical_structure": {
+        "kind": "selection-regime comparison",
+        "formal_statement": "Hard selection can be modeled as differential survival or reproduction against an absolute environmental threshold, while artificial selection imposes an externally chosen threshold or ranking on a measured trait.",
+        "notation_status": "conceptualized; no equation preserved in this sidecar",
+        "assumptions": [
+          "the selected character state can be identified",
+          "fitness differences are tied to survival or reproduction",
+          "the comparison is about model structure, not identical causal origin",
+          "soft-selection cases remain a separate context-dependent regime"
+        ],
+        "biological_interpretation": "The same trait-response logic can illuminate artificial selection and some natural-selection cases, but only when the selection regime is made explicit."
+      }
+    },
+    {
+      "id": "staged.claim.futuyma.soft-selection-density-regulated-replacement.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "Soft Selection Is Context-Relative Replacement",
+      "body": "Futuyma's treatment of genetic load supports a distinction between hard and soft selection: in hard selection, unconditionally inferior genotypes can lower population density, while in soft selection, relatively inferior genotypes are replaced under density regulation, so selection need not appear as an ecological increase in population size or mean density.",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-17",
+        "notes": "Use as the missing explanatory bridge for the existing soft/hard selection coverage probe. Keep beginner-facing copy focused on the contrast between absolute genotype disadvantage and context-relative replacement."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/allele-frequency-change.html"
+      ],
+      "source_path_redacted": true,
+      "mathematical_structure": {
+        "kind": "selection-regime comparison",
+        "formal_statement": "Hard selection ties genotype-dependent survival or reproduction to absolute population loss; soft selection changes genotype frequencies through relative success under density regulation or other ecological constraints.",
+        "notation_status": "conceptualized from prose and genetic-load argument; no equation preserved in this sidecar",
+        "assumptions": [
+          "genotypes can differ in survival or fecundity",
+          "population density may be limited by ecological factors independent of the selected locus",
+          "relative genotype replacement can change allele frequencies without increasing total density",
+          "genetic load and substitutional load arguments depend on whether selective deaths are independent and absolute"
+        ],
+        "biological_interpretation": "The same allele-frequency change can have different demographic meaning depending on whether selection is absolute or context-relative."
+      }
+    },
+    {
+      "id": "staged.claim.natural-selection.evidence-check.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "Selection Claims Need Trait and Fitness Evidence",
+      "body": "A frequency increase alone does not establish that an allele is adaptive; the explanation also needs evidence connecting the variant to heritable trait differences, fitness differences, and relevant environmental conditions.",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Pianka OCR import anchors the distinction between selection, evolution, alternative mechanisms, and caution against circular adaptive explanations. Keep citation-specific page text out of public pages until final bibliography review."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/natural-selection.scaffold.json"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.claim.pianka.heritability-selection.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "Selection Requires Heritable Phenotypic Differences",
+      "body": "Pianka's genetics chapter supports the Notebook guardrail that selection acts on phenotypes, but population change depends on whether phenotypic differences are heritable.",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Useful for distinguishing immediate fitness effects from evolutionary response. OCR section heading is noisy, but the page anchor is usable."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/natural-selection.scaffold.json"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.claim.wallace.environmental-constraints-divergence.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "Wallace Frames Selection Through Environmental Constraints",
+      "body": "Wallace's 1858 paper gives the Notebook a historical bridge for natural selection: wild populations are constrained by food, enemies, and changing conditions, so variants that improve persistence can increase and sometimes diverge from parent forms.",
+      "source_anchors": [
+        {
+          "source_id": "wallace-tendency-varieties-1858",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wallace-tendency-varieties-1858",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wallace-tendency-varieties-1858",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as a historical source sidecar for natural selection and adaptation; the wording avoids claiming Wallace used later population-genetic terminology."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/beginner-route.html"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.example.futuyma.industrial-melanism-directional-selection.001",
+      "kind": "example",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "Industrial Melanism Shows Directional Selection On Allele Frequencies",
+      "body": "Futuyma uses industrial melanism in peppered moths as a directional-selection example: a melanic form increased from very low frequency to dominance in some populations when predation favored darker moths in polluted habitats.",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Good example for linking natural selection to allele-frequency change; use modern caveats if expanding into a full page treatment."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/allele-frequency-change.html",
+        "apps/allele-tracker/app/index.html"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.example.wilson.resource-allocation-genetic-algorithm.001",
+      "kind": "example",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "Resource Allocation As An Optimization Model",
+      "body": "Wilson's resource-allocation chapter can support a web-facing example where alternative allocation schedules vary, reproduce according to performance, and converge toward higher-fitness strategies under specified environmental assumptions.",
+      "source_anchors": [
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as a natural-selection/modeling bridge. The genetic algorithm is an optimization device for exploring strategy space, not evidence that real populations literally run that algorithm."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/adaptation.html"
+      ],
+      "source_path_redacted": true,
+      "algorithm_translation": {
+        "source_language": "C and exercise prose",
+        "target_language": "JavaScript",
+        "translation_policy": "clean-room genetic-algorithm-style demonstration of selection among allocation schedules",
+        "model_focus": "fitness-mediated search over resource allocation schedules",
+        "web_default": true
+      },
+      "copyright_review": {
+        "direct_code_reuse": "avoid",
+        "risk_reducer": "independent JavaScript model with explicit assumptions and tests",
+        "provenance_required": true
+      },
+      "expected_output_checks": [
+        "Changing the reproduction threshold should change convergence speed or stability.",
+        "Proportional reproduction should be compared with threshold reproduction as a model assumption.",
+        "The UI should expose the fitness function separately from the search procedure."
+      ]
+    },
+    {
+      "id": "staged.question.basolo.swordtail-preference-causal-inference.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "What Did The Mate-Choice Test Show?",
+      "body": "In an experiment, female platyfish spend more courtship-associated time near males given visible artificial swords than near otherwise matched males given transparent controls. What is directly observed, what extra evidence is needed to infer that a preexisting preference helped drive sword evolution, and why would it be too strong to say the experiment alone proves the sword evolved for that reason?",
+      "source_anchors": [
+        {
+          "source_id": "basolo-female-preference-swordtails-1990",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "basolo-female-preference-swordtails-1990",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "basolo-female-preference-swordtails-1990",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "basolo-female-preference-swordtails-1990",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "basolo-female-preference-swordtails-1990",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "basolo-female-preference-swordtails-1990",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-26",
+        "notes": "Paraphrased from Basolo 1990. Use as an empirical sexual-selection and causal-inference guardrail: the experiment supports a preference claim, while the evolutionary explanation depends on phylogenetic ancestral-state inference and comparison with alternative models."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/common-descent.html",
+        "apps/evidence-cause-workbench/app/index.html"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "identify the direct observation as differential time spent near visible-sword versus transparent-control males during active courtship trials",
+          "state that proximity in the test is an indicator of preference, not direct observation of mating or lifetime fitness",
+          "explain why matched male size, side switching, transparent controls, and reversal tests reduce rival explanations based on surgery, side bias, or fixed male differences",
+          "connect the preference observation to a historical inference only after adding phylogenetic evidence that swordlessness is ancestral",
+          "distinguish a preexisting-bias model from models in which preference and trait coevolve together",
+          "avoid overclaiming that one experiment alone proves the full evolutionary cause of the sword",
+          "note that later selection, coevolution, or other processes may modify the trait and preference after the initial origin"
+        ],
+        "coverage_note": "This gives learners a concrete empirical case for separating observation, experimental control, ancestral-state inference, model comparison, and causal magnitude before attributing a historical evolutionary cause."
+      },
+      "mathematical_structure": {
+        "kind": "nonparametric paired-choice evidence check",
+        "formal_statement": "A paired mate-choice design can support a preference claim when observed association time differs systematically between treatment and control males, but historical causal inference additionally requires phylogenetic state information and comparison against alternative causal models.",
+        "notation_status": "source statistics paraphrased; no equation normalized",
+        "assumptions": [
+          "time near a male during active courtship is a usable preference proxy under the experimental conditions",
+          "paired males are sufficiently matched except for visible sword status",
+          "transparent artificial swords control for surgery and nonvisual handling effects",
+          "position switching controls side bias",
+          "ancestral-state inference is needed before claiming the preference predates the trait",
+          "one supported causal model does not automatically exclude later or interacting selection processes"
+        ],
+        "biological_interpretation": "Sexual-selection evidence can combine direct behavioral observations with historical phylogenetic inference, but each step answers a different part of the causal question."
+      },
+      "question_type": "empirical evidence and causal-attribution guardrail",
+      "source_context": {
+        "source_section": "Science report: experimental choice tests, abbreviated Xiphophorus phylogeny, and discussion",
+        "textbook_prompt_role": "app-support case for evidence workbench and sexual-selection reasoning",
+        "edition_or_volume_year": "Science 250, 1990; local JSTOR PDF with OCR sidecar"
+      }
+    },
+    {
+      "id": "staged.question.darwin.origin-edition-provenance.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "Why Does Darwin Edition Provenance Matter?",
+      "body": "A learner cites Darwin's Origin for natural selection and quotes wording from the sixth edition, including the phrase 'survival of the fittest.' Why should the Notebook record the exact edition and local file instead of treating every Origin citation as the 1859 first edition?",
+      "source_anchors": [
+        {
+          "source_id": "darwin-origin-of-species-1872-sixth-edition",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "darwin-origin-of-species-1872-sixth-edition",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "darwin-origin-of-species-1872-sixth-edition",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "This item is a provenance guardrail, not a new definition of natural selection. It exists to prevent edition drift in Darwin-sourced Notebook claims."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/source-trails/index.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "state that Darwin's Origin exists in multiple editions with additions and corrections",
+          "recognize that later wording can differ from the 1859 first edition",
+          "use the sixth-edition source trail when citing sixth-edition language such as 'survival of the fittest'",
+          "avoid attributing edition-specific wording to the first-edition source trail",
+          "record exact local file, edition, volume year, and anchor before promoting a claim"
+        ],
+        "coverage_note": "This strengthens source-trail operations for Darwin source-family ingestion."
+      },
+      "mathematical_structure": {
+        "kind": "provenance constraint",
+        "formal_statement": "A Notebook source claim must bind concept, wording, local file, edition, year, and locator; if edition differs, the source_id differs.",
+        "notation_status": "operational provenance rule",
+        "assumptions": [
+          "multiple local Darwin Origin texts may be available",
+          "wording and framing can vary across editions",
+          "teaching claims should be traceable to the exact text used"
+        ],
+        "biological_interpretation": "Accurate source provenance keeps historical wording from being mistaken for a timeless or edition-neutral formulation of evolutionary theory."
+      },
+      "question_type": "source provenance guardrail",
+      "source_context": {
+        "source_section": "Project Gutenberg header; sixth-edition title note; Chapter III, Struggle for Existence",
+        "textbook_prompt_role": "source-family provenance check",
+        "edition_or_volume_year": "1872 sixth edition; Project Gutenberg otoos610.txt local etext"
+      }
+    },
+    {
+      "id": "staged.question.darwin.sexual-selection-distinction.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "How Is Sexual Selection Different From Survival Selection?",
+      "body": "A male trait increases mating success because it helps its bearer defeat rivals or attract mates, but the same trait is costly for ordinary survival. How should this be classified, and why is it not enough to ask only whether the trait helps the individual stay alive?",
+      "source_anchors": [
+        {
+          "source_id": "darwin-descent-of-man-1871",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "darwin-descent-of-man-1871",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "darwin-descent-of-man-1871",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Darwin's Descent treatment of sexual selection. Use as a mechanism-distinction question rather than as an endorsement of every historical example or social claim in the source."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "identify the trait as a sexual-selection case when its advantage is differential mating or fertilization success",
+          "distinguish same-sex competition from mate choice as two routes by which sexual selection can act",
+          "contrast reproductive success with ordinary survival under the general conditions of life",
+          "explain that a trait can persist when mating advantages offset survival costs",
+          "recognize that natural selection can still constrain sexually selected traits if their survival costs become too high"
+        ],
+        "coverage_note": "This adds a Darwin-source coverage probe for reproductive-success mechanisms within the natural-selection concept page."
+      },
+      "mathematical_structure": {
+        "kind": "fitness-component distinction",
+        "formal_statement": "Total evolutionary success can depend on survival and reproduction; sexual selection isolates variation in reproductive success among same-sex competitors or mate-attraction alternatives.",
+        "notation_status": "qualitative primary-source passage normalized as a fitness-component distinction",
+        "assumptions": [
+          "the trait varies among individuals",
+          "trait differences affect mating or fertilization success",
+          "the reproductive advantage is heritable enough to change descendant frequencies",
+          "ordinary survival costs and reproductive benefits are evaluated together"
+        ],
+        "biological_interpretation": "Selection does not act only through staying alive; differences in access to mates can also change which heritable variants are represented in later generations."
+      },
+      "question_type": "mechanism distinction",
+      "source_context": {
+        "source_section": "Part II, Principles of Sexual Selection; General Summary and Conclusion",
+        "textbook_prompt_role": "primary-source concept passage converted into a modern coverage question",
+        "edition_or_volume_year": "1871 work; Project Gutenberg dscmn10.txt local etext"
+      }
+    },
+    {
+      "id": "staged.question.darwin-sketches.variation-cause-selection.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "Which Step Explains The Pattern?",
+      "body": "A population shows heritable differences in a trait after several generations in changed conditions, and the trait later becomes common when some variants are kept separate and bred. Which observations would support direct environmental causation, which would support variation arising through reproduction, and which would be needed before calling the later pattern selection?",
+      "source_anchors": [
+        {
+          "source_id": "darwin-species-sketches-1842-1844-local-texts",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "darwin-species-sketches-1842-1844-local-texts",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "darwin-species-sketches-1842-1844-local-texts",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "darwin-species-sketches-1842-1844-local-texts",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "darwin-species-sketches-1842-1844-local-texts",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-26",
+        "notes": "Paraphrased from Darwin's 1842 sketch and 1844 essay. Use as a causal-inference guardrail and Darwin source-family chronology item, not as a modern genetics explanation or as a substitute for the 1859 Origin first-edition trail."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/population-thinking.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "separate the observation that a trait changed or became common from the proposed cause of that change",
+          "recognize direct environmental effects as one possible cause only when exposure plausibly produces the trait and matches its magnitude",
+          "recognize variation arising through reproduction when individuals or siblings differ despite comparable exposure",
+          "ask whether the trait is inherited before treating it as material for evolutionary sorting",
+          "identify free crossing or recombination as a process that can dilute small differences rather than preserve them",
+          "require differential preservation, breeding, survival, or reproductive success before naming selection as the cause of a population-level pattern",
+          "state that Darwin's early sketches are historical anchors for the developing mechanism, while modern exercises still need explicit assumptions, measurements, and rival-cause checks"
+        ],
+        "coverage_note": "This strengthens the foundations-first path before empirical exercises: learners should not infer selection merely from a changed trait distribution, and should distinguish observed variation from direct causation, reproductive variation, inheritance, crossing, and selective sorting."
+      },
+      "mathematical_structure": {
+        "kind": "causal-stage distinction",
+        "formal_statement": "Observed trait change is not by itself evidence for one cause; causal attribution requires separating variation origin, inheritance, mixing or crossing, and differential sorting, then checking whether the proposed cause can plausibly produce the observed magnitude and direction.",
+        "notation_status": "conceptual; no source notation normalized",
+        "assumptions": [
+          "the same observed trait pattern may be compatible with direct environmental influence, variation arising through reproduction, crossing, selection, or combinations of these processes",
+          "a selection explanation requires heritable variation and differential sorting, not just the presence of variation",
+          "small causes should not be assigned responsibility for large effects without a mechanism that can amplify or accumulate them",
+          "historical Darwin drafts predate modern genetics and should be used for mechanism chronology and reasoning structure rather than contemporary genetic detail"
+        ],
+        "biological_interpretation": "Learners should treat natural selection as a causal claim with prerequisites, not as a label to attach whenever organisms differ or a trait frequency changes."
+      },
+      "question_type": "variation-cause-selection guardrail",
+      "source_context": {
+        "source_section": "1842 sketch Part 1, On Variation Under Domestication and On the Principles of Selection; 1844 essay Part 1, Chapter 1",
+        "textbook_prompt_role": "source-family chronology and causal-inference prerequisite",
+        "edition_or_volume_year": "local SKETCHA.632 and SKETCHB.632 text files for 1842 and 1844 drafts"
+      }
+    },
+    {
+      "id": "staged.question.dawkins.gene-centered-selection-guardrail.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "What Does Gene-Centered Selection Explain?",
+      "body": "A trait affects organism survival and reproduction, but Dawkins frames selection in terms of heritable variants that become more common through differential reproduction. How can this gene-centered view help explain evolutionary change, and what should it not make you forget about organisms, populations, development, and ecological context?",
+      "source_anchors": [
+        {
+          "source_id": "dawkins-selfish-gene-1976",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "dawkins-selfish-gene-1976",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "dawkins-selfish-gene-1976",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from local OCR of the 1976 split-PDF scan. Use as a guardrail question: gene-centered selection is a useful level-of-selection model, not a claim that genes have conscious motives or that organismal phenotypes, populations, development, and ecology can be ignored."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "define natural selection as non-random differential reproduction of heritable variants",
+          "explain that gene-centered framing tracks what persists through inheritance across generations",
+          "distinguish gene-centered selection from unsupported group-benefit explanations",
+          "explain that organisms remain the interacting phenotypes through which gene effects are expressed",
+          "state that population structure, development, ecology, and environment still shape selection outcomes",
+          "avoid treating selfish as a conscious motive, moral claim, or complete explanation by itself"
+        ],
+        "coverage_note": "This fills a natural-selection guardrail around levels of selection while preventing a common overextension of gene-centered language."
+      },
+      "mathematical_structure": {
+        "kind": "level-of-selection framing",
+        "formal_statement": "If a heritable variant g affects its expected representation in future generations, selection can be described by changes in the frequency of g, while organismal phenotypes and ecological interactions mediate those effects.",
+        "notation_status": "qualitative source normalized as an inheritance-frequency model",
+        "assumptions": [
+          "heritable variation exists",
+          "variants differ in expected representation across generations",
+          "phenotypes mediate many gene effects",
+          "population and ecological context affect fitness outcomes"
+        ],
+        "biological_interpretation": "Gene-centered selection can clarify what is inherited and amplified, but the causal path usually runs through organisms in populations and environments."
+      },
+      "question_type": "coverage guardrail",
+      "source_context": {
+        "source_section": "The Selfish Gene, chapter 1 and transition to chapter 2",
+        "textbook_prompt_role": "canonical source framing converted into a coverage question",
+        "edition_or_volume_year": "1976 local split-PDF scan, part 001 OCR"
+      }
+    },
+    {
+      "id": "staged.question.dawkins.kin-selection-cost-benefit-guardrail.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "When Can Helping Kin Be Favored By Selection?",
+      "body": "An animal gives a warning call or shares food with relatives. How would a gene-centered kin-selection explanation compare the cost to the actor, the benefit to recipients, and their relatedness, and why is this not the same as saying the animal consciously calculates or that families are simply group-selected units?",
+      "source_anchors": [
+        {
+          "source_id": "dawkins-selfish-gene-1976",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "dawkins-selfish-gene-1976",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "dawkins-selfish-gene-1976",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "dawkins-selfish-gene-1976",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-25",
+        "notes": "Paraphrased from local OCR of the 1976 split-PDF scan, part 003. Use as a selection-level guardrail: kin selection is a relatedness-weighted gene-selection explanation, not group selection, conscious calculation, or a guarantee that every helpful-looking behavior is adaptive."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "identify the actor, recipient, cost to the actor, benefit to the recipient, and relatedness estimate",
+          "state the qualitative rule that helping can be favored when relatedness-weighted benefits exceed costs",
+          "explain that relatedness is probabilistic and can be estimated by cues or average social context",
+          "distinguish kin selection as a consequence of gene selection from group selection among whole families",
+          "include parental care as a kin-selection case rather than treating it as an exception",
+          "avoid claiming that animals consciously calculate Hamilton-style quantities",
+          "ask for behavioral, ecological, and genetic evidence before treating a helpful-looking act as adaptive kin-selected altruism"
+        ],
+        "coverage_note": "This fills the Dawkins kin-selection target in the queue and strengthens the evidence-cause prerequisite: observed helping needs a source-backed cost, benefit, relatedness, and cue-use analysis before causal attribution."
+      },
+      "mathematical_structure": {
+        "kind": "relatedness-weighted cost-benefit rule",
+        "formal_statement": "A helping behavior can be favored when the relatedness-weighted expected benefit to recipients exceeds the expected cost to the actor.",
+        "notation_status": "normalized from Dawkins's qualitative and example-based presentation of Hamilton-style reasoning",
+        "assumptions": [
+          "the behavior affects survival or reproduction probabilities",
+          "recipients may carry copies of the relevant allele with probability related to kinship",
+          "costs and benefits are expected effects, not guaranteed outcomes",
+          "cue rules for kin recognition can be imperfect",
+          "selection acts on inherited tendencies that perform well on average in historical environments"
+        ],
+        "biological_interpretation": "Helping relatives can increase the future representation of genes shared by descent, but the inference depends on costs, benefits, relatedness, recognition cues, and ecological context."
+      },
+      "question_type": "coverage guardrail",
+      "source_context": {
+        "source_section": "The Selfish Gene, chapter 6, Genesmanship",
+        "textbook_prompt_role": "canonical source framing converted into a cost-benefit and misconception guardrail",
+        "edition_or_volume_year": "1976 local split-PDF scan, part 003 OCR"
+      }
+    },
+    {
+      "id": "staged.question.dawkins.replicator-vehicle-distinction.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "What Is The Difference Between A Replicator And A Vehicle?",
+      "body": "Dawkins describes genes as long-lived replicators and organisms as temporary survival-machine vehicles. How can this distinction help explain natural selection, and what would go wrong if a learner treated the vehicle metaphor as conscious purpose or as a reason to ignore organismal development and ecology?",
+      "source_anchors": [
+        {
+          "source_id": "dawkins-selfish-gene-1976",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "dawkins-selfish-gene-1976",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "dawkins-selfish-gene-1976",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-25",
+        "notes": "Paraphrased from local OCR of the 1976 split-PDF scan, part 002. Use as a levels-of-selection guardrail: replicator and vehicle are analytic roles, not conscious motives, and the causal route still passes through development, phenotype, population context, and ecological interaction."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "define a replicator as an inherited entity that persists through copied descendants",
+          "define a vehicle or survival machine as a phenotype-bearing body through which replicator effects are expressed",
+          "explain why selection can be tracked by the long-term representation of replicators",
+          "state that organismal bodies, development, and ecology remain causal parts of the selection process",
+          "avoid treating genes as conscious agents with plans, foresight, or moral motives",
+          "avoid using gene-centered language to erase multigene interaction, population structure, or environmental dependence"
+        ],
+        "coverage_note": "This extends the existing Dawkins gene-centered-selection item with the more precise replicator/vehicle distinction needed before later kin-selection and inclusive-fitness work."
+      },
+      "mathematical_structure": {
+        "kind": "selection-level distinction",
+        "formal_statement": "A replicator persists by producing copied descendants across generations, while a vehicle is a temporary organized phenotype whose traits can affect the expected future representation of the replicators it carries.",
+        "notation_status": "qualitative source normalized as inheritance-role vocabulary",
+        "assumptions": [
+          "heritable material can be copied with enough fidelity to persist across generations",
+          "organismal phenotypes mediate many effects on survival and reproduction",
+          "genes interact with other genes and with developmental and ecological contexts",
+          "selection language is metaphorical unless tied to measurable differences in expected representation"
+        ],
+        "biological_interpretation": "The distinction helps learners separate what is copied across generations from the temporary bodies and interactions through which selection acts."
+      },
+      "question_type": "coverage guardrail",
+      "source_context": {
+        "source_section": "The Selfish Gene, chapters 2-3",
+        "textbook_prompt_role": "canonical source framing converted into a distinction question",
+        "edition_or_volume_year": "1976 local split-PDF scan, part 002 OCR"
+      }
+    },
+    {
+      "id": "staged.question.futuyma.pseudo-overdominance-evidence.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "Does Heterozygote Success Prove Overdominance?",
+      "body": "A study reports that heterozygotes at an enzyme marker have higher fecundity than homozygotes, and the heterozygote frequency rises over several generations. What evidence would be needed before concluding that selection is maintaining a single-locus overdominant polymorphism rather than a linked or multi-locus effect?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Futuyma's treatment of heterozygous advantage and pseudo-overdominance. Keep as an evidence-quality question: observed heterozygote performance can motivate a selection hypothesis, but it does not by itself isolate the causal locus."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/allele-frequency-change.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "state that higher heterozygote fecundity or increasing heterozygosity is consistent with heterozygote advantage",
+          "explain why the marker might be linked to causal loci rather than itself overdominant",
+          "identify pseudo-overdominance as a pattern caused by linkage disequilibrium or linked deleterious recessives being masked in hybrids",
+          "ask for recombination, breeding, mapping, or genotype-fitness evidence that separates the marker from neighboring loci",
+          "distinguish single-locus overdominance from multi-locus heterosis, chromosomal inversions, and environment-averaged marginal overdominance"
+        ],
+        "coverage_note": "This strengthens balancing-selection coverage by adding a causal-inference guardrail around overdominance claims."
+      },
+      "mathematical_structure": {
+        "kind": "selection-model evidence boundary",
+        "formal_statement": "Single-locus overdominance requires w_AA' > w_AA and w_AA' > w_A'A' for the causal locus itself; marker heterozygote superiority is insufficient if marker genotype is correlated with linked causal variants.",
+        "notation_status": "normalized from source prose",
+        "assumptions": [
+          "fitness differences are estimated for genotypes with adequate replication",
+          "marker genotypes can be separated from linked background effects",
+          "linkage disequilibrium and recombination are considered explicitly",
+          "environmental heterogeneity and multi-locus heterosis are competing explanations"
+        ],
+        "biological_interpretation": "Selection can maintain polymorphism by heterozygote advantage, but proving the mechanism requires evidence that the heterozygote advantage belongs to the focal locus rather than to the chromosomal or genetic background it tags."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "AA, AA', A'A'",
+          "notebook_symbol": "AA, AA', A'A'",
+          "meaning": "three genotypes at a focal locus; OCR and source typography vary"
+        },
+        {
+          "source_symbol": "pseudo-overdominance",
+          "notebook_symbol": "pseudoOverdominance",
+          "meaning": "apparent heterozygote superiority caused by linkage disequilibrium or linked multi-locus effects rather than intrinsic superiority at one locus"
+        }
+      ],
+      "question_type": "evidence discrimination",
+      "source_context": {
+        "source_section": "The Effects of Selection on Gene Frequencies; Heterozygous Advantage; For Discussion and Thought",
+        "textbook_prompt_role": "end-of-chapter interpretation question expanded with nearby explanatory passage",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.futuyma.realized-heritability-response-to-selection.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "Why Does Realized Heritability Change During Selection?",
+      "body": "If realized heritability is estimated from the response to selection divided by the selection differential, why might it decline or change as artificial selection continues across generations?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Mined from an end-of-section textbook question. Keep as an advanced quantitative-genetics coverage probe rather than a beginner-route item."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/allele-frequency-change.html"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "define response to selection R and selection differential S",
+          "explain realized heritability as R divided by S in the exercise framing",
+          "connect declining response to depletion or rearrangement of selectable genetic variation",
+          "distinguish genetic variation from immediately selectable genetic variation",
+          "note that changing environments, linkage, dominance, and correlated fitness costs can alter response"
+        ],
+        "coverage_note": "This adds a quantitative-genetics bridge between heritability, artificial selection, and evolutionary response."
+      },
+      "mathematical_structure": {
+        "kind": "quantitative-genetic response equation",
+        "formal_statement": "Realized heritability can be estimated as h_realized^2 = R / S, where R is the response to selection and S is the selection differential.",
+        "notation_status": "normalized from OCR; source symbol for heritability is noisy",
+        "assumptions": [
+          "trait values are measured consistently across generations",
+          "selection differential and response are defined on comparable scales",
+          "response reflects heritable variation as well as other genetic and environmental constraints",
+          "the relation is an empirical estimate, not a guarantee of constant future response"
+        ],
+        "biological_interpretation": "The equation turns a breeding or selection experiment into an estimate of how much selectable inheritance remains visible in the population."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "R",
+          "notebook_symbol": "R",
+          "meaning": "response to selection"
+        },
+        {
+          "source_symbol": "S",
+          "notebook_symbol": "S",
+          "meaning": "selection differential"
+        },
+        {
+          "source_symbol": "realized heritability",
+          "notebook_symbol": "h_realized^2",
+          "meaning": "estimated heritability from response divided by selection differential"
+        }
+      ],
+      "question_type": "worked quantitative problem",
+      "source_context": {
+        "source_section": "FOR DISCUSSION AND THOUGHT",
+        "textbook_prompt_role": "end-of-section quantitative-genetics question",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.futuyma.soft-hard-selection-coverage-probe.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "Soft Selection And Hard Selection",
+      "body": "How would soft selection and hard selection differ in their effects on fertility, viability, and the rate of evolutionary response?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Reviewed against local OCR from the scanned Futuyma volume. Keep as an advanced coverage probe: it asks about selection regime, genetic homeostasis, fertility/viability decline, and evolutionary rate."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "definition of soft selection",
+          "definition of hard selection",
+          "comparison of density- or context-dependent fitness effects",
+          "explain why fertility or viability decline may mark genetic homeostasis under some regimes",
+          "compare expected evolutionary rates under context-dependent versus absolute-threshold selection"
+        ],
+        "coverage_note": "This question can now be paired with the hard-selection/artificial-selection bridge record and the soft-selection density-regulated replacement claim."
+      },
+      "mathematical_structure": {
+        "kind": "selection-regime comparison",
+        "formal_statement": "Compare evolutionary response under context-relative soft selection with response under absolute-threshold hard selection, especially where fertility, viability, and selectable genetic variance change across generations.",
+        "notation_status": "conceptualized; no equation preserved in this sidecar",
+        "assumptions": [
+          "fitness effects can be context-dependent or threshold-like",
+          "fertility and viability can change as correlated responses",
+          "evolutionary rate depends on selectable variation and selection regime",
+          "genetic homeostasis is treated as a hypothesis to explain limited or plateaued response"
+        ],
+        "biological_interpretation": "The exercise makes selection regime part of the explanation for why similar trait differences may yield different evolutionary rates."
+      },
+      "question_type": "mechanism explanation",
+      "source_context": {
+        "source_section": "FOR DISCUSSION AND THOUGHT",
+        "textbook_prompt_role": "end-of-section discussion question",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.natural-selection.survival-reproduction-check.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "Did Longer Survival Mean Higher Fitness?",
+      "body": "An organism with one trait survives longer, while another leaves more successful offspring. Which one has higher evolutionary fitness in this setting, and what measurements would you need to justify the answer?",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Misconception check for equating fitness with longevity, strength, or survival alone."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.question.wallace.abundance-adaptation-check.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "Why Is One Species More Abundant?",
+      "body": "Wallace asks learners to explain why closely related species can differ greatly in abundance even when both reproduce rapidly. How should the explanation connect population checks, food supply, enemies, and useful variation rather than fecundity alone?",
+      "source_anchors": [
+        {
+          "source_id": "wallace-tendency-varieties-1858",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wallace-tendency-varieties-1858",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wallace-tendency-varieties-1858",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Wallace's 1858 argument. Keep historical phrasing separate from later population-genetic terms; use this as a foundation-ring assessment prompt."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/adaptation.html"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "explain why fecundity alone does not determine abundance",
+          "identify environmental checks such as food supply, enemies, and unfavorable seasons",
+          "connect population limitation to differential persistence among individuals or allied species",
+          "explain why useful variations should tend to increase while harmful ones diminish",
+          "avoid projecting later genetic terminology onto Wallace's historical argument"
+        ],
+        "coverage_note": "This adds a Wallace-derived historical assessment path for natural selection and adaptation."
+      },
+      "mathematical_structure": {
+        "kind": "population-limitation inference",
+        "formal_statement": "When reproduction can exceed replacement but population size remains bounded, differential persistence under environmental checks can change the representation of variants or allied forms.",
+        "notation_status": "conceptualized; no modern allele-frequency notation is imposed on the historical source",
+        "assumptions": [
+          "organisms reproduce in excess of long-term replacement",
+          "food supply, enemies, and seasonal conditions limit survival",
+          "variants can differ in traits affecting persistence",
+          "historical natural-selection arguments can be used without translating them into modern genetics"
+        ],
+        "biological_interpretation": "Wallace's argument links abundance, scarcity, and divergence to fit with conditions of existence rather than to reproductive output alone."
+      },
+      "question_type": "evidence interpretation",
+      "source_context": {
+        "source_section": "The Struggle for Existence; The Law of Population of Species; Useful Variations",
+        "textbook_prompt_role": "source-mined historical concept probe",
+        "edition_or_volume_year": "1858"
+      }
+    },
+    {
+      "id": "staged.question.williams.aphid-rotifer-sex-model-assumptions.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "When Does The Lottery Analogy For Sex Work?",
+      "body": "Williams compares sexually produced propagules to holding several different lottery tickets rather than many copies of one ticket. In the aphid-rotifer model, what ecological and life-history conditions make that analogy a plausible selective advantage for sex?",
+      "source_anchors": [
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Williams's aphid-rotifer model. Use as an assumption-check question: the model should not be generalized to all sex without the ecological and life-history structure that makes the lottery analogy meaningful."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "identify heterogonic life cycles with repeated asexual generations and occasional sexual production of widely dispersed propagules",
+          "specify small or discontinuous habitats that can be saturated by a clone",
+          "explain why many copies of one asexual genotype may be redundant if one clone can dominate the local habitat",
+          "explain why sexually produced propagules can spread a parent's genes across multiple genotypes, increasing the chance that one clone is locally best",
+          "include strong within-habitat competition and enough clonal generations for small fitness differences to change clone abundance",
+          "state caveats: high between-habitat heritability of fitness or weak local competition would reduce the advantage",
+          "avoid treating the lottery analogy as a general proof that sex is always favored"
+        ],
+        "coverage_note": "This deepens the Williams 1975 sex-and-recombination coverage by requiring students to connect the benefit of variation to explicit ecological assumptions."
+      },
+      "mathematical_structure": {
+        "kind": "frequency-dependent clonal competition model",
+        "formal_statement": "Sex can be favored in the aphid-rotifer model when diverse sexual propagules increase the probability that at least one descendant genotype wins local clonal competition enough to offset the cost of meiosis.",
+        "notation_status": "source symbols normalized qualitatively; Williams uses m and n for established asexual and sexual propagules, t for clonal generations, and lambda for mean propagule number in simulations",
+        "assumptions": [
+          "colonized habitats receive a limited, nonrandom sample of propagules",
+          "one successful clone can saturate or dominate the habitat",
+          "sexual propagules differ genetically while asexual propagules copy the parental genotype",
+          "within-habitat fitness differences have higher predictive value than between-habitat fitness heritability",
+          "clonal competition lasts long enough for fitness differences to affect relative abundance"
+        ],
+        "biological_interpretation": "The benefit of sex comes from distributing genetic representation across alternative local competitors when local success is winner-weighted, not from variation as an abstract good."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "m",
+          "notebook_symbol": "asexualEstablishedPropagules",
+          "meaning": "number or average number of established asexual propagules in a colonized habitat"
+        },
+        {
+          "source_symbol": "n",
+          "notebook_symbol": "sexualEstablishedPropagules",
+          "meaning": "number or average number of established sexual propagules in a colonized habitat"
+        },
+        {
+          "source_symbol": "t",
+          "notebook_symbol": "clonalGenerations",
+          "meaning": "number of asexual generations of competition within the colonized habitat"
+        },
+        {
+          "source_symbol": "lambda",
+          "notebook_symbol": "meanPropaguleNumber",
+          "meaning": "mean propagule number in the Williams and Mitton simulation"
+        }
+      ],
+      "question_type": "model assumption check",
+      "source_context": {
+        "source_section": "Chapter 2, The Aphid-Rotifer Model",
+        "textbook_prompt_role": "canonical source model converted into a coverage question",
+        "edition_or_volume_year": "1975 monograph; local scan of third printing with corrections, 1977"
+      }
+    },
+    {
+      "id": "staged.question.williams.cost-of-sex-guardrail.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "What Must A Benefit Of Sex Overcome?",
+      "body": "Williams frames sexual reproduction as a paradox because outcrossed sex can halve a parent's direct genetic representation compared with an asexual alternative. If a student says sex is favored simply because recombination creates variation, what additional evidence or model conditions are needed before that explanation is adequate?",
+      "source_anchors": [
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Williams's opening paradox and later recombination discussion. Use as a guardrail against hand-waving from 'variation is good' to a sufficient adaptive explanation for sex."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "state the cost being explained: compared with an asexual alternative, outcrossed sex can transmit only half of a parent's genes through each sexual offspring",
+          "separate the existence of genetic variation from an explanation of why sex is favored despite the cost",
+          "ask whether the proposed benefit is large enough to offset the cost of meiosis and any recombinational load",
+          "look for life-history or ecological conditions such as uncertain environments, intense juvenile selection, colonization, or progeny fitness variance that can make diverse offspring immediately useful",
+          "avoid relying only on long-term species benefits or vague group-selection claims unless the model explains how selection maintains sex in reproducing individuals or stable mixed populations",
+          "recognize that recombination can matter under some population-genetic conditions, but those conditions must be specified rather than assumed"
+        ],
+        "coverage_note": "This adds an advanced natural-selection probe for the cost of sex and for evaluating whether a proposed adaptive explanation has the right scale and mechanism."
+      },
+      "mathematical_structure": {
+        "kind": "fitness-cost threshold",
+        "formal_statement": "A sexual-reproduction advantage A is sufficient only if A offsets the direct genetic-transmission cost C and any recombinational load L; qualitatively, selection can favor sex when A > C + L under the relevant life-history and population-genetic assumptions.",
+        "notation_status": "source argument normalized as a threshold model",
+        "assumptions": [
+          "an asexual alternative is physiologically available or is the relevant comparison",
+          "outcrossed sexual reproduction transmits one of two maternal homologs through a given offspring",
+          "benefits of variation, recombination, or dispersal are evaluated as effects on expected descendant production",
+          "population size, mutation supply, selection intensity, and ecological uncertainty can change whether recombination or diverse progeny is advantageous"
+        ],
+        "biological_interpretation": "Sex is not explained by saying that variation exists; the explanation must show why a lineage gains enough immediate or modeled expected success to compensate for the genetic-transmission cost."
+      },
+      "question_type": "mechanism evaluation",
+      "source_context": {
+        "source_section": "Chapter 1, An Important Question, Its Easy Answer, and the Consequent Paradox; Chapter 12, Sex as a Factor in Organic Evolution",
+        "textbook_prompt_role": "canonical source argument converted into a coverage question",
+        "edition_or_volume_year": "1975 monograph; local scan of third printing with corrections, 1977"
+      }
+    },
+    {
+      "id": "staged.question.williams.elm-oyster-high-fecundity-sex-model.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "When Are Identical Propagules Redundant?",
+      "body": "Williams's elm-oyster model treats enormous numbers of seedlings or larvae competing for adult space as a setting where many copies of one genotype may be wasteful. What conditions would make genetically diverse sexual offspring a better investment than asexual copies in this model?",
+      "source_anchors": [
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-22",
+        "notes": "Paraphrased from Williams's elm-oyster model. Use as a threshold/model question: students should connect the advantage of sex to high fecundity, strong juvenile selection, and capped adult-space winnings rather than to variation as a generic benefit."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "identify high fecundity: many seeds, larvae, seedlings, or spat enter a space that can support far fewer adults",
+          "state that juvenile competition is genetically selective rather than wholly random",
+          "explain that adult habitat has a ceiling on success, so many copies of the same winning genotype do not multiply the adult-space prize",
+          "connect sexual reproduction to higher variance among offspring genotypes, increasing the chance that at least one offspring is among the fittest few",
+          "recognize that the benefit must exceed the cost of meiosis before sex is favored",
+          "include spatial clustering or limited suitable settlement surfaces as conditions that make redundant stocking plausible",
+          "avoid applying the model where offspring are not crowded, competition is mostly nonselective, or extra copies of the same genotype produce proportional returns"
+        ],
+        "coverage_note": "This adds a Williams 1975 model-threshold probe for high-fecundity selection and redundant stocking of capped adult habitat."
+      },
+      "mathematical_structure": {
+        "kind": "capped-prize high-fecundity selection model",
+        "formal_statement": "When N juvenile propagules compete for K adult spaces with K much smaller than N, extra copies of one genotype have diminishing returns; sexual reproduction is favored if increased genotype variance raises expected capped success by more than the meiotic cost.",
+        "notation_status": "source model normalized; Williams uses propagule number, local/general fitness dosage, and habitat occupancy in simulations",
+        "assumptions": [
+          "juvenile propagule density is high relative to adult habitat capacity",
+          "adult space or resource capture imposes a ceiling on success for any one genotype",
+          "competition among juveniles has a genetic component",
+          "sexual offspring have greater variance in total fitness dosage than identical asexual offspring",
+          "offspring from a parent can be sufficiently clustered or numerous that duplicate genotypes compete for the same capped prize"
+        ],
+        "biological_interpretation": "Sex can be favored when the limiting outcome is not how many copies are present, but whether one descendant genotype wins a crowded local contest for adult space."
+      },
+      "question_type": "model threshold check",
+      "source_context": {
+        "source_section": "Chapter 4, The Elm-Oyster Model",
+        "textbook_prompt_role": "canonical source model converted into a coverage question",
+        "edition_or_volume_year": "1975 monograph; local scan of third printing with corrections, 1977"
+      }
+    },
+    {
+      "id": "staged.question.williams.fitness-versus-realized-success.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "Fitness Is Not One Lucky Outcome",
+      "body": "An individual with an obvious survival impairment leaves more descendants than healthier members of its group because a chance disaster kills most of the others. Why should that lucky outcome not, by itself, make the impaired individual the fittest member of the population?",
+      "source_anchors": [
+        {
+          "source_id": "williams-adaptation-natural-selection-1968",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Williams's horse-with-a-broken-leg example. Use as a misconception guard separating expected adaptive design from single-case realized reproductive success."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "distinguish expected fitness from realized reproductive outcome in one case",
+          "state that chance can affect which individuals leave descendants",
+          "connect fitness judgments to survival and reproductive design relative to the population and environment",
+          "avoid defining fitness solely by one observed success after an accident",
+          "explain that repeated patterns across many cases are needed to evaluate whether the fitness judgment is wrong"
+        ],
+        "coverage_note": "This adds a Williams-backed natural-selection probe for stochastic outcomes and expected versus realized fitness."
+      },
+      "mathematical_structure": {
+        "kind": "expected versus realized outcome distinction",
+        "formal_statement": "Fitness should be treated as a probabilistic expectation over comparable cases, while realized descendant counts can be altered by chance events in individual cases.",
+        "notation_status": "conceptualized; source argument is verbal rather than equation-based",
+        "assumptions": [
+          "individuals differ in traits affecting expected survival or reproduction",
+          "environmental accidents can change realized survival independently of those traits",
+          "fitness claims are evaluated relative to a population and ecological context",
+          "single observations are insufficient to estimate expectation reliably"
+        ],
+        "biological_interpretation": "Natural selection depends on biased differences in expected survival and reproduction, not on declaring every lucky survivor adaptively superior."
+      },
+      "question_type": "misconception diagnosis",
+      "source_context": {
+        "source_section": "Group Selection",
+        "textbook_prompt_role": "source-mined conceptual probe",
+        "edition_or_volume_year": "1968"
+      }
+    },
+    {
+      "id": "staged.question.williams.group-selection-extinction-bias-guardrail.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "What Would Make Extinction Evidence Count As Group Selection?",
+      "body": "A textbook says a trait persisted because groups or taxa with that trait were less likely to go extinct. Using Williams's criteria, what evidence would be needed before treating that as a serious group-selection explanation rather than an after-the-fact extinction story?",
+      "source_anchors": [
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-22",
+        "notes": "Paraphrased from Williams's chapter on sex as a factor in biotic evolution. Use as a guardrail against casual group-selection and extinction-adaptation explanations."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "distinguish organic evolution within populations from biotic evolution in the composition of a biota",
+          "state the proposed group-selection claim in terms of differential persistence or extinction among groups or taxa",
+          "require evidence that extinction risk is consistently biased by the trait or life-cycle feature across comparable cases",
+          "separate a plausible story for one extinction from a predictive basis for many extinctions",
+          "recognize that local adaptation can increase fit to a niche that later disappears",
+          "avoid treating extinction frequency, extinction causes, or long-term benefit language as sufficient evidence for group selection"
+        ],
+        "coverage_note": "This adds a Williams 1975 evidence-standard prompt for selection-level claims and adaptation/extinction guardrails."
+      },
+      "mathematical_structure": {
+        "kind": "selection-level evidence criterion",
+        "formal_statement": "A group-selection explanation requires a repeatable association between group-level trait state and differential group persistence, not merely individual-level adaptation plus observed extinction.",
+        "notation_status": "conceptual criterion normalized from source prose",
+        "assumptions": [
+          "groups or taxa are comparable units for the proposed claim",
+          "trait states can be measured independently of the extinction outcome",
+          "extinction or persistence is assessed across multiple cases or with a predictive contrast",
+          "within-population selection and among-group persistence are not conflated"
+        ],
+        "biological_interpretation": "Selection-level explanations need evidence at the level where the claimed sorting occurs; after-the-fact extinction narratives do not by themselves establish group selection."
+      },
+      "question_type": "evidence guardrail",
+      "source_context": {
+        "source_section": "Chapter 13, Sex as a Factor in Biotic Evolution",
+        "textbook_prompt_role": "canonical source argument converted into an evidence-standard question",
+        "edition_or_volume_year": "1975 monograph; local scan of third printing with corrections, 1977"
+      }
+    },
+    {
+      "id": "staged.question.williams.high-fecundity-selective-mortality-evidence.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "How Could Heavy Juvenile Mortality Be Selective?",
+      "body": "In a high-fecundity population, most seedlings, larvae, or juveniles die before adulthood. What evidence would let you argue that this mortality is genetically selective rather than mostly random loss, and why does that matter for natural selection?",
+      "source_anchors": [
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-22",
+        "notes": "Paraphrased from Williams's high-fecundity evidence chapters. Use as an evidence-design question: the point is not that all juvenile mortality is selective, but that selection cannot be dismissed without checking viability, fertility, genetic load, and gene-frequency evidence."
+      },
+      "promotion_targets": [
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/population-thinking.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "measure whether juvenile survival differs consistently with size, vigor, stress resistance, infection resistance, or other adaptive performance traits",
+          "ask whether the measured performance differences have a genetic component",
+          "look for genetic load or inbreeding depression as evidence that low-viability genotypes are present",
+          "compare gene frequencies across nearby localities or age cohorts where dispersal should otherwise homogenize frequencies",
+          "include fertility variation as a fitness component, not only viability",
+          "avoid assuming high mortality is nonselective merely because it is numerically large or occurs early"
+        ],
+        "coverage_note": "This adds a Williams 1975 evidence-design probe for high-fecundity selection, linking mortality, genetic variation, and fertility to natural-selection inference."
+      },
+      "mathematical_structure": {
+        "kind": "selection inference from mortality and allele-frequency evidence",
+        "formal_statement": "Heavy juvenile mortality supports a natural-selection inference only when survival or fertility differences are associated with heritable variation, or when allele-frequency differences exceed what dispersal and drift plausibly explain.",
+        "notation_status": "conceptual criterion normalized from source prose",
+        "assumptions": [
+          "juvenile mortality is measured across comparable cohorts or environments",
+          "performance or fertility differences can be linked to heritable variation",
+          "dispersal and isolation are considered before inferring selection from spatial gene-frequency gradients",
+          "fitness includes both viability and fertility components"
+        ],
+        "biological_interpretation": "In high-fecundity organisms, enormous mortality can produce strong selection if deaths are biased among genotypes; the empirical task is to show the bias rather than assume it."
+      },
+      "question_type": "evidence design",
+      "source_context": {
+        "source_section": "Chapters 7-8, Natural Selection in High-fecundity Populations: Evidence on Viability and Fertility",
+        "textbook_prompt_role": "canonical source evidence converted into a coverage question",
+        "edition_or_volume_year": "1975 monograph; local scan of third printing with corrections, 1977"
+      }
+    }
+  ],
+  "summary": {
+    "reviewed_total": 28,
+    "claims": 8,
+    "examples": 2,
+    "questions": 18
+  }
+}

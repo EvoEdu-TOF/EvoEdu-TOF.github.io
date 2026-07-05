@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Route Optimizer Application - evo-edu.org</title>
+  <link rel="stylesheet" href="/shared/evo-edu.css">
+  <script src="/shared/evo-shell.js" defer></script>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <style>
+    .route-app { display: grid; gap: 1.25rem; grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr); align-items: start; }
+    .route-panel { background: #fff; border: 1px solid #d6deea; border-radius: 18px; box-shadow: 0 18px 40px rgba(15,23,42,0.08); padding: 1.25rem; display: grid; gap: 1rem; }
+    .route-panel h2, .route-panel h3, .route-panel p { margin: 0; }
+    .route-panel p, .route-panel li { line-height: 1.55; }
+    .action-grid, .status-grid, .starter-grid, .notes-grid, .param-grid, .graph-grid { display: grid; gap: 0.85rem; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+    .graph-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .app-button, .app-upload-label, .message-toggle { display: inline-flex; align-items: center; justify-content: center; width: 100%; min-height: 3rem; padding: 0.8rem 1rem; border: 1px solid #205a9e; border-radius: 12px; background: #205a9e; color: #fff; font-weight: 700; text-decoration: none; cursor: pointer; }
+    .app-button.secondary, .app-upload-label.secondary, .message-toggle { background: #f6f9fc; color: #1f2937; border-color: #c5d1e0; }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .status-card, .starter-card, .note-card { background: #f6f9fc; border: 1px solid #d6deea; border-radius: 14px; padding: 0.95rem 1rem; }
+    .status-card strong, .starter-card strong, .note-card strong { display: block; margin-bottom: 0.35rem; }
+    .settings-form, .message-list { display: grid; gap: 0.85rem; }
+    .param-row { display: grid; gap: 0.35rem; }
+    .param-row label { font-weight: 700; color: #243447; }
+    .param-row input { width: 100%; min-height: 2.8rem; padding: 0.65rem 0.7rem; border: 1px solid #c7d3e1; border-radius: 10px; font: inherit; box-sizing: border-box; }
+    .surface-box { border: 1px solid #d6deea; border-radius: 16px; background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%); padding: 1rem; }
+    .canvas-box { min-height: 450px; display: grid; place-items: center; }
+    #tspCanvas { width: 100%; max-width: 600px; border: 1px solid #aab7c8; border-radius: 12px; background: #fff; aspect-ratio: 3 / 2; height: auto; }
+    .plot-box { min-height: 340px; }
+    #plotLoss, #plotRoutes { min-height: 300px; }
+    .inline-links { display: flex; flex-wrap: wrap; gap: 0.65rem; }
+    .inline-links a { color: #205a9e; font-weight: 700; text-decoration: none; }
+    .message-item { background: #fff; border-left: 4px solid #205a9e; border-radius: 10px; padding: 0.75rem 0.85rem; box-shadow: 0 8px 22px rgba(15,23,42,0.06); }
+    @media (max-width: 1024px) { .route-app { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) { .action-grid, .status-grid, .starter-grid, .notes-grid, .param-grid, .graph-grid { grid-template-columns: 1fr; } .canvas-box { min-height: 320px; } }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-topbar">
+      <div class="brand-block">
+        <span class="brand-mark">Artificial Life</span>
+        <a href="/">evo-edu.org</a>
+        <p class="brand-summary">Traveling-salesperson optimization tool for evolutionary search and comparison.</p>
+      </div>
+      <nav class="site-nav" data-evo-nav></nav>
+    </header>
+
+    <section class="hero-card">
+      <p class="eyebrow">Application</p>
+      <div class="hero-grid">
+        <div>
+          <h1>Route Optimizer</h1>
+          <p class="lede lede-strong">Use a direct responsive workbench to compare route quality, population settings, and iterative improvement in a genetic-algorithm style Traveling Salesperson search.</p>
+          <div class="hero-actions">
+            <a class="button-link" href="/apps/route-optimizer/study-guide.html">Learner guide</a>
+            <a class="button-link-secondary" href="/apps/route-optimizer/teacher-guide.html">Teacher guide</a>
+            <a class="button-link-secondary" href="/apps/route-optimizer/standards.html">Standards and alignment</a>
+            <a class="button-link-secondary" href="/apps/route-optimizer/about.html">About and provenance</a>
+          </div>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card"><strong>First challenge</strong><span>Generate a route set, run the solver once, then change just one search parameter and compare the best distance trend.</span></div>
+          <div class="stat-card"><strong>Key habit</strong><span>Use the app to discuss search and optimization, but keep its algorithmic assumptions and limits visible rather than treating it as a magic route finder.</span></div>
+          <div class="stat-card"><strong>Legacy preserved</strong><span>The older TSP route remains available as an archive, while this page replaces the iframe wrapper with a direct workbench.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="route-app">
+      <section class="route-panel">
+        <div>
+          <p class="section-kicker">Run Actions</p>
+          <h2>Controls you will use first</h2>
+          <p class="settings-note">Keep generate, start, stop, save, export, and import actions separate from population and selection settings so you can compare one search decision at a time.</p>
+        </div>
+        <div class="action-grid">
+          <button class="app-button" type="button" id="generateBtn">Generate Cities</button>
+          <button class="app-button secondary" type="button" id="manualBtn">Define Cities Manually</button>
+          <button class="app-button" type="button" id="startBtn">Start Search</button>
+          <button class="app-button secondary" type="button" id="stopBtn">Stop</button>
+          <button class="app-button secondary" type="button" id="resumeBtn">Resume</button>
+          <button class="app-button secondary" type="button" id="clearBtn">Clear</button>
+          <button class="app-button secondary" type="button" id="saveButton">Save Summary JSON</button>
+          <button class="app-button secondary" type="button" id="exportButton">Export Settings</button>
+          <label class="app-upload-label secondary" for="settingsImport">Import Settings</label>
+          <input class="visually-hidden" id="settingsImport" type="file" accept="application/json">
+        </div>
+
+        <div>
+          <p class="section-kicker">Current Run Status</p>
+          <div class="status-grid">
+            <div class="status-card"><strong>Generation</strong><span id="genField">0</span></div>
+            <div class="status-card"><strong>Best distance</strong><span id="distanceField">0</span></div>
+            <div class="status-card"><strong>Number of cities</strong><span id="citiesField">0</span></div>
+            <div class="status-card"><strong>Population</strong><span id="statusPopulation">0</span></div>
+          </div>
+        </div>
+
+        <div>
+          <p class="section-kicker">Try This First</p>
+          <div class="starter-grid">
+            <div class="starter-card"><strong>Step 1</strong><span>Generate a random set of cities and run the default search once.</span></div>
+            <div class="starter-card"><strong>Step 2</strong><span>Raise or lower population size, rerun, and compare how quickly the best distance stabilizes.</span></div>
+            <div class="starter-card"><strong>Step 3</strong><span>Switch to manual city definition and ask how city placement changes what counts as a good search path.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="route-panel">
+        <div>
+          <p class="section-kicker">Main Display</p>
+          <h2>Route surface and search history</h2>
+          <p class="settings-note">Keep the route canvas and the history plots visible together. That way the learner can compare geometric change, best-distance improvement, and generation count without bouncing between disconnected views.</p>
+        </div>
+        <div class="surface-box canvas-box">
+          <canvas id="tspCanvas" width="600" height="400" aria-label="Route Optimizer route canvas" role="img"></canvas>
+        </div>
+        <div class="graph-grid">
+          <div class="surface-box plot-box"><div id="plotLoss"></div></div>
+          <div class="surface-box plot-box"><div id="plotRoutes"></div></div>
+        </div>
+        <div class="notes-grid">
+          <div class="note-card"><strong>What to notice</strong><span>Better routes usually emerge through repeated comparison and variation, not through checking every possible path directly.</span></div>
+          <div class="note-card"><strong>Model limit</strong><span>This is an algorithmic optimization demonstration. It is useful for talking about search heuristics and iterative improvement, not as a model of real ecological movement or literal natural selection.</span></div>
+          <div class="note-card"><strong>Connected pages</strong><span class="inline-links"><a href="/apps/cumulative-selection-explorer/">Cumulative Selection Explorer</a><a href="/apps/network-builder/">Network Builder</a><a href="/evo/scientific-virtues/">Scientific Virtues</a></span></div>
+        </div>
+      </section>
+
+      <section class="route-panel">
+        <div>
+          <p class="section-kicker">Settings</p>
+          <h2>Search parameters</h2>
+          <p class="settings-note">These values control route size, the evolving population, selection pressure, and the share of routes receiving 2-opt improvement.</p>
+        </div>
+        <form class="settings-form" id="settingsForm">
+          <div class="param-grid">
+            <div class="param-row"><label for="numCities">Number of cities</label><input type="number" id="numCities" value="20" min="0"></div>
+            <div class="param-row"><label for="population">Population size</label><input type="number" id="population" value="100" min="1"></div>
+            <div class="param-row"><label for="selection">Selection (%)</label><input type="number" id="selection" value="30" min="0" max="100"></div>
+            <div class="param-row"><label for="improvement">2-opt improvement (%)</label><input type="number" id="improvement" value="20" min="0" max="100"></div>
+          </div>
+        </form>
+        <div>
+          <button class="message-toggle" type="button" id="messageToggle">Show messages</button>
+          <div class="message-list" id="messageList" hidden></div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer-card">
+      <div><h3>Route Optimizer application</h3><p>This direct workbench now exposes the legacy GA-based TSP solver as a responsive evo-edu surface while preserving the older TSP route as a provenance and archive reference.</p></div>
+      <small>Updated May 17, 2026</small>
+    </footer>
+  </div>
+
+  <script type="module">
+    class City { constructor(x, y) { this.x = x; this.y = y; } }
+    class Cities {
+      constructor() { this.cities = []; this.bestRoute = []; this.bestDistance = Infinity; }
+      generateRandom(num, width, height) {
+        this.cities = [];
+        for (let i = 0; i < num; i++) this.cities.push(new City(Math.random() * width, Math.random() * height));
+        this.bestRoute = [...Array(num).keys()];
+        this.bestDistance = this.routeDistance(this.bestRoute);
+      }
+      routeDistance(route) {
+        let dist = 0;
+        for (let i = 0; i < route.length; i++) {
+          const curr = route[i];
+          const next = route[(i + 1) % route.length];
+          const dx = this.cities[curr].x - this.cities[next].x;
+          const dy = this.cities[curr].y - this.cities[next].y;
+          dist += Math.sqrt(dx * dx + dy * dy);
+        }
+        return dist;
+      }
+      updateBestRoute(route) {
+        const distance = this.routeDistance(route);
+        if (distance < this.bestDistance) { this.bestDistance = distance; this.bestRoute = [...route]; }
+      }
+      getValue() { return this.bestDistance; }
+    }
+    class GA {
+      constructor(cities, populationSize) { this.cities = cities; this.popSize = populationSize; this.population = []; this.fitness = []; this.initPopulation(); }
+      initPopulation() {
+        const n = this.cities.cities.length;
+        for (let i = 0; i < this.popSize; i++) {
+          const route = [...Array(n).keys()];
+          for (let k = n - 1; k > 0; k--) {
+            const r = Math.floor(Math.random() * (k + 1));
+            [route[k], route[r]] = [route[r], route[k]];
+          }
+          this.population.push(route);
+        }
+        this.evaluatePopulation();
+      }
+      evaluatePopulation() { this.fitness = this.population.map((route) => this.cities.routeDistance(route)); }
+      cycle(selectionPercent, improvementPercent) {
+        const indices = [...this.population.keys()];
+        indices.sort((a, b) => this.fitness[a] - this.fitness[b]);
+        const survivorsCount = Math.max(1, Math.floor((100 - selectionPercent) * this.popSize / 100.0));
+        const newPop = indices.slice(0, survivorsCount).map((i) => this.population[i]);
+        while (newPop.length < this.popSize) {
+          const p1 = newPop[Math.floor(Math.random() * survivorsCount)];
+          const p2 = newPop[Math.floor(Math.random() * survivorsCount)];
+          newPop.push(this.crossover(p1, p2));
+        }
+        this.population = newPop;
+        const toImprove = Math.floor(this.popSize * improvementPercent / 100);
+        for (let i = 0; i < toImprove; i++) {
+          const idx = Math.floor(Math.random() * this.popSize);
+          this.population[idx] = this.twoOpt(this.population[idx]);
+        }
+        this.evaluatePopulation();
+        let bestIndex = 0;
+        let bestValue = Infinity;
+        for (let i = 0; i < this.popSize; i++) {
+          if (this.fitness[i] < bestValue) { bestValue = this.fitness[i]; bestIndex = i; }
+        }
+        this.cities.updateBestRoute(this.population[bestIndex]);
+      }
+      crossover(parent1, parent2) {
+        let start = Math.floor(Math.random() * parent1.length);
+        let end = Math.floor(Math.random() * parent1.length);
+        if (start > end) [start, end] = [end, start];
+        const child = Array(parent1.length).fill(-1);
+        for (let i = start; i <= end; i++) child[i] = parent1[i];
+        let fillIndex = 0;
+        for (const city of parent2) {
+          if (!child.includes(city)) {
+            while (child[fillIndex] !== -1) fillIndex += 1;
+            child[fillIndex] = city;
+          }
+        }
+        return child;
+      }
+      twoOpt(route) {
+        let best = route.slice();
+        let improved = true;
+        while (improved) {
+          improved = false;
+          for (let i = 0; i < best.length - 1; i++) {
+            for (let j = i + 2; j < best.length; j++) {
+              const candidate = this.twoOptSwap(best, i, j);
+              if (this.cities.routeDistance(candidate) < this.cities.routeDistance(best)) { best = candidate; improved = true; }
+            }
+          }
+        }
+        return best;
+      }
+      twoOptSwap(route, i, j) {
+        const copy = route.slice();
+        while (i < j) { [copy[i], copy[j]] = [copy[j], copy[i]]; i += 1; j -= 1; }
+        return copy;
+      }
+    }
+    class RouteWorkbench {
+      constructor(cities, canvas, labels, messageFn) {
+        this.cities = cities; this.canvas = canvas; this.ctx = canvas.getContext('2d'); this.labels = labels; this.addMessage = messageFn;
+        this.generation = 0; this.ga = null; this.timer = null; this.isRunning = false; this.routeFrames = [];
+        this.settings = { population: 100, selection: 30, improvement: 20, numCities: 20 };
+        this.canvas.addEventListener('click', (event) => {
+          if (this.isRunning) return;
+          const rect = this.canvas.getBoundingClientRect();
+          const scaleX = this.canvas.width / rect.width;
+          const scaleY = this.canvas.height / rect.height;
+          const x = (event.clientX - rect.left) * scaleX;
+          const y = (event.clientY - rect.top) * scaleY;
+          this.cities.cities.push(new City(x, y));
+          this.cities.bestRoute = [...Array(this.cities.cities.length).keys()];
+          this.cities.bestDistance = this.cities.routeDistance(this.cities.bestRoute);
+          this.settings.numCities = this.cities.cities.length;
+          document.getElementById('numCities').value = String(this.settings.numCities);
+          this.updateLabels();
+          this.draw();
+          this.addMessage(`Added city ${this.cities.cities.length} at (${x.toFixed(0)}, ${y.toFixed(0)}).`);
+        });
+      }
+      initLossPlot() {
+        Plotly.newPlot('plotLoss', [{ x: [], y: [], type: 'scatter', mode: 'lines+markers', name: 'Best Distance', line: { color: '#205a9e', width: 3 } }], {
+          title: 'Best Distance over Generations', xaxis: { title: 'Generation' }, yaxis: { title: 'Distance' }, margin: { t: 48, r: 16, b: 44, l: 54 }, paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: '#ffffff'
+        }, { responsive: true, displayModeBar: false });
+      }
+      updateLossPlot(generation, distance) { Plotly.extendTraces('plotLoss', { x: [[generation]], y: [[distance]] }, [0]); }
+      initRouteAnimation() {
+        const coords = this.buildCoords(this.cities.bestRoute);
+        Plotly.newPlot('plotRoutes', [{ x: coords.map((p) => p.x), y: coords.map((p) => p.y), type: 'scatter', mode: 'lines+markers', line: { color: '#7c3aed', width: 3 }, marker: { size: 7 } }], {
+          title: 'Best Route Frames', xaxis: { range: [0, this.canvas.width], title: 'X' }, yaxis: { range: [this.canvas.height, 0], title: 'Y' },
+          margin: { t: 48, r: 16, b: 44, l: 54 }, paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: '#ffffff',
+          updatemenus: [{ type: 'buttons', showactive: false, x: 0, y: 1.12, xanchor: 'left', yanchor: 'top', direction: 'left', buttons: [{ label: 'Play', method: 'animate', args: [null, { frame: { duration: 450, redraw: true }, transition: { duration: 0 }, fromcurrent: false }] }, { label: 'Pause', method: 'animate', args: [[null], { mode: 'immediate', frame: { duration: 0 } }] }] }]
+        }, { responsive: true, displayModeBar: false });
+        this.routeFrames = [];
+      }
+      buildCoords(route) {
+        if (!route || route.length === 0) return [];
+        const points = route.map((idx) => ({ x: this.cities.cities[idx].x, y: this.cities.cities[idx].y }));
+        points.push(points[0]);
+        return points;
+      }
+      addRouteFrame(generation, route) {
+        const coords = this.buildCoords(route);
+        const frame = { name: `Gen ${generation}`, data: [{ x: coords.map((p) => p.x), y: coords.map((p) => p.y) }] };
+        this.routeFrames.push(frame);
+        Plotly.addFrames('plotRoutes', [frame]);
+      }
+      applySettings(settings) { this.settings = { ...this.settings, ...settings }; }
+      clear() {
+        this.stop(); this.cities.cities = []; this.cities.bestRoute = []; this.cities.bestDistance = Infinity; this.generation = 0; this.routeFrames = [];
+        this.updateLabels(); this.draw(); this.initLossPlot(); this.initRouteAnimation();
+      }
+      stop() { if (this.timer) clearInterval(this.timer); this.timer = null; this.isRunning = false; }
+      resume() { if (!this.ga || this.isRunning) return; this.isRunning = true; this.runLoop(this.settings.selection, this.settings.improvement); }
+      solve(population, selection, improvement, maxGenerations = 100000) {
+        this.stop();
+        if (this.cities.cities.length < 3) { this.addMessage('Add at least three cities before starting the search.'); return; }
+        this.ga = new GA(this.cities, population); this.generation = 0; this.isRunning = true;
+        this.settings.population = population; this.settings.selection = selection; this.settings.improvement = improvement; this.settings.maxGenerations = maxGenerations;
+        this.initLossPlot(); this.initRouteAnimation(); this.addRouteFrame(this.generation, this.cities.bestRoute); this.updateLossPlot(0, this.cities.getValue()); this.runLoop(selection, improvement, maxGenerations);
+      }
+      runLoop(selection, improvement, maxGenerations = this.settings.maxGenerations) {
+        let previousBest = this.cities.getValue(); let stableCount = 0; const stableLimit = 100;
+        const step = () => {
+          if (!this.isRunning) return;
+          if (this.generation >= maxGenerations) { this.stop(); return; }
+          this.ga.cycle(selection, improvement); this.generation += 1;
+          const currentBest = this.cities.getValue();
+          if (currentBest < previousBest - 1e-12) { previousBest = currentBest; stableCount = 0; this.addRouteFrame(this.generation, this.cities.bestRoute); }
+          else { if (Math.abs(currentBest - previousBest) < 1e-5) stableCount += 1; else { stableCount = 0; previousBest = currentBest; } }
+          if (stableCount > stableLimit) { this.stop(); this.addMessage('Search paused after the best distance stabilized for many generations.'); }
+          this.updateLabels(); this.draw(); this.updateLossPlot(this.generation, currentBest);
+        };
+        this.timer = setInterval(step, 100);
+      }
+      updateLabels() {
+        this.labels.generation.textContent = String(this.generation);
+        this.labels.distance.textContent = this.cities.bestDistance < Infinity ? this.cities.bestDistance.toFixed(2) : '0';
+        this.labels.cities.textContent = String(this.cities.cities.length);
+        this.labels.population.textContent = String(this.settings.population || 0);
+      }
+      draw() {
+        const ctx = this.ctx; ctx.clearRect(0, 0, this.canvas.width, this.canvas.height); ctx.fillStyle = '#0f172a';
+        for (const city of this.cities.cities) { ctx.beginPath(); ctx.arc(city.x, city.y, 4, 0, Math.PI * 2); ctx.fill(); }
+        const route = this.cities.bestRoute;
+        if (route.length > 1) {
+          ctx.strokeStyle = '#dc2626'; ctx.lineWidth = 1.4; ctx.beginPath();
+          const first = route[0]; ctx.moveTo(this.cities.cities[first].x, this.cities.cities[first].y);
+          for (let i = 1; i < route.length; i++) { const idx = route[i]; ctx.lineTo(this.cities.cities[idx].x, this.cities.cities[idx].y); }
+          ctx.lineTo(this.cities.cities[first].x, this.cities.cities[first].y); ctx.stroke();
+        }
+      }
+      summary() { return { settings: this.settings, generation: this.generation, bestDistance: this.cities.bestDistance, cityCount: this.cities.cities.length, bestRoute: this.cities.bestRoute, cities: this.cities.cities }; }
+    }
+    (function () {
+      const canvas = document.getElementById('tspCanvas');
+      const messageList = document.getElementById('messageList');
+      const messageToggle = document.getElementById('messageToggle');
+      let messagesOpen = false;
+      function addMessage(text) { const item = document.createElement('div'); item.className = 'message-item'; item.textContent = text; messageList.prepend(item); }
+      function setMessagesOpen(open) { messagesOpen = open; messageList.hidden = !open; messageToggle.textContent = open ? 'Hide messages' : 'Show messages'; }
+      const cities = new Cities();
+      const workbench = new RouteWorkbench(cities, canvas, { generation: document.getElementById('genField'), distance: document.getElementById('distanceField'), cities: document.getElementById('citiesField'), population: document.getElementById('statusPopulation') }, addMessage);
+      function currentSettings() { return { numCities: Number(document.getElementById('numCities').value), population: Number(document.getElementById('population').value), selection: Number(document.getElementById('selection').value), improvement: Number(document.getElementById('improvement').value) }; }
+      function syncSettings(settings) {
+        document.getElementById('numCities').value = String(settings.numCities);
+        document.getElementById('population').value = String(settings.population);
+        document.getElementById('selection').value = String(settings.selection);
+        document.getElementById('improvement').value = String(settings.improvement);
+        workbench.applySettings(settings);
+      }
+      function generateCities() {
+        const settings = currentSettings(); workbench.stop(); cities.generateRandom(settings.numCities, canvas.width, canvas.height); workbench.applySettings(settings); workbench.updateLabels(); workbench.draw(); workbench.initLossPlot(); workbench.initRouteAnimation(); addMessage(`Generated ${settings.numCities} random cities.`);
+      }
+      function clearForManual() { workbench.clear(); syncSettings({ ...currentSettings(), numCities: 0 }); addMessage('Cleared the route surface. Click on the canvas to define cities manually.'); }
+      function startSearch() {
+        const settings = currentSettings(); workbench.applySettings(settings);
+        if (cities.cities.length !== settings.numCities) { document.getElementById('numCities').value = String(cities.cities.length); workbench.applySettings({ ...settings, numCities: cities.cities.length }); }
+        workbench.solve(settings.population, settings.selection, settings.improvement, 100000);
+        addMessage(`Started search with population ${settings.population}, selection ${settings.selection}%, and 2-opt improvement ${settings.improvement}%.`);
+      }
+      function downloadBlob(filename, content, type) {
+        const blob = new Blob([content], { type }); const url = URL.createObjectURL(blob); const link = document.createElement('a');
+        link.href = url; link.download = filename; link.click(); URL.revokeObjectURL(url);
+      }
+      document.getElementById('generateBtn').addEventListener('click', generateCities);
+      document.getElementById('manualBtn').addEventListener('click', clearForManual);
+      document.getElementById('startBtn').addEventListener('click', startSearch);
+      document.getElementById('stopBtn').addEventListener('click', function () { workbench.stop(); addMessage('Stopped the search.'); });
+      document.getElementById('resumeBtn').addEventListener('click', function () { workbench.resume(); addMessage('Resumed the search.'); });
+      document.getElementById('clearBtn').addEventListener('click', function () { workbench.clear(); addMessage('Cleared the route surface and current search history.'); });
+      document.getElementById('saveButton').addEventListener('click', function () { downloadBlob('route-optimizer-summary.json', JSON.stringify(workbench.summary(), null, 2), 'application/json'); addMessage('Saved the current run summary as JSON.'); });
+      document.getElementById('exportButton').addEventListener('click', function () { downloadBlob('route-optimizer-settings.json', JSON.stringify(currentSettings(), null, 2), 'application/json'); addMessage('Exported current settings.'); });
+      document.getElementById('settingsImport').addEventListener('change', function (event) {
+        const file = event.target.files && event.target.files[0]; if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function () {
+          try {
+            const imported = JSON.parse(reader.result);
+            syncSettings({ numCities: Number(imported.numCities ?? 20), population: Number(imported.population ?? 100), selection: Number(imported.selection ?? 30), improvement: Number(imported.improvement ?? 20) });
+            addMessage('Imported settings from JSON.');
+          } catch (error) { addMessage('Could not import settings file.'); setMessagesOpen(true); }
+        };
+        reader.readAsText(file);
+      });
+      messageToggle.addEventListener('click', function () { setMessagesOpen(!messagesOpen); });
+      syncSettings({ numCities: 20, population: 100, selection: 30, improvement: 20 });
+      setMessagesOpen(false);
+      generateCities();
+    })();
+  </script>
+</body>
+</html>

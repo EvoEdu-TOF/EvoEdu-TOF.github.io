@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Genetic Drift - evo-edu.org Notebook</title>
+  <link rel="stylesheet" href="/shared/evo-edu.css">
+  <script src="/shared/evo-shell.js" defer></script>
+</head>
+<body>
+  <div class="site-shell notebook-shell">
+    <header class="site-topbar">
+      <div class="brand-block">
+        <span class="brand-mark">Notebook Concept</span>
+        <a href="/notebook/index.html">Notebook On Evolution</a>
+        <p class="brand-summary">Scaffold-backed concept page in the public Notebook learning surface.</p>
+      </div>
+      <nav class="site-nav">
+        <a href="/notebook/index.html">Notebook Home</a>
+        <a href="/notebook/overview.html">Overview</a>
+        <a href="/notebook/concepts/index.html">Concepts</a>
+        <a href="/notebook/learning-paths/index.html">Learning Paths</a>
+        <a href="/notebook/source-trails/index.html">Source Trails</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="content-card">
+<h2>Genetic Drift</h2>
+<p class="attribution">Reasoning-scaffold concept page for evo-edu.org Notebook. Last revised: 2026-05-14.</p>
+<p class="meta"><a href="/notebook/index.html">Notebook Home</a> | <a href="/notebook/overview.html">Overview</a> | <a href="/notebook/concepts/index.html">Concepts</a> | <a href="/notebook/learning-paths/index.html">Learning Paths</a> | <a href="/notebook/source-trails/index.html">Source Trails</a></p>
+
+<p><strong>Summary</strong>: Genetic drift is change in allele frequencies caused by chance sampling from one generation to the next. It is one of the clearest places where population thinking matters: the population changes even though no individual organism is trying to improve or adapt. Drift matters in every population, but its effects become much easier to see in small populations, where fixation, loss, and divergence among repeated trials can happen quickly.</p>
+
+<p>This page explains drift as more than an isolated definition. The goal is to help learners distinguish random sampling change from selection, connect model runs to real population questions, and keep source-trail work visible while the page expands.</p>
+
+<h3>Core Reasoning Thread</h3>
+<ol>
+  <li><strong>Start with repeated runs.</strong> A single outcome can be misleading; repeated runs show whether a pattern is stable or variable.</li>
+  <li><strong>Stay with the population-level view.</strong> Drift is about how sampling changes the composition of the population, not about any individual organism changing its nature.</li>
+  <li><strong>Watch population size.</strong> Smaller populations show larger sampling swings, so drift effects become easier to see.</li>
+  <li><strong>Separate chance from bias.</strong> A change in frequency is not automatically evidence of advantage.</li>
+  <li><strong>Keep mechanism claims testable.</strong> A good explanation says what evidence would favor drift and what evidence would favor selection instead.</li>
+</ol>
+
+<h3>Scaffold Records</h3>
+<p><strong>What makes drift different from selection?</strong> Drift changes frequencies by random sampling. Selection changes frequencies because some heritable variants contribute more successfully to later generations.</p>
+<p><strong>Why is drift easier to see in small populations?</strong> When fewer individuals contribute to the next generation, each sampling event has a larger effect on the population total. That makes large swings, loss, and fixation more common.</p>
+<p><strong>Can drift and selection both matter at once?</strong> Yes. A population can experience selection and still show noisy outcomes, especially when population size is small or the selective difference is weak.</p>
+<p><strong>What does fixation mean?</strong> Fixation means one allele reaches frequency 1.0 in the population. Drift can cause fixation even when the allele did not begin with a selective advantage.</p>
+<p><strong>Why compare repeated runs?</strong> Repeated runs under the same starting conditions help reveal whether a pattern is consistently directional or highly variable, which is one clue in distinguishing stronger selection from drift-dominated change.</p>
+<p><strong>Why does drift expose the value of population thinking?</strong> Drift makes little sense if the learner keeps asking what the "better" individual did. It becomes clearer once the question shifts to how sampling changed the distribution of variants in the population.</p>
+
+<h3>Use With Site Tools</h3>
+<ul class="plain-list">
+  <li><a href="/notebook/concepts/allele-frequency-change.html">Allele Frequency Change</a>: use this page after the broader concept page to narrow attention to drift as one mechanism.</li>
+  <li><a href="/evo/packs/population-change/">Population Change pack</a>: use drift as the first mechanism for comparing repeated outcomes.</li>
+  <li><a href="/apps/allele-tracker/">Allele Tracker</a>: compare small and large population runs with the same starting allele frequency.</li>
+  <li><a href="/apps/literature-explorer/">Literature Explorer</a>: build the source trail for Wright, Kimura, and later explanations of drift.</li>
+</ul>
+
+<h3>Related Core Concepts</h3>
+<ul class="plain-list">
+  <li><a href="/notebook/concepts/allele-frequency-change.html">Allele Frequency Change</a>: the broader population-genetic baseline.</li>
+  <li><a href="/notebook/concepts/natural-selection.html">Natural Selection</a>: the main evidence contrast for drift.</li>
+  <li><a href="/notebook/concepts/mutation.html">Mutation</a>: source of new variants that drift can later lose or fix.</li>
+  <li><a href="/notebook/concepts/speciation.html">Speciation</a>: one larger-scale outcome that can involve drift under separation.</li>
+</ul>
+
+<h3>Worked Example</h3>
+<p><strong>Scenario</strong>: Run the same drift-only model five times with allele <code>A</code> starting at frequency 0.50 in a population of 12.</p>
+<p><strong>Observation</strong>: One run ends with <code>A</code> fixed, two runs end near the starting frequency, and two runs lose <code>A</code> entirely.</p>
+<p><strong>Interpretation</strong>: The variation among repeated runs is itself part of the evidence. The model shows that chance sampling alone can produce very different outcomes when the population is small.</p>
+<p><strong>Revision question</strong>: If a learner originally claimed that any increase in <code>A</code> proves selection, how should that claim change after seeing the full set of repeated runs?</p>
+
+<h3>Didactopus Prompt Seeds</h3>
+<ul class="plain-list">
+  <li>Predict whether repeated runs should converge or diverge before the model is rerun.</li>
+  <li>State one observation that would still be consistent with drift and one that would push you to investigate selection.</li>
+  <li>Rewrite a one-run explanation after seeing the results of five repeated runs.</li>
+</ul>
+
+<h3>If You Remember Only Three Things</h3>
+<ul class="plain-list">
+  <li>Drift is population change by chance sampling, not by built-in improvement.</li>
+  <li>Small populations show drift more dramatically because each sampling event matters more.</li>
+  <li>A single increase does not prove selection; repeated runs help show whether drift is enough.</li>
+</ul>
+
+<h3>Source Trail Status</h3>
+<p><strong>Current status</strong>: This concept has a scaffold-backed page with pending foundational citations.</p>
+<ul class="plain-list">
+  <li><strong>Pending foundational citations</strong>: early population-genetic treatments of drift, fixation, and neutral or near-neutral explanation remain to be resolved into reviewed bibliography records.</li>
+  <li><strong>Why that matters</strong>: The Notebook can already teach the concept clearly, but the source trail should make the historical and theoretical foundations explicit for later review and expansion.</li>
+  <li><strong>Current tool for resolution</strong>: <a href="/apps/literature-explorer/">Literature Explorer</a> and future CiteGeist workflows should convert the pending slot list into reviewed sources.</li>
+</ul>
+
+<p class="meta">Machine-readable scaffold: <a href="/notebook/concepts/genetic-drift.scaffold.json">genetic-drift.scaffold.json</a></p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

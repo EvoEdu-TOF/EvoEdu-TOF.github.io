@@ -1,0 +1,512 @@
+<html>
+<head>
+<title>Weasel Information</title>
+</head>
+<body bgcolor="ffffff">
+
+
+<h1>Weasel Information</h1>
+
+<p>In 1986, Richard Dawkins published his book, "The Blind Watchmaker". In the book, he 
+utilized programs for computers to illustrate some issues in evolutionary biology. One
+of these programs has come to be called "weasel" because of the use in it of a short 
+snippet of Shakespeare, "METHINKS IT IS LIKE A WEASEL".</p>
+
+<p>The "weasel" program is aimed at illustrating the difference between what Dawkins
+called "single-step selection", or random search, with a process of "cumulative
+selection", that employs something with several components of <i>natural selection</i>.</p>
+
+<p>The demonstration shows that cumulative selection, premised on natural selection, 
+is far more efficient than random search on the problem posed, that of finding a 
+particular string, that snippet from Shakespeare. It has been a 
+favorite target of religious antievolutionist rhetoric ever since.</p>
+
+<form name="dawkins_weasel">
+<center>
+<table border="1" width="80%">
+<tr>
+<td colspan="2">
+<center><h2>Weasel as described by Richard Dawkins</h2></center>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<h3>Parameters from Dawkins' Description</h3>
+<p>Target string: <input type="text" name="dwtarget" size="28" value="METHINKS IT IS LIKE A WEASEL"></p>
+<p>Population: <input type="text" name="dwpopsize" size="4" value="100" min="1" max="1000" /></p>
+<p>Mutation rate (% per letter): <input type="text" name="dwmutrate" size="4" value="4.0" min="0.001" max="100.0" />%</p>
+<hr />
+<h3>Other Parameters</h3>
+<p>Inter-generation interval: <input type="text" name="dwgenint" size="5" value="500" min="1" max="10000" />ms </p>
+<hr />
+<h3>Program Control</h3>
+<p><input type="button" name="dwrun" value="Run!" onClick="gdwr.run_init()"> 
+<input type="button" name="dwstop" value="Stop!" onClick="gdwr.run_stop()"></p>
+</td>
+<td valign="top">
+<p>Dawkins' description of the "weasel" program can be summarized briefly:<p>
+<ol>
+<li>Use a set of characters that includes the upper case alphabet and a space.
+<li>Initialize a population of n 28-character strings with random assignments of characters from our character set.
+<li>Identify the string closest to the target string in the population.
+<li>If a string matches the target, terminate.
+<li>Base a new generation population of size n upon copies of the closest matching string, where each position has a chance of randomly mutating, based upon a set mutation rate.
+<li>Go to step 3.
+</ol>
+ 
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<p>Generation: <input type="text" size="5" name="dwgen" value="0" optional="true" /> Actual Mut. Rate: <input type="text" size="10" name="dwactmutrate" value="0" optional="true" /></p>
+<p>Best match: <input type="text" size="4" name="dwmatchnum" value="0" optional="true" /> <input type="text" size="40" name="dwclosest" value="0" optional="true" /></p>
+<p>Generations that step backward: <input type="text" size="4" name="dwstepback" value="0" optional="true" value="0" /> Exact copies: <input type="text" size="4" name="dwexactcopies" value="0" optional="true" value="0" /></p>
+Console<br />
+<textarea name="dwconsole" cols="60" rows="25"></textarea>
+</td>
+</tr>
+
+
+</table>
+</center>
+</form>
+
+<!-- Dawkins' "weasel" scripting -->
+<script language="JavaScript1.1">
+
+// Stuff I'm learning about JavaScript...
+// There apparently is no backpatching and thus forward references do not
+// work. This means that some care has to be taken in the ordering of 
+// additions to the objects. For example, the "run_init()" method 
+// sets up the driver function to be called repeatedly via "setInterval()",
+// but if the driver function is not declared first then the browser
+// throws an error. I'm taking that to mean that I need to have 
+// definitions of variables used in the driver happen up front, and
+// then have the "run_init()" function initialize them again, so that 
+// subsequent runs get stuff initialized correctly and the driver 
+// function can be declared without errors.
+
+// Declare global object for DW run
+// gdwr == Global Dawkins Weasel Run object
+var gdwr = new Object();
+
+// Add object variables
+gdwr.gen = 0;
+gdwr.inrun = 0;
+
+// Link object variable to form names
+gdwr.console = document.dawkins_weasel.dwconsole;
+
+// Define object variables 
+// Need the letter pool
+gdwr.pool = new Array(" ","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z");
+
+    // Initialize population with random strings
+gdwr.pop = new Array();
+gdwr.popsize = document.dawkins_weasel.dwpopsize.value;
+gdwr.target = document.dawkins_weasel.dwtarget.value;
+gdwr.mutrate = document.dawkins_weasel.dwmutrate.value;
+gdwr.genview = document.dawkins_weasel.dwgen;
+gdwr.mnumview = document.dawkins_weasel.dwmatchnum;
+gdwr.closestview = document.dawkins_weasel.dwclosest;
+gdwr.pnt = 0;
+gdwr.lettercnt = 0;
+gdwr.mutlettercnt = 0;
+gdwr.actmutrate = 0;
+gdwr.lastgenmatch = 0;
+gdwr.stepbacks = 0;
+gdwr.exactcopycnt = 0;
+gdwr.exactcopy = 1;
+
+    document.dawkins_weasel.dwactmutrate.value = "0";
+    document.dawkins_weasel.dwstepback.value = "0";
+    document.dawkins_weasel.dwexactcopies.value = "0";
+    document.dawkins_weasel.dwgen.value = "0";
+    document.dawkins_weasel.dwmatchnum.value = "0";
+    document.dawkins_weasel.dwclosest.value = "";
+
+gdwr.unmatched = 1;
+gdwr.closest = new Array();
+gdwr.thismatch = 0;
+gdwr.maxmatch = 0;
+gdwr.maxndx = -1;
+gdwr.gen = 0;
+gdwr.mutate = 0;
+gdwr.maxgen = 1000;
+
+
+// Incorporate methods in object
+
+// Method for stepping through a generation
+gdwr.run_onestep = function() {
+
+  // gdwr.console.value += gdwr.gen + " (1)\n";
+
+  // Show generation in console
+  // this.console.value += "Gen. " + this.gen + "\n";
+
+  // gdwr.console.value += gdwr.gen + " (2)\n";
+
+
+    // ta.value = "";
+    //cleartextarea(document.dawkins_weasel.dwconsole);
+  // Increment generation
+  this.gen++;
+    //gdwr.gen++;  // Increment generation counter
+    document.dawkins_weasel.dwgen.value = gdwr.gen;
+    gdwr.maxmatch = 0;
+
+  // gdwr.console.value += gdwr.gen + " (3)\n";
+
+
+    // Check strings for matches
+    for (ii = 0; ii < gdwr.popsize; ii++) {
+      gdwr.thismatch = 0;
+      for (jj = 0; jj < gdwr.target.length; jj++) {
+        if (gdwr.pop[ii][jj].toUpperCase() == gdwr.target.substr(jj,1).toUpperCase()) {
+          // ta.value += "Matching " + pop[ii][jj] + " to " + target.substr(jj,1) + ", thismatch=" + thismatch + "\n";
+          gdwr.thismatch++;
+        }
+      }  
+      if (gdwr.thismatch > gdwr.maxmatch) {
+        gdwr.maxmatch = Math.max(gdwr.thismatch,gdwr.maxmatch);
+        gdwr.maxndx = ii;
+        document.dawkins_weasel.dwclosest.value = makestr(gdwr.pop[gdwr.maxndx]);
+      } else if (gdwr.thismatch == gdwr.maxmatch) {
+        //ta.value += "Gen. " + gen + ", " + maxmatch + " letters, "  + makestr(pop[gdwr.maxndx]) + "\n";    
+      }
+      // ta.value += gen + " " + ii + " " + thismatch + " " + makestr(pop[ii]) + "\n";
+    }
+
+  // gdwr.console.value += gdwr.gen + " (4)\n";
+
+
+    // Stepped back?
+    if (gdwr.lastgenmatch > gdwr.maxmatch) { // We have a stepback
+      gdwr.stepbacks++;
+
+      // Dump the current population to the console
+      gdwr.console.value += "Stepback detected, population dump follows:\n";
+      for (ii = 0; ii < gdwr.popsize; ii++) {
+        gdwr.console.value += makestr(gdwr.pop[ii]) + "\n";
+      }
+
+    }
+    document.dawkins_weasel.dwstepback.value = gdwr.stepbacks;
+    document.dawkins_weasel.dwmatchnum.value = gdwr.maxmatch;
+    gdwr.lastgenmatch = gdwr.maxmatch;
+
+  // gdwr.console.value += gdwr.gen + " (5)\n";
+
+    // Pick closest match
+    // it is at maxndx
+    arycopy(gdwr.pop[gdwr.maxndx],gdwr.closest);
+
+    // Display closest match
+    gdwr.console.value += "Gen. " + gdwr.gen + ", " + gdwr.maxmatch + " letters, "  + makestr(gdwr.pop[gdwr.maxndx]) + "\n";
+
+    // If complete match, we're done
+    if (gdwr.maxmatch == gdwr.target.length) {
+      gdwr.console.value += gdwr.maxmatch + " " + gdwr.target.length + " Matched! in " + gdwr.gen + " generations.\n";
+      gdwr.unmatched = 0;
+      clearInterval(this.intval);
+      return true;
+    } else if (gdwr.gen >= gdwr.maxgen) {
+      // All's well that ends
+      gdwr.console.value += "No match in " + gdwr.gen + " generations, sorry.\n"; 
+      gdwr.unmatched = 0;
+      clearInterval(this.intval);
+      return false;
+    }
+
+  // gdwr.console.value += gdwr.gen + " (6)\n";
+
+    // Generate new population
+
+    for (ii = 0; ii < gdwr.popsize; ii++) {
+      gdwr.exactcopy = 1; // Assume true and then disprove it
+      for (jj = 0; jj < gdwr.target.length; jj++) {
+        gdwr.lettercnt++;
+        gdwr.mutate = Math.random()*100.0;
+        // ta.value += "Mutate: " + mutate + ", Mutrate: " + mutrate + "\n";
+        if (gdwr.mutate <= gdwr.mutrate) {
+          // Pick a random letter from the pool
+          gdwr.pnt = Math.floor(Math.random()*gdwr.pool.length);
+          gdwr.pop[ii][jj] = gdwr.pool[gdwr.pnt];
+          gdwr.mutlettercnt++;
+          gdwr.exactcopy = 0;
+        } else {
+          gdwr.pop[ii][jj] = gdwr.closest[jj];
+        }
+        if (gdwr.pop[ii][jj].toUpperCase() == gdwr.target.substr(jj,1).toUpperCase()) { // Character match
+          gdwr.pop[ii][jj] = gdwr.pop[ii][jj].toUpperCase();
+        } else {
+          gdwr.pop[ii][jj] = gdwr.pop[ii][jj].toLowerCase();
+        }
+      }
+      if (1 == gdwr.exactcopy) {
+        gdwr.exactcopycnt++;
+      }
+    }
+
+  // gdwr.console.value += gdwr.gen + " (7)\n";
+
+
+    gdwr.actmutrate = 100.0 * gdwr.mutlettercnt / gdwr.lettercnt;
+    document.dawkins_weasel.dwactmutrate.value = gdwr.actmutrate;
+    document.dawkins_weasel.dwexactcopies.value = gdwr.exactcopycnt;
+
+  // gdwr.console.value += gdwr.gen + " (8)\n";
+
+    gdwr.console.scrollTop = gdwr.console.scrollHeight;
+
+    return true;
+
+
+}
+
+// Method for initializing a run
+gdwr.run_init = function() {
+  // Track inrun value as showing an active run
+  this.inrun = 1;
+
+  // Clear the console
+  this.console.value = "Beginning run\n";
+
+  // Set generations to 0
+  this.gen = 0;  
+
+  // Other initialization
+  // gdwr.pop = new Array();
+  gdwr.popsize = document.dawkins_weasel.dwpopsize.value;
+  gdwr.target = document.dawkins_weasel.dwtarget.value;
+  gdwr.mutrate = document.dawkins_weasel.dwmutrate.value;
+  gdwr.genview = document.dawkins_weasel.dwgen;
+  gdwr.mnumview = document.dawkins_weasel.dwmatchnum;
+  gdwr.closestview = document.dawkins_weasel.dwclosest;
+  gdwr.pnt = 0;
+  gdwr.lettercnt = 0;
+  gdwr.mutlettercnt = 0;
+  gdwr.actmutrate = 0;
+  gdwr.lastgenmatch = 0;
+  gdwr.stepbacks = 0;
+  gdwr.exactcopycnt = 0;
+  gdwr.exactcopy = 1;
+
+  document.dawkins_weasel.dwactmutrate.value = "0";
+  document.dawkins_weasel.dwstepback.value = "0";
+  document.dawkins_weasel.dwexactcopies.value = "0";
+  document.dawkins_weasel.dwgen.value = "0";
+  document.dawkins_weasel.dwmatchnum.value = "0";
+  document.dawkins_weasel.dwclosest.value = "";
+
+  gdwr.unmatched = 1;
+  // gdwr.closest = new Array();
+  gdwr.thismatch = 0;
+  gdwr.maxmatch = 0;
+  gdwr.maxndx = -1;
+  gdwr.gen = 0;
+  gdwr.mutate = 0;
+  gdwr.maxgen = 1000;
+  gdwr.pnt = 0;
+  gdwr.geninterval = Math.max(1,Math.min(60000,document.dawkins_weasel.dwgenint.value));
+
+    for (ii = 0; ii < gdwr.popsize; ii++) {
+      gdwr.pop[ii] = new Array();
+      for (jj = 0; jj < gdwr.target.length; jj++) {
+        // Random
+        gdwr.pnt = Math.floor(Math.random()*gdwr.pool.length);
+        gdwr.pop[ii][jj] = gdwr.pool[gdwr.pnt].toLowerCase();
+      } 
+      // ta.value += makestr(gdwr.pop[ii]) + "\n";
+    } 
+  this.intval = setInterval("gdwr.run_onestep()",gdwr.geninterval); // Next step in one second
+}
+
+gdwr.run_stop = function() {
+  clearInterval(this.intval);
+  return false;
+}
+// OK, that's all for the object.
+
+function cleartextarea(id){
+id.value="";
+} 
+
+function arycopy(inary,outary) {
+  // outary = (); // Clear the outary
+  for (mm = 0; mm < inary.length; mm++) {
+    outary[mm] = inary[mm];
+  }
+}
+
+function makestr(inary) {
+  var mystr = "";
+  for (mm = 0; mm < inary.length; mm++) {
+    mystr += inary[mm];
+  }
+  return mystr;
+}
+
+</script>
+
+<script language="JavaScript1.1">
+// A utility function that returns true if a string contains only 
+// whitespace characters
+function isblank(s) {
+    for(var i = 0; i < s.length; i++) {
+        var c = s.charAt(i);
+		       if ((c != ' ') && (c != '\n') && (c != '')) return false;
+    }
+    return true;
+}
+
+// This is the function that performs form verification. It is invoked
+// from the onsubmit event handler. The handler should return whatever
+// value this function returns.
+function verify(f) {
+    var msg;
+    var empty_fields = "";
+    var errors = "";
+
+    // Loop through the elements of the form, looking for all Text and 
+    // Textarea elements that don't have an "optional" property defined. 
+    // Then check for fields that are empty and make a list of them. Also, if
+    // any of these elements have a "min" or a "max" property defined, verify
+    // that they are numbers and are in the right range. If the element has a
+    // "numeric" property defined, verify that it is a number, but don't check
+    // its range. Put together error messages for fields that are wrong.
+    for(var i = 0; i < f.length; i++) {
+        var e = f.elements[i];
+        if (((e.type == "text") || (e.type == "textarea")) && !e.optional) {
+            // First check if the field is empty
+            if ((e.value == null) || (e.value == "") || isblank(e.value)) {
+                empty_fields += "\n          " + e.name;
+                continue;
+            }
+
+            // Now check for fields that are supposed to be numeric
+            if (e.numeric || (e.min != null) || (e.max != null)) { 
+                var v = parseFloat(e.value);
+                if (isNaN(v) || 
+                    ((e.min != null) && (v < e.min)) || 
+                    ((e.max != null) && (v > e.max))) {
+                    errors += "- The field " + e.name + " must be a number";
+                    if (e.min != null) 
+                        errors += " that is greater than " + e.min;
+                    if (e.max != null && e.min != null) 
+                        errors += " and less than " + e.max;
+                    else if (e.max != null)
+                        errors += " that is less than " + e.max;
+                    errors += ".\n";
+                }
+            }
+        }
+    }
+
+    // Now, if there were any errors, display the messages, and
+    // return false to prevent the form from being submitted. 
+    // Otherwise, return true.
+    if (!empty_fields && !errors) return true;
+
+    msg  = "_____________________________________________________  _\n\n"
+    msg += "The form was not submitted because of the following error(s).\n";
+    msg += "Please correct these error(s) and re-submit.\n";
+    msg += "_____________________________________________________  _\n\n"
+
+    if (empty_fields) {
+        msg += "- The following required field(s) are empty:" 
+                + empty_fields + "\n";
+        if (errors) msg += "\n";
+    }
+    msg += errors;
+    alert(msg);
+    return false;
+}
+</script>
+
+<h2>No Locking of Characters</h2>
+
+<!--
+<h3>Try 1</h3>
+
+<p>A common antievolutionist misconception (which, when repeated after due notice becomes a <i>lie</i>) is that Dawkins stated or
+implied that letters, once matched, were "locked" or "frozen" somehow, and could not be subject to mutation in further generations.
+This is simply poppycock. This implementation of "weasel" not only does not "lock" correct letters, it even provides feedback to
+the user on the issue of a later generation having a <i>fewer</i> letters matched by its closest candidate string to the
+target phrase.</p>
+
+<p>I have seen it argued that since Dawkins' short listing of some example strings during a run did not <i>show</i> such an 
+instance of fewer letters matching, that it must be a rule used in the program. This is just sloppy thinking, a case where 
+someone is overeager to infer a general principle from a particular observation. As such, it may be useful as a warning about
+the problem of induction.</p>
+
+<p>One can work out analytically the conditions needed in order to observe a subsequent generation in a "weasel" run that has
+a best candidate string with fewer matches to the target string. I'll try to work up some equations that express the probabilities
+in that way, but in the meantime I can just describe the circumstances that apply and you can use the simulation above to 
+explore things.</p>
+
+<p>In making a new generation, every character of every new string is tested to see if it gets mutated from what the closest-matching
+string in the previous generation had. So the mutation rate combined with the length of the target string gives us an expectation
+for the average number of characters that will be altered in each new string in the new generation. For the standard phrase, there
+are 28 characters, so a mutation rate of about 3.57% yields an expectation of one changed character per new string. There will be
+a characteristic expectation of how often a completely unchanged string will be seen in the new generation. If such a string that
+is the same as the parent string from the previous generation exists, the new generation will have at least as good a match to the
+target as the previous generation.</p>
+
+<p>So, for a new generation to perform worse than a previous generation, we expect that to happen when the odds of having at least
+one string in the new population that is the same as the parent in the previous generation is low, <i>and</i> when the odds of 
+changing an already-matched character in each of the strings in the new generation is relatively high. This set of conjoint 
+conditions applies when there is a relatively high mutation rate coupled with a small population size. For example, if one sets
+a mutation rate of 7.3%, one expects about two characters in each new string to be altered. If population size is set to 10,
+then one will see the step-back counter start rising, usually once over 12 characters match to the target.</p> 
+
+<p>What about the printed set of outputs in Dawkins' "The Blind Watchmaker"? If Dawkins used a reasonable population size of
+between 100 and 1000 strings, it is difficult to come up with a mutation rate that simultaneously permits occasional convergence on the
+target string and shows the stepping-back behavior. With reasonable mutation rates and population sizes, the odds of observing
+the stepping-back of performance between successive generations becomes very small. This property shows that all the bloviation
+about "locking" of characters is simply a persistent creationist myth.</p>
+-->
+
+<!--<h3>Try 2</h3> -->
+
+<p>The "weasel" program as described by Richard Dawkins obviously
+works. If random search were used, we would not expect the target
+string to be found in our lifetimes, or the lifetime of our
+species. Antievolutionists have made a false charge that the "weasel"
+program can only obtain its better performance by "smuggling"
+information into the result. This has recently (2007) been expressed
+in an essay by William Dembski and Robert Marks, where they
+erroneously claim that Dawkins was using a "partitioned search"
+procedure. This differs from what Dawkins actually described and
+implemented by protecting individual characters in strings from
+mutation during copying based on matching the corresponding character
+in the target. In this alternate version described by Dembski and 
+Marks, individual characters are "locked" once they match to the 
+target string, and they claim that it is this additional constraint
+that permits any "weasel" program -- and even any evolutionary
+computation at all -- to out-perform random search.</p>
+
+<p>What needs to be understood about this is that the "partitioned 
+search" analyzed by Dembski and Marks has nothing to do with the
+program described by Richard Dawkins. Dawkins did not state that 
+individual letters could be protected, and in fact has stated that 
+doing so would be bad didactically, since that would be at variance
+with how natural selection works in biology (2000, personal 
+communication). As the program implemented here shows, a "weasel" 
+that works without benefit of the "partitioned search" of Dembski
+and Marks nonetheless performs far better than random search, 
+contrary to the claims Dembski and Marks have made.</p>
+
+
+<h2>Notes About This Implementation</h2>
+
+<p>I somehow managed to get by without doing any JavaScript coding to this point. This is my very first page that relies upon a
+JavaScript program. So I don't expect it to be perfect and I would appreciate constructive feedback. That also means that the
+source is available for inspection if you just use "View Page Source" in Firefox or similar in other browsers. If I've relied
+on something that doesn't work in your browser, do let me know what OS, browser, and version you are using.
+
+<p>Page created by Wesley R. Elsberry 2008/10/23</p>
+<p>Page last updated 2008/10/25</p>
+</body>
+</home>

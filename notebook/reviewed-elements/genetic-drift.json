@@ -1,0 +1,813 @@
+{
+  "schema": "evo-edu.notebook.reviewed_elements.v1",
+  "generated": "2026-06-30",
+  "concept_id": "notebook.concepts.genetic-drift",
+  "items": [
+    {
+      "id": "staged.claim.futuyma.effective-population-size-drift-rate.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.genetic-drift",
+      "title": "Effective Population Size Controls Drift More Than Census Size",
+      "body": "Futuyma's population-structure chapter supports treating effective population size as the population size that matters for genetic drift: unequal reproduction, skewed sex ratio, overlapping generations, and bottlenecks can make a population genetically smaller than its census count.",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as the explanatory companion to the effective-population-size question. Source OCR uses Np for the effective-size symbol; Notebook should normalize to N_e for portability."
+      },
+      "promotion_targets": [
+        "notebook/concepts/genetic-drift.html",
+        "notebook/concepts/population-thinking.html"
+      ],
+      "source_path_redacted": true,
+      "mathematical_structure": {
+        "kind": "population-genetic parameter abstraction",
+        "formal_statement": "The rate of genetic drift depends on effective population size N_e rather than the total census count; factors that reduce the number of genetically contributing parents reduce N_e.",
+        "notation_status": "normalized from source OCR",
+        "assumptions": [
+          "drift is modeled as random change in allele frequency in a finite population",
+          "only reproducing individuals contribute to effective size",
+          "variance in reproductive success can reduce effective size",
+          "sex-ratio imbalance and population bottlenecks can reduce effective size"
+        ],
+        "biological_interpretation": "A large visible population can behave like a smaller genetic population when ancestry is concentrated through relatively few breeders."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "N or census population size",
+          "notebook_symbol": "N",
+          "meaning": "observed population count"
+        },
+        {
+          "source_symbol": "Np in OCR/source text",
+          "notebook_symbol": "N_e",
+          "meaning": "effective population size controlling the rate of genetic drift"
+        },
+        {
+          "source_symbol": "N_m, N_f",
+          "notebook_symbol": "N_m, N_f",
+          "meaning": "numbers of breeding males and breeding females in the sex-ratio effective-size relation"
+        }
+      ]
+    },
+    {
+      "id": "staged.claim.mayr.drift-gene-flow.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.genetic-drift",
+      "title": "Drift Is Sampling Change, While Gene Flow Counteracts Local Divergence",
+      "body": "Mayr's What Evolution Is supports contrasting drift as stochastic allele loss, especially in small or founder populations, with gene flow as a conservative process that can replace locally lost variation and reduce divergence.",
+      "source_anchors": [
+        {
+          "source_id": "mayr-what-evolution-is-2002",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Supports drift-foundations and provides a bridge to speciation gene-flow constraints."
+      },
+      "promotion_targets": [
+        "notebook/concepts/genetic-drift.html",
+        "notebook/concepts/speciation.html"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.claim.pianka.genetic-variation-maintenance.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.genetic-drift",
+      "title": "Population-Genetic Models Compare Drift, Gene Flow, Mating, and Selection",
+      "body": "Pianka's population-genetics treatment supports presenting drift, gene flow, nonrandom mating, and frequency-dependent selection as mechanisms modeled against genotype and gene-frequency expectations.",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Good source-trail anchor for mechanism comparison. It does not by itself resolve the neutral-theory context slot."
+      },
+      "promotion_targets": [
+        "notebook/concepts/genetic-drift.html",
+        "notebook/concepts/allele-frequency-change.html"
+      ],
+      "source_path_redacted": true,
+      "mathematical_structure": {
+        "kind": "mechanism-comparison model frame",
+        "formal_statement": "Population-genetic mechanisms such as drift, gene flow, nonrandom mating, and selection can be compared by their expected effects on genotype and allele-frequency distributions.",
+        "notation_status": "conceptualized; source equations not normalized in this sidecar",
+        "assumptions": [
+          "mechanisms can be isolated for model comparison",
+          "observed variation can reflect more than one process",
+          "null expectations are needed before attributing a pattern to selection or drift"
+        ],
+        "biological_interpretation": "The Notebook should represent these mechanisms as model contrasts with quantitative expectations, not as a flat list of causes."
+      }
+    },
+    {
+      "id": "staged.claim.wilson.patch-variance-model-output.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.genetic-drift",
+      "title": "Patch Variance Is A Model Output",
+      "body": "Wilson's metapopulation project treats spatial variance as something to measure, not merely as distracting noise: local reproduction tends to pull patch populations toward carrying capacity, while random dispersal and patch availability keep neighboring patches variable across time.",
+      "source_anchors": [
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as a modeling bridge for genetic-drift and stochastic-simulation pages. This does not make Wilson a genetics-definition source; it supplies a patch-model example where variance is a central observable."
+      },
+      "promotion_targets": [
+        "notebook/concepts/genetic-drift.html",
+        "apps/ecobalance/app/index.html",
+        "apps/climate-range-shifter/app/index.html"
+      ],
+      "source_path_redacted": true,
+      "algorithm_translation": {
+        "source_language": "C and exercise prose",
+        "target_language": "JavaScript",
+        "translation_policy": "clean-room patch simulation from the model description and measurement goals; do not port the C implementation directly",
+        "model_focus": "patch-based stochastic population dynamics with mean and variance summaries",
+        "web_default": true
+      },
+      "copyright_review": {
+        "direct_code_reuse": "avoid",
+        "risk_reducer": "clean-room JavaScript from model equations, parameter roles, and measurement requirements",
+        "provenance_required": true
+      },
+      "expected_output_checks": [
+        "Report whether variance is measured across currently occupiable patches, all patches, or replicate runs.",
+        "Check that growth-only limiting cases relax toward carrying capacity when dispersal and switching are disabled.",
+        "Plot mean and variance as parameter sweeps rather than inferring behavior from one stochastic run."
+      ],
+      "mathematical_structure": {
+        "kind": "spatial stochastic simulation summary",
+        "formal_statement": "For patch populations N_i(t), track the mean and variance across occupiable patches while varying local growth rate, dispersal split, or patch switching probability.",
+        "notation_status": "normalized from exercise prose and OCR; source code notation is not preserved",
+        "assumptions": [
+          "patches are discrete habitat units",
+          "local patch growth follows a discrete logistic update before or after movement as specified",
+          "dispersal divides a patch population between neighboring patches with a random split",
+          "mean and variance across patches are outputs that must be defined before interpreting simulation runs"
+        ],
+        "biological_interpretation": "Spatial subdivision can preserve population variation even when local growth alone would relax patches toward carrying capacity."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "N",
+          "notebook_symbol": "patchPopulation",
+          "meaning": "population count or density in a patch"
+        },
+        {
+          "source_symbol": "r",
+          "notebook_symbol": "growthRate",
+          "meaning": "local discrete-time growth parameter"
+        },
+        {
+          "source_symbol": "K",
+          "notebook_symbol": "carryingCapacity",
+          "meaning": "local patch carrying capacity"
+        },
+        {
+          "source_symbol": "q",
+          "notebook_symbol": "leftDispersalFraction",
+          "meaning": "random fraction of a patch population moving to one neighboring patch"
+        }
+      ]
+    },
+    {
+      "id": "staged.example.drift-selection.repeated-runs.001",
+      "kind": "example",
+      "concept_id": "notebook.concepts.genetic-drift",
+      "title": "Repeated Runs Separate Sampling Noise From Directional Bias",
+      "body": "A set of repeated population simulations can show that drift produces variable outcomes across runs, while selection adds a repeated directional bias when the fitness difference is strong enough relative to sampling noise.",
+      "source_anchors": [
+        {
+          "source_id": "notebook.concepts.genetic-drift",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "notebook.concepts.natural-selection",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu editorial workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Promote as a cross-concept example sidecar; still needs a concrete app-linked run set before embedding in page text."
+      },
+      "promotion_targets": [
+        "notebook/concepts/genetic-drift.html",
+        "notebook/concepts/natural-selection.html",
+        "apps/allele-tracker/app/index.html"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.example.wilson.immigration-emigration-js-translation.001",
+      "kind": "example",
+      "concept_id": "notebook.concepts.genetic-drift",
+      "title": "JavaScript Translation Target For Repeated Stochastic Runs",
+      "body": "Wilson's immigration-emigration exercise can be translated into a web-facing JavaScript simulation that runs the same stochastic process many times, reports means and variances at selected time points, and lets learners compare repeated-run summaries with analytic expectations.",
+      "source_anchors": [
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use the source for model structure, repeated-run expectations, and exercise framing. Do not copy the C implementation or treat it as a modern software-practice model."
+      },
+      "promotion_targets": [
+        "notebook/concepts/genetic-drift.html",
+        "apps/allele-tracker/app/index.html",
+        "apps/ecobalance/app/index.html"
+      ],
+      "source_path_redacted": true,
+      "app_linkage": [
+        "apps/allele-tracker/app/index.html",
+        "apps/ecobalance/app/index.html"
+      ],
+      "algorithm_translation": {
+        "source_language": "C and textbook pseudocode",
+        "target_language": "JavaScript",
+        "translation_policy": "clean-room implementation from model description and exercise requirements",
+        "model_focus": "stochastic immigration-emigration process with repeated runs and summary statistics",
+        "web_default": true
+      },
+      "copyright_review": {
+        "direct_code_reuse": "avoid",
+        "risk_reducer": "language translation plus clean-room structure",
+        "provenance_required": true
+      },
+      "expected_output_checks": [
+        "Run batches at several replicate counts and verify that reported means and variances stabilize as replicate count increases.",
+        "Expose whether empty populations can receive immigrants as an explicit model assumption.",
+        "Compare simulation summaries against the analytic expectation where the source gives one."
+      ],
+      "mathematical_structure": {
+        "kind": "stochastic process model",
+        "formal_statement": "Population size changes by immigration and emigration events governed by stated event probabilities or rates; repeated runs estimate mean and variance at selected times.",
+        "notation_status": "normalized from source model prose and exercise",
+        "assumptions": [
+          "population counts are nonnegative",
+          "immigration can occur into an empty system if that model variant is selected",
+          "replicate runs estimate distributional behavior",
+          "mean and variance are summary statistics, not single-run predictions"
+        ],
+        "biological_interpretation": "Open populations can fluctuate because stochastic arrival and departure events affect counts differently across runs."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "N",
+          "notebook_symbol": "N",
+          "meaning": "population size"
+        },
+        {
+          "source_symbol": "alpha",
+          "notebook_symbol": "immigrationRate",
+          "meaning": "immigration probability or rate"
+        },
+        {
+          "source_symbol": "beta",
+          "notebook_symbol": "emigrationRate",
+          "meaning": "emigration probability or rate"
+        },
+        {
+          "source_symbol": "t",
+          "notebook_symbol": "timeStep",
+          "meaning": "simulation time index"
+        }
+      ]
+    },
+    {
+      "id": "staged.example.wilson.rng-benchmark-simulation-quality.001",
+      "kind": "example",
+      "concept_id": "notebook.concepts.genetic-drift",
+      "title": "Random-Number Checks Are Part Of Simulation Evidence",
+      "body": "Wilson's random-walk comparison supports a Notebook example in which stochastic simulation output is not accepted just because it looks biological. Learners should test whether random-number artifacts, replicate counts, or limiting-case benchmarks can explain an apparent population pattern.",
+      "source_anchors": [
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "This is a simulation-quality example. Avoid reusing the source C random-walk code; implement any web activity cleanly in JavaScript with modern browser RNG caveats."
+      },
+      "promotion_targets": [
+        "notebook/concepts/genetic-drift.html",
+        "apps/allele-tracker/app/index.html"
+      ],
+      "source_path_redacted": true,
+      "algorithm_translation": {
+        "source_language": "C and textbook prose",
+        "target_language": "JavaScript",
+        "translation_policy": "clean-room random-walk benchmark inspired by the source's testing purpose, not copied from its implementation",
+        "model_focus": "detecting stochastic artifacts and validating simulation robustness",
+        "web_default": true
+      },
+      "copyright_review": {
+        "direct_code_reuse": "avoid",
+        "risk_reducer": "independent JavaScript implementation of a general random-walk diagnostic",
+        "provenance_required": true
+      },
+      "expected_output_checks": [
+        "Run repeated stochastic simulations with multiple seeds or replicate batches.",
+        "Expose visible diagnostics that distinguish plausible stochastic variation from systematic generator artifacts.",
+        "Require a limiting-case or analytic benchmark when available before treating a surprising pattern as biological."
+      ]
+    },
+    {
+      "id": "staged.example.wilson.stochastic-runs-model-assumptions.001",
+      "kind": "example",
+      "concept_id": "notebook.concepts.genetic-drift",
+      "title": "Repeated Simulation Runs Reveal Stochastic Assumptions",
+      "body": "Wilson's simulation treatment supports a Notebook example in which repeated runs distinguish deterministic expectations from stochastic trajectories and make small modeling assumptions, such as whether empty systems can receive immigrants, visible to learners.",
+      "source_anchors": [
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Bridge to app-linked repeated-run tasks; not a genetics-specific source, so use as a modeling example rather than a drift definition."
+      },
+      "promotion_targets": [
+        "notebook/concepts/genetic-drift.html",
+        "apps/ecobalance/app/index.html",
+        "apps/climate-range-shifter/app/index.html"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.question.futuyma.effective-population-size-usefulness.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.genetic-drift",
+      "title": "Why Use Effective Population Size?",
+      "body": "If effective population sizes and migration rates are difficult to measure and define, why are they still useful concepts for explaining drift, inbreeding, and geographic variation?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Reviewed against local OCR from the scanned Futuyma volume. Pair with the effective-population-size drift-rate claim before public promotion."
+      },
+      "promotion_targets": [
+        "notebook/concepts/genetic-drift.html",
+        "notebook/concepts/population-thinking.html"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "effective versus census population size",
+          "sampling variance and drift strength",
+          "migration as a counterforce to divergence",
+          "limits of estimating abstract population-genetic parameters",
+          "why a difficult-to-measure parameter can still clarify what evidence would distinguish drift, gene flow, and selection"
+        ],
+        "coverage_note": "This turns an earlier gap into a reviewed advanced population-genetics probe. It is still best placed after learners have drift, gene flow, and Hardy-Weinberg assumptions."
+      },
+      "mathematical_structure": {
+        "kind": "population-genetic parameter abstraction",
+        "formal_statement": "Effective population size N_e summarizes how strongly drift and inbreeding behave in an idealized reference population relative to the observed census population; migration m counteracts divergence by drift.",
+        "notation_status": "normalized from source OCR",
+        "assumptions": [
+          "sampling variance is a central route from population size to drift strength",
+          "census size and effective size can differ",
+          "population structure, sex ratio, and variance in reproductive success can affect effective size",
+          "migration can counteract divergence caused by drift"
+        ],
+        "biological_interpretation": "The question requires learners to treat a mathematical abstraction as useful even when direct field measurement is difficult."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "Np in OCR/source text",
+          "notebook_symbol": "N_e",
+          "meaning": "effective population size"
+        },
+        {
+          "source_symbol": "m",
+          "notebook_symbol": "m",
+          "meaning": "migration rate or fraction of genes introduced by migrants"
+        },
+        {
+          "source_symbol": "Fst",
+          "notebook_symbol": "F_ST",
+          "meaning": "population-structure measure used in the source discussion of drift and migration balance"
+        }
+      ],
+      "question_type": "mechanism explanation",
+      "source_context": {
+        "source_section": "FOR DISCUSSION AND THOUGHT",
+        "textbook_prompt_role": "end-of-section discussion question",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.futuyma.finite-population-heterozygosity-loss.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.genetic-drift",
+      "title": "Why Does A Small Population Lose Heterozygosity?",
+      "body": "In a finite diploid population, why does heterozygosity decline over generations even without directional selection, and how should the recurrence H_t = (1 - 1/(2N)) H_{t-1} be interpreted biologically?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Futuyma's finite-population and founder-effect discussion. Use as a math-aware bridge from Hardy-Weinberg expectations to drift and inbreeding."
+      },
+      "promotion_targets": [
+        "notebook/concepts/genetic-drift.html",
+        "notebook/concepts/hardy-weinberg-equilibrium.html",
+        "notebook/concepts/population-thinking.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "state that finite population size causes random sampling of parental genes",
+          "connect repeated sampling through ancestry to increased identity by descent",
+          "interpret 1/(2N) as the per-generation fraction of heterozygosity lost in the idealized case",
+          "explain that smaller N causes faster loss of heterozygosity",
+          "distinguish loss by drift and inbreeding from a selective advantage of homozygotes",
+          "connect founder events to allele loss even when initial heterozygosity may not drop as sharply as allele count"
+        ],
+        "coverage_note": "This adds an explicit recurrence-based drift probe and supports learners who need to interpret equations in population-genetic prose."
+      },
+      "mathematical_structure": {
+        "kind": "finite-population heterozygosity recurrence",
+        "formal_statement": "H_t = (1 - 1/(2N)) H_{t-1}; in the idealized finite diploid population, expected heterozygosity is multiplied each generation by one minus the sampling-loss term.",
+        "notation_status": "normalized from OCR; source typography is imperfect",
+        "assumptions": [
+          "diploid population of finite size N",
+          "random mating in the simplified model",
+          "no directional selection is required for the heterozygosity decline",
+          "migration and mutation can later add variation but are outside the simple recurrence"
+        ],
+        "biological_interpretation": "Finite ancestry sampling makes descendants increasingly share genes identical by descent, so heterozygosity declines by drift."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "N",
+          "notebook_symbol": "N",
+          "meaning": "number of diploid individuals in the idealized population"
+        },
+        {
+          "source_symbol": "H_t",
+          "notebook_symbol": "heterozygosityAtGenerationT",
+          "meaning": "expected proportion of heterozygotes at generation t"
+        },
+        {
+          "source_symbol": "1/2N",
+          "notebook_symbol": "samplingLossRate",
+          "meaning": "fraction of heterozygosity lost per generation under the simple finite-population model"
+        }
+      ],
+      "question_type": "worked quantitative interpretation",
+      "source_context": {
+        "source_section": "Population Size, Inbreeding, and Genetic Drift",
+        "textbook_prompt_role": "source-mined quantitative concept probe",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.futuyma.migration-drift-geographic-variation.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.genetic-drift",
+      "title": "Adaptive Or Random Geographic Variation?",
+      "body": "What evidence would let a learner decide whether geographic variation in a trait is mainly adaptive, mainly random drift, or shaped by migration counteracting both local adaptation and drift?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-17",
+        "notes": "Paraphrased from Futuyma's end-of-section questions and surrounding gene-flow model discussion. Use as an advanced coverage probe after drift, gene flow, and local selection have been introduced."
+      },
+      "promotion_targets": [
+        "notebook/concepts/genetic-drift.html",
+        "notebook/concepts/speciation.html"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "compare trait variation with environmental gradients and neutral-marker variation",
+          "estimate whether migration is high enough to homogenize populations",
+          "ask whether local selection is strong enough to maintain differences despite migration",
+          "explain why drift is more plausible in small or weakly connected populations",
+          "avoid treating dispersal observations as equivalent to genetically effective gene flow"
+        ],
+        "coverage_note": "This extends genetic-drift coverage from effective population size into the joint interpretation of drift, migration, and selection across geography."
+      },
+      "mathematical_structure": {
+        "kind": "migration-drift-selection comparison",
+        "formal_statement": "Migration changes a local allele frequency by approximately Delta q_i = m(q - q_i); under a simple island-model balance, population differentiation by drift is reduced as 4N_e m increases.",
+        "notation_status": "normalized from source OCR",
+        "assumptions": [
+          "population subdivision is biologically meaningful",
+          "m measures genetically effective migration rather than movement alone",
+          "N_e summarizes the population size relevant to drift",
+          "selection, migration, and drift can act simultaneously on geographic variation",
+          "neutral markers and selected traits can provide different evidence about the same populations"
+        ],
+        "biological_interpretation": "The question asks learners to treat geographic variation as an inference problem involving competing and interacting mechanisms."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "m",
+          "notebook_symbol": "m",
+          "meaning": "migration rate or fraction of genes introduced by migrants"
+        },
+        {
+          "source_symbol": "q_i",
+          "notebook_symbol": "q_i",
+          "meaning": "allele frequency in local population i"
+        },
+        {
+          "source_symbol": "q",
+          "notebook_symbol": "q_bar",
+          "meaning": "mean allele frequency in source or surrounding populations"
+        },
+        {
+          "source_symbol": "Np in OCR/source text",
+          "notebook_symbol": "N_e",
+          "meaning": "effective population size used in the drift-migration balance"
+        },
+        {
+          "source_symbol": "Fst",
+          "notebook_symbol": "F_ST",
+          "meaning": "population differentiation measure reduced by gene flow"
+        }
+      ],
+      "question_type": "evidence interpretation",
+      "source_context": {
+        "source_section": "FOR DISCUSSION AND THOUGHT",
+        "textbook_prompt_role": "end-of-section population-structure discussion question",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.futuyma.neutral-theory-protein-clock.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.genetic-drift",
+      "title": "What Makes A Protein Clock Valid?",
+      "body": "If neutral alleles can be used to infer how long two lineages have been separated, what assumptions must hold before amino-acid or allozyme differences can be treated as a protein clock?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-17",
+        "notes": "Paraphrased from Futuyma's neutralist/selectionist discussion and the protein-clock prompt. Keep as an advanced drift/molecular-evolution coverage probe, not as a beginner genetic-drift definition."
+      },
+      "promotion_targets": [
+        "notebook/concepts/genetic-drift.html",
+        "notebook/concepts/common-descent.html"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "identify which loci or substitutions are assumed to be effectively neutral",
+          "explain why fixation rate can track mutation rate under a neutral model",
+          "check whether effective population size, mutation rate, gene flow, and selection pressures are stable enough for the inference",
+          "distinguish constant divergence by neutral substitutions from similarity maintained by shared polymorphism or selection",
+          "state why a clock estimate is a model-dependent inference rather than a direct reading of sequence difference"
+        ],
+        "coverage_note": "This resolves the neutral-theory context gap left by the Pianka mechanism-comparison sidecar and links drift to molecular-evolution inference."
+      },
+      "mathematical_structure": {
+        "kind": "neutral divergence model",
+        "formal_statement": "Under a neutral model, the fixation rate for neutral mutations is approximately the neutral mutation rate, so molecular divergence can accumulate in proportion to time when model assumptions hold.",
+        "notation_status": "normalized from source OCR",
+        "assumptions": [
+          "the substitutions used for the clock are effectively neutral or have nearly constant substitution behavior",
+          "mutation rate is sufficiently stable for the comparison being made",
+          "lineages are compared at homologous loci or proteins",
+          "gene flow, retained ancestral polymorphism, and selection do not dominate the divergence signal",
+          "effective population size is interpreted consistently when comparing heterozygosity and divergence"
+        ],
+        "biological_interpretation": "Protein-clock reasoning depends on whether drift at neutral or nearly neutral variants is the main process behind the measured molecular differences."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "N or Np in OCR/source text",
+          "notebook_symbol": "N_e",
+          "meaning": "effective population size relevant to drift and neutral heterozygosity"
+        },
+        {
+          "source_symbol": "u",
+          "notebook_symbol": "mu",
+          "meaning": "mutation rate used in the neutral heterozygosity and substitution-rate discussion"
+        },
+        {
+          "source_symbol": "H",
+          "notebook_symbol": "H",
+          "meaning": "heterozygosity under the neutral model"
+        }
+      ],
+      "question_type": "model-assumption analysis",
+      "source_context": {
+        "source_section": "FOR DISCUSSION AND THOUGHT",
+        "textbook_prompt_role": "end-of-section molecular-evolution question",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.wilson.metapopulation-variance-probe.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.genetic-drift",
+      "title": "Metapopulation Variance Across Patches",
+      "body": "In a patch-based metapopulation simulation, how should average population size and variance across patches change as local growth, migration, or patch availability changes?",
+      "source_anchors": [
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Reviewed against local OCR and paired with the Wilson patch-variance model-output claim. Promote as an advanced stochastic simulation probe, not as a core genetic-drift definition."
+      },
+      "promotion_targets": [
+        "notebook/concepts/genetic-drift.html",
+        "apps/ecobalance/app/index.html",
+        "apps/climate-range-shifter/app/index.html"
+      ],
+      "source_path_redacted": true,
+      "algorithm_translation": {
+        "source_language": "C and exercise prose",
+        "target_language": "JavaScript",
+        "translation_policy": "clean-room JavaScript implementation from model assumptions and output requirements; avoid direct C port",
+        "model_focus": "patch-based stochastic population dynamics",
+        "web_default": true
+      },
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "define which patches are included in the mean and variance",
+          "separate local growth from dispersal and patch-availability rules",
+          "predict that growth-only cases relax toward carrying capacity under the stated logistic update",
+          "explain why random dispersal or switching can maintain patch-to-patch variance",
+          "use parameter sweeps or repeated runs before treating a single trajectory as biological evidence"
+        ],
+        "coverage_note": "The prerequisite patch-dynamics material is now represented by the Wilson patch-variance claim."
+      },
+      "mathematical_structure": {
+        "kind": "patch-model summary statistic",
+        "formal_statement": "Track mean and variance of population counts across patches as growth, migration, and patch availability parameters vary.",
+        "notation_status": "normalized from exercise prose and local OCR",
+        "assumptions": [
+          "patch identity and occupancy state must be defined",
+          "migration rule must be explicit",
+          "growth parameter must be separated from dispersal and patch switching",
+          "variance is measured across patches or replicate runs as specified"
+        ],
+        "biological_interpretation": "Spatial subdivision can make variance itself a biologically meaningful output, not just noise around a mean."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "r",
+          "notebook_symbol": "growthRate",
+          "meaning": "local growth-rate parameter"
+        },
+        {
+          "source_symbol": "patch",
+          "notebook_symbol": "patch",
+          "meaning": "discrete habitat unit in the metapopulation model"
+        }
+      ],
+      "question_type": "worked quantitative problem",
+      "source_context": {
+        "source_section": "6.3 Exercises",
+        "textbook_prompt_role": "programming-project extension",
+        "edition_or_volume_year": "2000"
+      }
+    }
+  ],
+  "summary": {
+    "reviewed_total": 13,
+    "claims": 4,
+    "examples": 4,
+    "questions": 5
+  }
+}

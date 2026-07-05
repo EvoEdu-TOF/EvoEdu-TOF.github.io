@@ -1,0 +1,114 @@
+{
+  "schema": "evo-edu.notebook.reasoning_scaffold.v1",
+  "id": "notebook.concepts.genetic-drift",
+  "title": "Genetic Drift",
+  "created": "2026-05-14",
+  "updated": "2026-05-14",
+  "status": "pilot-reviewed-scaffold",
+  "concept_targets": [
+    "genetic drift",
+    "allele frequency",
+    "population size",
+    "fixation",
+    "loss",
+    "sampling error",
+    "neutral change",
+    "selection contrast"
+  ],
+  "site_links": [
+    {
+      "kind": "concept",
+      "title": "Allele Frequency Change",
+      "url": "/notebook/concepts/allele-frequency-change.html"
+    },
+    {
+      "kind": "pack",
+      "title": "Population Change",
+      "url": "/evo/packs/population-change/"
+    },
+    {
+      "kind": "app",
+      "title": "Allele Tracker",
+      "url": "/apps/allele-tracker/"
+    },
+    {
+      "kind": "research_tool",
+      "title": "Literature Explorer",
+      "url": "/apps/literature-explorer/"
+    }
+  ],
+  "records": [
+    {
+      "id": "gd-001",
+      "type": "mechanism-contrast",
+      "question": "What makes drift different from selection?",
+      "answer_summary": "Drift changes allele frequencies by random sampling. Selection changes frequencies because heritable variants differ in survival or reproduction.",
+      "verification_prompt": "Ask whether the evidence shows consistent directional advantage or strong variation among repeated runs.",
+      "misconception_guard": "Do not treat any increase in frequency as proof of selective advantage.",
+      "didactopus_prompt_seed": "State one observation that fits drift and one that would make selection more plausible."
+    },
+    {
+      "id": "gd-002",
+      "type": "scale-check",
+      "question": "Why is drift easier to see in small populations?",
+      "answer_summary": "Sampling error has a larger effect when fewer individuals contribute to the next generation, so allele frequencies can swing more sharply.",
+      "verification_prompt": "Compare repeated small-population and large-population runs from the same starting frequency.",
+      "misconception_guard": "Do not describe drift as weak selection; chance sampling is a different mechanism.",
+      "didactopus_prompt_seed": "Explain why two small-population runs with the same starting settings can end differently."
+    },
+    {
+      "id": "gd-003",
+      "type": "definition-check",
+      "question": "What does fixation mean?",
+      "answer_summary": "Fixation means one allele reaches frequency 1.0 in the population, while alternatives are lost.",
+      "verification_prompt": "Identify the final population frequency and whether competing alleles remain.",
+      "misconception_guard": "Do not assume fixation proves the fixed allele was better adapted.",
+      "didactopus_prompt_seed": "Describe a drift-only path to fixation without using the language of benefit or design."
+    },
+    {
+      "id": "gd-004",
+      "type": "evidence-check",
+      "question": "Why compare repeated runs?",
+      "answer_summary": "Repeated runs show whether a result is consistently directional or varies strongly, which helps distinguish more stable selective pressure from drift-dominated change.",
+      "verification_prompt": "Compare multiple runs under the same settings before naming the mechanism.",
+      "misconception_guard": "A single dramatic run is not enough to settle the mechanism.",
+      "didactopus_prompt_seed": "Rewrite the first explanation after seeing four more runs under the same conditions."
+    },
+    {
+      "id": "gd-005",
+      "type": "mixed-mechanism",
+      "question": "Can drift and selection both matter?",
+      "answer_summary": "Yes. Small populations can show noisy outcomes even when selection is present, and weak selection can be hard to distinguish from drift without more evidence.",
+      "verification_prompt": "Ask whether the pattern remains after repeated runs or stronger evidence of fitness differences is added.",
+      "misconception_guard": "Do not force every case into a drift-only or selection-only explanation when mixed mechanisms are plausible.",
+      "didactopus_prompt_seed": "Name what extra evidence would help sort out a mixed drift-selection explanation."
+    }
+  ],
+  "citegeist_source_slots": [
+    {
+      "slot": "drift-foundations",
+      "needed_for": "Foundational treatments of drift, sampling, and population size",
+      "candidate_queries": [
+        "Wright 1931 evolution in Mendelian populations genetic drift",
+        "Sewall Wright genetic drift population size fixation"
+      ],
+      "review_status": "pending"
+    },
+    {
+      "slot": "neutral-theory-context",
+      "needed_for": "Neutral or near-neutral explanations relevant to drift interpretation",
+      "candidate_queries": [
+        "Kimura 1968 evolutionary rate at molecular level neutral mutation",
+        "neutral theory drift fixation molecular evolution"
+      ],
+      "review_status": "pending"
+    }
+  ],
+  "doclift_use": "Use this JSON as a fixture for extracting or validating scaffold-backed concept pages about population-genetic mechanisms.",
+  "groundrecall_use": "Store rationale, pending source-slot work, and later revisions as durable notes so related Notebook concepts can reuse the distinction between drift and selection.",
+  "next_review_steps": [
+    "Backfill reviewed sources for Wright and later drift or neutral-theory explanations.",
+    "Add one paired small-population versus large-population worked run with fixed parameter values.",
+    "Link this page into later Notebook pages on adaptation and population genetics."
+  ]
+}

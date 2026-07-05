@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Predator–Prey Simulation</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    h1 { color: #2e6e4c; }
+    .controls, .export, .batch {
+      margin: 1em 0;
+    }
+    label {
+      display: inline-block;
+      width: 150px;
+    }
+    input {
+      width: 100px;
+    }
+    #chart {
+      background: white;
+      border: 1px solid #ccc;
+      width: 800px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Predator–Prey Simulation</h1>
+
+  <div class="controls">
+    <label>Prey Birth Rate:</label><input type="number" id="preyBirth" value="0.1" step="0.01"><br>
+    <label>Predator Death Rate:</label><input type="number" id="predDeath" value="0.1" step="0.01"><br>
+    <label>Predation Rate:</label><input type="number" id="predation" value="0.01" step="0.001"><br>
+    <label>Conversion Rate:</label><input type="number" id="conversion" value="0.01" step="0.001"><br>
+    <label>Initial Prey:</label><input type="number" id="initialPrey" value="40"><br>
+    <label>Initial Predator:</label><input type="number" id="initialPred" value="9"><br>
+    <label>PRNG Seed:</label><input type="text" id="seed" value="seed123"><br>
+    <button onclick="startSimulation()">Start</button>
+    <button onclick="pauseSimulation()">Pause</button>
+    <button onclick="resetSimulation()">Reset</button>
+  </div>
+
+  <div class="export">
+    <button onclick="exportParameters()">Export Params (JSON)</button>
+    <button onclick="importParameters()">Import Params (JSON)</button>
+    <button onclick="exportResults()">Export Results (JSON)</button>
+    <button onclick="exportCSV()">Export Results (CSV)</button>
+    <button onclick="downloadPlotlyChart('png')">Download Chart (PNG)</button>
+    <button onclick="downloadPlotlyChart('svg')">Download Chart (SVG)</button>
+    <input type="file" id="paramFile" style="display:none" />
+  </div>
+
+  <div class="batch">
+    <h3>Batch Runner</h3>
+    <label>Batch Size:</label><input type="number" id="batchSize" value="5" min="1"><br>
+    <button onclick="runBatchSimulations()">Run Batch</button>
+    <button onclick="exportBatchResults()">Download Batch Results (JSON)</button>
+  </div>
+
+  <div id="chart"></div>
+  <div id="summary"></div>
+
+  <script>
+    let timer = null, time = 0, data = [], prey, predator, params = {}, batchResults = [];
+
+    function cyrb128(str) {
+      let h1 = 1779033703, h2 = 3144134277,
+          h3 = 1013904242, h4 = 2773480762;
+      for (let i = 0, k; i < str.length; i++) {
+        k = str.charCodeAt(i);
+        h1 = h2 ^ Math.imul(h1 ^ k, 597399067);
+        h2 = h3 ^ Math.imul(h2 ^ k, 2869860233);
+        h3 = h4 ^ Math.imul(h3 ^ k, 951274213);
+        h4 = h1 ^ Math.imul(h4 ^ k, 2716044179);
+      }
+      return [(h1 >>> 0), (h2 >>> 0), (h3 >>> 0), (h4 >>> 0)];
+    }
+
+    function sfc32(a, b, c, d) {
+      return function() {
+        a >>>= 0; b >>>= 0; c >>>= 0; d >>>= 0; 
+        let t = (a + b) | 0;
+        a = b ^ b >>> 9;
+        b = c + (c << 3) | 0;
+        c = (c << 21 | c >>> 11);
+        d = d + 1 | 0;
+        t = t + d | 0;
+        c = c + t | 0;
+        return (t >>> 0) / 4294967296;
+      }
+    }
+
+
+    function safeFilename(str) {
+      return str.replace(/[^a-z0-9]+/gi, '_').toLowerCase();
+    }
+
+    function getParameters() {
+      return {
+        preyBirth: parseFloat(document.getElementById("preyBirth").value),
+        predDeath: parseFloat(document.getElementById("predDeath").value),
+        predation: parseFloat(document.getElementById("predation").value),
+        conversion: parseFloat(document.getElementById("conversion").value),
+        initialPrey: parseFloat(document.getElementById("initialPrey").value),
+        initialPred: parseFloat(document.getElementById("initialPred").value),
+        seed: document.getElementById("seed").value
+      };
+    }
+
+    function startSimulation() {
+      if (timer) return;
+      params = getParameters();
+      prey = params.initialPrey;
+      predator = params.initialPred;
+      data = [];
+      time = 0;
+      drawChart();
+      timer = setInterval(simulateStep, 100);
+    }
+
+    function simulateStep() {
+      let { preyBirth, predDeath, predation, conversion } = params;
+      let dt = 1;
+      let dPrey = (preyBirth * prey - predation * prey * predator) * dt;
+      let dPred = (conversion * prey * predator - predDeath * predator) * dt;
+      prey += dPrey;
+      predator += dPred;
+      if (prey < 0) prey = 0;
+      if (predator < 0) predator = 0;
+      time++;
+      data.push({ time, prey, predator });
+      drawChart();
+      updateSummary();
+    }
+
+    function pauseSimulation() {
+      clearInterval(timer);
+      timer = null;
+    }
+
+    function resetSimulation() {
+      pauseSimulation();
+      data = [];
+      document.getElementById("chart").innerHTML = "";
+      document.getElementById("summary").innerHTML = "";
+    }
+
+    function drawChart() {
+      const times = data.map(d => d.time);
+      const preyPop = data.map(d => d.prey);
+      const predPop = data.map(d => d.predator);
+      Plotly.newPlot('chart', [
+        { x: times, y: preyPop, name: 'Prey', mode: 'lines', line: { color: '#1f78b4' } },
+        { x: times, y: predPop, name: 'Predator', mode: 'lines', line: { color: '#e31a1c' } }
+      ], {
+        title: 'Predator–Prey Population Over Time',
+        xaxis: { title: 'Time Steps' },
+        yaxis: { title: 'Population Size' }
+      });
+    }
+
+    
+    function generateFilename(prefix, ext) {
+      const p = getParameters();
+      const parts = [p.seed, p.preyBirth, p.predDeath, p.predation, p.conversion, p.initialPrey, p.initialPred];
+      return prefix + safeFilename(parts.join('_')) + '.' + ext;
+    }
+
+    function downloadPlotlyChart(format) {
+      const filename = generateFilename('predator_prey_', format);
+      Plotly.downloadImage('chart', {
+        format: format,
+        filename: filename,
+        width: 800,
+        height: 400
+      });
+    }
+
+    function exportParameters() {
+      const json = JSON.stringify(getParameters(), null, 2);
+      downloadFile(json, generateFilename("predator_prey_params_", "json"), 'application/json');
+    }
+
+    function exportResults() {
+      const result = JSON.stringify({ parameters: params, results: data }, null, 2);
+      downloadFile(result, generateFilename("predator_prey_results_", "json"), 'application/json');
+    }
+
+    function exportCSV() {
+      let csv = 'time,prey,predator\n';
+      data.forEach(row => {
+        csv += `${row.time},${row.prey},${row.predator}\n`;
+      });
+      downloadFile(csv, generateFilename("predator_prey_results_", "csv"), 'text/csv');
+    }
+
+    function exportBatchResults() {
+      const filename = generateFilename("predator_prey_batch_", "json");
+      const json = JSON.stringify(batchResults, null, 2);
+      downloadFile(json, filename, 'application/json');
+    }
+
+    function downloadFile(content, filename, mime) {
+      const blob = new Blob([content], { type: mime });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = filename;
+      link.click();
+    }
+
+    function runBatchSimulations() {
+      const baseParams = getParameters();
+      const size = parseInt(document.getElementById("batchSize").value);
+      batchResults = [];
+      for (let i = 0; i < size; i++) {
+        const simSeed = baseParams.seed + '_run' + i;
+        const result = runSimulation({ ...baseParams, seed: simSeed });
+        batchResults.push(result);
+      }
+      alert("Batch run complete. Use 'Download Batch Results' to export.");
+    }
+
+    function runSimulation(simParams) {
+      let time = 0, prey = simParams.initialPrey, predator = simParams.initialPred;
+      let series = [];
+      for (let t = 0; t < 100; t++) {
+        let dPrey = (simParams.preyBirth * prey - simParams.predation * prey * predator);
+        let dPred = (simParams.conversion * prey * predator - simParams.predDeath * predator);
+        prey += dPrey;
+        predator += dPred;
+        if (prey < 0) prey = 0;
+        if (predator < 0) predator = 0;
+        series.push({ time: t, prey, predator });
+      }
+      return { parameters: simParams, results: series };
+    }
+  </script>
+</body>
+</html>

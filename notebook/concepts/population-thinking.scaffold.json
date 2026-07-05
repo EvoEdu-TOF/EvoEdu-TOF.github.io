@@ -1,0 +1,118 @@
+{
+  "schema": "evo-edu.notebook.reasoning_scaffold.v1",
+  "id": "notebook.concepts.population-thinking",
+  "title": "Population Thinking",
+  "created": "2026-05-15",
+  "updated": "2026-05-15",
+  "status": "reviewed-scaffold",
+  "concept_targets": [
+    "population thinking",
+    "population genetics",
+    "allele frequency",
+    "variation within populations",
+    "essentialism",
+    "individual-centered explanation",
+    "evolution misconceptions"
+  ],
+  "site_links": [
+    {
+      "kind": "concept",
+      "title": "Allele Frequency Change",
+      "url": "/notebook/concepts/allele-frequency-change.html"
+    },
+    {
+      "kind": "concept",
+      "title": "Genetic Drift",
+      "url": "/notebook/concepts/genetic-drift.html"
+    },
+    {
+      "kind": "concept",
+      "title": "Natural Selection",
+      "url": "/notebook/concepts/natural-selection.html"
+    },
+    {
+      "kind": "pack",
+      "title": "Population Change",
+      "url": "/evo/packs/population-change/"
+    },
+    {
+      "kind": "app",
+      "title": "Allele Tracker",
+      "url": "/apps/allele-tracker/"
+    }
+  ],
+  "records": [
+    {
+      "id": "pt-001",
+      "type": "definition-check",
+      "question": "What does population thinking mean in evolution?",
+      "answer_summary": "Population thinking explains evolution in terms of variation and changing distributions across populations over generations, rather than in terms of one organism changing because it needs to.",
+      "verification_prompt": "Name the population, the variation present, and what changed in its distribution over time.",
+      "misconception_guard": "Do not treat one organism's lifetime development as population evolution.",
+      "didactopus_prompt_seed": "Rewrite the claim so the population and generational comparison are explicit."
+    },
+    {
+      "id": "pt-002",
+      "type": "misconception-contrast",
+      "question": "What mistake does population thinking correct?",
+      "answer_summary": "It corrects individual-centered and essentialist explanations, such as saying an organism evolved a trait because it needed it or assuming every member of a species shares one fixed essence.",
+      "verification_prompt": "Locate the part of the explanation that attributes change to an individual's need or to a fixed species essence.",
+      "misconception_guard": "Do not leave 'because it needed to' language unexamined.",
+      "didactopus_prompt_seed": "Turn the misconception into a population-level explanation with heritable variation and later frequency change."
+    },
+    {
+      "id": "pt-003",
+      "type": "concept-bridge",
+      "question": "Why does this idea matter before drift or selection?",
+      "answer_summary": "Drift and selection both change populations, not isolated organisms. Population thinking gives the scale at which those mechanisms make sense.",
+      "verification_prompt": "Ask whether the explanation names a population-level pattern that drift or selection could actually change.",
+      "misconception_guard": "Do not jump to mechanism labels before the population pattern is clear.",
+      "didactopus_prompt_seed": "Explain how the same population-level pattern could later be tested for drift versus selection."
+    },
+    {
+      "id": "pt-004",
+      "type": "application",
+      "question": "How would you revise an individual-centered claim?",
+      "answer_summary": "Replace it with a claim about heritable variation, differential success or chance sampling, and the resulting change in the frequency of variants across generations.",
+      "verification_prompt": "Identify the trait, the heritable variation, the mechanism, and the generational comparison.",
+      "misconception_guard": "Do not stop at a more technical wording if the population-level variables are still absent.",
+      "didactopus_prompt_seed": "Write the original claim, then produce a corrected population-thinking version beneath it."
+    },
+    {
+      "id": "pt-005",
+      "type": "threshold-concept",
+      "question": "Why is population thinking a threshold concept?",
+      "answer_summary": "Once learners adopt it, many evolutionary mechanisms become easier to understand because the right unit of explanation is finally in view.",
+      "verification_prompt": "Name one earlier confusion that becomes clearer once the population-level frame is adopted.",
+      "misconception_guard": "Do not assume the learner has crossed this threshold just because they know the phrase.",
+      "didactopus_prompt_seed": "Ask the learner to explain how population thinking changes their reading of drift or selection."
+    }
+  ],
+  "citegeist_source_slots": [
+    {
+      "slot": "population-thinking-foundations",
+      "needed_for": "Foundational discussions of population thinking and essentialist error in evolutionary explanation",
+      "candidate_queries": [
+        "Ernst Mayr population thinking essentialism evolution",
+        "population thinking history evolutionary biology Mayr"
+      ],
+      "review_status": "pending"
+    },
+    {
+      "slot": "population-thinking-teaching",
+      "needed_for": "Clear explanatory treatments connecting population thinking to common learner misconceptions",
+      "candidate_queries": [
+        "teaching evolution population thinking misconceptions",
+        "population thinking learner misconceptions evolution education"
+      ],
+      "review_status": "pending"
+    }
+  ],
+  "doclift_use": "Use this scaffold as a bridge concept when extracting learner-facing Notebook material from broader discussions of evolutionary reasoning.",
+  "groundrecall_use": "Store rationale and source-slot decisions here so later concept pages can reuse the same threshold-concept framing.",
+  "next_review_steps": [
+    "Backfill reviewed sources on population thinking and essentialist error.",
+    "Link the beginner route and first-ring pages to this page as a named threshold concept.",
+    "Add one example set showing how individual-centered wording is rewritten into population-level reasoning."
+  ]
+}

@@ -1,0 +1,958 @@
+{
+  "generated_from": "/mnt/data/www/dev/evo-edu.org/wordpress_data/apps",
+  "published_count": 12,
+  "non_public_count": 18,
+  "apps": [
+    {
+      "slug": "__pycache__",
+      "title": "__pycache__",
+      "published": false,
+      "visibility": "unclassified",
+      "role": "No app.json metadata present yet.",
+      "category": "unclassified",
+      "entrypoint": "",
+      "description": "",
+      "legacy_names": [],
+      "metadata_present": false
+    },
+    {
+      "slug": "aed",
+      "title": "Avida-ED Support Materials",
+      "published": false,
+      "visibility": "legacy",
+      "role": "Legacy Avida-ED support and exercise materials kept for continuity.",
+      "category": "artificial-life",
+      "entrypoint": "/apps/aed/index.html",
+      "description": "Support materials associated with older Avida-ED surfaces.",
+      "legacy_names": [
+        "aed"
+      ],
+      "metadata_present": true
+    },
+    {
+      "slug": "allele-tracker",
+      "title": "Allele Tracker",
+      "published": true,
+      "visibility": "public",
+      "role": "Explore how drift, selection, mutation, and migration change allele frequencies over time.",
+      "category": "population-genetics",
+      "entrypoint": "/apps/allele-tracker/",
+      "description": "An interactive population-genetics tool for comparing forces that shape variation and evolutionary change.",
+      "legacy_names": [
+        "PopG",
+        "JS PopG"
+      ],
+      "pages": {
+        "landing": "/apps/allele-tracker/",
+        "application": "/apps/allele-tracker/app/",
+        "study_guide": "/apps/allele-tracker/study-guide.html",
+        "curriculum_alignment": "/apps/allele-tracker/curriculum-alignment.html",
+        "about": "/apps/allele-tracker/about.html"
+      },
+      "implementation": {
+        "legacy_hub": "/apps/popg/",
+        "launch_target": "/apps/popg/jspopg.html"
+      },
+      "api": {
+        "status": "prototype",
+        "family": "population-genetics",
+        "docs": "/apps/api/population-genetics/",
+        "module": "/apps/api/population-genetics/population-genetics.js",
+        "notes": "A shared browser and node-consumable API module now exists for the first population-genetics remediation family."
+      },
+      "tests": {
+        "status": "prototype",
+        "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/population-genetics/population-genetics.test.js",
+        "notes": "A node-based contract test suite now exercises the shared family API module."
+      },
+      "status": {
+        "landing": "standardized",
+        "application": "standardized-wrapper",
+        "study_guide": "present",
+        "curriculum_alignment": "present",
+        "api": "prototype",
+        "tests": "prototype"
+      },
+      "provenance": {
+        "summary": "Public evo-edu framing over the legacy PopG implementation.",
+        "details": "Allele Tracker is the evo-edu public route built around the older PopG simulation. The remediation work adds standardized landing, study, curriculum, and API surfaces while the legacy implementation still supplies the interactive runtime.",
+        "lineage": [
+          "Public evo-edu route: Allele Tracker",
+          "Legacy implementation directory: /apps/popg/",
+          "Current launch target: /apps/popg/jspopg.html"
+        ],
+        "limits": [
+          "The current runtime is still the legacy PopG implementation.",
+          "The shared API layer is in prototype status and deeper UI/API integration remains to be done."
+        ]
+      },
+      "metadata_present": true
+    },
+    {
+      "slug": "api",
+      "title": "api",
+      "published": false,
+      "visibility": "unclassified",
+      "role": "No app.json metadata present yet.",
+      "category": "unclassified",
+      "entrypoint": "",
+      "description": "",
+      "legacy_names": [],
+      "metadata_present": false
+    },
+    {
+      "slug": "avida-ed",
+      "title": "Avida-ED",
+      "published": false,
+      "visibility": "legacy",
+      "role": "Legacy implementation route retained for compatibility with older links and materials.",
+      "category": "artificial-life",
+      "entrypoint": "/apps/avida-ed/",
+      "description": "Legacy Avida-ED route kept behind the public-facing Digital Evolution Lab framing.",
+      "legacy_names": [
+        "Avida-ED"
+      ],
+      "metadata_present": true
+    },
+    {
+      "slug": "biomorphs",
+      "title": "Shape Evolver",
+      "published": false,
+      "visibility": "legacy",
+      "role": "Legacy biomorphs route retained behind the public Shape Evolver framing.",
+      "category": "artificial-life",
+      "entrypoint": "/apps/shape-evolver/",
+      "description": "Legacy implementation alias preserved for continuity while Shape Evolver remains the public route.",
+      "legacy_names": [
+        "Biomorphs"
+      ],
+      "metadata_present": true
+    },
+    {
+      "slug": "climate-range-shifter",
+      "title": "Climate Range Shifter",
+      "published": true,
+      "visibility": "public",
+      "role": "Explore how shifting climate conditions can move habitats and reshape where organisms can persist.",
+      "category": "ecology",
+      "entrypoint": "/apps/climate-range-shifter/",
+      "description": "An interactive climate-and-range-change model for comparing mismatch, movement, and environmental response.",
+      "legacy_names": [
+        "crs"
+      ],
+      "pages": {
+        "landing": "/apps/climate-range-shifter/",
+        "application": "/apps/climate-range-shifter/app/",
+        "study_guide": "/apps/climate-range-shifter/study-guide.html",
+        "curriculum_alignment": "/apps/climate-range-shifter/curriculum-alignment.html",
+        "about": "/apps/climate-range-shifter/about.html"
+      },
+      "implementation": {
+        "legacy_hub": "/apps/climate-range-shifter/launch.html",
+        "launch_target": "/apps/climate-range-shifter/webapp.html"
+      },
+      "api": {
+        "status": "prototype",
+        "family": "ecology",
+        "docs": "/apps/api/ecology/",
+        "module": "/apps/api/ecology/ecology.js",
+        "notes": "A shared browser and node-consumable API module now exists for the ecology remediation family."
+      },
+      "tests": {
+        "status": "prototype",
+        "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/ecology/ecology.test.js",
+        "notes": "A node-based contract test suite now exercises the shared ecology family API module."
+      },
+      "status": {
+        "landing": "standardized",
+        "application": "standardized-wrapper",
+        "study_guide": "present",
+        "curriculum_alignment": "present",
+        "api": "prototype",
+        "tests": "prototype"
+      },
+      "provenance": {
+        "summary": "Public evo-edu framing over the legacy climate-range-shifter implementation.",
+        "details": "Climate Range Shifter is the evo-edu public route for the older climate-linked range-change simulation. The remediation pass adds clearer public framing, study support, curriculum notes, and a shared ecology API while the established implementation remains the active runtime.",
+        "lineage": [
+          "Public evo-edu route: Climate Range Shifter",
+          "Legacy implementation directory: /apps/climate-range-shifter/",
+          "Current launch target: /apps/climate-range-shifter/webapp.html"
+        ],
+        "limits": [
+          "The public route still depends on the older climate-range-shifter runtime.",
+          "Deeper API integration and broader test coverage are still pending."
+        ]
+      },
+      "metadata_present": true
+    },
+    {
+      "slug": "cma",
+      "title": "CMA",
+      "published": false,
+      "visibility": "internal",
+      "role": "Internal or unfinished app surface not ready for public evo-edu.org navigation.",
+      "category": "internal",
+      "entrypoint": "/apps/cma/mendel102.html",
+      "description": "Not currently included in public evo-edu.org pages.",
+      "legacy_names": [],
+      "metadata_present": true
+    },
+    {
+      "slug": "crs",
+      "title": "Climate Range Shifter Legacy Route",
+      "published": false,
+      "visibility": "legacy",
+      "role": "Legacy implementation directory for Climate Range Shifter.",
+      "category": "ecology",
+      "entrypoint": "/apps/crs/launch.html",
+      "description": "Retained behind the public Climate Range Shifter route.",
+      "legacy_names": [
+        "Climate Range Shifter"
+      ],
+      "metadata_present": true
+    },
+    {
+      "slug": "cumulative-selection-explorer",
+      "title": "Cumulative Selection Explorer",
+      "published": true,
+      "visibility": "public",
+      "role": "Compare cumulative selection with random change and see how repeated choice reshapes outcomes.",
+      "category": "artificial-life",
+      "entrypoint": "/apps/cumulative-selection-explorer/",
+      "description": "A classic selection demo reframed as a tool for exploring variation, selection, and the limits of simple models.",
+      "legacy_names": [
+        "Weasel Program",
+        "weasel"
+      ],
+      "pages": {
+        "landing": "/apps/cumulative-selection-explorer/",
+        "application": "/apps/cumulative-selection-explorer/app/",
+        "study_guide": "/apps/cumulative-selection-explorer/study-guide.html",
+        "curriculum_alignment": "/apps/cumulative-selection-explorer/curriculum-alignment.html",
+        "about": "/apps/cumulative-selection-explorer/about.html"
+      },
+      "implementation": {
+        "legacy_hub": "/apps/weasel/",
+        "launch_target": "/apps/weasel/weaselui.html"
+      },
+      "api": {
+        "status": "prototype",
+        "family": "artificial-life",
+        "docs": "/apps/api/artificial-life/",
+        "module": "/apps/api/artificial-life/artificial-life.js",
+        "notes": "A shared browser and node-consumable API module now exists for the artificial-life remediation family."
+      },
+      "tests": {
+        "status": "prototype",
+        "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/artificial-life/artificial-life.test.js",
+        "notes": "A node-based contract test suite now exercises the shared artificial-life family API module."
+      },
+      "status": {
+        "landing": "standardized",
+        "application": "standardized-wrapper",
+        "study_guide": "present",
+        "curriculum_alignment": "present",
+        "api": "prototype",
+        "tests": "prototype"
+      },
+      "provenance": {
+        "summary": "Public evo-edu framing over the legacy Weasel demonstration.",
+        "details": "Cumulative Selection Explorer is the evo-edu public route for the older Weasel-style cumulative-selection demonstration. The current remediation adds clearer framing, study support, and curriculum context while preserving the existing implementation.",
+        "lineage": [
+          "Public evo-edu route: Cumulative Selection Explorer",
+          "Legacy implementation directory: /apps/weasel/",
+          "Current launch target: /apps/weasel/weaselui.html"
+        ],
+        "limits": [
+          "The runtime remains a legacy demonstration surface.",
+          "The tool is useful for model critique, but it does not by itself represent the full complexity of biological evolution."
+        ]
+      },
+      "metadata_present": true
+    },
+    {
+      "slug": "digital-evolution-lab",
+      "title": "Digital Evolution Lab",
+      "published": true,
+      "visibility": "public",
+      "role": "Run digital evolution experiments to explore mutation, selection, adaptation, and evidence from evolving systems.",
+      "category": "artificial-life",
+      "entrypoint": "/apps/digital-evolution-lab/",
+      "description": "The evo-edu public entry point into Avida-ED and related digital-evolution learning materials.",
+      "legacy_names": [
+        "Avida-ED"
+      ],
+      "pages": {
+        "landing": "/apps/digital-evolution-lab/",
+        "application": "/apps/digital-evolution-lab/app/",
+        "study_guide": "/apps/digital-evolution-lab/study-guide.html",
+        "curriculum_alignment": "/apps/digital-evolution-lab/curriculum-alignment.html"
+      },
+      "implementation": {
+        "legacy_hub": "/avida-ed.html",
+        "launch_target": "/avida-ed.html"
+      },
+      "api": {
+        "status": "legacy-exempt",
+        "notes": "The public route is standardized, but the underlying runtime remains the legacy Avida-ED environment and is intentionally outside the current API-remediation tranche."
+      },
+      "tests": {
+        "status": "legacy-exempt",
+        "notes": "Legacy-backed route; current remediation work standardizes public surfaces without rewriting the underlying Avida-ED runtime."
+      },
+      "status": {
+        "landing": "standardized",
+        "application": "standardized-wrapper",
+        "study_guide": "present",
+        "curriculum_alignment": "present",
+        "api": "legacy-exempt",
+        "tests": "legacy-exempt"
+      },
+      "metadata_present": true
+    },
+    {
+      "slug": "ecobalance",
+      "title": "EcoBalance",
+      "published": true,
+      "visibility": "public",
+      "role": "Explore predator-prey dynamics, feedback, stability, and collapse in changing ecological systems.",
+      "category": "ecology",
+      "entrypoint": "/apps/ecobalance/",
+      "description": "An interactive ecology model for comparing cycles, constraints, intervention, and system behavior over time.",
+      "legacy_names": [
+        "Predator-Prey Dynamics Simulator"
+      ],
+      "pages": {
+        "landing": "/apps/ecobalance/",
+        "application": "/apps/ecobalance/app/",
+        "study_guide": "/apps/ecobalance/study-guide.html",
+        "curriculum_alignment": "/apps/ecobalance/curriculum-alignment.html",
+        "about": "/apps/ecobalance/about.html"
+      },
+      "implementation": {
+        "legacy_hub": "/apps/popdyn-predator-prey/",
+        "launch_target": "/apps/popdyn-predator-prey/pp-app.html"
+      },
+      "api": {
+        "status": "prototype",
+        "family": "ecology",
+        "docs": "/apps/api/ecology/",
+        "module": "/apps/api/ecology/ecology.js",
+        "notes": "A shared browser and node-consumable API module now exists for the ecology remediation family."
+      },
+      "tests": {
+        "status": "prototype",
+        "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/ecology/ecology.test.js",
+        "notes": "A node-based contract test suite now exercises the shared ecology family API module."
+      },
+      "status": {
+        "landing": "standardized",
+        "application": "standardized-wrapper",
+        "study_guide": "present",
+        "curriculum_alignment": "present",
+        "api": "prototype",
+        "tests": "prototype"
+      },
+      "provenance": {
+        "summary": "Public evo-edu framing over the legacy predator-prey implementation.",
+        "details": "EcoBalance is the evo-edu public route built around the older predator-prey dynamics application. The current remediation adds standardized pages, study guidance, curriculum mapping, and a shared ecology API while the legacy implementation continues to provide the runtime.",
+        "lineage": [
+          "Public evo-edu route: EcoBalance",
+          "Legacy implementation directory: /apps/popdyn-predator-prey/",
+          "Current launch target: /apps/popdyn-predator-prey/pp-app.html"
+        ],
+        "limits": [
+          "The current runtime remains the older predator-prey implementation.",
+          "The ecology family API is present, but the legacy UI is not yet fully rewired to it."
+        ]
+      },
+      "metadata_present": true
+    },
+    {
+      "slug": "evidence-cause-workbench",
+      "title": "Evidence And Cause Workbench",
+      "published": true,
+      "visibility": "public",
+      "role": "Practice separating observations, baselines, candidate causes, stochastic mechanisms, value claims, model boundaries, and justified causal claims.",
+      "category": "foundations",
+      "entrypoint": "/apps/evidence-cause-workbench/",
+      "description": "A foundational empirical-reasoning tool for learning how biological explanations move from measured patterns to cautious causal inference.",
+      "legacy_names": [],
+      "pages": {
+        "landing": "/apps/evidence-cause-workbench/",
+        "application": "/apps/evidence-cause-workbench/app/",
+        "study_guide": "/apps/evidence-cause-workbench/study-guide.html",
+        "curriculum_alignment": "/apps/evidence-cause-workbench/curriculum-alignment.html",
+        "teacher_guide": "/apps/evidence-cause-workbench/teacher-guide.html",
+        "standards": "/apps/evidence-cause-workbench/standards.html",
+        "about": "/apps/evidence-cause-workbench/about.html"
+      },
+      "implementation": {
+        "launch_target": "/apps/evidence-cause-workbench/app/",
+        "model_type": "direct responsive browser workbench"
+      },
+      "status": {
+        "landing": "standardized",
+        "application": "responsive-direct",
+        "study_guide": "present",
+        "curriculum_alignment": "present",
+        "teacher_guide": "present",
+        "standards": "present",
+        "about": "present"
+      },
+      "provenance": {
+        "summary": "New evo-edu foundational reasoning app connected to Notebook empirical reasoning needs.",
+        "details": "This app was added to make explicit the empirical program behind the Notebook sequence: observe a phenomenon, compare against a baseline, consider stochastic and multi-cause alternatives, separate progress or value claims from empirical claims, evaluate magnitude, and flag exercise simplifications before assigning causation.",
+        "lineage": [
+          "Notebook first-ring empirical reasoning frame",
+          "Futuyma 1979 progress/value, chance/mechanism, and simple-model/multi-cause Notebook guardrails",
+          "Supports Hardy-Weinberg Workbench planning and later mechanism apps"
+        ],
+        "limits": [
+          "The workbench uses simplified toy scenarios rather than full statistical inference.",
+          "The magnitude explorer is qualitative and intended for reasoning about sufficiency, not parameter estimation.",
+          "Real-world causal analysis requires stronger design, replication, uncertainty estimates, and domain-specific measurement."
+        ]
+      },
+      "metadata_present": true
+    },
+    {
+      "slug": "gene-flow-mapper",
+      "title": "Gene Flow Mapper",
+      "published": true,
+      "visibility": "public",
+      "role": "Explore how movement, distance, and barriers shape gene flow across landscapes.",
+      "category": "population-genetics",
+      "entrypoint": "/apps/gene-flow-mapper/",
+      "description": "An interactive landscape-genetics tool for investigating dispersal, fragmentation, and population structure.",
+      "legacy_names": [
+        "Landscape Genetics Simulator",
+        "landgen"
+      ],
+      "pages": {
+        "landing": "/apps/gene-flow-mapper/",
+        "application": "/apps/gene-flow-mapper/app/",
+        "study_guide": "/apps/gene-flow-mapper/study-guide.html",
+        "curriculum_alignment": "/apps/gene-flow-mapper/curriculum-alignment.html",
+        "about": "/apps/gene-flow-mapper/about.html"
+      },
+      "implementation": {
+        "legacy_hub": "/apps/landgen/",
+        "launch_target": "/apps/landgen/landgenapp104.html"
+      },
+      "api": {
+        "status": "prototype",
+        "family": "population-genetics",
+        "docs": "/apps/api/population-genetics/",
+        "module": "/apps/api/population-genetics/population-genetics.js",
+        "notes": "A shared browser and node-consumable API module now exists for the first population-genetics remediation family."
+      },
+      "tests": {
+        "status": "prototype",
+        "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/population-genetics/population-genetics.test.js",
+        "notes": "A node-based contract test suite now exercises the shared family API module."
+      },
+      "status": {
+        "landing": "standardized",
+        "application": "standardized-wrapper",
+        "study_guide": "present",
+        "curriculum_alignment": "present",
+        "api": "prototype",
+        "tests": "prototype"
+      },
+      "provenance": {
+        "summary": "Public evo-edu framing over the legacy landgen implementation.",
+        "details": "Gene Flow Mapper is the evo-edu public route for the older landgen spatial-population simulation. The current remediation adds public framing, guide pages, curriculum notes, and a family API while the legacy implementation remains the active runtime.",
+        "lineage": [
+          "Public evo-edu route: Gene Flow Mapper",
+          "Legacy implementation directory: /apps/landgen/",
+          "Current launch target: /apps/landgen/landgenapp104.html"
+        ],
+        "limits": [
+          "The interactive runtime is still the older landgen implementation.",
+          "The shared family API is present, but the legacy interface has not yet been fully rewired to it."
+        ]
+      },
+      "metadata_present": true
+    },
+    {
+      "slug": "grid-world-survival",
+      "title": "Grid-World Survival",
+      "published": false,
+      "visibility": "planned",
+      "role": "Legacy grid-world survival demonstration withheld from public navigation until the underlying implementation is brought up to standard.",
+      "category": "artificial-life",
+      "entrypoint": "/apps/grid-world-survival/",
+      "description": "Grid-world selection demo currently kept out of the public catalog while remediation of the underlying implementation continues.",
+      "legacy_names": [
+        "gw",
+        "Survival in Grid-World"
+      ],
+      "pages": {
+        "landing": "/apps/grid-world-survival/",
+        "application": "/apps/grid-world-survival/app/",
+        "study_guide": "/apps/grid-world-survival/study-guide.html",
+        "curriculum_alignment": "/apps/grid-world-survival/curriculum-alignment.html",
+        "about": "/apps/grid-world-survival/about.html"
+      },
+      "implementation": {
+        "legacy_hub": "/apps/gw/",
+        "launch_target": "/apps/gw/"
+      },
+      "api": {
+        "status": "prototype",
+        "family": "artificial-life",
+        "docs": "/apps/api/artificial-life/",
+        "module": "/apps/api/artificial-life/artificial-life.js",
+        "notes": "A shared browser and node-consumable API module now exists for the artificial-life remediation family."
+      },
+      "tests": {
+        "status": "prototype",
+        "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/artificial-life/artificial-life.test.js",
+        "notes": "A node-based contract test suite now exercises the shared artificial-life family API module."
+      },
+      "status": {
+        "landing": "standardized",
+        "application": "standardized-wrapper",
+        "study_guide": "present",
+        "curriculum_alignment": "present",
+        "api": "prototype",
+        "tests": "prototype"
+      },
+      "provenance": {
+        "summary": "Legacy grid-world route currently withheld from the public catalog.",
+        "details": "Grid-World Survival is still backed by the older gw implementation and is currently excluded from public evo-edu navigation because the underlying app is not yet at the same documentation and implementation standard as the other remediated tools.",
+        "lineage": [
+          "Public evo-edu route: Grid-World Survival",
+          "Legacy implementation directory: /apps/gw/",
+          "Current launch target: /apps/gw/"
+        ],
+        "limits": [
+          "Not currently published in the live evo-edu app catalog.",
+          "Requires deeper implementation remediation before it should return to public navigation."
+        ]
+      },
+      "metadata_present": true
+    },
+    {
+      "slug": "gw",
+      "title": "Grid-World Survival",
+      "published": false,
+      "visibility": "legacy",
+      "role": "Underlying implementation directory for the public Grid-World Survival route.",
+      "category": "artificial-life",
+      "entrypoint": "/apps/gw/",
+      "description": "Legacy or implementation-facing route retained behind the public label.",
+      "legacy_names": [
+        "Survival in Grid-World"
+      ],
+      "metadata_present": true
+    },
+    {
+      "slug": "landgen",
+      "title": "Landscape Genetics Simulator",
+      "published": false,
+      "visibility": "legacy",
+      "role": "Legacy implementation directory for the public Gene Flow Mapper route.",
+      "category": "population-genetics",
+      "entrypoint": "/apps/landgen/index.html",
+      "description": "Retained behind the public Gene Flow Mapper framing.",
+      "legacy_names": [
+        "landgen",
+        "Landscape Genetics Simulator"
+      ],
+      "metadata_present": true
+    },
+    {
+      "slug": "life-cycle-modeler",
+      "title": "Life Cycle Modeler",
+      "published": true,
+      "visibility": "public",
+      "role": "Explore how survival and reproduction at different life stages change the future of a population.",
+      "category": "ecology",
+      "entrypoint": "/apps/life-cycle-modeler/",
+      "description": "An interactive life-history and demography tool for comparing growth, decline, vulnerability, and persistence.",
+      "legacy_names": [
+        "Population Dynamics",
+        "popdyn"
+      ],
+      "pages": {
+        "landing": "/apps/life-cycle-modeler/",
+        "application": "/apps/life-cycle-modeler/app/",
+        "study_guide": "/apps/life-cycle-modeler/study-guide.html",
+        "curriculum_alignment": "/apps/life-cycle-modeler/curriculum-alignment.html",
+        "about": "/apps/life-cycle-modeler/about.html"
+      },
+      "implementation": {
+        "legacy_hub": "/apps/popdyn/",
+        "launch_target": "/apps/popdyn/popdyn_ia.html"
+      },
+      "api": {
+        "status": "prototype",
+        "family": "population-genetics",
+        "docs": "/apps/api/population-genetics/",
+        "module": "/apps/api/population-genetics/population-genetics.js",
+        "notes": "A shared browser and node-consumable API module now exists for the first population-genetics remediation family."
+      },
+      "tests": {
+        "status": "prototype",
+        "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/population-genetics/population-genetics.test.js",
+        "notes": "A node-based contract test suite now exercises the shared family API module."
+      },
+      "status": {
+        "landing": "standardized",
+        "application": "standardized-wrapper",
+        "study_guide": "present",
+        "curriculum_alignment": "present",
+        "api": "prototype",
+        "tests": "prototype"
+      },
+      "provenance": {
+        "summary": "Public evo-edu framing over the legacy popdyn implementation.",
+        "details": "Life Cycle Modeler is the evo-edu public route for the older popdyn matrix-population tool. The remediation pass adds public documentation, study guidance, curriculum mapping, and a shared API contract while the original implementation still provides the working simulation.",
+        "lineage": [
+          "Public evo-edu route: Life Cycle Modeler",
+          "Legacy implementation directory: /apps/popdyn/",
+          "Current launch target: /apps/popdyn/popdyn_ia.html"
+        ],
+        "limits": [
+          "The runtime remains the legacy popdyn implementation.",
+          "Additional work is still needed to expose more of the engine behavior through the shared API and stronger tests."
+        ]
+      },
+      "metadata_present": true
+    },
+    {
+      "slug": "literature-explorer",
+      "title": "Literature Explorer",
+      "published": true,
+      "visibility": "planned",
+      "role": "Extend a topic through literature search, bibliography growth, and evidence-trail building.",
+      "category": "research-support",
+      "entrypoint": "/apps/literature-explorer/",
+      "description": "A research-support tool for finding related literature, building reading lists, and expanding bibliographies with CiteGeist support.",
+      "legacy_names": [
+        "CiteGeist"
+      ],
+      "pages": {
+        "landing": "/apps/literature-explorer/",
+        "application": "/apps/literature-explorer/app/",
+        "study_guide": "/apps/literature-explorer/study-guide.html",
+        "curriculum_alignment": "/apps/literature-explorer/curriculum-alignment.html"
+      },
+      "implementation": {
+        "external_hub": "/opt/www/dev/CiteGeist",
+        "public_role": "A metadata-driven research support surface for topic expansion and bibliography discovery."
+      },
+      "api": {
+        "status": "available",
+        "family": "research-support",
+        "docs": "/opt/www/dev/CiteGeist/README.md",
+        "notes": "Public evo-edu surface remains a guided wrapper around the existing CiteGeist codebase and API workflow."
+      },
+      "tests": {
+        "status": "available",
+        "runner": "See /opt/www/dev/CiteGeist",
+        "notes": "The underlying CiteGeist codebase already has its own test suite."
+      },
+      "status": {
+        "landing": "standardized",
+        "application": "standardized-wrapper",
+        "study_guide": "present",
+        "curriculum_alignment": "present",
+        "api": "available",
+        "tests": "available"
+      },
+      "metadata_present": true
+    },
+    {
+      "slug": "llm-learning",
+      "title": "LLM Learning",
+      "published": false,
+      "visibility": "internal",
+      "role": "Internal or experimental learning surface not ready for public evo-edu.org navigation.",
+      "category": "internal",
+      "entrypoint": "/apps/llm_learning/index.html",
+      "description": "Not currently included in public evo-edu.org pages.",
+      "legacy_names": [
+        "llm_learning"
+      ],
+      "metadata_present": true
+    },
+    {
+      "slug": "network-builder",
+      "title": "Network Builder",
+      "published": true,
+      "visibility": "public",
+      "role": "Explore how search and optimization can build shorter, more efficient networks from the same set of points.",
+      "category": "artificial-life",
+      "entrypoint": "/apps/network-builder/",
+      "description": "An interactive network-design tool for comparing efficiency, tradeoffs, and optimization strategies.",
+      "legacy_names": [
+        "Steiner Tree GA",
+        "steiner"
+      ],
+      "pages": {
+        "landing": "/apps/network-builder/",
+        "application": "/apps/network-builder/app/",
+        "study_guide": "/apps/network-builder/study-guide.html",
+        "curriculum_alignment": "/apps/network-builder/curriculum-alignment.html",
+        "about": "/apps/network-builder/about.html"
+      },
+      "implementation": {
+        "legacy_hub": "/apps/steiner/",
+        "launch_target": "/apps/steiner/jssteiner.html"
+      },
+      "api": {
+        "status": "prototype",
+        "family": "artificial-life",
+        "docs": "/apps/api/artificial-life/",
+        "module": "/apps/api/artificial-life/artificial-life.js",
+        "notes": "A shared browser and node-consumable API module now exists for the artificial-life remediation family."
+      },
+      "tests": {
+        "status": "prototype",
+        "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/artificial-life/artificial-life.test.js",
+        "notes": "A node-based contract test suite now exercises the shared artificial-life family API module."
+      },
+      "status": {
+        "landing": "standardized",
+        "application": "standardized-wrapper",
+        "study_guide": "present",
+        "curriculum_alignment": "present",
+        "api": "prototype",
+        "tests": "prototype"
+      },
+      "provenance": {
+        "summary": "Public evo-edu framing over the legacy Steiner-style network optimization implementation.",
+        "details": "Network Builder is the evo-edu public route for the older Steiner-style network optimization tool. The remediation work adds public framing, study guidance, and curriculum context while the legacy implementation still provides the runtime.",
+        "lineage": [
+          "Public evo-edu route: Network Builder",
+          "Legacy implementation directory: /apps/steiner/",
+          "Current launch target: /apps/steiner/jssteiner.html"
+        ],
+        "limits": [
+          "The current runtime remains the legacy optimization implementation.",
+          "Public documentation and shell have been modernized ahead of deeper engine/API work."
+        ]
+      },
+      "metadata_present": true
+    },
+    {
+      "slug": "popdyn",
+      "title": "Population Dynamics",
+      "published": false,
+      "visibility": "legacy",
+      "role": "Underlying implementation directory for the public Life Cycle Modeler route.",
+      "category": "ecology",
+      "entrypoint": "/apps/popdyn/popdyn2.html",
+      "description": "Retained behind the public Life Cycle Modeler framing.",
+      "legacy_names": [
+        "Population Dynamics"
+      ],
+      "metadata_present": true
+    },
+    {
+      "slug": "popdyn-predator-prey",
+      "title": "Predator-Prey Dynamics",
+      "published": false,
+      "visibility": "legacy",
+      "role": "Underlying implementation directory for the public EcoBalance route.",
+      "category": "ecology",
+      "entrypoint": "/apps/popdyn-predator-prey/index.html",
+      "description": "Retained behind the public EcoBalance framing.",
+      "legacy_names": [
+        "Predator-Prey Dynamics Simulator"
+      ],
+      "metadata_present": true
+    },
+    {
+      "slug": "popg",
+      "title": "PopG",
+      "published": false,
+      "visibility": "legacy",
+      "role": "Underlying implementation directory for the public Allele Tracker route.",
+      "category": "population-genetics",
+      "entrypoint": "/apps/popg/index.html",
+      "description": "Retained behind the public Allele Tracker framing.",
+      "legacy_names": [
+        "JS PopG",
+        "PopG"
+      ],
+      "metadata_present": true
+    },
+    {
+      "slug": "route-optimizer",
+      "title": "Route Optimizer",
+      "published": true,
+      "visibility": "public",
+      "role": "Explore route finding through iterative search and watch better solutions emerge over generations.",
+      "category": "artificial-life",
+      "entrypoint": "/apps/route-optimizer/",
+      "description": "An interactive optimization tool for comparing routes, heuristics, and generational improvement in a TSP-style problem.",
+      "legacy_names": [
+        "Traveling Salesperson GA",
+        "tsp"
+      ],
+      "pages": {
+        "landing": "/apps/route-optimizer/",
+        "application": "/apps/route-optimizer/app/",
+        "study_guide": "/apps/route-optimizer/study-guide.html",
+        "curriculum_alignment": "/apps/route-optimizer/curriculum-alignment.html",
+        "about": "/apps/route-optimizer/about.html"
+      },
+      "implementation": {
+        "legacy_hub": "/apps/tsp/",
+        "launch_target": "/apps/tsp/jstsp.html"
+      },
+      "api": {
+        "status": "prototype",
+        "family": "artificial-life",
+        "docs": "/apps/api/artificial-life/",
+        "module": "/apps/api/artificial-life/artificial-life.js",
+        "notes": "A shared browser and node-consumable API module now exists for the artificial-life remediation family."
+      },
+      "tests": {
+        "status": "prototype",
+        "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/artificial-life/artificial-life.test.js",
+        "notes": "A node-based contract test suite now exercises the shared artificial-life family API module."
+      },
+      "status": {
+        "landing": "standardized",
+        "application": "standardized-wrapper",
+        "study_guide": "present",
+        "curriculum_alignment": "present",
+        "api": "prototype",
+        "tests": "prototype"
+      },
+      "provenance": {
+        "summary": "Modern JavaScript adaptation of an older GA-based TSP solver lineage, wrapped in evo-edu public documentation.",
+        "details": "Route Optimizer is built on a JavaScript and HTML implementation of a genetic-algorithm Traveling Salesperson solver. The implementation notes in the underlying tool cite Hiroaki Sengoku's GA-based TSP work as an important algorithmic influence, and the current version was produced as a modern browser replacement for earlier Java applet-era examples that were no longer usable. The evo-edu route adds public documentation, study guidance, and curriculum context around that implementation.",
+        "lineage": [
+          "Public evo-edu route: Route Optimizer",
+          "Legacy implementation directory: /apps/tsp/",
+          "Current launch target: /apps/tsp/jstsp.html",
+          "Algorithmic lineage noted in the implementation: Hiroaki Sengoku's GA-based TSP solver work"
+        ],
+        "limits": [
+          "The underlying implementation is strong, but its public documentation was sparse before this remediation pass.",
+          "Known issue noted in the implementation: manual city-definition click accuracy still needs improvement."
+        ]
+      },
+      "metadata_present": true
+    },
+    {
+      "slug": "shape-evolver",
+      "title": "Shape Evolver",
+      "published": true,
+      "visibility": "public",
+      "role": "Explore how small inherited changes and repeated selection can reshape evolving forms.",
+      "category": "artificial-life",
+      "entrypoint": "/apps/shape-evolver/",
+      "description": "An interactive biomorph-style tool for exploring variation, inheritance, constraint, and visible change over time.",
+      "legacy_names": [
+        "Biomorphs"
+      ],
+      "pages": {
+        "landing": "/apps/shape-evolver/",
+        "application": "/apps/shape-evolver/app/",
+        "study_guide": "/apps/shape-evolver/study-guide.html",
+        "curriculum_alignment": "/apps/shape-evolver/curriculum-alignment.html",
+        "about": "/apps/shape-evolver/about.html"
+      },
+      "implementation": {
+        "legacy_hub": "/apps/biomorphs/",
+        "launch_target": "/apps/biomorphs/jsbiomorph.html"
+      },
+      "api": {
+        "status": "prototype",
+        "family": "artificial-life",
+        "docs": "/apps/api/artificial-life/",
+        "module": "/apps/api/artificial-life/artificial-life.js",
+        "notes": "A shared browser and node-consumable API module now exists for the artificial-life remediation family."
+      },
+      "tests": {
+        "status": "prototype",
+        "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/artificial-life/artificial-life.test.js",
+        "notes": "A node-based contract test suite now exercises the shared artificial-life family API module."
+      },
+      "status": {
+        "landing": "standardized",
+        "application": "standardized-wrapper",
+        "study_guide": "present",
+        "curriculum_alignment": "present",
+        "api": "prototype",
+        "tests": "prototype"
+      },
+      "provenance": {
+        "summary": "Public evo-edu framing over the legacy biomorphs implementation.",
+        "details": "Shape Evolver is the current evo-edu public route for the older Biomorphs implementation. The public-facing pages clarify purpose, study use, and curriculum fit while the legacy app continues to supply the interactive runtime.",
+        "lineage": [
+          "Public evo-edu route: Shape Evolver",
+          "Legacy implementation directory: /apps/biomorphs/",
+          "Current launch target: /apps/biomorphs/jsbiomorph.html"
+        ],
+        "limits": [
+          "The current runtime is still the older biomorphs implementation.",
+          "Public documentation and shell have been modernized faster than the underlying engine."
+        ]
+      },
+      "metadata_present": true
+    },
+    {
+      "slug": "steiner",
+      "title": "Steiner",
+      "published": false,
+      "visibility": "legacy",
+      "role": "Underlying implementation directory for the public Network Builder route.",
+      "category": "artificial-life",
+      "entrypoint": "/apps/steiner/jssteiner.html",
+      "description": "Retained behind the public Network Builder framing.",
+      "legacy_names": [
+        "Steiner Tree GA"
+      ],
+      "metadata_present": true
+    },
+    {
+      "slug": "template",
+      "title": "Template",
+      "published": false,
+      "visibility": "internal",
+      "role": "Template or scaffold directory not intended for public site navigation.",
+      "category": "internal",
+      "entrypoint": "/apps/template/template.html",
+      "description": "Not currently included in public evo-edu.org pages.",
+      "legacy_names": [],
+      "metadata_present": true
+    },
+    {
+      "slug": "tsp",
+      "title": "TSP",
+      "published": false,
+      "visibility": "legacy",
+      "role": "Underlying implementation directory for the public Route Optimizer route.",
+      "category": "artificial-life",
+      "entrypoint": "/apps/tsp/jstsp.html",
+      "description": "Retained behind the public Route Optimizer framing.",
+      "legacy_names": [
+        "Traveling Salesperson GA"
+      ],
+      "metadata_present": true
+    },
+    {
+      "slug": "weasel",
+      "title": "Weasel",
+      "published": false,
+      "visibility": "legacy",
+      "role": "Underlying implementation directory for the public Cumulative Selection Explorer route.",
+      "category": "artificial-life",
+      "entrypoint": "/apps/weasel/weaselui.html",
+      "description": "Retained behind the public Cumulative Selection Explorer framing.",
+      "legacy_names": [
+        "Weasel Program"
+      ],
+      "metadata_present": true
+    }
+  ]
+}

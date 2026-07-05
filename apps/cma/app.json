@@ -1,0 +1,10 @@
+{
+  "slug": "cma",
+  "title": "CMA",
+  "published": false,
+  "visibility": "internal",
+  "role": "Internal or unfinished app surface not ready for public evo-edu.org navigation.",
+  "category": "internal",
+  "entrypoint": "/apps/cma/mendel102.html",
+  "description": "Not currently included in public evo-edu.org pages."
+}

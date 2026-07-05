@@ -1,0 +1,11 @@
+{
+  "slug": "gw",
+  "title": "Grid-World Survival",
+  "published": false,
+  "visibility": "legacy",
+  "role": "Underlying implementation directory for the public Grid-World Survival route.",
+  "category": "artificial-life",
+  "entrypoint": "/apps/gw/",
+  "description": "Legacy or implementation-facing route retained behind the public label.",
+  "legacy_names": ["Survival in Grid-World"]
+}

@@ -1,0 +1,120 @@
+{
+  "schema": "evo-edu.notebook.reasoning_scaffold.v1",
+  "id": "notebook.concepts.natural-selection",
+  "title": "Natural Selection",
+  "created": "2026-05-14",
+  "updated": "2026-05-14",
+  "status": "pilot-reviewed-scaffold",
+  "concept_targets": [
+    "natural selection",
+    "allele frequency",
+    "adaptation",
+    "fitness differences",
+    "heritable variation",
+    "environmental context",
+    "selection contrast",
+    "drift contrast"
+  ],
+  "site_links": [
+    {
+      "kind": "concept",
+      "title": "Allele Frequency Change",
+      "url": "/notebook/concepts/allele-frequency-change.html"
+    },
+    {
+      "kind": "concept",
+      "title": "Genetic Drift",
+      "url": "/notebook/concepts/genetic-drift.html"
+    },
+    {
+      "kind": "pack",
+      "title": "Population Change",
+      "url": "/evo/packs/population-change/"
+    },
+    {
+      "kind": "app",
+      "title": "Allele Tracker",
+      "url": "/apps/allele-tracker/"
+    },
+    {
+      "kind": "research_tool",
+      "title": "Literature Explorer",
+      "url": "/apps/literature-explorer/"
+    }
+  ],
+  "records": [
+    {
+      "id": "ns-001",
+      "type": "mechanism-contrast",
+      "question": "What makes selection different from drift?",
+      "answer_summary": "Selection changes frequencies because heritable variants differ in survival or reproduction. Drift changes frequencies by random sampling, even without advantage.",
+      "verification_prompt": "Ask whether the evidence shows a repeated directional bias tied to a fitness difference or mainly variable sampling outcomes.",
+      "misconception_guard": "Do not treat every frequency increase as evidence of selection.",
+      "didactopus_prompt_seed": "State one observation that supports selection and one that would keep drift plausible."
+    },
+    {
+      "id": "ns-002",
+      "type": "evidence-check",
+      "question": "What evidence is needed before calling an allele adaptive?",
+      "answer_summary": "A rising frequency is not enough. The case needs evidence connecting the allele to heritable trait differences that affect survival or reproduction in the relevant environment.",
+      "verification_prompt": "Name the trait effect, the fitness difference, the environmental context, and at least one competing mechanism.",
+      "misconception_guard": "Avoid assuming that common means beneficial.",
+      "didactopus_prompt_seed": "Rewrite the claim so the trait effect and environmental setting are explicit."
+    },
+    {
+      "id": "ns-003",
+      "type": "environment-check",
+      "question": "Why does environment matter to selection?",
+      "answer_summary": "A trait is not universally advantageous. Its effect depends on the surrounding ecological or experimental conditions.",
+      "verification_prompt": "State which conditions make the trait favorable, neutral, or costly.",
+      "misconception_guard": "Do not talk about a trait being simply 'better' without naming conditions.",
+      "didactopus_prompt_seed": "Describe how the same trait could be favored in one setting and not in another."
+    },
+    {
+      "id": "ns-004",
+      "type": "mixed-mechanism",
+      "question": "Can selection and drift both matter at once?",
+      "answer_summary": "Yes. Small populations can show noisy outcomes even when selection is present, and weak selection can be hard to separate from drift without repeated evidence.",
+      "verification_prompt": "Compare repeated runs, population size, and the size of the fitness difference before deciding how strong the selective story is.",
+      "misconception_guard": "Do not force the explanation into a single mechanism when mixed causes fit better.",
+      "didactopus_prompt_seed": "Name what additional evidence would help sort out drift-plus-selection from drift alone."
+    },
+    {
+      "id": "ns-005",
+      "type": "revision",
+      "question": "Why keep rival explanations visible?",
+      "answer_summary": "A strong explanation for selection includes what would weaken it, such as missing trait evidence, high run-to-run variation, or plausible migration effects.",
+      "verification_prompt": "Ask what observation would make the current selection claim less convincing.",
+      "misconception_guard": "Do not present selection as the default answer before alternatives are checked.",
+      "didactopus_prompt_seed": "Add one sentence naming a rival explanation and how it could be tested."
+    }
+  ],
+  "citegeist_source_slots": [
+    {
+      "slot": "selection-foundations",
+      "needed_for": "Foundational treatments of natural selection and fitness differences",
+      "candidate_queries": [
+        "Darwin natural selection variation inheritance struggle for existence",
+        "Fisher 1930 genetical theory natural selection",
+        "Haldane 1932 causes of evolution selection"
+      ],
+      "review_status": "pending"
+    },
+    {
+      "slot": "selection-evidence-explanations",
+      "needed_for": "Clear explanatory treatments of how evidence supports selective claims",
+      "candidate_queries": [
+        "population genetics selection evidence adaptive allele frequency change",
+        "selection drift distinguish repeated runs fitness difference"
+      ],
+      "review_status": "pending"
+    }
+  ],
+  "doclift_use": "Use this JSON as a fixture for scaffold-backed concept pages that require mechanism comparison and evidence framing.",
+  "groundrecall_use": "Store revisions, pending source-slot work, and rationale about competing explanations so later Notebook concepts can reuse the same evidence structure.",
+  "next_review_steps": [
+    "Backfill reviewed sources for classic and explanatory treatments of selection.",
+    "Add one worked run set comparing equal-fitness and fitness-biased scenarios.",
+    "Link this page into later Notebook pages on adaptation and speciation."
+  ]
+}

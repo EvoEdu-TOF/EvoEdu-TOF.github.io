@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notebook On Evolution - evo-edu.org</title>
+  <link rel="stylesheet" href="/shared/evo-edu.css">
+  <script src="/shared/evo-shell.js" defer></script>
+  
+</head>
+<body>
+  <div class="site-shell notebook-shell">
+    <header class="site-topbar">
+      <div class="brand-block">
+        <span class="brand-mark">Conceptual Foundation</span>
+        <a href="/">evo-edu.org</a>
+        <p class="brand-summary">The Notebook needs substantial content work, but it should already sit inside the evo-edu.org structure.</p>
+      </div>
+      <nav class="site-nav" data-evo-nav data-current="notebook"></nav>
+    </header>
+
+    <section class="hero-card">
+      <p class="eyebrow">Notebook On Evolution</p>
+      <h1>Conceptual grounding for learners who need more than an app launch page.</h1>
+      <p class="lede lede-strong">
+        The Notebook is not finished, but it should serve as the explanatory spine of evo-edu.org:
+        a place for structured treatment of concepts, evidence, history, and common misunderstandings.
+      </p>
+    </section>
+
+    <main>
+      <div class="section-card" data-src="/notebook/intro.html" data-load="eager">
+        <h3>I. Introduction</h3>
+        <p class="meta">Core concepts and scope</p>
+        <p class="excerpt">What evolution is, what it is not, and how adaptive and non-adaptive change differ.</p>
+        <button class="button-link expand-btn" type="button">Show</button>
+        <div class="content" hidden></div>
+      </div>
+
+      <div class="section-card" data-src="/notebook/concepts/allele-frequency-change.html" data-load="lazy">
+        <h3>Allele Frequency Change</h3>
+        <p class="meta">Reasoning-scaffold pilot</p>
+        <p class="excerpt">A compact concept page connecting drift, selection, mutation, migration, model evidence, and source-trail work.</p>
+        <button class="button-link expand-btn" type="button">Show</button>
+        <div class="content" hidden></div>
+      </div>
+
+      <div class="section-card" data-src="/notebook/historical-overview/punctuated-equilibria.html" data-load="lazy">
+        <h3>Punctuated Equilibria</h3>
+        <p class="meta">Historical overview and conceptual interpretation</p>
+        <p class="excerpt">A historically nuanced account of stasis, speciation, and fossil-record interpretation.</p>
+        <button class="button-link expand-btn" type="button">Show</button>
+        <div class="content" hidden></div>
+      </div>
+
+      <div class="section-card">
+        <h3>Scientific Virtues</h3>
+        <p class="meta">Habits of mind and conduct for inquiry</p>
+        <p class="excerpt">Use curiosity, honesty, skepticism, attentiveness, humility to evidence, and willingness to revise as explicit study goals rather than background assumptions.</p>
+        <a class="button-link" href="/evo/scientific-virtues/">Open page</a>
+      </div>
+    </main>
+
+    <footer class="footer-card">
+      <div>
+        <h3>Notebook status</h3>
+        <p>This surface is now visually aligned with evo-edu.org, but the Notebook still needs substantial editorial and structural work.</p>
+      </div>
+      <small>Updated March 28, 2026</small>
+    </footer>
+  </div>
+  <script>
+    document.querySelectorAll('.section-card[data-load="eager"]').forEach((card) => {
+      loadSection(card, true);
+    });
+
+    document.querySelectorAll('.expand-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const card = btn.closest('.section-card');
+        const contentDiv = card.querySelector('.content');
+        const isHidden = contentDiv.hasAttribute('hidden');
+        if (isHidden && !contentDiv.dataset.loaded) {
+          loadSection(card, false);
+        }
+        if (isHidden) {
+          contentDiv.removeAttribute('hidden');
+          btn.textContent = 'Hide';
+        } else {
+          contentDiv.setAttribute('hidden', '');
+          btn.textContent = 'Show';
+        }
+      });
+    });
+
+    async function loadSection(card, showImmediately) {
+      const src = card.dataset.src;
+      const contentDiv = card.querySelector('.content');
+      const button = card.querySelector('.expand-btn');
+      try {
+        const response = await fetch(src);
+        contentDiv.innerHTML = await response.text();
+        contentDiv.dataset.loaded = 'true';
+        if (showImmediately) {
+          contentDiv.removeAttribute('hidden');
+          button.textContent = 'Hide';
+        }
+      } catch (err) {
+        contentDiv.innerHTML = '<p>Error loading content.</p>';
+        contentDiv.dataset.loaded = 'true';
+        contentDiv.removeAttribute('hidden');
+        button.textContent = 'Hide';
+      }
+    }
+
+    document.addEventListener('click', async (event) => {
+      if (!event.target.classList.contains('biblio-toggle')) {
+        return;
+      }
+      const button = event.target;
+      const bibKey = button.dataset.bibKey;
+      const bibDiv = document.getElementById(`biblio-${bibKey}`);
+      if (!bibDiv) {
+        return;
+      }
+      if (!bibDiv.dataset.loaded) {
+        try {
+          const response = await fetch(`/notebook/bibliography/${bibKey}-bib.json`);
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+          }
+          const items = await response.json();
+          const html = items.map((item) =>
+            `${item.authors} (${item.year}). ${item.title}. <em>${item.journal}</em> ${item.volume ? item.volume + ':' : ''} ${item.pages}.`
+          ).join('<br><br>');
+          bibDiv.innerHTML = `<h3>References</h3><div>${html}</div>`;
+          bibDiv.dataset.loaded = 'true';
+        } catch (err) {
+          bibDiv.innerHTML = `<p><em>Failed to load references: ${err.message}</em></p>`;
+        }
+      }
+      if (bibDiv.hasAttribute('hidden')) {
+        bibDiv.removeAttribute('hidden');
+      } else {
+        bibDiv.setAttribute('hidden', '');
+      }
+    });
+  </script>
+</body>
+</html>

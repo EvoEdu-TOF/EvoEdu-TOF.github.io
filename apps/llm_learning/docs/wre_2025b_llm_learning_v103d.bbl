@@ -1,0 +1,153 @@
+\begin{thebibliography}{}
+
+\bibitem[Anderson, 2024]{anderson2024texting}
+Anderson, C. (2024).
+\newblock {\em An Application of the Matching Law to Text Messaging}.
+\newblock PhD thesis, Western New England University.
+\newblock Dissertation applying matching law to communication behavior.
+
+\bibitem[Baum, 1974]{baum1974generalized}
+Baum, W.~M. (1974).
+\newblock On two types of deviation from the matching law: Bias and
+  undermatching.
+\newblock {\em Journal of the Experimental Analysis of Behavior},
+  22(1):231--242.
+
+\bibitem[Bender et~al., 2021]{bender2021dangers}
+Bender, E.~M., Gebru, T., McMillan-Major, A., and Shmitchell, S. (2021).
+\newblock On the dangers of stochastic parrots: Can language models be too big?
+\newblock In {\em Proceedings of the 2021 ACM Conference on Fairness,
+  Accountability, and Transparency (FAccT '21)}, pages 610--623.
+
+\bibitem[Brown et~al., 2020]{brown2020language}
+Brown, T.~B., Mann, B., Ryder, N., Subbiah, M., et~al. (2020).
+\newblock Language models are few-shot learners.
+\newblock In {\em Advances in Neural Information Processing Systems}.
+
+\bibitem[Chomsky et~al., 2023]{chomsky2023nytimes}
+Chomsky, N., Roberts, I., and Watumull, J. (2023).
+\newblock The false promise of chatgpt.
+\newblock New York Times, Opinion.
+\newblock March 8, 2023.
+
+\bibitem[Christiano et~al., 2017]{christiano2017deep}
+Christiano, P.~F., Leike, J., Brown, T.~B., et~al. (2017).
+\newblock Deep reinforcement learning from human preferences.
+\newblock In {\em Advances in Neural Information Processing Systems (NeurIPS
+  2017)}.
+
+\bibitem[Grace, 1994]{grace1994temporal}
+Grace, R.~C. (1994).
+\newblock A contextual model of concurrent chains choice.
+\newblock {\em Journal of the Experimental Analysis of Behavior},
+  61(2):113--129.
+
+\bibitem[Guo et~al., 2017]{guo2017calibration}
+Guo, C., Pleiss, G., Sun, Y., and Weinberger, K.~Q. (2017).
+\newblock On calibration of modern neural networks.
+\newblock {\em Proceedings of the 34th International Conference on Machine
+  Learning (ICML)}.
+
+\bibitem[Herrnstein, 1961]{herrnstein1961matching}
+Herrnstein, R.~J. (1961).
+\newblock Relative and absolute strength of response as a function of frequency
+  of reinforcement.
+\newblock {\em Journal of the Experimental Analysis of Behavior},
+  4(3):267--272.
+
+\bibitem[Kaplan et~al., 2020]{kaplan2020scaling}
+Kaplan, J., McCandlish, S., Henighan, T., et~al. (2020).
+\newblock Scaling laws for neural language models.
+\newblock {\em arXiv preprint arXiv:2001.08361}.
+
+\bibitem[Kenner and O'Rourke, 1984]{kenner1984travesty}
+Kenner, H. and O'Rourke, J. (1984).
+\newblock A travesty generator for micros.
+\newblock {\em BYTE Magazine}, 9(12).
+\newblock Includes Pascal source for a parody text generator via $n$-gram
+  frequencies.
+
+\bibitem[Killeen, 1994]{killeen1994mathematical}
+Killeen, P.~R. (1994).
+\newblock Mathematical principles of reinforcement.
+\newblock {\em Behavioral and Brain Sciences}, 17(1):105--172.
+
+\bibitem[Koffka, 1935]{koffka1935principles}
+Koffka, K. (1935).
+\newblock {\em Principles of Gestalt Psychology}.
+\newblock Liveright, New York.
+
+\bibitem[Kronfli et~al., 2021]{kronfli2021matching}
+Kronfli, F., Lloveras, A., and Vollmer, T. (2021).
+\newblock Applications of the matching law to observe shifts in problem
+  behavior: A proof-of-concept study.
+\newblock {\em Journal of Applied Behavior Analysis}, 54(3):967--982.
+\newblock Applies generalized matching law to intervention contexts.
+
+\bibitem[Marcus, 2022]{marcus2022critique}
+Marcus, G. (2022).
+\newblock Deep learning is hitting a wall.
+\newblock Essay, Substack / Gary Marcus Blog.
+\newblock Available online at url {https://garymarcus.substack.com}.
+
+\bibitem[Marr, 1982]{marr1982vision}
+Marr, D. (1982).
+\newblock {\em Vision: A Computational Investigation into the Human
+  Representation and Processing of Visual Information}.
+\newblock W. H. Freeman, San Francisco.
+
+\bibitem[{Mastermind Behavior}, 2025]{mastermind2025matching}
+{Mastermind Behavior} (2025).
+\newblock The power of matching law in aba therapy.
+\newblock
+  \url{https://www.mastermindbehavior.com/post/matching-law-aba-therapy}.
+\newblock Professional overview illustrating continued applied relevance of the
+  matching law.
+
+\bibitem[Ouyang et~al., 2022]{ouyang2022training}
+Ouyang, L., Wu, J., Jiang, X., et~al. (2022).
+\newblock Training language models to follow instructions with human feedback.
+\newblock In {\em Advances in Neural Information Processing Systems (NeurIPS
+  2022)}.
+
+\bibitem[Rafailov et~al., 2023]{rafailov2023direct}
+Rafailov, R. et~al. (2023).
+\newblock Direct preference optimization: Your language model is secretly a
+  reward model.
+\newblock {\em arXiv preprint arXiv:2305.18290}.
+
+\bibitem[Rajagopalan et~al., 2023]{rajagopalan2023reward}
+Rajagopalan, A., Hsiao, A., Zhang, J., Gurnani, K., et~al. (2023).
+\newblock Reward expectations direct learning and drive operant behavior.
+\newblock {\em Nature Communications}, 14(1):1--15.
+\newblock Recent neuroscience/behavior analysis showing relevance of matching
+  law principles.
+
+\bibitem[Rescorla and Wagner, 1972]{rescorla1972theory}
+Rescorla, R.~A. and Wagner, A.~R. (1972).
+\newblock A theory of pavlovian conditioning: Variations in the effectiveness
+  of reinforcement and nonreinforcement.
+\newblock {\em Classical Conditioning II: Current Research and Theory}, pages
+  64--99.
+
+\bibitem[Shimp, 1976]{shimp1976short}
+Shimp, C.~P. (1976).
+\newblock Short-term memory in the pigeon: Relative recency.
+\newblock {\em Journal of the Experimental Analysis of Behavior}, 25(1):55--61.
+
+\bibitem[Skinner, 1953]{skinner1953science}
+Skinner, B.~F. (1953).
+\newblock {\em Science and Human Behavior}.
+\newblock Macmillan, New York.
+
+\bibitem[Sutton and Barto, 1998]{sutton1998reinforcement}
+Sutton, R.~S. and Barto, A.~G. (1998).
+\newblock {\em Reinforcement Learning: An Introduction}.
+\newblock MIT Press, Cambridge, MA.
+
+\bibitem[Wei et~al., 2022]{wei2022emergent}
+Wei, J., Tay, Y., Bommasani, R., et~al. (2022).
+\newblock Emergent abilities of large language models.
+\newblock {\em arXiv preprint arXiv:2206.07682}.
+
+\end{thebibliography}

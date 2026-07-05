@@ -1,0 +1,113 @@
+{
+  "schema": "evo-edu.notebook.reasoning_scaffold.v1",
+  "id": "notebook.concepts.hardy-weinberg-equilibrium",
+  "title": "Hardy-Weinberg Equilibrium",
+  "created": "2026-05-14",
+  "updated": "2026-05-14",
+  "status": "pilot-reviewed-scaffold",
+  "concept_targets": [
+    "Hardy-Weinberg equilibrium",
+    "null model",
+    "genotype frequencies",
+    "allele frequencies",
+    "population genetics",
+    "selection contrast",
+    "drift contrast"
+  ],
+  "site_links": [
+    {
+      "kind": "concept",
+      "title": "Allele Frequency Change",
+      "url": "/notebook/concepts/allele-frequency-change.html"
+    },
+    {
+      "kind": "concept",
+      "title": "Genetic Drift",
+      "url": "/notebook/concepts/genetic-drift.html"
+    },
+    {
+      "kind": "concept",
+      "title": "Natural Selection",
+      "url": "/notebook/concepts/natural-selection.html"
+    },
+    {
+      "kind": "research_tool",
+      "title": "Literature Explorer",
+      "url": "/apps/literature-explorer/"
+    }
+  ],
+  "records": [
+    {
+      "id": "hw-001",
+      "type": "definition-check",
+      "question": "What is Hardy-Weinberg equilibrium for?",
+      "answer_summary": "It provides a baseline expectation for genotype frequencies under a simplified null model, so departures can guide questions about evolutionary forces or population structure.",
+      "verification_prompt": "State the expected role of the model before interpreting any mismatch.",
+      "misconception_guard": "Do not treat the equilibrium model as a claim that real populations never change.",
+      "didactopus_prompt_seed": "Rewrite the explanation so the model is described as a baseline rather than a verdict."
+    },
+    {
+      "id": "hw-002",
+      "type": "assumption-check",
+      "question": "Why are the assumptions important?",
+      "answer_summary": "The model only works as intended when its assumptions are explicit; otherwise learners may attribute every deviation to the wrong cause.",
+      "verification_prompt": "List the assumptions before naming an explanatory mechanism.",
+      "misconception_guard": "Do not skip the assumptions and jump directly to one favorite cause.",
+      "didactopus_prompt_seed": "Name the assumptions first, then say which one you think may be failing."
+    },
+    {
+      "id": "hw-003",
+      "type": "alternative-check",
+      "question": "Does a Hardy-Weinberg departure automatically prove selection?",
+      "answer_summary": "No. A deviation may reflect selection, but it can also reflect non-random mating, migration, drift, mutation, or sampling issues.",
+      "verification_prompt": "Name at least two mechanisms that could explain the observed departure.",
+      "misconception_guard": "Do not use deviation from equilibrium as automatic proof of selection.",
+      "didactopus_prompt_seed": "Give one selection explanation and one non-selection explanation for the mismatch."
+    },
+    {
+      "id": "hw-004",
+      "type": "bridge-check",
+      "question": "Why keep the allele-frequency perspective connected?",
+      "answer_summary": "Hardy-Weinberg helps connect genotype patterns to allele-frequency reasoning, so learners can move between statistical expectation and evolutionary mechanism.",
+      "verification_prompt": "Explain how genotype counts relate back to allele-frequency expectations.",
+      "misconception_guard": "Do not treat genotype-frequency calculation as disconnected from evolutionary reasoning.",
+      "didactopus_prompt_seed": "Rewrite the result so genotype observations and allele-frequency logic are linked."
+    },
+    {
+      "id": "hw-005",
+      "type": "null-model-value",
+      "question": "Why is Hardy-Weinberg still useful if real populations are messy?",
+      "answer_summary": "A good null model is useful precisely when reality departs from it in interpretable ways.",
+      "verification_prompt": "State what question the departure lets you ask that you could not ask as clearly without the baseline.",
+      "misconception_guard": "Do not dismiss the model just because the population is not idealized.",
+      "didactopus_prompt_seed": "Describe one reason the null model helps even when the real case is more complicated."
+    }
+  ],
+  "citegeist_source_slots": [
+    {
+      "slot": "hardy-weinberg-foundations",
+      "needed_for": "Original and foundational statements of Hardy-Weinberg expectations",
+      "candidate_queries": [
+        "Hardy 1908 Mendelian proportions mixed population",
+        "Weinberg 1908 genotype frequencies population equilibrium"
+      ],
+      "review_status": "pending"
+    },
+    {
+      "slot": "hardy-weinberg-explanations",
+      "needed_for": "Explanatory population-genetics treatments of Hardy-Weinberg logic and departures",
+      "candidate_queries": [
+        "Hardy-Weinberg equilibrium educational explanation population genetics",
+        "Hardy-Weinberg deviation selection drift mating migration explanation"
+      ],
+      "review_status": "pending"
+    }
+  ],
+  "doclift_use": "Use this JSON as a fixture for concept pages that teach null-model reasoning and mechanism discrimination.",
+  "groundrecall_use": "Store rationale, pending source-slot work, and revision notes about null-model interpretation so later Notebook pages can reuse the same evidence structure.",
+  "next_review_steps": [
+    "Backfill reviewed sources for foundational and explanatory Hardy-Weinberg treatments.",
+    "Add one worked example contrasting a deviation with multiple possible explanations.",
+    "Link this page into later Notebook pages on population structure and evidence evaluation."
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "schema": "evo-edu.notebook.reviewed_elements.v1",
+  "generated": "2026-06-30",
+  "concept_id": "notebook.concepts.mutation",
+  "items": [
+    {
+      "id": "staged.claim.futuyma.mutation-recombination-distinction.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.mutation",
+      "title": "Mutation Creates New Genetic Messages While Recombination Rearranges Existing Ones",
+      "body": "Futuyma supports distinguishing mutation from recombination: mutation changes genetic information itself, while recombination reshuffles variants that already exist, so the two processes contribute to variation in different ways.",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Useful for separating origin of new alleles from reshuffling of existing allelic combinations."
+      },
+      "promotion_targets": [
+        "notebook/concepts/mutation.html",
+        "notebook/concepts/allele-frequency-change.html"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.claim.futuyma.mutation-undirected-variation.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.mutation",
+      "title": "Mutation Is Not Directed By Future Usefulness",
+      "body": "Futuyma supports a core mutation guardrail for the Notebook: variants arise without regard to future usefulness, while selection changes which variants persist under the conditions organisms actually encounter.",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as a misconception guard against need-directed mutation and future-looking explanations."
+      },
+      "promotion_targets": [
+        "notebook/concepts/mutation.html",
+        "notebook/concepts/natural-selection.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.claim.mayr.mutation-selection-distinction.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.mutation",
+      "title": "Mutation Supplies New Genetic Change But Does Not Determine Long-Term Frequencies Alone",
+      "body": "Mayr's What Evolution Is supports distinguishing mutation as a source of new genetic variants from the later effects of selection and stochastic processes on their long-term frequencies.",
+      "source_anchors": [
+        {
+          "source_id": "mayr-what-evolution-is-2002",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Good anchor for mutation-foundations and mutation-selection-distinction slots."
+      },
+      "promotion_targets": [
+        "notebook/concepts/mutation.html",
+        "notebook/concepts/mutation.scaffold.json"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.question.futuyma.macromutation-developmental-effect-boundary.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.mutation",
+      "title": "Can One Large Mutation Make A New Kind Of Organism?",
+      "body": "A student sees a dramatic developmental mutation and concludes that a new major group could appear in one step. How would you evaluate that claim while keeping separate the size of a mutation's phenotypic effect, its likely fitness consequences, and the many other traits that define a lineage?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Futuyma's discussion of saltation, macromutation, preadaptation, and developmental transformations. Use as a mutation concept-boundary prompt, not as a full treatment of evo-devo."
+      },
+      "promotion_targets": [
+        "notebook/concepts/mutation.html",
+        "notebook/concepts/natural-selection.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "distinguish a mutation's genetic scale from the size of its phenotypic effect",
+          "recognize that developmental mutations can have large effects without creating a complete new lineage in one step",
+          "ask whether the altered phenotype is viable and reproductively successful in a specific environment",
+          "identify other lineage-defining traits that would still require explanation",
+          "explain that existing structures can acquire new functions without having evolved in anticipation of future need"
+        ],
+        "coverage_note": "This adds a mutation-focused boundary prompt for large-effect developmental variants and preadaptation language."
+      },
+      "mathematical_structure": {
+        "kind": "qualitative effect-size distinction",
+        "formal_statement": "Mutation effect size on phenotype, mutation effect on fitness, and lineage-level evolutionary consequence are distinct variables that must be evaluated separately.",
+        "notation_status": "conceptualized; no population-genetic equation is imposed",
+        "assumptions": [
+          "mutation has an identifiable developmental or biochemical effect",
+          "phenotypic effect size does not by itself determine fitness",
+          "lineage origin requires persistence and reproductive continuity, not only an unusual individual phenotype",
+          "new function can arise by co-option of existing structures or pathways"
+        ],
+        "biological_interpretation": "Large-effect mutations may matter evolutionarily, but their interpretation depends on viability, ecological context, inheritance, and later selection."
+      },
+      "question_type": "concept-boundary analysis",
+      "source_context": {
+        "source_section": "Evolutionary Novelties; Saltation or Gradual Change; Preadaptation; Regularities of Phenotypic Transformation",
+        "textbook_prompt_role": "source-mined misconception and model-boundary probe",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.futuyma.mutation-mistake-or-programmed-adaptation.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.mutation",
+      "title": "Are Mutations Programmed For Need?",
+      "body": "What is gained and what is risked by describing mutations as replication mistakes rather than adaptive events programmed to meet an organism's needs?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Paraphrased to fit the Notebook misconception guard around need-directed mutation."
+      },
+      "promotion_targets": [
+        "notebook/concepts/mutation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "mutation introduces variation before selection filters it",
+          "mutation processes can have mechanisms and biases without foresight",
+          "need-directed language can falsely imply purposeful adaptive production",
+          "selection, not mutation itself, explains adaptive fit"
+        ],
+        "coverage_note": "This strengthens the existing mutation need-directed check with a textbook-derived prompt."
+      },
+      "question_type": "misconception diagnosis",
+      "source_context": {
+        "source_section": "FOR DISCUSSION AND THOUGHT",
+        "textbook_prompt_role": "end-of-section discussion question",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.futuyma.mutation-rate-scale-importance.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.mutation",
+      "title": "When Is Mutation Weak And When Is It Important?",
+      "body": "A learner says mutation rates are too low to matter for evolution because the change at any one locus in one generation is tiny. How should you respond using the difference between single-locus frequency change, long time spans, population size, and mutation summed across many loci?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Futuyma's mutation-pressure and mutation-rate discussion. Use as a scale-sensitive misconception check."
+      },
+      "promotion_targets": [
+        "notebook/concepts/mutation.html",
+        "notebook/concepts/allele-frequency-change.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "state that a very low mutation rate causes only small allele-frequency change at one locus in one generation",
+          "explain that mutation can create new alleles even if it is usually weak as a frequency-changing force at one locus",
+          "distinguish mutation pressure from selection, gene flow, and drift",
+          "use population size to explain why rare mutation rates can still produce some mutant offspring",
+          "use many loci and many generations to explain why accumulated mutation can matter",
+          "avoid treating mutation as a need-directed adaptive response"
+        ],
+        "coverage_note": "This adds a reviewed mutation scale probe that bridges molecular origin of variation with population-genetic frequency change."
+      },
+      "mathematical_structure": {
+        "kind": "mutation-pressure scale argument",
+        "formal_statement": "For two alleles with forward mutation rate u and back mutation rate v, the change in q can be represented as Delta q = u(1 - q) - vq; when u and v are small, per-generation single-locus change is small, but mutation input can accumulate across genomes, populations, and time.",
+        "notation_status": "normalized from source equation and prose",
+        "assumptions": [
+          "two-allele mutation model is used as a simplified case",
+          "u and v are per-generation mutation rates",
+          "other forces can act before mutation equilibrium is reached",
+          "genome-wide mutation input depends on the number of loci and individuals considered"
+        ],
+        "biological_interpretation": "Mutation is the source of new allelic variation, but its immediate effect on a single allele frequency is often small relative to other evolutionary forces."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "u",
+          "notebook_symbol": "u",
+          "meaning": "forward mutation rate from A to A'"
+        },
+        {
+          "source_symbol": "v",
+          "notebook_symbol": "v",
+          "meaning": "back mutation rate from A' to A"
+        },
+        {
+          "source_symbol": "q",
+          "notebook_symbol": "q",
+          "meaning": "frequency of the mutant or focal allele"
+        },
+        {
+          "source_symbol": "Delta q",
+          "notebook_symbol": "Delta q",
+          "meaning": "change in allele frequency across a generation"
+        }
+      ],
+      "question_type": "mechanism explanation",
+      "source_context": {
+        "source_section": "Genetic Variation and Its Origins; Rates of Mutation",
+        "textbook_prompt_role": "source-mined scale reasoning probe",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.mutation.need-directed-check.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.mutation",
+      "title": "Did The Mutation Happen Because It Was Needed?",
+      "body": "A student says a useful mutation appeared because the population needed it. What evidence or reasoning would help them separate the origin of the mutation from the later sorting of variants by selection?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Misconception check for need-directed mutation and future-looking evolutionary explanations."
+      },
+      "promotion_targets": [
+        "notebook/concepts/mutation.html",
+        "notebook/concepts/natural-selection.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true
+    }
+  ],
+  "summary": {
+    "reviewed_total": 7,
+    "claims": 3,
+    "examples": 0,
+    "questions": 4
+  }
+}

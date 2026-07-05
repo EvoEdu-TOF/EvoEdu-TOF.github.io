@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artificial Life API - evo-edu.org</title>
+  <link rel="stylesheet" href="/shared/evo-edu.css">
+  <script src="/shared/evo-shell.js" defer></script>
+  <script src="/apps/api/artificial-life/artificial-life.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-topbar">
+      <div class="brand-block">
+        <span class="brand-mark">App API</span>
+        <a href="/">evo-edu.org</a>
+        <p class="brand-summary">Shared programmable interfaces for the artificial-life remediation family.</p>
+      </div>
+      <nav class="site-nav" data-evo-nav></nav>
+    </header>
+    <section class="hero-card">
+      <p class="eyebrow">Artificial Life API</p>
+      <h1>Shared simulation and evaluation functions for evolving forms, selection demos, grid worlds, and search tools.</h1>
+      <p class="lede lede-strong">This family API provides a first inspectable, testable layer behind the artificial-life apps while the legacy browser interfaces remain in place.</p>
+    </section>
+    <section class="content-card">
+      <p class="section-kicker">Available Interfaces</p>
+      <div class="api-reference">
+        <article class="api-endpoint">
+          <div class="api-endpoint-header">
+            <h3>Shape Evolver</h3>
+            <span class="api-badge">Prototype</span>
+          </div>
+          <p>Mutation and genome-evaluation helpers behind the public Shape Evolver route.</p>
+          <div class="api-signature"><code>window.evoEduApis.artificialLife.shapeEvolver.mutateGenome(params)</code></div>
+          <div class="api-meta">
+            <div><strong>Family</strong><span>Artificial life</span></div>
+            <div><strong>Used by</strong><span><a href="/apps/shape-evolver/">Shape Evolver</a></span></div>
+            <div><strong>Input shape</strong><span>Genome or mutation parameter object</span></div>
+            <div><strong>Status</strong><span>Shared family API module in prototype status.</span></div>
+          </div>
+        </article>
+        <article class="api-endpoint">
+          <div class="api-endpoint-header">
+            <h3>Cumulative Selection Explorer</h3>
+            <span class="api-badge">Prototype</span>
+          </div>
+          <p>Simulation helpers for cumulative selection and score progression.</p>
+          <div class="api-signature"><code>window.evoEduApis.artificialLife.cumulativeSelectionExplorer.runSimulation(params)</code></div>
+          <div class="api-meta">
+            <div><strong>Family</strong><span>Artificial life</span></div>
+            <div><strong>Used by</strong><span><a href="/apps/cumulative-selection-explorer/">Cumulative Selection Explorer</a></span></div>
+            <div><strong>Input shape</strong><span>Simulation parameters object</span></div>
+            <div><strong>Status</strong><span>Shared family API module in prototype status.</span></div>
+          </div>
+        </article>
+        <article class="api-endpoint">
+          <div class="api-endpoint-header">
+            <h3>Grid-World Survival</h3>
+            <span class="api-badge">Prototype</span>
+          </div>
+          <p>Grid-world survival helpers retained in the family API while the public route remains unpublished.</p>
+          <div class="api-signature"><code>window.evoEduApis.artificialLife.gridWorldSurvival.runSimulation(params)</code></div>
+          <div class="api-meta">
+            <div><strong>Family</strong><span>Artificial life</span></div>
+            <div><strong>Used by</strong><span>Withheld public route during remediation</span></div>
+            <div><strong>Input shape</strong><span>Simulation parameters object</span></div>
+            <div><strong>Status</strong><span>Shared family API module in prototype status.</span></div>
+          </div>
+        </article>
+        <article class="api-endpoint">
+          <div class="api-endpoint-header">
+            <h3>Route Optimizer</h3>
+            <span class="api-badge">Prototype</span>
+          </div>
+          <p>Route-evaluation helpers for the TSP-style search and optimization surface.</p>
+          <div class="api-signature"><code>window.evoEduApis.artificialLife.routeOptimizer.evaluateRoute(params)</code></div>
+          <div class="api-meta">
+            <div><strong>Family</strong><span>Artificial life and optimization</span></div>
+            <div><strong>Used by</strong><span><a href="/apps/route-optimizer/">Route Optimizer</a></span></div>
+            <div><strong>Input shape</strong><span>Route or evaluation parameter object</span></div>
+            <div><strong>Status</strong><span>Shared family API module in prototype status.</span></div>
+          </div>
+        </article>
+        <article class="api-endpoint">
+          <div class="api-endpoint-header">
+            <h3>Network Builder</h3>
+            <span class="api-badge">Prototype</span>
+          </div>
+          <p>Network-construction helpers for Steiner-style search and optimization work.</p>
+          <div class="api-signature"><code>window.evoEduApis.artificialLife.networkBuilder.buildNetwork(params)</code></div>
+          <div class="api-meta">
+            <div><strong>Family</strong><span>Artificial life and optimization</span></div>
+            <div><strong>Used by</strong><span><a href="/apps/network-builder/">Network Builder</a></span></div>
+            <div><strong>Input shape</strong><span>Network-building parameter object</span></div>
+            <div><strong>Status</strong><span>Shared family API module in prototype status.</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <footer class="footer-card">
+      <div>
+        <h3>Artificial Life API</h3>
+        <p>The next step is to wire the legacy app controls to this shared family layer and deepen the tests around each underlying engine.</p>
+      </div>
+      <small>Updated March 28, 2026</small>
+    </footer>
+  </div>
+</body>
+</html>

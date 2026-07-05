@@ -1,0 +1,566 @@
+{
+  "schema": "evo-edu.notebook.reviewed_elements.v1",
+  "generated": "2026-06-30",
+  "concept_id": "notebook.concepts.common-descent",
+  "items": [
+    {
+      "id": "staged.claim.darwin.common-descent-classification.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.common-descent",
+      "title": "Classification Becomes Genealogical Under Common Descent",
+      "body": "Darwin's Origin, 1859 first edition, supports the Notebook framing that classification, homology, embryology, and rudimentary organs become coherent when taxa are interpreted as modified descendants of common ancestors.",
+      "source_anchors": [
+        {
+          "source_id": "darwin-origin-of-species-1859-first-edition",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "darwin-origin-of-species-1859-first-edition",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as a foundational common-descent sidecar. Avoid long direct quotation in public pages; the local text has markup and OCR-like transcription artifacts."
+      },
+      "promotion_targets": [
+        "notebook/concepts/common-descent.html",
+        "notebook/concepts/common-descent.scaffold.json"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.claim.dobzhansky.fossil-lineages-inferred-with-caveats.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.common-descent",
+      "title": "Fossil Lineages Require Inference Across Morphology, Time, And Distribution",
+      "body": "Dobzhansky, Ayala, Stebbins, and Valentine support teaching fossil evidence with explicit caveats: fossils usually preserve morphology rather than reproductive isolation, and many species origins leave local records that must be reconstructed by inference.",
+      "source_anchors": [
+        {
+          "source_id": "dobzhansky-ayala-stebbins-valentine-evolution-1977",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Good bridge from common descent into later fossil-record, macroevolution, and speciation Notebook pages."
+      },
+      "promotion_targets": [
+        "notebook/concepts/common-descent.html",
+        "notebook/concepts/speciation.html"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.claim.futuyma.common-descent-derived-character-evidence.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.common-descent",
+      "title": "Shared Derived Characters Support Common Descent",
+      "body": "Futuyma's phylogenetic inference chapter supports a common-descent evidence path beyond the genetic code: homologous characters, especially shared derived states, let learners test whether taxa form nested monophyletic groups, while homoplasy and convergence explain why superficial similarity alone can mislead.",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-17",
+        "notes": "Use to answer the existing common-descent coverage probe beyond the universal genetic code. Keep public copy clear that shared derived homologous characters are evidence for nested ancestry, while homoplasy is a diagnostic complication rather than a refutation."
+      },
+      "promotion_targets": [
+        "notebook/concepts/common-descent.html",
+        "notebook/concepts/speciation.html"
+      ],
+      "source_path_redacted": true,
+      "mathematical_structure": {
+        "kind": "phylogenetic inference criterion",
+        "formal_statement": "Independent homologous characters that share derived states support monophyletic grouping; conflicting character patterns can indicate homoplasy, reversal, or limited evidence.",
+        "notation_status": "conceptualized from systematic-method prose; no formal tree notation preserved in this sidecar",
+        "assumptions": [
+          "characters compared across taxa are homologous",
+          "primitive and derived states can be identified with adequate evidence",
+          "characters provide independent evidence when they are not developmentally or functionally coupled",
+          "homoplasious similarities can arise independently and must be distinguished from shared ancestry"
+        ],
+        "biological_interpretation": "Common descent predicts nested patterns across independent traits, not merely isolated similarities."
+      }
+    },
+    {
+      "id": "staged.claim.mayr.common-descent-evidence.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.common-descent",
+      "title": "Common Descent Explains Nested Similarity Across Evidence Types",
+      "body": "Mayr's What Evolution Is supports presenting common descent as an explanation for nested taxonomic hierarchy, shared anatomy, fossil patterns, and the combination of similarity from ancestry with later divergence.",
+      "source_anchors": [
+        {
+          "source_id": "mayr-what-evolution-is-2002",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Good explanatory source for common-descent-foundations and common-descent-evidence slots."
+      },
+      "promotion_targets": [
+        "notebook/concepts/common-descent.html",
+        "notebook/concepts/common-descent.scaffold.json"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.example.futuyma.universal-code-common-descent.001",
+      "kind": "example",
+      "concept_id": "notebook.concepts.common-descent",
+      "title": "Universal Genetic Code As Common-Descent Evidence",
+      "body": "Futuyma's genetics treatment supports using the near-universality of the genetic code as a compact common-descent example: the same codons specify the same amino acids across organisms, as expected if living things share ancestry.",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as a molecular evidence example; wording says near-universality in page copy if exceptions are discussed."
+      },
+      "promotion_targets": [
+        "notebook/concepts/common-descent.html",
+        "notebook/beginner-route.html"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.question.common-descent.homology-homoplasy-check.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.common-descent",
+      "title": "Shared Ancestry Or Convergent Similarity?",
+      "body": "Two species share a similar trait. What observations would help decide whether the trait is homologous from common ancestry or homoplasious because similar conditions favored similar solutions independently?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Good diagnostic prompt for distinguishing common-descent evidence from convergence."
+      },
+      "promotion_targets": [
+        "notebook/concepts/common-descent.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.question.darwin-descent.human-common-descent-evidence.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.common-descent",
+      "title": "What Evidence Connects Humans With Other Mammals?",
+      "body": "A learner says humans are too distinctive to evaluate with the same common-descent evidence used for other mammals. Using Darwin's Descent, what kinds of evidence should they compare before making that claim, and why is one striking difference not enough to erase the broader pattern?",
+      "source_anchors": [
+        {
+          "source_id": "darwin-descent-of-man-1871",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "darwin-descent-of-man-1871",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "darwin-descent-of-man-1871",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "darwin-descent-of-man-1871",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "darwin-descent-of-man-1871",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-25",
+        "notes": "Paraphrased from Darwin's Descent. Use as a primary-source evidence reasoning prompt, not as an endorsement of every historical claim or social/racial framing in the source."
+      },
+      "promotion_targets": [
+        "notebook/concepts/common-descent.html",
+        "notebook/concepts/population-thinking.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "identify multiple evidence classes rather than relying on one isolated similarity or difference",
+          "compare homologous structures across humans and other mammals",
+          "use embryological resemblance as evidence about shared developmental history",
+          "interpret rudimentary organs as historical traces that require explanation",
+          "connect classification, distribution, and succession to the broader common-descent pattern",
+          "explain that distinctive human traits can be real while still fitting within shared ancestry",
+          "avoid treating nineteenth-century racial or social claims as modern evidence standards"
+        ],
+        "coverage_note": "This adds a Descent-backed human common-descent prompt that asks learners to assemble convergent evidence types while keeping historical source limits explicit."
+      },
+      "mathematical_structure": {
+        "kind": "multi-evidence historical inference",
+        "formal_statement": "Common-descent support increases when independent evidence classes, such as homology, embryology, rudiments, classification, distribution, and succession, point to the same ancestry hypothesis better than isolated special-creation or type-based explanations.",
+        "notation_status": "conceptual; no source notation normalized",
+        "assumptions": [
+          "similar structures are evaluated for homology rather than superficial resemblance alone",
+          "developmental evidence is interpreted with historical and comparative context",
+          "rudimentary structures can persist after function changes or loss",
+          "classification is treated genealogically when descent is the question",
+          "human distinctiveness is assessed as a derived condition within a broader evidence pattern"
+        ],
+        "biological_interpretation": "The human case should be evaluated with the same comparative evidence logic used for other mammals, while acknowledging that historical source language needs modern review."
+      },
+      "question_type": "common-descent evidence synthesis",
+      "source_context": {
+        "source_section": "Chapter I, The Evidence of the Descent of Man from Some Lower Form",
+        "textbook_prompt_role": "primary-source evidence passage converted into a modern common-descent coverage question",
+        "edition_or_volume_year": "1871 work; Project Gutenberg dscmn10.txt local etext"
+      }
+    },
+    {
+      "id": "staged.question.darwin.homologous-limbs-common-descent-inference.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.common-descent",
+      "title": "Why Do Different Limbs Share A Plan?",
+      "body": "Human arms, mole forelimbs, horse legs, porpoise paddles, and bat wings do different jobs but preserve corresponding bones in similar relative positions. How does common descent with modification explain that pattern better than treating each limb as an independent design optimized only for its current function?",
+      "source_anchors": [
+        {
+          "source_id": "darwin-origin-of-species-1859-first-edition",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Darwin's 1859 first-edition morphology discussion. Use as a common-descent inference prompt about homologous structure, function, and descent with modification."
+      },
+      "promotion_targets": [
+        "notebook/concepts/common-descent.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "identify the limbs as homologous rather than merely similar in function",
+          "explain that shared relative bone arrangement is expected if descendants inherit a body plan from a common ancestor",
+          "explain that selection can modify limb size, shape, and use without requiring a complete rearrangement of the inherited framework",
+          "contrast this with a function-only explanation, which does not by itself predict the same bones in the same relative order across different uses",
+          "avoid claiming that homology alone proves every detail of the evolutionary history without additional comparative evidence"
+        ],
+        "coverage_note": "This strengthens common-descent coverage by asking learners to reason from homologous structure rather than from molecular universality alone."
+      },
+      "mathematical_structure": {
+        "kind": "comparative inference",
+        "formal_statement": "Shared inherited constraints predict correspondence of parts across divergent functions; function-only optimization does not independently predict the same relative anatomical arrangement.",
+        "notation_status": "not applicable",
+        "assumptions": [
+          "the compared structures are correctly identified as homologous",
+          "relative anatomical positions are compared across taxa",
+          "current function can differ after modification from an ancestral condition",
+          "other evidence can be used to refine the inferred phylogenetic relationship"
+        ],
+        "biological_interpretation": "Homology is evidence that descent with modification can preserve an inherited plan while natural selection changes function."
+      },
+      "question_type": "evidence interpretation",
+      "source_context": {
+        "source_section": "Morphology",
+        "textbook_prompt_role": "source-mined diagnostic question",
+        "edition_or_volume_year": "1859 first edition"
+      }
+    },
+    {
+      "id": "staged.question.futuyma.common-descent-evidence-beyond-genetic-code.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.common-descent",
+      "title": "Evidence Beyond The Genetic Code",
+      "body": "If the near-universality of the genetic code were not available as evidence, what other observations would still support the claim that all life shares common ancestry?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Paraphrased from a Futuyma discussion prompt; useful as a coverage probe for whether the Notebook can support common descent from multiple evidence streams instead of one molecular example."
+      },
+      "promotion_targets": [
+        "notebook/concepts/common-descent.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "nested anatomical and developmental homologies",
+          "fossil succession and transitional evidence",
+          "biogeographic patterns",
+          "shared molecular features beyond codon assignments"
+        ],
+        "coverage_note": "This prompt can now be paired with the universal genetic code example and the shared-derived-character evidence claim."
+      },
+      "question_type": "evidence interpretation",
+      "source_context": {
+        "source_section": "FOR DISCUSSION AND THOUGHT",
+        "textbook_prompt_role": "end-of-section discussion question",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.gould.paedomorphosis-neoteny-progenesis-distinction.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.common-descent",
+      "title": "How Can Youthful Adult Traits Evolve In Different Ways?",
+      "body": "A descendant adult resembles an ancestral juvenile. What evidence would let a learner call this paedomorphosis, and why should they distinguish neoteny from progenesis instead of treating all youthful adult traits as the same developmental change?",
+      "source_anchors": [
+        {
+          "source_id": "gould-ontogeny-phylogeny-1977",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "gould-ontogeny-phylogeny-1977",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "gould-ontogeny-phylogeny-1977",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "gould-ontogeny-phylogeny-1977",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-25",
+        "notes": "Paraphrased from local OCR of the 1977 split-PDF scan, part 004. Use as an evo-devo guardrail: similar juvenile-looking adult outcomes can arise by different timing changes, and a paedomorphosis claim needs ancestor, ontogeny, and ecological evidence."
+      },
+      "promotion_targets": [
+        "notebook/concepts/common-descent.html",
+        "future/notebook/concepts/evo-devo.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "define paedomorphosis as adult descendants retaining or displaying ancestral juvenile features",
+          "distinguish progenesis as paedomorphosis by accelerated maturation from neoteny as paedomorphosis by retarded somatic development",
+          "recognize that similar adult morphology can be a result rather than evidence of one specific developmental mechanism",
+          "ask for direct evidence or strong inference about ancestral adult and juvenile states",
+          "avoid treating simple morphology as automatically primitive",
+          "separate retrospective macroevolutionary importance from the immediate ecological conditions under which the timing change was favored"
+        ],
+        "coverage_note": "This extends the Gould recapitulation guardrail into a concrete heterochrony distinction needed before learners use developmental timing as evidence for common descent or macroevolutionary pattern."
+      },
+      "mathematical_structure": {
+        "kind": "developmental timing mechanism distinction",
+        "formal_statement": "Paedomorphic adult morphology can result from accelerated reproductive maturation relative to somatic development (progenesis) or from slowed somatic development relative to maturation (neoteny).",
+        "notation_status": "qualitative source normalized as relative-timing comparison",
+        "assumptions": [
+          "ancestral and descendant ontogenies can be compared",
+          "juvenile and adult character states are identifiable",
+          "maturation and somatic development can shift relative to one another",
+          "morphological simplicity alone is not evidence of ancestral priority"
+        ],
+        "biological_interpretation": "A developmental-timing outcome is not a complete causal explanation until the mechanism, ancestral comparison, and ecological context are specified."
+      },
+      "question_type": "coverage guardrail",
+      "source_context": {
+        "source_section": "Heterochrony and Paedomorphosis",
+        "textbook_prompt_role": "canonical source taxonomy converted into a developmental-mechanism distinction question",
+        "edition_or_volume_year": "1977 local split-PDF scan, part 004 OCR"
+      }
+    },
+    {
+      "id": "staged.question.gould.recapitulation-heterochrony-guardrail.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.common-descent",
+      "title": "When Does Ontogeny Inform Phylogeny?",
+      "body": "An embryo may share features with embryos or adults of related organisms. How can developmental evidence inform evolutionary relationships without assuming that descendants literally repeat the adult stages of their ancestors, and where does heterochrony fit in that distinction?",
+      "source_anchors": [
+        {
+          "source_id": "gould-ontogeny-phylogeny-1977",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "gould-ontogeny-phylogeny-1977",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "gould-ontogeny-phylogeny-1977",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from local OCR of the 1977 split-PDF scan. Use as a guardrail: developmental evidence can carry phylogenetic information, but that does not license a simplistic claim that ontogeny repeats adult ancestral stages."
+      },
+      "promotion_targets": [
+        "notebook/concepts/common-descent.html",
+        "future/notebook/concepts/evo-devo.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "state that developmental stages can preserve information relevant to common ancestry",
+          "distinguish common embryonic features from literal repetition of adult ancestral stages",
+          "explain that Haeckel-style recapitulation is too narrow and historically misleading as a general rule",
+          "define heterochrony as evolutionary change in the timing or rate of development of already-present characters",
+          "recognize that paedomorphosis and recapitulation can represent different directions of developmental timing change",
+          "avoid using embryology as a simple ladder of progress or as proof that modern organisms pass through adult forms of other modern organisms"
+        ],
+        "coverage_note": "This adds an evo-devo and common-descent guardrail before deeper heterochrony examples are mined."
+      },
+      "mathematical_structure": {
+        "kind": "developmental timing comparison",
+        "formal_statement": "For a character c with developmental onset time t and rate r, heterochronic evolution changes t or r relative to an ancestral developmental trajectory, while common embryonic similarity can also arise from conserved early development without adult-stage recapitulation.",
+        "notation_status": "qualitative source normalized as a timing-and-rate model",
+        "assumptions": [
+          "developmental stages are comparable across related organisms",
+          "ancestral and descendant trajectories can be inferred only with evidence",
+          "timing changes and character novelty are distinct evolutionary processes",
+          "historical recapitulation claims must be separated from modern developmental evidence"
+        ],
+        "biological_interpretation": "Development can inform phylogeny, but the causal explanation depends on whether the feature reflects conserved early development, timing shifts, or other evolutionary changes."
+      },
+      "question_type": "coverage guardrail",
+      "source_context": {
+        "source_section": "Prospectus",
+        "textbook_prompt_role": "canonical source framing converted into a coverage question",
+        "edition_or_volume_year": "1977 local split-PDF scan, part 001 OCR"
+      }
+    },
+    {
+      "id": "staged.question.wallace-1855.biogeographic-affinity.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.common-descent",
+      "title": "What Did Wallace Infer From Nearby Allied Species?",
+      "body": "Wallace's 1855 paper argues that closely allied species tend to appear near one another in geography and geology. How does that pattern support a historical connection among species, and why is this not yet the same as Wallace's later natural-selection mechanism?",
+      "source_anchors": [
+        {
+          "source_id": "wallace-law-1855",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wallace-law-1855",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wallace-law-1855",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Wallace's 1855 Sarawak Law paper. Keep as historical argument analysis: the paper supports historical affinity and biogeographic succession, but should not be backfilled with the fuller 1858 selection mechanism."
+      },
+      "promotion_targets": [
+        "notebook/concepts/common-descent.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "state Wallace's pattern: closely allied species tend to occur near each other in space and time",
+          "connect that pattern to historical continuity rather than independent arbitrary placement",
+          "explain why branched affinity/classification is consistent with species arising near related predecessors",
+          "distinguish evidence for historical relatedness or succession from a causal mechanism of adaptive change",
+          "name the 1858 Wallace paper, not the 1855 paper, as the existing Notebook source trail for Wallace's natural-selection mechanism"
+        ],
+        "coverage_note": "This fills a common-descent and biogeography source gap while preserving Wallace source-family chronology."
+      },
+      "mathematical_structure": {
+        "kind": "spatiotemporal affinity inference",
+        "formal_statement": "If related species are clustered in space and geological time, then classification, biogeography, and fossil succession can be treated as evidence for historical connection rather than independent placement.",
+        "notation_status": "qualitative historical source normalized as an inference pattern",
+        "assumptions": [
+          "geographic and geological observations are reliable enough to compare",
+          "taxonomic affinity reflects real similarity patterns",
+          "alternative explanations for distribution are considered",
+          "historical evidence and causal mechanism are kept distinct"
+        ],
+        "biological_interpretation": "Patterns of affinity across space and time can point toward descent-like historical continuity even before a source gives a full mechanism for adaptive change."
+      },
+      "question_type": "historical argument analysis",
+      "source_context": {
+        "source_section": "A Law deduced from well-known Geographical and Geological Facts",
+        "textbook_prompt_role": "primary-source argument converted into a coverage question",
+        "edition_or_volume_year": "1855 article"
+      }
+    }
+  ],
+  "summary": {
+    "reviewed_total": 12,
+    "claims": 4,
+    "examples": 1,
+    "questions": 7
+  }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Biomorphs Standards | Evo-Edu.org</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="site-title-row">
+    <div class="site-brand"><a href="/">Evo-Edu.org</a></div>
+    <nav class="top-nav">
+      <a href="/">Home</a>
+      <a href="index.html">Overview</a>
+      <a href="app.html">Web App</a>
+      <a href="guide.html">Guide</a>
+      <a href="standards.html" aria-current="page">Standards</a>
+    </nav>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h3>Best Fit</h3>
+      <p>Biomorphs is strongest for inheritance, variation, selection, modeling, and evidence-based explanation. It should not be presented as a full ecological or population-genetic simulation.</p>
+    </div>
+    <div class="sidebar-card">
+      <h3>Evidence Artifacts</h3>
+      <ul>
+        <li>Final phenotype image</li>
+        <li>Saved configuration JSON</li>
+        <li>Mutation legend row</li>
+        <li>Selection history entry</li>
+        <li>Written model critique</li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="content">
+    <section class="hero">
+      <h1>Standards Alignment</h1>
+      <p>Possible alignments for using Biomorphs in middle-school, high-school, and informal evolution learning.</p>
+    </section>
+
+    <section class="panel">
+      <table class="standards-table">
+        <thead>
+          <tr><th>Framework</th><th>Target</th><th>How Biomorphs Can Support It</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>NGSS</td>
+            <td>MS-LS3-1</td>
+            <td>Learners use a model in which inherited factors affect visible traits, then explain why phenotype is generated from genes rather than copied from the parent body.</td>
+          </tr>
+          <tr>
+            <td>NGSS</td>
+            <td>MS-LS3-2</td>
+            <td>When used cautiously, the mutation legend supports discussion of variation in inherited factors. The app does not model sexual reproduction or chromosomes.</td>
+          </tr>
+          <tr>
+            <td>NGSS</td>
+            <td>MS-LS4-4</td>
+            <td>Class-selected lineages show how repeated selection of variants can change trait distributions over generations. Teachers should explicitly distinguish this artificial selection from natural selection.</td>
+          </tr>
+          <tr>
+            <td>NGSS</td>
+            <td>HS-LS3-1</td>
+            <td>The app supports claims about DNA-like inherited instructions influencing phenotype through development, especially when learners compare one-gene mutants.</td>
+          </tr>
+          <tr>
+            <td>NGSS</td>
+            <td>HS-LS4-2</td>
+            <td>Learners can construct explanations for evolution as change through variation, inheritance, and nonrandom selection of phenotypes, while noting that the model lacks real differential survival.</td>
+          </tr>
+          <tr>
+            <td>NGSS</td>
+            <td>HS-LS4-3</td>
+            <td>Automated evaluators can be used as simplified selection pressures. Students can compare outcomes under different criteria, but should state that the app does not model population-level statistics unless the class aggregates multiple runs.</td>
+          </tr>
+          <tr>
+            <td>Science and Engineering Practices</td>
+            <td>Developing and Using Models</td>
+            <td>Students manipulate a computational model, test predictions, and identify assumptions such as bilateral symmetry, high mutation rate, and visual selection.</td>
+          </tr>
+          <tr>
+            <td>Science and Engineering Practices</td>
+            <td>Analyzing and Interpreting Data</td>
+            <td>The mutation legend, gene values, exported configurations, and selection history provide records that learners can use as evidence.</td>
+          </tr>
+          <tr>
+            <td>Science and Engineering Practices</td>
+            <td>Constructing Explanations</td>
+            <td>Students can construct a written explanation linking inherited variation, selected phenotype, and cumulative lineage change.</td>
+          </tr>
+          <tr>
+            <td>Science and Engineering Practices</td>
+            <td>Engaging in Argument from Evidence</td>
+            <td>Groups can compare exported lineages and argue which selection criterion best explains the final form.</td>
+          </tr>
+          <tr>
+            <td>Crosscutting Concepts</td>
+            <td>Cause and Effect</td>
+            <td>One-gene variants invite causal comparison, while gene interactions show why simple one-cause explanations can fail.</td>
+          </tr>
+          <tr>
+            <td>Crosscutting Concepts</td>
+            <td>Systems and System Models</td>
+            <td>The phenotype emerges from recursive developmental rules; the visible result can be understood only by considering the whole genotype-development system.</td>
+          </tr>
+          <tr>
+            <td>AP Biology</td>
+            <td>Evolution and Heredity</td>
+            <td>Useful for quick demonstrations of variation, selection, cumulative change, genotype-phenotype mapping, and limits of simplified models.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>Lesson Plan Fit</h2>
+      <p>A feasible lesson can run in 25 to 45 minutes: five minutes for orientation, 10 to 20 minutes for selection runs, 10 minutes for group comparison, and five minutes for model critique. A longer lesson can require exported configurations and written arguments using the mutation history as evidence.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Performance Tasks</h2>
+      <table class="standards-table">
+        <thead><tr><th>Task</th><th>Evidence Students Produce</th><th>Best Standards Fit</th></tr></thead>
+        <tbody>
+          <tr><td>Manual selection lineage</td><td>Final image, saved configuration, and explanation of two selected mutations.</td><td>MS-LS4-4, HS-LS4-2, Modeling</td></tr>
+          <tr><td>Automated evaluator comparison</td><td>Two final images from the same ancestor under different evaluators, with a claim about the rule that shaped each lineage.</td><td>HS-LS4-3, Analyzing Data, Argument from Evidence</td></tr>
+          <tr><td>Development explanation</td><td>Short response distinguishing inherited genes, developmental drawing, and adult phenotype.</td><td>MS-LS3-1, HS-LS3-1, Cause and Effect</td></tr>
+          <tr><td>Model limitation critique</td><td>Annotated list of realistic, simplified, and artificial features.</td><td>Systems and System Models, Modeling</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <h2>Source-Informed Alignment Notes</h2>
+      <ul>
+        <li><strong>Use cumulative selection as the central claim:</strong> The strongest standards connection is not that one mutation makes a complex body. It is that selected variants become the next starting point, so small inherited changes can accumulate.</li>
+        <li><strong>Keep random and nonrandom processes distinct:</strong> The litter provides random-or-undirected variation relative to a goal. Human choice or an evaluator is the nonrandom selection step.</li>
+        <li><strong>Connect selected phenotype to inherited genotype:</strong> Assessment should ask students to explain that the visible body is selected, while the gene values are what persist into the next generation.</li>
+        <li><strong>Treat artificial selection as a model, not a conclusion:</strong> Manual and automated selectors are useful because students can inspect the criterion. They should not be described as identical to ecological natural selection.</li>
+        <li><strong>Require model-boundary language:</strong> Strong student explanations should name at least one missing evolutionary mechanism, such as drift, gene flow, recombination, or population-level allele frequency change.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Teacher Boundary Notes</h2>
+      <ul>
+        <li><strong>Strong claim:</strong> The app shows how inherited variation and repeated selection can produce cumulative change.</li>
+        <li><strong>Acceptable claim:</strong> The app can model artificial selection and some simplified selection pressures.</li>
+        <li><strong>Overclaim to avoid:</strong> The app proves that natural selection works exactly like a human choosing images.</li>
+        <li><strong>Overclaim to avoid:</strong> The nine genes are realistic models of DNA, chromosomes, or molecular development.</li>
+        <li><strong>Overclaim to avoid:</strong> Evolution means only natural selection. Biomorphs isolates one selection-centered process and leaves other mechanisms for separate lessons.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Limitations to State Explicitly</h2>
+      <ul>
+        <li>Selection is performed by a human chooser, not by survival in an environment.</li>
+        <li>Mutation rates are intentionally high to make change visible during class time.</li>
+        <li>The line-drawing genes are analogues, not real DNA sequences or molecular pathways.</li>
+        <li>Symmetry is imposed by the developmental rule, which makes the phenotype easier to inspect but narrows the model space.</li>
+      </ul>
+    </section>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <p>Evo-Edu.org: interactive tools for learning evolution, ecology, and scientific reasoning.</p>
+</footer>
+</body>
+</html>

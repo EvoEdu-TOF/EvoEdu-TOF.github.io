@@ -1,0 +1,114 @@
+{
+  "schema": "evo-edu.notebook.course_bundle_contract.v1",
+  "id": "evo-edu.notebook.course-bundle-contract",
+  "title": "Notebook Course Bundle Contract",
+  "updated": "2026-05-14",
+  "intent": "Define the minimum bundle that an ingestion-and-review pipeline should produce for a course or Notebook cluster, rather than stopping at an internal draft pack.",
+  "mode_position": {
+    "this_contract_describes": "notebook",
+    "related_contract": "[redacted private source locator]",
+    "export_manifest": "[redacted private source locator]",
+    "export_index": "[redacted private source locator]",
+    "note": "The Notebook bundle is the higher-content output mode of the same stack, not a separate ad hoc project."
+  },
+  "required_outputs": [
+    {
+      "kind": "landing_page",
+      "path_pattern": "/notebook/index.html",
+      "purpose": "Present the learner-facing Notebook surface, cluster navigation, and machine-readable path entry points."
+    },
+    {
+      "kind": "concept_page_html",
+      "path_pattern": "/notebook/concepts/<concept-slug>.html",
+      "purpose": "Expose the reviewed learner-facing concept explanation."
+    },
+    {
+      "kind": "concept_scaffold_json",
+      "path_pattern": "/notebook/concepts/<concept-slug>.scaffold.json",
+      "purpose": "Expose reviewed reasoning records, source slots, tool links, and prompt seeds for downstream consumers."
+    },
+    {
+      "kind": "learning_path_json",
+      "path_pattern": "/notebook/learning-paths/<path-id>.json",
+      "purpose": "Define the recommended instructional order, assumptions, and concept transitions."
+    },
+    {
+      "kind": "export_index_json",
+      "path_pattern": "/notebook/notebook-export-index.json",
+      "purpose": "Expose the currently discoverable Notebook bundles and their export artifacts without assuming a single current path."
+    },
+    {
+      "kind": "didactopus_learning_sequence_json",
+      "path_pattern": "/notebook/learning-paths/<path-id>.didactopus.json",
+      "purpose": "Provide mentorship-oriented session goals, openings, evidence focus, and transition cues."
+    },
+    {
+      "kind": "selection_policy_json",
+      "path_pattern": "/notebook/learning-paths/<path-id>.selection-policy.json",
+      "purpose": "Guide scaffold-record ranking without hard-coding source- or topic-specific rules into Didactopus."
+    },
+    {
+      "kind": "reviewed_elements_index",
+      "path_pattern": "/notebook/reviewed-elements/index.json",
+      "purpose": "Expose reviewed claims, examples, questions, and coverage probes derived from staged source material."
+    }
+  ],
+  "recommended_outputs": [
+    {
+      "kind": "overview_or_history_page",
+      "path_pattern": "/notebook/<section>/<slug>.html",
+      "purpose": "Provide cross-concept evidence, history, or interpretation pages that extend beyond single concepts."
+    },
+    {
+      "kind": "bibliography_or_source_trail_artifact",
+      "path_pattern": "/notebook/bibliography/<key>*.json",
+      "purpose": "Expose reviewed source trails or explicit pending source slots."
+    },
+    {
+      "kind": "tool_linkage",
+      "path_pattern": "embedded in concept scaffold or concept page",
+      "purpose": "Connect the Notebook to packs, apps, guides, and literature tools."
+    },
+    {
+      "kind": "textbook_question_coverage_notes",
+      "path_pattern": "/notebook/staging/questions/*.json or /notebook/staging/source-trails/*.json",
+      "purpose": "Preserve exercise/review-problem prompts as reviewed questions or coverage probes that test whether the Notebook can support the source's expected learner tasks."
+    },
+    {
+      "kind": "translated_algorithm_or_simulation_example",
+      "path_pattern": "/notebook/staging/examples/*.json, /notebook/concepts/<concept-slug>.scaffold.json, or linked app source",
+      "purpose": "Preserve textbook code or pseudocode as reviewed algorithm descriptions or JavaScript implementations with provenance, model assumptions, and expected-output checks."
+    },
+    {
+      "kind": "mathematical_structure_notes",
+      "path_pattern": "/notebook/staging/claims/*.json, /notebook/staging/examples/*.json, /notebook/staging/questions/*.json, or /notebook/staging/source-trails/*.json",
+      "purpose": "Preserve equations, theorem-like statements, derivations, notation mappings, assumptions, parameter meanings, and mathematical coverage gaps."
+    }
+  ],
+  "stack_boundary": {
+    "notebook_side_owns": [
+      "concept prose",
+      "concept scaffolds",
+      "learning paths",
+      "selection policy",
+      "learner-facing structure"
+    ],
+    "didactopus_consumes": [
+      "learning path",
+      "selection policy",
+      "concept scaffolds",
+      "reviewed question sidecars",
+      "reviewed mathematical sidecars",
+      "page links"
+    ],
+    "groundrecall_preserves": [
+      "review rationale",
+      "pending source-slot decisions",
+      "revision history"
+    ]
+  },
+  "example_bundle_ids": [
+    "foundations-first-ring"
+  ],
+  "bundle_discovery_note": "Bundle identifiers should be discoverable from /notebook/learning-paths/ by finding <bundle-id>.json files with matching .didactopus.json and .selection-policy.json companions."
+}

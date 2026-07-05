@@ -1,0 +1,426 @@
+{
+  "schema": "evo-edu.notebook.reviewed_elements.v1",
+  "generated": "2026-06-30",
+  "concept_id": "notebook.concepts.hardy-weinberg-equilibrium",
+  "items": [
+    {
+      "id": "staged.claim.futuyma.hardy-weinberg-random-mating.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.hardy-weinberg-equilibrium",
+      "title": "Hardy-Weinberg Separates Allele Frequencies From Genotype Redistribution",
+      "body": "Futuyma's treatment of Hardy-Weinberg helps students separate two ideas: random mating can redistribute genotypes into expected proportions, while allele frequencies remain unchanged unless evolutionary forces act.",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use for null-model framing and assumption checks; avoid direct formula-heavy presentation in beginner route unless paired with worked examples."
+      },
+      "promotion_targets": [
+        "notebook/concepts/hardy-weinberg-equilibrium.html",
+        "notebook/concepts/allele-frequency-change.html"
+      ],
+      "source_path_redacted": true,
+      "mathematical_structure": {
+        "kind": "population-genetic null model",
+        "formal_statement": "For a two-allele locus with allele frequencies p and q, random mating gives genotype expectations p^2, 2pq, and q^2 while allele frequencies remain unchanged absent evolutionary forces.",
+        "notation_status": "normalized",
+        "assumptions": [
+          "two-allele locus or locally simplified locus",
+          "random mating",
+          "no selection",
+          "no mutation",
+          "no migration or gene flow",
+          "large population or negligible sampling error"
+        ],
+        "biological_interpretation": "The model separates genotype reshuffling by mating from evolutionary change in allele frequencies."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "p",
+          "notebook_symbol": "p",
+          "meaning": "frequency of one allele"
+        },
+        {
+          "source_symbol": "q",
+          "notebook_symbol": "q",
+          "meaning": "frequency of the alternative allele"
+        },
+        {
+          "source_symbol": "p^2, 2pq, q^2",
+          "notebook_symbol": "p^2, 2pq, q^2",
+          "meaning": "expected genotype proportions after random mating"
+        }
+      ],
+      "proof_or_derivation": {
+        "status": "outline",
+        "steps": [
+          "Start from gamete or allele frequencies p and q.",
+          "Combine gametes at random.",
+          "Multiply independent gamete probabilities to get p^2, 2pq, and q^2.",
+          "Observe that genotype proportions change while allele frequencies remain p and q unless another force acts."
+        ]
+      }
+    },
+    {
+      "id": "staged.claim.mayr.hardy-weinberg-null-model.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.hardy-weinberg-equilibrium",
+      "title": "Hardy-Weinberg Frames Evolution As Departure From Constant Allele Frequencies",
+      "body": "Mayr's What Evolution Is supports using Hardy-Weinberg expectations as a null-model frame: allele frequencies remain constant only when processes adding, removing, or rearranging genes are absent.",
+      "source_anchors": [
+        {
+          "source_id": "mayr-what-evolution-is-2002",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as an explanatory Hardy-Weinberg sidecar. Original Hardy/Weinberg historical sources remain a separate optional bibliography task."
+      },
+      "promotion_targets": [
+        "notebook/concepts/hardy-weinberg-equilibrium.html",
+        "notebook/concepts/hardy-weinberg-equilibrium.scaffold.json"
+      ],
+      "source_path_redacted": true,
+      "mathematical_structure": {
+        "kind": "null-model statement",
+        "formal_statement": "Allele frequencies remain constant across generations when processes that add, remove, or differentially sort alleles are absent.",
+        "notation_status": "conceptualized; no source equation preserved",
+        "assumptions": [
+          "no mutation",
+          "no selection",
+          "no migration",
+          "random mating",
+          "large effective population"
+        ],
+        "biological_interpretation": "Evolution can be detected as departure from the null expectation of unchanged allele frequencies."
+      }
+    },
+    {
+      "id": "staged.question.futuyma.hardy-weinberg-counts-to-expectations.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.hardy-weinberg-equilibrium",
+      "title": "From Genotype Counts To Hardy-Weinberg Expectations",
+      "body": "A diploid sample has observed counts for AA, AA', and A'A'. How would you calculate p and q from those counts, generate Hardy-Weinberg expected genotype counts, and decide whether the comparison is evidence about genotype redistribution rather than a change in allele frequency?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Futuyma's Hardy-Weinberg derivation and worked moth-count example. Use as a foundation quantitative prompt before more advanced violations and extensions."
+      },
+      "promotion_targets": [
+        "notebook/concepts/hardy-weinberg-equilibrium.html",
+        "notebook/concepts/allele-frequency-change.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "convert genotype counts into genotype frequencies D, H, and R",
+          "calculate p = D + H/2 and q = R + H/2",
+          "use p^2, 2pq, and q^2 to produce expected genotype frequencies",
+          "multiply expected frequencies by sample size to get expected counts",
+          "explain that random mating can change genotype proportions without changing p and q",
+          "treat large discrepancies as prompts to inspect assumptions rather than as automatic proof of one cause"
+        ],
+        "coverage_note": "This adds a reviewed calculation path for Hardy-Weinberg expectations, complementing existing assumption and usefulness prompts."
+      },
+      "mathematical_structure": {
+        "kind": "Hardy-Weinberg count-to-expectation calculation",
+        "formal_statement": "Given genotype frequencies D, H, and R for AA, AA', and A'A', compute p = D + H/2 and q = R + H/2. Under random mating and other Hardy-Weinberg assumptions, expected genotype frequencies are p^2, 2pq, and q^2.",
+        "notation_status": "normalized from source notation",
+        "assumptions": [
+          "diploid autosomal locus",
+          "two alleles represented as A and A'",
+          "random mating",
+          "effectively large population",
+          "no selection, mutation, migration, or other force changing allele frequencies during the comparison",
+          "observed and expected counts are compared with appropriate attention to sampling error"
+        ],
+        "biological_interpretation": "Hardy-Weinberg calculations separate allele-frequency accounting from the genotype proportions expected after random mating."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "D",
+          "notebook_symbol": "D",
+          "meaning": "observed frequency of AA"
+        },
+        {
+          "source_symbol": "H",
+          "notebook_symbol": "H",
+          "meaning": "observed frequency of AA' heterozygotes"
+        },
+        {
+          "source_symbol": "R",
+          "notebook_symbol": "R",
+          "meaning": "observed frequency of A'A'"
+        },
+        {
+          "source_symbol": "p, q",
+          "notebook_symbol": "p, q",
+          "meaning": "allele frequencies calculated from genotype frequencies"
+        },
+        {
+          "source_symbol": "p^2, 2pq, q^2",
+          "notebook_symbol": "p^2, 2pq, q^2",
+          "meaning": "expected genotype frequencies under Hardy-Weinberg assumptions"
+        }
+      ],
+      "question_type": "worked quantitative problem",
+      "source_context": {
+        "source_section": "Genetic Variation and Its Origins; Hardy-Weinberg theorem",
+        "textbook_prompt_role": "source-mined calculation probe",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.futuyma.hardy-weinberg-null-model-usefulness.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.hardy-weinberg-equilibrium",
+      "title": "Why Use An Assumption-Bound Null Model?",
+      "body": "If real populations almost never meet every Hardy-Weinberg assumption exactly, why is the Hardy-Weinberg model still useful for evolutionary reasoning?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Paraphrased from Futuyma's discussion prompt about the value of Hardy-Weinberg despite unmet assumptions."
+      },
+      "promotion_targets": [
+        "notebook/concepts/hardy-weinberg-equilibrium.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "state the Hardy-Weinberg assumptions",
+          "explain null-model reasoning",
+          "describe deviation from expectation as evidence of process",
+          "separate model usefulness from literal realism"
+        ],
+        "coverage_note": "The current Hardy-Weinberg concept page should support this as a foundation-level assessment prompt."
+      },
+      "question_type": "mechanism explanation",
+      "source_context": {
+        "source_section": "FOR DISCUSSION AND THOUGHT",
+        "textbook_prompt_role": "end-of-section discussion question",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.futuyma.heterozygote-deviation-selection-inference.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.hardy-weinberg-equilibrium",
+      "title": "What Can A Heterozygote Deviation Tell You?",
+      "body": "A population sample has fewer heterozygotes than expected under Hardy-Weinberg proportions. A second sample has more heterozygotes than expected, and a third fits the expected proportions. What can and cannot be inferred about selection from each result?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Futuyma's discussion prompt. Keep framed as an inference guardrail: Hardy-Weinberg deviation is evidence to investigate, not automatic identification of one evolutionary process."
+      },
+      "promotion_targets": [
+        "notebook/concepts/hardy-weinberg-equilibrium.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "compare observed heterozygote counts with the p^2, 2pq, q^2 expectation",
+          "recognize heterozygote deficiency as compatible with several causes, including inbreeding, subdivision, assortative mating, selection against heterozygotes, or sampling problems",
+          "recognize heterozygote excess as compatible with overdominance, disassortative mating, recent mixing, or sampling and scoring issues",
+          "explain that exact Hardy-Weinberg proportions do not prove absence of selection",
+          "state what additional evidence would be needed before inferring a selection pattern"
+        ],
+        "coverage_note": "This strengthens Hardy-Weinberg coverage by moving from calculation to cautious biological interpretation."
+      },
+      "mathematical_structure": {
+        "kind": "Hardy-Weinberg residual interpretation",
+        "formal_statement": "Given allele frequencies p and q, expected heterozygote frequency is 2pq. The sign and size of observed-minus-expected heterozygote frequency are diagnostic prompts, not sufficient causes by themselves.",
+        "notation_status": "normalized from source discussion question",
+        "assumptions": [
+          "allele frequencies are estimated from the same population sample",
+          "genotype classes are scored reliably",
+          "sampling error is considered before biological interpretation",
+          "alternative mechanisms that change genotype proportions are compared explicitly"
+        ],
+        "biological_interpretation": "Hardy-Weinberg residuals are useful because they focus attention on mechanism, but the same residual pattern can arise from different evolutionary or sampling processes."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "2pq",
+          "notebook_symbol": "2pq",
+          "meaning": "expected heterozygote frequency under Hardy-Weinberg assumptions"
+        },
+        {
+          "source_symbol": "observed - expected",
+          "notebook_symbol": "heterozygoteResidual",
+          "meaning": "direction and magnitude of heterozygote deviation from expectation"
+        }
+      ],
+      "question_type": "inference guardrail",
+      "source_context": {
+        "source_section": "The Effects of Selection on Gene Frequencies; For Discussion and Thought",
+        "textbook_prompt_role": "end-of-chapter interpretation question",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.hardy-weinberg.assumptions.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.hardy-weinberg-equilibrium",
+      "title": "Which Assumption Failed?",
+      "body": "A population departs from Hardy-Weinberg expectations. Which assumption would you check first, and what observation would make that explanation more likely than the alternatives?",
+      "source_anchors": [
+        {
+          "source_id": "notebook.concepts.hardy-weinberg-equilibrium",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu editorial workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Suitable as a reviewed prompt sidecar for Didactopus sequencing."
+      },
+      "promotion_targets": [
+        "notebook/concepts/hardy-weinberg-equilibrium.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.question.pianka.heterozygosity-maximum-equal-alleles.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.hardy-weinberg-equilibrium",
+      "title": "When Are Heterozygotes Most Common?",
+      "body": "In a two-allele Hardy-Weinberg model, why is the expected heterozygote frequency highest when the two alleles are equally represented, and what happens to expected heterozygotes as one allele becomes rare?",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Pianka's Hardy-Weinberg equation discussion. Use as a lightweight quantitative intuition check."
+      },
+      "promotion_targets": [
+        "notebook/concepts/hardy-weinberg-equilibrium.html",
+        "notebook/concepts/allele-frequency-change.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "state the expected genotype frequencies p^2, 2pq, and q^2",
+          "identify 2pq as the expected heterozygote frequency",
+          "use q = 1 - p in a two-allele case",
+          "show that 2pq is largest when p = q = 0.5",
+          "explain that heterozygotes become less common as either allele becomes rare",
+          "distinguish this expectation from evidence that selection is favoring heterozygotes"
+        ],
+        "coverage_note": "This adds a reviewed Hardy-Weinberg numerical-intuition bridge tied to allele-frequency reasoning."
+      },
+      "mathematical_structure": {
+        "kind": "Hardy-Weinberg heterozygote maximum",
+        "formal_statement": "For two alleles with p + q = 1, expected heterozygote frequency under Hardy-Weinberg assumptions is 2pq, which reaches its maximum value of 0.5 when p = q = 0.5.",
+        "notation_status": "normalized from source equation and prose",
+        "assumptions": [
+          "two alleles at a diploid locus",
+          "random mating",
+          "no allele-frequency change during the genotype expectation comparison",
+          "genotype frequencies are expected proportions, not observed proof of mechanism"
+        ],
+        "biological_interpretation": "Heterozygote frequency depends strongly on allele frequencies, so a rare allele is expected to appear mostly in heterozygotes but produces relatively few heterozygotes overall."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "p, q",
+          "notebook_symbol": "p, q",
+          "meaning": "allele frequencies in a two-allele system"
+        },
+        {
+          "source_symbol": "2pq",
+          "notebook_symbol": "2pq",
+          "meaning": "expected heterozygote frequency under Hardy-Weinberg assumptions"
+        },
+        {
+          "source_symbol": "p^2, q^2",
+          "notebook_symbol": "p^2, q^2",
+          "meaning": "expected homozygote frequencies under Hardy-Weinberg assumptions"
+        }
+      ],
+      "question_type": "worked quantitative problem",
+      "source_context": {
+        "source_section": "Population Genetics",
+        "textbook_prompt_role": "source-mined Hardy-Weinberg intuition probe",
+        "edition_or_volume_year": "1988"
+      }
+    }
+  ],
+  "summary": {
+    "reviewed_total": 7,
+    "claims": 2,
+    "examples": 0,
+    "questions": 5
+  }
+}

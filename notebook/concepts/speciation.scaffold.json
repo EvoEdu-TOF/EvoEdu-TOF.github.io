@@ -1,0 +1,119 @@
+{
+  "schema": "evo-edu.notebook.reasoning_scaffold.v1",
+  "id": "notebook.concepts.speciation",
+  "title": "Speciation",
+  "created": "2026-05-14",
+  "updated": "2026-05-14",
+  "status": "pilot-reviewed-scaffold",
+  "concept_targets": [
+    "speciation",
+    "reproductive isolation",
+    "gene flow",
+    "lineage divergence",
+    "population splitting",
+    "geographic separation",
+    "ecological divergence"
+  ],
+  "site_links": [
+    {
+      "kind": "concept",
+      "title": "Allele Frequency Change",
+      "url": "/notebook/concepts/allele-frequency-change.html"
+    },
+    {
+      "kind": "concept",
+      "title": "Genetic Drift",
+      "url": "/notebook/concepts/genetic-drift.html"
+    },
+    {
+      "kind": "concept",
+      "title": "Natural Selection",
+      "url": "/notebook/concepts/natural-selection.html"
+    },
+    {
+      "kind": "concept",
+      "title": "Adaptation",
+      "url": "/notebook/concepts/adaptation.html"
+    },
+    {
+      "kind": "research_tool",
+      "title": "Literature Explorer",
+      "url": "/apps/literature-explorer/"
+    }
+  ],
+  "records": [
+    {
+      "id": "sp-001",
+      "type": "definition-check",
+      "question": "What is speciation?",
+      "answer_summary": "Speciation is the formation of distinct lineages when populations no longer remain part of the same evolving gene pool.",
+      "verification_prompt": "State the populations involved and what evidence shows whether they still function as one lineage.",
+      "misconception_guard": "Do not use speciation to mean any visible difference between organisms.",
+      "didactopus_prompt_seed": "Rewrite the claim so the population or lineage level is explicit."
+    },
+    {
+      "id": "sp-002",
+      "type": "gene-flow-check",
+      "question": "Why is reproductive isolation important?",
+      "answer_summary": "Reproductive isolation matters because it helps explain why populations stop being joined by ongoing gene flow and begin to diverge independently.",
+      "verification_prompt": "Ask what evidence exists for continued interbreeding, hybridization, or barriers to gene flow.",
+      "misconception_guard": "Do not assume complete and immediate isolation in every real case.",
+      "didactopus_prompt_seed": "Name one piece of evidence that would support reduced gene flow and one that would weaken that claim."
+    },
+    {
+      "id": "sp-003",
+      "type": "continuum-check",
+      "question": "Does speciation require total isolation?",
+      "answer_summary": "Not always at every stage. Many cases involve partial barriers, hybrid zones, or gradual strengthening of separation before clearer lineage independence emerges.",
+      "verification_prompt": "Describe whether the evidence fits partial isolation, strong isolation, or continued connection.",
+      "misconception_guard": "Do not force every case into a simple all-or-nothing category.",
+      "didactopus_prompt_seed": "Explain why a partially isolated case can still be important for understanding speciation."
+    },
+    {
+      "id": "sp-004",
+      "type": "context-check",
+      "question": "Why are geography and ecology often discussed?",
+      "answer_summary": "Geographic separation and ecological differences can reduce gene flow, expose populations to different conditions, and create opportunities for divergence.",
+      "verification_prompt": "State what barrier or environmental contrast is being proposed and how it could affect gene flow.",
+      "misconception_guard": "Do not treat geography or ecology as magic words without evidence about their effects.",
+      "didactopus_prompt_seed": "Describe how a barrier or environmental difference could contribute to lineage splitting."
+    },
+    {
+      "id": "sp-005",
+      "type": "mechanism-chain",
+      "question": "Why is speciation not just one big mutation or lots of tiny changes?",
+      "answer_summary": "The evidence usually concerns how populations diverge as lineages, not a single oversimplified cause. Different mechanisms can contribute at different stages.",
+      "verification_prompt": "Ask which mechanisms explain the source of variation, the divergence process, and the gene-flow reduction.",
+      "misconception_guard": "Do not reduce speciation to one slogan when multiple processes may be involved.",
+      "didactopus_prompt_seed": "Rewrite the explanation so it names at least two stages in the divergence process."
+    }
+  ],
+  "citegeist_source_slots": [
+    {
+      "slot": "speciation-foundations",
+      "needed_for": "Foundational treatments of speciation and reproductive isolation",
+      "candidate_queries": [
+        "Mayr speciation reproductive isolation classic treatment",
+        "Dobzhansky speciation reproductive isolation population genetics",
+        "speciation lineage splitting classic evolutionary biology"
+      ],
+      "review_status": "pending"
+    },
+    {
+      "slot": "speciation-evidence-explanations",
+      "needed_for": "Explanatory treatments of gene flow, geographic separation, and cautious lineage claims",
+      "candidate_queries": [
+        "speciation gene flow geographic isolation educational explanation",
+        "lineage divergence reproductive isolation evidence evolutionary biology"
+      ],
+      "review_status": "pending"
+    }
+  ],
+  "doclift_use": "Use this JSON as a fixture for concept pages that connect population mechanisms to lineage-level evolutionary outcomes.",
+  "groundrecall_use": "Store rationale, pending source-slot work, and revision notes about lineage evidence so later Notebook pages can reuse the same speciation-evidence structure.",
+  "next_review_steps": [
+    "Backfill reviewed sources for foundational and explanatory treatments of speciation.",
+    "Add one worked comparison between partial isolation and a stronger speciation case.",
+    "Link this page into later Notebook pages on fossil patterns, macroevolution, and common descent."
+  ]
+}

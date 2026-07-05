@@ -1,0 +1,47 @@
+{
+  "slug": "evidence-cause-workbench",
+  "title": "Evidence And Cause Workbench",
+  "published": true,
+  "visibility": "public",
+  "role": "Practice separating observations, baselines, candidate causes, stochastic mechanisms, value claims, model boundaries, and justified causal claims.",
+  "category": "foundations",
+  "entrypoint": "/apps/evidence-cause-workbench/",
+  "description": "A foundational empirical-reasoning tool for learning how biological explanations move from measured patterns to cautious causal inference.",
+  "legacy_names": [],
+  "pages": {
+    "landing": "/apps/evidence-cause-workbench/",
+    "application": "/apps/evidence-cause-workbench/app/",
+    "study_guide": "/apps/evidence-cause-workbench/study-guide.html",
+    "curriculum_alignment": "/apps/evidence-cause-workbench/curriculum-alignment.html",
+    "teacher_guide": "/apps/evidence-cause-workbench/teacher-guide.html",
+    "standards": "/apps/evidence-cause-workbench/standards.html",
+    "about": "/apps/evidence-cause-workbench/about.html"
+  },
+  "implementation": {
+    "launch_target": "/apps/evidence-cause-workbench/app/",
+    "model_type": "direct responsive browser workbench"
+  },
+  "status": {
+    "landing": "standardized",
+    "application": "responsive-direct",
+    "study_guide": "present",
+    "curriculum_alignment": "present",
+    "teacher_guide": "present",
+    "standards": "present",
+    "about": "present"
+  },
+  "provenance": {
+    "summary": "New evo-edu foundational reasoning app connected to Notebook empirical reasoning needs.",
+    "details": "This app was added to make explicit the empirical program behind the Notebook sequence: observe a phenomenon, compare against a baseline, consider stochastic and multi-cause alternatives, separate progress or value claims from empirical claims, evaluate magnitude, and flag exercise simplifications before assigning causation.",
+    "lineage": [
+      "Notebook first-ring empirical reasoning frame",
+      "Futuyma 1979 progress/value, chance/mechanism, and simple-model/multi-cause Notebook guardrails",
+      "Supports Hardy-Weinberg Workbench planning and later mechanism apps"
+    ],
+    "limits": [
+      "The workbench uses simplified toy scenarios rather than full statistical inference.",
+      "The magnitude explorer is qualitative and intended for reasoning about sufficiency, not parameter estimation.",
+      "Real-world causal analysis requires stronger design, replication, uncertainty estimates, and domain-specific measurement."
+    ]
+  }
+}

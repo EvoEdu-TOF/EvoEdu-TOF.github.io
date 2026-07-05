@@ -1,0 +1,62 @@
+{
+  "slug": "allele-tracker",
+  "title": "Allele Tracker",
+  "published": true,
+  "visibility": "public",
+  "role": "Explore how drift, selection, mutation, and migration change allele frequencies over time.",
+  "category": "population-genetics",
+  "entrypoint": "/apps/allele-tracker/",
+  "description": "An interactive population-genetics tool for comparing forces that shape variation and evolutionary change.",
+  "legacy_names": [
+    "PopG",
+    "JS PopG"
+  ],
+  "pages": {
+    "landing": "/apps/allele-tracker/",
+    "application": "/apps/allele-tracker/app/",
+    "study_guide": "/apps/allele-tracker/study-guide.html",
+    "curriculum_alignment": "/apps/allele-tracker/curriculum-alignment.html",
+    "about": "/apps/allele-tracker/about.html"
+  },
+  "implementation": {
+    "legacy_hub": "/apps/popg/",
+    "launch_target": "/apps/popg/jspopg.html"
+  },
+  "api": {
+    "status": "prototype",
+    "family": "population-genetics",
+    "docs": "/apps/api/population-genetics/",
+    "module": "/apps/api/population-genetics/population-genetics.js",
+    "notes": "A shared browser and node-consumable API module now exists for the first population-genetics remediation family."
+  },
+  "tests": {
+    "status": "prototype",
+    "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/population-genetics/population-genetics.test.js",
+    "notes": "A node-based contract test suite now exercises the shared family API module."
+  },
+  "status": {
+    "landing": "standardized",
+    "application": "responsive-direct",
+    "study_guide": "present",
+    "curriculum_alignment": "present",
+    "api": "prototype",
+    "tests": "prototype"
+  },
+  "provenance": {
+    "summary": "Public evo-edu framing over the legacy PopG implementation.",
+    "details": "Allele Tracker is the evo-edu public route built around the older PopG simulation. The remediation work now includes a responsive direct public workbench that uses the shared population-genetics API while preserving the legacy PopG runtime as an archive path.",
+    "lineage": [
+      "Public evo-edu route: Allele Tracker",
+      "Original model lineage: PopG, originally developed in FORTRAN by Prof. Joe Felsenstein and colleagues",
+      "Later JavaScript port named in the legacy route: Wesley R. Elsberry and OpenAI ChatGPT o1",
+      "Legacy implementation directory: /apps/popg/",
+      "Legacy archive launch target: /apps/popg/jspopg.html"
+    ],
+    "limits": [
+      "The legacy PopG runtime remains available as a memorialized archive path.",
+      "The shared API layer is in prototype status and deeper UI/API integration remains to be done.",
+      "Public deployment terms for this model family should be treated as requiring explicit compliance review under the original PopG notice."
+    ],
+    "license_risk_note": "The original PopG notice includes distribution and revenue-related restrictions. Treat the current public route as based on PopG and subject to explicit compliance review rather than assuming independent relicensing."
+  }
+}

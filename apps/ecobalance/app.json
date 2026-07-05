@@ -1,0 +1,63 @@
+{
+  "slug": "ecobalance",
+  "title": "EcoBalance",
+  "published": true,
+  "visibility": "public",
+  "role": "Explore predator-prey dynamics, feedback, stability, and collapse in changing ecological systems.",
+  "category": "ecology",
+  "entrypoint": "/apps/ecobalance/",
+  "description": "An interactive ecology model for comparing cycles, constraints, intervention, and system behavior over time.",
+  "legacy_names": [
+    "Predator-Prey Dynamics Simulator"
+  ],
+  "pages": {
+    "landing": "/apps/ecobalance/",
+    "application": "/apps/ecobalance/app/",
+    "study_guide": "/apps/ecobalance/study-guide.html",
+    "teacher_guide": "/apps/ecobalance/teacher-guide.html",
+    "standards": "/apps/ecobalance/standards.html",
+    "curriculum_alignment": "/apps/ecobalance/standards.html",
+    "about": "/apps/ecobalance/about.html"
+  },
+  "implementation": {
+    "legacy_hub": "/apps/popdyn-predator-prey/",
+    "launch_target": "/apps/ecobalance/app/",
+    "legacy_target": "/apps/popdyn-predator-prey/pp-app.html"
+  },
+  "api": {
+    "status": "prototype",
+    "family": "ecology",
+    "docs": "/apps/api/ecology/",
+    "module": "/apps/api/ecology/ecology.js",
+    "notes": "A shared browser and node-consumable API module now exists for the ecology remediation family."
+  },
+  "tests": {
+    "status": "prototype",
+    "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/ecology/ecology.test.js",
+    "notes": "A node-based contract test suite now exercises the shared ecology family API module."
+  },
+  "status": {
+    "landing": "standardized",
+    "application": "responsive-direct",
+    "study_guide": "present",
+    "teacher_guide": "present",
+    "standards": "present",
+    "curriculum_alignment": "present",
+    "api": "prototype",
+    "tests": "prototype"
+  },
+  "provenance": {
+    "summary": "Public evo-edu framing over the legacy predator-prey implementation.",
+    "details": "EcoBalance is the evo-edu public route for the predator-prey model family. The remediation pass now includes a direct responsive workbench using the shared ecology API while preserving the older predator-prey prototype as a legacy route.",
+    "lineage": [
+      "Public evo-edu route: EcoBalance",
+      "Legacy implementation directory: /apps/popdyn-predator-prey/",
+      "Current launch target: /apps/ecobalance/app/",
+      "Legacy prototype route: /apps/popdyn-predator-prey/pp-app.html"
+    ],
+    "limits": [
+      "The older predator-prey prototype remains available as a legacy route.",
+      "Broader test coverage and ecological model refinement are still pending."
+    ]
+  }
+}

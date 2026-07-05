@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Screenshot Example</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+<div id="captureArea" style="border: 1px solid #ccc; padding: 10px; width: 200px;">
+  <h2>Sample Area</h2>
+  <p>This text will be captured in the screenshot.</p>
+</div>
+
+<button onclick="captureScreenshot('captureArea')">Capture Screenshot</button>
+
+<script>
+function captureScreenshot(elementId) {
+  const element = document.getElementById(elementId);
+
+  // Check if the element exists
+  if (!element) {
+    console.warn("Element with ID '" + elementId + "' not found.");
+    return;
+  }
+
+  // Use html2canvas to capture the element
+  html2canvas(element).then(canvas => {
+    // Convert canvas to a data URL (PNG)
+    const dataURL = canvas.toDataURL("image/png");
+
+    // Create a temporary link to trigger download
+    const link = document.createElement('a');
+    link.download = "screenshot.png";
+    link.href = dataURL;
+    link.click();
+  });
+}
+</script>
+
+</body>
+</html>

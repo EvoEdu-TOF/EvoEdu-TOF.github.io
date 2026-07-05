@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Network Builder Application - evo-edu.org</title>
+  <link rel="stylesheet" href="/shared/evo-edu.css">
+  <script src="/shared/evo-shell.js" defer></script>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <style>
+    .network-app { display: grid; gap: 1.25rem; grid-template-columns: minmax(0, 0.95fr) minmax(340px, 1.05fr); align-items: start; }
+    .network-panel { background: #fff; border: 1px solid #d6deea; border-radius: 18px; box-shadow: 0 18px 40px rgba(15,23,42,0.08); padding: 1.25rem; display: grid; gap: 1rem; }
+    .network-panel h2, .network-panel h3, .network-panel p { margin: 0; }
+    .network-panel p, .network-panel li { line-height: 1.55; }
+    .action-grid, .status-grid, .starter-grid, .notes-grid, .param-grid, .graph-grid { display: grid; gap: 0.85rem; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+    .graph-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .app-button, .app-upload-label, .message-toggle { display: inline-flex; align-items: center; justify-content: center; width: 100%; min-height: 3rem; padding: 0.8rem 1rem; border: 1px solid #205a9e; border-radius: 12px; background: #205a9e; color: #fff; font-weight: 700; text-decoration: none; cursor: pointer; }
+    .app-button.secondary, .app-upload-label.secondary, .message-toggle { background: #f6f9fc; color: #1f2937; border-color: #c5d1e0; }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .status-card, .starter-card, .note-card { background: #f6f9fc; border: 1px solid #d6deea; border-radius: 14px; padding: 0.95rem 1rem; }
+    .status-card strong, .starter-card strong, .note-card strong { display: block; margin-bottom: 0.35rem; }
+    .settings-form, .message-list { display: grid; gap: 0.85rem; }
+    .param-row { display: grid; gap: 0.35rem; }
+    .param-row label { font-weight: 700; color: #243447; }
+    .param-row input { width: 100%; min-height: 2.8rem; padding: 0.65rem 0.7rem; border: 1px solid #c7d3e1; border-radius: 10px; font: inherit; box-sizing: border-box; }
+    .surface-box { border: 1px solid #d6deea; border-radius: 16px; background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%); padding: 1rem; }
+    .plot-box { min-height: 340px; }
+    #bestTreePlot, #fitnessPlot, #animationPlot { min-height: 320px; }
+    .inline-links { display: flex; flex-wrap: wrap; gap: 0.65rem; }
+    .inline-links a { color: #205a9e; font-weight: 700; text-decoration: none; }
+    .message-item { background: #fff; border-left: 4px solid #205a9e; border-radius: 10px; padding: 0.75rem 0.85rem; box-shadow: 0 8px 22px rgba(15,23,42,0.06); }
+    @media (max-width: 1024px) { .network-app { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) { .action-grid, .status-grid, .starter-grid, .notes-grid, .param-grid, .graph-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-topbar">
+      <div class="brand-block">
+        <span class="brand-mark">Artificial Life</span>
+        <a href="/">evo-edu.org</a>
+        <p class="brand-summary">Steiner-style network design app for systems and optimization exploration.</p>
+      </div>
+      <nav class="site-nav" data-evo-nav></nav>
+    </header>
+
+    <section class="hero-card">
+      <p class="eyebrow">Application</p>
+      <div class="hero-grid">
+        <div>
+          <h1>Network Builder</h1>
+          <p class="lede lede-strong">Use a direct responsive workbench to compare terminal layouts, evolutionary search settings, and the total cost of candidate networks in a Steiner-style optimization problem.</p>
+          <div class="hero-actions">
+            <a class="button-link" href="/apps/network-builder/study-guide.html">Learner guide</a>
+            <a class="button-link-secondary" href="/apps/network-builder/teacher-guide.html">Teacher guide</a>
+            <a class="button-link-secondary" href="/apps/network-builder/standards.html">Standards and alignment</a>
+            <a class="button-link-secondary" href="/apps/network-builder/about.html">About and provenance</a>
+          </div>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card"><strong>First challenge</strong><span>Randomize terminals, run the default search once, then change only population size or mutation rate and compare the best network cost.</span></div>
+          <div class="stat-card"><strong>Key habit</strong><span>Discuss network design as optimization under constraints, not as a claim that real biological systems literally solve Steiner-tree math.</span></div>
+          <div class="stat-card"><strong>Legacy preserved</strong><span>The older <code>/apps/steiner/</code> route remains available as archive and provenance, while this page replaces the iframe wrapper with a direct workbench.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="network-app">
+      <section class="network-panel">
+        <div>
+          <p class="section-kicker">Run Actions</p>
+          <h2>Controls you will use first</h2>
+          <p class="settings-note">Keep terminal-definition, run, report, export, and import actions separate from the search parameters so learners can test one decision at a time.</p>
+        </div>
+        <div class="action-grid">
+          <button class="app-button" type="button" id="randomizeBtn">Randomize Terminals</button>
+          <button class="app-button secondary" type="button" id="manualBtn">Define Terminals Manually</button>
+          <button class="app-button" type="button" id="startBtn">Start Search</button>
+          <button class="app-button secondary" type="button" id="stopBtn">Stop</button>
+          <button class="app-button secondary" type="button" id="resumeBtn">Resume</button>
+          <button class="app-button secondary" type="button" id="clearBtn">Clear</button>
+          <button class="app-button secondary" type="button" id="reportBtn">Build Report</button>
+          <button class="app-button secondary" type="button" id="saveBtn">Save Summary JSON</button>
+          <button class="app-button secondary" type="button" id="exportBtn">Export Settings</button>
+          <label class="app-upload-label secondary" for="settingsImport">Import Settings</label>
+          <input class="visually-hidden" id="settingsImport" type="file" accept="application/json">
+          <button class="app-button secondary" type="button" id="playBtn">Play Animation</button>
+          <button class="app-button secondary" type="button" id="stopAnimBtn">Stop Animation</button>
+        </div>
+
+        <div>
+          <p class="section-kicker">Current Run Status</p>
+          <div class="status-grid">
+            <div class="status-card"><strong>Terminals</strong><span id="terminalCountField">0</span></div>
+            <div class="status-card"><strong>Generation</strong><span id="generationField">0</span></div>
+            <div class="status-card"><strong>Best cost</strong><span id="bestCostField">---</span></div>
+            <div class="status-card"><strong>Manual mode</strong><span id="manualModeField">Off</span></div>
+          </div>
+        </div>
+
+        <div>
+          <p class="section-kicker">Try This First</p>
+          <div class="starter-grid">
+            <div class="starter-card"><strong>Step 1</strong><span>Randomize five terminals and run the search once with the default settings.</span></div>
+            <div class="starter-card"><strong>Step 2</strong><span>Increase population size and compare whether the best cost falls more smoothly.</span></div>
+            <div class="starter-card"><strong>Step 3</strong><span>Switch to manual terminal placement and ask how network geometry changes what counts as a good solution.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="network-panel">
+        <div>
+          <p class="section-kicker">Main Display</p>
+          <h2>Best network, fitness history, and animation</h2>
+          <p class="settings-note">Keep the best-tree plot, cost history, and animation view visible together. That way the learner can compare geometry, total cost, and generational change without losing context.</p>
+        </div>
+        <div class="graph-grid">
+          <div class="surface-box plot-box"><div id="bestTreePlot"></div></div>
+          <div class="surface-box plot-box"><div id="fitnessPlot"></div></div>
+          <div class="surface-box plot-box"><div id="animationPlot"></div></div>
+        </div>
+        <div class="notes-grid">
+          <div class="note-card"><strong>What to notice</strong><span>Better networks emerge by repeated comparison and variation. They are not created by checking every possible network directly.</span></div>
+          <div class="note-card"><strong>Model limit</strong><span>This is a network-optimization demonstration. It helps discuss efficiency, search, and systems, but it is not a literal simulator of biological evolution or physical infrastructure planning.</span></div>
+          <div class="note-card"><strong>Connected pages</strong><span class="inline-links"><a href="/apps/route-optimizer/">Route Optimizer</a><a href="/apps/cumulative-selection-explorer/">Cumulative Selection Explorer</a><a href="/evo/scientific-virtues/">Scientific Virtues</a></span></div>
+        </div>
+      </section>
+
+      <section class="network-panel">
+        <div>
+          <p class="section-kicker">Settings</p>
+          <h2>Search parameters</h2>
+          <p class="settings-note">These values control terminal count, population size, generation depth, and mutation rate for the Steiner-style search.</p>
+        </div>
+        <form class="settings-form" id="settingsForm">
+          <div class="param-grid">
+            <div class="param-row"><label for="numTreeVertices">Number of terminals</label><input id="numTreeVertices" type="number" value="5" min="2"></div>
+            <div class="param-row"><label for="populationSize">Population size</label><input id="populationSize" type="number" value="50" min="10"></div>
+            <div class="param-row"><label for="generations">Generations</label><input id="generations" type="number" value="30" min="1"></div>
+            <div class="param-row"><label for="mutationRate">Mutation rate</label><input id="mutationRate" type="number" step="0.01" value="0.10" min="0" max="1"></div>
+          </div>
+        </form>
+        <div>
+          <button class="message-toggle" type="button" id="messageToggle">Show messages</button>
+          <div class="message-list" id="messageList" hidden></div>
+        </div>
+        <div class="surface-box">
+          <h3>Report</h3>
+          <textarea id="reportArea" style="width:100%;min-height:9rem;border:1px solid #c7d3e1;border-radius:12px;padding:0.8rem;box-sizing:border-box;font:inherit;" readonly></textarea>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer-card">
+      <div><h3>Network Builder application</h3><p>This direct workbench now exposes the Steiner-style optimization demo as a responsive evo-edu surface while preserving the older <code>/apps/steiner/</code> route as a provenance and archive reference.</p></div>
+      <small>Updated May 20, 2026</small>
+    </footer>
+  </div>
+
+  <script type="module">
+    const BOUND_MIN = 0;
+    const BOUND_MAX = 10;
+    let runInProgress = false;
+    let paused = false;
+    let manualEntryMode = false;
+    let animationIndex = 0;
+    let animationTimer = null;
+    let terminalPoints = [];
+    let bestSolutions = [];
+    let messagesOpen = false;
+    let currentPopulationSize = 50;
+    let currentMaxGenerations = 30;
+    let currentMutationRate = 0.1;
+
+    const messageList = document.getElementById('messageList');
+    const messageToggle = document.getElementById('messageToggle');
+    const reportArea = document.getElementById('reportArea');
+    const terminalCountField = document.getElementById('terminalCountField');
+    const generationField = document.getElementById('generationField');
+    const bestCostField = document.getElementById('bestCostField');
+    const manualModeField = document.getElementById('manualModeField');
+
+    function setMessagesOpen(open) {
+      messagesOpen = open;
+      messageList.hidden = !open;
+      messageToggle.textContent = open ? 'Hide messages' : 'Show messages';
+    }
+
+    function addMessage(text) {
+      const item = document.createElement('div');
+      item.className = 'message-item';
+      item.textContent = text;
+      messageList.prepend(item);
+    }
+
+    function clearMessages() {
+      messageList.innerHTML = '';
+    }
+
+    function updateStatus() {
+      terminalCountField.textContent = String(terminalPoints.length);
+      generationField.textContent = bestSolutions.length ? String(bestSolutions[bestSolutions.length - 1].generation) : '0';
+      bestCostField.textContent = bestSolutions.length ? bestSolutions[bestSolutions.length - 1].fitness.toFixed(2) : '---';
+      manualModeField.textContent = manualEntryMode ? 'On' : 'Off';
+    }
+
+    function distance(p1, p2) {
+      return Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
+    }
+
+    function clamp(value, minValue, maxValue) {
+      return Math.max(minValue, Math.min(maxValue, value));
+    }
+
+    function computeMst(points) {
+      if (points.length < 2) {
+        return { cost: 0, edges: [] };
+      }
+      let unvisited = [...points];
+      const visited = [];
+      const edges = [];
+      let totalDist = 0;
+      visited.push(unvisited.shift());
+      while (unvisited.length > 0) {
+        let bestEdgeDist = Infinity;
+        let bestPair = { from: null, to: null };
+        for (const v of visited) {
+          for (const u of unvisited) {
+            const d = distance(v, u);
+            if (d < bestEdgeDist) {
+              bestEdgeDist = d;
+              bestPair = { from: v, to: u };
+            }
+          }
+        }
+        totalDist += bestEdgeDist;
+        edges.push([bestPair.from, bestPair.to]);
+        visited.push(bestPair.to);
+        unvisited = unvisited.filter((point) => point !== bestPair.to);
+      }
+      return { cost: totalDist, edges };
+    }
+
+    function computeFitness(steinerPoints) {
+      return computeMst(terminalPoints.concat(steinerPoints)).cost;
+    }
+
+    function randomIndividual(numSteinerPoints = 2) {
+      const steinerPoints = [];
+      for (let i = 0; i < numSteinerPoints; i++) {
+        steinerPoints.push({
+          x: BOUND_MIN + (BOUND_MAX - BOUND_MIN) * Math.random(),
+          y: BOUND_MIN + (BOUND_MAX - BOUND_MIN) * Math.random()
+        });
+      }
+      return steinerPoints;
+    }
+
+    function initPopulation(popSize) {
+      return Array.from({ length: popSize }, () => randomIndividual());
+    }
+
+    function sortByFitness(population) {
+      return population.sort((a, b) => computeFitness(a) - computeFitness(b));
+    }
+
+    function crossover(parentA, parentB) {
+      const half = Math.floor(parentA.length / 2);
+      return parentA.slice(0, half).concat(parentB.slice(half));
+    }
+
+    function mutate(individual, rate) {
+      return individual.map((point) => {
+        if (Math.random() < rate) {
+          return {
+            x: clamp(point.x + (Math.random() - 0.5) * 2, BOUND_MIN, BOUND_MAX),
+            y: clamp(point.y + (Math.random() - 0.5) * 2, BOUND_MIN, BOUND_MAX)
+          };
+        }
+        return point;
+      });
+    }
+
+    function evolveOneGeneration(population) {
+      population = sortByFitness(population);
+      const best = population[0];
+      const bestCost = computeFitness(best);
+      bestSolutions.push({
+        generation: bestSolutions.length + 1,
+        solution: JSON.parse(JSON.stringify(best)),
+        fitness: bestCost
+      });
+      const nextGen = [];
+      const eliteCount = Math.max(1, Math.floor(population.length * 0.2));
+      for (let i = 0; i < eliteCount; i++) {
+        nextGen.push(population[i]);
+      }
+      while (nextGen.length < population.length) {
+        const parentA = population[Math.floor(Math.random() * eliteCount)];
+        const parentB = population[Math.floor(Math.random() * eliteCount)];
+        let child = crossover(parentA, parentB);
+        child = mutate(child, currentMutationRate);
+        nextGen.push(child);
+      }
+      return nextGen;
+    }
+
+    async function runEvolution() {
+      if (terminalPoints.length < 2) {
+        addMessage('Please define at least two terminals before starting the run.');
+        runInProgress = false;
+        updateStatus();
+        return;
+      }
+      let population = initPopulation(currentPopulationSize);
+      bestSolutions = [];
+      updatePlots();
+      updateStatus();
+      addMessage(`Starting search with ${terminalPoints.length} terminals, population ${currentPopulationSize}, ${currentMaxGenerations} generations, mutation rate ${currentMutationRate.toFixed(2)}.`);
+      for (let generation = 0; generation < currentMaxGenerations; generation++) {
+        if (!runInProgress) {
+          break;
+        }
+        population = evolveOneGeneration(population);
+        updatePlots();
+        updateStatus();
+        await new Promise((resolve) => setTimeout(resolve, 100));
+        while (paused && runInProgress) {
+          await new Promise((resolve) => setTimeout(resolve, 150));
+        }
+      }
+      runInProgress = false;
+      paused = false;
+      updateStatus();
+      if (bestSolutions.length) {
+        addMessage(`Run finished at generation ${bestSolutions[bestSolutions.length - 1].generation} with best cost ${bestSolutions[bestSolutions.length - 1].fitness.toFixed(2)}.`);
+      }
+    }
+
+    function plotLayout(title) {
+      return {
+        title,
+        xaxis: { range: [-1, 11] },
+        yaxis: { range: [-1, 11] },
+        margin: { l: 40, r: 20, t: 55, b: 40 },
+        showlegend: true
+      };
+    }
+
+    function plotSteinerState(targetId, generationData, title) {
+      const terminalsTrace = {
+        x: terminalPoints.map((point) => point.x),
+        y: terminalPoints.map((point) => point.y),
+        mode: 'markers',
+        marker: { color: '#c62828', size: 9 },
+        name: 'Terminals'
+      };
+      const steinerTrace = {
+        x: generationData ? generationData.solution.map((point) => point.x) : [],
+        y: generationData ? generationData.solution.map((point) => point.y) : [],
+        mode: 'markers',
+        marker: { color: '#205a9e', size: 7 },
+        name: 'Steiner points'
+      };
+      let lineX = [];
+      let lineY = [];
+      if (generationData) {
+        const allPoints = terminalPoints.concat(generationData.solution);
+        const mst = computeMst(allPoints);
+        mst.edges.forEach((edge) => {
+          lineX.push(edge[0].x, edge[1].x, null);
+          lineY.push(edge[0].y, edge[1].y, null);
+        });
+      }
+      const mstTrace = {
+        x: lineX,
+        y: lineY,
+        mode: 'lines',
+        line: { color: '#64748b', width: 2 },
+        name: 'Network'
+      };
+      Plotly.newPlot(targetId, [terminalsTrace, steinerTrace, mstTrace], plotLayout(title), { responsive: true }).then((graphDiv) => {
+        graphDiv.removeAllListeners?.('plotly_click');
+        graphDiv.on('plotly_click', (data) => {
+          if (!manualEntryMode) {
+            return;
+          }
+          terminalPoints.push({ x: data.points[0].x, y: data.points[0].y });
+          addMessage(`Added manual terminal at (${data.points[0].x.toFixed(2)}, ${data.points[0].y.toFixed(2)}).`);
+          updatePlots();
+          updateStatus();
+        });
+      });
+    }
+
+    function updatePlots() {
+      const bestSoFar = bestSolutions.length ? bestSolutions[bestSolutions.length - 1] : null;
+      const bestTitle = bestSoFar ? `Best network (cost=${bestSoFar.fitness.toFixed(2)})` : 'Best network';
+      plotSteinerState('bestTreePlot', bestSoFar, bestTitle);
+      const fitnessTrace = {
+        x: bestSolutions.map((entry) => entry.generation),
+        y: bestSolutions.map((entry) => entry.fitness),
+        mode: 'lines+markers',
+        line: { color: '#205a9e', width: 3 },
+        marker: { size: 6 },
+        name: 'Best cost'
+      };
+      Plotly.newPlot('fitnessPlot', [fitnessTrace], {
+        title: 'Best cost by generation',
+        xaxis: { title: 'Generation' },
+        yaxis: { title: 'MST cost (lower is better)' },
+        margin: { l: 55, r: 20, t: 55, b: 50 }
+      }, { responsive: true });
+      if (!bestSolutions.length) {
+        Plotly.newPlot('animationPlot', [], { title: 'Animation view', margin: { l: 40, r: 20, t: 55, b: 40 } }, { responsive: true });
+      }
+    }
+
+    function updateAnimationPlot() {
+      if (!bestSolutions.length) {
+        Plotly.newPlot('animationPlot', [], { title: 'No data', margin: { l: 40, r: 20, t: 55, b: 40 } }, { responsive: true });
+        return;
+      }
+      animationIndex = animationIndex % bestSolutions.length;
+      const generationData = bestSolutions[animationIndex];
+      plotSteinerState('animationPlot', generationData, `Animation generation ${generationData.generation} (cost=${generationData.fitness.toFixed(2)})`);
+      animationIndex += 1;
+    }
+
+    function startAnimation() {
+      if (!bestSolutions.length) {
+        addMessage('Run the search first before starting the animation.');
+        return;
+      }
+      stopAnimation();
+      animationIndex = 0;
+      updateAnimationPlot();
+      animationTimer = window.setInterval(updateAnimationPlot, 700);
+      addMessage('Animation started.');
+    }
+
+    function stopAnimation() {
+      if (animationTimer) {
+        window.clearInterval(animationTimer);
+        animationTimer = null;
+        addMessage('Animation stopped.');
+      }
+    }
+
+    function clearRun() {
+      runInProgress = false;
+      paused = false;
+      bestSolutions = [];
+      animationIndex = 0;
+      stopAnimation();
+      reportArea.value = '';
+      updatePlots();
+      updateStatus();
+    }
+
+    function randomizeVertices() {
+      if (runInProgress) {
+        addMessage('Stop the current run before randomizing terminals.');
+        return;
+      }
+      clearRun();
+      const count = parseInt(document.getElementById('numTreeVertices').value, 10);
+      terminalPoints = [];
+      for (let i = 0; i < count; i++) {
+        terminalPoints.push({
+          x: BOUND_MIN + (BOUND_MAX - BOUND_MIN) * Math.random(),
+          y: BOUND_MIN + (BOUND_MAX - BOUND_MIN) * Math.random()
+        });
+      }
+      manualEntryMode = false;
+      updatePlots();
+      updateStatus();
+      addMessage(`Randomized ${count} terminals.`);
+    }
+
+    function manualVertices() {
+      if (runInProgress) {
+        addMessage('Stop the current run before switching to manual entry.');
+        return;
+      }
+      clearRun();
+      terminalPoints = [];
+      manualEntryMode = true;
+      updatePlots();
+      updateStatus();
+      addMessage('Manual terminal mode is on. Click inside the Best network plot to add terminal points.');
+    }
+
+    function startRun() {
+      if (runInProgress) {
+        addMessage('A search is already in progress.');
+        return;
+      }
+      manualEntryMode = false;
+      currentPopulationSize = parseInt(document.getElementById('populationSize').value, 10);
+      currentMaxGenerations = parseInt(document.getElementById('generations').value, 10);
+      currentMutationRate = parseFloat(document.getElementById('mutationRate').value);
+      runInProgress = true;
+      paused = false;
+      updateStatus();
+      runEvolution();
+    }
+
+    function stopRun() {
+      if (runInProgress) {
+        runInProgress = false;
+        paused = false;
+        addMessage('Run stopped.');
+      }
+    }
+
+    function resumeRun() {
+      if (!runInProgress && bestSolutions.length > 0 && bestSolutions.length < currentMaxGenerations) {
+        runInProgress = true;
+        paused = false;
+        addMessage('Run resumed from the current settings. A new population is generated for the remaining generations.');
+        runEvolution();
+      } else if (runInProgress) {
+        paused = false;
+        addMessage('Run already in progress.');
+      } else {
+        addMessage('Nothing to resume yet.');
+      }
+    }
+
+    function buildReport() {
+      let text = '';
+      text += 'Run Parameters:\n';
+      text += `  Number of terminals: ${terminalPoints.length}\n`;
+      text += `  Population size:     ${currentPopulationSize}\n`;
+      text += `  Generations:         ${currentMaxGenerations}\n`;
+      text += `  Mutation rate:       ${currentMutationRate}\n\n`;
+      if (bestSolutions.length) {
+        const last = bestSolutions[bestSolutions.length - 1];
+        text += 'Results:\n';
+        text += `  Final generation: ${last.generation}\n`;
+        text += `  Best cost:        ${last.fitness.toFixed(2)}\n`;
+      } else {
+        text += 'No search results are available yet.\n';
+      }
+      reportArea.value = text;
+      addMessage('Report updated.');
+    }
+
+    function summaryPayload() {
+      return {
+        app: 'network-builder',
+        exported_at: new Date().toISOString(),
+        settings: {
+          numTreeVertices: parseInt(document.getElementById('numTreeVertices').value, 10),
+          populationSize: parseInt(document.getElementById('populationSize').value, 10),
+          generations: parseInt(document.getElementById('generations').value, 10),
+          mutationRate: parseFloat(document.getElementById('mutationRate').value)
+        },
+        terminal_points: terminalPoints,
+        best_solutions: bestSolutions
+      };
+    }
+
+    function saveJson(filename, payload) {
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }
+
+    function exportSettings() {
+      saveJson('network-builder-settings.json', {
+        numTreeVertices: parseInt(document.getElementById('numTreeVertices').value, 10),
+        populationSize: parseInt(document.getElementById('populationSize').value, 10),
+        generations: parseInt(document.getElementById('generations').value, 10),
+        mutationRate: parseFloat(document.getElementById('mutationRate').value)
+      });
+      addMessage('Settings exported.');
+    }
+
+    async function importSettings(event) {
+      const file = event.target.files?.[0];
+      if (!file) {
+        return;
+      }
+      const text = await file.text();
+      const data = JSON.parse(text);
+      if (typeof data.numTreeVertices === 'number') document.getElementById('numTreeVertices').value = String(data.numTreeVertices);
+      if (typeof data.populationSize === 'number') document.getElementById('populationSize').value = String(data.populationSize);
+      if (typeof data.generations === 'number') document.getElementById('generations').value = String(data.generations);
+      if (typeof data.mutationRate === 'number') document.getElementById('mutationRate').value = String(data.mutationRate);
+      addMessage('Settings imported.');
+      event.target.value = '';
+    }
+
+    document.getElementById('randomizeBtn').addEventListener('click', randomizeVertices);
+    document.getElementById('manualBtn').addEventListener('click', manualVertices);
+    document.getElementById('startBtn').addEventListener('click', startRun);
+    document.getElementById('stopBtn').addEventListener('click', stopRun);
+    document.getElementById('resumeBtn').addEventListener('click', resumeRun);
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      clearRun();
+      terminalPoints = [];
+      manualEntryMode = false;
+      clearMessages();
+      updateStatus();
+      addMessage('Workbench cleared.');
+    });
+    document.getElementById('reportBtn').addEventListener('click', buildReport);
+    document.getElementById('saveBtn').addEventListener('click', () => {
+      saveJson('network-builder-summary.json', summaryPayload());
+      addMessage('Summary JSON saved.');
+    });
+    document.getElementById('exportBtn').addEventListener('click', exportSettings);
+    document.getElementById('settingsImport').addEventListener('change', importSettings);
+    document.getElementById('playBtn').addEventListener('click', startAnimation);
+    document.getElementById('stopAnimBtn').addEventListener('click', stopAnimation);
+    messageToggle.addEventListener('click', () => setMessagesOpen(!messagesOpen));
+
+    setMessagesOpen(false);
+    updatePlots();
+    updateStatus();
+    addMessage('Network Builder ready. Start by randomizing or manually defining terminals.');
+  </script>
+</body>
+</html>

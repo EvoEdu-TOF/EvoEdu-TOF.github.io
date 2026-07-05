@@ -1,0 +1,30 @@
+
+docker compose -f compose-forgejo.yml --env-file .env up -d
+
+
+
+    Initial Forgejo admin: open https://$GIT_DOMAIN and complete setup. (Official Docker install & image tags here.)
+    Forgejo
+
+    Register the runner: in Forgejo → (global/org/repo) Actions → Runners → New, copy the token. Then:
+
+
+
+docker compose -f compose-forgejo.yml  exec forgejo-runner forgejo-runner register
+# follow prompts, set instance URL to https://$GIT_DOMAIN, paste token
+docker compose -f compose-forgejo.yml  exec forgejo-runner forgejo-runner daemon
+
+(Runner details & “mimic GitHub runner” notes.) 
+Forgejo
++1
+
+4) Docs deploy from CI: rsync or scp built site to project-docs volume path (/usr/share/nginx/html/).
+5) Traefik reminder: services attach to an external traefik network and use labels for routing. (Compose + Traefik label pattern.) 
+doc.traefik.io
+
+6) Optional HedgeDoc gives real-time collaborative notes; reverse-proxy guidance + env keys shown above. 
+docs.hedgedoc.dev
+LinuxServer.io
+
+  # OPTIONAL: collaborative Markdown editor (HedgeDoc)
+  # Enable with:  docker compose -f compose-forgejo.yml --profile notes up -d

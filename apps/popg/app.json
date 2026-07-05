@@ -1,0 +1,11 @@
+{
+  "slug": "popg",
+  "title": "PopG",
+  "published": false,
+  "visibility": "legacy",
+  "role": "Underlying implementation directory for the public Allele Tracker route.",
+  "category": "population-genetics",
+  "entrypoint": "/apps/popg/index.html",
+  "description": "Retained behind the public Allele Tracker framing.",
+  "legacy_names": ["JS PopG", "PopG"]
+}

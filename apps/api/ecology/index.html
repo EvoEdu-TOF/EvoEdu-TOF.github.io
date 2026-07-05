@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ecology API - evo-edu.org</title>
+  <link rel="stylesheet" href="/shared/evo-edu.css">
+  <script src="/shared/evo-shell.js" defer></script>
+  <script src="/apps/api/ecology/ecology.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-topbar">
+      <div class="brand-block">
+        <span class="brand-mark">App API</span>
+        <a href="/">evo-edu.org</a>
+        <p class="brand-summary">Shared programmable interfaces for the ecology remediation family.</p>
+      </div>
+      <nav class="site-nav" data-evo-nav></nav>
+    </header>
+
+    <section class="hero-card">
+      <p class="eyebrow">Ecology API</p>
+      <h1>Programmable simulation interfaces for EcoBalance and Climate Range Shifter.</h1>
+      <p class="lede lede-strong">
+        This family API is the ecology-side counterpart to the population-genetics module. It
+        provides reusable simulation functions for browser use and automated tests while the legacy
+        interfaces remain in place.
+      </p>
+    </section>
+
+    <section class="content-card">
+      <p class="section-kicker">Available Interfaces</p>
+      <div class="api-reference">
+        <article class="api-endpoint">
+          <div class="api-endpoint-header">
+            <h3>EcoBalance</h3>
+            <span class="api-badge">Prototype</span>
+          </div>
+          <p>Run predator-prey and ecological-feedback simulations with reusable parameter input.</p>
+          <div class="api-signature"><code>window.evoEduApis.ecology.ecobalance.runSimulation(params)</code></div>
+          <div class="api-meta">
+            <div><strong>Family</strong><span>Ecology</span></div>
+            <div><strong>Used by</strong><span><a href="/apps/ecobalance/">EcoBalance</a></span></div>
+            <div><strong>Input shape</strong><span>Simulation parameters object</span></div>
+            <div><strong>Status</strong><span>Shared browser and node-consumable family API module.</span></div>
+          </div>
+        </article>
+        <article class="api-endpoint">
+          <div class="api-endpoint-header">
+            <h3>Climate Range Shifter</h3>
+            <span class="api-badge">Prototype</span>
+          </div>
+          <p>Run climate-linked range-change simulations for suitability, mismatch, and movement.</p>
+          <div class="api-signature"><code>window.evoEduApis.ecology.climateRangeShifter.runSimulation(params)</code></div>
+          <div class="api-meta">
+            <div><strong>Family</strong><span>Ecology</span></div>
+            <div><strong>Used by</strong><span><a href="/apps/climate-range-shifter/">Climate Range Shifter</a></span></div>
+            <div><strong>Input shape</strong><span>Simulation parameters object</span></div>
+            <div><strong>Status</strong><span>Shared browser and node-consumable family API module.</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer-card">
+      <div>
+        <h3>Ecology API</h3>
+        <p>The next step is to connect the legacy app interfaces to this shared family layer and expand tests to cover edge cases and parameter validation.</p>
+      </div>
+      <small>Updated March 28, 2026</small>
+    </footer>
+  </div>
+</body>
+</html>

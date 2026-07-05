@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mendel's Accountant Simulator</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2rem;
+      background: #f4f4f4;
+    }
+    .container {
+      max-width: 960px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+    }
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+    }
+    canvas {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mendel's Accountant Simulator</h1>
+    <label>Generations
+      <input type="number" id="generations" value="100" min="1">
+    </label>
+    <label>Population Size
+      <input type="number" id="populationSize" value="500" min="1">
+    </label>
+    <label>Mutations per Individual
+      <input type="number" id="mutationsPerIndividual" value="10" step="0.1" min="0">
+    </label>
+    <label>Offspring per Female
+      <input type="number" id="offspringPerFemale" value="6" step="0.1" min="2">
+    </label>
+    <label>Beneficial Mutation Ratio
+      <input type="number" id="beneficialRatio" value="0.00001" step="0.00001" min="0" max="1">
+    </label>
+    <button onclick="runSimulation()">Run Simulation</button>
+    <canvas id="chart" width="800" height="400"></canvas>
+  </div>
+
+  <script>
+    function poisson(lambda) {
+      let L = Math.exp(-lambda);
+      let k = 0;
+      let p = 1;
+      do {
+        k++;
+        p *= Math.random();
+      } while (p > L);
+      return k - 1;
+    }
+
+    function runSimulation() {
+      const generations = parseInt(document.getElementById('generations').value);
+      const populationSize = parseInt(document.getElementById('populationSize').value);
+      const mutationsPerIndividual = parseFloat(document.getElementById('mutationsPerIndividual').value);
+      const beneficialRatio = parseFloat(document.getElementById('beneficialRatio').value);
+
+      let fitnessData = [];
+      let deleteriousData = [];
+      let beneficialData = [];
+
+      let population = new Array(populationSize).fill(1.0);
+
+      for (let gen = 0; gen < generations; gen++) {
+        let newPopulation = [];
+        let delMutations = 0;
+        let benMutations = 0;
+
+        for (let i = 0; i < populationSize; i++) {
+          let individualFitness = 1.0;
+          let numMut = poisson(mutationsPerIndividual);
+          for (let m = 0; m < numMut; m++) {
+            if (Math.random() < beneficialRatio) {
+              let effect = Math.random() * 0.001;
+              individualFitness += effect;
+              benMutations++;
+            } else {
+              let effect = Math.random() * 0.01;
+              individualFitness -= effect;
+              delMutations++;
+            }
+          }
+          newPopulation.push(Math.max(individualFitness, 0));
+        }
+
+        population = newPopulation.sort((a, b) => b - a).slice(0, populationSize);
+        let avgFitness = population.reduce((a, b) => a + b, 0) / populationSize;
+        fitnessData.push(avgFitness);
+        deleteriousData.push(delMutations / populationSize);
+        beneficialData.push(benMutations / populationSize);
+      }
+
+      renderChart(fitnessData, deleteriousData, beneficialData);
+    }
+
+    let chartInstance;
+    function renderChart(fitnessData, delData, benData) {
+      const ctx = document.getElementById('chart').getContext('2d');
+      if (chartInstance) chartInstance.destroy();
+
+      chartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: fitnessData.map((_, i) => i + 1),
+          datasets: [
+            {
+              label: 'Mean Fitness',
+              data: fitnessData,
+              borderColor: 'blue',
+              fill: false,
+            },
+            {
+              label: 'Deleterious Mutations/Individual',
+              data: delData,
+              borderColor: 'red',
+              fill: false,
+            },
+            {
+              label: 'Beneficial Mutations/Individual',
+              data: benData,
+              borderColor: 'green',
+              fill: false,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom',
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    }
+  </script>
+</body>
+</html>
+

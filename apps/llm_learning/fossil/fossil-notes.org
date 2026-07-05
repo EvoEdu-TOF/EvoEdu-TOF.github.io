@@ -1,0 +1,16 @@
+
+
+# bring it up
+docker compose -f compose-fossil.yml --env-file .env up -d
+
+# create your first repository with named admin (inside the container):
+docker compose -f compose-fossil.yml exec fossil sh -lc 'fossil new -A admin /data/repos/llmlearning.fossil'
+WARN[0000] /opt/www/dev/evo-edu.org/wordpress_data/apps/llm_learning/fossil/compose-fossil.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+project-id: 66faa406e7646c43a7f81e2f52c14fc39d74f08b
+server-id:  cac3980a32bc7c9be24776fa3607bf329de5c79f
+admin-user: admin (initial password is "qDV95MQixe")
+
+
+# set the admin password for that repo:
+docker compose -f compose-fossil.yml exec fossil sh -lc 'fossil user password admin SkinnerRosenblattWerbosLevine -R /data/repos/llmlearning.fossil'
+

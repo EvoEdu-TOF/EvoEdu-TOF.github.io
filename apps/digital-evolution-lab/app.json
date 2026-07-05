@@ -1,0 +1,58 @@
+{
+  "slug": "digital-evolution-lab",
+  "title": "Digital Evolution Lab",
+  "published": true,
+  "visibility": "public",
+  "role": "Run digital evolution experiments to explore mutation, selection, adaptation, and evidence from evolving systems.",
+  "category": "artificial-life",
+  "entrypoint": "/apps/digital-evolution-lab/",
+  "description": "The evo-edu public entry point into Avida-ED and related digital-evolution learning materials.",
+  "legacy_names": ["Avida-ED"],
+  "pages": {
+    "landing": "/apps/digital-evolution-lab/",
+    "application": "/apps/digital-evolution-lab/app/",
+    "study_guide": "/apps/digital-evolution-lab/study-guide.html",
+    "curriculum_alignment": "/apps/digital-evolution-lab/curriculum-alignment.html",
+    "teacher_guide": "/apps/digital-evolution-lab/teacher-guide.html",
+    "standards": "/apps/digital-evolution-lab/standards.html",
+    "about": "/apps/digital-evolution-lab/about.html"
+  },
+  "implementation": {
+    "legacy_hub": "/avida-ed.html",
+    "launch_target": "/avida-ed.html"
+  },
+  "api": {
+    "status": "legacy-exempt",
+    "notes": "The public route is standardized, but the underlying runtime remains the legacy Avida-ED environment and is intentionally outside the current API-remediation tranche."
+  },
+  "tests": {
+    "status": "legacy-exempt",
+    "notes": "Legacy-backed route; current remediation work standardizes public surfaces without rewriting the underlying Avida-ED runtime."
+  },
+  "status": {
+    "landing": "standardized",
+    "application": "legacy-launch-surface",
+    "study_guide": "present",
+    "teacher_guide": "present",
+    "standards": "present",
+    "curriculum_alignment": "present",
+    "about": "present",
+    "api": "legacy-exempt",
+    "tests": "legacy-exempt"
+  },
+  "provenance": {
+    "summary": "Digital Evolution Lab is the evo-edu.org public route into the legacy Avida-ED environment.",
+    "details": "The remediation work here strengthens the learner, teacher, standards, and provenance surfaces without claiming that the underlying runtime has been rewritten inside evo-edu.org.",
+    "lineage": [
+      "Public evo-edu route: Digital Evolution Lab",
+      "Current launch surface: /apps/digital-evolution-lab/app/",
+      "Underlying legacy runtime: /avida-ed.html",
+      "Educational lineage: Avida-ED digital evolution environment"
+    ],
+    "limits": [
+      "The runtime remains the legacy Avida-ED environment and is currently outside the direct API-remediation tranche.",
+      "The route is strongest when paired with explicit experimental framing rather than free exploration alone.",
+      "The environment is useful for discussing mutation, selection, adaptation, and contingency, but it should not be over-read as a full model of biological evolution."
+    ]
+  }
+}

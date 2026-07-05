@@ -1,0 +1,25 @@
+\begin{table}[ht]
+\centering
+\begin{tabular}{|p{0.22\textwidth}|p{0.34\textwidth}|p{0.34\textwidth}|}
+\hline
+\textbf{Learning Paradigm} & \textbf{Biological Example} & \textbf{Machine-Learning Counterpart} \\
+\hline
+Operant conditioning & Matching law in pigeons (Herrnstein, 1961) & Maximum likelihood training (strict matching) \\
+\hline
+Reinforcement with bias/sensitivity & Generalized matching (Baum, 1974) & KL-regularized RLHF/DPO (sensitivity parameter $\beta$) \\
+\hline
+Inference temperature & Response variability scaling & Logit temperature scaling in sampling \\
+\hline
+Classical conditioning & Pavlov’s dogs (stimulus–response) & Supervised learning (input–output mapping) \\
+\hline
+Hebbian learning & Synaptic plasticity & Self-supervised representation learning \\
+\hline
+Observational learning & Imitation in primates & In-context learning / few-shot prompting \\
+\hline
+Memory constraints & Working memory span, recency effects & Context window size, recency bias in attention \\
+\hline
+\end{tabular}
+\caption{Mapping of psychological learning paradigms to machine-learning counterparts, extended to include memory constraints.}
+\label{tab:paradigm_mapping}
+\end{table}
+

@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cumulative Selection Explorer Application - evo-edu.org</title>
+  <link rel="stylesheet" href="/shared/evo-edu.css">
+  <script src="/shared/evo-shell.js" defer></script>
+  <script src="/apps/api/artificial-life/artificial-life.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <style>
+    .cumulative-app {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      align-items: start;
+    }
+    .cumulative-panel {
+      background: #fff;
+      border: 1px solid #d6deea;
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      padding: 1.25rem;
+      display: grid;
+      gap: 1rem;
+    }
+    .cumulative-panel h2,
+    .cumulative-panel h3,
+    .cumulative-panel p {
+      margin: 0;
+    }
+    .cumulative-panel p,
+    .cumulative-panel li {
+      line-height: 1.55;
+    }
+    .action-grid,
+    .status-grid,
+    .starter-grid,
+    .notes-grid,
+    .param-grid,
+    .table-grid,
+    .explainer-grid,
+    .metric-grid {
+      display: grid;
+      gap: 0.85rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .app-button,
+    .app-upload-label,
+    .message-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 3rem;
+      padding: 0.8rem 1rem;
+      border: 1px solid #205a9e;
+      border-radius: 12px;
+      background: #205a9e;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .app-button.secondary,
+    .app-upload-label.secondary,
+    .message-toggle {
+      background: #f6f9fc;
+      color: #1f2937;
+      border-color: #c5d1e0;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .status-card,
+    .starter-card,
+    .note-card,
+    .table-card,
+    .metric-card {
+      background: #f6f9fc;
+      border: 1px solid #d6deea;
+      border-radius: 14px;
+      padding: 0.95rem 1rem;
+    }
+    .status-card strong,
+    .starter-card strong,
+    .note-card strong,
+    .table-card strong {
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+    .settings-form,
+    .message-list {
+      display: grid;
+      gap: 0.85rem;
+    }
+    .param-row {
+      display: grid;
+      gap: 0.35rem;
+    }
+    .param-row label {
+      font-weight: 700;
+      color: #243447;
+    }
+    .param-row input,
+    .param-row textarea {
+      width: 100%;
+      min-height: 2.8rem;
+      padding: 0.65rem 0.7rem;
+      border: 1px solid #c7d3e1;
+      border-radius: 10px;
+      font: inherit;
+      box-sizing: border-box;
+    }
+    .param-row textarea {
+      min-height: 6rem;
+      resize: vertical;
+    }
+    .plot-box {
+      min-height: 420px;
+      border: 1px solid #d6deea;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+      padding: 1rem;
+    }
+    .plot-box svg {
+      width: 100%;
+      height: 360px;
+      display: block;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      font-size: 0.95rem;
+    }
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .legend-swatch {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      display: inline-block;
+    }
+    .legend-score { background: #205a9e; }
+    .legend-target { background: #7c3aed; }
+    .candidate-display,
+    .target-display {
+      font-family: "Courier New", monospace;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      word-break: break-word;
+      background: #fff;
+      border: 1px solid #d6deea;
+      border-radius: 12px;
+      padding: 0.85rem;
+    }
+    .inline-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+    .inline-links a {
+      color: #205a9e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .message-item {
+      background: #fff;
+      border-left: 4px solid #205a9e;
+      border-radius: 10px;
+      padding: 0.75rem 0.85rem;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+    }
+    .explainer-chart {
+      min-height: 420px;
+      border: 1px solid #d6deea;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+      padding: 0.5rem;
+    }
+    .explainer-formula {
+      font-family: "Courier New", monospace;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      word-break: break-word;
+      background: #fff;
+      border: 1px solid #d6deea;
+      border-radius: 12px;
+      padding: 0.85rem;
+    }
+    .explainer-note {
+      color: #334155;
+      line-height: 1.6;
+    }
+    .metric-card .metric-name {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: #334155;
+      font-weight: 700;
+    }
+    .metric-card .metric-value {
+      font-size: 1.15rem;
+      color: #0f172a;
+      font-weight: 700;
+    }
+    @media (max-width: 1024px) {
+      .cumulative-app {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 640px) {
+      .action-grid,
+      .status-grid,
+      .starter-grid,
+      .notes-grid,
+      .param-grid,
+      .table-grid {
+        grid-template-columns: 1fr;
+      }
+      .plot-box {
+        min-height: 320px;
+      }
+      .plot-box svg {
+        height: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-topbar">
+      <div class="brand-block">
+        <span class="brand-mark">Artificial Life</span>
+        <a href="/">evo-edu.org</a>
+        <p class="brand-summary">Weasel-style selection demonstration for variation, selection, and cumulative change.</p>
+      </div>
+      <nav class="site-nav" data-evo-nav></nav>
+    </header>
+
+    <section class="hero-card">
+      <p class="eyebrow">Application</p>
+      <div class="hero-grid">
+        <div>
+          <h1>Cumulative Selection Explorer</h1>
+          <p class="lede lede-strong">Use a direct responsive workbench to compare score improvement under cumulative selection, while keeping the older Weasel-style route available as a legacy reference.</p>
+          <div class="hero-actions">
+            <a class="button-link" href="/apps/cumulative-selection-explorer/study-guide.html">Learner guide</a>
+            <a class="button-link-secondary" href="/apps/cumulative-selection-explorer/teacher-guide.html">Teacher guide</a>
+            <a class="button-link-secondary" href="/apps/cumulative-selection-explorer/about.html">About and provenance</a>
+            <a class="button-link-secondary" href="/apps/weasel/weaselui.html" target="_blank" rel="noopener">Open legacy Weasel</a>
+          </div>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card"><strong>First challenge</strong><span>Run the default target once, then raise mutation rate and compare whether score improvement stays smooth.</span></div>
+          <div class="stat-card"><strong>Key habit</strong><span>Treat this as a model for discussing cumulative selection and model limits, not as a miniature substitute for full biological evolution.</span></div>
+          <div class="stat-card"><strong>Legacy memorialized</strong><span>The older Weasel-style route remains available as a legacy reference while this direct workbench replaces the iframe workflow.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div id="cumulative-app" class="cumulative-app">
+      <section class="cumulative-panel">
+        <div>
+          <p class="section-kicker">Run Actions</p>
+          <h2>Controls you will use first</h2>
+          <p class="settings-note">Keep run, save, export, and import actions separate from target and mutation settings so the first useful comparison is clear.</p>
+        </div>
+        <div class="action-grid">
+          <button class="app-button" type="button" id="runButton">Run Simulation</button>
+          <button class="app-button secondary" type="button" id="resetButton">Reset Defaults</button>
+          <button class="app-button secondary" type="button" id="saveButton">Save Summary JSON</button>
+          <button class="app-button secondary" type="button" id="exportButton">Export Settings</button>
+          <label class="app-upload-label secondary" for="settingsImport">Import Settings</label>
+          <input class="visually-hidden" id="settingsImport" type="file" accept="application/json">
+        </div>
+
+        <div>
+          <p class="section-kicker">Current Run Status</p>
+          <div class="status-grid">
+            <div class="status-card">
+              <strong>Final score</strong>
+              <span id="statusScore">0</span>
+            </div>
+            <div class="status-card">
+              <strong>Target length</strong>
+              <span id="statusTargetLength">0</span>
+            </div>
+            <div class="status-card">
+              <strong>Final generation</strong>
+              <span id="statusGeneration">0</span>
+            </div>
+            <div class="status-card">
+              <strong>Mutation rate</strong>
+              <span id="statusMutation">0</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="section-kicker">Try This First</p>
+          <div class="starter-grid">
+            <div class="starter-card">
+              <strong>Step 1</strong>
+              <span>Run the defaults and watch how score changes across generations.</span>
+            </div>
+            <div class="starter-card">
+              <strong>Step 2</strong>
+              <span>Raise mutation rate and compare whether progress becomes noisier or faster.</span>
+            </div>
+            <div class="starter-card">
+              <strong>Step 3</strong>
+              <span>Ask what this model does show about cumulative selection and what it does not show about real evolution.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cumulative-panel">
+        <div>
+          <p class="section-kicker">Main Display</p>
+          <h2>Score progression across generations</h2>
+          <p class="settings-note">The line shows how many target characters match at each generation. Use this to compare different mutation rates, targets, and starting strings.</p>
+        </div>
+        <div class="plot-box">
+          <svg id="cumulativeChart" viewBox="0 0 760 360" aria-label="Cumulative Selection Explorer chart" role="img"></svg>
+        </div>
+        <div class="legend">
+          <span class="legend-item"><span class="legend-swatch legend-score"></span> Matching-character score</span>
+          <span class="legend-item"><span class="legend-swatch legend-target"></span> Target length ceiling</span>
+        </div>
+        <div class="notes-grid">
+          <div class="note-card">
+            <strong>What to notice</strong>
+            <span>Compare visible score improvement with the explainer panel below, which shows why population-level preservation can make rollback of the best candidate rare.</span>
+          </div>
+          <div class="note-card">
+            <strong>Compare mechanisms</strong>
+            <span>Change one factor at a time so you can compare mutation-rate effects without confusing them with target changes.</span>
+          </div>
+          <div class="note-card">
+            <strong>Notebook links</strong>
+            <span class="inline-links">
+              <a href="/notebook/concepts/population-thinking.html">Population Thinking</a>
+              <a href="/notebook/concepts/natural-selection.html">Natural Selection</a>
+              <a href="/notebook/concepts/adaptation.html">Adaptation</a>
+            </span>
+          </div>
+        </div>
+        <div class="table-grid">
+          <div class="table-card">
+            <strong>Candidate and target</strong>
+            <div class="target-display" id="targetDisplay">Target</div>
+            <div class="candidate-display" id="candidateDisplay">Candidate</div>
+          </div>
+          <div class="table-card">
+            <strong>Interpretation prompt</strong>
+            <p id="interpretationText">Run the baseline case first, then compare one changed parameter.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cumulative-panel">
+        <div>
+          <p class="section-kicker">Settings</p>
+          <h2>Selection-demo parameters</h2>
+          <p class="settings-note">These values control the target phrase, starting candidate, mutation rate, number of generations, and random seed.</p>
+        </div>
+        <form class="settings-form" id="settingsForm">
+          <div class="param-grid">
+            <div class="param-row">
+              <label for="target">Target</label>
+              <textarea id="target" name="target">METHINKS IT IS LIKE A WEASEL</textarea>
+            </div>
+            <div class="param-row">
+              <label for="start">Starting candidate</label>
+              <textarea id="start" name="start"></textarea>
+            </div>
+            <div class="param-row">
+              <label for="mutationRate">Mutation rate (%)</label>
+              <input id="mutationRate" name="mutationRate" type="number" min="0" max="100" step="1" value="5">
+            </div>
+            <div class="param-row">
+              <label for="generations">Generations</label>
+              <input id="generations" name="generations" type="number" min="1" max="80" step="1" value="25">
+            </div>
+            <div class="param-row">
+              <label for="seed">Random seed</label>
+              <input id="seed" name="seed" type="number" min="1" max="9999" step="1" value="2">
+            </div>
+          </div>
+        </form>
+
+        <div>
+          <button class="message-toggle" type="button" id="messageToggle">Show messages</button>
+          <div class="message-list" id="messageList" hidden></div>
+        </div>
+      </section>
+
+      <section class="cumulative-panel">
+        <div>
+          <p class="section-kicker">Probability Explainer</p>
+          <h2>Why best-candidate rollback can become rare without locking</h2>
+          <p class="settings-note">This panel visualizes the population-level quantity that matters in the classic Weasel debate: the probability that a daughter population contains at least one candidate preserving all currently correct positions from the previous best candidate.</p>
+        </div>
+
+        <div class="explainer-grid">
+          <div class="param-row">
+            <label for="explainerAlphabet">Alphabet size K</label>
+            <input id="explainerAlphabet" type="number" min="2" max="60" step="1" value="27">
+          </div>
+          <div class="param-row">
+            <label for="explainerLength">Target length L</label>
+            <input id="explainerLength" type="number" min="4" max="80" step="1" value="28">
+          </div>
+          <div class="param-row">
+            <label for="explainerCorrect">Currently correct bases C</label>
+            <input id="explainerCorrect" type="number" min="0" max="28" step="1" value="27">
+          </div>
+          <div class="param-row">
+            <label for="explainerMutation">Mutation rate u</label>
+            <input id="explainerMutation" type="number" min="0.001" max="0.25" step="0.001" value="0.05">
+          </div>
+          <div class="param-row">
+            <label for="explainerMaxPopulation">Max population size N</label>
+            <input id="explainerMaxPopulation" type="number" min="5" max="1000" step="5" value="200">
+          </div>
+        </div>
+
+        <div class="action-grid">
+          <button class="app-button secondary" type="button" id="explainerStandard">Standard Weasel</button>
+          <button class="app-button secondary" type="button" id="explainerSmallPopulation">Small Population</button>
+          <button class="app-button secondary" type="button" id="explainerHighMutation">High Mutation</button>
+          <button class="app-button secondary" type="button" id="explainerNearConvergence">Near Convergence</button>
+        </div>
+
+        <div class="metric-grid">
+          <div class="metric-card">
+            <span class="metric-name">One daughter preserves all current correct bases</span>
+            <span class="metric-value" id="explainerOrgPreserve">0</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-name">Population preservation probability at max N</span>
+            <span class="metric-value" id="explainerPopPreserve">0</span>
+          </div>
+        </div>
+
+        <div class="explainer-formula">
+          P(population preserves all current correct bases)
+          = 1 - (1 - (1 - u(K - 1)/K)<sup>C</sup>)<sup>N</sup>
+        </div>
+
+        <div class="explainer-chart" id="explainerChart" aria-label="Probability explainer chart"></div>
+
+        <div class="notes-grid">
+          <div class="note-card">
+            <strong>Interpretation</strong>
+            <span class="explainer-note" id="explainerInterpretation">A larger population sharply increases the chance that at least one daughter preserves everything the current best candidate already got right.</span>
+          </div>
+          <div class="note-card">
+            <strong>Why this matters</strong>
+            <span class="explainer-note">This is the population-thinking point behind the claim that visible rollback of the sampled best candidate can be rare without any locking mechanism.</span>
+          </div>
+          <div class="note-card">
+            <strong>Austringer companion</strong>
+            <span class="inline-links">
+              <a href="/apps/cumulative-selection-explorer/about.html">About and provenance</a>
+              <a href="/notebook/concepts/population-thinking.html">Population Thinking</a>
+            </span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer-card">
+      <div><h3>Cumulative Selection Explorer application</h3><p>This direct workbench now uses the shared artificial-life API instead of an iframe wrapper, while the older Weasel-style route remains available as a legacy reference.</p></div>
+      <small>Updated May 16, 2026</small>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      const defaults = {
+        target: 'METHINKS IT IS LIKE A WEASEL',
+        start: '',
+        mutationRate: 5,
+        generations: 25,
+        seed: 2,
+      };
+      const chart = document.getElementById('cumulativeChart');
+      const form = document.getElementById('settingsForm');
+      const messageList = document.getElementById('messageList');
+      const messageToggle = document.getElementById('messageToggle');
+      const explainerForm = {
+        alphabet: document.getElementById('explainerAlphabet'),
+        length: document.getElementById('explainerLength'),
+        correct: document.getElementById('explainerCorrect'),
+        mutation: document.getElementById('explainerMutation'),
+        maxPopulation: document.getElementById('explainerMaxPopulation'),
+      };
+      let messagesOpen = false;
+      let currentResult = null;
+
+      function getParams() {
+        return {
+          target: String(form.target.value || defaults.target),
+          start: String(form.start.value || ''),
+          mutationRate: Number(form.mutationRate.value),
+          generations: Number(form.generations.value),
+          seed: Number(form.seed.value),
+        };
+      }
+
+      function setDefaults() {
+        Object.entries(defaults).forEach(([key, value]) => {
+          form[key].value = value;
+        });
+      }
+
+      function addMessage(text) {
+        const item = document.createElement('div');
+        item.className = 'message-item';
+        item.textContent = text;
+        messageList.prepend(item);
+      }
+
+      function setMessagesOpen(open) {
+        messagesOpen = open;
+        messageList.hidden = !open;
+        messageToggle.textContent = open ? 'Hide messages' : 'Show messages';
+      }
+
+      function pointsFor(values, width, height, xPad, yPad, maxValue) {
+        const maxStep = Math.max(1, values.length - 1);
+        return values.map((value, index) => {
+          const x = xPad + (index / maxStep) * (width - xPad * 2);
+          const y = height - yPad - ((value / maxValue) * (height - yPad * 2));
+          return `${x.toFixed(2)},${y.toFixed(2)}`;
+        }).join(' ');
+      }
+
+      function drawChart(result) {
+        const scores = result.history.map((entry) => entry.score);
+        const targetLength = result.target.length;
+        const width = 760;
+        const height = 360;
+        const xPad = 56;
+        const yPad = 32;
+        const scorePoints = pointsFor(scores, width, height, xPad, yPad, targetLength || 1);
+        const ceilingPoints = pointsFor(new Array(scores.length).fill(targetLength), width, height, xPad, yPad, targetLength || 1);
+        chart.innerHTML = `
+          <rect x="0" y="0" width="${width}" height="${height}" fill="#ffffff"></rect>
+          <line x1="${xPad}" y1="${height - yPad}" x2="${width - xPad}" y2="${height - yPad}" stroke="#9aa9bc" stroke-width="2"></line>
+          <line x1="${xPad}" y1="${yPad}" x2="${xPad}" y2="${height - yPad}" stroke="#9aa9bc" stroke-width="2"></line>
+          <polyline fill="none" stroke="#205a9e" stroke-width="4" points="${scorePoints}"></polyline>
+          <polyline fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="8 8" points="${ceilingPoints}"></polyline>
+          <text x="${xPad}" y="${yPad - 8}" fill="#475569" font-size="14">matching characters</text>
+          <text x="${width - xPad - 58}" y="${height - 8}" fill="#475569" font-size="14">generation</text>
+        `;
+      }
+
+      function pOrgPreserveAll(k, u, c) {
+        return Math.pow(1 - (u * (k - 1) / k), c);
+      }
+
+      function pPopulationPreserveAll(k, u, c, n) {
+        const pLossSome = 1 - pOrgPreserveAll(k, u, c);
+        return 1 - Math.pow(pLossSome, n);
+      }
+
+      function formatProbability(value) {
+        if (value >= 0.999999) {
+          return value.toFixed(9);
+        }
+        if (value <= 0.000001) {
+          return value.toExponential(3);
+        }
+        return value.toFixed(6);
+      }
+
+      function getExplainerParams() {
+        const length = Math.max(1, Number(explainerForm.length.value));
+        let correct = Number(explainerForm.correct.value);
+        if (correct > length) {
+          correct = length;
+          explainerForm.correct.value = String(length);
+        }
+        return {
+          k: Math.max(2, Number(explainerForm.alphabet.value)),
+          length,
+          correct: Math.max(0, correct),
+          mutation: Math.max(0.001, Number(explainerForm.mutation.value)),
+          maxPopulation: Math.max(1, Number(explainerForm.maxPopulation.value)),
+        };
+      }
+
+      function updateExplainer() {
+        const params = getExplainerParams();
+        const x = [];
+        const y = [];
+        for (let n = 1; n <= params.maxPopulation; n += 1) {
+          x.push(n);
+          y.push(pPopulationPreserveAll(params.k, params.mutation, params.correct, n));
+        }
+        const orgPreserve = pOrgPreserveAll(params.k, params.mutation, params.correct);
+        const popPreserve = y[y.length - 1];
+        document.getElementById('explainerOrgPreserve').textContent = formatProbability(orgPreserve);
+        document.getElementById('explainerPopPreserve').textContent = formatProbability(popPreserve);
+
+        const interpretation = popPreserve >= 0.999
+          ? 'With these settings, a daughter population is overwhelmingly likely to contain at least one candidate that preserves all currently correct bases.'
+          : popPreserve >= 0.9
+            ? 'The population effect is already strong: even if many daughters lose a correct base, at least one preserving them all is still likely.'
+            : 'Under these settings, preserving all currently correct bases somewhere in the population is no longer close to guaranteed. Compare the effects of raising population size or lowering mutation rate.';
+        document.getElementById('explainerInterpretation').textContent = interpretation;
+
+        Plotly.react('explainerChart', [{
+          x,
+          y,
+          mode: 'lines',
+          line: { color: '#205a9e', width: 4 },
+          fill: 'tozeroy',
+          fillcolor: 'rgba(32, 90, 158, 0.12)',
+          name: 'Population preservation probability'
+        }], {
+          paper_bgcolor: 'rgba(0,0,0,0)',
+          plot_bgcolor: '#ffffff',
+          margin: { t: 40, r: 18, b: 56, l: 60 },
+          xaxis: {
+            title: 'Population size N',
+            gridcolor: '#e2e8f0',
+            zerolinecolor: '#cbd5e1'
+          },
+          yaxis: {
+            title: 'Probability',
+            range: [0, 1.02],
+            gridcolor: '#e2e8f0',
+            zerolinecolor: '#cbd5e1'
+          },
+          annotations: [{
+            x: params.maxPopulation,
+            y: popPreserve,
+            xanchor: 'right',
+            yanchor: 'bottom',
+            text: `At N=${params.maxPopulation}, P≈${formatProbability(popPreserve)}`,
+            showarrow: true,
+            arrowcolor: '#7c3aed',
+            font: { color: '#334155', size: 12 }
+          }]
+        }, { responsive: true, displayModeBar: false });
+      }
+
+      function setExplainerPreset(name) {
+        const presets = {
+          standard: { alphabet: 27, length: 28, correct: 14, mutation: 0.037, maxPopulation: 250 },
+          smallPopulation: { alphabet: 27, length: 28, correct: 20, mutation: 0.05, maxPopulation: 20 },
+          highMutation: { alphabet: 27, length: 28, correct: 20, mutation: 0.12, maxPopulation: 120 },
+          nearConvergence: { alphabet: 27, length: 28, correct: 27, mutation: 0.05, maxPopulation: 200 }
+        };
+        const preset = presets[name];
+        explainerForm.alphabet.value = String(preset.alphabet);
+        explainerForm.length.value = String(preset.length);
+        explainerForm.correct.value = String(preset.correct);
+        explainerForm.mutation.value = String(preset.mutation);
+        explainerForm.maxPopulation.value = String(preset.maxPopulation);
+        updateExplainer();
+      }
+
+      function updateStatus(result) {
+        document.getElementById('statusScore').textContent = String(result.final.score);
+        document.getElementById('statusTargetLength').textContent = String(result.target.length);
+        document.getElementById('statusGeneration').textContent = String(result.final.generation);
+        document.getElementById('statusMutation').textContent = `${getParams().mutationRate}%`;
+        document.getElementById('targetDisplay').textContent = `Target: ${result.target}`;
+        document.getElementById('candidateDisplay').textContent = `Candidate: ${result.final.candidate}`;
+
+        const finalRatio = result.target.length ? result.final.score / result.target.length : 0;
+        const message = finalRatio >= 0.9
+          ? 'This run reached a high match score quickly. Use that to discuss cumulative retention, not to overclaim biological realism.'
+          : finalRatio >= 0.5
+            ? 'The score improved substantially but did not reach the target. Compare whether mutation rate or starting string changes matter more.'
+            : 'This run made limited progress. Compare another mutation rate or a different number of generations before interpreting the result.';
+        document.getElementById('interpretationText').textContent = message;
+      }
+
+      function runSimulation() {
+        const api = window.evoEduApis && window.evoEduApis.artificialLife && window.evoEduApis.artificialLife.cumulativeSelectionExplorer;
+        if (!api) {
+          addMessage('Shared artificial-life API is not available on this page.');
+          setMessagesOpen(true);
+          return;
+        }
+        currentResult = api.runSimulation(getParams());
+        drawChart(currentResult);
+        updateStatus(currentResult);
+        addMessage(`Ran ${currentResult.history.length - 1} generations with mutation rate ${getParams().mutationRate}% toward a target of length ${currentResult.target.length}.`);
+      }
+
+      function resetDefaults() {
+        setDefaults();
+        runSimulation();
+        addMessage('Restored default settings.');
+      }
+
+      function downloadBlob(filename, content, type) {
+        const blob = new Blob([content], { type });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = filename;
+        link.click();
+        URL.revokeObjectURL(url);
+      }
+
+      document.getElementById('runButton').addEventListener('click', runSimulation);
+      document.getElementById('resetButton').addEventListener('click', resetDefaults);
+      document.getElementById('saveButton').addEventListener('click', function () {
+        if (!currentResult) {
+          runSimulation();
+        }
+        downloadBlob('cumulative-selection-explorer-summary.json', JSON.stringify(currentResult, null, 2), 'application/json');
+        addMessage('Saved current run summary as JSON.');
+      });
+      document.getElementById('exportButton').addEventListener('click', function () {
+        downloadBlob('cumulative-selection-explorer-settings.json', JSON.stringify(getParams(), null, 2), 'application/json');
+        addMessage('Exported current settings.');
+      });
+      document.getElementById('settingsImport').addEventListener('change', function (event) {
+        const file = event.target.files && event.target.files[0];
+        if (!file) {
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = function () {
+          try {
+            const imported = JSON.parse(reader.result);
+            Object.keys(defaults).forEach((key) => {
+              if (imported[key] !== undefined) {
+                form[key].value = imported[key];
+              }
+            });
+            runSimulation();
+            addMessage('Imported settings from JSON.');
+          } catch (error) {
+            addMessage('Could not import settings file.');
+            setMessagesOpen(true);
+          }
+        };
+        reader.readAsText(file);
+      });
+      messageToggle.addEventListener('click', function () {
+        setMessagesOpen(!messagesOpen);
+      });
+      Object.values(explainerForm).forEach((input) => {
+        input.addEventListener('input', updateExplainer);
+      });
+      document.getElementById('explainerStandard').addEventListener('click', function () {
+        setExplainerPreset('standard');
+      });
+      document.getElementById('explainerSmallPopulation').addEventListener('click', function () {
+        setExplainerPreset('smallPopulation');
+      });
+      document.getElementById('explainerHighMutation').addEventListener('click', function () {
+        setExplainerPreset('highMutation');
+      });
+      document.getElementById('explainerNearConvergence').addEventListener('click', function () {
+        setExplainerPreset('nearConvergence');
+      });
+
+      setDefaults();
+      setMessagesOpen(false);
+      runSimulation();
+      setExplainerPreset('nearConvergence');
+    })();
+  </script>
+</body>
+</html>

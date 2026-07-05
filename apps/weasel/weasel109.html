@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weasel Program - Functional Approach</title>
+
+  <!-- Load Plotly from CDN -->
+  <script src="https://cdn.plot.ly/plotly-2.20.0.min.js"></script>
+
+  <style>
+    /* --- Basic Styling --- */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* --- Navigation Bar --- */
+    nav {
+      background-color: #f8f8f8;
+      border-bottom: 1px solid #ddd;
+      padding: 0.5em 1em;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1em;
+    }
+    nav li {
+      display: inline;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- Main Container and Sections --- */
+    .container {
+      padding: 1em;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 2em;
+    }
+
+    /* --- Controls & Results --- */
+    .controls, .results {
+      margin: 1em 0;
+    }
+    .label {
+      margin-right: 0.5em;
+    }
+
+    /* --- Plot Container --- */
+    #plotDiv {
+      margin-top: 2em;
+      margin-bottom: 2em;
+      width: 100%;
+      max-width: 900px;
+      height: 450px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ================================== -->
+<!-- Navigation Bar                    -->
+<!-- ================================== -->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#help">Help</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</nav>
+
+<!-- ================================== -->
+<!-- Main Container                    -->
+<!-- ================================== -->
+<div class="container">
+
+  <!-- =============================== -->
+  <!-- Home Section: Main Explanation -->
+  <!-- =============================== -->
+  <section id="home">
+    <h1>Weasel Program - Functional Approach</h1>
+    <p>
+      This simulation demonstrates how random mutation plus non-random selection can rapidly 
+      converge on a target phrase. Each generation, we mutate a population of candidate strings 
+      and pick the one that best matches the target. Below, you'll see a box plot of how many 
+      characters each candidate got “correct” in each generation, as well as the overall best 
+      match and any stepbacks in local best fitness.
+    </p>
+
+    <!-- --- Controls for the Simulation --- -->
+    <div class="controls">
+      <label class="label" for="targetInput">Target Phrase:</label>
+      <input 
+        type="text" 
+        id="targetInput" 
+        value="METHINKS IT IS LIKE A WEASEL" 
+        size="30"
+      />
+      <br /><br />
+
+      <label class="label" for="popSizeInput">Population Size:</label>
+      <input 
+        type="number" 
+        id="popSizeInput" 
+        value="100" 
+        min="1" 
+        style="width: 80px;" 
+      />
+      <br /><br />
+
+      <label class="label" for="mutationRateInput">Mutation Rate (%):</label>
+      <input 
+        type="number" 
+        id="mutationRateInput" 
+        value="5" 
+        min="0" 
+        max="100" 
+        style="width: 80px;" 
+      />
+      <br /><br />
+
+      <button id="startBtn">Start Simulation</button>
+      <button id="stopBtn">Stop Simulation</button>
+    </div>
+
+    <!-- --- Results of the Simulation --- -->
+    <div class="results">
+      <p id="currentGeneration">Current Generation: 0</p>
+      <p id="bestMatch">Best Match So Far: (none)</p>
+      <p id="stepbacksCount">Stepbacks: 0</p>
+    </div>
+
+    <!-- --- Plotly Boxplot Container --- -->
+    <div id="plotDiv"></div>
+  </section>
+
+  <!-- ======================== -->
+  <!-- Help Section -->
+  <!-- ======================== -->
+  <section id="help">
+    <h2>Help</h2>
+    <p>
+      <strong>Target Phrase:</strong> Any phrase (A-Z, spaces, or punctuation). 
+      The simulation attempts to evolve a population of random strings to match this phrase.
+    </p>
+    <p>
+      <strong>Population Size:</strong> How many candidate strings exist each generation.
+      Larger populations may converge faster but require more computation per step.
+    </p>
+    <p>
+      <strong>Mutation Rate (%):</strong> The percentage chance that each character in an offspring 
+      mutates to a random character. Higher rates can introduce more variation, but too much mutation 
+      can slow down convergence.
+    </p>
+    <p>
+      <strong>Start Simulation:</strong> Begins the iterative process of evolving the population. 
+      You will see the “Best Match So Far” and a box plot for each generation.
+    </p>
+    <p>
+      <strong>Stop Simulation:</strong> Cancels the evolution loop. You can then change parameters 
+      and start again.
+    </p>
+  </section>
+
+  <!-- ======================== -->
+  <!-- About Section -->
+  <!-- ======================== -->
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      This Weasel Program is inspired by a thought experiment from Richard Dawkins. It highlights 
+      how cumulative selection significantly outperforms pure chance in evolving a target sequence. 
+      It is especially useful for educators and self-learners exploring fundamental evolutionary 
+      concepts.
+    </p>
+    <p>
+      For more resources, see 
+      <a href="https://evo-edu.org/" target="_blank">Evo-Edu.org</a>.
+    </p>
+  </section>
+</div>
+
+<!-- ================================== -->
+<!-- JavaScript Simulation Code (IIFE) -->
+<!-- ================================== -->
+<script>
+(function() {
+  /************************************************
+   * GLOBAL / MODULE-LEVEL VARIABLES & CONSTANTS *
+   ************************************************/
+
+  // Interval reference for stopping the simulation.
+  let simulationInterval = null;
+
+  // Generation counter.
+  let generationCount = 0;
+
+  // Best candidate string and its fitness seen so far (global best).
+  let bestCandidate = "";
+  let bestFitness = 0;
+
+  // Track the local best fitness from the *previous* generation
+  // to detect stepbacks.
+  let previousGenerationBest = 0;
+  let stepbacks = 0;
+
+  // Characters that can be used in mutations.
+  const possibleChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+
+  // DOM element references
+  const targetInput         = document.getElementById("targetInput");
+  const popSizeInput        = document.getElementById("popSizeInput");
+  const mutationRateInput   = document.getElementById("mutationRateInput");
+  const startBtn            = document.getElementById("startBtn");
+  const stopBtn             = document.getElementById("stopBtn");
+  const currentGenerationEl = document.getElementById("currentGeneration");
+  const bestMatchEl         = document.getElementById("bestMatch");
+  const stepbacksCountEl    = document.getElementById("stepbacksCount");
+  const plotDiv             = document.getElementById("plotDiv");
+
+  /***************************************
+   * 1. FUNCTION: Initialize the Plot   *
+   ***************************************/
+  function initializePlot() {
+    // Creates an empty Plotly figure for the box plots
+    // Each generation's distribution gets added as a new "trace"
+    Plotly.newPlot(plotDiv, [], {
+      title: "Distribution of Correct Characters"
+    });
+  }
+
+  /**************************************************
+   * 2. FUNCTION: Generate a Random String         *
+   *    of the same length as the target.          *
+   **************************************************/
+  function generateRandomString(length) {
+    let result = "";
+    for (let i = 0; i < length; i++) {
+      // Pick a random character from our possible set
+      let index = Math.floor(Math.random() * possibleChars.length);
+      result += possibleChars.charAt(index);
+    }
+    return result;
+  }
+
+  /********************************************************
+   * 3. FUNCTION: Calculate how many characters match     *
+   *    exactly between a candidate and the target.       *
+   ********************************************************/
+  function calculateFitness(candidate, target) {
+    let score = 0;
+    for (let i = 0; i < target.length; i++) {
+      if (candidate[i] === target[i]) {
+        score++;
+      }
+    }
+    return score;
+  }
+
+  /************************************************************
+   * 4. FUNCTION: Produce a mutated copy of a parent string.  *
+   *    Each character has a 'mutationRate' percent chance    *
+   *    of becoming a random character.                       *
+   ************************************************************/
+  function mutate(parent, mutationRate) {
+    let child = "";
+    for (let i = 0; i < parent.length; i++) {
+      // If random < mutationRate, mutate this character.
+      if (Math.random() * 100 < mutationRate) {
+        let index = Math.floor(Math.random() * possibleChars.length);
+        child += possibleChars.charAt(index);
+      } else {
+        child += parent[i];
+      }
+    }
+    return child;
+  }
+
+  /********************************************************
+   * 5. FUNCTION: Initialize a population of random       *
+   *    strings all the same length as the target phrase.  *
+   ********************************************************/
+  function initializePopulation(popSize, targetLength) {
+    const population = [];
+    for (let i = 0; i < popSize; i++) {
+      population.push(generateRandomString(targetLength));
+    }
+    return population;
+  }
+
+  /*************************************************************************
+   * 6. FUNCTION: Evolve a population one generation forward.              *
+   *    This function:                                                     *
+   *      - Mutates best individual to form newPopulation                  *
+   *      - Identifies the best individual in the newPopulation            *
+   *      - Swaps it into index 0                                          *
+   *      - Returns { newPopulation, generationBestFitness }               *
+   *************************************************************************/
+  function evolvePopulation(population, target, mutationRate) {
+    const newPopulation = [];
+
+    // Mutate best individual
+    for (let i = 0; i < population.length; i++) {
+      newPopulation.push(mutate(population[0], mutationRate));
+    }
+
+    // Find the best individual
+    let bestIndex = 0;
+    let generationBestFitness = calculateFitness(newPopulation[0], target);
+
+    for (let i = 1; i < newPopulation.length; i++) {
+      const fitness = calculateFitness(newPopulation[i], target);
+      if (fitness > generationBestFitness) {
+        generationBestFitness = fitness;
+        bestIndex = i;
+      }
+    }
+
+    // Swap best individual into 0th position
+    [newPopulation[0], newPopulation[bestIndex]] = [
+      newPopulation[bestIndex],
+      newPopulation[0]
+    ];
+
+    return {
+      newPopulation,
+      generationBestFitness
+    };
+  }
+
+  /********************************************************
+   * 7. FUNCTION: Plot the distribution of fitness scores *
+   *    (correct characters) for the current generation.  *
+   ********************************************************/
+  function plotGenerationData(generationNumber, population, target) {
+    // Compute all individuals' fitness
+    const fitnessArray = population.map(ind => calculateFitness(ind, target));
+
+    // Create a "box" trace for Plotly
+    const newTrace = {
+      y: fitnessArray,
+      type: "box",
+      name: "Gen " + generationNumber
+    };
+
+    // Add the trace to our existing figure
+    Plotly.addTraces(plotDiv, [newTrace]);
+  }
+
+  /*************************************************
+   * 8. FUNCTION: Update DOM with new information. *
+   *************************************************/
+  function updateDisplay() {
+    currentGenerationEl.innerText = "Current Generation: " + generationCount;
+    bestMatchEl.innerText         = "Best Match So Far: " + bestCandidate;
+    stepbacksCountEl.innerText    = "Stepbacks: " + stepbacks;
+  }
+
+  /*************************************************
+   * 9. FUNCTION: Start the simulation.            *
+   *    - Gathers user inputs                      *
+   *    - Sets up the population                   *
+   *    - Resets counters, bestFitness, etc.       *
+   *    - Creates a timed interval to evolve each  *
+   *      generation.                              *
+   *************************************************/
+  function startSimulation() {
+    // Prevent starting multiple intervals
+    if (simulationInterval !== null) return;
+
+    // Clear any old data from the plot
+    initializePlot();
+
+    // Read user inputs
+    const target        = targetInput.value.toUpperCase();
+    const popSize       = parseInt(popSizeInput.value, 10) || 100;
+    const mutationRate  = parseFloat(mutationRateInput.value) || 5;
+
+    // Reset tracking variables
+    generationCount     = 0;
+    bestCandidate       = "";
+    bestFitness         = 0;
+    stepbacks           = 0;
+    previousGenerationBest = 0; // local best from previous generation
+
+    // Create initial population
+    let population = initializePopulation(popSize, target.length);
+
+    // Evolve in an interval
+    simulationInterval = setInterval(() => {
+      generationCount++;
+
+      // Evolve the population by one generation
+      const { newPopulation, generationBestFitness } = 
+            evolvePopulation(population, target, mutationRate);
+
+      // Check for stepback (did this generation's best < last gen's best?)
+      // Note: generationCount>1 ensures we skip the first generation
+      if (generationCount > 1 && generationBestFitness < previousGenerationBest) {
+        stepbacks++;
+      }
+
+      // Update previousGenerationBest for next iteration
+      previousGenerationBest = generationBestFitness;
+
+      // Update our global best if needed
+      if (generationBestFitness > bestFitness) {
+        bestFitness = generationBestFitness;
+        bestCandidate = newPopulation[0]; // best is always at index 0
+      }
+
+      // Update the plot for this generation
+      plotGenerationData(generationCount, newPopulation, target);
+
+      // Update the DOM
+      updateDisplay();
+
+      // Replace old population with new
+      population = newPopulation;
+
+      // Check for completion (if bestCandidate fully matches target)
+      if (bestCandidate === target) {
+        stopSimulation(); // Stop the interval
+      }
+    }, 100); // Adjust interval speed (ms) as desired
+  }
+
+  /*************************************************
+   * 10. FUNCTION: Stop the simulation.            *
+   *     Clears the interval, sets ref to null.    *
+   *************************************************/
+  function stopSimulation() {
+    if (simulationInterval !== null) {
+      clearInterval(simulationInterval);
+      simulationInterval = null;
+    }
+  }
+
+  /*************************************************
+   * 11. EVENT LISTENERS: Start / Stop Buttons     *
+   *************************************************/
+  startBtn.addEventListener("click", startSimulation);
+  stopBtn.addEventListener("click", stopSimulation);
+
+  /*************************************************
+   * ON LOAD: Initialize an empty plot.            *
+   *************************************************/
+  initializePlot();
+})();
+</script>
+</body>
+</html>

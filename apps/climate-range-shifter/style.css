@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+header nav {
+  background: #003366;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1em;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1em;
+  margin: 1em;
+}
+.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #003366;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #003366;
+  color: #fff;
+}

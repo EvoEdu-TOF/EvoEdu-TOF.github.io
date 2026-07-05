@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Biomorphs Overview | Evo-Edu.org</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="site-title-row">
+    <div class="site-brand"><a href="/">Evo-Edu.org</a></div>
+    <nav class="top-nav">
+      <a href="/">Home</a>
+      <a href="index.html" aria-current="page">Overview</a>
+      <a href="app.html">Web App</a>
+      <a href="guide.html">Guide</a>
+      <a href="standards.html">Standards</a>
+    </nav>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h3>App Pages</h3>
+      <ul>
+        <li><a href="app.html">Interactive app</a></li>
+        <li><a href="guide.html">Teacher and learner guide</a></li>
+        <li><a href="standards.html">Standards alignment</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-card">
+      <h3>Core Model</h3>
+      <ul>
+        <li>Nine inherited gene values</li>
+        <li>Asexual reproduction</li>
+        <li>One realized +1 or -1 mutation for each gene</li>
+        <li>Human-guided artificial selection</li>
+        <li>Phenotype regenerated from genes each generation</li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="content">
+    <section class="hero">
+      <h1>Biomorphs</h1>
+      <p>Explore cumulative selection by breeding line-drawn forms whose bodies are generated from inherited numerical genes.</p>
+      <div class="button-row">
+        <a class="button" href="app.html">Open Web App</a>
+        <a class="button secondary" href="guide.html">Use in Class</a>
+        <a class="button secondary" href="standards.html">Standards</a>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Accessible History</h2>
+      <p>Richard Dawkins introduced computer biomorphs in <em>The Blind Watchmaker</em> as a way to make cumulative selection visible. The point was not that real organisms are made of nine number genes, or that evolution is guided by a person choosing pretty shapes. The point was narrower and important: if inherited instructions are copied with small changes, and if some variants are chosen to continue, large changes can accumulate without any single large leap.</p>
+      <p>In the original demonstration, the visible form was a branching body produced by a simple developmental rule. A parent produced a small litter of mutant children. A human selected one child, and that child became the next parent. After repeated choices, forms could move from simple trees toward surprising shapes that suggested insects, shells, plants, or ornaments. The surprise matters: the shapes were not individually drawn by an artist. They emerged from repeated translation of inherited values into bodies.</p>
+    </section>
+
+    <section class="panel">
+      <h2>What Learners Do</h2>
+      <p>Learners start with a parent biomorph and a 3x3 litter of mutant children. Each grid position corresponds to one gene, and that child receives a realized +1 or -1 mutation for that gene. Selecting a child makes it the next parent, creating a new litter. Over many generations, small differences can accumulate into forms that look tree-like, insect-like, architectural, or hard to classify.</p>
+      <p>The app also includes automated selectors. These are not natural selection by themselves. They are measurable artificial fitness rules, such as selecting for higher entropy, a taller body, or a more space-filling form. They let learners compare human preference with explicit scoring rules.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Concepts Conveyed</h2>
+      <ul>
+        <li><strong>Genotype and phenotype:</strong> The gene values are inherited. The drawing is generated from those values.</li>
+        <li><strong>Development:</strong> A body is built by a rule. Changing a gene can alter many parts of the final body.</li>
+        <li><strong>Variation:</strong> Each generation contains multiple possible offspring, each slightly different from the parent.</li>
+        <li><strong>Cumulative selection:</strong> Repeated small choices can move a lineage far from its starting point.</li>
+        <li><strong>Artificial selection:</strong> The learner or automated evaluator chooses which phenotype continues.</li>
+        <li><strong>Model limits:</strong> The app is simplified. It imposes symmetry, uses high mutation rates, and does not model survival in an environment unless a class defines that selection rule.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Library-Informed Emphases</h2>
+      <p>Searches of the local Wolfe Library science collection pointed to several ideas that should be made explicit when Biomorphs is used as a lesson, not only as a visual toy.</p>
+      <ul>
+        <li><strong>Random variation, nonrandom selection:</strong> The mutation that creates each child is not aimed at the learner's goal. The later choice of which child continues is directed by a human or evaluator.</li>
+        <li><strong>Single-step chance versus cumulative selection:</strong> The app is most useful when learners compare one generation of random variants with many generations in which the selected result becomes the next starting point.</li>
+        <li><strong>Phenotypes are selected, genes are inherited:</strong> The learner sees and selects the drawn body, but the next generation is produced from inherited gene values, not by copying the adult drawing.</li>
+        <li><strong>Artificial selection is a teaching handle:</strong> Human choice and automated evaluators make selection visible, but they are stand-ins for real differences in survival and reproduction.</li>
+        <li><strong>Selection is not all of evolution:</strong> The model foregrounds selection on inherited variation. It does not model drift, gene flow, sexual recombination, population size, or changing environments.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Pedagogical Features</h2>
+      <ul>
+        <li>Configuration save and import for class setup, homework continuation, or shared examples.</li>
+        <li>PNG and SVG export of the current rendered biomorph.</li>
+        <li>Automatic scaling so the entire phenotype remains visible inside the canvas.</li>
+        <li>Expandable gene explanations in the sidebar.</li>
+        <li>A mutation legend showing the 3x3 position, changed gene, prior value, current value, and mutation direction.</li>
+        <li>Recent selection history for reflection on cumulative change.</li>
+        <li>Show Development animation that reveals how the adult phenotype is drawn from the inherited genes.</li>
+        <li>Automated evaluator suite for comparing human selection with explicit fitness proxies.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>What This App Is Not</h2>
+      <p>Biomorphs is not a full simulation of natural selection, ecology, population genetics, molecular genetics, or speciation. It is a focused model of inherited variation, development, and cumulative selection. Its best classroom use is to help learners explain what changes, what is inherited, what is selected, and what the model leaves out.</p>
+    </section>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <p>Evo-Edu.org: interactive tools for learning evolution, ecology, and scientific reasoning.</p>
+</footer>
+</body>
+</html>

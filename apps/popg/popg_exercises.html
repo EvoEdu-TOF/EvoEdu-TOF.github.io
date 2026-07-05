@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PopG Help</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 16px;
+    }
+    h1, h2, h3 {
+      margin-top: 1.2em;
+      margin-bottom: 0.5em;
+    }
+    p {
+      margin-bottom: 1em;
+      line-height: 1.4;
+    }
+    .screenshot {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .screenshot img {
+      max-width: 90%;
+      border: 1px solid #ccc;
+      padding: 4px;
+      background: #f9f9f9;
+    }
+    .notes {
+      font-style: italic;
+      color: #555;
+      font-size: 0.9rem;
+      margin-bottom: 1em;
+    }
+    code {
+      background: #f2f2f2;
+      padding: 0 4px;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+<h1>PopG: Single-Locus, Two-Allele Population Genetics Simulator</h1>
+
+<p>
+  <strong>PopG</strong> is a classic population genetics app that explores 
+  how alleles shift in frequency under the influence of mutation, 
+  migration (gene flow), genetic drift, and selection in one or 
+  multiple populations. This guide provides an overview of key features 
+  and how to use them.
+</p>
+
+<div class="screenshot">
+  <!-- Placeholder: Insert an actual screenshot when available -->
+  <img src="popg_screenshot_overview.png" alt="PopG main screen (placeholder)">
+  <p class="notes">Screenshot 1. The main PopG interface (placeholder).</p>
+</div>
+
+<hr>
+
+<h2>1. Getting Started</h2>
+<p>
+  Upon launching PopG, you’ll see controls for specifying:
+</p>
+<ul>
+  <li><strong>Population Size (N)</strong></li>
+  <li><strong>Number of Populations</strong> (demes) for multi-deme simulations</li>
+  <li><strong>Mutation Rates</strong> (e.g., <em>A → a</em>, <em>a → A</em>)</li>
+  <li><strong>Migration Rates</strong> among populations</li>
+  <li><strong>Other parameters</strong> such as initial allele frequency, selection coefficients, etc.</li>
+</ul>
+
+<div class="screenshot">
+  <!-- Placeholder: Insert an actual screenshot when available -->
+  <img src="popg_screenshot_params.png" alt="PopG parameter input screen (placeholder)">
+  <p class="notes">Screenshot 2. Example of the parameter entry screen (placeholder).</p>
+</div>
+
+<p>
+  After setting these values, click the appropriate button (e.g., 
+  “Run” or “Start Simulation”) to begin. The program will step through 
+  generations, updating the allele frequencies in each population.
+</p>
+
+<hr>
+
+<h2>2. Core Concepts Illustrated</h2>
+
+<h3>2.1. Mutation</h3>
+<p>
+  Specify mutation rates &mu;<sub>A→a</sub> and &mu;<sub>a→A</sub> to see how 
+  new alleles appear over time. Low mutation rates typically keep 
+  allele frequencies near their current equilibrium, but 
+  higher rates can rapidly introduce new variants.
+</p>
+
+<h3>2.2. Migration (Gene Flow)</h3>
+<p>
+  Multiple populations can exchange alleles at each generation. 
+  A higher migration rate means the populations become more 
+  homogeneous, whereas very low migration may allow them to diverge.
+</p>
+
+<h3>2.3. Genetic Drift</h3>
+<p>
+  If population size is small, random sampling can cause 
+  <em>drift</em> in allele frequencies. Large populations 
+  exhibit less fluctuation due to sampling variance.
+</p>
+
+<h3>2.4. Selection</h3>
+<p>
+  If an allele confers a fitness advantage, it can rise in 
+  frequency over time. PopG may allow specifying relative 
+  fitness values (e.g., W<sub>AA</sub>, W<sub>Aa</sub>, W<sub>aa</sub>) 
+  to see how selection operates.
+</p>
+
+<hr>
+
+<h2>3. Viewing Results</h2>
+<p>
+  As the simulation runs, PopG plots the <strong>allele A frequency</strong> 
+  in each population over time. In addition, a dotted or secondary 
+  line may show the <strong>“ideal” expected response</strong> from 
+  theoretical equations (e.g., a deterministic model) for comparison 
+  with the actual (stochastic) outcomes.
+</p>
+
+<div class="screenshot">
+  <!-- Placeholder: Insert an actual screenshot when available -->
+  <img src="popg_screenshot_plots.png" alt="PopG results plot (placeholder)">
+  <p class="notes">Screenshot 3. Example of allele frequency plots over generations (placeholder).</p>
+</div>
+
+<p>
+  Note how <em>randomness</em> (drift) can cause real trajectories 
+  to deviate from the ideal curve, especially in small populations.
+</p>
+
+<hr>
+
+<h2>4. Advanced Settings &amp; Output</h2>
+<p>
+  Some versions of PopG may include advanced controls for mutation 
+  biases, user-defined fitness functions, or variable migration 
+  matrices. Look for a link or button labeled “Advanced” or 
+  “Show Options” to reveal them.
+</p>
+
+<div class="screenshot">
+  <!-- Placeholder: Insert an actual screenshot when available -->
+  <img src="popg_screenshot_advanced.png" alt="PopG advanced settings (placeholder)">
+  <p class="notes">Screenshot 4. PopG advanced or optional settings (placeholder).</p>
+</div>
+
+<p>
+  You can typically <strong>export data</strong> (e.g., 
+  generation-by-generation allele frequencies) to CSV or a text file, 
+  so students can perform further analysis. 
+</p>
+
+<hr>
+
+<h2>5. Classroom &amp; Self-Study Ideas</h2>
+<ul>
+  <li><strong>Compare Small vs. Large Populations</strong>:
+    Run the same scenario with N=50 vs. N=1,000 to see how drift 
+    amplitude changes.</li>
+  <li><strong>Mutation-Selection Balance</strong>:
+    Observe how a deleterious allele remains at a low equilibrium 
+    frequency if it’s continuously re-introduced by mutation.</li>
+  <li><strong>Multi-Population Dynamics</strong>:
+    Demonstrate how gene flow can homogenize distinct populations, 
+    or how isolation fosters differentiation.</li>
+  <li><strong>Climate Change Angle</strong>:
+    With advanced controls, you might represent a changing environment 
+    that alters relative fitness of certain genotypes, simulating 
+    real-world adaptation to warmer or more variable climates.</li>
+</ul>
+
+<hr>
+
+<h2>6. Suggested Enhancements</h2>
+<ul>
+  <li><strong>Climate Variable</strong>: 
+    Link “fitness” or “selection pressure” to a temperature parameter 
+    that shifts each generation.</li>
+  <li><strong>Predator-Prey or Host-Pathogen Extension</strong>: 
+    Add a second species and track how interactions shape allele 
+    frequencies (more advanced approach).</li>
+  <li><strong>Data Visualization Options</strong>: 
+    Let users toggle between line graphs, bar charts, or numeric 
+    tables of frequencies.</li>
+</ul>
+
+<hr>
+
+<h2>7. Troubleshooting &amp; Tips</h2>
+<ul>
+  <li>If you see <em>flat lines</em> for all populations, double-check your 
+      mutation and migration rates (if everything is zero, the system 
+      may remain at the initial state).</li>
+  <li>Ensure your <strong>JavaScript is enabled</strong> and that any 
+      required libraries (Plotly, D3, etc.) are correctly loaded.</li>
+  <li>Experiment with the <strong>seed</strong> or random number generator 
+      (if provided) to see how different runs might produce varied 
+      outcomes.</li>
+</ul>
+
+<div class="screenshot">
+  <!-- Placeholder: Insert an actual screenshot when available -->
+  <img src="popg_screenshot_errors.png" alt="PopG error messages (placeholder)">
+  <p class="notes">Screenshot 5. Example of user error or warning messages (placeholder).</p>
+</div>
+
+<hr>
+
+<h2>8. More Resources</h2>
+<ul>
+  <li><a href="https://www.evo-ed.org/" target="_blank">Evo-Ed</a> – Additional evolutionary biology teaching modules.</li>
+  <li><a href="https://avida-ed.msu.edu/" target="_blank">Avida-ED</a> – Digital evolution experiments for the classroom.</li>
+  <li><a href="https://pandasthumb.org/" target="_blank">Panda’s Thumb</a> – Blog with evolutionary biology discussions.</li>
+</ul>
+
+<hr>
+
+<h2>9. Contact &amp; Acknowledgments</h2>
+<p>
+  PopG was originally developed by &lt;Prof. Joe Felsenstein&gt; and was ported to Javascript 
+  by &lt;Wesley R. Elsberry&gt;. 
+  For more information, bug reports, or feature requests, 
+  email &lt;welseber at gmail&gt; or visit 
+  <a href="https://evo-edu.org" target="_blank">evo-edu.org</a>.
+</p>
+
+<hr>
+<h2>Disclaimer</h2>
+
+<p>
+  This page was produced primarily by prompting the OpenAI
+  GPT o1 model. Please inform the site administrator if
+  you find errors or inaccuracies, or wish to suggest
+  features and additional content.
+</p>
+
+<hr>
+<h2>Known issues</h2>
+
+<dl>
+  <dt>Screenshots</dt>
+  <dd>Or the lack thereof. A work in progress</dd>
+</dl>
+
+
+</body>
+</html>

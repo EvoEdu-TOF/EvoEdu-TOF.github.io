@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mendel.js with Navbar (Multi-Locus PopG)</title>
+    <!-- Include Plotly from CDN or local copy -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            width: 100%;
+            background-color: #f2f2f2;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0.5rem 1rem;
+        }
+        nav a {
+            margin-right: 1rem;
+            text-decoration: none;
+            color: #333;
+        }
+        #content {
+            padding: 1rem;
+        }
+        #controls {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#help">Help</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <div id="content">
+        <h1>Mendel.js Simulation (Multi-Locus PopG Style)</h1>
+        <p>
+            This version simulates a <strong>multi-locus, two-allele</strong> population genetics model inspired by PopG.
+            All loci are treated as <em>independent</em> (unlinked) for now. Each locus uses symmetrical mutation, a common
+            selection coefficient <code>s</code>, and random drift via binomial sampling.
+        </p>
+        <div id="controls">
+            <label for="populationSize">Population Size (N):</label>
+            <input type="number" id="populationSize" value="1000" min="1">
+
+            <label for="numLoci">Number of Loci (L):</label>
+            <input type="number" id="numLoci" value="5" min="1" max="100" title="Number of independent loci.">
+
+            <label for="selectionCoeff">Selection Coefficient (s):</label>
+            <input type="number" id="selectionCoeff" value="0.1" step="0.01" min="0" max="1" title="Selection coefficient.">
+
+            <label for="mutationRate">Mutation Rate (u):</label>
+            <input type="number" step="0.001" id="mutationRate" value="0.01" min="0">
+
+            <label for="generations">Generations:</label>
+            <input type="number" id="generations" value="100" min="1">
+            <button onclick="startSimulation()">Start Simulation</button>
+        </div>
+        <div id="chart"></div>
+    </div>
+
+    <!-- The Worker Code -->
+    <script type="text/javascript" id="workerScript">
+        const code = `self.onmessage = function(e) {\n    const params = e.data;\n    const result = runMultiLocusSimulation(params);\n    self.postMessage(result);\n};\n\n/**\n * runMultiLocusSimulation simulates a multi-locus, two-allele population genetics model.\n *\n * For each locus:\n *   - symmetrical mutation (u) for A->a and a->A\n *   - selection coefficient s (with partial dominance h=0.5)\n *   - binomial sampling for drift (diploid population)\n *\n * This version treats each locus independently for simplicity. In the future, linkage or associations\n * among loci could be added by storing haplotypes or applying recombination.\n */\nfunction runMultiLocusSimulation(params) {\n    const N = params.populationSize; // diploid population size\n    const L = params.numLoci;       // number of independent loci\n    const generations = params.generations;\n    const u = params.mutationRate;  // symmetrical mutation rate\n    const s = params.selectionCoeff; // selection coefficient\n    const h = 0.5;                  // partial dominance\n\n    // Initialize all loci with p=0.5 (allele A frequency)\n    let pArray = new Array(L).fill(0.5);\n\n    // We'll track results by generation\n    let results = [];\n\n    // Helper function for single-locus Wbar\n    function getWbar(p) {\n        const q = 1.0 - p;\n        // genotype fitnesses\n        const WAA = 1.0;\n        const WAa = 1.0 - h * s;\n        const Waa = 1.0 - s;\n        return (p * p * WAA) + (2 * p * q * WAa) + (q * q * Waa);\n    }\n\n    for (let gen = 0; gen < generations; gen++) {\n        // For each locus, apply selection, mutation, drift\n        let WbarArray = new Array(L).fill(1.0);\n\n        for (let i = 0; i < L; i++) {\n            const p = pArray[i];\n            const q = 1.0 - p;\n\n            // 1) Mean fitness at locus i\n            const Wbar = getWbar(p);\n            WbarArray[i] = Wbar;\n\n            // 2) genotype frequencies after selection\n            // freqAA = (p^2 * WAA) / Wbar\n            // freqAa = (2 * p * q * WAa) / Wbar\n            // freqaa = (q^2 * Waa) / Wbar\n            // but we only need pSel = freqAA + 0.5 * freqAa\n            // genotype fitness for reference\n            const WAA = 1.0;\n            const WAa = 1.0 - h * s;\n            // const Waa = 1.0 - s; // not needed beyond Wbar\n            const freqAA = (p * p * WAA) / Wbar;\n            const freqAa = (2 * p * q * WAa) / Wbar;\n            const pSel = freqAA + 0.5 * freqAa;\n\n            // 3) mutation\n            const pMut = pSel * (1 - u) + (1 - pSel) * u;\n\n            // 4) drift: binomial sampling among 2N alleles\n            let X = 0;\n            for (let j = 0; j < 2 * N; j++) {\n                if (Math.random() < pMut) {\n                    X++;\n                }\n            }\n            pArray[i] = X / (2 * N);\n        }\n\n        // approximate average fitness (assuming multiplicative across L loci)\n        // strictly speaking, for unlinked loci with multiplicative fitness, the mean could be the product of Wbar_i.\n        // However, Wbar_i is the mean fitness of each locus if considered alone.\n        // We'll do an approximation: overall W = product(Wbar_i).\n        const overallW = WbarArray.reduce((acc, w) => acc * w, 1.0);\n\n        // store results\n        // copy current pArray so we can store it safely\n        const pArrayCopy = pArray.slice();\n        // also store average p across all loci for convenience\n        const pAvg = pArrayCopy.reduce((acc, val) => acc + val, 0) / L;\n        results.push({\n            generation: gen,\n            pArray: pArrayCopy,\n            pAvg: pAvg,\n            avgFitness: overallW,\n            populationSize: N\n        });\n    }\n\n    return results;\n}\n`;
+        // Create a blob from code string
+        const blob = new Blob([code], { type: 'application/javascript' });
+        window.mendelWorkerURL = URL.createObjectURL(blob);
+    </script>
+
+    <script>
+        let worker;
+        function startSimulation() {
+            if (worker) {
+                worker.terminate();
+            }
+            worker = new Worker(window.mendelWorkerURL);
+
+            const params = {
+                populationSize: parseInt(document.getElementById('populationSize').value, 10),
+                numLoci: parseInt(document.getElementById('numLoci').value, 10),
+                selectionCoeff: parseFloat(document.getElementById('selectionCoeff').value),
+                mutationRate: parseFloat(document.getElementById('mutationRate').value),
+                generations: parseInt(document.getElementById('generations').value, 10)
+            };
+
+            worker.onmessage = function(e) {
+                const results = e.data;
+                plotResults(results);
+            };
+
+            worker.postMessage(params);
+        }
+
+        function plotResults(results) {
+            // We'll plot the average allele frequency (pAvg) over time,
+            // plus the approximate average fitness (avgFitness) on a secondary y-axis.
+
+            const tracePavg = {
+                x: results.map(r => r.generation),
+                y: results.map(r => r.pAvg),
+                mode: 'lines+markers',
+                type: 'scatter',
+                name: 'Average p (across loci)'
+            };
+
+            const traceAvgFitness = {
+                x: results.map(r => r.generation),
+                y: results.map(r => r.avgFitness),
+                mode: 'lines+markers',
+                type: 'scatter',
+                name: 'Approx. Avg Fitness',
+                yaxis: 'y2'
+            };
+
+            const layout = {
+                title: 'Multi-Locus PopG-Style Simulation',
+                xaxis: { title: 'Generation' },
+                yaxis: { title: 'pAvg' },
+                yaxis2: {
+                    title: 'Approx. Avg Fitness',
+                    overlaying: 'y',
+                    side: 'right'
+                }
+            };
+
+            Plotly.newPlot('chart', [tracePavg, traceAvgFitness], layout);
+        }
+    </script>
+</body>
+</html>

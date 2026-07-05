@@ -1,0 +1,367 @@
+{
+  "schema": "evo-edu.notebook.reviewed_elements.v1",
+  "generated": "2026-06-30",
+  "concept_id": "notebook.concepts.allele-frequency-change",
+  "items": [
+    {
+      "id": "staged.claim.dobzhansky.populations-gene-pools-evolve.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.allele-frequency-change",
+      "title": "Evolutionary Change Belongs To Populations And Gene Pools",
+      "body": "Dobzhansky, Ayala, Stebbins, and Valentine support the Notebook distinction that individuals develop during life, but evolutionary change is tracked across generations as changes in population gene pools, allele frequencies, and associations among alleles.",
+      "source_anchors": [
+        {
+          "source_id": "dobzhansky-ayala-stebbins-valentine-evolution-1977",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Strong source slot for allele-frequency change and population-thinking pages."
+      },
+      "promotion_targets": [
+        "notebook/concepts/allele-frequency-change.html",
+        "notebook/concepts/population-thinking.html",
+        "apps/allele-tracker/app/index.html"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.claim.futuyma.evolution-frequency-change.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.allele-frequency-change",
+      "title": "Biological Evolution Tracks Heritable Frequency Change Across Generations",
+      "body": "Futuyma supports defining biological evolution for the Notebook as heritable change across generations, including changes in the proportions of genes, variants, or other heritable characteristics in populations.",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Good bridge between population thinking, allele-frequency change, and the beginner route."
+      },
+      "promotion_targets": [
+        "notebook/concepts/allele-frequency-change.html",
+        "notebook/concepts/population-thinking.html",
+        "notebook/beginner-route.html"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.claim.pianka.allele-frequency-change.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.allele-frequency-change",
+      "title": "Evolution Can Be Framed As Gene Frequency Change",
+      "body": "Pianka's population-genetics treatment supports the Notebook framing that allele-frequency change connects gene pools, Mendelian populations, genotype expectations, and evolutionary change over time.",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Reviewed as a source-backed sidecar for the allele-frequency concept. OCR text should still be checked against the scanned page before direct quotation."
+      },
+      "promotion_targets": [
+        "notebook/concepts/allele-frequency-change.html",
+        "notebook/concepts/allele-frequency-change.scaffold.json"
+      ],
+      "source_path_redacted": true,
+      "mathematical_structure": {
+        "kind": "population-genetic framing",
+        "formal_statement": "Evolutionary change can be tracked as changes in allele or gene frequencies within a population over time.",
+        "notation_status": "conceptualized; source equation not normalized in this sidecar",
+        "assumptions": [
+          "population membership and gene pool boundaries are defined",
+          "frequency change is measured across comparable generations or time intervals",
+          "genotype expectations and allele frequencies are kept analytically distinct"
+        ],
+        "biological_interpretation": "The record should preserve allele-frequency change as a quantitative population-level claim, not only as verbal evolution vocabulary."
+      }
+    },
+    {
+      "id": "staged.example.futuyma.sickle-cell-balanced-polymorphism.001",
+      "kind": "example",
+      "concept_id": "notebook.concepts.allele-frequency-change",
+      "title": "Sickle-Cell Hemoglobin Illustrates Balancing Selection",
+      "body": "Futuyma's sickle-cell discussion supports an example where allele-frequency change does not simply remove one allele: heterozygote advantage in malarial environments can maintain both hemoglobin alleles at an intermediate frequency.",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as a later-path example after learners have the Hardy-Weinberg and fitness vocabulary needed to interpret intermediate equilibria."
+      },
+      "promotion_targets": [
+        "notebook/concepts/allele-frequency-change.html",
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/hardy-weinberg-equilibrium.html"
+      ],
+      "source_path_redacted": true,
+      "mathematical_structure": {
+        "kind": "balancing-selection equilibrium example",
+        "formal_statement": "Heterozygote advantage can maintain two alleles at an intermediate frequency when heterozygote fitness exceeds both homozygote fitnesses in the relevant environment.",
+        "notation_status": "conceptualized; no equation preserved in this sidecar",
+        "assumptions": [
+          "fitness differs by genotype",
+          "environmental context affects genotype fitness",
+          "selection is balanced rather than uniformly directional",
+          "allele frequencies respond across generations"
+        ],
+        "biological_interpretation": "Selection can maintain variation rather than simply eliminate the less favorable allele."
+      }
+    },
+    {
+      "id": "staged.question.dobzhansky.gene-pool-change-measurement.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.allele-frequency-change",
+      "title": "What Would You Measure To Show Evolution Occurred?",
+      "body": "A class observes that individual organisms change during their lives and that a local population also looks different after many generations. What measurements would show that the population's gene pool evolved, rather than only showing individual development or environmental response?",
+      "source_anchors": [
+        {
+          "source_id": "dobzhansky-ayala-stebbins-valentine-evolution-1977",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "dobzhansky-ayala-stebbins-valentine-evolution-1977",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from the 1977 source's gene-pool definition and population-level evolution passage. Use to connect beginner population-thinking prompts to quantitative allele-frequency work."
+      },
+      "promotion_targets": [
+        "notebook/concepts/allele-frequency-change.html",
+        "notebook/concepts/population-thinking.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "distinguish individual development from population change across generations",
+          "define the relevant reproductive community or Mendelian population",
+          "sample allele or genotype counts at one or more loci across generations",
+          "calculate whether allele frequencies changed",
+          "note that associations among alleles at different loci can also be part of gene-pool change"
+        ],
+        "coverage_note": "This adds a quantitative assessment bridge from population thinking into allele-frequency change."
+      },
+      "mathematical_structure": {
+        "kind": "allele-frequency measurement",
+        "formal_statement": "For a diploid population with N individuals, count 2N gene copies at an autosomal locus and compare allele proportions across generations.",
+        "notation_status": "normalized from source prose",
+        "assumptions": [
+          "population boundary is specified well enough for sampling",
+          "locus and allelic states are defined consistently",
+          "diploid autosomal counting is used unless sex-linked or polyploid cases are specified",
+          "sampling design separates generational change from individual development"
+        ],
+        "biological_interpretation": "Evolutionary change is evidenced by change in the genetic constitution of populations, especially allele frequencies and allele associations, not by an individual's ordinary lifetime change."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "N",
+          "notebook_symbol": "N",
+          "meaning": "number of diploid individuals in the sampled population"
+        },
+        {
+          "source_symbol": "2N",
+          "notebook_symbol": "2N",
+          "meaning": "number of autosomal gene copies at a locus in a diploid population"
+        }
+      ],
+      "question_type": "measurement design",
+      "source_context": {
+        "source_section": "Genetic Variation and Evolution",
+        "textbook_prompt_role": "source-mined gene-pool measurement probe",
+        "edition_or_volume_year": "1977"
+      }
+    },
+    {
+      "id": "staged.question.futuyma.chance-mechanism-causal-guardrail.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.allele-frequency-change",
+      "title": "Does Chance Mean No Evolutionary Cause?",
+      "body": "A class observes that an allele changed frequency between generations, but repeated runs from the same starting frequency do not all move in the same direction. How should learners decide whether this is evidence for selection, chance sampling, mutation supply, or a mixture of causes, and why is it wrong to say that a random outcome is cause-free?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-25",
+        "notes": "Paraphrased from Futuyma's definition/mechanism passage, chance/determinism discussion prompt, and early synopsis guardrails. Use before learners infer selection from a single observed frequency change."
+      },
+      "promotion_targets": [
+        "notebook/concepts/allele-frequency-change.html",
+        "notebook/concepts/genetic-drift.html",
+        "notebook/concepts/population-thinking.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "separate the observation that a frequency changed from the explanation for why it changed",
+          "name chance sampling as a possible mechanism rather than as absence of mechanism",
+          "compare repeated runs, population size, expected sampling variance, and the consistency of directional change",
+          "ask whether the magnitude and direction of change are plausible under drift alone before invoking selection as the main cause",
+          "recognize that mutation can introduce variants without being directed by current need or advantage",
+          "consider linked loci, pleiotropy, environmental context, sampling error, and mixed causes before accepting a single-cause explanation"
+        ],
+        "coverage_note": "This adds a reviewed bridge from Futuyma's empirical definition of evolution to learner-facing causal attribution, especially for exercises where stochastic outcomes and deterministic bias can coexist."
+      },
+      "mathematical_structure": {
+        "kind": "stochastic-versus-biased frequency-change interpretation",
+        "formal_statement": "Observed allele-frequency change should be compared with a null or expected distribution under chance sampling before assigning a directional mechanism such as selection.",
+        "notation_status": "conceptual; no source notation normalized",
+        "assumptions": [
+          "the measured frequency change is a population-level observation",
+          "finite sampling can change allele frequencies even without fitness differences",
+          "selection predicts a biased expectation, not identical outcomes in every replicate",
+          "mutation supply may be random with respect to current advantage",
+          "multiple causes can contribute to the same observed frequency shift"
+        ],
+        "biological_interpretation": "Randomness in evolutionary processes is compatible with causal explanation; it changes the kind of evidence needed before learners attribute an observed pattern to selection or another directional cause."
+      },
+      "question_type": "chance-versus-causation inference guardrail",
+      "source_context": {
+        "source_section": "The Origin and Impact of Evolutionary Thought; A Synopsis of Evolutionary Theory; For Discussion and Thought",
+        "textbook_prompt_role": "foundational mechanism and causal-inference guardrail",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.pianka.gene-pool-continuity-turnover.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.allele-frequency-change",
+      "title": "What Persists When Individuals Turn Over?",
+      "body": "In a sexually reproducing population, individuals are born and die every generation. What is the population-level entity that can persist through that turnover, and what measurements would show that it has evolved?",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Pianka's population-genetics passage. Use as a beginner bridge from individual turnover to gene-pool continuity and allele-frequency measurement."
+      },
+      "promotion_targets": [
+        "notebook/concepts/allele-frequency-change.html",
+        "notebook/concepts/population-thinking.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "identify the gene pool as the population-level entity with continuity through births and deaths",
+          "define the sampled Mendelian population or reproductive community",
+          "count allele copies at one or more loci in comparable generations",
+          "calculate allele frequencies such as p and q",
+          "compare allele frequencies through time rather than relying on individual lifetime change",
+          "distinguish allele-frequency change from Hardy-Weinberg genotype redistribution"
+        ],
+        "coverage_note": "This adds a Pianka-backed bridge from gene-pool continuity to quantitative allele-frequency evidence."
+      },
+      "mathematical_structure": {
+        "kind": "gene-pool frequency accounting",
+        "formal_statement": "An allele's frequency is its proportional representation in the haploid gene pool. Evolutionary change is detected when comparable allele frequencies in that gene pool change through time.",
+        "notation_status": "normalized from source prose and equation context",
+        "assumptions": [
+          "population boundaries are defined",
+          "allele classes are scored consistently",
+          "comparisons use comparable generations or time intervals",
+          "genotype expectations are distinguished from allele-frequency estimates"
+        ],
+        "biological_interpretation": "The continuity of a gene pool allows evolution to be measured even though the individual organisms composing the population are replaced over time."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "p, q",
+          "notebook_symbol": "p, q",
+          "meaning": "allele frequencies in a two-allele gene pool"
+        },
+        {
+          "source_symbol": "p^2, 2pq, q^2",
+          "notebook_symbol": "p^2, 2pq, q^2",
+          "meaning": "expected diploid genotype frequencies under Hardy-Weinberg assumptions"
+        }
+      ],
+      "question_type": "measurement design",
+      "source_context": {
+        "source_section": "Population Genetics",
+        "textbook_prompt_role": "source-mined allele-frequency measurement probe",
+        "edition_or_volume_year": "1988"
+      }
+    }
+  ],
+  "summary": {
+    "reviewed_total": 7,
+    "claims": 3,
+    "examples": 1,
+    "questions": 3
+  }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>evo-edu.org Roadmap</title>
+  <link rel="stylesheet" href="/shared/evo-edu.css">
+  <script src="/shared/evo-shell.js" defer></script>
+  
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-topbar">
+      <div class="brand-block">
+        <span class="brand-mark">Roadmap</span>
+        <a href="/">evo-edu.org</a>
+        <p class="brand-summary">Roadmap for coherent labs, curriculum support, and self-directed study.</p>
+      </div>
+      <nav class="site-nav" data-evo-nav data-current="roadmap"></nav>
+    </header>
+
+    <section class="hero-card">
+      <p class="eyebrow">Roadmap</p>
+      <div class="hero-grid">
+        <div>
+          <h1>Build evo-edu.org around pathways, not disconnected apps.</h1>
+          <p class="lede">
+            The next version of evo-edu.org should give teachers and self-learners a stable home
+            for digital evolution labs, field ecology resources, scaffolded learning pathways, and
+            project-based exploration tied to the NGSS.
+          </p>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <strong>LS4 + LS2</strong>
+            <span>Start from evolution and ecosystem dynamics, then widen out.</span>
+          </div>
+          <div class="stat-card">
+            <strong>K12 + self-study</strong>
+            <span>Support teachers, classrooms, clubs, and motivated autodidacts.</span>
+          </div>
+          <div class="stat-card">
+            <strong>Pathways first</strong>
+            <span>Organize site growth around usable learning sequences and support materials.</span>
+          </div>
+          <div class="stat-card">
+            <strong>One frame</strong>
+            <span>Consistent theme, navigation, expectations, and progression language.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <p class="section-kicker">Priority expansion order</p>
+      <ol class="roadmap-phase">
+        <li><strong>Phase 1: stabilize the public shell.</strong> Keep navigation, theming, provenance, app contracts, and pathway framing consistent across the current public surface.</li>
+        <li><strong>Phase 2: deepen pathway packs.</strong> Turn the current packs into fuller lesson bundles with handouts, teacher notes, study logs, timing guidance, and expected evidence products.</li>
+        <li><strong>Phase 3: strengthen the explanatory spine.</strong> Expand the Notebook so it actually carries conceptual grounding, misconceptions, history, and links into the packs and app guides.</li>
+        <li><strong>Phase 4: broaden standards-linked coverage.</strong> Extend beyond the strongest LS4 and LS2 areas into more explicit LS3 inheritance, biodiversity, adaptation, and ESS3 environmental-change coverage.</li>
+        <li><strong>Phase 5: guided study and mastery support.</strong> Connect Didactopus to structured pack flows, reflection prompts, review paths, and source-checking routines without turning it into an answer machine.</li>
+      </ol>
+    </section>
+
+    <section class="content-card">
+      <p class="section-kicker">Platform roles</p>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>Digital Evolution Lab</h3>
+          <p>The core lab environment for mutation, selection, adaptation, tradeoffs, and evidence from digital experiments.</p>
+        </article>
+        <article class="feature-card">
+          <h3>EcoSpecies Atlas</h3>
+          <p>The field-and-data side of evo-edu.org, where ecology, species life history, biodiversity, and research documentation come together.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Didactopus</h3>
+          <p>A guided-study companion for autodidacts and structured review. It should support evo-edu course packs, concept maps, and reflection workflows.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Literature Explorer</h3>
+          <p>A research-support tool for topic expansion, bibliography discovery, and evidence trails, built on the CiteGeist API.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <p class="section-kicker">Cross-Project Integration</p>
+      <div class="resource-grid">
+        <article class="resource-card">
+          <h3>Didactopus</h3>
+          <p>Best near-term integration target. Use it as the guided-study and learner-workbench layer behind evo-edu packs, review prompts, concept paths, and reflection workflows. A useful web component already has a plausible base in the existing review-workbench and learner-session direction.</p>
+        </article>
+        <article class="resource-card">
+          <h3>Operational Premise Taxonomy</h3>
+          <p>Best treated first as a linked reference and advanced-topic resource. A later useful web component would be a classifier/explorer UI for OPT codes, example systems, and audit logs, especially for AI literacy or advanced Didactopus-linked study.</p>
+        </article>
+        <article class="resource-card">
+          <h3>VHostLoom</h3>
+          <p>Best treated as infrastructure support rather than a learner-facing evo-edu component. A later useful web component would be an operator-facing site-planning and deployment workbench for stacks, auth, VPN-only services, and generated host layouts.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <p class="section-kicker">Feature-Dev Evaluation</p>
+      <div class="resource-grid">
+        <article class="resource-card">
+          <h3>Adopt in part, not in whole</h3>
+          <p>The newer <code>feature-dev</code> packages are useful as design and prototype material, but they should not replace the current metadata-driven evo-edu publication pipeline outright. The strongest pieces are the app ideas, the lightweight shared JavaScript helper direction, and the educational framing pattern.</p>
+        </article>
+        <article class="resource-card">
+          <h3>What to port forward</h3>
+          <p>Port the best concepts into the current <code>wordpress_data/apps</code> model: start with Fitness Landscape Explorer, then consider Speciation Simulator, Evolutionary Game Theory Lab, Selection vs Drift Inference Lab, and Genotype → Phenotype Mapper as the next app tranche.</p>
+        </article>
+        <article class="resource-card">
+          <h3>What not to replace yet</h3>
+          <p>Do not adopt the Org-template/shared-include package system or the package bundles as the new canonical source of truth. Those would create a second competing framework beside the current <code>app.json</code> plus generator workflow.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="note-band">
+      <h2 class="section-heading">Recommended next implementation steps</h2>
+      <ol class="roadmap-phase">
+        <li>Turn the Visible Change pack into a fuller middle-school lesson bundle with teacher notes, pacing, and assessment criteria.</li>
+        <li>Add teacher notes and classroom-use guidance to the Evidence Trail pack so it can support seminars, clubs, and advanced independent learners.</li>
+        <li>Expand the Notebook so every current pack has a matching conceptual entry point and follow-up reading path.</li>
+        <li>Develop EcoSpecies activity sets around food webs, habitat change, biodiversity, and evidence evaluation, then connect them directly into pathway packs.</li>
+        <li>Prioritize EcoSpecies citation backfill by unresolved backlog and species workload so bibliography cleanup improves steadily across the corpus.</li>
+        <li>Use Didactopus to generate structured study packs, review paths, and reflection prompts tied to evo-edu resources and readings.</li>
+        <li>Integrate Literature Explorer into teacher workflows, EcoSpecies editorial work, and advanced self-learner bibliography building.</li>
+        <li>Review the public app set again and keep unpublished anything that does not yet meet the current shell, guide, provenance, and testing expectations.</li>
+        <li>Add direct resource links from evo-edu packs and pathway pages into Didactopus domains, Operational Premise Taxonomy references, and other external project materials where they serve the learner task.</li>
+        <li>Prototype a Didactopus web-facing learner workbench that can consume evo-edu pathway packs as structured study inputs, starting with the Evidence Trail pack as the first pilot.</li>
+        <li>Keep OPT and VHostLoom on the broader roadmap as likely later web components: OPT as a classifier/explorer and VHostLoom as an operator workbench.</li>
+        <li>Use the <code>feature-dev</code> materials as prototype inputs only: port selected app ideas and JS helper patterns into the current evo-edu app pipeline instead of adopting the package framework wholesale.</li>
+        <li>Prioritize Fitness Landscape Explorer as the first candidate for that port, then evaluate Speciation Simulator and Evolutionary Game Theory Lab as the next likely additions.</li>
+      </ol>
+    </section>
+
+    <footer class="footer-card">
+      <div>
+        <h3>evo-edu.org</h3>
+        <p>Open, inspectable resources for evolution and ecology teaching, research literacy, and self-guided learning.</p>
+      </div>
+      <small>Updated March 28, 2026</small>
+    </footer>
+  </div>
+</body>
+</html>

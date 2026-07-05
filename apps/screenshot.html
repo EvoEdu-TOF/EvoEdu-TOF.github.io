@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Right-Click Screenshot</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <style>
+    #targetArea {
+      width: 300px;
+      height: 200px;
+      border: 2px dashed #666;
+      margin: 50px;
+      padding: 10px;
+    }
+    /* Minimal custom context menu styling */
+    #customMenu {
+      position: absolute;
+      display: none;
+      background: #fff;
+      border: 1px solid #ccc;
+      min-width: 120px;
+      z-index: 9999;
+    }
+    #customMenu button {
+      display: block;
+      width: 100%;
+      padding: 8px 12px;
+      border: none;
+      background: #fff;
+      text-align: left;
+      cursor: pointer;
+    }
+    #customMenu button:hover {
+      background: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+<div id="targetArea">
+  <h3>Right-Click Me</h3>
+  <p>This is the area you can screenshot via a custom menu.</p>
+</div>
+
+<div id="customMenu">
+  <button id="captureBtn">Capture Screenshot</button>
+</div>
+
+<script>
+function captureScreenshot(elementId) {
+  const element = document.getElementById(elementId);
+  if (!element) {
+    console.warn("Element not found:", elementId);
+    return;
+  }
+  html2canvas(element).then(canvas => {
+    const dataURL = canvas.toDataURL("image/png");
+    const link = document.createElement('a');
+    link.download = "screenshot.png";
+    link.href = dataURL;
+    link.click();
+  });
+}
+
+// Grab references
+const targetArea = document.getElementById('targetArea');
+const customMenu = document.getElementById('customMenu');
+const captureBtn = document.getElementById('captureBtn');
+
+/** Handle right-click on targetArea */
+targetArea.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+
+  // Position the custom menu near the cursor
+  customMenu.style.display = 'block';
+  customMenu.style.left = e.pageX + 'px';
+  customMenu.style.top = e.pageY + 'px';
+});
+
+/** Hide the menu if the user clicks anywhere else */
+document.addEventListener('click', function() {
+  customMenu.style.display = 'none';
+});
+
+/** Capture screenshot when the user clicks the menu button */
+captureBtn.addEventListener('click', function(e) {
+  e.stopPropagation(); // Prevent re-triggering document click
+  customMenu.style.display = 'none';
+  captureScreenshot('targetArea');
+});
+</script>
+
+</body>
+</html>

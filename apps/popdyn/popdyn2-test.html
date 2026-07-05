@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Age/Stage Matrix Population Dynamics</title>
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist@2.25.2"></script>
+  <script src="./matpopdyn.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 1em;
+    }
+    nav {
+      background-color: #333;
+      padding: 0.5em;
+    }
+    nav a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+    }
+     .input-section {
+      margin-bottom: 1em;
+    }
+    label {
+      display: inline-block;
+      width: 180px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 220px;
+      padding: 0.25em;
+      margin-left: 0.5em;
+    }
+    #simulateBtn {
+      padding: 0.5em;
+      cursor: pointer;
+    }
+    #chart {
+      width: 80%;
+      height: 500px;
+      margin-top: 2em;
+    }
+    footer {
+      text-align: center;
+      margin-top: 2em;
+      font-size: 0.9em;
+      color: #666;
+    }
+    /* Simple modal for "About" */
+    #aboutModal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+    #aboutModal .modal-content {
+      background-color: #fefefe;
+      margin: 10% auto;
+      padding: 1em;
+      border: 1px solid #888;
+      width: 50%;
+      max-width: 600px;
+      text-align: left;
+      position: relative;
+    }
+    #closeModal {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    #matrixCitationContainer {
+      margin: 1em 0;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <!-- Simple Navbar -->
+  <nav>
+    <a href="https://evo-edu.org" target="_blank">Home</a>
+    <a href="#" id="helpLink">Help</a>
+    <a href="#" id="aboutLink">About</a>
+  </nav>
+
+  <h1>Age/Stage Matrix Population Dynamics</h1>
+
+  <!-- Species Dropdown -->
+  <div class="input-section">
+    <label for="speciesSelect">Species:</label>
+    <select id="speciesSelect"></select>
+  </div>
+
+  <!-- Matrix Dropdown -->
+  <div class="input-section">
+    <label for="matrixSelect">Matrix Entry:</label>
+    <select id="matrixSelect"></select>
+  </div>
+
+  <!-- Citation -->
+  <div class="input-section">
+    <label>Citation:</label>
+    <span id="matrixCitation">N/A</span>
+  </div>
+
+  <!-- Population Type -->
+  <div class="input-section">
+    <label for="populationType">Population Type:</label>
+    <select id="populationType">
+      <option value="Highly Endangered">Highly Endangered</option>
+      <option value="Endangered">Endangered</option>
+      <option value="Threatened">Threatened</option>
+      <option value="Marginal">Marginal</option>
+      <option value="Normal" selected>Normal</option>
+      <option value="Abundant">Abundant</option>
+    </select>
+  </div>
+
+  <!-- Initial Distribution -->
+  <div class="input-section">
+    <label for="initialDist">Initial Distribution:</label>
+    <input type="text" id="initialDist" value="" />
+  </div>
+
+  <!-- Number of Steps -->
+  <div class="input-section">
+    <label for="numSteps">Number of Steps:</label>
+    <input type="number" id="numSteps" value="10" />
+  </div>
+
+  <!-- Simulate -->
+  <div class="input-section">
+    <button id="simulateBtn">Simulate</button>
+  </div>
+
+  <div id="chart"></div>
+
+  <!-- About Modal -->
+  <div id="aboutModal">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <h2>About This App</h2>
+      <p>
+        This web application demonstrates how to integrate the 
+        <strong>matpopdyn.js</strong> library (a JavaScript port of matpopdyn.py) 
+        with demographic matrices from <strong>COMADRE</strong> and <strong>COMPADRE</strong>,
+        two global repositories of plant and animal matrix population models.
+      </p>
+      <p>
+        We acknowledge and thank the COMADRE/COMPADRE project teams for making these data 
+        openly available. 
+      </p>
+      <p>
+COMPADRE Plant Matrix Database (2025). Available from: https://www.compadre-db.org [23 February 2025, Version 6.23.5.0].</p>
+      <p>
+COMADRE Animal Matrix Database (2025). Available from: https://www.compadre-db.org [23 February 2025, Version 4.23.3.1].
+      </p>
+      <p><a href="https://github.com/welsberr/matpopdyn">MatPopDyn on Github</a></p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Wesley R. Elsberry. Released under MIT license.
+  </footer>
+
+  
+<script>
+    // "Help" link => an alert, or link to docs
+    document.getElementById('helpLink').addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('Contact developer@example.com for help, or see README.');
+    });
+
+    // Show the "About" modal
+    aboutLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      aboutModal.style.display = 'block';
+    });
+    // Close the modal
+    closeModal.addEventListener('click', () => {
+      aboutModal.style.display = 'none';
+    });
+    // Also close modal if user clicks outside the modal content
+    window.addEventListener('click', (event) => {
+      if (event.target === aboutModal) {
+        aboutModal.style.display = 'none';
+      }
+    });
+  // HTML references
+  const speciesSelect     = document.getElementById('speciesSelect');
+  const matrixSelect      = document.getElementById('matrixSelect');
+  const matrixCitationEl  = document.getElementById('matrixCitation');
+  const populationTypeSel = document.getElementById('populationType');
+  const initialDistInput  = document.getElementById('initialDist');
+  const numStepsInput     = document.getElementById('numSteps');
+  const simulateBtn       = document.getElementById('simulateBtn');
+  const chartDiv          = document.getElementById('chart');
+
+  let comadreData = []; // Will hold the top-level array of species objects, each with a 'matrices' array
+
+    // 1. Load the nested JSON (which you generated via R script)
+    // let datafn = 'comadre_data_twodrop.json';
+    let datafn = 'test.json';
+    
+  fetch(datafn)
+    .then(response => response.json())
+    .then(data => {
+      comadreData = data;
+
+      // Populate species dropdown
+      data.forEach((speciesObj, i) => {
+        let opt = document.createElement('option');
+        opt.value = i; 
+        opt.textContent = speciesObj.species;
+        speciesSelect.appendChild(opt);
+      });
+
+      // Trigger an update
+      updateMatrixDropdown();
+    })
+    .catch(err => console.error('Error loading JSON:', err));
+
+  // 2. Whenever species changes, update matrix dropdown
+  speciesSelect.addEventListener('change', updateMatrixDropdown);
+  matrixSelect.addEventListener('change', updateCitation);
+
+  // Also re-generate initial distribution if user picks a new population type
+  populationTypeSel.addEventListener('change', updateInitialDistribution);
+
+  function updateMatrixDropdown() {
+    matrixSelect.innerHTML = ''; // clear
+
+    let spIndex = parseInt(speciesSelect.value, 10);
+    if (!comadreData[spIndex]) return;
+
+    let matrices = comadreData[spIndex].matrices;
+    matrices.forEach((mObj, j) => {
+      let opt = document.createElement('option');
+      opt.value = j; 
+      opt.textContent = mObj.label; 
+      matrixSelect.appendChild(opt);
+    });
+
+    // Update citation & distribution for default matrix
+    updateCitation();
+    updateInitialDistribution();
+  }
+
+  function updateCitation() {
+    let spIndex = parseInt(speciesSelect.value, 10);
+    let matIndex = parseInt(matrixSelect.value, 10);
+
+    if (!comadreData[spIndex]) {
+      matrixCitationEl.textContent = 'N/A';
+      return;
+    }
+
+    let matrices = comadreData[spIndex].matrices;
+    if (!matrices[matIndex]) {
+      matrixCitationEl.textContent = 'N/A';
+      return;
+    }
+    matrixCitationEl.textContent = matrices[matIndex].citation || 'N/A';
+
+    // Re-generate the distribution as well
+    updateInitialDistribution();
+  }
+
+  // 3. Create or regenerate the initial distribution array 
+  // based on the selected matrix's dimension & population type
+  function updateInitialDistribution() {
+    let spIndex  = parseInt(speciesSelect.value, 10);
+    let matIndex = parseInt(matrixSelect.value, 10);
+    if (!comadreData[spIndex] || !comadreData[spIndex].matrices[matIndex]) {
+      initialDistInput.value = '';
+      return;
+    }
+
+    let matrix2D = comadreData[spIndex].matrices[matIndex].matrix;
+    let nStages  = matrix2D.length;
+    let popType  = populationTypeSel.value;
+
+    // Scale factor logic
+    let scaleFactor = 1; 
+    switch(popType) {
+      case 'Highly Endangered': scaleFactor = 0.2;   break;
+      case 'Endangered':       scaleFactor = 1;     break;
+      case 'Threatened':       scaleFactor = 5;     break;
+      case 'Marginal':         scaleFactor = 20;    break;
+      case 'Normal':           scaleFactor = 100;   break;
+      case 'Abundant':         scaleFactor = 1000;  break;
+    }
+
+    // Build a random distribution array with 'nStages' entries
+    let distArray = [];
+    for (let i = 0; i < nStages; i++) {
+      // random fraction in [0.5, 1.5]
+      let randFrac = Math.random() + 0.5;
+      let val = Math.round(randFrac * scaleFactor);
+      distArray.push(val);
+    }
+
+    initialDistInput.value = distArray.join(', ');
+  }
+
+  // 4. Create LMatrix from 2D array
+  function createLMatrixFrom2DArray(matrix2D) {
+    const n = matrix2D.length;
+    let lm = new LMatrix(n);
+    for (let i = 0; i < n; i++) {
+      for (let j = 0; j < n; j++) {
+        lm.LM_SetOneRelation(j, i, matrix2D[i][j]);
+      }
+    }
+    return lm;
+  }
+
+  // 5. Simulate
+  simulateBtn.addEventListener('click', () => {
+    let spIndex = parseInt(speciesSelect.value, 10);
+    let matIndex = parseInt(matrixSelect.value, 10);
+
+    if (!comadreData[spIndex] || !comadreData[spIndex].matrices[matIndex]) {
+      alert('No matrix data found.');
+      return;
+    }
+    let matrix2D = comadreData[spIndex].matrices[matIndex].matrix;
+    const n = matrix2D.length;
+
+    let lmat = createLMatrixFrom2DArray(matrix2D);
+
+    // Parse user distribution
+    let pop0 = initialDistInput.value.split(',').map(x => parseFloat(x.trim()));
+    if (pop0.length !== n) {
+      alert(`Initial distribution must have ${n} entries.`);
+      return;
+    }
+    lmat.LM_SetPopulation(pop0);
+
+    const steps = parseInt(numStepsInput.value, 10);
+    let spNameT = comadreData[spIndex].species;
+			let mLabelT = comadreData[spIndex].matrices[matIndex].label;
+    console.log("species", spNameT, "matrix", mLabelT);
+    console.log("m", lmat.m)
+
+    // Step forward
+    let populations = [];
+    populations.push([...lmat.popvec]);
+    for (let t = 1; t <= steps; t++) {
+			 lmat.LM_StepForward();
+			 console.log("step", t);
+			 console.log("popvec", lmat.popvec);
+			 console.log("total pop", lmat.LM_TotalPopulation());
+
+      populations.push([...lmat.popvec]);
+    }
+
+    // Plot
+    const timeSteps = Array.from({length: steps + 1}, (_, i) => i);
+    let traces = [];
+    for (let stageIdx = 0; stageIdx < n; stageIdx++) {
+      let yVals = populations.map(p => p[stageIdx]);
+      traces.push({
+        x: timeSteps,
+        y: yVals,
+        mode: 'lines+markers',
+        name: `Stage ${stageIdx+1}`
+      });
+    }
+
+    let spName = comadreData[spIndex].species;
+    let mLabel = comadreData[spIndex].matrices[matIndex].label;
+    let layout = {
+      title: `${spName} - ${mLabel}`,
+      xaxis: { title: 'Time Step' },
+      yaxis: { title: 'Population Size' }
+    };
+    Plotly.newPlot(chartDiv, traces, layout);
+  });
+</script>
+</body>
+</html>

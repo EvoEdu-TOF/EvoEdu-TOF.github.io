@@ -1,0 +1,973 @@
+{
+  "schema": "evo-edu.notebook.reviewed_elements.v1",
+  "generated": "2026-06-30",
+  "concept_id": "notebook.concepts.adaptation",
+  "items": [
+    {
+      "id": "staged.claim.futuyma.adaptation-extinction-boundary.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptation",
+      "title": "Adaptation Does Not Guarantee Resistance To Extinction",
+      "body": "Futuyma's macroevolution and diversity chapters support a guardrail for adaptation: local adaptedness does not mean a lineage evolves to avoid extinction, because environmental change, habitat loss, random origination and extinction, and lineage-level sorting can shape survival independently of organism-level fit.",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as an advanced adaptation/macroevolution guardrail. It should not weaken the basic claim that selection can improve fit to local environments; it separates local adaptedness from lineage persistence."
+      },
+      "promotion_targets": [
+        "notebook/concepts/adaptation.html",
+        "notebook/concepts/common-descent.html"
+      ],
+      "source_path_redacted": true,
+      "mathematical_structure": {
+        "kind": "lineage-level rate comparison",
+        "formal_statement": "Lineage persistence depends on origination and extinction rates as well as organism-level adaptation; a constant extinction hazard can coexist with local adaptive improvement.",
+        "notation_status": "conceptualized; no equation preserved in this sidecar",
+        "assumptions": [
+          "selection acts within populations on heritable variation",
+          "lineage survival can depend on environmental and habitat context",
+          "speciation and extinction rates can shape macroevolutionary patterns",
+          "random extinction means not cause-free extinction, but extinction modeled without a consistent association to the trait being explained"
+        ],
+        "biological_interpretation": "Adaptation is local and historical, while extinction risk can be governed by broader ecological and lineage-level circumstances."
+      }
+    },
+    {
+      "id": "staged.claim.pianka.adaptation-multidimensional-compromise.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptation",
+      "title": "Adaptation Often Requires Multidimensional Compromise",
+      "body": "Pianka supports presenting adaptation as conformity to many environmental dimensions at once, where physical conditions, competitors, predators, prey, and energetic tradeoffs can require compromise rather than perfection.",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as a guard against single-axis or perfectionist accounts of adaptation."
+      },
+      "promotion_targets": [
+        "notebook/concepts/adaptation.html",
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/population-thinking.html"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.claim.williams.adaptation-guardrail.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptation",
+      "title": "Adaptation Claims Need Evidence And A Clear Level Of Selection",
+      "body": "Williams supports a Notebook guardrail that adaptation should not be invoked casually: a proposed function should be tied to evidence of design by selection and assigned only to the level of organization demanded by the evidence.",
+      "source_anchors": [
+        {
+          "source_id": "williams-adaptation-natural-selection-1968",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as a misconception guard for adaptation and natural-selection pages; avoid stronger public wording until additional source review."
+      },
+      "promotion_targets": [
+        "notebook/concepts/adaptation.html",
+        "notebook/concepts/natural-selection.html"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.claim.wilson.spatial-structure-coexistence.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptation",
+      "title": "Spatial Structure Can Change Coexistence Predictions",
+      "body": "Wilson's gynodioecy model shows why adaptation and coexistence claims need explicit spatial assumptions: a homogeneous nonspatial model can predict extinction, while a spatially explicit simulation with local pollen movement, seed dispersal, death, and recolonization can maintain both female and hermaphroditic plant types.",
+      "source_anchors": [
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as an advanced adaptation/ecology modeling guardrail. Keep public treatment focused on model assumptions and spatial structure; do not promote the C code as current software practice."
+      },
+      "promotion_targets": [
+        "notebook/concepts/adaptation.html",
+        "notebook/concepts/population-thinking.html",
+        "apps/ecobalance/app/index.html"
+      ],
+      "source_path_redacted": true,
+      "algorithm_translation": {
+        "source_language": "C and model prose",
+        "target_language": "JavaScript",
+        "translation_policy": "clean-room spatial simulation from biological assumptions and expected comparisons; avoid direct C port",
+        "model_focus": "spatially explicit coexistence versus homogeneous mixing in a plant mating-system model",
+        "web_default": true
+      },
+      "copyright_review": {
+        "direct_code_reuse": "avoid",
+        "risk_reducer": "clean-room JavaScript model using paraphrased rules and independent implementation",
+        "provenance_required": true
+      },
+      "expected_output_checks": [
+        "Compare homogeneous mixing against spatially explicit runs before claiming coexistence.",
+        "Record pollen distance, seed distance, death rate, and initial spatial distribution for each run.",
+        "Treat coexistence as a model result requiring sensitivity checks, not as a general fact about all gynodioecious systems."
+      ],
+      "mathematical_structure": {
+        "kind": "spatial model comparison",
+        "formal_statement": "Compare a nonspatial two-type density model with a spatially explicit model where pollen and seed dispersal are local and occupancy is cell-based.",
+        "notation_status": "conceptualized from source equations and simulation rules; no direct equation reuse in public copy",
+        "assumptions": [
+          "female plants require hermaphrodite pollen to reproduce",
+          "female seed production can exceed hermaphrodite seed production when male function is lost",
+          "homogeneous mixing removes local spatial correlations",
+          "spatial simulations can maintain coexistence through local extinction and recolonization fronts",
+          "model conclusions depend on pollen dispersal, seed dispersal, mortality, and boundary conditions"
+        ],
+        "biological_interpretation": "A trait's apparent advantage can depend on local interaction structure, not only on average performance in a well-mixed population."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "H",
+          "notebook_symbol": "hermaphroditeDensity",
+          "meaning": "density or count of hermaphroditic plants"
+        },
+        {
+          "source_symbol": "F",
+          "notebook_symbol": "femaleDensity",
+          "meaning": "density or count of female plants"
+        },
+        {
+          "source_symbol": "P(x,t)",
+          "notebook_symbol": "localPollenInput",
+          "meaning": "pollen imported to a location at a time"
+        },
+        {
+          "source_symbol": "K_p(y,x)",
+          "notebook_symbol": "pollenDispersalKernel",
+          "meaning": "fraction of pollen from one location dispersed to another"
+        }
+      ]
+    },
+    {
+      "id": "staged.example.wilson.spatial-gynodioecy-coexistence.001",
+      "kind": "example",
+      "concept_id": "notebook.concepts.adaptation",
+      "title": "Spatial Structure Can Change A Mating-System Model",
+      "body": "Wilson's gynodioecy treatment supports an advanced Notebook example in which a nonspatial model and a spatial simulation can predict different outcomes for female and hermaphroditic plant types, because local replacement and expansion fronts change coexistence conditions.",
+      "source_anchors": [
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Reviewed against local OCR and paired with a spatial-structure coexistence claim. Keep as an advanced adaptation/ecology modeling example rather than a foundation-ring requirement."
+      },
+      "promotion_targets": [
+        "notebook/concepts/adaptation.html",
+        "notebook/concepts/population-thinking.html",
+        "apps/ecobalance/app/index.html"
+      ],
+      "source_path_redacted": true,
+      "algorithm_translation": {
+        "source_language": "C and model prose",
+        "target_language": "JavaScript",
+        "translation_policy": "clean-room spatial model from reviewed biological assumptions; avoid direct C port",
+        "model_focus": "spatial coexistence versus homogeneous mixing in a gynodioecy model",
+        "web_default": true
+      },
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "gynodioecy definition",
+          "cytoplasmic male sterility inheritance",
+          "why female seed advantage can destabilize a homogeneous model",
+          "how local pollen and seed dispersal create spatial structure",
+          "why local extinction and expansion-front dynamics can maintain global coexistence",
+          "why parameter and sensitivity checks are required before biological generalization"
+        ],
+        "coverage_note": "The prerequisite biology is now represented by the paired spatial-structure coexistence claim."
+      },
+      "mathematical_structure": {
+        "kind": "spatial versus nonspatial model comparison",
+        "formal_statement": "Compare a well-mixed two-type plant model with a spatially explicit cellular simulation whose local pollen and seed dispersal rules can produce different coexistence outcomes.",
+        "notation_status": "conceptualized from source equations and simulation prose",
+        "assumptions": [
+          "female and hermaphroditic types differ in reproductive allocation",
+          "female reproduction requires pollen from hermaphrodites",
+          "homogeneous mixing removes spatial correlations",
+          "local dispersal can make global persistence depend on expansion fronts and recolonization",
+          "simulation outcomes depend on pollen distance, seed distance, mortality, initial distribution, and mixing"
+        ],
+        "biological_interpretation": "The example asks learners to treat spatial structure as a biological assumption that can change the model's evolutionary conclusion."
+      }
+    },
+    {
+      "id": "staged.question.adaptation.necessary-or-advantageous.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.adaptation",
+      "title": "Needed Or Advantageous?",
+      "body": "A student says a trait evolved because a species needed it. How would you reframe the explanation in terms of advantage, evidence, and immediate differences in reproductive success?",
+      "source_anchors": [
+        {
+          "source_id": "williams-adaptation-natural-selection-1968",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-adaptation-natural-selection-1968",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Misconception probe for teleological adaptation explanations; suitable for Notebook review and Didactopus sequencing."
+      },
+      "promotion_targets": [
+        "notebook/concepts/adaptation.html",
+        "notebook/concepts/natural-selection.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.question.futuyma.extinction-adaptation-trend-gap.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.adaptation",
+      "title": "Does Adaptation Guarantee Lineage Survival?",
+      "body": "If natural selection can improve fit to local conditions, why does that not imply that species evolve to avoid extinction or that older species should always be safer from extinction?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Reviewed against local OCR from the scanned Futuyma volume. Keep as an advanced adaptation/macroevolution coverage probe; pair with the adaptation-extinction boundary claim before public promotion."
+      },
+      "promotion_targets": [
+        "notebook/concepts/adaptation.html"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "distinguish local adaptedness from long-term lineage persistence",
+          "explain why environmental change or habitat loss may not create a new selectable route away from extinction",
+          "distinguish individual/population-level natural selection from lineage-level differential extinction",
+          "interpret constant or stochastic extinction rates without treating extinction as cause-free",
+          "explain why evolutionary trends require population- and lineage-level explanations"
+        ],
+        "coverage_note": "This turns the earlier macroevolution/adaptation gap into a reviewed advanced synthesis probe."
+      },
+      "mathematical_structure": {
+        "kind": "macroevolutionary rate model question",
+        "formal_statement": "Compare local adaptive change within populations with lineage-level persistence shaped by origination rates, extinction rates, and differential extinction among species.",
+        "notation_status": "conceptualized; source discusses rates but no notation is normalized here",
+        "assumptions": [
+          "extinction rate can be considered at a taxonomic or lineage level",
+          "adaptedness within populations does not necessarily lower extinction hazard",
+          "random extinction has causes but may be random with respect to the trait or adaptation being analyzed",
+          "macroevolutionary trends can arise from differential speciation and extinction"
+        ],
+        "biological_interpretation": "The question asks learners to prevent adaptation language from becoming a claim of inevitable progress or guaranteed survival."
+      },
+      "question_type": "synthesis",
+      "source_context": {
+        "source_section": "FOR DISCUSSION AND THOUGHT",
+        "textbook_prompt_role": "macroevolution discussion question",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.mayr-1988.function-purpose-teleology-guardrail.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.adaptation",
+      "title": "Function, Purpose, Or Selection History?",
+      "body": "A learner writes, \"The eye exists in order to see, so evolution was aiming at vision.\" How would you separate that sentence into claims about current operation, biological function, evolutionary origin, and illegitimate purpose language?",
+      "source_anchors": [
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-25",
+        "notes": "Paraphrased from Mayr's 1988 essay on teleological language. Use as a conceptual guardrail for adaptation and function claims, especially before learners treat function language as evidence of future-directed evolutionary purpose."
+      },
+      "promotion_targets": [
+        "notebook/concepts/adaptation.html",
+        "notebook/concepts/natural-selection.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "distinguish current operation of a structure from the historical origin of that structure",
+          "identify proximate causes as mechanisms of present functioning and ultimate causes as evolutionary history shaped by selection",
+          "explain that asking what role a feature plays can be a useful heuristic, not a license to infer conscious purpose or future planning",
+          "state that adaptive or functional language does not require final causes or nonempirical purpose",
+          "reject claims that evolutionary processes or trends are goal-directed toward future needs",
+          "ask for evidence that selection favored design features producing the claimed function rather than relying on usefulness alone"
+        ],
+        "coverage_note": "This adds a Mayr-backed guardrail that connects adaptation, function, and evidence-and-cause reasoning without turning biological function into cosmic teleology or evolutionary foresight."
+      },
+      "mathematical_structure": {
+        "kind": "causal-language distinction",
+        "formal_statement": "Functional claims should separate present mechanism, present effect, and evolutionary origin; a function claim becomes an adaptive-history claim only when evidence supports selection for the effect at the relevant level.",
+        "notation_status": "conceptual; no source notation normalized",
+        "assumptions": [
+          "a structure can currently perform an effect without that effect being the reason it evolved",
+          "proximate and ultimate explanations answer different causal questions",
+          "selection can explain adaptiveness without implying future-directed purpose",
+          "teleonomic or function language must remain tied to causal mechanisms and evidence",
+          "cosmic or goal-directed evolutionary teleology is outside empirical scientific explanation"
+        ],
+        "biological_interpretation": "Learners should translate purpose-sounding language into testable claims about operation, effects, selection history, and evidence."
+      },
+      "question_type": "teleology and function inference guardrail",
+      "source_context": {
+        "source_section": "The Multiple Meanings of Teleological",
+        "textbook_prompt_role": "conceptual foundations passage converted into a causal-language coverage probe",
+        "edition_or_volume_year": "1988 local split-PDF scan, part 002 OCR"
+      }
+    },
+    {
+      "id": "staged.question.mayr-1988.proximate-ultimate-cause-distinction.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.adaptation",
+      "title": "Which Cause Is Proximate, And Which Is Evolutionary?",
+      "body": "A bird begins migration after changing day length and physiological state, and its lineage has a history of selection in seasonal environments. Which parts of this explanation answer how the individual responds now, which answer why the behavior exists historically, and why would combining them into one cause make the explanation weaker?",
+      "source_anchors": [
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-25",
+        "notes": "Paraphrased from Mayr's Cause and Effect in Biology essay. Use as a foundation for separating observed phenomena, immediate mechanisms, and historical evolutionary explanations before learners infer a single cause."
+      },
+      "promotion_targets": [
+        "notebook/concepts/adaptation.html",
+        "notebook/concepts/natural-selection.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "distinguish immediate mechanistic triggers from evolutionary or historical causes",
+          "identify proximate causes as mechanisms of present development, physiology, or behavior",
+          "identify ultimate causes as historical or evolutionary conditions and selection shaping the trait or program",
+          "explain that both cause sets can be real and necessary, but answer different questions",
+          "avoid treating why language as future purpose or conscious intent",
+          "state what evidence would be needed for each level, such as physiological and environmental measurements for proximate causes and comparative, historical, or fitness evidence for ultimate causes"
+        ],
+        "coverage_note": "This adds a Mayr-backed causal-reasoning guardrail for adaptation coverage: learners should not collapse present mechanism, historical selection, and purpose language into one explanation."
+      },
+      "mathematical_structure": {
+        "kind": "causal-level distinction",
+        "formal_statement": "For a biological phenomenon, proximate explanations address current mechanisms and triggers, while ultimate explanations address historical and evolutionary causes; a complete account may need both levels without treating them as interchangeable.",
+        "notation_status": "conceptual; no source notation normalized",
+        "assumptions": [
+          "biological phenomena can have multiple legitimate causes at different explanatory levels",
+          "proximate triggers do not by themselves explain why a trait or behavioral program evolved",
+          "ultimate explanations do not replace measurements of present mechanism",
+          "historical why questions should be interpreted as how-come questions, not future-directed purpose",
+          "complex biological systems often require evidence that separates causal scale, timing, and mechanism"
+        ],
+        "biological_interpretation": "Learners should classify causal claims by the kind of evidence and time scale they require before deciding whether an explanation is adequate."
+      },
+      "question_type": "proximate-ultimate cause inference guardrail",
+      "source_context": {
+        "source_section": "Cause and Effect in Biology",
+        "textbook_prompt_role": "conceptual foundations passage converted into a causal-explanation coverage probe",
+        "edition_or_volume_year": "1988 local split-PDF scan, part 001 OCR"
+      }
+    },
+    {
+      "id": "staged.question.pianka.character-displacement-evidence-boundary.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.adaptation",
+      "title": "When Should Competition Produce Character Displacement?",
+      "body": "Two related species use similar food resources where each lives alone, but they differ where they live together. In another pair, the species coexist by foraging in different microhabitats without obvious mouthpart divergence. What evidence would support character displacement, and why should not every coexistence case be expected to show the same morphological change?",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Pianka's competition and ecological niche chapter. Keep as an evidence-boundary question: character displacement is a testable pattern, not a blanket expectation for every coexistence or invasion case."
+      },
+      "promotion_targets": [
+        "notebook/concepts/adaptation.html",
+        "notebook/concepts/speciation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "define character displacement as greater divergence in sympatry than in allopatry for related species",
+          "identify competition as one possible cause when the shifted trait affects resource use or niche overlap",
+          "explain that behavioral, temporal, or microhabitat separation can reduce competition without a matching morphological shift",
+          "recognize ecological release as expansion when competitors are absent or reduced",
+          "explain that invasion or competitive exclusion can remove one species before natural selection produces niche separation"
+        ],
+        "coverage_note": "This adds a nuanced adaptation-evidence item connecting competition, niche partitioning, and extinction."
+      },
+      "mathematical_structure": {
+        "kind": "comparative inference pattern",
+        "formal_statement": "Support for character displacement requires a contrast between sympatric and allopatric populations plus a mechanism linking the divergent trait to resource use, competition, or niche overlap.",
+        "notation_status": "qualitative source passage normalized as an inference checklist",
+        "assumptions": [
+          "sympatric and allopatric populations are comparable enough for the contrast to be meaningful",
+          "the trait difference affects ecological interaction or resource use",
+          "alternative explanations such as habitat differences, history, and sampling are considered",
+          "coexistence can arise through non-morphological niche differences"
+        ],
+        "biological_interpretation": "Adaptation claims are stronger when the observed trait pattern is tied to ecological mechanism and when plausible alternatives are tested."
+      },
+      "question_type": "adaptation evidence guardrail",
+      "source_context": {
+        "source_section": "Competition and the Ecological Niche; Evidence from Nature",
+        "textbook_prompt_role": "conceptual passage converted into an assessment question",
+        "edition_or_volume_year": "1988 fourth edition"
+      }
+    },
+    {
+      "id": "staged.question.pianka.convergence-ecological-equivalents-inference.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.adaptation",
+      "title": "When Similar Niches Produce Similar Forms",
+      "body": "Two unrelated organisms from different continents look and behave similarly while occupying roughly similar ecological roles. What evidence would support interpreting this as evolutionary convergence, and what caution should you apply before calling them ecological equivalents?",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Pianka's fourth-edition discussion of convergent evolution and ecological equivalents. Use as an adaptation/common-descent boundary probe."
+      },
+      "promotion_targets": [
+        "notebook/concepts/adaptation.html",
+        "notebook/concepts/common-descent.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "identify independent ancestry or distant relationship as part of the convergence inference",
+          "connect similar phenotype or behavior to similar ecological role or selective regime",
+          "look for repeated correspondence across traits relevant to the niche rather than one superficial resemblance",
+          "check dissimilarities and phylogenetic evidence before treating the organisms as true ecological equivalents",
+          "distinguish convergence from homology due to recent common ancestry"
+        ],
+        "coverage_note": "This adds an adaptation probe that also supports common-descent reasoning by separating convergent similarity from inherited similarity."
+      },
+      "mathematical_structure": {
+        "kind": "comparative ecological inference",
+        "formal_statement": "Similarity caused by comparable selective environments should be evaluated against phylogenetic independence and against trait differences not explained by the shared ecological role.",
+        "notation_status": "not applicable",
+        "assumptions": [
+          "the organisms' ecological roles can be compared",
+          "phylogenetic relationship or taxonomic distance is known well enough for the inference",
+          "the traits being compared are functionally relevant rather than arbitrary",
+          "differences as well as similarities are considered"
+        ],
+        "biological_interpretation": "Convergence shows that adaptation can make unrelated lineages resemble one another, but it is an inference that requires phylogenetic and ecological checks."
+      },
+      "question_type": "evidence interpretation",
+      "source_context": {
+        "source_section": "Community Evolution",
+        "textbook_prompt_role": "source-mined diagnostic question",
+        "edition_or_volume_year": "1988 fourth edition"
+      }
+    },
+    {
+      "id": "staged.question.pianka.foraging-reproduction-allocation-tradeoff.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.adaptation",
+      "title": "Why Is A Jack-Of-Many-Trades Not Always Best?",
+      "body": "A predator can evolve a narrow prey-size preference that is very efficient when that prey is common, or a broader diet that works across many prey sizes but is less efficient on any one size. How does the principle of allocation explain this tradeoff, and why should a learner connect foraging tactics to reproduction rather than treating energy intake as the only measure of fitness?",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-24",
+        "notes": "Paraphrased from Pianka's resource budgets and allocation chapter. Keep the item focused on tradeoff reasoning: broad resource use can be adaptive under variable resources but may reduce peak performance on the most profitable resource."
+      },
+      "promotion_targets": [
+        "notebook/concepts/adaptation.html",
+        "notebook/concepts/natural-selection.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "state that organisms have finite time, energy, and material budgets",
+          "explain that allocation to foraging, growth, maintenance, and reproduction creates tradeoffs",
+          "interpret a utilization curve as actual resource use under specified environmental conditions",
+          "contrast specialization on the most profitable prey with generalized use of a wider prey range",
+          "recognize that energy uptake per unit time is a proxy, while lifetime reproductive success is closer to fitness",
+          "connect foraging inputs to reproductive outputs rather than optimizing each in isolation"
+        ],
+        "coverage_note": "This adds a foraging/life-history bridge to adaptation coverage using Pianka's allocation framework."
+      },
+      "mathematical_structure": {
+        "kind": "allocation tradeoff model",
+        "formal_statement": "With a finite resource budget, increasing breadth of resource use can increase environmental coverage while lowering peak efficiency on the best resource; fitness inference requires linking input acquisition to reproductive output.",
+        "notation_status": "qualitative source passage normalized as an optimization tradeoff",
+        "assumptions": [
+          "time, energy, or material budgets are finite",
+          "prey availability varies across space or time",
+          "foraging efficiency and reproductive output are not automatically identical",
+          "generalist and specialist strategies are compared in the same environmental context",
+          "performance breadth and peak performance can constrain one another"
+        ],
+        "biological_interpretation": "Adaptive explanations should ask what is being optimized and what is being traded away, especially when foraging, maintenance, growth, and reproduction compete for the same budget."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "utilization curve",
+          "notebook_symbol": "resourceUseCurve",
+          "meaning": "actual use of prey or resources across available types under specified conditions"
+        },
+        {
+          "source_symbol": "energy uptake per unit time",
+          "notebook_symbol": "energyGainRate",
+          "meaning": "common optimal-foraging proxy for performance"
+        },
+        {
+          "source_symbol": "successful offspring",
+          "notebook_symbol": "lifetimeReproductiveSuccess",
+          "meaning": "fitness-relevant output that foraging performance may influence"
+        }
+      ],
+      "question_type": "adaptation tradeoff guardrail",
+      "source_context": {
+        "source_section": "Resource Budgets and the Principle of Allocation",
+        "textbook_prompt_role": "source-mined foraging and life-history tradeoff probe",
+        "edition_or_volume_year": "1988 fourth edition"
+      }
+    },
+    {
+      "id": "staged.question.pianka.life-history-fecundity-survivorship-tradeoff.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.adaptation",
+      "title": "Why Is Longer Life Not Automatically Favored?",
+      "body": "A species in a variable, uncrowded habitat produces many small offspring early, while a related species in a crowded habitat delays reproduction and produces fewer larger offspring. What evidence would support a life-history tradeoff explanation, and why should a learner avoid saying that longer life or higher fecundity is automatically favored by selection?",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-24",
+        "notes": "Paraphrased from Pianka's life-history passages. Keep the item as a tradeoff and fitness-proxy guardrail: survival, early reproduction, fecundity, and offspring size must be interpreted through reproductive value and allocation context."
+      },
+      "promotion_targets": [
+        "notebook/concepts/adaptation.html",
+        "notebook/concepts/natural-selection.html",
+        "notebook/concepts/population-thinking.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "state that selection ultimately acts through differential reproductive success, not survival alone",
+          "explain that reproductive value changes with age, so early and late effects can have different selective consequences",
+          "connect high fecundity, offspring size, juvenile survivorship, and adult survivorship as allocation-linked variables",
+          "recognize that more current reproduction can reduce later survival or future reproduction",
+          "interpret r/K language as a heuristic contrast between opportunistic and equilibrium life-history tendencies, not a literal rule for every population",
+          "ask for evidence about age-specific reproduction, mortality, density, and offspring survival before assigning an adaptive explanation"
+        ],
+        "coverage_note": "This adds a reviewed life-history tradeoff probe to adaptation coverage while linking to natural-selection and population-thinking guardrails."
+      },
+      "mathematical_structure": {
+        "kind": "life-history allocation tradeoff",
+        "formal_statement": "For a finite allocation budget, increased current reproductive effort can trade off against future survival or reproduction; the fitness consequence depends on age-specific reproductive value, mortality, fecundity, offspring size, and density context.",
+        "notation_status": "qualitative source passage normalized as an age-structured tradeoff model",
+        "assumptions": [
+          "time, energy, or material budgets constrain simultaneous investment in survival and reproduction",
+          "age-specific reproduction and survival differ among life-history strategies",
+          "offspring number and offspring size can constrain one another",
+          "juvenile survivorship and density context affect the value of current reproductive effort",
+          "survival is fitness-relevant only insofar as it changes reproductive output"
+        ],
+        "biological_interpretation": "Life-history explanations should compare whole reproductive schedules rather than treating long life, early reproduction, many offspring, or large offspring as universally optimal."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "reproductive value",
+          "notebook_symbol": "ageSpecificReproductiveValue",
+          "meaning": "expected contribution of an individual at a given age to future reproduction"
+        },
+        {
+          "source_symbol": "fecundity",
+          "notebook_symbol": "offspringNumber",
+          "meaning": "number of offspring or reproductive output in a life-history schedule"
+        },
+        {
+          "source_symbol": "survivorship",
+          "notebook_symbol": "survivalProbability",
+          "meaning": "probability of surviving across a life-history interval"
+        }
+      ],
+      "question_type": "life-history tradeoff guardrail",
+      "source_context": {
+        "source_section": "Life Histories; Reproductive Value; r and K Selection",
+        "textbook_prompt_role": "source-mined life-history allocation and fecundity-survivorship probe",
+        "edition_or_volume_year": "1988 fourth edition"
+      }
+    },
+    {
+      "id": "staged.question.williams.benefit-functional-design-check.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.adaptation",
+      "title": "Benefit Or Functional Design?",
+      "body": "A group behavior appears to benefit the group. What additional evidence would be needed before treating that benefit as the evolved function of the behavior?",
+      "source_anchors": [
+        {
+          "source_id": "williams-adaptation-natural-selection-1968",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-adaptation-natural-selection-1968",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-adaptation-natural-selection-1968",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Williams's social-adaptation guardrail. Use to separate an observed beneficial effect from evidence that selection designed a trait for that effect."
+      },
+      "promotion_targets": [
+        "notebook/concepts/adaptation.html",
+        "notebook/concepts/natural-selection.html"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "distinguish a beneficial effect from an evolved function",
+          "ask whether the trait shows evidence of functional design for that effect",
+          "identify the level at which selection is being claimed to act",
+          "compare group-level explanations with individual-level mechanisms that could produce the same pattern",
+          "avoid treating group benefit alone as sufficient evidence for group adaptation"
+        ],
+        "coverage_note": "This strengthens adaptation coverage by adding a Williams-derived guardrail for functional inference and level-of-selection claims."
+      },
+      "mathematical_structure": {
+        "kind": "evidentiary inference rule",
+        "formal_statement": "Observed benefit is not sufficient evidence of adaptive function; adaptive-function claims require evidence that selection favored design features producing the effect at the claimed level of organization.",
+        "notation_status": "conceptualized; source argument is evidentiary rather than equation-based",
+        "assumptions": [
+          "a trait can have effects that were not the target of selection",
+          "group-level outcomes can emerge from individual-level adaptive behavior",
+          "functional claims require evidence beyond usefulness or benefit",
+          "the level of selection must match the evidence being used"
+        ],
+        "biological_interpretation": "Learners should ask what selection process would have built the trait, not merely whether the trait has a helpful consequence."
+      },
+      "question_type": "misconception diagnosis",
+      "source_context": {
+        "source_section": "Social Adaptations",
+        "textbook_prompt_role": "source-mined conceptual coverage probe",
+        "edition_or_volume_year": "1968"
+      }
+    },
+    {
+      "id": "staged.question.williams.strawberry-coral-gradient-sex-model.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.adaptation",
+      "title": "Why Would A Localized Clone Pay For Sex?",
+      "body": "In Williams's strawberry-coral model, a sessile clone can spread vegetatively until environmental gradients and competitors limit it. Why might such a clone still invest in sexually produced dispersal stages even though sex diverts resources from clonal growth and pays the cost of meiosis?",
+      "source_anchors": [
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Williams's strawberry-coral model. Use as an adaptation/resource-allocation and model-evidence question rather than as a claim that all clonal organisms should invest heavily in sex."
+      },
+      "promotion_targets": [
+        "notebook/concepts/adaptation.html",
+        "notebook/concepts/natural-selection.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "identify the organism as a sessile or localized clone that can spread vegetatively but cannot spread indefinitely",
+          "explain that environmental gradients, competitors, grazers, parasites, and local genotype-environment interactions limit clonal territory",
+          "state the tradeoff: sexual reproduction diverts resources from maintenance and vegetative spread and still pays the cost of meiosis",
+          "explain the benefit: genetically diverse dispersal stages can place some of the clone's genes into regions where a different recombinant genotype has higher local fitness",
+          "distinguish general fitness from local fitness at a position in the habitat",
+          "ask for empirical checks such as localized clone territories, limited overlap, long persistence with fluctuating borders, and rare successful establishment from sexual seedlings",
+          "avoid assuming that sexual reproduction is favored unless genotype-environment interaction and clonal localization make dispersal with variation useful"
+        ],
+        "coverage_note": "This extends Williams 1975 coverage from isolated clonal habitats to sessile clonal organisms in environmental gradients, linking adaptation to resource allocation and local fitness."
+      },
+      "mathematical_structure": {
+        "kind": "resource-allocation and local-fitness model",
+        "formal_statement": "A localized clone can favor investment in sexual dispersal when the expected genetic survival gained by diverse propagules in new local-fitness contexts exceeds the loss in clonal maintenance, vegetative growth, and meiotic transmission.",
+        "notation_status": "source model normalized qualitatively; Williams represents fitness as a combination of general and local components",
+        "assumptions": [
+          "clone size and persistence depend on resource allocation to maintenance and vegetative growth",
+          "sexual propagules are dispersed beyond the current clonal territory",
+          "local habitat position changes genotype-specific fitness",
+          "boundaries of current clonal spread indicate limits of the clone's genotype in nearby conditions",
+          "genotype-environment interaction is strong enough that recombined propagules can sometimes outperform the parental clone elsewhere"
+        ],
+        "biological_interpretation": "Sex can be adaptive for a localized clone when genetic diversification helps its lineage escape the finite success of one local genotype in one local territory."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "x",
+          "notebook_symbol": "generalFitnessComponent",
+          "meaning": "fitness component averaged across representative natural conditions"
+        },
+        {
+          "source_symbol": "y",
+          "notebook_symbol": "localFitnessComponent",
+          "meaning": "fitness component specific to a position in the habitat or environmental gradient"
+        }
+      ],
+      "question_type": "model evidence check",
+      "source_context": {
+        "source_section": "Chapter 3, The Strawberry-Coral Model",
+        "textbook_prompt_role": "canonical source model converted into a coverage question",
+        "edition_or_volume_year": "1975 monograph; local scan of third printing with corrections, 1977"
+      }
+    }
+  ],
+  "summary": {
+    "reviewed_total": 15,
+    "claims": 4,
+    "examples": 1,
+    "questions": 10
+  }
+}

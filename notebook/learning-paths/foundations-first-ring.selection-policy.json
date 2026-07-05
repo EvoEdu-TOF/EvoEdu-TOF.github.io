@@ -1,0 +1,171 @@
+{
+  "schema": "didactopus.notebook_scaffold_selection_policy.v1",
+  "concept_type_preferences": {
+    "notebook.concepts.allele-frequency-change": [
+      "definition-check",
+      "mechanism-contrast",
+      "evidence-check",
+      "equilibrium-baseline"
+    ],
+    "notebook.concepts.hardy-weinberg-equilibrium": [
+      "definition-check",
+      "assumption-check",
+      "alternative-check",
+      "null-model-value",
+      "bridge-check"
+    ],
+    "notebook.concepts.genetic-drift": [
+      "mechanism-contrast",
+      "scale-check",
+      "definition-check",
+      "evidence-check"
+    ],
+    "notebook.concepts.natural-selection": [
+      "evidence-check",
+      "mechanism-contrast",
+      "environment-check",
+      "mixed-mechanism",
+      "revision"
+    ],
+    "notebook.concepts.mutation": [
+      "definition-check",
+      "source-of-variation",
+      "mechanism-contrast"
+    ],
+    "notebook.concepts.adaptation": [
+      "alternative-check",
+      "evidence-check",
+      "context-check",
+      "definition-check"
+    ],
+    "notebook.concepts.speciation": [
+      "definition-check",
+      "bridge-check",
+      "alternative-check"
+    ],
+    "notebook.concepts.common-descent": [
+      "definition-check",
+      "evidence-check",
+      "bridge-check"
+    ]
+  },
+  "trigger_type_preferences": [
+    {
+      "trigger_terms": [
+        "define",
+        "definition",
+        "baseline",
+        "population-genetic",
+        "population",
+        "counts"
+      ],
+      "preferred_types": [
+        "definition-check",
+        "equilibrium-baseline",
+        "bridge-check"
+      ]
+    },
+    {
+      "trigger_terms": [
+        "null-model",
+        "assumptions",
+        "baseline",
+        "departures",
+        "equilibrium"
+      ],
+      "preferred_types": [
+        "assumption-check",
+        "null-model-value",
+        "definition-check",
+        "alternative-check"
+      ]
+    },
+    {
+      "trigger_terms": [
+        "chance",
+        "sampling",
+        "variation",
+        "population",
+        "drift"
+      ],
+      "preferred_types": [
+        "mechanism-contrast",
+        "scale-check",
+        "evidence-check",
+        "revision"
+      ]
+    },
+    {
+      "trigger_terms": [
+        "fitness",
+        "trait",
+        "environmental",
+        "selection",
+        "directional"
+      ],
+      "preferred_types": [
+        "evidence-check",
+        "mechanism-contrast",
+        "environment-check",
+        "mixed-mechanism"
+      ]
+    },
+    {
+      "trigger_terms": [
+        "origin",
+        "variant",
+        "mutation",
+        "appeared",
+        "filtering"
+      ],
+      "preferred_types": [
+        "definition-check",
+        "source-of-variation",
+        "mechanism-contrast"
+      ]
+    },
+    {
+      "trigger_terms": [
+        "adaptive",
+        "alternatives",
+        "rival",
+        "useful",
+        "context"
+      ],
+      "preferred_types": [
+        "alternative-check",
+        "evidence-check",
+        "context-check",
+        "definition-check"
+      ]
+    },
+    {
+      "trigger_terms": [
+        "gene",
+        "flow",
+        "lineage",
+        "isolation",
+        "speciation"
+      ],
+      "preferred_types": [
+        "definition-check",
+        "bridge-check",
+        "alternative-check"
+      ]
+    },
+    {
+      "trigger_terms": [
+        "nested",
+        "ancestry",
+        "historical",
+        "branching",
+        "common"
+      ],
+      "preferred_types": [
+        "definition-check",
+        "evidence-check",
+        "bridge-check"
+      ]
+    }
+  ]
+}

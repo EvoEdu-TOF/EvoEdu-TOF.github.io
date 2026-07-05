@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Population Dynamics Web App</title>
+  <!-- Load Plotly from a CDN (or locally) -->
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist@2.25.2"></script>
+  <!-- Include the matpopdyn.js script with the LMatrix class -->
+  <script src="./matpopdyn.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #333;
+      padding: 0.5em;
+    }
+    nav a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+    }
+    h1 {
+      margin: 1em;
+    }
+    .container {
+      padding: 1em;
+    }
+    .input-section {
+      margin-bottom: 1em;
+    }
+    label {
+      display: inline-block;
+      width: 240px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 240px;
+      padding: 0.25em;
+      margin-left: 0.5em;
+    }
+    #simulateBtn {
+      padding: 0.5em;
+      cursor: pointer;
+    }
+    #chart {
+      width: 80%;
+      height: 500px;
+      margin: 0 auto;
+    }
+    footer {
+      text-align: center;
+      margin-top: 2em;
+      font-size: 0.9em;
+      color: #666;
+    }
+    /* Simple modal for "About" */
+    #aboutModal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+    #aboutModal .modal-content {
+      background-color: #fefefe;
+      margin: 10% auto;
+      padding: 1em;
+      border: 1px solid #888;
+      width: 50%;
+      max-width: 600px;
+      text-align: left;
+      position: relative;
+    }
+    #closeModal {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    #matrixCitationContainer {
+      margin: 1em 0;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <!-- Simple Navbar -->
+  <nav>
+    <a href="https://evo-edu.org" target="_blank">Home</a>
+    <a href="#" id="helpLink">Help</a>
+    <a href="#" id="aboutLink">About</a>
+  </nav>
+
+  <h1 style="margin: 1em;">Matrix Population Dynamics (COM(P)ADRE + matpopdyn.js)</h1>
+
+  <div class="container">
+
+    <!-- Species Selector -->
+    <div class="input-section">
+      <label for="speciesSelect">Select Species:</label>
+      <select id="speciesSelect"></select>
+    </div>
+
+    <!-- Show the matrix citation upon species selection -->
+    <div id="matrixCitationContainer">
+      <strong>Matrix Citation:</strong> <span id="matrixCitation">None</span>
+    </div>
+
+    <!-- Population Type -->
+    <div class="input-section">
+      <label for="populationType">Population Type:</label>
+      <select id="populationType">
+        <option value="Highly Endangered">Highly Endangered</option>
+        <option value="Endangered">Endangered</option>
+        <option value="Threatened">Threatened</option>
+        <option value="Marginal">Marginal</option>
+        <option value="Normal" selected>Normal</option>
+        <option value="Abundant">Abundant</option>
+      </select>
+    </div>
+
+    <!-- Initial Distribution -->
+    <div class="input-section">
+      <label for="initialDist">Initial Distribution (comma-separated):</label>
+      <input type="text" id="initialDist" value="" />
+    </div>
+
+    <!-- Number of Steps -->
+    <div class="input-section">
+      <label for="numSteps">Number of Steps:</label>
+      <input type="number" id="numSteps" value="10" />
+    </div>
+
+    <!-- Simulate Button -->
+    <div class="input-section">
+      <button id="simulateBtn">Simulate</button>
+    </div>
+
+    <!-- Plotly Chart -->
+    <div id="chart"></div>
+  </div>
+
+  <!-- About Modal -->
+  <div id="aboutModal">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <h2>About This App</h2>
+      <p>
+        This web application demonstrates how to integrate the 
+        <strong>matpopdyn.js</strong> library (a JavaScript port of matpopdyn.py) 
+        with demographic matrices from <strong>COMADRE</strong> and <strong>COMPADRE</strong>,
+        two global repositories of plant and animal matrix population models.
+      </p>
+      <p>
+        We acknowledge and thank the COMADRE/COMPADRE project teams for making these data 
+        openly available. 
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Example Developer. All rights reserved.
+  </footer>
+
+  <script>
+    // HTML references
+    const speciesSelect     = document.getElementById('speciesSelect');
+    const matrixCitationEl  = document.getElementById('matrixCitation');
+    const populationTypeSel = document.getElementById('populationType');
+    const initialDistInput  = document.getElementById('initialDist');
+    const numStepsInput     = document.getElementById('numSteps');
+    const simulateBtn       = document.getElementById('simulateBtn');
+    const chartDiv          = document.getElementById('chart');
+
+    const aboutModal        = document.getElementById('aboutModal');
+    const closeModal        = document.getElementById('closeModal');
+    const aboutLink         = document.getElementById('aboutLink');
+
+    // "Help" link => an alert, or link to docs
+    document.getElementById('helpLink').addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('Contact developer@example.com for help, or see README.');
+    });
+
+    // Show the "About" modal
+    aboutLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      aboutModal.style.display = 'block';
+    });
+    // Close the modal
+    closeModal.addEventListener('click', () => {
+      aboutModal.style.display = 'none';
+    });
+    // Also close modal if user clicks outside the modal content
+    window.addEventListener('click', (event) => {
+      if (event.target === aboutModal) {
+        aboutModal.style.display = 'none';
+      }
+    });
+
+    // We'll store the COM(P)ADRE data here after we load it:
+    let comadreData = [];
+
+    // 1. Fetch local COM(P)ADRE JSON data and populate the dropdown
+    fetch('comadre_data.json')
+      .then(response => response.json())
+      .then(data => {
+        comadreData = data;
+        data.forEach((entry, index) => {
+          let option = document.createElement('option');
+          option.value = index;
+          option.textContent = entry.species;
+          speciesSelect.appendChild(option);
+        });
+        updateCitation(); // Show the citation for the default selection
+        updateInitialDistribution(); // Also update the distribution
+      })
+      .catch(err => {
+        console.error('Error loading comadre_data.json', err);
+      });
+
+    // 2. Listen for changes in species or population type -> update distribution
+    speciesSelect.addEventListener('change', () => {
+      updateCitation();
+      updateInitialDistribution();
+    });
+    populationTypeSel.addEventListener('change', () => {
+      updateInitialDistribution();
+    });
+
+    function updateCitation() {
+      const selectedIndex = speciesSelect.value;
+      const speciesEntry  = comadreData[selectedIndex];
+      if (speciesEntry && speciesEntry.matrixCitation) {
+        matrixCitationEl.textContent = speciesEntry.matrixCitation;
+      } else {
+        matrixCitationEl.textContent = 'None';
+      }
+    }
+
+    // 3. Create initial distribution array according to population type & matrix dimension
+    function updateInitialDistribution() {
+      const selectedIndex = speciesSelect.value;
+      if (!comadreData[selectedIndex] || !comadreData[selectedIndex].matrix) {
+        initialDistInput.value = '';
+        return;
+      }
+      const matrix2D = comadreData[selectedIndex].matrix;
+      const nStages  = matrix2D.length;
+      const popType  = populationTypeSel.value;
+
+      // Pick a scale factor or pattern based on popType
+      // You can tune these values to match desired population sizes.
+      let scaleFactor = 1; 
+      switch(popType) {
+        case 'Highly Endangered': scaleFactor = 0.2; break;
+        case 'Endangered':       scaleFactor = 1;   break;
+        case 'Threatened':       scaleFactor = 5;   break;
+        case 'Marginal':         scaleFactor = 20;  break;
+        case 'Normal':           scaleFactor = 100; break;
+        case 'Abundant':         scaleFactor = 1000;break;
+      }
+
+      // Example approach: create a simple distribution that slightly skews
+      // stage i to have a random fraction times the scaleFactor
+      // Or you can do more sophisticated logic.
+      let distArray = [];
+      for (let i = 0; i < nStages; i++) {
+        // random fraction in [0.5, 1.5] for variety
+        let randFrac = (Math.random() + 0.5);
+        // Then multiply by scaleFactor
+        let val = Math.round(randFrac * scaleFactor);
+        distArray.push(val);
+      }
+
+      // Convert to comma-separated string
+      initialDistInput.value = distArray.join(', ');
+    }
+
+    // 4. Utility: Convert a 2D array from comadre_data into an LMatrix
+    function createLMatrixFrom2DArray(matrix2D) {
+      // matrix2D is an NxN numeric array
+      const n = matrix2D.length;
+      let lm = new LMatrix(n);
+
+      // Populate LMatrix by setting each entry with LM_SetOneRelation
+      for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+          let val = matrix2D[i][j];
+          lm.LM_SetOneRelation(j, i, val);
+        }
+      }
+      return lm;
+    }
+
+    // 5. Handle click on "Simulate"
+    simulateBtn.addEventListener('click', () => {
+      const selectedIndex = speciesSelect.value;
+      const speciesEntry  = comadreData[selectedIndex];
+
+      if (!speciesEntry || !speciesEntry.matrix) {
+        alert('No matrix data found for the selected species.');
+        return;
+      }
+      const matrix2D = speciesEntry.matrix;
+      const n = matrix2D.length;
+
+      // Build an LMatrix
+      let lmat = createLMatrixFrom2DArray(matrix2D);
+
+      // Parse initial distribution
+      let pop0 = initialDistInput.value.split(',').map(s => parseFloat(s.trim()));
+      if (pop0.length !== n) {
+        alert(`Initial distribution must have ${n} entries (one for each stage).`);
+        return;
+      }
+      lmat.LM_SetPopulation(pop0);
+
+      // Steps
+      const steps = parseInt(numStepsInput.value, 10);
+
+      // Capture population vectors
+      let populations = [];
+      populations.push([...lmat.popvec]); // initial
+
+      for (let t = 1; t <= steps; t++) {
+        lmat.LM_StepForward();
+        populations.push([...lmat.popvec]);
+      }
+
+      // Prepare Plotly data: each stage is one trace
+      const timeSteps = Array.from({ length: steps + 1 }, (_, i) => i);
+      let traces = [];
+      for (let stageIdx = 0; stageIdx < n; stageIdx++) {
+        let stageData = populations.map(p => p[stageIdx]);
+        traces.push({
+          x: timeSteps,
+          y: stageData,
+          mode: 'lines+markers',
+          name: `Stage ${stageIdx + 1}`
+        });
+      }
+
+      // Plot
+      let layout = {
+        title: `${speciesEntry.species} - Population Over Time`,
+        xaxis: { title: 'Time Step' },
+        yaxis: { title: 'Population Size' }
+      };
+      Plotly.newPlot(chartDiv, traces, layout);
+    });
+  </script>
+</body>
+</html>

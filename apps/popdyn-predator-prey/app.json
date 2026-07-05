@@ -1,0 +1,11 @@
+{
+  "slug": "popdyn-predator-prey",
+  "title": "Predator-Prey Dynamics",
+  "published": false,
+  "visibility": "legacy",
+  "role": "Underlying implementation directory for the public EcoBalance route.",
+  "category": "ecology",
+  "entrypoint": "/apps/popdyn-predator-prey/index.html",
+  "description": "Retained behind the public EcoBalance framing.",
+  "legacy_names": ["Predator-Prey Dynamics Simulator"]
+}

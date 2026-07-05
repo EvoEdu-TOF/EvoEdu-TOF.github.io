@@ -1,0 +1,63 @@
+{
+  "slug": "life-cycle-modeler",
+  "title": "Life Cycle Modeler",
+  "published": true,
+  "visibility": "public",
+  "role": "Explore how survival and reproduction at different life stages change the future of a population.",
+  "category": "ecology",
+  "entrypoint": "/apps/life-cycle-modeler/",
+  "description": "An interactive life-history and demography tool for comparing growth, decline, vulnerability, and persistence.",
+  "legacy_names": [
+    "Population Dynamics",
+    "popdyn"
+  ],
+  "pages": {
+    "landing": "/apps/life-cycle-modeler/",
+    "application": "/apps/life-cycle-modeler/app/",
+    "study_guide": "/apps/life-cycle-modeler/study-guide.html",
+    "teacher_guide": "/apps/life-cycle-modeler/teacher-guide.html",
+    "standards": "/apps/life-cycle-modeler/standards.html",
+    "curriculum_alignment": "/apps/life-cycle-modeler/standards.html",
+    "about": "/apps/life-cycle-modeler/about.html"
+  },
+  "implementation": {
+    "legacy_hub": "/apps/popdyn/",
+    "launch_target": "/apps/popdyn/popdyn_ia.html"
+  },
+  "api": {
+    "status": "prototype",
+    "family": "population-genetics",
+    "docs": "/apps/api/population-genetics/",
+    "module": "/apps/api/population-genetics/population-genetics.js",
+    "notes": "A shared browser and node-consumable API module now exists for the first population-genetics remediation family."
+  },
+  "tests": {
+    "status": "prototype",
+    "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/population-genetics/population-genetics.test.js",
+    "notes": "A node-based contract test suite now exercises the shared family API module."
+  },
+  "status": {
+    "landing": "standardized",
+    "application": "responsive-direct",
+    "study_guide": "present",
+    "teacher_guide": "present",
+    "standards": "present",
+    "curriculum_alignment": "present",
+    "api": "prototype",
+    "tests": "prototype"
+  },
+  "provenance": {
+    "summary": "Public evo-edu framing over the legacy popdyn implementation.",
+    "details": "Life Cycle Modeler is the evo-edu public route for the popdyn matrix-population model family. The remediation pass now includes a direct responsive workbench using the shared population-genetics API while preserving the older popdyn route as a legacy reference.",
+    "lineage": [
+      "Public evo-edu route: Life Cycle Modeler",
+      "Legacy implementation directory: /apps/popdyn/",
+      "Current launch target: /apps/popdyn/popdyn_ia.html"
+    ],
+    "limits": [
+      "The new public workbench uses the shared population-genetics API rather than the older embedded route.",
+      "The older popdyn route remains available as a legacy reference.",
+      "Additional work is still needed to expand test coverage and richer scenario presets."
+    ]
+  }
+}

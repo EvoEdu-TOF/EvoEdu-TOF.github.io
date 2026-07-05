@@ -1,0 +1,11 @@
+{
+  "slug": "aed",
+  "title": "Avida-ED Support Materials",
+  "published": false,
+  "visibility": "legacy",
+  "role": "Legacy Avida-ED support and exercise materials kept for continuity.",
+  "category": "artificial-life",
+  "entrypoint": "/apps/aed/index.html",
+  "description": "Support materials associated with older Avida-ED surfaces.",
+  "legacy_names": ["aed"]
+}

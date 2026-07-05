@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TSP Solver with Navbar, Help, About</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    /* Navbar styling */
+    nav {
+      background: #333;
+      padding: 0.5em;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1em;
+    }
+    nav ul li {
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5em;
+    }
+    nav a:hover {
+      background: #444;
+    }
+
+    /* Container for the main content after the navbar */
+    #content {
+      margin: 1em;
+    }
+
+    /* A flex container for the control panel and TSP visuals */
+    #control-panel {
+      margin-bottom: 1em;
+    }
+
+    #graphs {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-top: 1em;
+    }
+    #tspCanvas {
+      border: 1px solid #aaa;
+      width: 400px;  /* CSS display width */
+      height: 400px; /* CSS display height */
+    }
+    #plotLoss, #plotRoutes {
+      width: 400px;
+      height: 400px;
+      border: 1px solid #aaa;
+    }
+
+    /* Basic styling for modals */
+    .modal-overlay {
+      position: fixed;
+      inset: 0; /* top, right, bottom, left = 0 */
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none; /* hidden by default */
+      justify-content: center;
+      align-items: center;
+      z-index: 9999; /* on top */
+    }
+    .modal-content {
+      background: #fff;
+      padding: 1em;
+      max-width: 600px;
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 0.5em;
+      right: 0.5em;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+
+  <!-- 1) Include Plotly via CDN -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <ul>
+      <li><a href="#" id="helpLink">Help</a></li>
+      <li><a href="#" id="aboutLink">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Modals for Help and About -->
+  <div class="modal-overlay" id="helpModal">
+    <div class="modal-content">
+      <span class="modal-close" id="helpClose">&times;</span>
+      <h2>Help</h2>
+      <p>
+        <strong>Usage:</strong> <br />
+        1. (Optional) "Generate Cities" for random city placement. <br />
+        2. Or "Define Cities Manually" to click-add them on the canvas. <br />
+        3. Adjust GA parameters: Population, Selection %, 2-opt %. <br />
+        4. Click "Start" to run the solver. You can pause with "Stop," or resume with "Resume." <br />
+        5. The Loss plot shows best distance vs. generation, the Route plot animates each improvement, and the canvas draws the current best route in real time.
+      </p>
+      <p>
+        Click the X in the top-right or outside the box to close.
+      </p>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="aboutModal">
+    <div class="modal-content">
+      <span class="modal-close" id="aboutClose">&times;</span>
+      <h2>About</h2>
+      <p>
+        This TSP solver is a JavaScript/HTML adaptation of a GA-based approach originally detailed in
+        <em>A Fast TSP Solver using GA on Java</em> by Hiroaki Sengoku.
+        For more details, see the article:
+        <a href="https://www.gcd.org/sengoku/docs/arob98.pdf" target="_blank">
+          https://www.gcd.org/sengoku/docs/arob98.pdf
+        </a>.
+      </p>
+      <p>Te motivation to implement this came when the common links found for the Java applet seemed to generally be non-functional.
+      <p>
+        Copyright (C) 2025, Wesley R. Elsberry<br/>
+        Built with HTML, JavaScript, Plotly, and Canvas with assistance from OpenAI ChatGPT o1.<br/>
+	Released under MIT license.
+      </p>
+      <h3>Known Issues</h3>
+      <dl>
+	<dt>Manual city Definition<dt>
+	  <dd>The accuracy of mouse clicks needs improvement.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="content">
+    <h1>TSP Solver</h1>
+
+    <div id="control-panel">
+      <label># of Cities:
+        <input type="number" id="numCities" value="20" min="0" />
+      </label>
+      <button id="generateBtn">Generate Cities</button>
+      <button id="manualBtn">Define Cities Manually</button>
+      <br><br>
+
+      <label>Population:
+        <input type="number" id="population" value="100" min="1" />
+      </label>
+      <label>Selection (%):
+        <input type="number" id="selection" value="30" min="0" max="100" />
+      </label>
+      <label>2-opt (%):
+        <input type="number" id="improvement" value="20" min="0" max="100" />
+      </label>
+      <br><br>
+
+      <button id="startBtn">Start</button>
+      <button id="stopBtn">Stop</button>
+      <button id="resumeBtn">Resume</button>
+      <button id="clearBtn">Clear</button>
+
+      <div>
+        <strong>Generation:</strong> <span id="genField">0</span>
+        &nbsp;|&nbsp;
+        <strong>Best Distance:</strong> <span id="distanceField">0</span>
+        &nbsp;|&nbsp;
+        <strong>Number of Cities:</strong> <span id="citiesField">0</span>
+      </div>
+    </div>
+
+    <!-- Our three visuals in a horizontal row -->
+    <div id="graphs">
+      <!-- 1) Canvas for route -->
+      <canvas id="tspCanvas" width="600" height="400"></canvas>
+
+      <!-- 2) Plot for Loss Function -->
+      <div id="plotLoss"></div>
+
+      <!-- 3) Plot for Animated Routes -->
+      <div id="plotRoutes"></div>
+    </div>
+  </div>
+
+  <!-- Our main JS code -->
+  <script type="module">
+  //
+  // -------------------------
+  // 1) Basic Classes: City, Cities
+  // -------------------------
+  class City {
+    constructor(x, y) {
+      this.x = x;
+      this.y = y;
+    }
+  }
+
+  class Cities {
+    constructor() {
+      this.cities = [];
+      this.bestRoute = [];
+      this.bestDistance = Infinity;
+    }
+
+    generateRandom(num, width, height) {
+      this.cities = [];
+      for (let i = 0; i < num; i++) {
+        const x = Math.random() * width;
+        const y = Math.random() * height;
+        this.cities.push(new City(x, y));
+      }
+      this.bestRoute = [...Array(num).keys()];
+      this.bestDistance = this.routeDistance(this.bestRoute);
+    }
+
+    routeDistance(route) {
+      let dist = 0;
+      for (let i = 0; i < route.length; i++) {
+        const curr = route[i];
+        const next = route[(i + 1) % route.length];
+        const dx = this.cities[curr].x - this.cities[next].x;
+        const dy = this.cities[curr].y - this.cities[next].y;
+        dist += Math.sqrt(dx * dx + dy * dy);
+      }
+      return dist;
+    }
+
+    updateBestRoute(route) {
+      const d = this.routeDistance(route);
+      if (d < this.bestDistance) {
+        this.bestDistance = d;
+        this.bestRoute = [...route];
+      }
+    }
+
+    getValue() {
+      return this.bestDistance;
+    }
+  }
+
+  //
+  // -------------------------
+  // 2) GA Class (unchanged)
+  // -------------------------
+  class GA {
+    constructor(cities, populationSize) {
+      this.cities = cities;
+      this.popSize = populationSize;
+      this.population = [];
+      this.fitness = [];
+      this.initPopulation();
+    }
+
+    initPopulation() {
+      const n = this.cities.cities.length;
+      for (let i = 0; i < this.popSize; i++) {
+        let route = [...Array(n).keys()];
+        // shuffle
+        for (let k = n - 1; k > 0; k--) {
+          const r = Math.floor(Math.random() * (k + 1));
+          [route[k], route[r]] = [route[r], route[k]];
+        }
+        this.population.push(route);
+      }
+      this.evaluatePopulation();
+    }
+
+    evaluatePopulation() {
+      this.fitness = this.population.map(
+        (route) => this.cities.routeDistance(route)
+      );
+    }
+
+    cycle(selectionPercent, improvementPercent) {
+      // Sort by distance ascending
+      const indices = [...this.population.keys()];
+      indices.sort((a, b) => this.fitness[a] - this.fitness[b]);
+
+      // Keep best (100 - selectionPercent)%
+      const survivorsCount = Math.floor(
+        (100 - selectionPercent) * this.popSize / 100.0
+      );
+      let newPop = indices.slice(0, survivorsCount).map((i) => this.population[i]);
+
+      // Refill population by crossover
+      while (newPop.length < this.popSize) {
+        const p1 = newPop[Math.floor(Math.random() * survivorsCount)];
+        const p2 = newPop[Math.floor(Math.random() * survivorsCount)];
+        const child = this.crossover(p1, p2);
+        newPop.push(child);
+      }
+      this.population = newPop;
+
+      // 2-opt improvement
+      const toImprove = Math.floor(this.popSize * improvementPercent / 100);
+      for (let i = 0; i < toImprove; i++) {
+        const rIndex = Math.floor(Math.random() * this.popSize);
+        this.population[rIndex] = this.twoOpt(this.population[rIndex]);
+      }
+
+      // Recompute fitness
+      this.evaluatePopulation();
+
+      // update best
+      let bestIndex = 0;
+      let bestVal = Infinity;
+      for (let i = 0; i < this.popSize; i++) {
+        if (this.fitness[i] < bestVal) {
+          bestVal = this.fitness[i];
+          bestIndex = i;
+        }
+      }
+      this.cities.updateBestRoute(this.population[bestIndex]);
+    }
+
+    crossover(parent1, parent2) {
+      let start = Math.floor(Math.random() * parent1.length);
+      let end   = Math.floor(Math.random() * parent1.length);
+      if (start > end) [start, end] = [end, start];
+
+      let child = Array(parent1.length).fill(-1);
+      // copy segment
+      for (let i = start; i <= end; i++) {
+        child[i] = parent1[i];
+      }
+      // fill from parent2
+      let p2Index = 0;
+      for (let i = 0; i < parent2.length; i++) {
+        const city = parent2[i];
+        if (!child.includes(city)) {
+          while (child[p2Index] !== -1) {
+            p2Index++;
+          }
+          child[p2Index] = city;
+        }
+      }
+      return child;
+    }
+
+    twoOpt(route) {
+      let best = route.slice();
+      let improved = true;
+      while (improved) {
+        improved = false;
+        for (let i = 0; i < best.length - 1; i++) {
+          for (let j = i + 2; j < best.length; j++) {
+            const newRoute = this.twoOptSwap(best, i, j);
+            if (this.cities.routeDistance(newRoute) <
+                this.cities.routeDistance(best)) {
+              best = newRoute;
+              improved = true;
+            }
+          }
+        }
+      }
+      return best;
+    }
+
+    twoOptSwap(route, i, j) {
+      let newRoute = route.slice();
+      while (i < j) {
+        [newRoute[i], newRoute[j]] = [newRoute[j], newRoute[i]];
+        i++;
+        j--;
+      }
+      return newRoute;
+    }
+  }
+
+  //
+  // -------------------------
+  // 3) TspRoute: logic for Start/Stop/Resume, Plotly, etc.
+  //    plus canvas click handling for manual city definition
+  // -------------------------
+  class TspRoute {
+    constructor(cities, canvas, genLabel, distLabel, cityLabel) {
+      this.cities = cities;
+      this.canvas = canvas;
+      this.ctx = canvas.getContext('2d');
+      this.genLabel = genLabel;
+      this.distLabel = distLabel;
+      this.cityLabel = cityLabel;
+
+      this.generation = 0;
+      this.ga = null;
+      this.timer = null;
+      this.isRunning = false;
+
+      this.routeFrames = [];
+
+      // Add a click listener to let user define cities manually
+      this.canvas.addEventListener('click', (event) => {
+        // Only add cities if NOT currently running
+        if (this.isRunning) return;
+
+        const rect = this.canvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        // Add new city to data
+        this.cities.cities.push(new City(x, y));
+        // Potentially reset best route/distance
+        this.cities.bestRoute = [...Array(this.cities.cities.length).keys()];
+        this.cities.bestDistance = this.cities.routeDistance(this.cities.bestRoute);
+
+        // Update UI
+        this.updateLabels();
+        this.draw();
+      });
+    }
+
+    // ----- Plotly Loss -----
+    initLossPlot() {
+      const trace = {
+        x: [],
+        y: [],
+        type: 'scatter',
+        mode: 'lines+markers',
+        name: 'Best Distance'
+      };
+      const layout = {
+        title: 'Best Distance over Generations',
+        xaxis: { title: 'Generation' },
+        yaxis: { title: 'Distance' }
+      };
+      Plotly.newPlot('plotLoss', [trace], layout);
+    }
+
+    updateLossPlot(g, dist) {
+      Plotly.extendTraces(
+        'plotLoss',
+        { x: [[g]], y: [[dist]] },
+        [0]
+      );
+    }
+
+    // ----- Plotly Route Animation -----
+    initRouteAnimation() {
+      const coords = this.buildCoords(this.cities.bestRoute);
+      const initialData = [{
+        x: coords.map(p => p.x),
+        y: coords.map(p => p.y),
+        type: 'scatter',
+        mode: 'lines+markers'
+      }];
+
+      const layout = {
+        title: 'Evolution of Best Routes',
+        xaxis: { range: [0, this.canvas.width], title: 'X' },
+        yaxis: { range: [this.canvas.height, 0], title: 'Y' },
+        updatemenus: [{
+          type: 'buttons',
+          showactive: false,
+          x: 0, y: 1.15,
+          xanchor: 'left', yanchor: 'top',
+          direction: 'left',
+          buttons: [
+            {
+              label: 'Play',
+              method: 'animate',
+              args: [
+                null,
+                {
+                  frame: { duration: 500, redraw: true },
+                  transition: { duration: 0 },
+                  fromcurrent: false
+                }
+              ]
+            },
+            {
+              label: 'Pause',
+              method: 'animate',
+              args: [[null], { mode: 'immediate', frame: { duration: 0 } }]
+            }
+          ]
+        }]
+      };
+
+      Plotly.newPlot('plotRoutes', initialData, layout);
+      this.routeFrames = [];
+    }
+
+    buildCoords(route) {
+      if (!route || route.length === 0) return [];
+      const arr = route.map(idx => ({
+        x: this.cities.cities[idx].x,
+        y: this.cities.cities[idx].y
+      }));
+      arr.push(arr[0]); // close loop
+      return arr;
+    }
+
+    addRouteFrame(gen, route) {
+      const coords = this.buildCoords(route);
+      const frame = {
+        name: `Gen ${gen}`,
+        data: [{ x: coords.map(p=>p.x), y: coords.map(p=>p.y) }]
+      };
+      this.routeFrames.push(frame);
+      Plotly.addFrames('plotRoutes', [frame]);
+    }
+
+    // ----- TSP Main Methods -----
+    clear() {
+      this.stop();
+      // Wipe out cities & route
+      this.cities.cities = [];
+      this.cities.bestRoute = [];
+      this.cities.bestDistance = Infinity;
+      this.generation = 0;
+      this.isRunning = false;
+
+      this.routeFrames = [];
+      this.updateLabels();
+      this.draw();
+
+      this.initLossPlot();
+      this.initRouteAnimation();
+    }
+
+    stop() {
+      if (this.timer) clearInterval(this.timer);
+      this.timer = null;
+      this.isRunning = false;
+    }
+
+    resume() {
+      if (!this.ga || this.isRunning) return;
+      this.isRunning = true;
+
+      let prevBest = this.cities.bestDistance;
+      let stableCount = 0;
+      const stableLimit = 100;
+
+      const step = () => {
+        if (!this.isRunning) return;
+        this.ga.cycle(this.selPct, this.impPct);
+        this.generation++;
+
+        const curBest = this.cities.getValue();
+        if (curBest < prevBest - 1e-12) {
+          prevBest = curBest;
+          stableCount = 0;
+          this.addRouteFrame(this.generation, this.cities.bestRoute);
+        } else {
+          if (Math.abs(curBest - prevBest) < 1e-5) {
+            stableCount++;
+          } else {
+            stableCount = 0;
+            prevBest = curBest;
+          }
+        }
+        if (stableCount > stableLimit) this.stop();
+
+        this.updateLabels();
+        this.draw();
+        this.updateLossPlot(this.generation, curBest);
+      };
+
+      this.timer = setInterval(step, 100);
+    }
+
+    solve(population, selection, improvement, maxGenerations=999999) {
+      this.stop();
+      if (this.cities.cities.length < 3) {
+        console.warn("Not enough cities to solve TSP.");
+        return;
+      }
+      this.ga = new GA(this.cities, population);
+      this.generation = 0;
+      this.isRunning = true;
+      this.selPct = selection;
+      this.impPct = improvement;
+
+      this.initLossPlot();
+      this.initRouteAnimation();
+
+      // Record initial route frame
+      this.addRouteFrame(this.generation, this.cities.bestRoute);
+      this.updateLossPlot(0, this.cities.getValue());
+
+      let prevBest = this.cities.getValue();
+      let stableCount = 0;
+      const stableLimit = 100;
+
+      const step = () => {
+        if (!this.isRunning) return;
+        if (this.generation >= maxGenerations) {
+          this.stop();
+          return;
+        }
+        this.ga.cycle(selection, improvement);
+        this.generation++;
+
+        const curBest = this.cities.getValue();
+        if (curBest < prevBest - 1e-12) {
+          prevBest = curBest;
+          stableCount = 0;
+          this.addRouteFrame(this.generation, this.cities.bestRoute);
+        } else {
+          if (Math.abs(curBest - prevBest) < 1e-5) {
+            stableCount++;
+          } else {
+            stableCount = 0;
+            prevBest = curBest;
+          }
+        }
+        if (stableCount > stableLimit) this.stop();
+
+        this.updateLabels();
+        this.draw();
+        this.updateLossPlot(this.generation, curBest);
+      };
+
+      this.timer = setInterval(step, 100);
+    }
+
+    updateLabels() {
+      this.genLabel.textContent = this.generation;
+      this.distLabel.textContent = (this.cities.bestDistance < Infinity)
+        ? this.cities.bestDistance.toFixed(2)
+        : "0";
+      this.cityLabel.textContent = this.cities.cities.length;
+    }
+
+    draw() {
+      const ctx = this.ctx;
+      ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+      // Draw cities
+      ctx.fillStyle = "black";
+      for (let c of this.cities.cities) {
+        ctx.beginPath();
+        ctx.arc(c.x, c.y, 4, 0, 2*Math.PI);
+        ctx.fill();
+      }
+
+      // Draw route
+      const route = this.cities.bestRoute;
+      if (route.length > 1) {
+        ctx.strokeStyle = "red";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        const first = route[0];
+        ctx.moveTo(this.cities.cities[first].x, this.cities.cities[first].y);
+        for (let i=1; i<route.length; i++) {
+          const idx = route[i];
+          ctx.lineTo(this.cities.cities[idx].x, this.cities.cities[idx].y);
+        }
+        ctx.lineTo(this.cities.cities[first].x, this.cities.cities[first].y);
+        ctx.stroke();
+      }
+    }
+  }
+
+  //
+  // -------------------------
+  // 4) Main driver code
+  // -------------------------
+  window.addEventListener('DOMContentLoaded', () => {
+    // DOM references
+    const helpLink   = document.getElementById('helpLink');
+    const aboutLink  = document.getElementById('aboutLink');
+    const helpModal  = document.getElementById('helpModal');
+    const aboutModal = document.getElementById('aboutModal');
+    const helpClose  = document.getElementById('helpClose');
+    const aboutClose = document.getElementById('aboutClose');
+
+    // Show/hide modals
+    helpLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      helpModal.style.display = 'flex';
+    });
+    aboutLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      aboutModal.style.display = 'flex';
+    });
+    helpClose.addEventListener('click', () => {
+      helpModal.style.display = 'none';
+    });
+    aboutClose.addEventListener('click', () => {
+      aboutModal.style.display = 'none';
+    });
+    // If user clicks outside the modal-content, close it
+    helpModal.addEventListener('click', (e) => {
+      if(e.target === helpModal) helpModal.style.display = 'none';
+    });
+    aboutModal.addEventListener('click', (e) => {
+      if(e.target === aboutModal) aboutModal.style.display = 'none';
+    });
+
+    // Then proceed to set up TSP solver
+    const numCitiesField   = document.getElementById('numCities');
+    const generateBtn      = document.getElementById('generateBtn');
+    const manualBtn        = document.getElementById('manualBtn');
+    const populationField  = document.getElementById('population');
+    const selectionField   = document.getElementById('selection');
+    const improvementField = document.getElementById('improvement');
+    const startBtn         = document.getElementById('startBtn');
+    const stopBtn          = document.getElementById('stopBtn');
+    const resumeBtn        = document.getElementById('resumeBtn');
+    const clearBtn         = document.getElementById('clearBtn');
+    const genField         = document.getElementById('genField');
+    const distField        = document.getElementById('distanceField');
+    const cityField        = document.getElementById('citiesField');
+    const canvas           = document.getElementById('tspCanvas');
+
+    const cities = new Cities();
+    const tspRoute = new TspRoute(cities, canvas, genField, distField, cityField);
+
+    // Initial random
+    const initNum = parseInt(numCitiesField.value, 10) || 20;
+    cities.generateRandom(initNum, canvas.width, canvas.height);
+    tspRoute.draw();
+    tspRoute.updateLabels();
+    tspRoute.initLossPlot();
+    tspRoute.initRouteAnimation();
+
+    // Generate random
+    generateBtn.addEventListener('click', () => {
+      const n = parseInt(numCitiesField.value, 10) || 0;
+      tspRoute.stop();
+      cities.generateRandom(n, canvas.width, canvas.height);
+      tspRoute.draw();
+      tspRoute.updateLabels();
+      tspRoute.initLossPlot();
+      tspRoute.initRouteAnimation();
+    });
+
+    // NEW: Define Cities Manually
+    manualBtn.addEventListener('click', () => {
+      // Equivalent to Clear, but also sets # cities = 0
+      tspRoute.clear();
+      numCitiesField.value = 0;
+    });
+
+    // Start
+    startBtn.addEventListener('click', () => {
+      // If user changed numCities, but they also manually added
+      // we reconcile to the actual # in array:
+      const actual = cities.cities.length;
+      const desired = parseInt(numCitiesField.value, 10) || 0;
+      if (actual !== desired) {
+        // override input
+        numCitiesField.value = actual;
+      }
+
+      const popSize = parseInt(populationField.value, 10) || 100;
+      const selPct  = parseInt(selectionField.value, 10) || 30;
+      const impPct  = parseInt(improvementField.value, 10) || 20;
+
+      tspRoute.solve(popSize, selPct, impPct, 100000);
+    });
+
+    // Stop
+    stopBtn.addEventListener('click', () => {
+      tspRoute.stop();
+    });
+
+    // Resume
+    resumeBtn.addEventListener('click', () => {
+      tspRoute.resume();
+    });
+
+    // Clear
+    clearBtn.addEventListener('click', () => {
+      tspRoute.clear();
+    });
+  });
+  </script>
+</body>
+</html>

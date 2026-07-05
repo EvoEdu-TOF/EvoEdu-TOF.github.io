@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Climate Range Shifter Application - evo-edu.org</title>
+  <link rel="stylesheet" href="/shared/evo-edu.css">
+  <script src="/shared/evo-shell.js" defer></script>
+  <script src="/apps/api/ecology/ecology.js"></script>
+  <style>
+    .climate-app {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      align-items: start;
+    }
+    .climate-panel {
+      background: #fff;
+      border: 1px solid #d6deea;
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      padding: 1.25rem;
+      display: grid;
+      gap: 1rem;
+    }
+    .climate-panel h2,
+    .climate-panel h3,
+    .climate-panel p {
+      margin: 0;
+    }
+    .climate-panel p,
+    .climate-panel li {
+      line-height: 1.55;
+    }
+    .action-grid,
+    .status-grid,
+    .starter-grid,
+    .notes-grid,
+    .param-grid,
+    .table-grid {
+      display: grid;
+      gap: 0.85rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .app-button,
+    .app-upload-label,
+    .message-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 3rem;
+      padding: 0.8rem 1rem;
+      border: 1px solid #205a9e;
+      border-radius: 12px;
+      background: #205a9e;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .app-button.secondary,
+    .app-upload-label.secondary,
+    .message-toggle {
+      background: #f6f9fc;
+      color: #1f2937;
+      border-color: #c5d1e0;
+    }
+    .app-upload-label {
+      box-sizing: border-box;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .status-card,
+    .starter-card,
+    .note-card,
+    .table-card {
+      background: #f6f9fc;
+      border: 1px solid #d6deea;
+      border-radius: 14px;
+      padding: 0.95rem 1rem;
+    }
+    .status-card strong,
+    .starter-card strong,
+    .note-card strong,
+    .table-card strong {
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+    .settings-form,
+    .message-list {
+      display: grid;
+      gap: 0.85rem;
+    }
+    .param-row {
+      display: grid;
+      gap: 0.35rem;
+    }
+    .param-row label {
+      font-weight: 700;
+      color: #243447;
+    }
+    .param-row input {
+      width: 100%;
+      min-height: 2.8rem;
+      padding: 0.65rem 0.7rem;
+      border: 1px solid #c7d3e1;
+      border-radius: 10px;
+      font: inherit;
+      box-sizing: border-box;
+    }
+    .plot-box {
+      min-height: 420px;
+      border: 1px solid #d6deea;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+      padding: 1rem;
+    }
+    .plot-box svg {
+      width: 100%;
+      height: 360px;
+      display: block;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      font-size: 0.95rem;
+    }
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .legend-swatch {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      display: inline-block;
+    }
+    .legend-climate {
+      background: #c2410c;
+    }
+    .legend-range {
+      background: #205a9e;
+    }
+    .inline-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+    .inline-links a {
+      color: #205a9e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .message-item {
+      background: #fff;
+      border-left: 4px solid #205a9e;
+      border-radius: 10px;
+      padding: 0.75rem 0.85rem;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+    }
+    @media (max-width: 1024px) {
+      .climate-app {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 640px) {
+      .action-grid,
+      .status-grid,
+      .starter-grid,
+      .notes-grid,
+      .param-grid,
+      .table-grid {
+        grid-template-columns: 1fr;
+      }
+      .plot-box {
+        min-height: 320px;
+      }
+      .plot-box svg {
+        height: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-topbar">
+      <div class="brand-block">
+        <span class="brand-mark">Ecology</span>
+        <a href="/">evo-edu.org</a>
+        <p class="brand-summary">Climate-linked range-change investigations for habitat shift, mismatch, and environmental response.</p>
+      </div>
+      <nav class="site-nav" data-evo-nav></nav>
+    </header>
+
+    <section class="hero-card">
+      <p class="eyebrow">Application</p>
+      <div class="hero-grid">
+        <div>
+          <h1>Climate Range Shifter</h1>
+          <p class="lede lede-strong">Use a direct responsive workbench to compare moving climate centers, biological tracking, and occupancy loss without leaving the public evo-edu surface.</p>
+          <div class="hero-actions">
+            <a class="button-link" href="/apps/climate-range-shifter/study-guide.html">Learner guide</a>
+            <a class="button-link-secondary" href="/apps/climate-range-shifter/teacher-guide.html">Teacher guide</a>
+            <a class="button-link-secondary" href="/apps/climate-range-shifter/about.html">About and provenance</a>
+            <a class="button-link-secondary" href="/apps/climate-range-shifter/webapp.html" target="_blank" rel="noopener">Open legacy prototype</a>
+          </div>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <strong>First challenge</strong>
+            <span>Run one baseline case, then lower adaptation rate and compare how quickly mismatch and occupancy change.</span>
+          </div>
+          <div class="stat-card">
+            <strong>Key habit</strong>
+            <span>Keep environmental change and biological response separate so you do not smuggle adaptation into every climate story.</span>
+          </div>
+          <div class="stat-card">
+            <strong>Legacy memorialized</strong>
+            <span>The earlier placeholder route remains available as a legacy prototype while this direct workbench replaces the iframe workflow.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="climate-range-app" class="climate-app">
+      <section class="climate-panel">
+        <div>
+          <p class="section-kicker">Run Actions</p>
+          <h2>Controls you will use first</h2>
+          <p class="settings-note">Keep run, save, export, and import actions separate from the ecological parameters so the first useful experiment is obvious.</p>
+        </div>
+        <div class="action-grid">
+          <button class="app-button" type="button" id="runButton">Run Simulation</button>
+          <button class="app-button secondary" type="button" id="resetButton">Reset Defaults</button>
+          <button class="app-button secondary" type="button" id="saveButton">Save Summary JSON</button>
+          <button class="app-button secondary" type="button" id="exportButton">Export Settings</button>
+          <label class="app-upload-label secondary" for="settingsImport">Import Settings</label>
+          <input class="visually-hidden" id="settingsImport" type="file" accept="application/json">
+        </div>
+
+        <div>
+          <p class="section-kicker">Current Run Status</p>
+          <div class="status-grid" id="statusGrid">
+            <div class="status-card">
+              <strong>Final mismatch</strong>
+              <span id="statusMismatch">0.0</span>
+            </div>
+            <div class="status-card">
+              <strong>Final occupancy</strong>
+              <span id="statusOccupancy">1.00</span>
+            </div>
+            <div class="status-card">
+              <strong>Climate center</strong>
+              <span id="statusClimate">50.0</span>
+            </div>
+            <div class="status-card">
+              <strong>Range center</strong>
+              <span id="statusRange">50.0</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="section-kicker">Try This First</p>
+          <div class="starter-grid">
+            <div class="starter-card">
+              <strong>Step 1</strong>
+              <span>Run the defaults and watch the climate center pull ahead of the range center.</span>
+            </div>
+            <div class="starter-card">
+              <strong>Step 2</strong>
+              <span>Lower adaptation rate and see whether occupancy falls sooner.</span>
+            </div>
+            <div class="starter-card">
+              <strong>Step 3</strong>
+              <span>Ask whether the new pattern reflects tracking success, lag, or failure to keep pace.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="climate-panel">
+        <div>
+          <p class="section-kicker">Main Display</p>
+          <h2>Climate movement and biological tracking</h2>
+          <p class="settings-note">The orange line is the moving climate center. The blue line is the range center. Watch the distance between them grow or shrink as you change response rate and habitat breadth.</p>
+        </div>
+        <div class="plot-box">
+          <svg id="rangeChart" viewBox="0 0 760 360" aria-label="Climate range shifter chart" role="img"></svg>
+        </div>
+        <div class="legend">
+          <span class="legend-item"><span class="legend-swatch legend-climate"></span> Climate center</span>
+          <span class="legend-item"><span class="legend-swatch legend-range"></span> Range center</span>
+        </div>
+        <div class="notes-grid">
+          <div class="note-card">
+            <strong>What to notice</strong>
+            <span>Mismatch grows when the climate center moves faster than the range can track.</span>
+          </div>
+          <div class="note-card">
+            <strong>Compare mechanisms</strong>
+            <span>Change one factor at a time so you can separate dispersal/adaptation limits from climate velocity.</span>
+          </div>
+          <div class="note-card">
+            <strong>Notebook links</strong>
+            <span class="inline-links">
+              <a href="/notebook/concepts/adaptation.html">Adaptation</a>
+              <a href="/notebook/concepts/natural-selection.html">Natural Selection</a>
+            </span>
+          </div>
+        </div>
+        <div class="table-grid">
+          <div class="table-card">
+            <strong>Generation snapshots</strong>
+            <div id="snapshotTable"></div>
+          </div>
+          <div class="table-card">
+            <strong>Interpretation prompt</strong>
+            <p id="interpretationText">Run the baseline case first, then compare one changed parameter.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="climate-panel">
+        <div>
+          <p class="section-kicker">Settings</p>
+          <h2>Climate and response parameters</h2>
+          <p class="settings-note">These values control where the climate starts, how quickly it moves, and how effectively the population or species tracks changing conditions.</p>
+        </div>
+        <form class="settings-form" id="settingsForm">
+          <div class="param-grid">
+            <div class="param-row">
+              <label for="rangeCenter">Starting range center</label>
+              <input id="rangeCenter" name="rangeCenter" type="number" min="0" max="100" step="1" value="50">
+            </div>
+            <div class="param-row">
+              <label for="climateVelocity">Climate velocity</label>
+              <input id="climateVelocity" name="climateVelocity" type="number" min="0" max="5" step="0.1" value="1">
+            </div>
+            <div class="param-row">
+              <label for="adaptationRate">Tracking rate</label>
+              <input id="adaptationRate" name="adaptationRate" type="number" min="0" max="1.5" step="0.05" value="0.6">
+            </div>
+            <div class="param-row">
+              <label for="habitatBreadth">Habitat breadth</label>
+              <input id="habitatBreadth" name="habitatBreadth" type="number" min="1" max="40" step="1" value="12">
+            </div>
+            <div class="param-row">
+              <label for="generations">Generations</label>
+              <input id="generations" name="generations" type="number" min="1" max="80" step="1" value="30">
+            </div>
+          </div>
+        </form>
+
+        <div>
+          <button class="message-toggle" type="button" id="messageToggle">Show messages</button>
+          <div class="message-list" id="messageList" hidden></div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer-card">
+      <div>
+        <h3>Climate Range Shifter application</h3>
+        <p>This direct workbench now uses the shared ecology API instead of an iframe wrapper, while the earlier placeholder remains available as a legacy prototype route.</p>
+      </div>
+      <small>Updated May 16, 2026</small>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      const defaults = {
+        rangeCenter: 50,
+        climateVelocity: 1,
+        adaptationRate: 0.6,
+        habitatBreadth: 12,
+        generations: 30,
+      };
+      const chart = document.getElementById('rangeChart');
+      const form = document.getElementById('settingsForm');
+      const messageList = document.getElementById('messageList');
+      const messageToggle = document.getElementById('messageToggle');
+      let messagesOpen = false;
+      let currentResult = null;
+
+      function getParams() {
+        return {
+          rangeCenter: Number(form.rangeCenter.value),
+          climateVelocity: Number(form.climateVelocity.value),
+          adaptationRate: Number(form.adaptationRate.value),
+          habitatBreadth: Number(form.habitatBreadth.value),
+          generations: Number(form.generations.value),
+        };
+      }
+
+      function setDefaults() {
+        Object.entries(defaults).forEach(([key, value]) => {
+          form[key].value = value;
+        });
+      }
+
+      function addMessage(text) {
+        const item = document.createElement('div');
+        item.className = 'message-item';
+        item.textContent = text;
+        messageList.prepend(item);
+      }
+
+      function setMessagesOpen(open) {
+        messagesOpen = open;
+        messageList.hidden = !open;
+        messageToggle.textContent = open ? 'Hide messages' : 'Show messages';
+      }
+
+      function pointsFor(history, field, width, height, xPad, yPad, maxValue) {
+        const maxGen = Math.max(...history.map((entry) => entry.generation));
+        return history.map((entry) => {
+          const x = xPad + (maxGen === 0 ? 0 : (entry.generation / maxGen) * (width - xPad * 2));
+          const y = height - yPad - ((entry[field] / maxValue) * (height - yPad * 2));
+          return `${x.toFixed(2)},${y.toFixed(2)}`;
+        }).join(' ');
+      }
+
+      function drawChart(result) {
+        const history = result.history;
+        const width = 760;
+        const height = 360;
+        const xPad = 56;
+        const yPad = 32;
+        const maxValue = Math.max(
+          ...history.map((entry) => Math.max(entry.climateCenter, entry.rangeCenter)),
+          1
+        );
+        const climatePoints = pointsFor(history, 'climateCenter', width, height, xPad, yPad, maxValue);
+        const rangePoints = pointsFor(history, 'rangeCenter', width, height, xPad, yPad, maxValue);
+        chart.innerHTML = `
+          <rect x="0" y="0" width="${width}" height="${height}" fill="#ffffff"></rect>
+          <line x1="${xPad}" y1="${height - yPad}" x2="${width - xPad}" y2="${height - yPad}" stroke="#9aa9bc" stroke-width="2"></line>
+          <line x1="${xPad}" y1="${yPad}" x2="${xPad}" y2="${height - yPad}" stroke="#9aa9bc" stroke-width="2"></line>
+          <polyline fill="none" stroke="#c2410c" stroke-width="4" points="${climatePoints}"></polyline>
+          <polyline fill="none" stroke="#205a9e" stroke-width="4" points="${rangePoints}"></polyline>
+          <text x="${xPad}" y="${yPad - 8}" fill="#475569" font-size="14">center position</text>
+          <text x="${width - xPad - 70}" y="${height - 8}" fill="#475569" font-size="14">generation</text>
+        `;
+      }
+
+      function updateStatus(result) {
+        document.getElementById('statusMismatch').textContent = result.final.mismatch.toFixed(1);
+        document.getElementById('statusOccupancy').textContent = result.final.occupancy.toFixed(2);
+        document.getElementById('statusClimate').textContent = result.final.climateCenter.toFixed(1);
+        document.getElementById('statusRange').textContent = result.final.rangeCenter.toFixed(1);
+
+        const checkpoints = [0, Math.floor(result.history.length / 2), result.history.length - 1]
+          .map((index) => result.history[index])
+          .filter(Boolean);
+        document.getElementById('snapshotTable').innerHTML = checkpoints.map((entry) => `
+          <p><strong>Gen ${entry.generation}</strong>: climate ${entry.climateCenter.toFixed(1)}, range ${entry.rangeCenter.toFixed(1)}, mismatch ${entry.mismatch.toFixed(1)}, occupancy ${entry.occupancy.toFixed(2)}</p>
+        `).join('');
+
+        const message = result.final.occupancy <= 0.25
+          ? 'The final occupancy is low. The model is showing a strong mismatch or failure to keep pace.'
+          : result.final.mismatch > result.params.habitatBreadth / 2
+            ? 'Mismatch is substantial. The range is lagging behind moving climate conditions.'
+            : 'Tracking is comparatively successful in this run, but compare another parameter change before concluding.';
+        document.getElementById('interpretationText').textContent = message;
+      }
+
+      function runSimulation() {
+        const api = window.evoEduApis && window.evoEduApis.ecology && window.evoEduApis.ecology.climateRangeShifter;
+        if (!api) {
+          addMessage('Shared ecology API is not available on this page.');
+          setMessagesOpen(true);
+          return;
+        }
+        currentResult = api.runSimulation(getParams());
+        drawChart(currentResult);
+        updateStatus(currentResult);
+        addMessage(`Ran ${currentResult.params.generations} generations with climate velocity ${currentResult.params.climateVelocity} and tracking rate ${currentResult.params.adaptationRate}.`);
+      }
+
+      function resetDefaults() {
+        setDefaults();
+        runSimulation();
+        addMessage('Restored default settings.');
+      }
+
+      function downloadBlob(filename, content, type) {
+        const blob = new Blob([content], { type });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = filename;
+        link.click();
+        URL.revokeObjectURL(url);
+      }
+
+      document.getElementById('runButton').addEventListener('click', runSimulation);
+      document.getElementById('resetButton').addEventListener('click', resetDefaults);
+      document.getElementById('saveButton').addEventListener('click', function () {
+        if (!currentResult) {
+          runSimulation();
+        }
+        downloadBlob('climate-range-shifter-summary.json', JSON.stringify(currentResult, null, 2), 'application/json');
+        addMessage('Saved current run summary as JSON.');
+      });
+      document.getElementById('exportButton').addEventListener('click', function () {
+        downloadBlob('climate-range-shifter-settings.json', JSON.stringify(getParams(), null, 2), 'application/json');
+        addMessage('Exported current settings.');
+      });
+      document.getElementById('settingsImport').addEventListener('change', function (event) {
+        const file = event.target.files && event.target.files[0];
+        if (!file) {
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = function () {
+          try {
+            const imported = JSON.parse(reader.result);
+            Object.keys(defaults).forEach((key) => {
+              if (imported[key] !== undefined) {
+                form[key].value = imported[key];
+              }
+            });
+            runSimulation();
+            addMessage('Imported settings from JSON.');
+          } catch (error) {
+            addMessage('Could not import settings file.');
+            setMessagesOpen(true);
+          }
+        };
+        reader.readAsText(file);
+      });
+      messageToggle.addEventListener('click', function () {
+        setMessagesOpen(!messagesOpen);
+      });
+
+      setDefaults();
+      setMessagesOpen(false);
+      runSimulation();
+    })();
+  </script>
+</body>
+</html>

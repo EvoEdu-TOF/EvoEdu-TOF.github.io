@@ -1,0 +1,64 @@
+{
+  "slug": "route-optimizer",
+  "title": "Route Optimizer",
+  "published": true,
+  "visibility": "public",
+  "role": "Explore route finding through iterative search and watch better solutions emerge over generations.",
+  "category": "artificial-life",
+  "entrypoint": "/apps/route-optimizer/",
+  "description": "An interactive optimization tool for comparing routes, heuristics, and generational improvement in a TSP-style problem.",
+  "legacy_names": [
+    "Traveling Salesperson GA",
+    "tsp"
+  ],
+  "pages": {
+    "landing": "/apps/route-optimizer/",
+    "application": "/apps/route-optimizer/app/",
+    "study_guide": "/apps/route-optimizer/study-guide.html",
+    "curriculum_alignment": "/apps/route-optimizer/curriculum-alignment.html",
+    "teacher_guide": "/apps/route-optimizer/teacher-guide.html",
+    "standards": "/apps/route-optimizer/standards.html",
+    "about": "/apps/route-optimizer/about.html"
+  },
+  "implementation": {
+    "legacy_hub": "/apps/tsp/",
+    "launch_target": "/apps/tsp/jstsp.html"
+  },
+  "api": {
+    "status": "prototype",
+    "family": "artificial-life",
+    "docs": "/apps/api/artificial-life/",
+    "module": "/apps/api/artificial-life/artificial-life.js",
+    "notes": "A shared browser and node-consumable API module now exists for the artificial-life remediation family."
+  },
+  "tests": {
+    "status": "prototype",
+    "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/artificial-life/artificial-life.test.js",
+    "notes": "A node-based contract test suite now exercises the shared artificial-life family API module."
+  },
+  "status": {
+    "landing": "standardized",
+    "application": "direct-workbench",
+    "study_guide": "present",
+    "teacher_guide": "present",
+    "standards": "present",
+    "curriculum_alignment": "present",
+    "api": "prototype",
+    "tests": "prototype"
+  },
+  "provenance": {
+    "summary": "Modern JavaScript adaptation of an older GA-based TSP solver lineage, wrapped in evo-edu public documentation.",
+    "details": "Route Optimizer is built on a JavaScript and HTML implementation of a genetic-algorithm Traveling Salesperson solver. The implementation notes in the underlying tool cite Hiroaki Sengoku's GA-based TSP work as an important algorithmic influence, and the current version was produced as a modern browser replacement for earlier Java applet-era examples that were no longer usable. The evo-edu route now adds a direct responsive workbench, separated support pages, and clearer provenance around that implementation.",
+    "lineage": [
+      "Public evo-edu route: Route Optimizer",
+      "Current direct workbench: /apps/route-optimizer/app/",
+      "Legacy implementation directory preserved as archive: /apps/tsp/",
+      "Algorithmic lineage noted in the implementation: Hiroaki Sengoku's GA-based TSP solver work"
+    ],
+    "limits": [
+      "The workbench demonstrates heuristic search behavior, but it is not a proof-producing optimizer and should not be taught that way.",
+      "Manual city-definition click accuracy still needs improvement.",
+      "The algorithmic lineage is useful for search and optimization discussion, but it should not be over-read as a model of literal biological evolution."
+    ]
+  }
+}

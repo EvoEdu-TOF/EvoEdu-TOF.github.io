@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Biomorphs | Evo-Edu.org</title>
+<link rel="stylesheet" href="style.css" />
+<script defer src="script.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-title-row">
+    <div class="site-brand"><a href="/">Evo-Edu.org</a></div>
+    <nav class="top-nav">
+      <a href="/">Home</a>
+      <a href="index.html">Overview</a>
+      <a href="app.html" aria-current="page">Web App</a>
+      <a href="guide.html">Guide</a>
+      <a href="standards.html">Standards</a>
+    </nav>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h3>Genes</h3>
+      <p class="lede">Edit the inherited values directly, or choose one child in the 3x3 litter to continue artificial selection.</p>
+      <div id="gene-controls"></div>
+      <div class="control-group">
+        <label for="stroke-width">Line weight</label>
+        <div class="control-line">
+          <input id="stroke-width" type="range" min="1" max="5" step="0.5" value="2" />
+          <output id="stroke-width-value">2</output>
+        </div>
+      </div>
+      <div class="control-group">
+        <label><input id="show-axes" type="checkbox" /> Show symmetry axis</label>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>Presets</h3>
+      <div class="button-row">
+        <button class="secondary" data-preset="dawkinsTree">Basic tree</button>
+        <button class="secondary" data-preset="primevalDot">Dot</button>
+        <button class="secondary" data-preset="insect">Insect-like</button>
+        <button class="secondary" data-preset="willow">Willow</button>
+        <button class="secondary" data-preset="temple">Temple</button>
+        <button id="randomize" class="ghost">Random</button>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>Save and Import</h3>
+      <p>Importing configuration replaces the current parent organism and immediately generates a new litter.</p>
+      <textarea id="config-text" spellcheck="false"></textarea>
+      <input id="config-file" class="hidden-file" type="file" accept="application/json,.json" />
+      <div class="button-row">
+        <button id="save-config">Save config</button>
+        <button id="import-config" class="secondary">Import text</button>
+        <button id="load-file" class="secondary">Import file</button>
+        <button id="copy-config" class="ghost">Copy</button>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <details open>
+        <summary>How Genes Affect Form</summary>
+        <div id="gene-explanations" class="gene-list"></div>
+      </details>
+      <details>
+        <summary>Teaching Notes</summary>
+        <p>The model uses artificial selection. The learner chooses which phenotype continues; no survival environment is being simulated unless the class assigns one as a selection goal.</p>
+      </details>
+    </div>
+  </aside>
+
+  <main class="content app-shell">
+    <section class="hero">
+      <h1>Biomorphs</h1>
+      <p>Breed recursive, symmetric forms from inherited numerical genes. The parent produces a 3x3 litter: one child for each gene, with a realized +1 or -1 mutation.</p>
+    </section>
+
+    <section class="summary-grid" aria-label="Current biomorph summary">
+      <div class="summary-card"><strong id="generationMetric">0</strong><span>generation</span></div>
+      <div class="summary-card"><strong id="segmentMetric">0</strong><span>drawn segments</span></div>
+      <div class="summary-card"><strong id="depthMetric">0</strong><span>Branch Depth (Gene 9)</span></div>
+      <div class="summary-card"><strong id="spanMetric">0 x 0</strong><span>phenotype span</span></div>
+      <div class="summary-card"><strong id="compactMetric">0</strong><span>width / height</span></div>
+    </section>
+
+    <section class="workspace">
+      <div class="panel stage">
+        <div class="stage-header">
+          <div class="stage-title">
+            <h2>Parent Phenotype</h2>
+            <p id="last-change">No selected mutation yet. Choose one of the nine children to make it the next parent.</p>
+          </div>
+          <div class="button-row">
+            <button id="show-development" class="secondary">Show Development</button>
+            <button id="save-png">Save PNG</button>
+            <button id="save-svg" class="secondary">Save SVG</button>
+          </div>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="parent-canvas" aria-label="Current biomorph phenotype"></canvas>
+          <div class="canvas-overlay">
+            <span id="scale-pill" class="pill">fit scale</span>
+            <span class="pill">full phenotype visible</span>
+          </div>
+        </div>
+        <div id="phenotype-note" class="notice"></div>
+        <details class="evaluator-panel">
+          <summary>Automated Selector</summary>
+          <div class="panel-header">
+            <div>
+              <p id="evaluator-description">Choose an evaluator to see what it will select for.</p>
+            </div>
+          </div>
+          <div class="evaluator-controls">
+            <div class="control-group">
+              <label for="fitness-evaluator">Evaluator</label>
+              <select id="fitness-evaluator"></select>
+            </div>
+            <div class="control-group">
+              <label for="fitness-steps">Steps</label>
+              <input id="fitness-steps" type="number" min="1" max="100" step="1" value="10" />
+            </div>
+          </div>
+          <div class="button-row">
+            <button id="show-evaluator" class="secondary">Show Evaluator</button>
+            <button id="run-evaluator">Run Evaluator</button>
+            <button id="stop-evaluator" class="ghost">Stop</button>
+          </div>
+          <p id="evaluator-status" class="status-line">No automated selection is running.</p>
+          <table class="score-table">
+            <thead><tr><th>Child</th><th>Mutation</th><th>Score</th></tr></thead>
+            <tbody id="score-table-body"></tbody>
+          </table>
+        </details>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>Choose the Next Parent</h2>
+            <p>The human eye is the selecting agent here. Pick the child that best fits your selection goal, or reroll the nine mutation directions.</p>
+          </div>
+          <button id="reroll-litter" class="secondary">Reroll litter</button>
+        </div>
+        <div id="variant-grid" class="grid-variants"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <div>
+          <h2>Mutation Legend</h2>
+          <p>Each grid position identifies the mutated gene and realized direction.</p>
+        </div>
+      </div>
+      <table id="mutation-legend" class="legend-table">
+        <thead><tr><th>Position</th><th>Changed gene</th><th>Prior</th><th>Current</th><th>Delta</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <div>
+          <h2>Selection History</h2>
+          <p>Recent selected mutations show cumulative change from small inherited steps.</p>
+        </div>
+      </div>
+      <table id="history-table" class="history-table">
+        <thead><tr><th>Generation</th><th>Selected change</th><th>Segments</th><th>Span</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+</div>
+
+<footer class="site-footer">
+  <p>Evo-Edu.org: interactive tools for learning evolution, ecology, and scientific reasoning.</p>
+</footer>
+</body>
+</html>

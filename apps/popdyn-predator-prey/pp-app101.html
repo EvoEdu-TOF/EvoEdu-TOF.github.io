@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Predator–Prey Simulation</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    h1 { color: #2e6e4c; }
+    .controls, .export {
+      margin: 1em 0;
+    }
+    label {
+      display: inline-block;
+      width: 150px;
+    }
+    input {
+      width: 100px;
+    }
+    #chart {
+      background: white;
+      border: 1px solid #ccc;
+      width: 800px;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Predator–Prey Simulation</h1>
+
+  <div class="controls">
+    <label>Prey Birth Rate:</label><input type="number" id="preyBirth" value="0.1" step="0.01"><br>
+    <label>Predator Death Rate:</label><input type="number" id="predDeath" value="0.1" step="0.01"><br>
+    <label>Predation Rate:</label><input type="number" id="predation" value="0.01" step="0.001"><br>
+    <label>Conversion Rate:</label><input type="number" id="conversion" value="0.01" step="0.001"><br>
+    <label>Initial Prey:</label><input type="number" id="initialPrey" value="40"><br>
+    <label>Initial Predator:</label><input type="number" id="initialPred" value="9"><br>
+    <label>PRNG Seed:</label><input type="text" id="seed" value="seed123"><br>
+    <button onclick="startSimulation()">Start</button>
+    <button onclick="pauseSimulation()">Pause</button>
+    <button onclick="resetSimulation()">Reset</button>
+  </div>
+
+  <div class="export">
+    <button onclick="exportParameters()">Export Params (JSON)</button>
+    <button onclick="importParameters()">Import Params (JSON)</button>
+    <button onclick="exportResults()">Export Results (JSON)</button>
+    <button onclick="exportCSV()">Export Results (CSV)</button>
+    <button onclick="downloadPlotlyChart('png')">Download Chart (PNG)</button>
+    <button onclick="downloadPlotlyChart('svg')">Download Chart (SVG)</button>
+    <input type="file" id="paramFile" style="display:none" />
+  </div>
+
+  <div id="chart"></div>
+
+  <div id="summary"></div>
+
+  <script>
+    let timer = null, time = 0, data = [], prey, predator, params = {};
+
+    function safeFilename(str) {
+      return str.replace(/[^a-z0-9]+/gi, '_').toLowerCase();
+    }
+
+    function generateFilename(prefix, ext) {
+      const p = getParameters();
+      const parts = [p.seed, p.preyBirth, p.predDeath, p.predation, p.conversion, p.initialPrey, p.initialPred];
+      return prefix + safeFilename(parts.join('_')) + '.' + ext;
+    }
+
+    function downloadPlotlyChart(format) {
+      const filename = generateFilename('predator_prey_', format);
+      Plotly.downloadImage('chart', {
+        format: format,
+        filename: filename,
+        width: 800,
+        height: 400
+      });
+    }
+
+    function exportParameters() {
+      const json = JSON.stringify(getParameters(), null, 2);
+      downloadFile(json, generateFilename("predator_prey_params_", "json"), 'application/json');
+    }
+
+    function exportResults() {
+      const result = JSON.stringify({ parameters: params, results: data }, null, 2);
+      downloadFile(result, generateFilename("predator_prey_results_", "json"), 'application/json');
+    }
+
+    function exportCSV() {
+      let csv = 'time,prey,predator\n';
+      data.forEach(row => {
+        csv += `${row.time},${row.prey},${row.predator}\n`;
+      });
+      downloadFile(csv, generateFilename("predator_prey_results_", "csv"), 'text/csv');
+    }
+
+    function downloadFile(content, filename, mime) {
+      const blob = new Blob([content], { type: mime });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = filename;
+      link.click();
+    }
+  </script>
+</body>
+</html>

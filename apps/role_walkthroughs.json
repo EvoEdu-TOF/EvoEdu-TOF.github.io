@@ -1,0 +1,352 @@
+{
+  "generated_from": "/home/netuser/dev/evo-edu.org/apps",
+  "review_model": {
+    "roles": [
+      "student",
+      "casual_learner",
+      "teacher",
+      "administrator",
+      "scientist"
+    ],
+    "focus_areas": [
+      "first-use clarity",
+      "ui_ux",
+      "appropriateness",
+      "trust_and_model_limits",
+      "support_linkages"
+    ],
+    "status_values": [
+      "pending",
+      "seeded",
+      "reviewed"
+    ]
+  },
+  "summary": {
+    "apps_with_role_walkthroughs": 2,
+    "apps_pending_role_walkthroughs": 9,
+    "seed_reference_app": "shape-evolver",
+    "next_recommended_apps": [
+      "ecobalance",
+      "climate-range-shifter",
+      "gene-flow-mapper"
+    ]
+  },
+  "apps": [
+    {
+      "slug": "shape-evolver",
+      "title": "Shape Evolver",
+      "status": "reviewed",
+      "review_date": "2026-05-16",
+      "entrypoint": "/apps/shape-evolver/",
+      "reviewed_surfaces": [
+        "/apps/shape-evolver/",
+        "/apps/shape-evolver/app/",
+        "/apps/shape-evolver/study-guide.html",
+        "/apps/shape-evolver/teacher-guide.html",
+        "/apps/shape-evolver/standards.html",
+        "/apps/shape-evolver/about.html"
+      ],
+      "overall_findings": [
+        "Shape Evolver is now the clearest example of the newer evo-edu public app contract in the artificial-life family.",
+        "The direct handoff to the Biomorphs runtime removes one major learner-friction source: the old iframe wrapper.",
+        "The route is much stronger for teachers than most of the published app set because it now has separate learner, teacher, standards, and provenance surfaces.",
+        "The remaining weaknesses are less about missing pages and more about cross-surface coherence, runtime onboarding, and administrative/accessibility confidence."
+      ],
+      "roles": {
+        "student": {
+          "experience": "A bright student can understand the main question and reach the app quickly, but still may not know the best first experimental move after the runtime opens.",
+          "strengths": [
+            "The landing page names a concrete question about visible change over repeated selection.",
+            "The route to the app is short and no longer hidden inside an iframe wrapper.",
+            "The learner guide gives specific comparison tasks rather than only general background prose."
+          ],
+          "frictions": [
+            "The app page still behaves mostly as a handoff surface rather than an onboarding lesson.",
+            "The runtime itself may still require the learner to infer which visible controls matter most first.",
+            "There is no explicit beginner challenge card on the app page such as 'make the shape taller in ten generations and explain how you did it.'"
+          ],
+          "linkage_gaps": [
+            "The learner guide is linked, but the first experiment is not summarized again on the app page itself.",
+            "The route does not yet visibly tie into a Notebook concept page about selection, variation, or model limits."
+          ],
+          "priority_actions": [
+            "Add a one-minute 'try this first' block directly on the app handoff page.",
+            "Add one visible beginner challenge that can be completed in a single short run.",
+            "Link the runtime more directly to related Notebook concepts."
+          ]
+        },
+        "casual_learner": {
+          "experience": "A motivated visitor can see why the app exists and can browse the support surfaces, but may still experience the tool as a somewhat separate micro-product rather than part of a guided learning journey.",
+          "strengths": [
+            "The landing page explains why the tool exists in ordinary language.",
+            "The route exposes learner guide, teacher guide, standards, and about pages in a coherent set.",
+            "The provenance note makes the Biomorphs replacement relationship explicit."
+          ],
+          "frictions": [
+            "The app handoff is still a transition rather than a richly framed activity page.",
+            "A casual learner may not know whether to read the learner guide first or start experimenting immediately.",
+            "The API link is visible on the landing page even though it is not the primary concern for most casual learners."
+          ],
+          "linkage_gaps": [
+            "The relationship between Shape Evolver and the wider artificial-life sequence could be more explicit.",
+            "The route would benefit from a clearer 'what to read or try next' step after the first run."
+          ],
+          "priority_actions": [
+            "Demote API emphasis on the main landing page relative to learner-facing next steps.",
+            "Add a post-run next-step block linking to one Notebook concept and one related app.",
+            "Clarify whether a newcomer should start with the app or the learner guide."
+          ]
+        },
+        "teacher": {
+          "experience": "This is now one of the strongest teacher-facing public routes in the portfolio because the classroom moves, standards framing, and evidence artifacts are explicit.",
+          "strengths": [
+            "Teacher guide and standards pages now exist as separate surfaces.",
+            "The teacher guide clearly distinguishes useful classroom uses from common misuse.",
+            "The standards page is honest about model limits and does not overclaim biological realism."
+          ],
+          "frictions": [
+            "The lesson flow is good but still compact; some teachers will want a downloadable quick-start lesson sheet.",
+            "Teacher evidence expectations are present but not yet paired with printable prompts or rubrics.",
+            "The route does not yet show estimated class time, preparation time, or device assumptions."
+          ],
+          "linkage_gaps": [
+            "The teacher guide does not yet connect directly to a standards-aligned assessment handout.",
+            "There is no explicit bridge from teacher guide to a broader pathway or unit sequence."
+          ],
+          "priority_actions": [
+            "Add quick-start lesson metadata: duration, setup, and recommended grade band.",
+            "Add one downloadable observation or claim-evidence-reasoning worksheet.",
+            "Link Shape Evolver into a larger artificial-life or evolution pathway for classroom sequencing."
+          ]
+        },
+        "administrator": {
+          "experience": "An administrator can now see that the route is more mature than many others, but may still hesitate because accessibility, support completeness, and publication confidence are not summarized in one place.",
+          "strengths": [
+            "The route now has the expected public support surfaces instead of only a launcher.",
+            "The standards framing and provenance note make the app easier to justify institutionally.",
+            "The replacement runtime is responsive and better aligned with a modern public-facing standard."
+          ],
+          "frictions": [
+            "There is no explicit publication-readiness summary or accessibility note.",
+            "The route does not yet summarize browser/device expectations in administrator-friendly terms.",
+            "There is no one-page status view that says this app has cleared the current public contract."
+          ],
+          "linkage_gaps": [
+            "The route is stronger than the portfolio average, but the site does not yet make that distinction visible.",
+            "There is no direct link from the app route to a portfolio audit or readiness statement."
+          ],
+          "priority_actions": [
+            "Add a brief public-readiness and accessibility note for administrators and curriculum leads.",
+            "Expose portfolio readiness status in a consistent place across the app family.",
+            "Record browser and device assumptions clearly on the public route."
+          ]
+        },
+        "scientist": {
+          "experience": "A scientifically literate reviewer is likely to appreciate the honesty about model boundaries, but will still notice that the route is stronger on pedagogy than on explicit technical transparency about the runtime itself.",
+          "strengths": [
+            "The teacher and standards pages explicitly warn against confusing artificial selection here with full biological evolution in populations.",
+            "Model limitations are named instead of hidden.",
+            "The route encourages evidence from repeated runs and saved artifacts rather than single flashy outcomes."
+          ],
+          "frictions": [
+            "The public route does not yet summarize the runtime's core representation or evaluator assumptions for technical readers.",
+            "There is no direct test or implementation-status page tied to the public route.",
+            "The distinction between visible phenotype manipulation and broader population-level evolution could still be reinforced more often."
+          ],
+          "linkage_gaps": [
+            "The about page could connect more explicitly to related population-level tools where drift and frequency change are treated better.",
+            "The route does not yet link directly to a deeper explanation of why this is a useful but partial model."
+          ],
+          "priority_actions": [
+            "Add a short technical note summarizing model representation and evaluation assumptions.",
+            "Link more explicitly to population-level tools or Notebook concepts that cover what this route leaves out.",
+            "Surface implementation or testing status for technically oriented reviewers."
+          ]
+        }
+      },
+      "shared_remediation_actions": [
+        "Add a first-run challenge block on the app page itself.",
+        "Clarify the learner's next step after the first session.",
+        "Add quick-start metadata and downloadable classroom artifacts for teachers.",
+        "Add a concise readiness/accessibility note for institutional reviewers.",
+        "Tie the route more visibly into related Notebook concepts and broader artificial-life pathways."
+      ]
+    },
+    {
+      "slug": "climate-range-shifter",
+      "title": "Climate Range Shifter",
+      "status": "pending",
+      "review_date": null,
+      "entrypoint": "/apps/climate-range-shifter/",
+      "shared_expectation": "Next ecology-family role walkthrough. Likely first-use problems: iframe-wrapped runtime, missing teacher guide, missing standards page, and weak first-task clarity."
+    },
+    {
+      "slug": "allele-tracker",
+      "title": "Allele Tracker",
+      "status": "reviewed",
+      "review_date": "2026-05-16",
+      "entrypoint": "/apps/allele-tracker/",
+      "reviewed_surfaces": [
+        "/apps/allele-tracker/",
+        "/apps/allele-tracker/app/",
+        "/apps/allele-tracker/study-guide.html",
+        "/apps/allele-tracker/teacher-guide.html",
+        "/apps/allele-tracker/standards.html",
+        "/apps/allele-tracker/curriculum-alignment.html",
+        "/apps/allele-tracker/about.html",
+        "/apps/popg/",
+        "/apps/popg/jspopg.html"
+      ],
+      "overall_findings": [
+        "Allele Tracker has the deepest educational lineage in the current evo-edu app set, but that same history is visible as fragmentation across old and new public surfaces.",
+        "The landing page and newer study-guide/curriculum pages are strong, and the public app route now uses a direct responsive workbench instead of an iframe wrapper.",
+        "Teacher and standards support technically exist, but two of those pages are still older standalone documents outside the shared site shell, which weakens coherence and trust.",
+        "Attribution exists in the legacy PopG route, but fairness and scientific-virtues expectations are not yet carried forward cleanly enough into the main public evo-edu route."
+      ],
+      "roles": {
+        "student": {
+          "experience": "A bright student can grasp the big question and find a plausible first comparison, but the actual runtime still feels like a control-heavy legacy tool that expects prior orientation.",
+          "strengths": [
+            "The landing page gives a concrete conceptual question and two useful first moves.",
+            "The study guide gives good mechanism-comparison tasks and encourages repeated runs.",
+            "The app has real educational depth because the simulation allows drift, selection, mutation, and migration comparisons."
+          ],
+          "frictions": [
+            "The runtime interface is still fairly dense even after the direct responsive replacement.",
+            "The route still depends on a legacy simulation lineage under the hood, so some model and interface limits remain visible.",
+            "Learners can now start more easily, but they may still need help deciding which force to vary next after the first comparison."
+          ],
+          "linkage_gaps": [
+            "The app page now states a simple first experiment, but it still needs stronger second-step guidance after the initial comparison.",
+            "The route does not yet connect clearly enough to the Notebook concept sequence around allele frequency change, population thinking, and genetic drift."
+          ],
+          "priority_actions": [
+            "Keep the first recommended parameter changes explicit on the app page itself.",
+            "Add a stronger second-step suggestion after the initial drift-only comparison.",
+            "Keep direct links to the related Notebook concept pages for allele frequency change, population thinking, and genetic drift prominent."
+          ]
+        },
+        "casual_learner": {
+          "experience": "A motivated visitor can tell this app is important and well-established, but the route still feels split between a newer evo-edu shell and a much older legacy interior.",
+          "strengths": [
+            "The landing page explains why the app matters and what phenomena it can compare.",
+            "The study guide and curriculum pages frame the app as an investigation rather than a toy.",
+            "The historical lineage gives the route authority when handled well."
+          ],
+          "frictions": [
+            "The direct responsive workbench is much better than the iframe route, but the interface still carries some inherited density from the legacy model family.",
+            "The route includes multiple guidance surfaces, but it is not always obvious which one is the main learner-facing companion.",
+            "The visible API link is still higher-profile than it should be for a casual learner."
+          ],
+          "linkage_gaps": [
+            "The route does not yet tell a casual learner what to do immediately after a first run.",
+            "The relationship between the legacy PopG lineage and the current evo-edu public framing is not explained on the main landing page in a fairness-focused way."
+          ],
+          "priority_actions": [
+            "Clarify the recommended companion page sequence for self-study.",
+            "Add a short origin-and-adaptation note on the landing page that explains what was inherited from PopG and what evo-edu added.",
+            "Keep the legacy archive available, but visually subordinate it to the main public workbench."
+          ]
+        },
+        "teacher": {
+          "experience": "Teachers have more support here than for most other apps, but the support package is internally inconsistent because some pages are newer shared-shell pages and others are older standalone artifacts.",
+          "strengths": [
+            "The study guide has strong prompts around evidence, competing explanations, and revision.",
+            "The app has a long history as a teaching tool and supports several authentic comparison tasks.",
+            "The curriculum alignment page already reinforces scientific-virtues language."
+          ],
+          "frictions": [
+            "The teacher guide and standards page are still older standalone pages instead of integrated public route pages.",
+            "The route does not clearly distinguish the canonical newer support pages from inherited older ones.",
+            "There is still no quick classroom metadata block for time, setup, and recommended grade band."
+          ],
+          "linkage_gaps": [
+            "Teacher support does not yet consistently point into the Notebook first-ring pathway.",
+            "The route lacks a single coherent teacher package that includes lesson move, standards, provenance, and worksheet artifacts in one design language."
+          ],
+          "priority_actions": [
+            "Rebuild teacher guide and standards pages into the shared evo-edu shell.",
+            "Add teacher quick-start metadata and downloadable observation/CER sheets.",
+            "Tie the teacher route explicitly to Notebook concepts and related population-genetics tools."
+          ]
+        },
+        "administrator": {
+          "experience": "An administrator can see that this app is historically important and educationally serious, but the mixed-age surface and incomplete provenance summary still make publication-readiness less obvious than it should be.",
+          "strengths": [
+            "The route has real support materials, not just an app launcher.",
+            "The about page acknowledges legacy implementation and current limits.",
+            "The app's long educational history is an asset when presented transparently."
+          ],
+          "frictions": [
+            "The route now looks much more coherent, but the historical mixture of older and newer assets still requires explicit readiness and provenance explanation.",
+            "The public route does not yet summarize accessibility or device assumptions.",
+            "There is no concise administrative statement of what attribution has been preserved and how the route differs from the older source implementation."
+          ],
+          "linkage_gaps": [
+            "The route does not yet expose a readiness note tying provenance, standards, and support completeness together.",
+            "It is not yet obvious from the public route which parts are legacy carry-forward and which parts are current evo-edu additions."
+          ],
+          "priority_actions": [
+            "Add a concise public-readiness/provenance note for institutional reviewers.",
+            "Document browser and device assumptions on the app route.",
+            "Make the attribution chain and current modification responsibility explicit."
+          ]
+        },
+        "scientist": {
+          "experience": "A scientist is likely to recognize the educational value of the simulation quickly, but will also notice that the public route still needs a cleaner account of model assumptions, implementation lineage, and attribution fairness.",
+          "strengths": [
+            "The study guide and curriculum pages encourage repeated runs, competing explanations, and revision.",
+            "The public route keeps drift, selection, migration, and mutation distinct instead of collapsing everything into adaptive storytelling.",
+            "The about page acknowledges that the legacy PopG implementation still supplies the runtime."
+          ],
+          "frictions": [
+            "The public route does not yet summarize key runtime assumptions and simplifications prominently enough.",
+            "The lineage from original PopG to the current JavaScript runtime and evo-edu framing still needs to remain explicit across all public pages.",
+            "The route does not yet make fully explicit which additions are educational framing versus model implementation changes."
+          ],
+          "linkage_gaps": [
+            "There is not yet a single provenance block that names original creators, later porting work, current evo-edu adaptations, and model limits together.",
+            "The route would benefit from a direct bridge to related Notebook pages about population thinking and allele frequency change."
+          ],
+          "priority_actions": [
+            "Add a technical/provenance note describing model assumptions, source lineage, and adaptation responsibility.",
+            "Carry attribution forward consistently across landing, about, teacher, and standards pages.",
+            "Link the route explicitly to population-level Notebook concepts that explain what the model is for and what it omits."
+          ]
+        }
+      },
+      "shared_remediation_actions": [
+        "Keep improving the direct responsive workbench so the next-step guidance remains as strong as the first-step guidance.",
+        "Rebuild the teacher guide and standards pages into the shared evo-edu shell.",
+        "Add a first-run challenge and clearer app-page onboarding.",
+        "Create a single attribution/provenance block that preserves origin, modifications, and limits fairly and transparently.",
+        "Tie the route more explicitly into the Notebook population-genetics concept sequence."
+      ],
+      "attribution_review": {
+        "status": "needs_expansion",
+        "strengths": [
+          "The legacy PopG route names Prof. Joe Felsenstein and Wesley R. Elsberry.",
+          "The public evo-edu about page acknowledges that the legacy PopG implementation still supplies the runtime."
+        ],
+        "gaps": [
+          "The main public Allele Tracker route does not yet carry forward the full source lineage clearly enough.",
+          "Attribution is not yet integrated into the same shared-shell provenance language used elsewhere on evo-edu.",
+          "The route does not yet clearly distinguish original model lineage from current evo-edu framing and adaptation work."
+        ],
+        "fairness_and_scientific_virtues_actions": [
+          "Name original source lineage, later porting, and current evo-edu modifications explicitly on the public route.",
+          "State model limits and known simplifications in the same provenance surface as the attribution.",
+          "Avoid presenting the current route as if evo-edu originated the underlying historical model."
+        ]
+      }
+    },
+    {
+      "slug": "ecobalance",
+      "title": "EcoBalance",
+      "status": "pending",
+      "review_date": null,
+      "entrypoint": "/apps/ecobalance/",
+      "shared_expectation": "Next ecology-family role walkthrough. Likely issues: runtime control visibility, mobile responsiveness, and teacher-facing support completeness."
+    }
+  ]
+}

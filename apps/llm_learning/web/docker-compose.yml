@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  studyguide:
+    build: .
+    image: studyguide-web:latest
+    container_name: studyguide
+    restart: unless-stopped
+    # Mount CSVs/plots so the homepage can show live lab outputs
+    volumes:
+      - ../lab:/usr/share/nginx/html/data:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.studyguide.rule=Host(`studyguide.example.com`)"
+      - "traefik.http.routers.studyguide.entrypoints=websecure"
+      - "traefik.http.routers.studyguide.tls.certresolver=letsencrypt"
+    # If Traefik is on another Docker network, add:
+    networks:
+      - web
+
+networks:
+  web:
+    external: true

@@ -1,0 +1,119 @@
+{
+  "schema": "evo-edu.notebook.reasoning_scaffold.v1",
+  "id": "notebook.concepts.adaptation",
+  "title": "Adaptation",
+  "created": "2026-05-14",
+  "updated": "2026-05-14",
+  "status": "pilot-reviewed-scaffold",
+  "concept_targets": [
+    "adaptation",
+    "adaptive explanation",
+    "natural selection",
+    "fitness differences",
+    "trait usefulness",
+    "drift contrast",
+    "constraint",
+    "environmental context"
+  ],
+  "site_links": [
+    {
+      "kind": "concept",
+      "title": "Natural Selection",
+      "url": "/notebook/concepts/natural-selection.html"
+    },
+    {
+      "kind": "concept",
+      "title": "Genetic Drift",
+      "url": "/notebook/concepts/genetic-drift.html"
+    },
+    {
+      "kind": "concept",
+      "title": "Mutation",
+      "url": "/notebook/concepts/mutation.html"
+    },
+    {
+      "kind": "pack",
+      "title": "Population Change",
+      "url": "/evo/packs/population-change/"
+    },
+    {
+      "kind": "research_tool",
+      "title": "Literature Explorer",
+      "url": "/apps/literature-explorer/"
+    }
+  ],
+  "records": [
+    {
+      "id": "ad-001",
+      "type": "definition-check",
+      "question": "What is adaptation?",
+      "answer_summary": "Adaptation refers to a trait or variant whose prevalence is explained by selection in a relevant environment, not just by its existence or present usefulness.",
+      "verification_prompt": "State the trait, the environment, and the evidence linking it to differential success.",
+      "misconception_guard": "Do not use adaptation as a synonym for any interesting or useful trait.",
+      "didactopus_prompt_seed": "Rewrite the claim so the trait and environment are both explicit."
+    },
+    {
+      "id": "ad-002",
+      "type": "evidence-check",
+      "question": "Why is usefulness alone not enough?",
+      "answer_summary": "A trait can appear useful now without that alone proving its evolutionary history. Drift, ancestry, constraint, or changed conditions may also matter.",
+      "verification_prompt": "Ask what evidence shows historical selective advantage rather than present plausibility alone.",
+      "misconception_guard": "Do not infer evolutionary history from intuitive usefulness by itself.",
+      "didactopus_prompt_seed": "State one reason the trait seems useful and one reason that still does not settle the history."
+    },
+    {
+      "id": "ad-003",
+      "type": "support-pattern",
+      "question": "What evidence strengthens an adaptive claim?",
+      "answer_summary": "Evidence that heritable variation is tied to repeated differences in survival or reproduction in a specific environment strengthens an adaptive explanation.",
+      "verification_prompt": "Name the heritable difference, the fitness effect, the environment, and the alternative mechanisms checked.",
+      "misconception_guard": "Avoid calling a trait adaptive when the evidence only shows that frequency changed.",
+      "didactopus_prompt_seed": "List the exact pieces of evidence that make the adaptive story stronger than its rivals."
+    },
+    {
+      "id": "ad-004",
+      "type": "alternative-check",
+      "question": "Why compare alternatives?",
+      "answer_summary": "Adaptive reasoning is stronger when it identifies rival processes, such as drift, constraint, byproducts, or migration, and says what evidence would distinguish them.",
+      "verification_prompt": "Name at least one non-adaptive or mixed explanation and how it could be tested.",
+      "misconception_guard": "Do not treat adaptation as the default answer before alternatives are examined.",
+      "didactopus_prompt_seed": "Add one rival explanation and one observation that would weaken the adaptive story."
+    },
+    {
+      "id": "ad-005",
+      "type": "context-check",
+      "question": "Can a trait be adaptive in one context but not another?",
+      "answer_summary": "Yes. Adaptive value depends on environment, interaction, and timescale, so the same trait can be favored, neutral, or costly in different settings.",
+      "verification_prompt": "State which conditions make the trait advantageous and which might not.",
+      "misconception_guard": "Do not talk about a trait being simply 'good' without naming context.",
+      "didactopus_prompt_seed": "Describe how the same trait could be favored in one environment and neutral in another."
+    }
+  ],
+  "citegeist_source_slots": [
+    {
+      "slot": "adaptation-foundations",
+      "needed_for": "Foundational treatments of adaptation and natural selection",
+      "candidate_queries": [
+        "Darwin adaptation natural selection variation",
+        "adaptation natural selection classic population genetics treatment"
+      ],
+      "review_status": "pending"
+    },
+    {
+      "slot": "adaptation-alternatives",
+      "needed_for": "Explanatory treatments of adaptation, alternatives, and cautious adaptive reasoning",
+      "candidate_queries": [
+        "adaptationism alternatives drift constraint educational explanation",
+        "adaptive explanation evidence rival explanations evolution"
+      ],
+      "review_status": "pending"
+    }
+  ],
+  "doclift_use": "Use this JSON as a fixture for concept pages that require evidence-based interpretation rather than simple mechanism naming.",
+  "groundrecall_use": "Store rationale, pending source-slot work, and revision notes about rival explanations so later concept pages can reuse the same adaptive-evidence structure.",
+  "next_review_steps": [
+    "Backfill reviewed sources for classic and explanatory treatments of adaptation.",
+    "Add one worked adaptive claim and one rival non-adaptive explanation for comparison.",
+    "Link this page into later Notebook pages on speciation, ecology, and phenotype."
+  ]
+}

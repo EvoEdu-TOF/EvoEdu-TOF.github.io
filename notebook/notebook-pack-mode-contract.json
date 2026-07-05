@@ -1,0 +1,111 @@
+{
+  "schema": "evo-edu.learning_output_modes.v1",
+  "id": "evo-edu.learning-output-modes",
+  "title": "Learning Output Modes Contract",
+  "updated": "2026-05-14",
+  "intent": "Define domain-pack and Notebook outputs as two intentional production modes of the same doclift/GroundRecall/Didactopus stack.",
+  "modes": [
+    {
+      "id": "pack",
+      "title": "Domain Pack Mode",
+      "summary": "Structured learning metadata and graph outputs that keep the learner closely tied to the original source materials.",
+      "characteristics": [
+        "concept and prerequisite extraction",
+        "roadmap or sequencing metadata",
+        "review and promotion surfaces",
+        "light explanatory layer",
+        "strong dependency on the original source set during study"
+      ],
+      "best_for": [
+        "rapid ingestion",
+        "source-grounded coursework support",
+        "assessment and progress structure",
+        "mentor guidance where the learner still reads primary material directly"
+      ],
+      "minimum_outputs": [
+        "draft or reviewed domain pack",
+        "concept graph or prerequisite structure",
+        "review status and attribution metadata"
+      ]
+    },
+    {
+      "id": "notebook",
+      "title": "Notebook Mode",
+      "summary": "Accumulated reviewed explanatory content that allows study to proceed with less constant dependence on reopening the original source materials.",
+      "characteristics": [
+        "learner-facing concept pages",
+        "paired scaffold JSON",
+        "learning paths",
+        "Didactopus-facing learning-sequence derivatives",
+        "selection-policy artifacts",
+        "deeper reviewed conceptual treatment beyond extraction"
+      ],
+      "best_for": [
+        "standalone study surfaces",
+        "conceptual grounding",
+        "mentorship over accumulated content",
+        "deployment into broader learner-facing environments"
+      ],
+      "minimum_outputs": [
+        "Notebook landing page entries",
+        "concept HTML pages",
+        "concept scaffold JSON",
+        "learning-path artifacts",
+        "Notebook-side selection-policy artifacts"
+      ]
+    },
+    {
+      "id": "hybrid",
+      "title": "Hybrid Mode",
+      "summary": "Domain-pack structure with selectively expanded Notebook treatment for the concepts that most need accumulated explanatory content.",
+      "characteristics": [
+        "pack backbone retained",
+        "only priority concepts promoted into Notebook-style pages and scaffolds",
+        "mixed source dependence depending on concept maturity"
+      ],
+      "best_for": [
+        "incremental course build-out",
+        "high-value concept expansion without full Notebook completion",
+        "pragmatic migration from pack-heavy to Notebook-rich output"
+      ],
+      "minimum_outputs": [
+        "domain pack outputs",
+        "selected concept pages",
+        "selected concept scaffolds",
+        "at least one path or sequence artifact for expanded concepts"
+      ]
+    }
+  ],
+  "stack_roles": {
+    "doclift": [
+      "extract and normalize source structure",
+      "identify textbook exercise, review-problem, and discussion-question sections",
+      "identify textbook code, pseudocode, simulation recipes, and model assumptions separately from surrounding prose",
+      "identify equations, theorem-like statements, derivations, notation mappings, assumptions, and parameter definitions separately from surrounding prose",
+      "emit pack-shaped material",
+      "emit scaffold-shaped concept records or candidate Notebook fragments"
+    ],
+    "groundrecall": [
+      "preserve review rationale",
+      "store revision history",
+      "track unresolved source slots",
+      "support accumulation of deeper explanatory content over time"
+    ],
+    "didactopus": [
+      "consume pack outputs for mentor, sequencing, and assessment flows",
+      "consume Notebook outputs for mentorship over accumulated explanatory content",
+      "use reviewed textbook-derived questions as coverage probes and discussion prompts",
+      "use reviewed JavaScript algorithm translations or expected-output checks for web-facing modeling activities",
+      "use reviewed mathematical structure to guide symbol interpretation, assumption checks, and worked-model explanations",
+      "avoid becoming the canonical owner of Notebook editorial artifacts"
+    ]
+  },
+  "current_direction": {
+    "first_ring_example": [
+      "/notebook/learning-paths/foundations-first-ring.json",
+      "/notebook/learning-paths/foundations-first-ring.didactopus.json",
+      "/notebook/learning-paths/foundations-first-ring.selection-policy.json"
+    ],
+    "note": "The current evo-edu Notebook first ring is a Notebook-mode output built on top of the same stack that can also produce domain-pack-style results."
+  }
+}

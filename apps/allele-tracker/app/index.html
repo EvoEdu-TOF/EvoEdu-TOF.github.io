@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Allele Tracker Application - evo-edu.org</title>
+  <link rel="stylesheet" href="/shared/evo-edu.css">
+  <script src="/shared/evo-shell.js" defer></script>
+  <script src="/apps/api/population-genetics/population-genetics.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    .allele-app {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      align-items: start;
+    }
+    .allele-panel {
+      background: #fff;
+      border: 1px solid #d6deea;
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      padding: 1.25rem;
+    }
+    .allele-panel h2,
+    .allele-panel h3 {
+      margin: 0 0 0.75rem;
+    }
+    .allele-panel p,
+    .allele-panel li {
+      line-height: 1.55;
+    }
+    .workbench-panel,
+    .plot-panel,
+    .settings-panel,
+    .action-panel {
+      display: grid;
+      gap: 1rem;
+    }
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 0.75rem;
+    }
+    .app-button,
+    .app-upload-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 3rem;
+      padding: 0.8rem 1rem;
+      border: 1px solid #205a9e;
+      border-radius: 12px;
+      background: #205a9e;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .app-button.secondary,
+    .app-upload-label.secondary {
+      background: #f6f9fc;
+      color: #1f2937;
+      border-color: #c5d1e0;
+    }
+    .app-button:disabled,
+    .app-upload-label.disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .app-button:not(:disabled):hover,
+    .app-upload-label:not(.disabled):hover {
+      transform: translateY(-1px);
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .status-grid,
+    .starter-grid,
+    .notes-grid {
+      display: grid;
+      gap: 0.85rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .status-card,
+    .starter-card,
+    .note-card {
+      background: #f6f9fc;
+      border: 1px solid #d6deea;
+      border-radius: 14px;
+      padding: 0.95rem 1rem;
+    }
+    .status-card strong,
+    .starter-card strong,
+    .note-card strong {
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+    .plot-box {
+      min-height: 420px;
+      border: 1px solid #d6deea;
+      border-radius: 16px;
+      background: #fff;
+    }
+    .settings-form {
+      display: grid;
+      gap: 0.85rem;
+    }
+    .param-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.85rem;
+    }
+    .param-row {
+      display: grid;
+      gap: 0.35rem;
+    }
+    .param-row label {
+      font-weight: 700;
+      color: #243447;
+    }
+    .param-row input {
+      width: 100%;
+      min-height: 2.8rem;
+      padding: 0.65rem 0.7rem;
+      border: 1px solid #c7d3e1;
+      border-radius: 10px;
+      font: inherit;
+    }
+    .message-list {
+      display: grid;
+      gap: 0.7rem;
+    }
+    .message-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      min-height: 2.75rem;
+      padding: 0.65rem 0.95rem;
+      border: 1px solid #c5d1e0;
+      border-radius: 10px;
+      background: #f6f9fc;
+      color: #1f2937;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .message-item {
+      background: #fff;
+      border-left: 4px solid #205a9e;
+      border-radius: 10px;
+      padding: 0.75rem 0.85rem;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+    }
+    .inline-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+    .inline-links a {
+      color: #205a9e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    @media (max-width: 1024px) {
+      .allele-app {
+        grid-template-columns: 1fr;
+      }
+      .workbench-panel { order: 1; }
+      .plot-panel { order: 2; }
+      .settings-panel { order: 3; }
+    }
+    @media (max-width: 640px) {
+      .action-grid,
+      .status-grid,
+      .starter-grid,
+      .notes-grid,
+      .param-grid {
+        grid-template-columns: 1fr;
+      }
+      .plot-box {
+        min-height: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-topbar">
+      <div class="brand-block">
+        <span class="brand-mark">Population Genetics</span>
+        <a href="/">evo-edu.org</a>
+        <p class="brand-summary">Population genetics simulations and support materials for allele frequency change, drift, selection, mutation, and migration.</p>
+      </div>
+      <nav class="site-nav" data-evo-nav></nav>
+    </header>
+
+    <section class="hero-card">
+      <p class="eyebrow">Application</p>
+      <div class="hero-grid">
+        <div>
+          <h1>Allele Tracker</h1>
+          <p class="lede lede-strong">Compare drift, selection, mutation, and migration in one responsive public workbench while preserving the older PopG route as a legacy archive.</p>
+          <div class="hero-actions">
+            <a class="button-link" href="/apps/allele-tracker/study-guide.html">Learner guide</a>
+            <a class="button-link-secondary" href="/apps/allele-tracker/teacher-guide.html">Teacher guide</a>
+            <a class="button-link-secondary" href="/apps/allele-tracker/about.html">About and provenance</a>
+            <a class="button-link-secondary" href="/apps/popg/jspopg.html" target="_blank" rel="noopener">Open legacy PopG</a>
+          </div>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <strong>First challenge</strong>
+            <span>Run one drift-only case twice with the same settings and compare whether fixation or loss happens the same way both times.</span>
+          </div>
+          <div class="stat-card">
+            <strong>Key habit</strong>
+            <span>Keep population thinking in view: follow frequency change in populations rather than imagining one organism driving the story.</span>
+          </div>
+          <div class="stat-card">
+            <strong>Legacy memorialized</strong>
+            <span>The older PopG runtime remains available as an archive route while this public workbench replaces the iframe workflow.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="allele-tracker-app" class="allele-app">
+      <section class="allele-panel workbench-panel">
+        <div class="action-panel">
+          <div>
+            <p class="section-kicker">Run Actions</p>
+            <h2>Controls you will use first</h2>
+            <p class="settings-note">Keep actions separate from settings: start a run, continue the current run, save the current graph, or export and import the current setup.</p>
+          </div>
+          <div class="action-grid">
+            <button class="app-button" type="button" @click="runSimulation">Run New Simulation</button>
+            <button class="app-button" type="button" @click="continueSimulation" :disabled="continueDisabled">Continue Run</button>
+            <button class="app-button secondary" type="button" @click="savePlot" :disabled="freqMatrix.length < 2">Save Plot PNG</button>
+            <button class="app-button secondary" type="button" @click="saveSettings">Export Settings</button>
+            <label class="app-upload-label secondary" :class="{ disabled: importingSettings }" for="settingsImport">Import Settings</label>
+            <input class="visually-hidden" id="settingsImport" type="file" accept="application/json" @change="importSettings">
+          </div>
+        </div>
+
+        <div>
+          <p class="section-kicker">Current Run Status</p>
+          <div class="status-grid">
+            <div class="status-card">
+              <strong>Total generations</strong>
+              <span>{{ totalGensSoFar }}</span>
+            </div>
+            <div class="status-card">
+              <strong>Fixed populations</strong>
+              <span>{{ numFixed }}</span>
+            </div>
+            <div class="status-card">
+              <strong>Lost populations</strong>
+              <span>{{ numLost }}</span>
+            </div>
+            <div class="status-card">
+              <strong>Continue step</strong>
+              <span>{{ continueGens }}</span>
+            </div>
+          </div>
+          <p class="settings-note" v-if="allFiniteResolved">All finite populations are fixed or lost. Start a new run to explore a different setting.</p>
+        </div>
+
+        <div>
+          <p class="section-kicker">Try This First</p>
+          <div class="starter-grid">
+            <div class="starter-card">
+              <strong>Step 1</strong>
+              <span>Use the default settings and run one drift-only simulation.</span>
+            </div>
+            <div class="starter-card">
+              <strong>Step 2</strong>
+              <span>Repeat the same run without changing anything.</span>
+            </div>
+            <div class="starter-card">
+              <strong>Step 3</strong>
+              <span>Ask what changed, what stayed similar, and what that suggests about chance in populations.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="allele-panel plot-panel">
+        <div>
+          <p class="section-kicker">Main Display</p>
+          <h2>Allele-frequency change across generations</h2>
+          <p class="settings-note">`Pop 0` is the reference population without drift. The remaining populations show drift plus any other forces you have turned on.</p>
+        </div>
+        <div id="plot" class="plot-box" aria-label="Allele-frequency plot"></div>
+        <div class="notes-grid">
+          <div class="note-card">
+            <strong>What to notice</strong>
+            <span>Fixation or loss can happen at different times in repeated runs even with the same settings.</span>
+          </div>
+          <div class="note-card">
+            <strong>Compare mechanisms</strong>
+            <span>Change one force at a time when you want interpretable comparisons.</span>
+          </div>
+          <div class="note-card">
+            <strong>Notebook links</strong>
+            <span class="inline-links">
+              <a href="/notebook/concepts/population-thinking.html">Population Thinking</a>
+              <a href="/notebook/concepts/allele-frequency-change.html">Allele Frequency Change</a>
+              <a href="/notebook/concepts/genetic-drift.html">Genetic Drift</a>
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <p class="section-kicker">Messages</p>
+          <button class="message-toggle" type="button" @click="messagesOpen = !messagesOpen">
+            {{ messagesOpen ? "Hide messages" : "Show messages" }}
+          </button>
+          <div class="message-list" v-if="messagesOpen">
+            <div class="message-item" v-for="(msg, i) in messages" :key="i">{{ msg }}</div>
+            <div class="message-item" v-if="messages.length === 0">Run a simulation to begin. The first useful comparison is two drift-only runs with the same settings.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="allele-panel settings-panel">
+        <div>
+          <p class="section-kicker">Configuration Parameters</p>
+          <h2>Change one force at a time</h2>
+          <p class="settings-note">The control group is separate from the configuration group on purpose. Adjust settings here, then use the run buttons without hunting through the parameter form again.</p>
+        </div>
+        <form class="settings-form" @submit.prevent="runSimulation">
+          <div class="param-grid">
+            <div class="param-row">
+              <label for="popSize">Population size</label>
+              <input type="number" id="popSize" v-model.number="popSize" min="1">
+            </div>
+            <div class="param-row">
+              <label for="numPop">Finite populations</label>
+              <input type="number" id="numPop" v-model.number="numPop" min="0">
+            </div>
+            <div class="param-row">
+              <label for="genRun">Generations per run</label>
+              <input type="number" id="genRun" v-model.number="genRun" min="1">
+            </div>
+            <div class="param-row">
+              <label for="continueGens">Continue by generations</label>
+              <input type="number" id="continueGens" v-model.number="continueGens" min="1">
+            </div>
+            <div class="param-row">
+              <label for="initFreq">Initial A frequency</label>
+              <input type="number" step="0.01" id="initFreq" v-model.number="initFreq">
+            </div>
+            <div class="param-row">
+              <label for="migRate">Migration rate</label>
+              <input type="number" step="0.001" id="migRate" v-model.number="migRate">
+            </div>
+            <div class="param-row">
+              <label for="fitGenAA">Fitness (AA)</label>
+              <input type="number" step="0.0001" id="fitGenAA" v-model.number="fitGenAA">
+            </div>
+            <div class="param-row">
+              <label for="fitGenAa">Fitness (Aa)</label>
+              <input type="number" step="0.0001" id="fitGenAa" v-model.number="fitGenAa">
+            </div>
+            <div class="param-row">
+              <label for="fitGenaa">Fitness (aa)</label>
+              <input type="number" step="0.0001" id="fitGenaa" v-model.number="fitGenaa">
+            </div>
+            <div class="param-row">
+              <label for="mutAa">Mutation (A → a)</label>
+              <input type="number" step="0.001" id="mutAa" v-model.number="mutAa">
+            </div>
+            <div class="param-row">
+              <label for="mutaA">Mutation (a → A)</label>
+              <input type="number" step="0.001" id="mutaA" v-model.number="mutaA">
+            </div>
+          </div>
+        </form>
+
+        <div>
+          <p class="section-kicker">Fairness and provenance</p>
+          <div class="note-card">
+            <strong>Based on PopG</strong>
+            <span>This workbench replaces the old iframe workflow, not the history behind it. The older PopG route remains available as an archive, and the public provenance note carries forward the original PopG lineage, restrictions, and current evo-edu additions.</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer-card">
+      <div>
+        <h3>Allele Tracker application</h3>
+        <p>This responsive public workbench replaces the iframe-based route while preserving the older PopG implementation as a memorialized archive path.</p>
+      </div>
+      <small>Updated May 16, 2026</small>
+    </footer>
+  </div>
+
+  <script>
+    new Vue({
+      el: "#allele-tracker-app",
+      data: {
+        popSize: 100,
+        numPop: 10,
+        genRun: 100,
+        initFreq: 0.5,
+        fitGenAA: 1.0,
+        fitGenAa: 1.0,
+        fitGenaa: 1.0,
+        mutAa: 0.0,
+        mutaA: 0.0,
+        migRate: 0.0,
+        continueGens: 100,
+        sessionSeed: null,
+        rngState: null,
+        freqMatrix: [],
+        totalGensSoFar: 0,
+        numFixed: 0,
+        numLost: 0,
+        messages: [],
+        importingSettings: false,
+        messagesOpen: false
+      },
+      computed: {
+        allFiniteResolved() {
+          if (this.freqMatrix.length < 2) {
+            return false;
+          }
+          const finalGen = this.freqMatrix[this.freqMatrix.length - 1] || [];
+          if (this.numPop <= 0) {
+            return finalGen[0] <= 0.0 || finalGen[0] >= 1.0;
+          }
+          for (let i = 1; i <= this.numPop; i += 1) {
+            const value = finalGen[i];
+            if (value > 0.0 && value < 1.0) {
+              return false;
+            }
+          }
+          return true;
+        },
+        continueDisabled() {
+          return this.freqMatrix.length < 2 || this.continueGens < 1 || this.allFiniteResolved;
+        }
+      },
+      methods: {
+        logMessage(msg) {
+          this.messages.push(msg);
+          if (this.messages.length > 10) {
+            this.messages.shift();
+          }
+        },
+        getPopulationGeneticsApi() {
+          const apiRoot = globalThis.evoEduApis && globalThis.evoEduApis.populationGenetics;
+          if (!apiRoot || !apiRoot.alleleTracker) {
+            this.logMessage("Population genetics API module is unavailable.");
+            return null;
+          }
+          return apiRoot.alleleTracker;
+        },
+        runSimulation() {
+          const api = this.getPopulationGeneticsApi();
+          if (!api) {
+            return;
+          }
+          this.logMessage("Starting new simulation...");
+          this.freqMatrix = [];
+          this.totalGensSoFar = 0;
+          this.numFixed = 0;
+          this.numLost = 0;
+          this.sessionSeed = (Date.now() >>> 0);
+          this.rngState = null;
+          if (this.popSize < 1 || this.numPop < 0 || this.genRun < 1) {
+            this.logMessage("Invalid parameters. Aborting run.");
+            return;
+          }
+          const result = api.runLegacySimulation({
+            seed: this.sessionSeed,
+            popSize: this.popSize,
+            numPop: this.numPop,
+            genRun: this.genRun,
+            initFreq: this.initFreq,
+            fitGenAA: this.fitGenAA,
+            fitGenAa: this.fitGenAa,
+            fitGenaa: this.fitGenaa,
+            mutAa: this.mutAa,
+            mutaA: this.mutaA,
+            migRate: this.migRate
+          });
+          this.freqMatrix = result.history;
+          this.totalGensSoFar = result.totalGenerations;
+          this.rngState = result.rngState;
+          this.logMessage(`Completed ${this.genRun} generations.`);
+          this.updateStats();
+          this.plotResults();
+          if (this.allFiniteResolved) {
+            this.logMessage("All finite populations are fixed or lost; Continue is disabled.");
+          }
+        },
+        continueSimulation() {
+          const api = this.getPopulationGeneticsApi();
+          if (!api) {
+            return;
+          }
+          if (this.freqMatrix.length < 2) {
+            this.logMessage("No simulation run yet. Please run a new simulation first.");
+            return;
+          }
+          if (this.allFiniteResolved) {
+            this.logMessage("All finite populations are fixed or lost. Start a new run to explore different settings.");
+            return;
+          }
+          if (this.continueGens < 1) {
+            this.logMessage("Continue generations must be >= 1.");
+            return;
+          }
+          this.logMessage(`Continuing simulation by ${this.continueGens} more generations...`);
+          const result = api.continueLegacySimulation({
+            history: this.freqMatrix,
+            rngState: this.rngState,
+            seed: this.sessionSeed ?? 1,
+            popSize: this.popSize,
+            numPop: this.numPop,
+            initFreq: this.initFreq,
+            fitGenAA: this.fitGenAA,
+            fitGenAa: this.fitGenAa,
+            fitGenaa: this.fitGenaa,
+            mutAa: this.mutAa,
+            mutaA: this.mutaA,
+            migRate: this.migRate,
+            generations: this.continueGens
+          });
+          this.freqMatrix = result.history;
+          this.totalGensSoFar = result.totalGenerations;
+          this.rngState = result.rngState;
+          this.logMessage("Continue run done.");
+          this.updateStats();
+          this.plotResults();
+          if (this.allFiniteResolved) {
+            this.logMessage("All finite populations are fixed or lost; Continue is disabled.");
+          }
+        },
+        updateStats() {
+          const finalGen = this.freqMatrix[this.freqMatrix.length - 1];
+          let fixedCount = 0;
+          let lostCount = 0;
+          const startIndex = this.numPop > 0 ? 1 : 0;
+          for (let i = startIndex; i <= this.numPop; i += 1) {
+            if (finalGen[i] >= 1.0) {
+              fixedCount += 1;
+            } else if (finalGen[i] <= 0.0) {
+              lostCount += 1;
+            }
+          }
+          this.numFixed = fixedCount;
+          this.numLost = lostCount;
+        },
+        plotResults() {
+          if (!this.freqMatrix.length) {
+            return;
+          }
+          const gens = this.freqMatrix.length;
+          const xValues = Array.from({ length: gens }, (_, idx) => idx);
+          const traces = [{
+            x: xValues,
+            y: this.freqMatrix.map((row) => row[0]),
+            mode: "lines",
+            name: "Pop 0",
+            line: { color: "#205a9e", width: 3 }
+          }];
+          for (let j = 1; j <= this.numPop; j += 1) {
+            traces.push({
+              x: xValues,
+              y: this.freqMatrix.map((row) => row[j]),
+              mode: "lines",
+              name: `Pop ${j}`,
+              line: { color: "#9aa6b2", width: 1 }
+            });
+          }
+          Plotly.newPlot("plot", traces, {
+            title: "Allele-frequency change",
+            paper_bgcolor: "#ffffff",
+            plot_bgcolor: "#ffffff",
+            margin: { t: 48, r: 16, b: 56, l: 56 },
+            xaxis: { title: "Generation" },
+            yaxis: { title: "P(A): Allele A Frequency", range: [0, 1] },
+            legend: { orientation: "h", y: -0.2 }
+          }, { responsive: true });
+        },
+        savePlot() {
+          if (this.freqMatrix.length < 2) {
+            this.logMessage("Nothing to save yet.");
+            return;
+          }
+          Plotly.downloadImage("plot", {
+            format: "png",
+            filename: "allele-tracker-plot",
+            height: 720,
+            width: 1080
+          });
+          this.logMessage("Plot saved as PNG.");
+        },
+        currentSettings() {
+          return {
+            popSize: this.popSize,
+            numPop: this.numPop,
+            genRun: this.genRun,
+            initFreq: this.initFreq,
+            fitGenAA: this.fitGenAA,
+            fitGenAa: this.fitGenAa,
+            fitGenaa: this.fitGenaa,
+            mutAa: this.mutAa,
+            mutaA: this.mutaA,
+            migRate: this.migRate,
+            continueGens: this.continueGens
+          };
+        },
+        applySettings(settings) {
+          const numericFields = [
+            "popSize", "numPop", "genRun", "initFreq",
+            "fitGenAA", "fitGenAa", "fitGenaa",
+            "mutAa", "mutaA", "migRate", "continueGens"
+          ];
+          numericFields.forEach((field) => {
+            if (settings[field] !== undefined) {
+              this[field] = Number(settings[field]);
+            }
+          });
+        },
+        saveSettings() {
+          const payload = {
+            app: "allele-tracker",
+            version: 2,
+            savedAt: new Date().toISOString(),
+            settings: this.currentSettings()
+          };
+          const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement("a");
+          link.href = url;
+          link.download = "allele-tracker-settings.json";
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          URL.revokeObjectURL(url);
+          this.logMessage("Settings exported as JSON.");
+        },
+        importSettings(event) {
+          const file = event.target.files && event.target.files[0];
+          if (!file) {
+            return;
+          }
+          this.importingSettings = true;
+          const reader = new FileReader();
+          reader.onload = () => {
+            try {
+              const payload = JSON.parse(reader.result);
+              const settings = payload.settings || payload;
+              this.applySettings(settings);
+              this.logMessage("Settings imported.");
+            } catch (error) {
+              this.logMessage("Could not import the selected settings JSON.");
+            } finally {
+              this.importingSettings = false;
+              event.target.value = "";
+            }
+          };
+          reader.onerror = () => {
+            this.logMessage("Could not read the selected settings file.");
+            this.importingSettings = false;
+            event.target.value = "";
+          };
+          reader.readAsText(file);
+        }
+      },
+      mounted() {
+        this.logMessage("Ready. Start with two drift-only runs using the same settings.");
+      }
+    });
+  </script>
+</body>
+</html>

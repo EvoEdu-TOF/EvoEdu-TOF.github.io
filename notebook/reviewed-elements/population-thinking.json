@@ -1,0 +1,1495 @@
+{
+  "schema": "evo-edu.notebook.reviewed_elements.v1",
+  "generated": "2026-06-30",
+  "concept_id": "notebook.concepts.population-thinking",
+  "items": [
+    {
+      "id": "staged.claim.mayr.population-thinking.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "Population Thinking Replaces Fixed-Type Reasoning",
+      "body": "Mayr's What Evolution Is supports the Notebook distinction between essentialist type-thinking and population thinking: species are variable populations, not fixed classes whose individual differences are irrelevant.",
+      "source_anchors": [
+        {
+          "source_id": "mayr-what-evolution-is-2002",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Resolves a high-value population-thinking source slot and can support future misconception prompts."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/concepts/population-thinking.scaffold.json"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.claim.pianka.populations-have-changing-properties.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "Populations Have Properties Individuals Do Not",
+      "body": "Pianka supports population thinking by distinguishing individual organisms from populations: individuals live or die with fixed genetic makeups, while populations have gene frequencies, birth rates, and death rates that can change over time.",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Good bridge from population thinking into ecology and demographic models."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/concepts/allele-frequency-change.html",
+        "notebook/beginner-route.html"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.claim.wilson.simulation-analytic-model-bridge.001",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "Simulation And Analytic Models Check Different Assumptions",
+      "body": "Wilson supports treating simulations and analytic models as complementary tools: disagreements between them are not just failures, but opportunities to identify which assumptions belong to the population-level model and which belong to the individual-level simulation rules.",
+      "source_anchors": [
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as a modeling-method claim, not as software-practice guidance. The key Notebook value is the assumption-checking relation between population equations and individual simulation rules."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/concepts/genetic-drift.html"
+      ],
+      "source_path_redacted": true,
+      "ingestion_notes": {
+        "source_material": "textbook prose around analytic models, simulations, and predator-prey model comparison",
+        "code_policy": "No source code reused; model-method claim only."
+      }
+    },
+    {
+      "id": "staged.question.futuyma.evolution-progress-value-claim-guardrail.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "When Is Evolution Not A Progress Claim?",
+      "body": "A learner writes, \"Evolution shows that organisms, societies, and human traits naturally progress toward better forms.\" Which parts of that sentence could be tested as biological claims, which parts are progress or value claims, and what evidence would be needed before treating any observed trend as a causal evolutionary pattern?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-25",
+        "notes": "Paraphrased from Futuyma's opening historical and synopsis chapters. Use as a foundational reasoning guardrail before learners interpret trends, causal explanations, or adaptation exercises."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "separate an observed biological pattern from an interpretation that ranks organisms or societies as better or higher",
+          "identify testable biological claims, such as trait-frequency change, differential survival or reproduction, origination, extinction, or directional trends in a measured trait",
+          "explain that local adaptation does not imply universal superiority, inevitable improvement, or an evolutionary goal",
+          "state that a claimed trend needs evidence about mechanism, magnitude, sampling, branching history, environmental context, and alternative explanations",
+          "distinguish causal evolutionary explanation from social, ethical, or policy justification",
+          "describe chance or stochasticity as compatible with causal analysis rather than as permission to infer purpose or progress"
+        ],
+        "coverage_note": "This adds a reviewed population-thinking guardrail for learners before they enter evidence-and-cause exercises, adaptation interpretation, and macroevolution trend claims."
+      },
+      "mathematical_structure": {
+        "kind": "causal-interpretation and trend-evidence check",
+        "formal_statement": "A directional pattern should not be treated as evolutionary progress unless the measured variable, comparison set, causal mechanism, effect magnitude, and null or alternative processes have been specified.",
+        "notation_status": "conceptual guardrail; no source notation normalized",
+        "assumptions": [
+          "observed change and causal attribution are separate claims",
+          "trend descriptions require a measured axis rather than a moral or hierarchical ranking",
+          "selection, drift, constraint, extinction, sampling, and environmental change can all affect observed patterns",
+          "a cause must be capable of producing an effect of the observed direction and magnitude before it is a plausible primary explanation",
+          "biological explanations do not by themselves justify social or ethical prescriptions"
+        ],
+        "biological_interpretation": "The question prevents ladder-of-life, progress, and Social Darwinist readings from being mistaken for empirical evolutionary reasoning."
+      },
+      "question_type": "progress-and-value-claim inference guardrail",
+      "source_context": {
+        "source_section": "Origins of Evolutionary Thought; The Impact of Darwinism; Summary; A Synopsis of Evolutionary Theory; For Discussion and Thought",
+        "textbook_prompt_role": "foundational misconception and causal-inference guardrail",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.futuyma.simple-model-multicausal-guardrail.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "When Is One Model Not Enough?",
+      "body": "A simple model predicts that smaller, more isolated habitat patches should have fewer species because immigration is lower and extinction is higher. A survey finds that pattern, but also finds large exceptions. What should learners check before saying that patch size and isolation caused the whole result, and how should they report the simplifications built into the model?",
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-25",
+        "notes": "Paraphrased from Futuyma's preface and ecological-context chapter. Use as a model-boundary guardrail: simple models can make causal expectations explicit, but learners still need to state assumptions and rival or interacting causes."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/concepts/allele-frequency-change.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "identify the model claim as a rate-based simplification rather than a complete causal explanation",
+          "state the assumptions about source pools, immigration, extinction, area, isolation, and comparable sampling",
+          "ask whether the observed effect size is plausible under the model's specified mechanisms",
+          "look for exceptions that might be explained by succession, habitat heterogeneity, species interactions, local diversification, disturbance, or historical contingency",
+          "explain that interacting causes can produce net effects that differ from adding independent effects one at a time",
+          "report the model's useful scope and its omitted processes before applying it to real-world inference"
+        ],
+        "coverage_note": "This adds a reviewed guardrail for learners entering empirical exercises: simple models are useful because they specify expectations, not because they remove the need to evaluate multiple causes."
+      },
+      "mathematical_structure": {
+        "kind": "model-scope and causal-plausibility check",
+        "formal_statement": "A simplified model can predict a directional pattern, but causal attribution requires checking model assumptions, effect magnitude, alternative mechanisms, and interactions among causes.",
+        "notation_status": "conceptual; island-biogeography rate terms referenced but no source notation normalized here",
+        "assumptions": [
+          "the same richness pattern can be consistent with more than one process",
+          "a model's parameters stand in for simplified biological processes",
+          "unmodeled mechanisms can create residual variation or reverse the expected pattern",
+          "interactions among causes may be nonadditive",
+          "real-world explanation should state which conditions were simplified for the learning exercise"
+        ],
+        "biological_interpretation": "Learners should treat model fit as a starting point for causal inquiry, not as proof that one named process explains every part of the observed phenomenon."
+      },
+      "question_type": "model-boundary and multi-cause inference guardrail",
+      "source_context": {
+        "source_section": "Preface; The Ecological Context of Evolutionary Thought",
+        "textbook_prompt_role": "foundational model-assumption and causal-inference guardrail",
+        "edition_or_volume_year": "1979"
+      }
+    },
+    {
+      "id": "staged.question.huxley.biological-progress-historical-framing.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "When Is Evolutionary Progress A Historical Claim Rather Than A Fact Read Straight From Nature?",
+      "body": "Huxley describes natural selection, biological improvement, and progress as linked parts of the evolutionary process. How should a learner turn that historical progress language into a testable claim with explicit criteria, evidence, and caveats rather than treating it as an automatic value judgment?",
+      "source_anchors": [
+        {
+          "source_id": "huxley-evolution-action-1953",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "huxley-evolution-action-1953",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "huxley-evolution-action-1953",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "huxley-evolution-action-1953",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "huxley-evolution-action-1953",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-26",
+        "notes": "Paraphrased from Huxley's synthesis-era progress framing. Use as a historical reasoning guardrail paired with the Futuyma progress/value-claim item: learners should analyze the criteria and evidence behind progress language before accepting or rejecting it."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "identify the progress claim as a historical explanatory frame, not a direct observation or automatic value judgment",
+          "name the criteria Huxley uses, such as further evolutionary opportunity, efficiency, integration, complexity, and mental capacity",
+          "separate empirical trend claims from evaluative or anthropocentric language",
+          "state that mutation is random with respect to needs while selection can make patterns look designed without foresight",
+          "ask what comparison set, time scale, lineage sample, and evidence type support the proposed trend",
+          "check whether the proposed cause can produce the observed direction and magnitude of change",
+          "name the simplification if a learning exercise treats progress criteria as clean and agreed; real historical and contemporary analyses disagree about criteria and scope"
+        ],
+        "coverage_note": "This adds Huxley as a source-family contrast for progress language: useful historically, but requiring stronger caveats than a contemporary concept definition."
+      },
+      "mathematical_structure": {
+        "kind": "criteria-bound trend inference",
+        "formal_statement": "A progress claim P over lineages L and time interval T is interpretable only after specifying measured criteria C, comparison set S, direction and magnitude of change Delta C, causal mechanism M, and caveats about sampling, extinction, specialization, and value language.",
+        "notation_status": "conceptual historical argument normalized as an evidence-bound trend inference",
+        "assumptions": [
+          "trend criteria are explicitly stated before interpreting evidence",
+          "selection acts on heritable variation and does not imply foresight",
+          "mutation can be random with respect to organismal need while still having causes",
+          "lineage histories include branchings, constraints, specializations, extinctions, and dead ends",
+          "historical source language may mix empirical, rhetorical, and evaluative claims"
+        ],
+        "biological_interpretation": "Learners should translate progress language into testable trend claims and then decide whether the evidence, criteria, and causal mechanism justify the interpretation."
+      },
+      "question_type": "historical progress-language evidence guardrail",
+      "source_context": {
+        "source_section": "How Natural Selection Works and The Path of Biological Progress",
+        "textbook_prompt_role": "modern-synthesis popularization converted into a historical evidence and caveat prompt",
+        "edition_or_volume_year": "1953 local split-PDF scan, parts 003 and 004 OCR"
+      }
+    },
+    {
+      "id": "staged.question.mayr-1982.evolutionary-synthesis-bridge.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "Was The Evolutionary Synthesis Just Genetics Replacing Natural History?",
+      "body": "Mayr describes the evolutionary synthesis as bridge building among research traditions. Why is it misleading to treat the synthesis as genetics simply replacing natural-history biology, and what did population thinking contribute to the shared explanation of evolution?",
+      "source_anchors": [
+        {
+          "source_id": "mayr-growth-biological-thought-1982",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-growth-biological-thought-1982",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-growth-biological-thought-1982",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-growth-biological-thought-1982",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-26",
+        "notes": "Paraphrased from regenerated part 007 text and checked against page images. Keep as synthesis provenance, not a full historical survey."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/overview.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "describe the synthesis as bridge building among fields rather than replacement of one field by another",
+          "identify gene-frequency population genetics and naturalists' population thinking as complementary traditions",
+          "explain that naturalists contributed population thinking, polytypic species, the biological species concept, behavior, change of function, and attention to diversity",
+          "avoid treating mathematical genetics as sufficient by itself for explaining observed evolutionary diversity",
+          "state the simplification: a learning path may present the synthesis as a clean integration, while the historical process involved many actors, partial conversions, and unresolved problems",
+          "connect this provenance to exercises that ask learners to combine allele-frequency reasoning with population structure, species boundaries, ecology, and evidence from natural populations"
+        ],
+        "coverage_note": "This adds provenance for why the foundations-first path combines gene-frequency models with population thinking, species concepts, and evidence from natural populations."
+      },
+      "mathematical_structure": {
+        "kind": "model-context integration",
+        "formal_statement": "Evolutionary explanation requires connecting gene-frequency change within populations to population structure, species boundaries, ecological relations, and historical evidence; no single representation supplies the whole explanatory context.",
+        "notation_status": "qualitative historical source normalized as a learning-path integration rule",
+        "assumptions": [
+          "gene-frequency models are important but not self-sufficient",
+          "natural populations supply structure, diversity, species boundaries, and ecological context",
+          "historical synthesis required concepts from more than one research tradition",
+          "teaching sequences may simplify the synthesis as a coherent framework while still naming that simplification"
+        ],
+        "biological_interpretation": "Population thinking is not optional background for modern evolution; it is part of the conceptual machinery that lets genetic models explain real biological diversity."
+      },
+      "question_type": "historical synthesis guardrail",
+      "source_context": {
+        "source_section": "Diversity and synthesis of evolutionary thought",
+        "textbook_prompt_role": "canonical history argument converted into a learning-path bridge question",
+        "edition_or_volume_year": "1982 local scan, part 007"
+      }
+    },
+    {
+      "id": "staged.question.mayr-1982.population-thinking-essentialism.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "Why Did Population Thinking Matter For Selection?",
+      "body": "Mayr argues that Darwin's shift from typological thinking to population thinking made natural selection intelligible. Why does selection require attention to variable individuals in populations, and why would essentialist type-thinking make that process hard to see?",
+      "source_anchors": [
+        {
+          "source_id": "mayr-growth-biological-thought-1982",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-growth-biological-thought-1982",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-growth-biological-thought-1982",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from local OCR of the 1982 split-PDF scan. Use as historical concept analysis rather than as a duplicate of the existing Mayr 2002 population-thinking definition."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/concepts/natural-selection.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "explain that population thinking treats individual variation as biologically meaningful rather than accidental noise",
+          "connect variable individuals to differential survival and reproduction",
+          "state that selection changes population composition across generations rather than transforming a fixed type",
+          "explain why essentialist thinking treats a species as an idealized type and therefore downplays variation",
+          "recognize natural selection as a statistical population process rather than a guarantee for each individual",
+          "distinguish this historical argument from a simple modern definition of evolution"
+        ],
+        "coverage_note": "This strengthens the population-thinking concept by adding historical provenance for why the conceptual shift mattered."
+      },
+      "mathematical_structure": {
+        "kind": "population-variation selection frame",
+        "formal_statement": "Given a population P with variable individuals i and trait values x_i, selection can alter the distribution of x across generations when reproductive success differs among individuals; a fixed-type model cannot represent this distributional change.",
+        "notation_status": "qualitative historical source normalized as a distributional population model",
+        "assumptions": [
+          "individuals in a population vary",
+          "some variation affects survival or reproduction",
+          "offspring generation composition depends on differential reproductive success",
+          "species are not treated as fixed essences whose variation is irrelevant"
+        ],
+        "biological_interpretation": "Selection becomes intelligible when variation within populations is treated as the material on which differential reproduction acts."
+      },
+      "question_type": "historical concept analysis",
+      "source_context": {
+        "source_section": "Evolution; Population Thinking and the Role of the Individual",
+        "textbook_prompt_role": "history-of-concepts passage converted into a coverage question",
+        "edition_or_volume_year": "1982 local split-PDF scan, part 006 OCR with part 007 summary anchor"
+      }
+    },
+    {
+      "id": "staged.question.mayr-1988.population-mean-type-abstraction.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "Is The Average Organism The Real One?",
+      "body": "A class summarizes a species by its average trait value and then treats individuals that differ from the average as imperfect deviations. What is wrong with that explanation, and how should a learner use the mean without losing the population variation that makes selection possible?",
+      "source_anchors": [
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-25",
+        "notes": "Paraphrased from Mayr's 1988 essays on biological autonomy and natural selection. Use as a population-thinking guardrail that complements the existing Mayr 1982 historical concept-analysis question."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/concepts/natural-selection.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "state that the mean is a useful statistic, not the real species type",
+          "treat individual variation within the population as biological data rather than error around an ideal",
+          "explain that selection acts through differences among real individuals and changes population composition across generations",
+          "distinguish developmental change in one entity from variational evolution across generations",
+          "connect gene-frequency summaries back to organisms, populations, and reproductive outcomes",
+          "report what distribution, variance, sample, and context the average summarizes before using it as evidence"
+        ],
+        "coverage_note": "This adds a Mayr-backed guardrail for learners using averages in empirical exercises: summary statistics are tools for describing variation, not replacements for the variation itself."
+      },
+      "mathematical_structure": {
+        "kind": "population-distribution guardrail",
+        "formal_statement": "For a population with trait values x_i, the mean x_bar summarizes the distribution but does not define an ideal type; evolutionary interpretation requires the distribution, variance, inheritance, and differential reproductive success across individuals.",
+        "notation_status": "conceptual source normalized as a distributional population model",
+        "assumptions": [
+          "individuals in a biological population vary",
+          "a population mean is a statistical abstraction derived from measurements",
+          "selection depends on variation connected to survival or reproduction",
+          "changes across generations are distributional rather than transformations of an ideal type",
+          "gene-frequency summaries should remain linked to phenotypes and reproductive outcomes"
+        ],
+        "biological_interpretation": "Learners should use averages to summarize populations while still treating variation among individuals as the material that makes evolutionary change possible."
+      },
+      "question_type": "population-mean and variation guardrail",
+      "source_context": {
+        "source_section": "Is Biology an Autonomous Science? and Natural Selection",
+        "textbook_prompt_role": "conceptual foundations passage converted into a population-thinking coverage probe",
+        "edition_or_volume_year": "1988 local split-PDF scan, parts 001 and 003 OCR"
+      }
+    },
+    {
+      "id": "staged.question.mayr-1988.reductionism-complex-causation-guardrail.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "When Does Reduction Help, And When Does It Overclaim?",
+      "body": "A learner explains a complex biological pattern by naming one molecular mechanism and says the whole phenomenon has therefore been reduced to chemistry. What would you ask them to check before accepting that explanation, and how should they report any useful simplifications without erasing interacting causes, hierarchy, stochasticity, or population-level evidence?",
+      "source_anchors": [
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "mayr-new-philosophy-biology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-25",
+        "notes": "Paraphrased from Mayr's essays on biological autonomy and cause/effect. Use as a guardrail before learners treat a useful lower-level mechanism as a complete causal explanation of a population or evolutionary pattern."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "separate constitutive reduction, such as identifying components or mechanisms, from a claim that the whole explanation has been reduced",
+          "ask whether the proposed mechanism has the right scale and magnitude to explain the observed pattern",
+          "check whether higher-level interactions, historical context, population structure, or environmental context change the expected outcome",
+          "state which simplifications were imposed for the exercise and which causes were held constant or ignored",
+          "treat stochasticity as compatible with causation but as a reason to use replicate evidence or probabilistic expectations",
+          "avoid replacing population-level evidence with a single lower-level mechanism unless the connection across levels is shown"
+        ],
+        "coverage_note": "This adds a Mayr-backed bridge from source-ingestion guardrails into evidence-workbench reasoning: lower-level mechanisms matter, but biological explanation often requires scale, hierarchy, interaction, stochasticity, and population evidence."
+      },
+      "mathematical_structure": {
+        "kind": "hierarchical causal-explanation guardrail",
+        "formal_statement": "A component mechanism can be part of a causal account, but adequacy of explanation depends on whether the mechanism, operating under stated assumptions, can generate the observed population-level pattern with the required direction, scale, and uncertainty.",
+        "notation_status": "conceptual; no source notation normalized",
+        "assumptions": [
+          "biological systems may require explanation at more than one hierarchical level",
+          "component-level causes can be real without being sufficient as a full explanation",
+          "interactions among causes may be nonadditive",
+          "stochastic processes can make outcomes statistically rather than exactly predictive",
+          "simplified exercises should explicitly state what has been held fixed"
+        ],
+        "biological_interpretation": "Learners should use simplification as an explicit modeling move, not as permission to ignore the causal levels and interactions needed to explain the phenomenon."
+      },
+      "question_type": "reductionism and complex-causation guardrail",
+      "source_context": {
+        "source_section": "Is Biology an Autonomous Science? and Cause and Effect in Biology",
+        "textbook_prompt_role": "conceptual foundations passage converted into a model-and-causal-explanation coverage probe",
+        "edition_or_volume_year": "1988 local split-PDF scan, parts 001 and 002 OCR"
+      }
+    },
+    {
+      "id": "staged.question.pianka.cohort-segment-population-measurement.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "Which Population Snapshot Answers The Question?",
+      "body": "A field team has one census of all individuals alive this year and a separate record following one birth cohort through time. Which questions can each dataset answer about survival, reproduction, and population growth, and what would be lost if the two sampling designs were treated as interchangeable?",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Pianka's population-biology chapter. Use as a population-thinking measurement-design prompt rather than a full life-table exercise."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "identify a segment census as a snapshot of individuals alive at a given time",
+          "identify a cohort record as following individuals born in the same interval through time",
+          "use cohort data to estimate survivorship and age-specific mortality",
+          "connect survival and reproduction schedules to net reproductive rate R0",
+          "distinguish per-capita growth rate r from raw change in count",
+          "state why age structure can change interpretation of population growth"
+        ],
+        "coverage_note": "This adds a reviewed population-thinking bridge from individual counts to life-table and growth-rate inference."
+      },
+      "mathematical_structure": {
+        "kind": "life-table measurement framework",
+        "formal_statement": "Population growth inference depends on the sampling frame: cohort data support survivorship and age-specific schedules, while segment data describe the standing age structure at a time.",
+        "notation_status": "normalized from source prose",
+        "assumptions": [
+          "age classes or birth cohorts can be identified",
+          "birth and death schedules are measured consistently",
+          "closed-population growth can be summarized with r = b - d",
+          "open-population growth must include immigration and emigration",
+          "R0 comparisons require specifying the life-table interval and population context"
+        ],
+        "biological_interpretation": "Population-level properties such as age structure, survivorship, birth rate, death rate, R0, and r cannot be inferred from individual observations without the right sampling design."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "R0",
+          "notebook_symbol": "R0",
+          "meaning": "net reproductive rate or replacement rate across a life table"
+        },
+        {
+          "source_symbol": "r",
+          "notebook_symbol": "r",
+          "meaning": "intrinsic per-capita rate of increase"
+        },
+        {
+          "source_symbol": "b, d",
+          "notebook_symbol": "b, d",
+          "meaning": "instantaneous per-capita birth and death rates"
+        }
+      ],
+      "question_type": "measurement design",
+      "source_context": {
+        "source_section": "Population characteristics; Life tables; Net reproductive rate and intrinsic rate of increase",
+        "textbook_prompt_role": "source-mined population-measurement probe",
+        "edition_or_volume_year": "1988"
+      }
+    },
+    {
+      "id": "staged.question.pianka.guild-structure-indirect-interactions.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "How Could Guild Structure Reduce Diffuse Competition?",
+      "body": "A community contains several clusters of species that use similar resources within each cluster, but the clusters are separated along resource axes. What evidence would support calling these clusters guilds, and why would it be too strong to claim that guild structure proves competition unless indirect interactions, design constraints, and natural gaps in resource space have also been considered?",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-24",
+        "notes": "Paraphrased from Pianka's community structure chapter. Keep as an inference-boundary item: guild structure can be a useful macrodescriptor, but it should not be treated as automatic evidence for one causal process."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "define a guild as a cluster of functionally similar species using similar resources",
+          "ask which niche dimensions separate species and whether spacing in resource space is nonrandom",
+          "explain that guild structure could reduce diffuse competition if clusters partition resource space",
+          "recognize that indirect interactions can reverse or modify direct pairwise effects",
+          "consider alternative causes such as consumer design constraints or natural gaps in resource distributions",
+          "treat community descriptors as simplifying tools that can also constrain interpretation"
+        ],
+        "coverage_note": "This adds community-structure and niche-overlap reasoning without duplicating the earlier Lotka-Volterra competition item."
+      },
+      "mathematical_structure": {
+        "kind": "community macrodescriptor inference",
+        "formal_statement": "Evidence for guild structure compares observed species positions in multidimensional resource space with a null expectation, while causal interpretation requires separating direct competition, indirect effects, constraints, and resource availability.",
+        "notation_status": "qualitative source passage normalized as an inference checklist",
+        "assumptions": [
+          "resource axes or niche dimensions are defined before measuring clusters",
+          "species positions in resource space can be compared with a null model",
+          "direct pairwise effects and net community effects may differ",
+          "functional similarity is distinguished from shared ancestry or shared constraint",
+          "community boundaries are treated as open and localized rather than perfectly closed"
+        ],
+        "biological_interpretation": "Community-level patterns are strongest when macrodescriptors preserve the relevant population-level processes without smuggling in a causal explanation."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "guild",
+          "notebook_symbol": "functionalCluster",
+          "meaning": "group of species similar in resource use or ecological role"
+        },
+        {
+          "source_symbol": "niche/resource space",
+          "notebook_symbol": "resourceSpace",
+          "meaning": "multidimensional axes along which species use resources or differ ecologically"
+        },
+        {
+          "source_symbol": "diffuse competition",
+          "notebook_symbol": "distributedCompetitivePressure",
+          "meaning": "competition spread across multiple species rather than a single pairwise interaction"
+        }
+      ],
+      "question_type": "community-structure inference guardrail",
+      "source_context": {
+        "source_section": "Community Structure; Systems and Macrodescriptors",
+        "textbook_prompt_role": "source-mined niche overlap and guild-structure coverage probe",
+        "edition_or_volume_year": "1988 fourth edition"
+      }
+    },
+    {
+      "id": "staged.question.pianka.island-biogeography-dynamic-equilibrium.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "Why Can Island Richness Be Stable While Species Turn Over?",
+      "body": "An island has about the same number of species when surveyed every decade, but many of the species names change between surveys. How can the equilibrium theory of island biogeography explain stable richness with changing composition, and what would distance from source areas and island size change in the model?",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Pianka's island biogeography chapter. Keep the item model-focused: equilibrium is equality of rates, not absence of colonization or extinction."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "state that richness can be stable when total immigration rate equals total extinction rate",
+          "explain that turnover means colonizing species can replace different species that go extinct",
+          "describe immigration rate as falling as more source-pool species are already present",
+          "describe extinction rate as rising as more species share limited island resources and average population sizes decline",
+          "predict that greater distance lowers immigration and that smaller island area raises extinction risk"
+        ],
+        "coverage_note": "This extends the species-area math item by adding dynamic equilibrium and turnover reasoning."
+      },
+      "mathematical_structure": {
+        "kind": "rate-balance equilibrium model",
+        "formal_statement": "At equilibrium, total immigration rate I(S) equals total extinction rate E(S), so dS/dt = I(S) - E(S) = 0 even though species identities may change through turnover.",
+        "notation_status": "normalized from source equations and prose",
+        "assumptions": [
+          "a regional source pool supplies potential colonists",
+          "immigration of new species decreases as island species richness approaches the source pool",
+          "extinction of resident species increases with island species richness",
+          "distance mainly affects colonization rate, while island size mainly affects extinction risk"
+        ],
+        "biological_interpretation": "A community-level count can look stable while the membership of that community remains historically dynamic."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "S",
+          "notebook_symbol": "speciesRichness",
+          "meaning": "number of species present on the island"
+        },
+        {
+          "source_symbol": "P",
+          "notebook_symbol": "sourcePoolSize",
+          "meaning": "number of species available in surrounding source areas"
+        },
+        {
+          "source_symbol": "lambda, mu",
+          "notebook_symbol": "immigrationRate, extinctionRate",
+          "meaning": "rates that determine turnover and equilibrium richness"
+        }
+      ],
+      "question_type": "model interpretation",
+      "source_context": {
+        "source_section": "Island Biogeography; Equilibrium Theory",
+        "textbook_prompt_role": "model-building passage converted into a coverage question",
+        "edition_or_volume_year": "1988 fourth edition"
+      }
+    },
+    {
+      "id": "staged.question.pianka.lotka-volterra-competition-coexistence.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "When Can Two Competitors Coexist?",
+      "body": "Two species compete for limiting resources. In one model, each species depresses its own growth more strongly than it depresses the other species; in another, each species has a stronger effect on the other than on itself. Which case can produce stable coexistence in the Lotka-Volterra competition model, and why does the model treat coexistence as a condition on interaction strengths rather than just on total population size?",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-24",
+        "notes": "Paraphrased from Pianka's competition chapter. Keep the item as a model-interpretation probe: the learner should read competition coefficients as assumptions about how each species changes the other's growth, not as direct field measurements by themselves."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "identify competition as a negative interaction mediated by limiting resources, interference, or space preemption",
+          "explain that Lotka-Volterra competition adds interspecific inhibition terms to logistic population growth",
+          "interpret competition coefficients as per-individual effects of one species on the other's growth",
+          "state that stable coexistence is possible when each species limits itself more strongly than it limits the other species, after carrying-capacity differences are accounted for",
+          "contrast stable coexistence with priority-effect or exclusion cases where interspecific effects are too strong",
+          "avoid inferring coexistence from high or low census size alone without the interaction-strength assumptions"
+        ],
+        "coverage_note": "This adds a competition-math bridge between population growth models and ecological coexistence reasoning."
+      },
+      "mathematical_structure": {
+        "kind": "two-species competition model",
+        "formal_statement": "In the two-species Lotka-Volterra competition model, stable coexistence requires the isoclines to cross so that each species has a stronger limiting effect on itself than on the competing species, with carrying-capacity ratios and competition coefficients jointly determining the outcome.",
+        "notation_status": "normalized from source equations and prose",
+        "assumptions": [
+          "each species follows logistic growth in the absence of the other",
+          "competition coefficients summarize per-individual inhibitory effects between species",
+          "carrying capacities are defined for each species in the absence of interspecific competition",
+          "resource conditions and interaction strengths are treated as constant over the comparison",
+          "the model is a simplified equilibrium framework and does not by itself prove the field mechanism"
+        ],
+        "biological_interpretation": "Stable coexistence is strongest when niche or resource differences make intraspecific limitation exceed interspecific limitation."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "N1, N2",
+          "notebook_symbol": "species1Count, species2Count",
+          "meaning": "population sizes of the two competing species"
+        },
+        {
+          "source_symbol": "K1, K2",
+          "notebook_symbol": "carryingCapacity1, carryingCapacity2",
+          "meaning": "single-species carrying capacities in the absence of the competitor"
+        },
+        {
+          "source_symbol": "alpha12, alpha21",
+          "notebook_symbol": "effectOf2On1, effectOf1On2",
+          "meaning": "competition coefficients describing interspecific inhibition"
+        }
+      ],
+      "question_type": "model interpretation",
+      "source_context": {
+        "source_section": "Competition; Lotka-Volterra Competition Equations",
+        "textbook_prompt_role": "source-mined competition-model coverage probe",
+        "edition_or_volume_year": "1988 fourth edition"
+      }
+    },
+    {
+      "id": "staged.question.pianka.open-closed-population-growth-rate.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "What Counts In A Population Growth Rate?",
+      "body": "A population is increasing in census size. What additional information would you need to decide whether its per-capita growth rate reflects births and deaths in a closed population, or births, deaths, immigration, and emigration in an open population?",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Pianka's demography chapter. Use to separate population-growth accounting from raw census change."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "distinguish raw change in N from per-capita growth rate",
+          "state that a closed population can be summarized by r = b - d",
+          "state that an open population must also account for immigration and emigration",
+          "interpret positive r as increase and negative r as decrease under the stated accounting frame",
+          "recognize that constant per-capita r implies exponential rather than linear growth",
+          "ask whether population boundaries and movement are being measured"
+        ],
+        "coverage_note": "This adds a reviewed demography bridge from census change to population-level process accounting."
+      },
+      "mathematical_structure": {
+        "kind": "population-growth accounting model",
+        "formal_statement": "For a closed population, r = b - d and dN/dt = rN under exponential growth. For an open population, growth accounting must include immigration and emigration as well as births and deaths.",
+        "notation_status": "normalized from source equations and prose",
+        "assumptions": [
+          "population boundary is specified",
+          "birth and death rates are measured per individual per unit time",
+          "movement across the population boundary is measured or ruled out",
+          "constant r is an exponential-growth assumption rather than a default property of all populations"
+        ],
+        "biological_interpretation": "Population thinking requires asking which processes change population size, not merely observing that the number of individuals changed."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "N",
+          "notebook_symbol": "N",
+          "meaning": "population size"
+        },
+        {
+          "source_symbol": "b",
+          "notebook_symbol": "birthRate",
+          "meaning": "instantaneous per-capita birth rate"
+        },
+        {
+          "source_symbol": "d",
+          "notebook_symbol": "deathRate",
+          "meaning": "instantaneous per-capita death rate"
+        },
+        {
+          "source_symbol": "r",
+          "notebook_symbol": "r",
+          "meaning": "intrinsic per-capita rate of increase"
+        },
+        {
+          "source_symbol": "dN/dt",
+          "notebook_symbol": "dN/dt",
+          "meaning": "instantaneous rate of change in population size"
+        }
+      ],
+      "question_type": "measurement design",
+      "source_context": {
+        "source_section": "Demography; Intrinsic Rate of Natural Increase",
+        "textbook_prompt_role": "source-mined population-growth accounting probe",
+        "edition_or_volume_year": "1988"
+      }
+    },
+    {
+      "id": "staged.question.pianka.predation-frequency-dependent-diversity.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "When Can Predation Promote Prey Diversity?",
+      "body": "A field site contains several competing prey species. After a predator is removed, one prey species becomes dominant and several rarer prey decline. What evidence would support the explanation that predation had been maintaining prey diversity, and why would it be too simple to say that predation always reduces prey populations or always stabilizes communities?",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-24",
+        "notes": "Paraphrased from Pianka's community ecology and species-diversity passages. Keep the item focused on inference: predation can maintain diversity through density- or frequency-dependent removal, but the claim needs removal or comparison evidence and must be separated from disturbance, resource mosaics, dispersal, and other mechanisms."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "identify predation as a biotic interaction that can change prey population growth and competitive outcomes",
+          "explain that predators can reduce competition among prey by selectively or randomly removing individuals",
+          "state that frequency-dependent predation can favor rare prey if predators concentrate on abundant prey types",
+          "ask for predator-removal, predator-exclusion, spatial comparison, or recruitment evidence before inferring causation",
+          "distinguish predation from other diversity mechanisms such as disturbance, resource mosaics, circular competition, and dispersal",
+          "avoid treating predator effects as universally stabilizing because predator-prey dynamics depend on response curves, time lags, prey refuges, diet shifts, and community context"
+        ],
+        "coverage_note": "This adds a reviewed predation-diversity probe to population-thinking coverage and connects community diversity claims to evidence and mechanism."
+      },
+      "mathematical_structure": {
+        "kind": "frequency-dependent predation and coexistence inference",
+        "formal_statement": "Predation can promote coexistence when predator impact increases on relatively common prey or suppresses competitively dominant prey enough to prevent exclusion, but the outcome depends on predator response functions, prey refuges, density context, and indirect effects.",
+        "notation_status": "qualitative source passage normalized as an interaction-response model",
+        "assumptions": [
+          "prey species compete strongly enough that predator removal can change competitive outcomes",
+          "predator diet or attack rate can vary with prey abundance or prey identity",
+          "rare prey have refuges, lower encounter rates, or lower predator preference relative to common prey",
+          "predator and prey responses may include time lags and indirect effects",
+          "alternative diversity mechanisms are measured or ruled out before assigning causation"
+        ],
+        "biological_interpretation": "Predation should be treated as a conditional population-level mechanism, not as a blanket statement that predators either simply lower prey abundance or automatically stabilize communities."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "frequency-dependent predation",
+          "notebook_symbol": "preyFrequencyDependentAttack",
+          "meaning": "predator impact changes with the relative abundance of prey types"
+        },
+        {
+          "source_symbol": "functional response",
+          "notebook_symbol": "predatorConsumptionResponse",
+          "meaning": "change in prey consumed per predator as prey density changes"
+        },
+        {
+          "source_symbol": "numerical response",
+          "notebook_symbol": "predatorAbundanceResponse",
+          "meaning": "change in predator abundance or reproduction as prey availability changes"
+        }
+      ],
+      "question_type": "predation-diversity inference guardrail",
+      "source_context": {
+        "source_section": "Systems Ecology; Community Species Diversity; Species Diversity; Community Evolution",
+        "textbook_prompt_role": "source-mined predation and diversity coverage probe",
+        "edition_or_volume_year": "1988 fourth edition"
+      }
+    },
+    {
+      "id": "staged.question.pianka.species-area-power-law-interpretation.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "Reading A Species-Area Curve",
+      "body": "An island taxon follows a species-area relationship in which species richness rises approximately linearly on a log-log plot of species number against island area. What do the parameters in the power-law model represent, and what does a larger slope imply biologically?",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-21",
+        "notes": "Paraphrased from Pianka's fourth-edition island species-area discussion. Use as a math-aware ecology probe for interpreting model form, log transform, and biological meaning."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "state that S is species number or richness and A is island area",
+          "state that C is a taxon/system-specific constant rather than a universal biological law",
+          "state that z is the slope on a log-log species-area plot",
+          "connect a larger z to stronger spatial replacement, habitat/topographic diversity, or island-within-island structure",
+          "explain that the model describes a pattern to interpret, not a guarantee that area alone causes richness",
+          "avoid comparing z values without considering taxa, geography, sampling, and habitat heterogeneity"
+        ],
+        "coverage_note": "This adds a reviewed quantitative ecology probe with explicit equation provenance."
+      },
+      "mathematical_structure": {
+        "kind": "power-law model and log-linear transform",
+        "formal_statement": "S = C A^z; taking logarithms gives log(S) = log(C) + z log(A), so z is the log-log slope of species richness against area.",
+        "notation_status": "normalized from OCR; source line renders the exponent with OCR ambiguity",
+        "assumptions": [
+          "species richness is measured consistently for the same taxon or comparable taxa",
+          "island area is measured on the same scale across observations",
+          "logarithm base does not change the fitted slope if used consistently",
+          "habitat diversity, isolation, and sampling can modify interpretation"
+        ],
+        "biological_interpretation": "The species-area exponent summarizes how rapidly richness increases with area and can reflect spatial replacement or habitat heterogeneity."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "S",
+          "notebook_symbol": "speciesRichness",
+          "meaning": "number of species in the focal taxon or system"
+        },
+        {
+          "source_symbol": "A",
+          "notebook_symbol": "area",
+          "meaning": "island or sampled area"
+        },
+        {
+          "source_symbol": "C",
+          "notebook_symbol": "systemConstant",
+          "meaning": "taxon- and place-specific fitted constant"
+        },
+        {
+          "source_symbol": "z",
+          "notebook_symbol": "speciesAreaSlope",
+          "meaning": "exponent in the power law and slope on a log-log plot"
+        }
+      ],
+      "question_type": "worked quantitative interpretation",
+      "source_context": {
+        "source_section": "Species-Area Relationships",
+        "textbook_prompt_role": "source-mined quantitative interpretation question",
+        "edition_or_volume_year": "1988 fourth edition"
+      }
+    },
+    {
+      "id": "staged.question.pianka.species-saturation-habitat-structure.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "What Would Show That A Community Is Species-Saturated?",
+      "body": "Two forest habitats have similar numbers of plant species, but one has foliage spread across several vertical layers while the other is mostly a single layer. Bird species richness is higher in the vertically layered habitat. How could this pattern support a species-saturation argument, and what evidence would keep you from concluding that plant species count alone controls bird diversity?",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-24",
+        "notes": "Paraphrased from Pianka's community ecology chapter. Keep the item focused on inference: species saturation is a hypothesis about invasion, replacement, and niche space, while bird diversity in these passages is tied to foliage structure more than plant species identity."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/concepts/adaptation.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "distinguish saturation with individual biomass or energy use from saturation with species",
+          "state that a species-saturated community would resist invasion unless the newcomer replaces an existing species",
+          "use foliage-height diversity as evidence that habitat structure can define available bird niche space",
+          "explain why plant species count alone is insufficient if bird richness tracks vegetation structure rather than plant identity",
+          "recognize that local point diversity and regional horizontal turnover can differ",
+          "define species diversity as depending on both number of species and equality of relative importance"
+        ],
+        "coverage_note": "This extends Pianka ecology coverage from island richness and competition into community structure and diversity inference."
+      },
+      "mathematical_structure": {
+        "kind": "diversity and saturation inference model",
+        "formal_statement": "Evidence for species saturation asks whether added species can persist without replacement, while species diversity combines richness with the evenness or relative importance of community members.",
+        "notation_status": "qualitative source passage normalized as an inference checklist",
+        "assumptions": [
+          "community boundaries and habitat layers are specified",
+          "richness is separated from relative abundance or importance",
+          "the potential invading species belongs to the same relevant guild or niche space",
+          "habitat structure is measured independently of species richness",
+          "local point diversity is not treated as identical to regional turnover"
+        ],
+        "biological_interpretation": "Community diversity is not just a count of species; it depends on resource space, habitat structure, relative abundances, and whether new species can enter without replacing residents."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "species density",
+          "notebook_symbol": "speciesRichness",
+          "meaning": "number of species in the specified community or habitat unit"
+        },
+        {
+          "source_symbol": "relative importance",
+          "notebook_symbol": "relativeAbundanceOrImportance",
+          "meaning": "how evenly individuals, biomass, or ecological importance are distributed among species"
+        },
+        {
+          "source_symbol": "foliage height diversity",
+          "notebook_symbol": "verticalHabitatStructure",
+          "meaning": "variation in foliage distribution across vertical habitat layers"
+        }
+      ],
+      "question_type": "community-structure inference",
+      "source_context": {
+        "source_section": "Community Ecology; Saturation with Individuals and with Species; Species Diversity",
+        "textbook_prompt_role": "source-mined diversity and community-structure coverage probe",
+        "edition_or_volume_year": "1988 fourth edition"
+      }
+    },
+    {
+      "id": "staged.question.population-thinking.individual-vs-population-change.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "Is This Individual Change Or Population Change?",
+      "body": "A student says an individual organism evolved because it changed during its lifetime. What would you ask them to measure across generations to decide whether evolution occurred?",
+      "source_anchors": [
+        {
+          "source_id": "dobzhansky-ayala-stebbins-valentine-evolution-1977",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Suitable as a Didactopus check that connects population thinking to allele-frequency change."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/concepts/allele-frequency-change.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true
+    },
+    {
+      "id": "staged.question.williams.high-fecundity-nonmarkovian-populations.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "When Does Parent Stock Stop Predicting Recruitment?",
+      "body": "Williams argues that some very high-fecundity populations are not well described by models where the next generation is mostly predicted from the previous generation's size. What evidence or assumptions would justify treating a population as non-Markovian in this sense, and what mistakes follow if it is modeled like a low-fecundity population?",
+      "source_anchors": [
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "williams-sex-evolution-1975",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-22",
+        "notes": "Paraphrased from Williams's high-fecundity theory chapter. Use as a population-thinking/model-assumption probe, not as a blanket claim that all prolific organisms ignore parent stock size."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/concepts/natural-selection.html",
+        "notebook/learning-paths/foundations-first-ring.didactopus.json"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "define the population boundary, generation interval, and recruitment measure",
+          "distinguish low-fecundity cases where next-generation size is strongly conditioned on current adult numbers from high-fecundity cases where habitat suitability and density-dependent filtering can dominate",
+          "look for weak, absent, or negative stock-recruitment relationships despite enormous zygote production",
+          "state that high juvenile mortality can still be genetically selective rather than automatically random",
+          "explain why adding young or reducing zygote production may have different effects in low- versus high-fecundity systems",
+          "avoid treating non-Markovian recruitment as universal; require evidence about fecundity, habitat capacity, density dependence, and survival filtering"
+        ],
+        "coverage_note": "This adds a Williams 1975 bridge from sex-and-selection models to population-thinking assumptions about recruitment, habitat filtering, and fecundity."
+      },
+      "mathematical_structure": {
+        "kind": "stock-recruitment model-assumption contrast",
+        "formal_statement": "A low-fecundity Markovian model treats N(t+1) as strongly conditioned on N(t); a high-fecundity non-Markovian model treats recruitment R(t+1) as dominated by current habitat suitability, density-dependent filtering, and survival selection when propagule output greatly exceeds adult capacity.",
+        "notation_status": "normalized from source prose",
+        "assumptions": [
+          "fecundity is high enough that propagule production greatly exceeds adult habitat capacity",
+          "juvenile mortality or recruitment filtering is strong",
+          "habitat suitability can vary enough to erase much of the signal from parent stock size",
+          "stock-recruitment data are available or explicitly absent",
+          "the model does not assume juvenile deaths are nonselective without evidence"
+        ],
+        "biological_interpretation": "Population-level inference depends on whether reproduction or post-reproductive filtering is the limiting step; high fecundity can make habitat filtering and selective survival more important than the number of parents."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "N(t)",
+          "notebook_symbol": "N(t)",
+          "meaning": "population size in the current generation or census interval"
+        },
+        {
+          "source_symbol": "N(t+1)",
+          "notebook_symbol": "N(t+1)",
+          "meaning": "population size in the next generation or census interval"
+        },
+        {
+          "source_symbol": "recruitment",
+          "notebook_symbol": "R",
+          "meaning": "number of offspring surviving to the counted or reproducing stage"
+        }
+      ],
+      "question_type": "model assumption check",
+      "source_context": {
+        "source_section": "Chapter 6, Natural Selection in High-fecundity Populations: Theory",
+        "textbook_prompt_role": "canonical source model converted into a population-thinking coverage question",
+        "edition_or_volume_year": "1975 monograph; local scan of third printing with corrections, 1977"
+      }
+    },
+    {
+      "id": "staged.question.wilson.logistic-birth-death-model-comparison.001",
+      "kind": "question",
+      "concept_id": "notebook.concepts.population-thinking",
+      "title": "Discrete, Continuous, And Stochastic Population Models",
+      "body": "When a population model is written in discrete-time, continuous-time, and stochastic simulation forms, what differences should a learner check before deciding that the models are describing the same biological process?",
+      "source_anchors": [
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        },
+        {
+          "source_id": "wilson-simulating-ecological-evolutionary-systems-2000",
+          "locator_redacted": true,
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Paraphrased from Wilson exercises and analytic stochastic birth-death discussion comparing discrete, continuous, deterministic, and stochastic formulations. Good coverage probe for model assumptions."
+      },
+      "promotion_targets": [
+        "notebook/concepts/population-thinking.html",
+        "notebook/concepts/genetic-drift.html"
+      ],
+      "source_path_redacted": true,
+      "coverage_probe": {
+        "status": "reviewed",
+        "expected_answer_path": [
+          "identify the time-step or event-rate assumptions",
+          "check whether population counts can go below zero or hit absorbing states",
+          "compare deterministic expectations with replicate stochastic summaries",
+          "explain why smaller time steps may improve or fail to improve agreement"
+        ],
+        "coverage_note": "This extends population-thinking coverage from definitions into model-form comparison."
+      },
+      "mathematical_structure": {
+        "kind": "model-form comparison",
+        "formal_statement": "Compare discrete-time, continuous-time, deterministic, and stochastic formulations of a population growth process by tracking whether the expected change, variance, boundary behavior, and averaging procedure are preserved.",
+        "notation_status": "normalized from source equations and OCR",
+        "assumptions": [
+          "population size is nonnegative",
+          "time step or event-rate assumptions are explicit",
+          "stochastic summaries require replicate runs",
+          "deterministic equations describe expected dynamics or limiting behavior",
+          "a single realization of a stochastic process should not be treated as an ensemble average",
+          "different birth and death functions can share a deterministic logistic form while producing different stochastic means and variances"
+        ],
+        "biological_interpretation": "Different mathematical forms can encode different biological assumptions even when they are intended to represent the same process."
+      },
+      "notation_mapping": [
+        {
+          "source_symbol": "N(t)",
+          "notebook_symbol": "N(t)",
+          "meaning": "population size at time t"
+        },
+        {
+          "source_symbol": "B(N)",
+          "notebook_symbol": "birthRate(N)",
+          "meaning": "birth event function or total birth rate at population size N"
+        },
+        {
+          "source_symbol": "D(N)",
+          "notebook_symbol": "deathRate(N)",
+          "meaning": "death event function or total death rate at population size N"
+        },
+        {
+          "source_symbol": "Delta Z",
+          "notebook_symbol": "stochasticIncrement",
+          "meaning": "zero-mean stochastic contribution to population change over Delta t"
+        },
+        {
+          "source_symbol": "V(N)",
+          "notebook_symbol": "varianceN",
+          "meaning": "variance in population size across the stochastic ensemble"
+        },
+        {
+          "source_symbol": "M",
+          "notebook_symbol": "replicateCount",
+          "meaning": "number of stochastic runs averaged in simulation output"
+        }
+      ],
+      "proof_or_derivation": {
+        "status": "reviewed",
+        "derivation_outline": [
+          "Define the population state N(t), birth function B(N), death function D(N), and finite interval Delta t.",
+          "Write the stochastic update N(t + Delta t) = N(t) + [B(N) - D(N)] Delta t + Delta Z, where Delta Z is the zero-mean stochastic contribution.",
+          "Take an ensemble average at equilibrium to obtain the condition E[B(N)] = E[D(N)].",
+          "Use second-order birth and death functions to show that stochastic variance lowers the expected mean relative to the deterministic equilibrium when variance is nonzero.",
+          "Compute the variance contribution from possible +1 birth, -1 death, and 0 no-event outcomes over a short interval.",
+          "Compare simulation means and variances across repeated runs with the analytic expectations rather than with a single stochastic trajectory."
+        ],
+        "notebook_boundary": [
+          "Keep the derivation as a model-assumption scaffold rather than a full reproduction of Wilson's algebra.",
+          "Use clean-room JavaScript if this becomes an app activity; do not port the C implementation.",
+          "Require learners to state whether they are comparing a realization, an ensemble average, a deterministic limit, or a continuous approximation."
+        ],
+        "resolved_previous_gap": "The sidecar now includes a reviewed derivation path for equations connecting stochastic updates, deterministic expected change, and variance effects."
+      },
+      "question_type": "worked quantitative problem",
+      "source_context": {
+        "source_section": "Exercises",
+        "textbook_prompt_role": "end-of-chapter model-comparison exercise",
+        "edition_or_volume_year": "2000"
+      }
+    }
+  ],
+  "summary": {
+    "reviewed_total": 21,
+    "claims": 3,
+    "examples": 0,
+    "questions": 18
+  }
+}

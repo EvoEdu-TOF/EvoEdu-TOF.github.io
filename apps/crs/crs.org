@@ -1,0 +1,855 @@
+#+TITLE: Climate Range Shifter Web App
+#+AUTHOR: Evo-Edu.org Team
+#+DATE: 2025-07-21
+#+OPTIONS: toc:nil num:nil
+
+* Introduction
+This Org document contains the source structure for the Climate Range Shifter web app and its associated pages. It includes HTML content for the launch page, web app interface, instructions, exercises, curriculum alignment, and basic CSS and JavaScript.
+
+* Files and Structure
+- =launch.html= :: App launch page with navigation and cards.
+- =webapp.html= :: The main interactive application.
+- =instructions.html= :: Usage instructions and exercises for teachers and students.
+- =alignment.html= :: Curriculum alignment with educational standards.
+- =style.css= :: CSS for shared styling.
+- =app.js= :: JavaScript logic for the web app.
+- =Makefile= :: Automates tangling and building files.
+
+* Usage Instructions for the Makefile
+To build and deploy the web app files from this Org document:
+1. Ensure you have Emacs with Org-mode and Babel enabled.
+2. Save this file as =climate-range-shifter.org=.
+3. Run `make tangle` to generate all HTML, CSS, and JS files.
+4. Run `make install` to copy all generated files into the =dist= directory.
+5. Open `dist/launch.html` in your browser to view the app.
+6. Use `make clean` to remove the =dist= folder.
+
+* HTML Code
+** App Launch Page (launch.html)
+#+BEGIN_SRC html :tangle launch.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Climate Range Shifter - Evo-Edu.org</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="https://evo-edu.org">Evo-Edu.org</a>
+      <a href="#help">Help</a>
+    </nav>
+  </header>
+  <main>
+    <section class="card">
+      <h2>Launch Climate Range Shifter</h2>
+      <a href="webapp.html" class="button">Launch App</a>
+    </section>
+    <section class="card">
+      <h2>Instructions & Exercises</h2>
+      <a href="instructions.html" class="button">View Instructions</a>
+    </section>
+    <section class="card">
+      <h2>Curriculum Alignment</h2>
+      <a href="alignment.html" class="button">View Alignment</a>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Evo-Edu.org</p>
+  </footer>
+</body>
+</html>
+#+END_SRC
+
+** Web App Page (webapp.html)
+#+BEGIN_SRC html :tangle webapp.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Climate Range Shifter</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="https://evo-edu.org">Evo-Edu.org</a>
+      <a href="#help">Help</a>
+    </nav>
+  </header>
+  <main>
+    <dialog open>
+      <h2>Welcome to the Climate Range Shifter</h2>
+      <p>This app lets you explore how species track climate zones over time.</p>
+    </dialog>
+    <section id="app-form">
+      <!-- Controls and inputs will go here -->
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Evo-Edu.org</p>
+  </footer>
+</body>
+</html>
+#+END_SRC
+
+** Instructions & Exercises Page (instructions.html)
+#+BEGIN_SRC html :tangle instructions.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instructions - Climate Range Shifter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="https://evo-edu.org">Evo-Edu.org</a>
+      <a href="#help">Help</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Instructions & Exercises</h1>
+    <section>
+      <h2>Usage Instructions</h2>
+      <p>Detailed documentation for each control, button behavior, input parameters, output expectations, and processing time estimates.</p>
+    </section>
+    <section>
+      <h2>Exercises</h2>
+      <article>
+        <h3>Exercise 1: Predicting Range Shifts</h3>
+        <p><strong>Purpose:</strong> Understand how species respond to climate zone changes.</p>
+        <ul>
+          <li><strong>Methods:</strong> Use the time slider and temperature shift toggle</li>
+          <li><strong>Data Gathering:</strong> Note latitudinal/longitudinal species positions over time</li>
+          <li><strong>Data Analysis:</strong> Plot range centroids over time</li>
+          <li><strong>Visualization:</strong> Use built-in map export</li>
+          <li><strong>Conclusion:</strong> Determine thresholds for extinction or adaptation</li>
+        </ul>
+      </article>
+    </section>
+    <section>
+      <h2>Suggestions for Further Research</h2>
+      <p>Explore interspecies interactions, altitude vs latitude migration, and dispersal limits.</p>
+    </section>
+    <section>
+      <h2>Acknowledgments</h2>
+      <p>This project was inspired by climate models and ecological simulations from leading researchers in biogeography.</p>
+    </section>
+    <section>
+      <h2>Generative AI Disclaimer</h2>
+      <p>Some instructional content was developed with the assistance of generative AI tools and reviewed by domain experts.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Evo-Edu.org</p>
+  </footer>
+</body>
+</html>
+#+END_SRC
+
+** Curriculum Alignment Page (alignment.html)
+#+BEGIN_SRC html :tangle alignment.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curriculum Alignment - Climate Range Shifter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="https://evo-edu.org">Evo-Edu.org</a>
+      <a href="#help">Help</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Curriculum Alignment</h1>
+    <section>
+      <h2>Why Curriculum Alignment Matters</h2>
+      <p>Helps educators ensure content meets standards and improves relevance for assessments and objectives.</p>
+    </section>
+    <section>
+      <h2>Standard Alignment</h2>
+      <ul>
+        <li>NGSS HS-LS2-2: Use mathematical representations to support explanations of how biodiversity is influenced by interactions...</li>
+        <li>AP Biology: Big Idea 4 - Interactions between systems...</li>
+        <li>IB Biology: Topic 4.3 - Climate change and ecological responses</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Acknowledgments</h2>
+      <p>Alignment contributions by educators and domain specialists.</p>
+    </section>
+    <section>
+      <h2>Generative AI Disclaimer</h2>
+      <p>Portions of this alignment were assisted by AI tools and curated by educators.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Evo-Edu.org</p>
+  </footer>
+</body>
+</html>
+#+END_SRC
+
+* CSS Code
+#+BEGIN_SRC css :tangle style.css
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+header nav {
+  background: #003366;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1em;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1em;
+  margin: 1em;
+}
+.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #003366;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #003366;
+  color: #fff;
+}
+#+END_SRC
+
+* JavaScript Code
+#+BEGIN_SRC javascript :tangle app.js
+// Basic JS for Climate Range Shifter app
+
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('Climate Range Shifter app initialized.');
+
+  // Example: Hook up button listeners (placeholder)
+  // document.getElementById('startButton').addEventListener('click', startSimulation);
+});
+
+function startSimulation() {
+  alert('Simulation started! (This is a placeholder)');
+}
+#+END_SRC
+
+* Makefile
+#+BEGIN_SRC makefile :tangle Makefile
+# Makefile for tangling Org files and building the web app
+ORG_FILE=climate-range-shifter.org
+OUTPUT_DIR=dist
+
+all: tangle
+
+# Tangle all files from the Org-mode document
+tangle:
+	mkdir -p $(OUTPUT_DIR)
+	emacs --batch $(ORG_FILE) \
+	  --eval="(require 'ob-tangle)" \
+	  --eval="(org-babel-tangle)"
+
+clean:
+	rm -rf $(OUTPUT_DIR)
+
+# Simple target to copy tangling results into dist folder
+install:
+	mkdir -p $(OUTPUT_DIR)
+	cp launch.html webapp.html instructions.html alignment.html style.css app.js $(OUTPUT_DIR)/
+#+END_SRC
+#+TITLE: Climate Range Shifter Web App
+#+AUTHOR: Evo-Edu.org Team
+#+DATE: 2025-07-21
+#+OPTIONS: toc:nil num:nil
+
+* Introduction
+This Org document contains the source structure for the Climate Range Shifter web app and its associated pages. It includes HTML content for the launch page, web app interface, instructions, exercises, curriculum alignment, and basic CSS and JavaScript.
+
+* Files and Structure
+- =launch.html= :: App launch page with navigation and cards.
+- =webapp.html= :: The main interactive application.
+- =instructions.html= :: Usage instructions and exercises for teachers and students.
+- =alignment.html= :: Curriculum alignment with educational standards.
+- =style.css= :: CSS for shared styling.
+- =app.js= :: JavaScript logic for the web app.
+- =Makefile= :: Automates tangling and building files.
+
+* Usage Instructions for the Makefile
+To build and deploy the web app files from this Org document:
+1. Ensure you have Emacs with Org-mode and Babel enabled.
+2. Save this file as =climate-range-shifter.org=.
+3. Run `make tangle` to generate all HTML, CSS, and JS files.
+4. Run `make install` to copy all generated files into the =dist= directory.
+5. Open `dist/launch.html` in your browser to view the app.
+6. Use `make clean` to remove the =dist= folder.
+
+* HTML Code
+** App Launch Page (launch.html)
+#+BEGIN_SRC html :tangle launch.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Climate Range Shifter - Evo-Edu.org</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="https://evo-edu.org">Evo-Edu.org</a>
+      <a href="#help">Help</a>
+    </nav>
+  </header>
+  <main>
+    <section class="card">
+      <h2>Launch Climate Range Shifter</h2>
+      <a href="webapp.html" class="button">Launch App</a>
+    </section>
+    <section class="card">
+      <h2>Instructions & Exercises</h2>
+      <a href="instructions.html" class="button">View Instructions</a>
+    </section>
+    <section class="card">
+      <h2>Curriculum Alignment</h2>
+      <a href="alignment.html" class="button">View Alignment</a>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Evo-Edu.org</p>
+  </footer>
+</body>
+</html>
+#+END_SRC
+
+** Web App Page (webapp.html)
+#+BEGIN_SRC html :tangle webapp.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Climate Range Shifter</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="https://evo-edu.org">Evo-Edu.org</a>
+      <a href="#help">Help</a>
+    </nav>
+  </header>
+  <main>
+    <dialog open>
+      <h2>Welcome to the Climate Range Shifter</h2>
+      <p>This app lets you explore how species track climate zones over time.</p>
+    </dialog>
+    <section id="app-form">
+      <!-- Controls and inputs will go here -->
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Evo-Edu.org</p>
+  </footer>
+</body>
+</html>
+#+END_SRC
+
+** Instructions & Exercises Page (instructions.html)
+#+BEGIN_SRC html :tangle instructions.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instructions - Climate Range Shifter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="https://evo-edu.org">Evo-Edu.org</a>
+      <a href="#help">Help</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Instructions & Exercises</h1>
+    <section>
+      <h2>Usage Instructions</h2>
+      <p>Detailed documentation for each control, button behavior, input parameters, output expectations, and processing time estimates.</p>
+    </section>
+    <section>
+      <h2>Exercises</h2>
+      <article>
+        <h3>Exercise 1: Predicting Range Shifts</h3>
+        <p><strong>Purpose:</strong> Understand how species respond to climate zone changes.</p>
+        <ul>
+          <li><strong>Methods:</strong> Use the time slider and temperature shift toggle</li>
+          <li><strong>Data Gathering:</strong> Note latitudinal/longitudinal species positions over time</li>
+          <li><strong>Data Analysis:</strong> Plot range centroids over time</li>
+          <li><strong>Visualization:</strong> Use built-in map export</li>
+          <li><strong>Conclusion:</strong> Determine thresholds for extinction or adaptation</li>
+        </ul>
+      </article>
+    </section>
+    <section>
+      <h2>Suggestions for Further Research</h2>
+      <p>Explore interspecies interactions, altitude vs latitude migration, and dispersal limits.</p>
+    </section>
+    <section>
+      <h2>Acknowledgments</h2>
+      <p>This project was inspired by climate models and ecological simulations from leading researchers in biogeography.</p>
+    </section>
+    <section>
+      <h2>Generative AI Disclaimer</h2>
+      <p>Some instructional content was developed with the assistance of generative AI tools and reviewed by domain experts.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Evo-Edu.org</p>
+  </footer>
+</body>
+</html>
+#+END_SRC
+
+** Curriculum Alignment Page (alignment.html)
+#+BEGIN_SRC html :tangle alignment.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curriculum Alignment - Climate Range Shifter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="https://evo-edu.org">Evo-Edu.org</a>
+      <a href="#help">Help</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Curriculum Alignment</h1>
+    <section>
+      <h2>Why Curriculum Alignment Matters</h2>
+      <p>Helps educators ensure content meets standards and improves relevance for assessments and objectives.</p>
+    </section>
+    <section>
+      <h2>Standard Alignment</h2>
+      <ul>
+        <li>NGSS HS-LS2-2: Use mathematical representations to support explanations of how biodiversity is influenced by interactions...</li>
+        <li>AP Biology: Big Idea 4 - Interactions between systems...</li>
+        <li>IB Biology: Topic 4.3 - Climate change and ecological responses</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Acknowledgments</h2>
+      <p>Alignment contributions by educators and domain specialists.</p>
+    </section>
+    <section>
+      <h2>Generative AI Disclaimer</h2>
+      <p>Portions of this alignment were assisted by AI tools and curated by educators.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Evo-Edu.org</p>
+  </footer>
+</body>
+</html>
+#+END_SRC
+
+* CSS Code
+#+BEGIN_SRC css :tangle style.css
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+header nav {
+  background: #003366;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1em;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1em;
+  margin: 1em;
+}
+.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #003366;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #003366;
+  color: #fff;
+}
+#+END_SRC
+
+* JavaScript Code
+#+BEGIN_SRC javascript :tangle app.js
+// Basic JS for Climate Range Shifter app
+
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('Climate Range Shifter app initialized.');
+
+  // Example: Hook up button listeners (placeholder)
+  // document.getElementById('startButton').addEventListener('click', startSimulation);
+});
+
+function startSimulation() {
+  alert('Simulation started! (This is a placeholder)');
+}
+#+END_SRC
+
+* Makefile
+#+BEGIN_SRC makefile :tangle Makefile
+# Makefile for tangling Org files and building the web app
+ORG_FILE=climate-range-shifter.org
+OUTPUT_DIR=dist
+
+all: tangle
+
+# Tangle all files from the Org-mode document
+tangle:
+	mkdir -p $(OUTPUT_DIR)
+	emacs --batch $(ORG_FILE) \
+	  --eval="(require 'ob-tangle)" \
+	  --eval="(org-babel-tangle)"
+
+clean:
+	rm -rf $(OUTPUT_DIR)
+
+# Simple target to copy tangling results into dist folder
+install:
+	mkdir -p $(OUTPUT_DIR)
+	cp launch.html webapp.html instructions.html alignment.html style.css app.js $(OUTPUT_DIR)/
+#+END_SRC
+#+TITLE: Climate Range Shifter Web App
+#+AUTHOR: Evo-Edu.org Team
+#+DATE: 2025-07-21
+#+OPTIONS: toc:nil num:nil
+
+* Introduction
+This Org document contains the source structure for the Climate Range Shifter web app and its associated pages. It includes HTML content for the launch page, web app interface, instructions, exercises, curriculum alignment, and basic CSS and JavaScript.
+
+* Files and Structure
+- =launch.html= :: App launch page with navigation and cards.
+- =webapp.html= :: The main interactive application.
+- =instructions.html= :: Usage instructions and exercises for teachers and students.
+- =alignment.html= :: Curriculum alignment with educational standards.
+- =style.css= :: CSS for shared styling.
+- =app.js= :: JavaScript logic for the web app.
+- =Makefile= :: Automates tangling and building files.
+
+* Usage Instructions for the Makefile
+To build and deploy the web app files from this Org document:
+1. Ensure you have Emacs with Org-mode and Babel enabled.
+2. Save this file as =climate-range-shifter.org=.
+3. Run `make tangle` to generate all HTML, CSS, and JS files.
+4. Run `make install` to copy all generated files into the =dist= directory.
+5. Open `dist/launch.html` in your browser to view the app.
+6. Use `make clean` to remove the =dist= folder.
+
+* HTML Code
+** App Launch Page (launch.html)
+#+BEGIN_SRC html :tangle launch.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Climate Range Shifter - Evo-Edu.org</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="https://evo-edu.org">Evo-Edu.org</a>
+      <a href="#help">Help</a>
+    </nav>
+  </header>
+  <main>
+    <section class="card">
+      <h2>Launch Climate Range Shifter</h2>
+      <a href="webapp.html" class="button">Launch App</a>
+    </section>
+    <section class="card">
+      <h2>Instructions & Exercises</h2>
+      <a href="instructions.html" class="button">View Instructions</a>
+    </section>
+    <section class="card">
+      <h2>Curriculum Alignment</h2>
+      <a href="alignment.html" class="button">View Alignment</a>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Evo-Edu.org</p>
+  </footer>
+</body>
+</html>
+#+END_SRC
+
+** Web App Page (webapp.html)
+#+BEGIN_SRC html :tangle webapp.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Climate Range Shifter</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="https://evo-edu.org">Evo-Edu.org</a>
+      <a href="#help">Help</a>
+    </nav>
+  </header>
+  <main>
+    <dialog open>
+      <h2>Welcome to the Climate Range Shifter</h2>
+      <p>This app lets you explore how species track climate zones over time.</p>
+    </dialog>
+    <section id="app-form">
+      <!-- Controls and inputs will go here -->
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Evo-Edu.org</p>
+  </footer>
+</body>
+</html>
+#+END_SRC
+
+** Instructions & Exercises Page (instructions.html)
+#+BEGIN_SRC html :tangle instructions.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instructions - Climate Range Shifter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="https://evo-edu.org">Evo-Edu.org</a>
+      <a href="#help">Help</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Instructions & Exercises</h1>
+    <section>
+      <h2>Usage Instructions</h2>
+      <p>Detailed documentation for each control, button behavior, input parameters, output expectations, and processing time estimates.</p>
+    </section>
+    <section>
+      <h2>Exercises</h2>
+      <article>
+        <h3>Exercise 1: Predicting Range Shifts</h3>
+        <p><strong>Purpose:</strong> Understand how species respond to climate zone changes.</p>
+        <ul>
+          <li><strong>Methods:</strong> Use the time slider and temperature shift toggle</li>
+          <li><strong>Data Gathering:</strong> Note latitudinal/longitudinal species positions over time</li>
+          <li><strong>Data Analysis:</strong> Plot range centroids over time</li>
+          <li><strong>Visualization:</strong> Use built-in map export</li>
+          <li><strong>Conclusion:</strong> Determine thresholds for extinction or adaptation</li>
+        </ul>
+      </article>
+    </section>
+    <section>
+      <h2>Suggestions for Further Research</h2>
+      <p>Explore interspecies interactions, altitude vs latitude migration, and dispersal limits.</p>
+    </section>
+    <section>
+      <h2>Acknowledgments</h2>
+      <p>This project was inspired by climate models and ecological simulations from leading researchers in biogeography.</p>
+    </section>
+    <section>
+      <h2>Generative AI Disclaimer</h2>
+      <p>Some instructional content was developed with the assistance of generative AI tools and reviewed by domain experts.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Evo-Edu.org</p>
+  </footer>
+</body>
+</html>
+#+END_SRC
+
+** Curriculum Alignment Page (alignment.html)
+#+BEGIN_SRC html :tangle alignment.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curriculum Alignment - Climate Range Shifter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="https://evo-edu.org">Evo-Edu.org</a>
+      <a href="#help">Help</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Curriculum Alignment</h1>
+    <section>
+      <h2>Why Curriculum Alignment Matters</h2>
+      <p>Helps educators ensure content meets standards and improves relevance for assessments and objectives.</p>
+    </section>
+    <section>
+      <h2>Standard Alignment</h2>
+      <ul>
+        <li>NGSS HS-LS2-2: Use mathematical representations to support explanations of how biodiversity is influenced by interactions...</li>
+        <li>AP Biology: Big Idea 4 - Interactions between systems...</li>
+        <li>IB Biology: Topic 4.3 - Climate change and ecological responses</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Acknowledgments</h2>
+      <p>Alignment contributions by educators and domain specialists.</p>
+    </section>
+    <section>
+      <h2>Generative AI Disclaimer</h2>
+      <p>Portions of this alignment were assisted by AI tools and curated by educators.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Evo-Edu.org</p>
+  </footer>
+</body>
+</html>
+#+END_SRC
+
+* CSS Code
+#+BEGIN_SRC css :tangle style.css
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+header nav {
+  background: #003366;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1em;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1em;
+  margin: 1em;
+}
+.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #003366;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #003366;
+  color: #fff;
+}
+#+END_SRC
+
+* JavaScript Code
+#+BEGIN_SRC javascript :tangle app.js
+// Basic JS for Climate Range Shifter app
+
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('Climate Range Shifter app initialized.');
+
+  // Example: Hook up button listeners (placeholder)
+  // document.getElementById('startButton').addEventListener('click', startSimulation);
+});
+
+function startSimulation() {
+  alert('Simulation started! (This is a placeholder)');
+}
+#+END_SRC
+
+* Makefile
+#+BEGIN_SRC makefile :tangle Makefile
+# Makefile for tangling Org files and building the web app
+ORG_FILE=climate-range-shifter.org
+OUTPUT_DIR=dist
+
+all: tangle
+
+# Tangle all files from the Org-mode document
+tangle:
+	mkdir -p $(OUTPUT_DIR)
+	emacs --batch $(ORG_FILE) \
+	  --eval="(require 'ob-tangle)" \
+	  --eval="(org-babel-tangle)"
+
+clean:
+	rm -rf $(OUTPUT_DIR)
+
+# Simple target to copy tangling results into dist folder
+install:
+	mkdir -p $(OUTPUT_DIR)
+	cp launch.html webapp.html instructions.html alignment.html style.css app.js $(OUTPUT_DIR)/
+#+END_SRC

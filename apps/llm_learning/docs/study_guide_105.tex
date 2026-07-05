@@ -1,0 +1,330 @@
+\documentclass[11pt]{article}
+
+% ---- Preamble: safe math & fonts ----
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{amsmath, amssymb, amsbsy, amsthm, mathtools}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+
+% Convenience macros
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\KL}{\mathrm{KL}}
+\newcommand{\given}{\,\mid\,}
+\newcommand{\R}{\mathbb{R}}
+
+\title{Study Guide --- \emph{From Behaviorism to Language Models:}\\
+A Formal Correspondence Between the Matching Law and Token Prediction}
+\author{Companion to the preprint by Wesley R. Elsberry}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Purpose and Audience}
+\textbf{Audience:} graduate students and advanced undergraduates in psychology, cognitive science, machine learning, and adjacent fields.\\
+\textbf{Goal:} make the preprint maximally accessible by explaining background, acronyms, key equations, theorem derivations, and the broader research agenda.
+
+\section{How to Use This Guide}
+\begin{enumerate}[leftmargin=*]
+  \item Read the Background Primer to level-set on behaviorism, LLM training, and the core math objects (cross-entropy, KL, logits).
+  \item Walk through the Theorem Roadmap step-by-step; each theorem includes assumptions, a derivation sketch, intuition, and pitfalls.
+emacs merge mode  \item Consult the Glossary whenever acronyms or terms appear.
+  \item Use the Micro-Exercises to build intuition with simple numbers.
+  \item Review the Broader Research Program (Table~\ref{tab:program}) for project ideas and empirical tests.
+  \item See Appendix~\ref{app:ngram} in the preprint for code and examples contrasting $n$-gram “parrots” with LLMs.
+\end{enumerate}
+
+\section{Background Primer}
+
+\subsection{Behaviorism \& the Matching Law (Operant Conditioning)}
+\textbf{Operant conditioning} holds that behavior is shaped by its consequences (reinforcement schedules). \textbf{The matching law} (Herrnstein) states that allocation of responses across options tends to match the allocation of reinforcement across those options: if option A yields $70\%$ of rewards and option B $30\%$, responses tend toward $70{:}30$ (\emph{strict matching}). \textbf{Generalized matching} (Baum) summarizes deviations via two parameters:
+\begin{itemize}[leftmargin=*]
+  \item \emph{Sensitivity} (slope): how strongly responses track reinforcement differences.
+  \item \emph{Bias} (intercept): systematic preference independent of reinforcement.
+\end{itemize}
+
+
+\subsection{LLMs: Training, Alignment, Inference}
+\textbf{Pretraining (Maximum Likelihood / Cross-Entropy):} learn to assign high probability to observed next tokens, i.e., minimize the divergence between model distribution $\pi_\theta(\cdot\given c)$ and corpus distribution $q(\cdot\given c)$.\\
+\textbf{Alignment (RLHF / DPO):} introduce preference/reward signals and a KL penalty that keeps the updated policy close to a reference policy.\\
+\textbf{Inference (Decoding):} use \emph{temperature} and related controls to modulate sampling variability.
+
+\subsection*{Preview: Two Kinds of Grounding}
+
+In the preprint we introduce two complementary terms to clarify how learning can
+be said to be ``grounded.'' \emph{Allocation-grounding} refers to lawful,
+substrate-independent allocation of responses in proportion to contingencies,
+captured formally by the matching law. \emph{Gestalt-grounding} refers to the
+particular experiential channel through which contingencies are encountered:
+sensory-perceptual for organisms, textual-corpus for LLMs. Readers should note
+that the full treatment appears in the Discussion, but keeping this distinction
+in mind will help interpret the proofs and examples that follow.
+
+\subsection*{What Does ``Lawful'' Mean in Behavior Analysis?}
+
+Skinner often described behavior as ``lawful,'' but the term can be confusing
+to modern readers. Here, ``lawful'' does not mean legal, moral, or normative. It
+means that behavior can be described by regular, predictable relations to the
+environment, much like how physics describes the lawful relation between force
+and acceleration. 
+
+For example, the matching law is a lawful relation: when the reinforcement rate
+on one option is doubled, the proportion of responses allocated to that option
+predictably increases. Describing such relations as lawful highlights that
+behavior is not random or mysterious but can be analyzed, modeled, and even
+predicted under the right conditions.
+
+
+
+\section{Theorem Roadmap: Derivations, Intuition, Pitfalls}
+
+\subsection*{Notation}
+Contexts $c$, tokens $y$, corpus conditionals $q(\cdot\given c)$, model (policy) $\pi_\theta(\cdot\given c)$, reference policy $\pi_{\mathrm{ref}}$, reward $r(x,y)$ for alignment inputs $x$.
+
+\subsection{Theorem 1: Strict Matching under MLE}
+\textbf{Claim.} If $q(\cdot\given c)$ is representable by the model class, minimizing cross-entropy yields $\pi^*(\cdot\given c)=q(\cdot\given c)$. Thus for any two continuations $a,b$,
+\begin{equation*}
+\frac{\pi^*(a\given c)}{\pi^*(b\given c)}=\frac{q(a\given c)}{q(b\given c)}.
+\end{equation*}
+\noindent\emph{(strict matching)}
+
+\paragraph{Assumptions.}
+(1) Realizable model class; (2) global optimum is reached.
+
+\paragraph{Derivation (3 steps).}
+\begin{align*}
+\mathcal{L}_{\mathrm{MLE}}
+&= \E_{(c,y)\sim q}\big[-\log \pi_{\theta}(y\given c)\big]
+= \E_{c\sim q}\Big[\,H\big(q(\cdot\given c),\,\pi_{\theta}(\cdot\given c)\big)\Big]\\
+&= \E_{c\sim q}\Big[\,H\big(q(\cdot\given c)\big) + \KL\!\big(q(\cdot\given c)\,\Vert\,\pi_{\theta}(\cdot\given c)\big)\Big].
+\end{align*}
+$H(q)$ does not depend on $\theta$, so minimization forces $\KL(q\Vert \pi_\theta)\to 0$, which holds iff $\pi_\theta=q$.
+
+\paragraph{Intuition.} MLE says “copy the data distribution.” Matching law says “allocate responses in proportion to reinforcement.” Both describe allocation matching contingencies.
+
+\paragraph{Pitfalls.} Limited capacity/data, label smoothing, and regularization induce \emph{undermatching} (sensitivity $<1$) and \emph{bias}.
+
+\subsection{Theorem 2: Generalized Matching via KL-Regularized Preferences}
+\textbf{Claim.} Maximizing expected reward with a KL penalty to a reference policy yields a Boltzmann-rational form:
+\begin{equation*}
+\pi^*(y\given x)\propto \pi_{\mathrm{ref}}(y\given x)\,\exp\{\beta\, r(x,y)\}.
+\end{equation*}
+Hence, for any $y_1,y_2$,
+\begin{equation*}
+\log\frac{\pi^*(y_1\given x)}{\pi^*(y_2\given x)}
+=\log\frac{\pi_{\mathrm{ref}}(y_1\given x)}{\pi_{\mathrm{ref}}(y_2\given x)}+\beta\,\big(r(x,y_1)-r(x,y_2)\big),
+\end{equation*}
+i.e., generalized matching with \emph{bias} from $\pi_{\mathrm{ref}}$ and \emph{sensitivity} $s=\beta$.
+
+\paragraph{Objective.}
+\begin{equation*}
+\mathcal{J}(\pi)=\E_{y\sim\pi}[r(x,y)] - \beta\,\KL\!\big(\pi\;\Vert\;\pi_{\mathrm{ref}}\big).
+\end{equation*}
+
+\paragraph{Derivation (sketch).}
+Lagrangian with normalization $\sum_y \pi(y)=1$:
+\[
+\mathcal{L}=\sum_y \pi(y)\,r(x,y) - \beta \sum_y \pi(y)\log\frac{\pi(y)}{\pi_{\mathrm{ref}}(y)} + \lambda\Big(\sum_y \pi(y)-1\Big).
+\]
+Set derivative w.r.t.\ $\pi(y)$ to zero and rearrange to obtain
+$\pi(y)\propto \pi_{\mathrm{ref}}(y)\exp\{\beta r(x,y)\}$.
+Taking log-odds between $y_1$ and $y_2$ gives the stated form.
+
+\paragraph{Intuition.} The KL term keeps you near the reference (bias); reward scales your move by $\beta$ (sensitivity).
+
+\paragraph{Pitfalls.} Reward misspecification, too-large $\beta$ (mode collapse), or highly peaked $\pi_{\mathrm{ref}}$ can dominate.
+
+\subsection{Theorem 3: Temperature Scaling as Sensitivity Rescaling}
+\textbf{Claim.} Sampling from $\pi_T(y\given x)\propto \pi(y\given x)^{1/T}$ yields
+\begin{equation*}
+\log\frac{\pi_T(y_1\given x)}{\pi_T(y_2\given x)}=\frac{1}{T}\log\frac{\pi(y_1\given x)}{\pi(y_2\given x)}.
+\end{equation*}
+Thus, temperature rescales \emph{sensitivity}: lower $T$ $\Rightarrow$ steeper allocation; higher $T$ $\Rightarrow$ flatter allocation.
+
+\paragraph{Derivation.} Write $\pi_T(i)=\exp(z_i/T)/\sum_j \exp(z_j/T)$; subtract log-odds.
+
+\paragraph{Pitfalls.} Very low $T$ may induce repetition; very high $T$ degrades coherence.
+
+\subsection{Theorem 4: Mixtures and Regularization}
+\textbf{Claim.} If $q=\sum_k \alpha_k\,q^{(k)}$ and the model has capacity, MLE yields $\pi^*=q$. Regularizers that shrink logits (label smoothing, entropy bonus, KL to $\pi_{\mathrm{ref}}$) produce \emph{undermatching} (slopes $<1$).
+
+\paragraph{Sketch.} The $H+\KL$ decomposition still yields $\pi^*=q$. Odds under mixtures follow mixture odds; additive logit shrinkage reduces log-odds magnitudes (slopes $<1$).
+
+\section{Key Takeaways from the Conclusions}
+\begin{itemize}[leftmargin=*]
+  \item MLE $\Rightarrow$ strict matching.  
+  \item KL-regularized alignment $\Rightarrow$ generalized matching.  
+  \item Temperature scaling $\Rightarrow$ sensitivity rescaling.  
+  \item Allocation-based grounding: LLMs adapt like operant organisms, not like parrots.  
+\end{itemize}
+
+\section{Expanded Glossary with Context and Mathematics}
+
+\paragraph{KL — Kullback–Leibler Divergence.}
+\[
+\KL(p\Vert q)=\sum_x p(x)\log\frac{p(x)}{q(x)}.
+\]
+\emph{Context:} In pretraining, minimizing cross-entropy $\Leftrightarrow$ minimizing $\KL(q\Vert \pi)$; in alignment, a $-\beta\,\KL(\pi\Vert \pi_{\mathrm{ref}})$ term discourages straying from a reference policy.
+
+\paragraph{MLE — Maximum Likelihood Estimation.}
+Choose parameters that maximize the probability of observed data; in our setting, equivalent to strict matching when realizable.
+
+\paragraph{RLHF — Reinforcement Learning from Human Feedback.}
+Learn from human preferences with reward + KL control; matches the generalized matching formulation.
+
+\paragraph{DPO — Direct Preference Optimization.}
+Align directly on preference pairs (no explicit reward model); still exhibits generalized matching dynamics via implicit KL control.
+
+\paragraph{Cross-Entropy.}
+\[
+H(q,\pi)=-\sum_x q(x)\log \pi(x)=H(q)+\KL(q\Vert \pi).
+\]
+\emph{Context:} Core pretraining loss driving $\pi\to q$ (in the realizable limit).
+
+\paragraph{Policy.}
+A conditional distribution $\pi(y\given x)$ over outputs given inputs; LLMs can be analyzed as policies over tokens.
+
+\paragraph{Logits.}
+Unnormalized scores $z_i$ with softmax
+\[
+\pi(y=i\given x)=\frac{\exp(z_i)}{\sum_j \exp(z_j)}.
+\]
+\emph{Derivative:}
+\[
+\frac{\partial \pi(y=i)}{\partial z_k}=\pi(y=i)\big(\delta_{ik}-\pi(y=k)\big).
+\]
+\emph{CDF (for sampling):} $F(k)=\sum_{i\le k}\pi(y=i)$, and \emph{inverse CDF} sampling picks the smallest $k$ with $F(k)\ge u$, $u\sim U[0,1]$.\\
+\emph{Context:} Logit differences control odds ratios, the natural unit for matching-law analysis.
+
+\paragraph{Temperature.}
+\[
+\pi_T(i)=\frac{\exp(z_i/T)}{\sum_j \exp(z_j/T)}.
+\]
+\emph{Context:} Directly rescales sensitivity ($\propto 1/T$).
+
+\paragraph{Sensitivity and Bias.}
+From generalized matching (Baum): slope (\emph{sensitivity}) and intercept (\emph{bias}). In LLMs, sensitivity corresponds to $\beta$ (KL weight) or $1/T$; bias arises from $\pi_{\mathrm{ref}}$ or skewed data.
+
+\paragraph{Grounding Types}
+\begin{itemize}
+\item \textbf{Allocation-grounding}
+Grounding as lawful allocation to contingencies, not symbolic reference.  
+
+\item \textbf{Gestalt-grounding} A form of grounding in which allocations are shaped by the integrated experiential substrate (\emph{gestalt}) available to the learner; for organisms this is their perceptual gestalt, while for LLMs it is the corpus as a distributed human gestalt, even in the absence of direct perception.
+\end{itemize}
+
+\paragraph{Operant semantics.}
+Meaning emerges from stable allocations shaped by reinforcement.  
+\paragraph{$n$-gram generator.}
+Finite-order Markov chain text generator (e.g., \emph{Travesty}); parrots substrings, lacks global allocation laws.
+
+\section{Broader Research Program (Expanded from Table~1)}
+\label{sec:program}
+
+This section lays out a practical research agenda that extends the paper’s formal correspondences into empirical and comparative work. It is organized around the rows in Table~\ref{tab:paradigm_mapping} and specifies core questions, minimal tests, and stretch goals. Cross–cutting reporting standards are included to enable cumulative comparisons across labs and model scales.
+
+\subsection*{Cross–Cutting Metrics and Reporting}
+For any experiment in this program, report: (i) \emph{sensitivity} (slope) and \emph{bias} (intercept) from log–odds regressions; (ii) $R^2$ with 95\% CIs; (iii) sample size and token/context granularity; (iv) any regularization (label smoothing, entropy bonuses, KL weights) and decoding controls (temperature, nucleus); (v) effective context length and any retrieval/external memory used.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|p{0.22\textwidth}|p{0.34\textwidth}|p{0.34\textwidth}|}
+\hline
+\textbf{Row (from Table~\ref{tab:paradigm_mapping})} & \textbf{Research Questions} & \textbf{Minimal Tests \& Stretch Goals} \\
+\hline
+Operant $\leftrightarrow$ MLE (strict matching) &
+Over which context granularities (token, bigram, span) does strict matching hold? What are finite–sample or capacity–driven departures? &
+\emph{Minimal:} Log–odds regressions of $\pi$ vs.\ corpus $q$ for token pairs across contexts; slope $\approx 1$, intercept $\approx 0$. \newline
+\emph{Stretch:} Multi–token alternatives, compositional prompts, multilingual corpora; stratify by POS or semantic class.\\
+\hline
+Generalized matching $\leftrightarrow$ KL–regularized alignment &
+How does KL weight $\beta$ map to sensitivity $s$ across datasets and model sizes? How large is reference–model bias? &
+\emph{Minimal:} DPO with $\beta$ sweep on a public preference set; fit slope/bias from pre/post odds. \newline
+\emph{Stretch:} PPO–style RLHF, multi–reference priors, human subject comparisons to animal sensitivity estimates.\\
+\hline
+Inference temperature $\leftrightarrow$ sensitivity rescaling &
+Is the $1/T$ slope law stable across prompts, tasks, and truncation strategies (top–$k$, nucleus)? &
+\emph{Minimal:} Temperature sweep; recover slopes $\approx 1/T$. \newline
+\emph{Stretch:} Adaptive temperature controllers; task–conditioned sensitivity and uncertainty calibration.\\
+\hline
+Classical conditioning $\leftrightarrow$ supervised learning &
+Do cue–outcome learning curves mirror associative models (e.g., blocking, overshadowing)? &
+\emph{Minimal:} Train small nets on synthetic cue–outcome pairs; fit Rescorla–Wagner–like curves. \newline
+\emph{Stretch:} Pretraining–slice analyses for multi–cue effects; ablations isolating “blocking–like” behavior.\\
+\hline
+Hebbian plasticity $\leftrightarrow$ self–supervised representation learning &
+Are embedding updates consistent with correlation–driven rules? &
+\emph{Minimal:} Track embedding drift under masked/causal LM objectives; correlate update magnitude with co–occurrence. \newline
+\emph{Stretch:} Compare with neurophys data (STDP–like signatures), probe layerwise locality vs.\ global updates.\\
+\hline
+Observational learning $\leftrightarrow$ in–context learning &
+How do demonstrations in context shape one–shot generalization and allocation fidelity? &
+\emph{Minimal:} Vary number/type of in–context examples; measure performance and odds–slope changes. \newline
+\emph{Stretch:} Derive sample–efficiency laws; compare patterns to animal imitation/observational datasets.\\
+\hline
+Memory constraints $\leftrightarrow$ context windows &
+How does allocation fidelity scale with context length and recency? What is the effect of external memory? &
+\emph{Minimal:} Strict–matching regressions across window sizes; quantify undermatching vs.\ distance. \newline
+\emph{Stretch:} Add retrieval–augmented generation as “extended working memory”; estimate gains as sensitivity restoration.\\
+\hline
+\end{tabular}
+\caption{Expanded research program connecting behavior–analytic constructs to LLM mechanisms. Each row specifies core questions, a minimal test, and stretch goals, with shared reporting standards for sensitivity, bias, $R^2$, and capacity/recency controls.}
+\label{tab:program}
+\end{table}
+
+\subsection*{Core Tracks and Milestones}
+\paragraph{Track A: Allocation Benchmarks (3–6 weeks).}
+Replicate strict matching (MLE), generalized matching (KL–regularized alignment), and temperature scaling on small models (e.g., 124M–355M). Milestone: slopes near target values with clear CIs; bias quantified.
+
+\paragraph{Track B: Capacity and Memory (4–8 weeks).}
+Repeat Track A while varying context window and model size. Milestone: sensitivity improves with window/scale; undermatching increases with distance.
+
+\paragraph{Track C: Comparative Phenomena (6–10 weeks).}
+Run supervised cue–outcome and in–context learning studies; test associative predictions and demonstration effects. Milestone: recover classical conditioning curves; quantify observational–learning analogs.
+
+\paragraph{Track D: Mechanistic Probes (optional).}
+Analyze embedding dynamics and layerwise contributions to allocation changes during alignment/fine–tuning.
+
+\subsection*{Risks and Mitigations}
+\emph{Data leakage/bias:} stratify by domain and control for frequency. \newline
+\emph{Overfitting to proxies:} validate on held–out corpora and alternate tokenizations. \newline
+\emph{Confounded temperature/filters:} report exact decoding stack (top–$k$, $p$, repetition penalties).
+
+\subsection*{Artifacts and Reproducibility}
+Release code, seeds, and config files; provide CSVs with per–pair odds, slopes, intercepts, and CIs; include prompts and exact model hashes/versions to facilitate replication.
+
+\section*{Big Picture: From Pigeons to Programs}
+
+The matching law was first discovered in experiments with pigeons in the 1960s
+and refined by later behavioral scientists. Far from being outdated, it is still
+used today in applied behavior analysis, neuroscience, and even everyday
+contexts like how people divide attention when texting. In this guide, we have
+shown how the same principles can also be found in large language models. 
+
+By thinking in terms of both \emph{allocation-grounding} (the general law that
+allocations track contingencies) and \emph{gestalt-grounding} (the specific
+channel through which contingencies are experienced), we can see a continuous
+thread: from animals in Skinner boxes, to human decision-making, to today’s
+most advanced AI models. What once seemed like separate domains of learning are
+connected by the same underlying laws.
+
+
+\section{Micro-Exercises (for Intuition)}
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Strict Matching.} If $q(a)=0.8,q(b)=0.2$, then $\pi^*(a)=0.8,\pi^*(b)=0.2$.  
+  \item \textbf{Generalized Matching.} With $\pi_{\mathrm{ref}}$ uniform, $r(y_1)=2$, $r(y_2)=1$, $\beta=1$, odds ratio = $e^1\approx 2.7$.  
+  \item \textbf{Temperature.} If log-odds = 2 at $T=1$, then =1 at $T=2$.  
+  \item \textbf{Mixture.} If half from $q^{(1)}(a)=0.9$, half from $q^{(2)}(a)=0.1$, then $q(a)=0.5$.  
+  \item \textbf{$n$-gram vs.\ LLM.} Run a toy $n$-gram generator and a small LLM on the same seed. Compare outputs: where does parroting end and adaptive allocation begin?  
+\end{enumerate}
+
+\section*{Build Notes}
+This document uses \texttt{amsmath}. If you copy equations elsewhere, keep text like “(strict matching)” \emph{outside} math, or wrap it with \verb|\text{}| (requires \texttt{amsmath}). Avoid literal \verb|{[}| \verb|{]}|; use parentheses or \verb|\big[ \big]| in math.
+
+\end{document}

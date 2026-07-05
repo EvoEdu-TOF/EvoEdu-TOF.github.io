@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Steiner Tree Evolutionary Demo</title>
+  <!-- Load Plotly from CDN -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    /* Simple NavBar styling */
+    nav {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      height: 50px;
+      justify-content: space-between;
+    }
+    nav ul {
+      display: flex;
+      list-style-type: none;
+      margin: 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+      cursor: pointer;
+    }
+    nav ul li:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    }
+    .controls, .parameters {
+      margin: 10px 0;
+    }
+    .graphics-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: start;
+    }
+    .plot-container {
+      width: 32%;
+    }
+    /* Basic layout for input fields */
+    .param-label {
+      display: inline-block;
+      width: 160px;
+      text-align: right;
+      margin-right: 5px;
+    }
+    .report-area {
+      width: 100%;
+      height: 100px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NavBar -->
+<nav>
+  <div>Steiner Tree Evolution</div>
+  <ul>
+    <li onclick="showHelp()">Help</li>
+    <li onclick="showAbout()">About</li>
+  </ul>
+</nav>
+
+<div class="container">
+  <!-- Parameter Inputs -->
+  <div class="parameters">
+    <div>
+      <label class="param-label" for="numTreeVertices">Number of Tree Vertices:</label>
+      <input id="numTreeVertices" type="number" value="5" min="1" />
+      <button onclick="randomizeVertices()">Randomize Vertices</button>
+      <button onclick="manualVertices()">Manual Vertices</button>
+    </div>
+    <div>
+      <label class="param-label" for="populationSize">Population Size:</label>
+      <input id="populationSize" type="number" value="50" min="10" />
+    </div>
+    <div>
+      <label class="param-label" for="generations">Generations:</label>
+      <input id="generations" type="number" value="30" min="1" />
+    </div>
+    <div>
+      <label class="param-label" for="mutationRate">Mutation Rate:</label>
+      <input id="mutationRate" type="number" step="0.01" value="0.1" min="0" max="1"/>
+    </div>
+  </div>
+
+  <!-- Control Buttons -->
+  <div class="controls">
+    <button onclick="startRun()">Start</button>
+    <button onclick="stopRun()">Stop</button>
+    <button onclick="resumeRun()">Resume</button>
+    <button onclick="clearRun()">Clear</button>
+    <button onclick="reportRun()">Report</button>
+    <button onclick="startAnimation()">Play Animation</button>
+    <button onclick="stopAnimation()">Stop Animation</button>
+  </div>
+
+  <!-- Graphics Row -->
+  <div class="graphics-row">
+    <div id="bestSteinerTreePlot" class="plot-container"></div>
+    <div id="fitnessPlot" class="plot-container"></div>
+    <div id="animationPlot" class="plot-container"></div>
+  </div>
+
+  <!-- Report Area -->
+  <textarea id="reportArea" class="report-area" readonly></textarea>
+</div>
+
+<script>
+/************************************************************
+  Global Variables & Data Structures
+*************************************************************/
+let runInProgress = false;
+let paused = false;
+let manualEntryMode = false; // Toggled when user wants to click to add vertices
+
+// This array holds the user-defined "tree vertices" (terminals).
+// The genetic algorithm will try to connect these points with extra "Steiner points".
+let terminalPoints = [];
+
+// Evolutionary parameters
+let populationSize = 50;
+let maxGenerations = 30;
+let mutationRate = 0.1;
+
+// For demonstration, bounding box is [0,10] x [0,10].
+const BOUND_MIN = 0;
+const BOUND_MAX = 10;
+
+// We’ll store info for each generation’s best solution
+// bestSolutions[g] = {generation, solution, fitness}
+let bestSolutions = [];
+
+// For animation
+let animationIndex = 0;
+let animationTimer = null;
+
+/************************************************************
+  Helper Functions
+*************************************************************/
+/**
+ * Calculate Euclidean distance between two points.
+ */
+function distance(p1, p2) {
+  return Math.sqrt((p1.x - p2.x)**2 + (p1.y - p2.y)**2);
+}
+
+/**
+ * Compute MST cost using Prim's algorithm.
+ * We'll also return the list of MST edges so we can display them.
+ */
+function computeMST(points) {
+  if (points.length < 2) return { cost: 0, edges: [] };
+
+  let unvisited = [...points];
+  let visited = [];
+  let edges = [];
+  let totalDist = 0;
+
+  // Start with the first point
+  visited.push(unvisited.shift());
+
+  while (unvisited.length > 0) {
+    let bestEdgeDist = Infinity;
+    let bestPair = {from: null, to: null};
+
+    for (let v of visited) {
+      for (let u of unvisited) {
+        const d = distance(v, u);
+        if (d < bestEdgeDist) {
+          bestEdgeDist = d;
+          bestPair.from = v;
+          bestPair.to = u;
+        }
+      }
+    }
+    // Add the best edge
+    totalDist += bestEdgeDist;
+    edges.push([bestPair.from, bestPair.to]);
+    visited.push(bestPair.to);
+    unvisited = unvisited.filter(pt => pt !== bestPair.to);
+  }
+
+  return { cost: totalDist, edges };
+}
+
+/**
+ * The fitness = MST cost of (terminals + steinerPoints).
+ */
+function computeFitness(steinerPoints) {
+  const allPoints = terminalPoints.concat(steinerPoints);
+  let { cost } = computeMST(allPoints);
+  return cost;
+}
+
+/************************************************************
+  Evolutionary Algorithm
+*************************************************************/
+/**
+ * Create a random individual (i.e., random Steiner points).
+ * For demonstration, we pick exactly 2 Steiner points.
+ * Increase if you want more potential for better solutions.
+ */
+function randomIndividual(numSteinerPoints = 2) {
+  let steinerPoints = [];
+  for (let i = 0; i < numSteinerPoints; i++) {
+    steinerPoints.push({
+      x: BOUND_MIN + (BOUND_MAX - BOUND_MIN)*Math.random(),
+      y: BOUND_MIN + (BOUND_MAX - BOUND_MIN)*Math.random()
+    });
+  }
+  return steinerPoints;
+}
+
+/**
+ * Generate an initial population.
+ */
+function initPopulation(popSize) {
+  let population = [];
+  for (let i = 0; i < popSize; i++) {
+    population.push(randomIndividual());
+  }
+  return population;
+}
+
+/**
+ * Sort by fitness (ascending).
+ */
+function sortByFitness(population) {
+  return population.sort((a, b) => {
+    return computeFitness(a) - computeFitness(b);
+  });
+}
+
+/**
+ * Simple crossover: choose half from parent A, half from parent B.
+ */
+function crossover(parentA, parentB) {
+  let half = Math.floor(parentA.length / 2);
+  return parentA.slice(0, half).concat(parentB.slice(half));
+}
+
+/**
+ * Simple mutation: perturb each Steiner point with some probability.
+ */
+function mutate(individual, rate) {
+  return individual.map(pt => {
+    if (Math.random() < rate) {
+      // Slight random shift
+      return {
+        x: clamp(pt.x + (Math.random()-0.5)*2, BOUND_MIN, BOUND_MAX),
+        y: clamp(pt.y + (Math.random()-0.5)*2, BOUND_MIN, BOUND_MAX)
+      };
+    }
+    return pt;
+  });
+}
+
+/**
+ * Helper to keep a value in [minVal, maxVal].
+ */
+function clamp(val, minVal, maxVal) {
+  return Math.max(minVal, Math.min(maxVal, val));
+}
+
+/**
+ * One generation of the genetic algorithm.
+ */
+function evolveOneGeneration(population) {
+  // Sort by ascending cost
+  population = sortByFitness(population);
+
+  // Record best
+  const best = population[0];
+  const bestCost = computeFitness(best);
+
+  bestSolutions.push({
+    generation: bestSolutions.length + 1,
+    solution: JSON.parse(JSON.stringify(best)), // copy
+    fitness: bestCost
+  });
+
+  // Create next generation
+  const nextGen = [];
+  // keep some elites
+  let eliteCount = Math.floor(population.length * 0.2);
+  for (let i=0; i<eliteCount; i++){
+    nextGen.push(population[i]);
+  }
+
+  // fill the rest using crossover & mutation
+  while (nextGen.length < population.length) {
+    const parentA = population[Math.floor(Math.random()*eliteCount)];
+    const parentB = population[Math.floor(Math.random()*eliteCount)];
+    let child = crossover(parentA, parentB);
+    child = mutate(child, mutationRate);
+    nextGen.push(child);
+  }
+
+  return nextGen;
+}
+
+/************************************************************
+  Main Evolution Loop
+*************************************************************/
+async function runEvolution() {
+  if (terminalPoints.length < 2) {
+    alert("Please define at least 2 tree vertices before starting the run.");
+    runInProgress = false;
+    return;
+  }
+
+  // Initialize population
+  let population = initPopulation(populationSize);
+  bestSolutions = [];
+  updateBestAndFitnessPlots();  // Clear / reset
+
+  // Evolve for maxGenerations
+  for (let gen = 0; gen < maxGenerations; gen++) {
+    if (!runInProgress) break; // if user clicked Stop
+
+    // Next generation
+    population = evolveOneGeneration(population);
+
+    // Update best solution and fitness chart
+    updateBestAndFitnessPlots();
+
+    // small delay for visual effect
+    await new Promise(r => setTimeout(r, 100));
+
+    // If paused, wait until resumed
+    while (paused && runInProgress) {
+      await new Promise(r => setTimeout(r, 200));
+    }
+  }
+
+  runInProgress = false;
+}
+
+/************************************************************
+  Plotting: Best Steiner Tree & Fitness
+*************************************************************/
+/**
+ * Update the Best Steiner Tree and Fitness Over Generations plots.
+ * We do NOT touch the animation plot here, so it won't get stuck at Gen 1.
+ */
+function updateBestAndFitnessPlots() {
+  //--- Best Steiner Tree Plot ---
+  const bestSoFar = bestSolutions.length > 0 
+    ? bestSolutions[bestSolutions.length - 1].solution 
+    : null;
+  const bestFitness = bestSolutions.length > 0
+    ? bestSolutions[bestSolutions.length - 1].fitness
+    : null;
+
+  // Terminals in red
+  let terminalsTrace = {
+    x: terminalPoints.map(p => p.x),
+    y: terminalPoints.map(p => p.y),
+    mode: 'markers',
+    marker: {color: 'red', size: 8},
+    name: 'Terminals'
+  };
+
+  // Steiner in blue
+  let steinerTrace = {
+    x: bestSoFar ? bestSoFar.map(p => p.x) : [],
+    y: bestSoFar ? bestSoFar.map(p => p.y) : [],
+    mode: 'markers',
+    marker: {color: 'blue', size: 6},
+    name: 'Steiner'
+  };
+
+  // If we have a best solution, compute its MST edges for display
+  let mstEdges = [];
+  let lineX = [];
+  let lineY = [];
+  if (bestSoFar) {
+    let allPts = terminalPoints.concat(bestSoFar);
+    let { edges } = computeMST(allPts);
+    mstEdges = edges;  // array of pairs [from, to]
+    mstEdges.forEach(e => {
+      lineX.push(e[0].x, e[1].x, null);
+      lineY.push(e[0].y, e[1].y, null);
+    });
+  }
+
+  let mstTrace = {
+    x: lineX,
+    y: lineY,
+    mode: 'lines',
+    line: {color: 'gray'},
+    name: 'MST Edges'
+  };
+
+  let dataBestSteiner = [terminalsTrace, steinerTrace, mstTrace];
+  let layoutBest = {
+    title: `Best Steiner Tree (Cost=${bestFitness ? bestFitness.toFixed(2) : '---'})`,
+    xaxis: {range: [-1, 11]},
+    yaxis: {range: [-1, 11]},
+    showlegend: true,
+    width: 400,
+    height: 400
+  };
+
+  Plotly.newPlot('bestSteinerTreePlot', dataBestSteiner, layoutBest, {responsive: true})
+    .then((gd) => {
+      // If in manual vertex mode, let user click to add points
+      gd.on('plotly_click', function(data){
+        if (manualEntryMode) {
+          let xVal = data.points[0].x;
+          let yVal = data.points[0].y;
+          terminalPoints.push({x: xVal, y: yVal});
+          updateBestAndFitnessPlots(); // re-draw to show new terminal
+        }
+      });
+    });
+
+  //--- Fitness Plot ---
+  let genArray = bestSolutions.map(bs => bs.generation);
+  let fitnessArray = bestSolutions.map(bs => bs.fitness);
+
+  let fitnessTrace = {
+    x: genArray,
+    y: fitnessArray,
+    mode: 'lines+markers',
+    name: 'Fitness'
+  };
+
+  let layoutFitness = {
+    title: 'Fitness Over Generations',
+    xaxis: {title: 'Generation'},
+    yaxis: {title: 'MST Cost (lower is better)'},
+    width: 400,
+    height: 400
+  };
+
+  Plotly.newPlot('fitnessPlot', [fitnessTrace], layoutFitness, {responsive: true});
+}
+
+/************************************************************
+  Animation Plot
+*************************************************************/
+/**
+ * Animate the best solution over all generations,
+ * showing how it evolved. We'll call this from a timer.
+ */
+function updateAnimationPlot() {
+  if (bestSolutions.length === 0) {
+    Plotly.newPlot('animationPlot', [], {title: 'No data'});
+    return;
+  }
+  // Wrap around
+  animationIndex = animationIndex % bestSolutions.length;
+  let genData = bestSolutions[animationIndex];
+
+  // Prepare traces
+  let terminalsTrace = {
+    x: terminalPoints.map(p => p.x),
+    y: terminalPoints.map(p => p.y),
+    mode: 'markers',
+    marker: {color: 'red', size: 8},
+    name: 'Terminals'
+  };
+
+  let steinerTrace = {
+    x: genData.solution.map(p => p.x),
+    y: genData.solution.map(p => p.y),
+    mode: 'markers',
+    marker: {color: 'blue', size: 6},
+    name: 'Steiner'
+  };
+
+  // Compute MST edges for that generation
+  let allPts = terminalPoints.concat(genData.solution);
+  let { edges } = computeMST(allPts);
+  let lineX = [], lineY = [];
+  edges.forEach(e => {
+    lineX.push(e[0].x, e[1].x, null);
+    lineY.push(e[0].y, e[1].y, null);
+  });
+
+  let mstTrace = {
+    x: lineX,
+    y: lineY,
+    mode: 'lines',
+    line: {color: 'gray'},
+    name: 'MST Edges'
+  };
+
+  let layoutAnim = {
+    title: `Animation - Generation ${genData.generation} (Cost=${genData.fitness.toFixed(2)})`,
+    xaxis: {range: [-1, 11]},
+    yaxis: {range: [-1, 11]},
+    width: 400,
+    height: 400
+  };
+
+  let dataAnim = [terminalsTrace, steinerTrace, mstTrace];
+  Plotly.newPlot('animationPlot', dataAnim, layoutAnim, {responsive: true});
+  
+  // Move to next generation next time
+  animationIndex++;
+}
+
+function startAnimation() {
+  if (animationTimer) stopAnimation();
+  if (bestSolutions.length === 0) {
+    alert("No generations to animate yet.");
+    return;
+  }
+  animationIndex = 0;
+  animationTimer = setInterval(updateAnimationPlot, 500); // 0.5s
+}
+
+function stopAnimation() {
+  if (animationTimer) {
+    clearInterval(animationTimer);
+    animationTimer = null;
+  }
+}
+
+/************************************************************
+  Vertex Entry Buttons
+*************************************************************/
+function randomizeVertices() {
+  if (runInProgress) {
+    alert("Cannot randomize vertices during a run. Stop the run first.");
+    return;
+  }
+  clearRun(); // Clears any old data
+
+  let n = parseInt(document.getElementById('numTreeVertices').value, 10);
+  terminalPoints = [];
+  for (let i=0; i<n; i++) {
+    let x = BOUND_MIN + (BOUND_MAX - BOUND_MIN)*Math.random();
+    let y = BOUND_MIN + (BOUND_MAX - BOUND_MIN)*Math.random();
+    terminalPoints.push({x, y});
+  }
+
+  manualEntryMode = false;
+  updateBestAndFitnessPlots();
+}
+
+function manualVertices() {
+  if (runInProgress) {
+    alert("Cannot manually enter vertices during a run. Stop the run first.");
+    return;
+  }
+  clearRun(); // Clears old data
+  terminalPoints = [];
+  manualEntryMode = true;
+  updateBestAndFitnessPlots();
+  alert("Manual vertex entry mode: Click on the leftmost plot to add vertices.");
+}
+
+/************************************************************
+  Button Handlers
+*************************************************************/
+function startRun() {
+  if (runInProgress) {
+    alert("Run already in progress.");
+    return;
+  }
+  manualEntryMode = false; // once we start, no more manual points
+  populationSize = parseInt(document.getElementById('populationSize').value, 10);
+  maxGenerations = parseInt(document.getElementById('generations').value, 10);
+  mutationRate   = parseFloat(document.getElementById('mutationRate').value);
+
+  runInProgress = true;
+  paused = false;
+  runEvolution();
+}
+
+function stopRun() {
+  runInProgress = false;
+  paused = false;
+}
+
+function resumeRun() {
+  // If we haven't completed the maxGenerations, we can resume
+  if (!runInProgress && bestSolutions.length > 0 && bestSolutions.length < maxGenerations) {
+    runInProgress = true;
+    paused = false;
+    runEvolution();
+  } else {
+    paused = false;
+  }
+}
+
+function clearRun() {
+  stopRun();
+  bestSolutions = [];
+  animationIndex = 0;
+  stopAnimation();
+  updateBestAndFitnessPlots();
+  document.getElementById('reportArea').value = "";
+}
+
+function reportRun() {
+  // Summarize run parameters and final results
+  let text = "";
+  text += "Run Parameters:\n";
+  text += "  Number of Tree Vertices: " + terminalPoints.length + "\n";
+  text += "  Population Size:         " + populationSize + "\n";
+  text += "  Generations:             " + maxGenerations + "\n";
+  text += "  Mutation Rate:           " + mutationRate + "\n\n";
+
+  if (bestSolutions.length > 0) {
+    const lastGen = bestSolutions[bestSolutions.length - 1].generation;
+    const lastFitness = bestSolutions[bestSolutions.length - 1].fitness;
+    text += "Results:\n";
+    text += "  Final Generation: " + lastGen + "\n";
+    text += "  Best Fitness:      " + lastFitness.toFixed(2) + "\n";
+  } else {
+    text += "No results (no generations run yet).\n";
+  }
+
+  document.getElementById('reportArea').value = text;
+}
+
+/************************************************************
+  Navbar Handlers
+*************************************************************/
+function showHelp() {
+  let msg = "Help:\n\n"
+    + "1. Define your tree vertices either randomly or manually:\n"
+    + "   - Randomize Vertices: Enter 'Number of Tree Vertices', click [Randomize Vertices].\n"
+    + "   - Manual Vertices: Click [Manual Vertices], then click on the leftmost plot to add each vertex.\n"
+    + "2. Once vertices are defined, set GA parameters (Population Size, Generations, Mutation Rate).\n"
+    + "3. Click [Start] to run the evolutionary algorithm.\n"
+    + "   - The left plot shows the best MST (Terminals+Steiner points) each generation.\n"
+    + "   - The middle plot shows best MST cost over generations.\n"
+    + "4. [Stop] ends the current run, [Resume] continues if not finished.\n"
+    + "5. [Play Animation] cycles through best solutions from Gen 1 to the final.\n"
+    + "6. [Report] summarizes parameters and final result.\n"
+    + "7. [Clear] resets everything.\n";
+  alert(msg);
+}
+
+function showAbout() {
+    alert("<h1>About:\n\nSteiner Tree Problem demo with a simple Genetic Algorithm</h1><p>This page was derived by prompting OpenAI's ChatGPT o1 LLM to implement Dave Thomas's description of the Steiner Tree problem, based on Dave's PandasThumb blog post. This is the result of the second refining prompt, and there is stil improvement to be made, such as allowing the number of Steiner points to be specified.</p>\n<p>Copyight 2025 by Wesley R. Elsberry<br/>Released under MIT License.");
+}
+</script>
+
+</body>
+</html>

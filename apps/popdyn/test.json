@@ -1,0 +1,31 @@
+[
+  {
+    "species": "Test LMatrix ex1",
+    "matrices": [
+      {
+        "label": "Example 1 from matpopdyn",
+        "matrix": [
+          [0.5, 2.4, 1.0, 0.0],
+          [0.5, 0.0, 0.0, 0.0],
+          [0.0, 0.8, 0.0, 0.0],
+          [0.0, 0.0, 0.5, 0.0]
+        ],
+        "citation": "None"
+      }
+    ]
+  },
+  {
+    "species": "Test LMatrix ex2",
+    "matrices": [
+      {
+        "label": "Example 2 from matpopdyn",
+        "matrix": [
+          [0.0,   52.0,  279.5],
+          [0.024, 0.25,  0.0  ],
+          [0.0,   0.08,  0.43 ]
+        ],
+        "citation": "None"
+      }
+    ]
+  }
+]

@@ -1,0 +1,63 @@
+{
+  "slug": "cumulative-selection-explorer",
+  "title": "Cumulative Selection Explorer",
+  "published": true,
+  "visibility": "public",
+  "role": "Compare cumulative selection with random change and see how repeated choice reshapes outcomes.",
+  "category": "artificial-life",
+  "entrypoint": "/apps/cumulative-selection-explorer/",
+  "description": "A classic selection demo reframed as a tool for exploring variation, selection, and the limits of simple models.",
+  "legacy_names": [
+    "Weasel Program",
+    "weasel"
+  ],
+  "pages": {
+    "landing": "/apps/cumulative-selection-explorer/",
+    "application": "/apps/cumulative-selection-explorer/app/",
+    "study_guide": "/apps/cumulative-selection-explorer/study-guide.html",
+    "teacher_guide": "/apps/cumulative-selection-explorer/teacher-guide.html",
+    "standards": "/apps/cumulative-selection-explorer/standards.html",
+    "curriculum_alignment": "/apps/cumulative-selection-explorer/standards.html",
+    "about": "/apps/cumulative-selection-explorer/about.html"
+  },
+  "implementation": {
+    "legacy_hub": "/apps/weasel/",
+    "launch_target": "/apps/weasel/weaselui.html"
+  },
+  "api": {
+    "status": "prototype",
+    "family": "artificial-life",
+    "docs": "/apps/api/artificial-life/",
+    "module": "/apps/api/artificial-life/artificial-life.js",
+    "notes": "A shared browser and node-consumable API module now exists for the artificial-life remediation family."
+  },
+  "tests": {
+    "status": "prototype",
+    "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/artificial-life/artificial-life.test.js",
+    "notes": "A node-based contract test suite now exercises the shared artificial-life family API module."
+  },
+  "status": {
+    "landing": "standardized",
+    "application": "responsive-direct",
+    "study_guide": "present",
+    "teacher_guide": "present",
+    "standards": "present",
+    "curriculum_alignment": "present",
+    "api": "prototype",
+    "tests": "prototype"
+  },
+  "provenance": {
+    "summary": "Public evo-edu framing over the legacy Weasel demonstration.",
+    "details": "Cumulative Selection Explorer is the evo-edu public route for the Weasel-style cumulative-selection model family. The remediation pass now includes a direct responsive workbench using the shared artificial-life API while preserving the older Weasel route as a legacy reference.",
+    "lineage": [
+      "Public evo-edu route: Cumulative Selection Explorer",
+      "Legacy implementation directory: /apps/weasel/",
+      "Current launch target: /apps/weasel/weaselui.html"
+    ],
+    "limits": [
+      "The new public workbench uses the shared artificial-life API rather than the older embedded route.",
+      "The older Weasel-style route remains available as a legacy reference.",
+      "The tool is useful for model critique, but it does not by itself represent the full complexity of biological evolution."
+    ]
+  }
+}

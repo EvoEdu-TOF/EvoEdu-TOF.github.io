@@ -1,0 +1,63 @@
+{
+  "slug": "gene-flow-mapper",
+  "title": "Gene Flow Mapper",
+  "published": true,
+  "visibility": "public",
+  "role": "Explore how movement, distance, and barriers shape gene flow across landscapes.",
+  "category": "population-genetics",
+  "entrypoint": "/apps/gene-flow-mapper/",
+  "description": "An interactive landscape-genetics tool for investigating dispersal, fragmentation, and population structure.",
+  "legacy_names": [
+    "Landscape Genetics Simulator",
+    "landgen"
+  ],
+  "pages": {
+    "landing": "/apps/gene-flow-mapper/",
+    "application": "/apps/gene-flow-mapper/app/",
+    "study_guide": "/apps/gene-flow-mapper/study-guide.html",
+    "teacher_guide": "/apps/gene-flow-mapper/teacher-guide.html",
+    "standards": "/apps/gene-flow-mapper/standards.html",
+    "curriculum_alignment": "/apps/gene-flow-mapper/standards.html",
+    "about": "/apps/gene-flow-mapper/about.html"
+  },
+  "implementation": {
+    "legacy_hub": "/apps/landgen/",
+    "launch_target": "/apps/landgen/landgenapp104.html"
+  },
+  "api": {
+    "status": "prototype",
+    "family": "population-genetics",
+    "docs": "/apps/api/population-genetics/",
+    "module": "/apps/api/population-genetics/population-genetics.js",
+    "notes": "A shared browser and node-consumable API module now exists for the first population-genetics remediation family."
+  },
+  "tests": {
+    "status": "prototype",
+    "runner": "node --test /mnt/data/www/dev/evo-edu.org/wordpress_data/apps/api/population-genetics/population-genetics.test.js",
+    "notes": "A node-based contract test suite now exercises the shared family API module."
+  },
+  "status": {
+    "landing": "standardized",
+    "application": "responsive-direct",
+    "study_guide": "present",
+    "teacher_guide": "present",
+    "standards": "present",
+    "curriculum_alignment": "present",
+    "api": "prototype",
+    "tests": "prototype"
+  },
+  "provenance": {
+    "summary": "Public evo-edu framing over the legacy landgen implementation.",
+    "details": "Gene Flow Mapper is the evo-edu public route for the landgen spatial-population model family. The remediation pass now includes a direct responsive summary workbench using the shared population-genetics API while preserving the older detailed spatial map as a legacy route.",
+    "lineage": [
+      "Public evo-edu route: Gene Flow Mapper",
+      "Legacy implementation directory: /apps/landgen/",
+      "Current launch target: /apps/landgen/landgenapp104.html"
+    ],
+    "limits": [
+      "The new public workbench uses the shared population-genetics API summary view rather than a full cell-by-cell map.",
+      "The older detailed spatial map remains available as a legacy route.",
+      "Broader test coverage and richer public spatial rendering are still pending."
+    ]
+  }
+}

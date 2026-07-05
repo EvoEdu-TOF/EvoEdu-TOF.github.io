@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mendel.js with Navbar</title>
+    <!-- Include Plotly from CDN or local copy -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            width: 100%;
+            background-color: #f2f2f2;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0.5rem 1rem;
+        }
+        nav a {
+            margin-right: 1rem;
+            text-decoration: none;
+            color: #333;
+        }
+        #content {
+            padding: 1rem;
+        }
+        #controls {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#help">Help</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <div id="content">
+        <h1>Mendel.js Simulation</h1>
+        <div id="controls">
+            <label for="populationSize">Population Size:</label>
+            <input type="number" id="populationSize" value="1000" min="1">
+
+            <label for="genomeSize">Genome Size:</label>
+            <input type="number" id="genomeSize" value="100" min="1">
+
+            <label for="mutationRate">Mutation Rate:</label>
+            <input type="number" step="0.001" id="mutationRate" value="0.01" min="0">
+
+            <label for="generations">Generations:</label>
+            <input type="number" id="generations" value="100" min="1">
+            <button onclick="startSimulation()">Start Simulation</button>
+        </div>
+        <div id="chart"></div>
+    </div>
+
+    <!-- The Worker Code -->
+    <script type="text/javascript" id="workerScript">
+        const code = `self.onmessage = function(e) {\n    const params = e.data;\n    const result = runSimulation(params);\n    self.postMessage(result);\n};\n\nfunction runSimulation(params) {\n    let population = initializePopulation(params.populationSize, params.genomeSize);\n    let results = [];\n\n    for (let gen = 0; gen < params.generations; gen++) {\n        population = applyMutations(population, params.mutationRate);\n        population = applySelection(population);\n        let avgFitness = calculateAverageFitness(population);\n        results.push({ generation: gen, avgFitness, populationSize: population.length });\n    }\n\n    return results;\n}\n\nfunction initializePopulation(size, genomeSize) {\n    return new Array(size).fill(null).map(() => ({ \n        genome: new Array(genomeSize).fill(0), \n        fitness: 1.0 \n    }));\n}\n\nfunction applyMutations(population, mutationRate) {\n    return population.map(ind => {\n        let newGenome = ind.genome.map(gene => (Math.random() < mutationRate ? gene + (Math.random() * 2 - 1) : gene));\n        return { genome: newGenome, fitness: calculateFitness(newGenome) };\n    });\n}\n\nfunction calculateFitness(genome) {\n    // Basic fitness function: the more deviation from 0, the lower the fitness\n    // Real models may be more complex.\n    const totalEffect = genome.reduce((sum, g) => sum + Math.abs(g), 0);\n    return Math.exp(-totalEffect);\n}\n\nfunction applySelection(population) {\n    const totalFitness = population.reduce((sum, ind) => sum + ind.fitness, 0);\n    return population.filter(ind => {\n        // Probability of survival is proportional to fitness relative to total.\n        return Math.random() < (ind.fitness / totalFitness);\n    });\n}\n\nfunction calculateAverageFitness(population) {\n    if (population.length === 0) return 0;\n    return population.reduce((sum, ind) => sum + ind.fitness, 0) / population.length;\n}\n`;
+        // Create a blob from code string
+        const blob = new Blob([code], { type: 'application/javascript' });
+        // Overwrite the global worker URL
+        window.mendelWorkerURL = URL.createObjectURL(blob);
+    </script>
+
+    <script>
+        // Prepare the worker after we create the blob
+        let worker;
+        function startSimulation() {
+            if (worker) {
+                worker.terminate();
+            }
+            worker = new Worker(window.mendelWorkerURL);
+
+            const params = {
+                populationSize: parseInt(document.getElementById('populationSize').value, 10),
+                genomeSize: parseInt(document.getElementById('genomeSize').value, 10),
+                mutationRate: parseFloat(document.getElementById('mutationRate').value),
+                generations: parseInt(document.getElementById('generations').value, 10)
+            };
+
+            worker.onmessage = function(e) {
+                const results = e.data;
+                plotResults(results);
+            };
+
+            worker.postMessage(params);
+        }
+
+        function plotResults(results) {
+            const traceFitness = {
+                x: results.map(r => r.generation),
+                y: results.map(r => r.avgFitness),
+                mode: 'lines+markers',
+                type: 'scatter',
+                name: 'Avg Fitness'
+            };
+            const tracePopSize = {
+                x: results.map(r => r.generation),
+                y: results.map(r => r.populationSize),
+                mode: 'lines+markers',
+                type: 'scatter',
+                name: 'Population Size',
+                yaxis: 'y2'
+            };
+
+            const layout = {
+                title: 'Mendel.js Simulation Results',
+                xaxis: { title: 'Generation' },
+                yaxis: { title: 'Avg Fitness' },
+                yaxis2: {
+                    title: 'Population Size',
+                    overlaying: 'y',
+                    side: 'right'
+                }
+            };
+
+            Plotly.newPlot('chart', [traceFitness, tracePopSize], layout);
+        }
+    </script>
+</body>
+</html>

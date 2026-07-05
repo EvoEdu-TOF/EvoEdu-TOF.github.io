@@ -1,0 +1,184 @@
+{
+  "schema": "evo-edu.notebook.learning_path.v1",
+  "id": "notebook.learning-paths.foundations-first-ring",
+  "title": "Foundations First Ring",
+  "created": "2026-05-14",
+  "updated": "2026-05-14",
+  "status": "draft-current-sequence",
+  "path_kind": "recommended_core_sequence",
+  "selection_principles": [
+    "Begin with empirical reasoning: distinguish observation, baseline, candidate cause, chance mechanism, value claim, magnitude, model boundary, and simplification before assigning mechanisms.",
+    "Respect conceptual dependency without letting graph roots alone determine the order.",
+    "Prefer concrete and measurable concepts before broader historical interpretation.",
+    "Prefer scaffold-backed pages that already have worked examples, prompt seeds, and visible source-trail status.",
+    "Use null-model reasoning early so later mechanism claims can be compared against a baseline."
+  ],
+  "prelude": {
+    "title": "Evidence And Cause",
+    "url": "/apps/evidence-cause-workbench/",
+    "why_before_the_ring": "Learners should first practice separating a measured phenomenon from causal attribution, because every later mechanism exercise uses simplifications, null expectations, stochastic mechanisms, and model-boundary choices.",
+    "tool_links": [
+      "/apps/evidence-cause-workbench/",
+      "/apps/evidence-cause-workbench/study-guide.html"
+    ]
+  },
+  "steps": [
+    {
+      "position": 1,
+      "concept_id": "notebook.concepts.allele-frequency-change",
+      "title": "Allele Frequency Change",
+      "url": "/notebook/concepts/allele-frequency-change.html",
+      "why_here": "This is the basic measurable frame for population-genetic change. It gives the learner a concrete way to describe what counts as evolution in the population-genetic sense.",
+      "assumes": [],
+      "unlocks": [
+        "Hardy-Weinberg Equilibrium",
+        "Genetic Drift",
+        "Natural Selection",
+        "Mutation"
+      ],
+      "tool_links": [
+        "/apps/evidence-cause-workbench/",
+        "/evo/packs/population-change/",
+        "/apps/allele-tracker/",
+        "/apps/allele-tracker/study-guide.html",
+        "/apps/literature-explorer/"
+      ]
+    },
+    {
+      "position": 2,
+      "concept_id": "notebook.concepts.hardy-weinberg-equilibrium",
+      "title": "Hardy-Weinberg Equilibrium",
+      "url": "/notebook/concepts/hardy-weinberg-equilibrium.html",
+      "why_here": "This introduces the null-model baseline before deeper mechanism comparison. Learners can ask why observed populations depart from expectation instead of jumping too quickly to a single cause.",
+      "assumes": [
+        "Allele Frequency Change"
+      ],
+      "unlocks": [
+        "Genetic Drift",
+        "Natural Selection"
+      ],
+      "tool_links": [
+        "/apps/literature-explorer/"
+      ]
+    },
+    {
+      "position": 3,
+      "concept_id": "notebook.concepts.genetic-drift",
+      "title": "Genetic Drift",
+      "url": "/notebook/concepts/genetic-drift.html",
+      "why_here": "Drift is a concrete first mechanism because repeated runs make chance variation visible and because it teaches that frequency change is not automatically adaptive or directional.",
+      "assumes": [
+        "Allele Frequency Change",
+        "Hardy-Weinberg Equilibrium"
+      ],
+      "unlocks": [
+        "Natural Selection",
+        "Adaptation",
+        "Speciation"
+      ],
+      "tool_links": [
+        "/evo/packs/population-change/",
+        "/apps/allele-tracker/",
+        "/apps/literature-explorer/"
+      ]
+    },
+    {
+      "position": 4,
+      "concept_id": "notebook.concepts.natural-selection",
+      "title": "Natural Selection",
+      "url": "/notebook/concepts/natural-selection.html",
+      "why_here": "Selection is best taught after the learner already sees that change can happen without advantage. That makes the evidence for biased reproductive difference easier to state clearly.",
+      "assumes": [
+        "Allele Frequency Change",
+        "Hardy-Weinberg Equilibrium",
+        "Genetic Drift"
+      ],
+      "unlocks": [
+        "Adaptation",
+        "Speciation",
+        "Common Descent"
+      ],
+      "tool_links": [
+        "/evo/packs/population-change/",
+        "/apps/allele-tracker/",
+        "/apps/literature-explorer/"
+      ]
+    },
+    {
+      "position": 5,
+      "concept_id": "notebook.concepts.mutation",
+      "title": "Mutation",
+      "url": "/notebook/concepts/mutation.html",
+      "why_here": "Mutation is placed after the first mechanism contrast so learners can distinguish the origin of a variant from the later mechanisms that change its frequency.",
+      "assumes": [
+        "Allele Frequency Change",
+        "Genetic Drift",
+        "Natural Selection"
+      ],
+      "unlocks": [
+        "Adaptation",
+        "Speciation"
+      ],
+      "tool_links": [
+        "/evo/packs/population-change/",
+        "/apps/literature-explorer/"
+      ]
+    },
+    {
+      "position": 6,
+      "concept_id": "notebook.concepts.adaptation",
+      "title": "Adaptation",
+      "url": "/notebook/concepts/adaptation.html",
+      "why_here": "Adaptation is an interpretation discipline concept. It belongs after learners can already distinguish drift, selection, and mutation, so the adaptive claim is not confused with any change whatsoever.",
+      "assumes": [
+        "Genetic Drift",
+        "Natural Selection",
+        "Mutation"
+      ],
+      "unlocks": [
+        "Speciation",
+        "Common Descent"
+      ],
+      "tool_links": [
+        "/evo/packs/population-change/",
+        "/apps/literature-explorer/"
+      ]
+    },
+    {
+      "position": 7,
+      "concept_id": "notebook.concepts.speciation",
+      "title": "Speciation",
+      "url": "/notebook/concepts/speciation.html",
+      "why_here": "Speciation moves from population-level mechanism to lineage-level divergence. It fits after the learner already understands how populations change and why they may stop functioning as one gene pool.",
+      "assumes": [
+        "Genetic Drift",
+        "Natural Selection",
+        "Adaptation"
+      ],
+      "unlocks": [
+        "Common Descent"
+      ],
+      "tool_links": [
+        "/apps/literature-explorer/"
+      ]
+    },
+    {
+      "position": 8,
+      "concept_id": "notebook.concepts.common-descent",
+      "title": "Common Descent",
+      "url": "/notebook/concepts/common-descent.html",
+      "why_here": "Common descent is the larger historical synthesis. It comes last in this first ring because it makes the most sense after learners already understand local mechanisms, lineage splitting, and the need for nested historical evidence.",
+      "assumes": [
+        "Natural Selection",
+        "Adaptation",
+        "Speciation"
+      ],
+      "unlocks": [
+        "deeper history and evidence clusters"
+      ],
+      "tool_links": [
+        "/apps/literature-explorer/"
+      ]
+    }
+  ]
+}

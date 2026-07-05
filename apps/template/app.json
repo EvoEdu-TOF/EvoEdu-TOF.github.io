@@ -1,0 +1,10 @@
+{
+  "slug": "template",
+  "title": "Template",
+  "published": false,
+  "visibility": "internal",
+  "role": "Template or scaffold directory not intended for public site navigation.",
+  "category": "internal",
+  "entrypoint": "/apps/template/template.html",
+  "description": "Not currently included in public evo-edu.org pages."
+}

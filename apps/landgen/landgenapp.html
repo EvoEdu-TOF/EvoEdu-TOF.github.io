@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landscape Genetics Simulator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f7f4;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #2e6e4c;
+    }
+    canvas {
+      margin-top: 20px;
+      border: 2px solid #2e6e4c;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #66c2a5;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #519e83;
+    }
+  </style>
+</head>
+<body>
+  <h1>Landscape Genetics Simulator</h1>
+  <p>Visualize genetic drift and barriers to gene flow in a spatially structured population.</p>
+  <canvas id="simCanvas"></canvas>
+  <br>
+  <button id="startBtn">Start Simulation</button>
+
+  <script>
+    const gridSize = 50;
+    const cellSize = 10;
+    const generations = 100;
+    const mutationRate = 0.001;
+    const dispersalDistance = 1;
+
+    let grid = [];
+    let barrier = [];
+
+    function createIndividual() {
+      return { allele: Math.random() < 0.5 ? 0 : 1 };
+    }
+
+    function initGrid() {
+      grid = new Array(gridSize).fill(null).map(() =>
+        new Array(gridSize).fill(null).map(() => createIndividual())
+      );
+      barrier = new Array(gridSize).fill(false);
+      for (let y = 0; y < gridSize; y++) {
+        barrier[y] = gridSize / 2;
+      }
+    }
+
+    function reproduce(x, y) {
+      const candidates = [];
+      for (let dx = -1; dx <= 1; dx++) {
+        for (let dy = -1; dy <= 1; dy++) {
+          const nx = x + dx;
+          const ny = y + dy;
+          if (
+            nx >= 0 && nx < gridSize &&
+            ny >= 0 && ny < gridSize &&
+            !(dx === 0 && dy === 0)
+          ) {
+            candidates.push(grid[ny][nx]);
+          }
+        }
+      }
+      if (candidates.length === 0) return createIndividual();
+      const mate = candidates[Math.floor(Math.random() * candidates.length)];
+      let allele = mate.allele;
+      if (Math.random() < mutationRate) allele = 1 - allele;
+      return { allele };
+    }
+
+    function nextGeneration() {
+      const newGrid = [];
+      for (let y = 0; y < gridSize; y++) {
+        newGrid[y] = [];
+        for (let x = 0; x < gridSize; x++) {
+          newGrid[y][x] = reproduce(x, y);
+        }
+      }
+      grid = newGrid;
+    }
+
+    function drawGrid(ctx) {
+      ctx.clearRect(0, 0, gridSize * cellSize, gridSize * cellSize);
+      for (let y = 0; y < gridSize; y++) {
+        for (let x = 0; x < gridSize; x++) {
+          ctx.fillStyle = grid[y][x].allele === 0 ? '#66c2a5' : '#fc8d62';
+          ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+        }
+      }
+      ctx.fillStyle = '#333';
+      for (let y = 0; y < gridSize; y++) {
+        const x = barrier[y];
+        ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+      }
+    }
+
+    function runSimulation(ctx) {
+      let gen = 0;
+      function step() {
+        if (gen++ >= generations) return;
+        nextGeneration();
+        drawGrid(ctx);
+        requestAnimationFrame(step);
+      }
+      step();
+    }
+
+    window.onload = () => {
+      const canvas = document.getElementById('simCanvas');
+      canvas.width = gridSize * cellSize;
+      canvas.height = gridSize * cellSize;
+      const ctx = canvas.getContext('2d');
+      initGrid();
+      drawGrid(ctx);
+
+      const startBtn = document.getElementById('startBtn');
+      startBtn.onclick = () => runSimulation(ctx);
+    };
+  </script>
+</body>
+</html>
+

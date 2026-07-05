@@ -1,0 +1,11 @@
+{
+  "slug": "steiner",
+  "title": "Steiner",
+  "published": false,
+  "visibility": "legacy",
+  "role": "Underlying implementation directory for the public Network Builder route.",
+  "category": "artificial-life",
+  "entrypoint": "/apps/steiner/jssteiner.html",
+  "description": "Retained behind the public Network Builder framing.",
+  "legacy_names": ["Steiner Tree GA"]
+}

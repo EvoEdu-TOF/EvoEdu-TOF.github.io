@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landscape Genetics Simulator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f7f4;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #2e6e4c;
+    }
+    canvas {
+      margin-top: 20px;
+      border: 2px solid #2e6e4c;
+    }
+    button, input {
+      margin: 10px;
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #66c2a5;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #519e83;
+    }
+    #controls {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Landscape Genetics Simulator</h1>
+  <p>Visualize genetic drift and barriers to gene flow in a spatially structured population.</p>
+
+  <div id="controls">
+    <label>Mutation Rate: <input type="number" id="mutationRateInput" value="0.001" step="0.0001"></label>
+    <label>Generations: <input type="number" id="generationsInput" value="100" step="1"></label>
+    <button id="startBtn">Start Simulation</button>
+    <button id="exportBtn">Export Data</button>
+    <div id="report"></div>
+  </div>
+
+  <canvas id="simCanvas"></canvas>
+
+  <script>
+    const gridSize = 50;
+    const cellSize = 10;
+    let generations = 100;
+    let mutationRate = 0.001;
+
+    let grid = [];
+    let barrier = [];
+    let generationCount = 0;
+    let alleleStats = [];
+
+    function createIndividual() {
+      return { allele: Math.random() < 0.5 ? 0 : 1 };
+    }
+
+    function initGrid() {
+      grid = new Array(gridSize).fill(null).map(() =>
+        new Array(gridSize).fill(null).map(() => createIndividual())
+      );
+      barrier = new Array(gridSize).fill(false);
+      for (let y = 0; y < gridSize; y++) {
+        barrier[y] = gridSize / 2;
+      }
+      alleleStats = [];
+      generationCount = 0;
+    }
+
+    function reproduce(x, y) {
+      const candidates = [];
+      for (let dx = -1; dx <= 1; dx++) {
+        for (let dy = -1; dy <= 1; dy++) {
+          const nx = x + dx;
+          const ny = y + dy;
+          if (
+            nx >= 0 && nx < gridSize &&
+            ny >= 0 && ny < gridSize &&
+            !(dx === 0 && dy === 0)
+          ) {
+            candidates.push(grid[ny][nx]);
+          }
+        }
+      }
+      if (candidates.length === 0) return createIndividual();
+      const mate = candidates[Math.floor(Math.random() * candidates.length)];
+      let allele = mate.allele;
+      if (Math.random() < mutationRate) allele = 1 - allele;
+      return { allele };
+    }
+
+    function nextGeneration() {
+      const newGrid = [];
+      for (let y = 0; y < gridSize; y++) {
+        newGrid[y] = [];
+        for (let x = 0; x < gridSize; x++) {
+          newGrid[y][x] = reproduce(x, y);
+        }
+      }
+      grid = newGrid;
+      generationCount++;
+      recordStats();
+    }
+
+    function drawGrid(ctx) {
+      ctx.clearRect(0, 0, gridSize * cellSize, gridSize * cellSize);
+      for (let y = 0; y < gridSize; y++) {
+        for (let x = 0; x < gridSize; x++) {
+          ctx.fillStyle = grid[y][x].allele === 0 ? '#66c2a5' : '#fc8d62';
+          ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+        }
+      }
+      ctx.fillStyle = '#333';
+      for (let y = 0; y < gridSize; y++) {
+        const x = barrier[y];
+        ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+      }
+    }
+
+    function recordStats() {
+      let count0 = 0, count1 = 0;
+      for (let y = 0; y < gridSize; y++) {
+        for (let x = 0; x < gridSize; x++) {
+          if (grid[y][x].allele === 0) count0++;
+          else count1++;
+        }
+      }
+      const total = count0 + count1;
+      const freq0 = count0 / total;
+      const freq1 = count1 / total;
+      alleleStats.push({ generation: generationCount, freq0, freq1 });
+      document.getElementById('report').textContent = `Generation ${generationCount}: Allele 0 = ${(freq0*100).toFixed(1)}%, Allele 1 = ${(freq1*100).toFixed(1)}%`;
+    }
+
+    function runSimulation(ctx) {
+      generations = parseInt(document.getElementById('generationsInput').value);
+      mutationRate = parseFloat(document.getElementById('mutationRateInput').value);
+      initGrid();
+      drawGrid(ctx);
+      let gen = 0;
+      function step() {
+        if (gen++ >= generations) return;
+        nextGeneration();
+        drawGrid(ctx);
+        requestAnimationFrame(step);
+      }
+      step();
+    }
+
+    function exportData() {
+      let csv = 'generation,allele_0,allele_1\n';
+      alleleStats.forEach(row => {
+        csv += `${row.generation},${row.freq0.toFixed(4)},${row.freq1.toFixed(4)}\n`;
+      });
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'allele_frequencies.csv';
+      link.click();
+    }
+
+    window.onload = () => {
+      const canvas = document.getElementById('simCanvas');
+      canvas.width = gridSize * cellSize;
+      canvas.height = gridSize * cellSize;
+      const ctx = canvas.getContext('2d');
+      initGrid();
+      drawGrid(ctx);
+      document.getElementById('startBtn').onclick = () => runSimulation(ctx);
+      document.getElementById('exportBtn').onclick = exportData;
+    };
+  </script>
+</body>
+</html>

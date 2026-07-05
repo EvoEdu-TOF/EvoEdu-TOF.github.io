@@ -1,0 +1,119 @@
+{
+  "schema": "evo-edu.notebook.reasoning_scaffold.v1",
+  "id": "notebook.concepts.mutation",
+  "title": "Mutation",
+  "created": "2026-05-14",
+  "updated": "2026-05-14",
+  "status": "pilot-reviewed-scaffold",
+  "concept_targets": [
+    "mutation",
+    "new variation",
+    "allele origin",
+    "source of variation",
+    "selection contrast",
+    "drift contrast",
+    "population genetics"
+  ],
+  "site_links": [
+    {
+      "kind": "concept",
+      "title": "Allele Frequency Change",
+      "url": "/notebook/concepts/allele-frequency-change.html"
+    },
+    {
+      "kind": "concept",
+      "title": "Genetic Drift",
+      "url": "/notebook/concepts/genetic-drift.html"
+    },
+    {
+      "kind": "concept",
+      "title": "Natural Selection",
+      "url": "/notebook/concepts/natural-selection.html"
+    },
+    {
+      "kind": "pack",
+      "title": "Population Change",
+      "url": "/evo/packs/population-change/"
+    },
+    {
+      "kind": "research_tool",
+      "title": "Literature Explorer",
+      "url": "/apps/literature-explorer/"
+    }
+  ],
+  "records": [
+    {
+      "id": "mu-001",
+      "type": "definition-check",
+      "question": "What does mutation explain?",
+      "answer_summary": "Mutation explains the appearance of a new heritable variant. It does not by itself explain the later frequency pattern of that variant.",
+      "verification_prompt": "Separate the first appearance of the variant from the later changes in its frequency.",
+      "misconception_guard": "Do not use mutation as a complete explanation when later mechanisms still need to be named.",
+      "didactopus_prompt_seed": "Write one sentence about origin and one sentence about later frequency change."
+    },
+    {
+      "id": "mu-002",
+      "type": "source-of-variation",
+      "question": "Why can mutation matter even when it is rare?",
+      "answer_summary": "Mutation continually introduces new variation. Over many individuals and many generations, it supplies the raw material that other mechanisms can later change.",
+      "verification_prompt": "Ask whether the explanation is about introducing a new allele or about changing the frequency of an existing one.",
+      "misconception_guard": "Do not confuse rarity of a single event with unimportance over population timescales.",
+      "didactopus_prompt_seed": "Explain why a rare event can still matter across many generations."
+    },
+    {
+      "id": "mu-003",
+      "type": "value-check",
+      "question": "Is every mutation beneficial?",
+      "answer_summary": "No. Mutations can be harmful, neutral, or beneficial depending on their effects and the environment.",
+      "verification_prompt": "Name the trait effect and the environmental context before assigning value.",
+      "misconception_guard": "Do not treat mutation as automatically progressive or helpful.",
+      "didactopus_prompt_seed": "Describe one way the same kind of change could be neutral in one context and costly in another."
+    },
+    {
+      "id": "mu-004",
+      "type": "mechanism-chain",
+      "question": "Why distinguish mutation from selection?",
+      "answer_summary": "Mutation introduces a variant; selection can later favor or disfavor it. They are linked, but they are not the same mechanism.",
+      "verification_prompt": "Ask what evidence shows origin and what evidence shows later differential survival or reproduction.",
+      "misconception_guard": "Do not collapse source of variation and filter on variation into one step.",
+      "didactopus_prompt_seed": "Rewrite the explanation so mutation and selection are described as separate stages."
+    },
+    {
+      "id": "mu-005",
+      "type": "drift-contrast",
+      "question": "Why keep drift in the picture after a mutation appears?",
+      "answer_summary": "A new variant can be lost or fixed by chance, especially in small populations, before any selective effect becomes clear.",
+      "verification_prompt": "Compare runs where the new allele appears but no fitness difference is assigned.",
+      "misconception_guard": "Do not assume a new variant persists long enough to matter just because it appeared.",
+      "didactopus_prompt_seed": "Name what evidence would show drift acting on a newly introduced allele."
+    }
+  ],
+  "citegeist_source_slots": [
+    {
+      "slot": "mutation-foundations",
+      "needed_for": "Foundational treatments of mutation as a source of variation",
+      "candidate_queries": [
+        "mutation source of variation population genetics classic treatment",
+        "de Vries mutation theory heredity variation",
+        "population genetics mutation source of new alleles"
+      ],
+      "review_status": "pending"
+    },
+    {
+      "slot": "mutation-selection-distinction",
+      "needed_for": "Explanatory treatments distinguishing mutation from later selection or drift",
+      "candidate_queries": [
+        "mutation selection distinction allele frequency change explanation",
+        "population genetics mutation drift selection educational explanation"
+      ],
+      "review_status": "pending"
+    }
+  ],
+  "doclift_use": "Use this JSON as a fixture for concept pages that distinguish origin of variation from later population change.",
+  "groundrecall_use": "Store rationale, pending source-slot work, and revisions so later concept pages can reuse the distinction between mutation and later filtering mechanisms.",
+  "next_review_steps": [
+    "Backfill reviewed sources for classic and explanatory treatments of mutation.",
+    "Add one worked scenario where a new variant is lost by drift and another where it rises under selection.",
+    "Link this page into later Notebook pages on adaptation, novelty, and speciation."
+  ]
+}

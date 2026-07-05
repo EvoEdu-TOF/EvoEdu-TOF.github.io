@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Population Genetics API - evo-edu.org</title>
+  <link rel="stylesheet" href="/shared/evo-edu.css">
+  <script src="/shared/evo-shell.js" defer></script>
+  <script src="/apps/api/population-genetics/population-genetics.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-topbar">
+      <div class="brand-block">
+        <span class="brand-mark">App API</span>
+        <a href="/">evo-edu.org</a>
+        <p class="brand-summary">Shared programmable interfaces for the first remediated app family.</p>
+      </div>
+      <nav class="site-nav" data-evo-nav></nav>
+    </header>
+
+    <section class="hero-card">
+      <p class="eyebrow">Population Genetics API</p>
+      <h1>Programmable simulation interfaces for allele tracking, gene flow, and life-cycle modeling.</h1>
+      <p class="lede lede-strong">
+        This API surface is the first technical remediation layer behind the standardized app pages.
+        It exposes reusable simulation functions for browser use and node-based tests.
+      </p>
+    </section>
+
+    <section class="content-card">
+      <p class="section-kicker">Available Interfaces</p>
+      <div class="api-reference">
+        <article class="api-endpoint">
+          <div class="api-endpoint-header">
+            <h3>Allele Tracker</h3>
+            <span class="api-badge">Prototype</span>
+          </div>
+          <p>Run allele-frequency simulations across drift, selection, mutation, and migration settings.</p>
+          <div class="api-signature"><code>window.evoEduApis.populationGenetics.alleleTracker.runSimulation(params)</code></div>
+          <div class="api-meta">
+            <div><strong>Family</strong><span>Population genetics</span></div>
+            <div><strong>Used by</strong><span><a href="/apps/allele-tracker/">Allele Tracker</a></span></div>
+            <div><strong>Input shape</strong><span>Simulation parameters object</span></div>
+            <div><strong>Status</strong><span>Shared browser and node-consumable family API module.</span></div>
+          </div>
+        </article>
+        <article class="api-endpoint">
+          <div class="api-endpoint-header">
+            <h3>Gene Flow Mapper</h3>
+            <span class="api-badge">Prototype</span>
+          </div>
+          <p>Run spatial population-change simulations for movement, barriers, and dispersal structure.</p>
+          <div class="api-signature"><code>window.evoEduApis.populationGenetics.geneFlowMapper.runSimulation(params)</code></div>
+          <div class="api-meta">
+            <div><strong>Family</strong><span>Population genetics</span></div>
+            <div><strong>Used by</strong><span><a href="/apps/gene-flow-mapper/">Gene Flow Mapper</a></span></div>
+            <div><strong>Input shape</strong><span>Simulation parameters object</span></div>
+            <div><strong>Status</strong><span>Shared browser and node-consumable family API module.</span></div>
+          </div>
+        </article>
+        <article class="api-endpoint">
+          <div class="api-endpoint-header">
+            <h3>Life Cycle Modeler</h3>
+            <span class="api-badge">Prototype</span>
+          </div>
+          <p>Project stage- or age-structured populations across repeated intervals.</p>
+          <div class="api-signature"><code>window.evoEduApis.populationGenetics.lifeCycleModeler.projectPopulation(params)</code></div>
+          <div class="api-meta">
+            <div><strong>Family</strong><span>Population genetics and population change</span></div>
+            <div><strong>Used by</strong><span><a href="/apps/life-cycle-modeler/">Life Cycle Modeler</a></span></div>
+            <div><strong>Input shape</strong><span>Projection parameters object</span></div>
+            <div><strong>Status</strong><span>Shared browser and node-consumable family API module.</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <p class="section-kicker">Notes</p>
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>Purpose</h3>
+          <p>Provide a stable engine surface that can be exercised by tests and reused by the browser-facing apps as remediation continues.</p>
+        </article>
+        <article class="info-card">
+          <h3>Current status</h3>
+          <p>This is a first shared family API, not a final server-backed production service. It is meant to replace opaque legacy logic with inspectable, testable modules.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer-card">
+      <div>
+        <h3>Population Genetics API</h3>
+        <p>The next technical step is to connect the legacy UIs to this shared engine layer and expand the test coverage beyond contract checks.</p>
+      </div>
+      <small>Updated March 28, 2026</small>
+    </footer>
+  </div>
+</body>
+</html>

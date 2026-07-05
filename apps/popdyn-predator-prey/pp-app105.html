@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Predator–Prey Simulation</title>
+  <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    h1 { color: #2e6e4c; }
+    .controls, .export, .batch {
+      margin: 1em 0;
+    }
+    label {
+      display: inline-block;
+      width: 150px;
+    }
+    input {
+      width: 100px;
+    }
+    #chart {
+      background: white;
+      border: 1px solid #ccc;
+      width: 800px;
+      height: 400px;
+    }
+    #statistics {
+      margin-top: 1em;
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Predator–Prey Simulation</h1>
+
+  <div class="controls">
+    <label>Prey Birth Rate:</label><input type="number" id="preyBirth" value="0.1" step="0.01"><br>
+    <label>Predator Death Rate:</label><input type="number" id="predDeath" value="0.1" step="0.01"><br>
+    <label>Predation Rate:</label><input type="number" id="predation" value="0.01" step="0.001"><br>
+    <label>Conversion Rate:</label><input type="number" id="conversion" value="0.01" step="0.001"><br>
+    <label>Initial Prey:</label><input type="number" id="initialPrey" value="40"><br>
+    <label>Initial Predator:</label><input type="number" id="initialPred" value="9"><br>
+    <label>Carrying Capacity:</label><input type="number" id="carryingCapacity" value="100"><br>
+    <label>Extinction Threshold:</label><input type="number" id="extinctionThreshold" value="1"><br>
+    <label>PRNG Seed:</label><input type="text" id="seed" value="seed123"><br>
+    <button onclick="startSimulation()">Start</button>
+    <button onclick="togglePauseResume()" id="pauseResumeBtn">Pause</button>
+    <button onclick="resetSimulation()">Reset</button>
+    <button onclick="exportResultsCSV()">Export CSV</button>
+    <button onclick="downloadChart('png')">Download PNG</button>
+    <button onclick="downloadChart('svg')">Download SVG</button>
+  </div>
+
+  <div id="chart"></div>
+  <div id="statistics"></div>
+
+  <script>
+    let timer = null, time = 0, data = [], prey, predator, params = {}, paused = false;
+
+    function updateStatistics() {
+      document.getElementById("statistics").innerHTML =
+        `<strong>Step:</strong> ${time} &nbsp; | &nbsp; <strong>Prey:</strong> ${prey.toFixed(2)} &nbsp; | &nbsp; <strong>Predator:</strong> ${predator.toFixed(2)}`;
+    }
+
+    function togglePauseResume() {
+      if (paused) {
+        timer = setInterval(stepSimulation, 100);
+        document.getElementById("pauseResumeBtn").textContent = "Pause";
+      } else {
+        clearInterval(timer);
+        document.getElementById("pauseResumeBtn").textContent = "Resume";
+      }
+      paused = !paused;
+    }
+
+    function stepSimulation() {
+      if (time >= 100 || (prey < params.extinctionThreshold && predator < params.extinctionThreshold)) {
+        clearInterval(timer);
+        return;
+      }
+      const dPrey = params.preyBirth * prey * (1 - prey / params.carryingCapacity) - params.predation * prey * predator;
+      const dPred = params.conversion * prey * predator - params.predDeath * predator;
+      prey += dPrey;
+      predator += dPred;
+      if (prey < 0) prey = 0;
+      if (predator < 0) predator = 0;
+      data.push({ time, prey, predator });
+      time++;
+      updateChart();
+      updateStatistics();
+    }
+
+    function updateChart() {
+      const times = data.map(d => d.time);
+      const preyPop = data.map(d => d.prey);
+      const predPop = data.map(d => d.predator);
+
+      const trace1 = {
+        x: times,
+        y: preyPop,
+        mode: 'lines',
+        name: 'Prey',
+        line: { color: 'green' }
+      };
+      const trace2 = {
+        x: times,
+        y: predPop,
+        mode: 'lines',
+        name: 'Predator',
+        line: { color: 'red' }
+      };
+      const layout = {
+        title: 'Predator–Prey Population Over Time',
+        xaxis: { title: 'Time Step' },
+        yaxis: { title: 'Population' }
+      };
+      Plotly.newPlot('chart', [trace1, trace2], layout);
+    }
+
+    function startSimulation() {
+      params = getParameters();
+      data = [];
+      prey = params.initialPrey;
+      predator = params.initialPred;
+      time = 0;
+      paused = false;
+      document.getElementById("pauseResumeBtn").textContent = "Pause";
+
+      if (timer) clearInterval(timer);
+      timer = setInterval(stepSimulation, 100);
+      updateChart();
+      updateStatistics();
+    }
+
+    function resetSimulation() {
+      if (timer) clearInterval(timer);
+      data = [];
+      prey = predator = time = 0;
+      updateChart();
+      document.getElementById("pauseResumeBtn").textContent = "Pause";
+      paused = false;
+      updateStatistics();
+    }
+
+    function getParameters() {
+      return {
+        preyBirth: parseFloat(document.getElementById("preyBirth").value),
+        predDeath: parseFloat(document.getElementById("predDeath").value),
+        predation: parseFloat(document.getElementById("predation").value),
+        conversion: parseFloat(document.getElementById("conversion").value),
+        initialPrey: parseFloat(document.getElementById("initialPrey").value),
+        initialPred: parseFloat(document.getElementById("initialPred").value),
+        carryingCapacity: parseFloat(document.getElementById("carryingCapacity").value),
+        extinctionThreshold: parseFloat(document.getElementById("extinctionThreshold").value),
+        seed: document.getElementById("seed").value
+      };
+    }
+
+    function exportResultsCSV() {
+      const filename = `predator_prey_${params.seed}_results.csv`;
+      const csvContent = "data:text/csv;charset=utf-8," +
+        ["time,prey,predator"].concat(data.map(d => `${d.time},${d.prey},${d.predator}`)).join("\n");
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", filename);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function downloadChart(format) {
+      const filename = `predator_prey_${params.seed}_chart.${format}`;
+      Plotly.downloadImage(document.getElementById('chart'), {
+        format: format,
+        filename: filename,
+        height: 400,
+        width: 800
+      });
+    }
+  </script>
+</body>
+</html>

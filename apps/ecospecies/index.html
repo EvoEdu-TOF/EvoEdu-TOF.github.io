@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EcoSpecies</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="site-brand">
+          <p class="site-brand-mark">Open Species Archive</p>
+          <a href="./index.html" class="site-brand-link">EcoSpecies Atlas</a>
+          <p class="site-brand-summary">Public field atlas for historical species life-history materials.</p>
+        </div>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="./index.html">Atlas</a>
+          <a href="./bibliography.html">Bibliography</a>
+        </nav>
+      </div>
+    </header>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">Open Biodiversity Reference</p>
+        <h1>EcoSpecies Atlas</h1>
+        <p class="lede">
+          A modern follow-on for the legacy EcoSpecies archive, built as an open ecology and
+          biodiversity reference workspace.
+        </p>
+        <p class="hero-context">
+          Use EcoSpecies Atlas for species profiles, habitat evidence, ecological reading, and
+          citation-aware exploration grounded in the migrated legacy corpus.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span id="species-count">0</span>
+            <label>Species loaded</label>
+          </div>
+          <div class="stat">
+            <span id="section-count">0</span>
+            <label>Parsed sections</label>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <aside class="panel panel-list">
+          <div class="panel-header">
+            <h2>Species</h2>
+            <input id="search" type="search" placeholder="Search common or scientific name">
+            <button id="contributor-create" type="button" class="secondary-button hidden">Create New Draft</button>
+            <div id="archive-filter-group" class="archive-filter-group hidden">
+              <button type="button" class="archive-filter-button is-active" data-archive-filter="active">Active</button>
+              <button type="button" class="archive-filter-button" data-archive-filter="all">All</button>
+              <button type="button" class="archive-filter-button" data-archive-filter="archived">Archived</button>
+            </div>
+          </div>
+          <div id="species-list" class="species-list"></div>
+        </aside>
+
+        <section class="panel panel-detail">
+          <div id="detail-empty" class="empty-state">
+            <h2>Select a species</h2>
+            <p>Browse the migrated legacy corpus and inspect parsed sections from the original SLH files.</p>
+          </div>
+
+          <article id="detail" class="detail hidden">
+            <header class="detail-header">
+              <p id="detail-code" class="detail-code"></p>
+              <div class="detail-title-row">
+                <h2 id="detail-common-name"></h2>
+                <span id="detail-archive-badge" class="detail-badge hidden">Archived</span>
+              </div>
+              <p id="detail-scientific-name" class="detail-scientific-name"></p>
+              <p id="detail-summary" class="detail-summary"></p>
+              <p id="detail-archive-note" class="detail-archive-note hidden">
+                This record is archived. It is hidden from public endpoints but remains available to editors for audit and recovery.
+              </p>
+            </header>
+            <div id="detail-sections" class="detail-sections"></div>
+            <div class="workflow-panels">
+              <section id="legacy-panel" class="detail-section collapsible-panel collapsed hidden" data-label="Legacy Materials Under Review">
+                <div class="collapsible-header">
+                  <h3>Legacy Materials Under Review</h3>
+                  <button type="button" class="secondary-button collapsible-toggle" data-target="legacy-panel" data-label="Legacy Materials Under Review" aria-expanded="false">
+                    Show Legacy Materials Under Review
+                  </button>
+                </div>
+                <div class="collapsible-body">
+                  <p id="legacy-source-meta" class="editor-status"></p>
+                  <pre id="legacy-source-text" class="legacy-source"></pre>
+                </div>
+              </section>
+              <section id="access-panel" class="detail-section collapsible-panel collapsed" data-label="Access and Contribution">
+                <div class="collapsible-header">
+                  <h3>Access and Contribution</h3>
+                  <button type="button" class="secondary-button collapsible-toggle" data-target="access-panel" data-label="Access and Contribution" aria-expanded="false">
+                    Show Access and Contribution
+                  </button>
+                </div>
+                <div class="collapsible-body">
+                  <div class="auth-bar auth-panel-row">
+                    <input id="auth-token" type="password" placeholder="Bearer token for editor access">
+                    <button id="auth-save" type="button">Use Token</button>
+                    <button id="auth-clear" type="button" class="secondary-button">Clear</button>
+                    <p id="auth-status" class="auth-status">Public access</p>
+                  </div>
+                  <div class="auth-bar contributor-signup auth-panel-row">
+                    <input id="contributor-email" type="email" placeholder="Email for contributor access">
+                    <label class="archive-toggle contributor-age-gate">
+                      <input id="contributor-age-gate" type="checkbox">
+                      <span>I confirm I am at least <span id="contributor-age-label">13</span> years old</span>
+                    </label>
+                    <button id="contributor-register" type="button" class="secondary-button">Become Contributor</button>
+                    <p id="contributor-status" class="auth-status"></p>
+                  </div>
+                </div>
+              </section>
+              <section id="editor-panel" class="detail-section collapsible-panel editor-panel collapsed hidden" data-label="Editing Workflow">
+                <div class="collapsible-header">
+                  <h3>Editing Workflow</h3>
+                  <button type="button" class="secondary-button collapsible-toggle" data-target="editor-panel" data-label="Editing Workflow" aria-expanded="false">
+                    Show Editing Workflow
+                  </button>
+                </div>
+                <div class="collapsible-body">
+                  <label class="editor-label" for="editor-publication-status">Publication Status</label>
+                  <select id="editor-publication-status">
+                    <option value="draft">Draft</option>
+                    <option value="review">Review</option>
+                    <option value="published">Published</option>
+                  </select>
+                  <label class="editor-label" for="editor-notes">Editor Notes</label>
+                  <textarea id="editor-notes" rows="4" placeholder="Internal editorial notes"></textarea>
+                  <label class="archive-toggle">
+                    <input id="editor-is-archived" type="checkbox">
+                    <span>Archive this species</span>
+                  </label>
+                  <div class="editor-actions">
+                    <button id="editor-save" type="button">Save Editorial Changes</button>
+                    <p id="editor-status" class="editor-status"></p>
+                  </div>
+                </div>
+              </section>
+              <section id="document-panel" class="detail-section collapsible-panel editor-panel collapsed hidden" data-label="Metadata and Document Workflow">
+                <div class="collapsible-header">
+                  <h3>Metadata and Document Workflow</h3>
+                  <button type="button" class="secondary-button collapsible-toggle" data-target="document-panel" data-label="Metadata and Document Workflow" aria-expanded="false">
+                    Show Metadata and Document Workflow
+                  </button>
+                </div>
+                <div class="collapsible-body">
+                  <div class="document-panel-header">
+                    <div>
+                      <p class="editor-status">
+                        Markdown is the editable source of truth for hierarchy. Front matter and headings are validated on save.
+                      </p>
+                    </div>
+                    <div class="editor-actions">
+                      <button id="document-save" type="button">Save Document</button>
+                      <p id="document-status" class="editor-status"></p>
+                    </div>
+                  </div>
+                  <label class="editor-label" for="document-markdown">Markdown Source</label>
+                  <textarea id="document-markdown" class="document-editor" rows="18" spellcheck="false"></textarea>
+                  <details class="document-preview-shell" open>
+                    <summary>Outline Preview</summary>
+                    <div id="document-preview" class="document-preview"></div>
+                  </details>
+                </div>
+              </section>
+              <section id="citation-panel" class="detail-section collapsible-panel collapsed hidden" data-label="Review Workflow">
+                <div class="collapsible-header">
+                  <h3>Review Workflow</h3>
+                  <button type="button" class="secondary-button collapsible-toggle" data-target="citation-panel" data-label="Review Workflow" aria-expanded="false">
+                    Show Review Workflow
+                  </button>
+                </div>
+                <div class="collapsible-body">
+                  <div class="document-panel-header">
+                    <div>
+                      <p id="citation-status" class="editor-status">
+                        Extracted bibliography entries and draft BibTeX records.
+                      </p>
+                    </div>
+                    <div class="editor-actions">
+                      <button id="citation-backfill-species" type="button" class="secondary-button hidden">Backfill This Species</button>
+                      <button id="citation-enrich-all" type="button" class="secondary-button hidden">Run Enrichment For All Citations</button>
+                    </div>
+                  </div>
+                  <div id="citation-list" class="citation-list"></div>
+                </div>
+              </section>
+              <section id="audit-panel" class="detail-section collapsible-panel collapsed hidden" data-label="Audit History">
+                <div class="collapsible-header">
+                  <h3>Audit History</h3>
+                  <button type="button" class="secondary-button collapsible-toggle" data-target="audit-panel" data-label="Audit History" aria-expanded="false">
+                    Show Audit History
+                  </button>
+                </div>
+                <div class="collapsible-body">
+                  <div id="audit-list" class="audit-list"></div>
+                </div>
+              </section>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <footer class="footer">
+        <p>
+          EcoSpecies Atlas preserves attribution for Dr. Peter Rubec, Dr. Diane Blackwood,
+          Dr. Wesley R. Elsberry, Florida Fish and Wildlife Research Institute, and SouthEast Atlantic Fisheries Management  context
+          documented in the legacy project materials.
+        </p>
+      </footer>
+    </main>
+    <section id="citation-match-dialog" class="match-dialog-shell hidden" aria-hidden="true">
+      <div class="match-dialog-backdrop"></div>
+      <article class="match-dialog-card" role="dialog" aria-modal="true" aria-labelledby="citation-match-title">
+        <div class="match-dialog-header">
+          <div>
+            <h2 id="citation-match-title">Citation Candidate Review</h2>
+            <p id="citation-match-status" class="editor-status">Compare the parsed source citation against candidate metadata.</p>
+          </div>
+          <button id="citation-match-close" type="button" class="secondary-button">Close</button>
+        </div>
+        <div class="match-dialog-grid">
+          <section class="detail-section">
+            <h3>Parsed Source Metadata</h3>
+            <div id="citation-match-seed" class="match-seed"></div>
+          </section>
+          <section class="detail-section">
+            <h3>Candidate Matches</h3>
+            <div id="citation-match-candidates" class="match-candidates"></div>
+          </section>
+        </div>
+      </article>
+    </section>
+    <script src="./app.js" defer></script>
+  </body>
+</html>

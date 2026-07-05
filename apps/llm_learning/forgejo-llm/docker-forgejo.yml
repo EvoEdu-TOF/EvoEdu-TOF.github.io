@@ -1,0 +1,101 @@
+version: "3.9"
+
+networks:
+  traefik:
+    external: true
+    name: ${TRAEFIK_NETWORK}
+
+volumes:
+  forgejo-data:
+  runner-data:
+  docs-data:     # where your CI deploys built HTML
+  hedgedoc-data: # optional shared config/content
+
+services:
+  forgejo:
+    image: codeberg.org/forgejo/forgejo:1.21
+    container_name: forgejo
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+      - TZ=${TZ}
+      # Optional: advertise SSH domain/port if you proxy SSH through Traefik TCP
+      # - SSH_DOMAIN=${GIT_DOMAIN}
+      # - SSH_PORT=${GIT_SSH_PORT}
+    volumes:
+      - forgejo-data:/data
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      # simplest way to expose SSH for Git over SSH:
+      - "${GIT_SSH_PORT}:22"
+    restart: unless-stopped
+    networks: [traefik]
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.forgejo.rule=Host(`${GIT_DOMAIN}`)
+      - traefik.http.routers.forgejo.entrypoints=${TRAEFIK_ENTRYPOINT}
+      - traefik.http.routers.forgejo.tls.certresolver=${TRAEFIK_CERTRESOLVER}
+      - traefik.http.services.forgejo.loadbalancer.server.port=3000
+      # HTTP router that redirects to HTTPS
+      - traefik.http.routers.forgejo-http.rule=Host(`git.evo-edu.org`)
+      - traefik.http.routers.forgejo-http.entrypoints=web
+      - traefik.http.routers.forgejo-http.middlewares=redirect-https
+      - traefik.http.middlewares.redirect-https.redirectscheme.scheme=https
+  # Self-hosted Actions runner (Docker “job” backend)
+  forgejo-runner:
+    image: code.forgejo.org/forgejo/runner:3.3.0
+    container_name: forgejo-runner
+    restart: unless-stopped
+    depends_on: [forgejo]
+    environment:
+      # Register this runner once (see steps below) with a repo/org/global token
+      - TZ=${TZ}
+    volumes:
+      - runner-data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks: [traefik]
+
+  # Private static docs host for built sites (MkDocs/Quarto/etc.)
+  project-docs:
+    image: nginx:alpine
+    container_name: project-docs
+    restart: unless-stopped
+    volumes:
+      - docs-data:/usr/share/nginx/html:ro
+    networks: [traefik]
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.projectdocs.rule=Host(`${DOCS_DOMAIN}`)
+      - traefik.http.routers.projectdocs.entrypoints=${TRAEFIK_ENTRYPOINT}
+      - traefik.http.routers.projectdocs.tls.certresolver=${TRAEFIK_CERTRESOLVER}
+      - traefik.http.services.projectdocs.loadbalancer.server.port=80
+
+  # OPTIONAL: collaborative Markdown editor (HedgeDoc)
+  # Enable with:  docker compose -f compose.forgejo.yml --profile notes up -d
+  hedgedoc:
+    profiles: ["notes"]
+    image: lscr.io/linuxserver/hedgedoc:latest
+    container_name: hedgedoc
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=${TZ}
+      - CMD_DOMAIN=${NOTES_DOMAIN}
+      - CMD_ALLOW_ORIGIN=['${NOTES_DOMAIN}']
+      # easiest DB for a small team is sqlite, no separate DB container:
+      - CMD_DB_DIALECT=sqlite
+    volumes:
+      - hedgedoc-data:/config
+    networks: [traefik]
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.hedgedoc.rule=Host(`${NOTES_DOMAIN}`)
+      - traefik.http.routers.hedgedoc.entrypoints=${TRAEFIK_ENTRYPOINT}
+      - traefik.http.routers.hedgedoc.tls.certresolver=${TRAEFIK_CERTRESOLVER}
+      - traefik.http.services.hedgedoc.loadbalancer.server.port=3000
+      # HTTP router that redirects to HTTPS
+      - traefik.http.routers.forgejo-http.rule=Host(`llmnotes.evo-edu.org`)
+      - traefik.http.routers.forgejo-http.entrypoints=web
+      - traefik.http.routers.forgejo-http.middlewares=redirect-https
+      - traefik.http.middlewares.redirect-https.redirectscheme.scheme=https

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Population Dynamics: Age/Stage Class Setup</title>
+  <!-- Plotly from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist@2.25.2"></script>
+  <!-- matpopdyn.js: contains the LMatrix class -->
+  <script src="./matpopdyn.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 1em;
+    }
+    h1 {
+      margin-bottom: 0.5em;
+    }
+    .input-section {
+      margin-bottom: 1em;
+    }
+    label {
+      display: inline-block;
+      width: 250px;
+      font-weight: bold;
+    }
+    input, select, button {
+      margin-left: 0.5em;
+      padding: 0.25em;
+    }
+    table {
+      border-collapse: collapse;
+      margin-bottom: 1em;
+    }
+    table td {
+      padding: 4px;
+    }
+    table input {
+      width: 70px;
+      text-align: right;
+    }
+    #chart {
+      width: 80%;
+      height: 500px;
+      margin-top: 2em;
+    }
+    .note {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Matrix Population Dynamics Setup</h1>
+
+  <p>
+    This app demonstrates how to:
+    <ul>
+      <li>Set up age or stage classes for a population.</li>
+      <li>Input transition probabilities and fecundity rates.</li>
+      <li>Analyze how populations grow, stabilize, or decline over time.</li>
+      <li>Create “what‐if” scenarios for species under various conditions or threats.</li>
+    </ul>
+  </p>
+
+  <div class="input-section">
+    <label for="numStages">Number of Stages:</label>
+    <input type="number" id="numStages" min="1" value="3" />
+    <button id="buildMatrixBtn">Build Input Fields</button>
+  </div>
+
+  <!-- Container for dynamic table(s) of transitions/fecundities -->
+  <div id="matrixInputs"></div>
+
+  <div class="input-section">
+    <label for="initialDist">Initial Population (comma‐separated):</label>
+    <input type="text" id="initialDist" value="10, 5, 2" />
+  </div>
+
+  <div class="input-section">
+    <label for="numSteps">Number of Steps:</label>
+    <input type="number" id="numSteps" value="10" />
+    <button id="simulateBtn">Simulate</button>
+  </div>
+
+  <div id="chart"></div>
+
+  <p class="note">
+    <strong>Tips:</strong> 
+    <br />- “Survival to Next Stage” means if you’re in Stage i, probability of moving to Stage i+1.
+    <br />- “Recurrence” often means remaining in the same stage for one more time step.
+    <br />- “Fecundity” refers to how many new individuals are produced by a stage (they typically go into the first stage).
+    <br />- You can experiment with any transition structure you like. 
+  </p>
+
+  <script>
+    // Grab references to elements
+    const numStagesInput  = document.getElementById('numStages');
+    const buildMatrixBtn  = document.getElementById('buildMatrixBtn');
+    const matrixInputsDiv = document.getElementById('matrixInputs');
+    const initialDistInput= document.getElementById('initialDist');
+    const numStepsInput   = document.getElementById('numSteps');
+    const simulateBtn     = document.getElementById('simulateBtn');
+    const chartDiv        = document.getElementById('chart');
+
+    // We'll store references to the input elements we generate
+    let fecundityInputs   = [];
+    let survivalInputs    = [];
+    let recurrenceInputs  = [];
+
+    // 1. BUILD THE INPUT TABLES DYNAMICALLY
+    buildMatrixBtn.addEventListener('click', buildInputFields);
+
+    function buildInputFields() {
+      // Clear existing
+      matrixInputsDiv.innerHTML = '';
+
+      // Read number of stages
+      const n = parseInt(numStagesInput.value, 10);
+      if (isNaN(n) || n < 1) {
+        alert('Please enter a valid number of stages.');
+        return;
+      }
+
+      // We'll create three sections:
+      // A) Fecundity row (how many new individuals each stage produces)
+      // B) Survival to next stage (size n-1), 
+      // C) Recurrence (prob staying in same stage) for n-1 stages 
+      //    (or you can adapt as needed).
+
+      fecundityInputs = [];
+      survivalInputs  = [];
+      recurrenceInputs= [];
+
+      // A) Fecundity row
+      let fecTable = document.createElement('table');
+      let fecCaption = document.createElement('caption');
+      fecCaption.textContent = 'Fecundity (offspring from each stage into Stage 1)';
+      fecTable.appendChild(fecCaption);
+      let fecTr = document.createElement('tr');
+      for(let i=0; i<n; i++){
+        let td = document.createElement('td');
+        let inp = document.createElement('input');
+        inp.type = 'number'; 
+        inp.step = 'any';
+        inp.value = '0'; 
+        td.innerHTML = `Stage ${i+1}<br/>`;
+        td.appendChild(inp);
+        fecTr.appendChild(td);
+        fecundityInputs.push(inp);
+      }
+      fecTable.appendChild(fecTr);
+      matrixInputsDiv.appendChild(fecTable);
+
+      // B) Survival to next stage
+      // For n stages, we typically have n-1 survival transitions (Stage i -> i+1)
+      if(n > 1){
+        let surTable = document.createElement('table');
+        let surCaption = document.createElement('caption');
+        surCaption.textContent = 'Survival to Next Stage (Stage i -> Stage i+1)';
+        surTable.appendChild(surCaption);
+        let surTr = document.createElement('tr');
+
+        for(let i=0; i<n-1; i++){
+          let td = document.createElement('td');
+          let inp = document.createElement('input');
+          inp.type = 'number';
+          inp.step = 'any';
+          inp.value = '0.5'; 
+          td.innerHTML = `S(${i+1}->${i+2})<br/>`;
+          td.appendChild(inp);
+          surTr.appendChild(td);
+          survivalInputs.push(inp);
+        }
+        surTable.appendChild(surTr);
+        matrixInputsDiv.appendChild(surTable);
+      }
+
+      // C) Recurrence (prob of staying in same stage)
+      // This is also typically n-1, except in some matrix designs you might allow Stage n to remain Stage n.
+      let recTable = document.createElement('table');
+      let recCaption = document.createElement('caption');
+      recCaption.textContent = 'Recurrence (Stage i -> i)';
+      recTable.appendChild(recCaption);
+      let recTr = document.createElement('tr');
+      for(let i=1; i<n; i++){
+        let td = document.createElement('td');
+        let inp = document.createElement('input');
+        inp.type = 'number';
+        inp.step = 'any';
+        inp.value = '0.0';
+        td.innerHTML = `R(${i+1}->${i+1})<br/>`;
+        td.appendChild(inp);
+        recTr.appendChild(td);
+        recurrenceInputs.push(inp);
+      }
+      recTable.appendChild(recTr);
+      matrixInputsDiv.appendChild(recTable);
+    }
+
+    // 2. CREATE AN LMATRIX FROM THE INPUT
+    function createLMatrixFromInputs() {
+      // Read number of stages
+      const n = parseInt(numStagesInput.value, 10);
+      let lm = new LMatrix(n);
+
+      // A) Fecundities go in row 0 => LMatrix sets these in m[0][*] 
+      // We can do: "LM_AddFecundity" or do it manually with LM_SetOneRelation
+      // By definition in this LMatrix class, "fromState=j, toState=0" => fecundity
+      for(let j=0; j<n; j++){
+        let fVal = parseFloat(fecundityInputs[j].value) || 0;
+        // LM_SetOneRelation(fromState=j, toState=0, value)
+        lm.LM_SetOneRelation(j, 0, fVal);
+      }
+
+      // B) Survival => stage i -> i+1
+      // i in [0..n-2], so fromState=i => toState=i+1
+      for(let i=0; i<survivalInputs.length; i++){
+        let sVal = parseFloat(survivalInputs[i].value) || 0;
+        lm.LM_SetOneRelation(i, i+1, sVal);
+      }
+
+      // C) Recurrence => stage i -> i
+      // for i in [1..n-1], index in recurrenceInputs => recurrenceInputs[i-1]
+      // Because the first stage typically doesn't "stay" if we are using that structure 
+      // (though it could be adapted).
+      for(let i=1; i<n; i++){
+        let rVal = parseFloat(recurrenceInputs[i-1].value) || 0;
+        lm.LM_SetOneRelation(i, i, rVal);
+      }
+
+      return lm;
+    }
+
+    // 3. SIMULATE ON CLICK
+    simulateBtn.addEventListener('click', () => {
+      const n = parseInt(numStagesInput.value, 10);
+      if(isNaN(n) || n < 1){
+        alert('Number of stages invalid. Click "Build Input Fields" first.');
+        return;
+      }
+
+      // Create the LMatrix from user inputs
+      let lmat = createLMatrixFromInputs();
+
+      // Set initial population
+      let pop0 = initialDistInput.value.split(',').map(x => parseFloat(x.trim()));
+      if(pop0.length !== n){
+        alert(`The initial population vector must have ${n} entries.`);
+        return;
+      }
+      lmat.LM_SetPopulation(pop0);
+
+      // Time steps
+      const steps = parseInt(numStepsInput.value, 10);
+
+      // Step forward & record
+      let populations = [];
+      populations.push([...lmat.popvec]); // initial
+      for(let t = 1; t <= steps; t++){
+        lmat.LM_StepForward();
+        populations.push([...lmat.popvec]);
+      }
+
+      // Plot with Plotly
+      const timeArray = Array.from({length: steps + 1}, (_, i)=>i);
+      let traces = [];
+      for(let stageIdx=0; stageIdx<n; stageIdx++){
+        let yVals = populations.map(vec => vec[stageIdx]);
+        traces.push({
+          x: timeArray,
+          y: yVals,
+          mode: 'lines+markers',
+          name: `Stage ${stageIdx+1}`
+        });
+      }
+
+      let layout = {
+        title: 'Population Over Time',
+        xaxis: { title: 'Time Step' },
+        yaxis: { title: 'Population Size' }
+      };
+
+      Plotly.newPlot(chartDiv, traces, layout);
+    });
+
+    // 4. Initialize default
+    buildInputFields(); // Build with default "3" stages on load
+  </script>
+</body>
+</html>

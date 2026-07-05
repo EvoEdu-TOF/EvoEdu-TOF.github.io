@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weasel Simulation with Boxplot</title>
+  <!-- Include Plotly from a CDN -->
+  <script src="https://cdn.plot.ly/plotly-2.20.0.min.js"></script>
+  <style>
+    /* Basic Page Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #f8f8f8;
+      border-bottom: 1px solid #ddd;
+      padding: 0.5em 1em;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1em;
+    }
+    nav li {
+      display: inline;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main Container */
+    .container {
+      padding: 1em;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 2em;
+    }
+
+    .controls,
+    .results {
+      margin: 1em 0;
+    }
+    
+    .label {
+      margin-right: 0.5em;
+    }
+
+    /* Plot Container */
+    #plotDiv {
+      margin-top: 2em;
+      margin-bottom: 2em;
+      width: 100%;
+      max-width: 900px;
+      height: 450px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#help">Help</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</nav>
+
+<!-- Main Container -->
+<div class="container">
+  
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Weasel Simulation with Distribution Plot</h1>
+    <p>
+      This interactive simulation demonstrates the evolutionary principle popularized by Richard Dawkins in 
+      his “Weasel” program. Each generation, a population of candidate strings is mutated and the best 
+      match is identified. Below, you will see a live boxplot of each generation's distribution of 
+      correct characters, as well as a counter for any “stepbacks” in fitness.
+    </p>
+
+    <div class="controls">
+      <label class="label" for="targetInput">Target Phrase:</label>
+      <input 
+        type="text" 
+        id="targetInput" 
+        value="METHINKS IT IS LIKE A WEASEL" 
+        size="30" 
+      />
+      <br /><br />
+
+      <label class="label" for="popSizeInput">Population Size:</label>
+      <input 
+        type="number" 
+        id="popSizeInput" 
+        value="100" 
+        min="1" 
+        style="width: 80px;" 
+      />
+      <br /><br />
+
+      <label class="label" for="mutationRateInput">Mutation Rate (%):</label>
+      <input 
+        type="number" 
+        id="mutationRateInput" 
+        value="5" 
+        min="0" 
+        max="100" 
+        style="width: 80px;" 
+      />  
+      <br /><br />
+
+      <button id="startBtn">Start Simulation</button>
+      <button id="stopBtn">Stop Simulation</button>
+    </div>
+
+    <div class="results">
+      <p id="currentGeneration">Current Generation: 0</p>
+      <p id="bestMatch">Best Match So Far: (none)</p>
+      <p id="stepbacksCount">Stepbacks: 0</p>
+    </div>
+
+    <!-- Plotly Boxplot container -->
+    <div id="plotDiv"></div>
+
+  </section>
+
+  <!-- Help Section -->
+  <section id="help">
+    <h2>Help</h2>
+    <p>
+      <strong>Target Phrase</strong>: Enter any phrase (letters A-Z, with spaces or punctuation if desired). 
+      The simulation will try to evolve a population of random strings into this target.
+    </p>
+    <p>
+      <strong>Population Size</strong>: Determines how many candidate strings exist each generation. 
+      A larger population often converges faster, but requires more computation per generation.
+    </p>
+    <p>
+      <strong>Mutation Rate</strong>: The percent chance that each character in an offspring 
+      will mutate (change to a random character). Higher rates can introduce more variation, but 
+      may slow convergence if too high.
+    </p>
+    <p>
+      <strong>Start Simulation</strong>: Begins evolving the population. 
+      You can watch the “Best Match So Far” update each generation, along with the distribution of 
+      correct characters and any stepbacks in best fitness.
+    </p>
+    <p>
+      <strong>Stop Simulation</strong>: Halts the ongoing run. You can then adjust parameters 
+      and start again.
+    </p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      This tool is designed for self-learners, students, and educators 
+      exploring foundational concepts in evolutionary biology. 
+      By running this simulation and experimenting with parameters, you can see the power 
+      of incremental selection, along with how random variation interacts with selective retention.
+    </p>
+    <p>
+      For more resources and explanations of evolutionary concepts, please visit 
+      <a href="https://evo-edu.org/" target="_blank">Evo-Edu.org</a>.
+    </p>
+  </section>
+</div>
+
+<!-- JavaScript Simulation Code -->
+<script>
+(function() {
+  /***************
+   *  Utilities  *
+   ***************/
+  function generateRandomString(length) {
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+    let result = "";
+    for (let i = 0; i < length; i++) {
+      result += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return result;
+  }
+
+  function calculateFitness(candidate, target) {
+    let score = 0;
+    for (let i = 0; i < target.length; i++) {
+      if (candidate[i] === target[i]) {
+        score++;
+      }
+    }
+    return score;
+  }
+
+  function mutate(parent, mutationRate, possibleChars) {
+    let child = "";
+    for (let i = 0; i < parent.length; i++) {
+      if (Math.random() * 100 < mutationRate) {
+        child += possibleChars.charAt(
+          Math.floor(Math.random() * possibleChars.length)
+        );
+      } else {
+        child += parent[i];
+      }
+    }
+    return child;
+  }
+
+  /*********************
+   *  Global Variables *
+   *********************/
+  let simulationInterval = null;
+  let generationCount = 0;
+  let bestCandidate = "";
+  let bestFitness = 0;
+
+  // Track stepbacks: whenever a generation's best is less than the previous generation's best
+  let previousGenerationBest = 0;
+  let stepbacks = 0;
+
+  const possibleChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+
+  /********************
+   *  DOM References  *
+   ********************/
+  const targetInput = document.getElementById("targetInput");
+  const popSizeInput = document.getElementById("popSizeInput");
+  const mutationRateInput = document.getElementById("mutationRateInput");
+  const startBtn = document.getElementById("startBtn");
+  const stopBtn = document.getElementById("stopBtn");
+  const currentGeneration = document.getElementById("currentGeneration");
+  const bestMatch = document.getElementById("bestMatch");
+  const stepbacksCount = document.getElementById("stepbacksCount");
+  const plotDiv = document.getElementById("plotDiv");
+
+
+  /**********************
+   *  Start Simulation  *
+   **********************/
+  startBtn.addEventListener("click", function() {
+    // Prevent multiple intervals
+    if (simulationInterval !== null) return;
+
+      // Initialize an empty Plotly plot
+      Plotly.newPlot(plotDiv, [], {
+	  title: "Distribution of Correct Characters"
+      });
+    // Reset counters, retrieve user inputs
+    generationCount = 0;
+    bestCandidate = "";
+    bestFitness = 0;
+    previousGenerationBest = 0;
+    stepbacks = 0;
+    stepbacksCount.innerText = "Stepbacks: 0";
+
+    const target = targetInput.value.toUpperCase();
+    const popSize = parseInt(popSizeInput.value, 10) || 100;
+    const mutationRate = parseFloat(mutationRateInput.value) || 5;
+
+    // Initialize population
+    let population = [];
+    for (let i = 0; i < popSize; i++) {
+      population.push(generateRandomString(target.length));
+    }
+
+    // Begin interval-based updates
+    simulationInterval = setInterval(function() {
+      generationCount++;
+
+      // Create the new generation by mutating best individual
+      let newPopulation = [];
+      for (let i = 0; i < popSize; i++) {
+        const child = mutate(population[0], mutationRate, possibleChars);
+        newPopulation.push(child);
+      }
+
+      // Identify the single best individual in newPopulation
+      let bestIndex = 0;
+      let generationBestFitness = calculateFitness(newPopulation[0], target);
+
+      for (let i = 1; i < newPopulation.length; i++) {
+        let f = calculateFitness(newPopulation[i], target);
+        if (f > generationBestFitness) {
+          generationBestFitness = f;
+          bestIndex = i;
+        }
+      }
+
+      // Swap that best individual into the 0th position
+      [newPopulation[0], newPopulation[bestIndex]] = [
+        newPopulation[bestIndex],
+        newPopulation[0]
+      ];
+
+      // If this generation's best is lower than the previous generation's best, increment stepbacks
+      if (generationCount > 1 && generationBestFitness < previousGenerationBest) {
+        stepbacks++;
+        stepbacksCount.innerText = "Stepbacks: " + stepbacks;
+      }
+      previousGenerationBest = generationBestFitness;
+
+      // Update overall best if needed
+      if (generationBestFitness > bestFitness) {
+        bestFitness = generationBestFitness;
+        bestCandidate = newPopulation[0];
+      }
+
+      // Update the DOM
+      currentGeneration.innerText = "Current Generation: " + generationCount;
+      bestMatch.innerText = "Best Match So Far: " + bestCandidate;
+
+      // Prepare data for the boxplot
+      let fitnessArray = newPopulation.map(ind => calculateFitness(ind, target));
+
+      // Add a new box trace for this generation's distribution
+      let newTrace = {
+        y: fitnessArray,
+        type: "box",
+        name: "Gen " + generationCount
+      };
+      Plotly.addTraces(plotDiv, [newTrace]);
+
+      // Replace old population
+      population = newPopulation;
+
+      // Stop if we've reached the target
+      if (bestCandidate === target) {
+        clearInterval(simulationInterval);
+        simulationInterval = null;
+      }
+    }, 100); // Adjust interval speed as desired
+  });
+
+  /*********************
+   *  Stop Simulation  *
+   *********************/
+  stopBtn.addEventListener("click", function() {
+    if (simulationInterval !== null) {
+      clearInterval(simulationInterval);
+      simulationInterval = null;
+    }
+  });
+})();
+</script>
+</body>
+</html>

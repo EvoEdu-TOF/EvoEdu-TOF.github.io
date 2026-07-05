@@ -1,0 +1,32 @@
+{
+  "id": "biomorphs",
+  "slug": "biomorphs",
+  "title": "Biomorphs",
+  "status": "published",
+  "summary": "A Dawkins-inspired artificial selection app for exploring genotype, phenotype, mutation, development, and cumulative change.",
+  "entry": "app.html",
+  "pages": {
+    "overview": "index.html",
+    "app": "app.html",
+    "guide": "guide.html",
+    "standards": "standards.html"
+  },
+  "exports": [
+    "configuration-json",
+    "phenotype-png",
+    "phenotype-svg"
+  ],
+  "topics": [
+    "evolution",
+    "artificial selection",
+    "genotype phenotype",
+    "mutation",
+    "computational models"
+  ],
+  "ngss": [
+    "MS-LS3-1",
+    "MS-LS4-4",
+    "HS-LS3-1",
+    "HS-LS4-2"
+  ]
+}

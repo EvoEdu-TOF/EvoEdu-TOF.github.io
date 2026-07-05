@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gene Flow Mapper Application - evo-edu.org</title>
+  <link rel="stylesheet" href="/shared/evo-edu.css">
+  <script src="/shared/evo-shell.js" defer></script>
+  <script src="/apps/api/population-genetics/population-genetics.js"></script>
+  <style>
+    .geneflow-app {
+      display: grid;
+      gap: 1.25rem;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      align-items: start;
+    }
+    .geneflow-panel {
+      background: #fff;
+      border: 1px solid #d6deea;
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      padding: 1.25rem;
+      display: grid;
+      gap: 1rem;
+    }
+    .geneflow-panel h2,
+    .geneflow-panel h3,
+    .geneflow-panel p {
+      margin: 0;
+    }
+    .geneflow-panel p,
+    .geneflow-panel li {
+      line-height: 1.55;
+    }
+    .action-grid,
+    .status-grid,
+    .starter-grid,
+    .notes-grid,
+    .param-grid,
+    .table-grid {
+      display: grid;
+      gap: 0.85rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .app-button,
+    .app-upload-label,
+    .message-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 3rem;
+      padding: 0.8rem 1rem;
+      border: 1px solid #205a9e;
+      border-radius: 12px;
+      background: #205a9e;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .app-button.secondary,
+    .app-upload-label.secondary,
+    .message-toggle {
+      background: #f6f9fc;
+      color: #1f2937;
+      border-color: #c5d1e0;
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .status-card,
+    .starter-card,
+    .note-card,
+    .table-card {
+      background: #f6f9fc;
+      border: 1px solid #d6deea;
+      border-radius: 14px;
+      padding: 0.95rem 1rem;
+    }
+    .status-card strong,
+    .starter-card strong,
+    .note-card strong,
+    .table-card strong {
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+    .settings-form,
+    .message-list {
+      display: grid;
+      gap: 0.85rem;
+    }
+    .param-row {
+      display: grid;
+      gap: 0.35rem;
+    }
+    .param-row label {
+      font-weight: 700;
+      color: #243447;
+    }
+    .param-row input,
+    .param-row select {
+      width: 100%;
+      min-height: 2.8rem;
+      padding: 0.65rem 0.7rem;
+      border: 1px solid #c7d3e1;
+      border-radius: 10px;
+      font: inherit;
+      box-sizing: border-box;
+    }
+    .plot-box {
+      min-height: 420px;
+      border: 1px solid #d6deea;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+      padding: 1rem;
+    }
+    .plot-box svg {
+      width: 100%;
+      height: 360px;
+      display: block;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      font-size: 0.95rem;
+    }
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .legend-swatch {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      display: inline-block;
+    }
+    .legend-left {
+      background: #1f78b4;
+    }
+    .legend-right {
+      background: #e31a1c;
+    }
+    .landscape-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+    .landscape-side {
+      border-radius: 14px;
+      padding: 0.95rem 1rem;
+      color: #0f172a;
+      border: 1px solid #d6deea;
+    }
+    .landscape-left {
+      background: linear-gradient(180deg, #dbeafe 0%, #eff6ff 100%);
+    }
+    .landscape-right {
+      background: linear-gradient(180deg, #fee2e2 0%, #fff1f2 100%);
+    }
+    .inline-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+    .inline-links a {
+      color: #205a9e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .message-item {
+      background: #fff;
+      border-left: 4px solid #205a9e;
+      border-radius: 10px;
+      padding: 0.75rem 0.85rem;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+    }
+    @media (max-width: 1024px) {
+      .geneflow-app {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 640px) {
+      .action-grid,
+      .status-grid,
+      .starter-grid,
+      .notes-grid,
+      .param-grid,
+      .table-grid,
+      .landscape-strip {
+        grid-template-columns: 1fr;
+      }
+      .plot-box {
+        min-height: 320px;
+      }
+      .plot-box svg {
+        height: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-topbar">
+      <div class="brand-block">
+        <span class="brand-mark">Population Genetics</span>
+        <a href="/">evo-edu.org</a>
+        <p class="brand-summary">Landscape genetics and spatial population-change materials for movement, barriers, and population structure.</p>
+      </div>
+      <nav class="site-nav" data-evo-nav></nav>
+    </header>
+
+    <section class="hero-card">
+      <p class="eyebrow">Application</p>
+      <div class="hero-grid">
+        <div>
+          <h1>Gene Flow Mapper</h1>
+          <p class="lede lede-strong">Use a direct responsive workbench to compare left-side and right-side allele patterns under distance, dispersal, mutation, and barrier constraints, while keeping the detailed legacy map available for comparison.</p>
+          <div class="hero-actions">
+            <a class="button-link" href="/apps/gene-flow-mapper/study-guide.html">Learner guide</a>
+            <a class="button-link-secondary" href="/apps/gene-flow-mapper/teacher-guide.html">Teacher guide</a>
+            <a class="button-link-secondary" href="/apps/gene-flow-mapper/about.html">About and provenance</a>
+            <a class="button-link-secondary" href="/apps/landgen/landgenapp104.html" target="_blank" rel="noopener">Open legacy map</a>
+          </div>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <strong>First challenge</strong>
+            <span>Run a no-barrier case, then enable the barrier and compare how quickly left and right allele summaries drift apart.</span>
+          </div>
+          <div class="stat-card">
+            <strong>Key habit</strong>
+            <span>Separate isolation by distance from barrier-driven separation. Similar-looking divergence can have different spatial causes.</span>
+          </div>
+          <div class="stat-card">
+            <strong>Legacy memorialized</strong>
+            <span>The older detailed spatial map remains available as a legacy route while this direct workbench replaces the iframe workflow.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="geneflow-app" class="geneflow-app">
+      <section class="geneflow-panel">
+        <div>
+          <p class="section-kicker">Run Actions</p>
+          <h2>Controls you will use first</h2>
+          <p class="settings-note">Keep run, save, export, and import actions separate from the spatial parameters so the first useful comparison is obvious.</p>
+        </div>
+        <div class="action-grid">
+          <button class="app-button" type="button" id="runButton">Run Simulation</button>
+          <button class="app-button secondary" type="button" id="resetButton">Reset Defaults</button>
+          <button class="app-button secondary" type="button" id="saveButton">Save Summary JSON</button>
+          <button class="app-button secondary" type="button" id="exportButton">Export Settings</button>
+          <label class="app-upload-label secondary" for="settingsImport">Import Settings</label>
+          <input class="visually-hidden" id="settingsImport" type="file" accept="application/json">
+        </div>
+
+        <div>
+          <p class="section-kicker">Current Run Status</p>
+          <div class="status-grid">
+            <div class="status-card">
+              <strong>Final left allele 0</strong>
+              <span id="statusLeft">0.00</span>
+            </div>
+            <div class="status-card">
+              <strong>Final right allele 0</strong>
+              <span id="statusRight">0.00</span>
+            </div>
+            <div class="status-card">
+              <strong>Final divergence</strong>
+              <span id="statusDifference">0.00</span>
+            </div>
+            <div class="status-card">
+              <strong>Barrier column</strong>
+              <span id="statusBarrier">0</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="section-kicker">Try This First</p>
+          <div class="starter-grid">
+            <div class="starter-card">
+              <strong>Step 1</strong>
+              <span>Run the defaults with the barrier enabled and note the left/right difference at the end.</span>
+            </div>
+            <div class="starter-card">
+              <strong>Step 2</strong>
+              <span>Disable the barrier and compare whether the two sides remain more similar.</span>
+            </div>
+            <div class="starter-card">
+              <strong>Step 3</strong>
+              <span>Change dispersal distance and decide whether distance effects or barrier effects dominate.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="geneflow-panel">
+        <div>
+          <p class="section-kicker">Main Display</p>
+          <h2>Left-side versus right-side allele summaries</h2>
+          <p class="settings-note">This direct workbench shows the shared API summary view. Use the legacy map when you want the full cell-by-cell spatial picture.</p>
+        </div>
+        <div class="plot-box">
+          <svg id="geneFlowChart" viewBox="0 0 760 360" aria-label="Gene Flow Mapper chart" role="img"></svg>
+        </div>
+        <div class="legend">
+          <span class="legend-item"><span class="legend-swatch legend-left"></span> Left side allele 0</span>
+          <span class="legend-item"><span class="legend-swatch legend-right"></span> Right side allele 0</span>
+        </div>
+        <div class="landscape-strip">
+          <div class="landscape-side landscape-left">
+            <strong>Left side summary</strong>
+            <p id="leftSummaryText">Run the simulation to compare left-side allele frequency.</p>
+          </div>
+          <div class="landscape-side landscape-right">
+            <strong>Right side summary</strong>
+            <p id="rightSummaryText">Run the simulation to compare right-side allele frequency.</p>
+          </div>
+        </div>
+        <div class="notes-grid">
+          <div class="note-card">
+            <strong>What to notice</strong>
+            <span>Increasing divergence between the two lines can reflect barrier effects, reduced dispersal, or both.</span>
+          </div>
+          <div class="note-card">
+            <strong>Compare mechanisms</strong>
+            <span>Change one factor at a time so you can tell whether separation is driven by distance, mutation, or barrier permeability.</span>
+          </div>
+          <div class="note-card">
+            <strong>Notebook links</strong>
+            <span class="inline-links">
+              <a href="/notebook/concepts/population-thinking.html">Population Thinking</a>
+              <a href="/notebook/concepts/speciation.html">Speciation</a>
+            </span>
+          </div>
+        </div>
+        <div class="table-grid">
+          <div class="table-card">
+            <strong>Generation snapshots</strong>
+            <div id="snapshotTable"></div>
+          </div>
+          <div class="table-card">
+            <strong>Interpretation prompt</strong>
+            <p id="interpretationText">Run the baseline case first, then compare one changed parameter.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="geneflow-panel">
+        <div>
+          <p class="section-kicker">Settings</p>
+          <h2>Spatial population parameters</h2>
+          <p class="settings-note">These values control grid size, mutation, dispersal distance, barrier placement, and the rate of gene flow across the barrier.</p>
+        </div>
+        <form class="settings-form" id="settingsForm">
+          <div class="param-grid">
+            <div class="param-row">
+              <label for="seed">Random seed</label>
+              <input id="seed" name="seed" type="number" min="1" max="9999" step="1" value="7">
+            </div>
+            <div class="param-row">
+              <label for="gridSize">Grid size</label>
+              <input id="gridSize" name="gridSize" type="number" min="4" max="40" step="1" value="20">
+            </div>
+            <div class="param-row">
+              <label for="generations">Generations</label>
+              <input id="generations" name="generations" type="number" min="1" max="80" step="1" value="25">
+            </div>
+            <div class="param-row">
+              <label for="mutationRate">Mutation rate</label>
+              <input id="mutationRate" name="mutationRate" type="number" min="0" max="0.1" step="0.001" value="0.001">
+            </div>
+            <div class="param-row">
+              <label for="dispersalDistance">Dispersal distance</label>
+              <input id="dispersalDistance" name="dispersalDistance" type="number" min="1" max="5" step="1" value="1">
+            </div>
+            <div class="param-row">
+              <label for="barrierEnabled">Barrier enabled</label>
+              <select id="barrierEnabled" name="barrierEnabled">
+                <option value="true" selected>Enabled</option>
+                <option value="false">Disabled</option>
+              </select>
+            </div>
+            <div class="param-row">
+              <label for="barrierPosition">Barrier position</label>
+              <input id="barrierPosition" name="barrierPosition" type="number" min="0.05" max="0.95" step="0.05" value="0.5">
+            </div>
+            <div class="param-row">
+              <label for="barrierGeneFlowRate">Gene flow across barrier</label>
+              <input id="barrierGeneFlowRate" name="barrierGeneFlowRate" type="number" min="0" max="1" step="0.01" value="0.05">
+            </div>
+          </div>
+        </form>
+
+        <div>
+          <button class="message-toggle" type="button" id="messageToggle">Show messages</button>
+          <div class="message-list" id="messageList" hidden></div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer-card">
+      <div>
+        <h3>Gene Flow Mapper application</h3>
+        <p>This direct workbench now uses the shared population-genetics API summary view instead of an iframe wrapper, while the legacy spatial map remains available for detailed comparison.</p>
+      </div>
+      <small>Updated May 16, 2026</small>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      const defaults = {
+        seed: 7,
+        gridSize: 20,
+        generations: 25,
+        mutationRate: 0.001,
+        dispersalDistance: 1,
+        barrierEnabled: 'true',
+        barrierPosition: 0.5,
+        barrierGeneFlowRate: 0.05,
+      };
+      const chart = document.getElementById('geneFlowChart');
+      const form = document.getElementById('settingsForm');
+      const messageList = document.getElementById('messageList');
+      const messageToggle = document.getElementById('messageToggle');
+      let messagesOpen = false;
+      let currentResult = null;
+
+      function getParams() {
+        return {
+          seed: Number(form.seed.value),
+          gridSize: Number(form.gridSize.value),
+          generations: Number(form.generations.value),
+          mutationRate: Number(form.mutationRate.value),
+          dispersalDistance: Number(form.dispersalDistance.value),
+          barrierEnabled: form.barrierEnabled.value === 'true',
+          barrierPosition: Number(form.barrierPosition.value),
+          barrierGeneFlowRate: Number(form.barrierGeneFlowRate.value),
+        };
+      }
+
+      function setDefaults() {
+        Object.entries(defaults).forEach(([key, value]) => {
+          form[key].value = value;
+        });
+      }
+
+      function addMessage(text) {
+        const item = document.createElement('div');
+        item.className = 'message-item';
+        item.textContent = text;
+        messageList.prepend(item);
+      }
+
+      function setMessagesOpen(open) {
+        messagesOpen = open;
+        messageList.hidden = !open;
+        messageToggle.textContent = open ? 'Hide messages' : 'Show messages';
+      }
+
+      function pointsFor(summaries, field, width, height, xPad, yPad) {
+        const maxGen = Math.max(1, summaries.length - 1);
+        return summaries.map((entry, index) => {
+          const x = xPad + (index / maxGen) * (width - xPad * 2);
+          const y = height - yPad - (entry[field] * (height - yPad * 2));
+          return `${x.toFixed(2)},${y.toFixed(2)}`;
+        }).join(' ');
+      }
+
+      function drawChart(result) {
+        const summaries = result.summaries;
+        const width = 760;
+        const height = 360;
+        const xPad = 56;
+        const yPad = 32;
+        const leftPoints = pointsFor(summaries, 'leftAllele0', width, height, xPad, yPad);
+        const rightPoints = pointsFor(summaries, 'rightAllele0', width, height, xPad, yPad);
+        chart.innerHTML = `
+          <rect x="0" y="0" width="${width}" height="${height}" fill="#ffffff"></rect>
+          <line x1="${xPad}" y1="${height - yPad}" x2="${width - xPad}" y2="${height - yPad}" stroke="#9aa9bc" stroke-width="2"></line>
+          <line x1="${xPad}" y1="${yPad}" x2="${xPad}" y2="${height - yPad}" stroke="#9aa9bc" stroke-width="2"></line>
+          <polyline fill="none" stroke="#1f78b4" stroke-width="4" points="${leftPoints}"></polyline>
+          <polyline fill="none" stroke="#e31a1c" stroke-width="4" points="${rightPoints}"></polyline>
+          <text x="${xPad}" y="${yPad - 8}" fill="#475569" font-size="14">allele 0 frequency</text>
+          <text x="${width - xPad - 55}" y="${height - 8}" fill="#475569" font-size="14">generation</text>
+        `;
+      }
+
+      function updateStatus(result) {
+        const finalSummary = result.finalSummary;
+        const difference = Math.abs(finalSummary.leftAllele0 - finalSummary.rightAllele0);
+        document.getElementById('statusLeft').textContent = finalSummary.leftAllele0.toFixed(2);
+        document.getElementById('statusRight').textContent = finalSummary.rightAllele0.toFixed(2);
+        document.getElementById('statusDifference').textContent = difference.toFixed(2);
+        document.getElementById('statusBarrier').textContent = String(result.barrierCol);
+        document.getElementById('leftSummaryText').textContent = `Final left-side allele 0 frequency: ${finalSummary.leftAllele0.toFixed(2)}.`;
+        document.getElementById('rightSummaryText').textContent = `Final right-side allele 0 frequency: ${finalSummary.rightAllele0.toFixed(2)}.`;
+
+        const checkpoints = [0, Math.floor(result.summaries.length / 2), result.summaries.length - 1]
+          .map((index) => ({ index, summary: result.summaries[index] }))
+          .filter((entry) => entry.summary);
+        document.getElementById('snapshotTable').innerHTML = checkpoints.map((entry) => `
+          <p><strong>Gen ${entry.index}</strong>: left ${entry.summary.leftAllele0.toFixed(2)}, right ${entry.summary.rightAllele0.toFixed(2)}</p>
+        `).join('');
+
+        const message = difference > 0.3
+          ? 'The two sides have diverged strongly. Test whether the barrier or dispersal settings are doing most of that work.'
+          : difference > 0.12
+            ? 'There is noticeable separation, but not a complete split. Compare another run to test whether distance alone could explain it.'
+            : 'The two sides remain fairly similar in this run. Compare a stronger barrier or lower dispersal distance.';
+        document.getElementById('interpretationText').textContent = message;
+      }
+
+      function runSimulation() {
+        const api = window.evoEduApis && window.evoEduApis.populationGenetics && window.evoEduApis.populationGenetics.geneFlowMapper;
+        if (!api) {
+          addMessage('Shared population-genetics API is not available on this page.');
+          setMessagesOpen(true);
+          return;
+        }
+        currentResult = api.runSimulation(getParams());
+        drawChart(currentResult);
+        updateStatus(currentResult);
+        addMessage(`Ran ${currentResult.params.generations} generations with dispersal distance ${currentResult.params.dispersalDistance} and barrier ${currentResult.params.barrierEnabled ? 'enabled' : 'disabled'}.`);
+      }
+
+      function resetDefaults() {
+        setDefaults();
+        runSimulation();
+        addMessage('Restored default settings.');
+      }
+
+      function downloadBlob(filename, content, type) {
+        const blob = new Blob([content], { type });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = filename;
+        link.click();
+        URL.revokeObjectURL(url);
+      }
+
+      document.getElementById('runButton').addEventListener('click', runSimulation);
+      document.getElementById('resetButton').addEventListener('click', resetDefaults);
+      document.getElementById('saveButton').addEventListener('click', function () {
+        if (!currentResult) {
+          runSimulation();
+        }
+        downloadBlob('gene-flow-mapper-summary.json', JSON.stringify(currentResult, null, 2), 'application/json');
+        addMessage('Saved current run summary as JSON.');
+      });
+      document.getElementById('exportButton').addEventListener('click', function () {
+        downloadBlob('gene-flow-mapper-settings.json', JSON.stringify(getParams(), null, 2), 'application/json');
+        addMessage('Exported current settings.');
+      });
+      document.getElementById('settingsImport').addEventListener('change', function (event) {
+        const file = event.target.files && event.target.files[0];
+        if (!file) {
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = function () {
+          try {
+            const imported = JSON.parse(reader.result);
+            Object.keys(defaults).forEach((key) => {
+              if (imported[key] !== undefined) {
+                form[key].value = imported[key];
+              }
+            });
+            runSimulation();
+            addMessage('Imported settings from JSON.');
+          } catch (error) {
+            addMessage('Could not import settings file.');
+            setMessagesOpen(true);
+          }
+        };
+        reader.readAsText(file);
+      });
+      messageToggle.addEventListener('click', function () {
+        setMessagesOpen(!messagesOpen);
+      });
+
+      setDefaults();
+      setMessagesOpen(false);
+      runSimulation();
+    })();
+  </script>
+</body>
+</html>

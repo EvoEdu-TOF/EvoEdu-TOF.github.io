@@ -1,0 +1,11 @@
+{
+  "slug": "llm-learning",
+  "title": "LLM Learning",
+  "published": false,
+  "visibility": "internal",
+  "role": "Internal or experimental learning surface not ready for public evo-edu.org navigation.",
+  "category": "internal",
+  "entrypoint": "/apps/llm_learning/index.html",
+  "description": "Not currently included in public evo-edu.org pages.",
+  "legacy_names": ["llm_learning"]
+}

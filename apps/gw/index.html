@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survival in Grid-World</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="title">Survival in Grid-World</h1>
+      <p class="subtitle">An evolving digital system demonstrating cumulative selection</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="controls" class="controls">
+      <button id="startBtn">Start</button>
+      <button id="pauseBtn">Pause</button>
+      <button id="resumeBtn" style="display:none;">Resume</button>
+      <button id="resetBtn">Reset</button>
+
+      <label>
+        Mutation Rate:
+        <input type="range" id="mutationRate" min="0" max="1" step="0.01" value="0.05">
+      </label>
+
+      <label>
+        Population Size:
+        <input type="number" id="populationSize" min="2" max="100" value="10">
+      </label>
+
+      <label>
+        Display Timing (ms):
+        <input type="number" id="displayTiming" min="10" max="2000" step="10" value="500">
+      </label>
+
+      <div class="io-controls">
+        <button id="exportSettingsBtn">Export Settings (JSON)</button>
+        <button id="importSettingsBtn">Import Settings (JSON)</button>
+        <input type="file" id="importSettingsFile" accept="application/json" style="display:none;">
+        <button id="exportDataBtn">Export Data (CSV)</button>
+      </div>
+    </section>
+
+    <section id="grid-container" class="grid-container">
+      <canvas id="gridCanvas" width="600" height="600"></canvas>
+    </section>
+
+    <section id="stats" class="stats">
+      <p>Generation: <span id="generation">0</span></p>
+      <p>Average Fitness: <span id="avgFitness">0.00</span></p>
+      <p>Best Genome: <span id="bestGenome">-</span></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 <a href="https://evo-edu.org">Evo-Edu.org</a> – Demonstrating Evolutionary Principles</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

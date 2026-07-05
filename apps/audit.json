@@ -1,0 +1,398 @@
+{
+  "generated_from": "/home/netuser/dev/evo-edu.org/apps",
+  "published_apps_audited": 11,
+  "portfolio_findings": {
+    "summary": {
+      "iframe_wrapped_apps": 0,
+      "missing_teacher_guide": 1,
+      "missing_standards_page": 1,
+      "missing_about_page": 1,
+      "not_learner_ready": 1,
+      "apps_with_role_walkthroughs": 2
+    },
+    "reader_experience_findings": [
+      "The platform catalog is more coherent than the actual app interiors.",
+      "Several public application pages are still iframe wrappers over legacy runtimes.",
+      "Teacher-facing and standards-facing support remains inconsistent across published apps.",
+      "A public platform should not count as learner-ready merely because it launches."
+    ],
+    "role_walkthroughs": {
+      "seed_reference_app": "shape-evolver",
+      "artifact": "/apps/role_walkthroughs.json",
+      "purpose": "Capture role-based walkthrough findings for students, casual learners, teachers, administrators, and scientists."
+    }
+  },
+  "apps": [
+    {
+      "slug": "allele-tracker",
+      "title": "Allele Tracker",
+      "category": "population-genetics",
+      "entrypoint": "/apps/allele-tracker/",
+      "surface": {
+        "landing": true,
+        "application": true,
+        "study_guide": true,
+        "curriculum_alignment": true,
+        "teacher_guide": true,
+        "standards": true,
+        "about": true
+      },
+      "implementation": {
+        "legacy_dirs": [
+          "popg"
+        ],
+        "api": false,
+        "tests": false
+      },
+      "application_model": {
+        "path": "allele-tracker/app/index.html",
+        "iframe_wrapper": false,
+        "legacy_window_link": false
+      },
+      "replacement": null,
+      "external": null,
+      "remediation_wave": "wave-3",
+      "priority_notes": [],
+      "learner_ready": true
+    },
+    {
+      "slug": "climate-range-shifter",
+      "title": "Climate Range Shifter",
+      "category": "ecology",
+      "entrypoint": "/apps/climate-range-shifter/",
+      "surface": {
+        "landing": true,
+        "application": true,
+        "study_guide": true,
+        "curriculum_alignment": true,
+        "teacher_guide": true,
+        "standards": true,
+        "about": true
+      },
+      "implementation": {
+        "legacy_dirs": [
+          "climate-range-shifter",
+          "crs"
+        ],
+        "api": false,
+        "tests": false
+      },
+      "application_model": {
+        "path": "climate-range-shifter/app/index.html",
+        "iframe_wrapper": false,
+        "legacy_window_link": false
+      },
+      "replacement": null,
+      "external": null,
+      "remediation_wave": "wave-3",
+      "priority_notes": [],
+      "learner_ready": true
+    },
+    {
+      "slug": "cumulative-selection-explorer",
+      "title": "Cumulative Selection Explorer",
+      "category": "artificial-life",
+      "entrypoint": "/apps/cumulative-selection-explorer/",
+      "surface": {
+        "landing": true,
+        "application": true,
+        "study_guide": true,
+        "curriculum_alignment": true,
+        "teacher_guide": true,
+        "standards": true,
+        "about": true
+      },
+      "implementation": {
+        "legacy_dirs": [
+          "weasel"
+        ],
+        "api": false,
+        "tests": false
+      },
+      "application_model": {
+        "path": "cumulative-selection-explorer/app/index.html",
+        "iframe_wrapper": false,
+        "legacy_window_link": false
+      },
+      "replacement": null,
+      "external": null,
+      "remediation_wave": "wave-3",
+      "priority_notes": [],
+      "learner_ready": true
+    },
+    {
+      "slug": "digital-evolution-lab",
+      "title": "Digital Evolution Lab",
+      "category": "artificial-life",
+      "entrypoint": "/apps/digital-evolution-lab/",
+      "surface": {
+        "landing": true,
+        "application": true,
+        "study_guide": true,
+        "curriculum_alignment": true,
+        "teacher_guide": true,
+        "standards": true,
+        "about": true
+      },
+      "implementation": {
+        "legacy_dirs": [],
+        "api": false,
+        "tests": false
+      },
+      "application_model": {
+        "path": "digital-evolution-lab/app/index.html",
+        "iframe_wrapper": false,
+        "legacy_window_link": false
+      },
+      "replacement": null,
+      "external": null,
+      "remediation_wave": "wave-3",
+      "priority_notes": [],
+      "learner_ready": true
+    },
+    {
+      "slug": "ecobalance",
+      "title": "EcoBalance",
+      "category": "ecology",
+      "entrypoint": "/apps/ecobalance/",
+      "surface": {
+        "landing": true,
+        "application": true,
+        "study_guide": true,
+        "curriculum_alignment": true,
+        "teacher_guide": true,
+        "standards": true,
+        "about": true
+      },
+      "implementation": {
+        "legacy_dirs": [
+          "popdyn-predator-prey"
+        ],
+        "api": false,
+        "tests": false
+      },
+      "application_model": {
+        "path": "ecobalance/app/index.html",
+        "iframe_wrapper": false,
+        "legacy_window_link": false
+      },
+      "replacement": null,
+      "external": null,
+      "remediation_wave": "wave-3",
+      "priority_notes": [],
+      "learner_ready": true
+    },
+    {
+      "slug": "gene-flow-mapper",
+      "title": "Gene Flow Mapper",
+      "category": "population-genetics",
+      "entrypoint": "/apps/gene-flow-mapper/",
+      "surface": {
+        "landing": true,
+        "application": true,
+        "study_guide": true,
+        "curriculum_alignment": true,
+        "teacher_guide": true,
+        "standards": true,
+        "about": true
+      },
+      "implementation": {
+        "legacy_dirs": [
+          "landgen"
+        ],
+        "api": false,
+        "tests": false
+      },
+      "application_model": {
+        "path": "gene-flow-mapper/app/index.html",
+        "iframe_wrapper": false,
+        "legacy_window_link": false
+      },
+      "replacement": null,
+      "external": null,
+      "remediation_wave": "wave-3",
+      "priority_notes": [],
+      "learner_ready": true
+    },
+    {
+      "slug": "life-cycle-modeler",
+      "title": "Life Cycle Modeler",
+      "category": "ecology",
+      "entrypoint": "/apps/life-cycle-modeler/",
+      "surface": {
+        "landing": true,
+        "application": true,
+        "study_guide": true,
+        "curriculum_alignment": true,
+        "teacher_guide": true,
+        "standards": true,
+        "about": true
+      },
+      "implementation": {
+        "legacy_dirs": [
+          "popdyn"
+        ],
+        "api": false,
+        "tests": false
+      },
+      "application_model": {
+        "path": "life-cycle-modeler/app/index.html",
+        "iframe_wrapper": false,
+        "legacy_window_link": false
+      },
+      "replacement": null,
+      "external": null,
+      "remediation_wave": "wave-3",
+      "priority_notes": [],
+      "learner_ready": true
+    },
+    {
+      "slug": "literature-explorer",
+      "title": "Literature Explorer",
+      "category": "research-support",
+      "entrypoint": "/apps/literature-explorer/",
+      "surface": {
+        "landing": true,
+        "application": true,
+        "study_guide": true,
+        "curriculum_alignment": true,
+        "teacher_guide": false,
+        "standards": false,
+        "about": false
+      },
+      "implementation": {
+        "legacy_dirs": [],
+        "api": false,
+        "tests": false
+      },
+      "application_model": {
+        "path": "literature-explorer/app/index.html",
+        "iframe_wrapper": false,
+        "legacy_window_link": false
+      },
+      "replacement": null,
+      "external": {
+        "implementation": "/opt/www/dev/CiteGeist",
+        "api": true,
+        "tests": true,
+        "notes": "External codebase with tests; public evo-edu surface is still only a placeholder."
+      },
+      "remediation_wave": "wave-2",
+      "priority_notes": [
+        "No clearly separate teacher guide identified.",
+        "No standalone standards page identified.",
+        "No about/provenance page identified.",
+        "Does not yet meet the stronger learner-ready public contract."
+      ],
+      "learner_ready": false
+    },
+    {
+      "slug": "network-builder",
+      "title": "Network Builder",
+      "category": "artificial-life",
+      "entrypoint": "/apps/network-builder/",
+      "surface": {
+        "landing": true,
+        "application": true,
+        "study_guide": true,
+        "curriculum_alignment": true,
+        "teacher_guide": true,
+        "standards": true,
+        "about": true
+      },
+      "implementation": {
+        "legacy_dirs": [
+          "steiner"
+        ],
+        "api": false,
+        "tests": false
+      },
+      "application_model": {
+        "path": "network-builder/app/index.html",
+        "iframe_wrapper": false,
+        "legacy_window_link": false
+      },
+      "replacement": null,
+      "external": null,
+      "remediation_wave": "wave-3",
+      "priority_notes": [],
+      "learner_ready": true
+    },
+    {
+      "slug": "route-optimizer",
+      "title": "Route Optimizer",
+      "category": "artificial-life",
+      "entrypoint": "/apps/route-optimizer/",
+      "surface": {
+        "landing": true,
+        "application": true,
+        "study_guide": true,
+        "curriculum_alignment": true,
+        "teacher_guide": true,
+        "standards": true,
+        "about": true
+      },
+      "implementation": {
+        "legacy_dirs": [
+          "tsp"
+        ],
+        "api": false,
+        "tests": false
+      },
+      "application_model": {
+        "path": "route-optimizer/app/index.html",
+        "iframe_wrapper": false,
+        "legacy_window_link": false
+      },
+      "replacement": null,
+      "external": null,
+      "remediation_wave": "wave-3",
+      "priority_notes": [],
+      "learner_ready": true
+    },
+    {
+      "slug": "shape-evolver",
+      "title": "Shape Evolver",
+      "category": "artificial-life",
+      "entrypoint": "/apps/shape-evolver/",
+      "surface": {
+        "landing": true,
+        "application": true,
+        "study_guide": true,
+        "curriculum_alignment": true,
+        "teacher_guide": true,
+        "standards": true,
+        "about": true
+      },
+      "implementation": {
+        "legacy_dirs": [
+          "biomorphs"
+        ],
+        "api": false,
+        "tests": false
+      },
+      "application_model": {
+        "path": "shape-evolver/app/index.html",
+        "iframe_wrapper": false,
+        "legacy_window_link": false
+      },
+      "replacement": {
+        "replacement_runtime": "/apps/biomorphs/app.html",
+        "reference_pattern": true,
+        "notes": [
+          "Current Shape Evolver route already points to the newer Biomorphs runtime.",
+          "Biomorphs was explicitly tested for responsive behavior and richer learner/teacher support.",
+          "Treat Biomorphs as a reference pattern for modernizing other legacy iframe-wrapped apps."
+        ]
+      },
+      "external": null,
+      "remediation_wave": "wave-3",
+      "priority_notes": [
+        "Current Shape Evolver route already points to the newer Biomorphs runtime.",
+        "Biomorphs was explicitly tested for responsive behavior and richer learner/teacher support.",
+        "Treat Biomorphs as a reference pattern for modernizing other legacy iframe-wrapped apps."
+      ],
+      "learner_ready": true
+    }
+  ]
+}

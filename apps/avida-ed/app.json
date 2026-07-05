@@ -1,0 +1,11 @@
+{
+  "slug": "avida-ed",
+  "title": "Avida-ED",
+  "published": false,
+  "visibility": "legacy",
+  "role": "Legacy implementation route retained for compatibility with older links and materials.",
+  "category": "artificial-life",
+  "entrypoint": "/apps/avida-ed/",
+  "description": "Legacy Avida-ED route kept behind the public-facing Digital Evolution Lab framing.",
+  "legacy_names": ["Avida-ED"]
+}

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evidence And Cause Workbench Application - evo-edu.org</title>
+  <link rel="stylesheet" href="/shared/evo-edu.css">
+  <script src="/shared/evo-shell.js" defer></script>
+  <style>
+    .workbench {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr);
+      align-items: start;
+    }
+    .panel {
+      background: #fff;
+      border: 1px solid #d7dee8;
+      border-radius: 14px;
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+      padding: 1rem;
+    }
+    .panel h2,
+    .panel h3 {
+      margin-top: 0;
+    }
+    .scenario-list,
+    .statement-list,
+    .result-grid,
+    .flag-grid {
+      display: grid;
+      gap: 0.75rem;
+    }
+    .scenario-list {
+      grid-template-columns: 1fr;
+    }
+    .scenario-button,
+    .check-button,
+    .reset-button {
+      min-height: 2.8rem;
+      border: 1px solid #c9d4e2;
+      border-radius: 10px;
+      background: #f7fafc;
+      color: #1f2937;
+      font: inherit;
+      font-weight: 700;
+      text-align: left;
+      padding: 0.7rem 0.8rem;
+      cursor: pointer;
+    }
+    .scenario-button[aria-pressed="true"] {
+      border-color: #1f6f78;
+      background: #e7f5f3;
+    }
+    .scenario-meta,
+    .muted {
+      color: #526173;
+      font-size: 0.95rem;
+      line-height: 1.45;
+    }
+    .statement {
+      display: grid;
+      gap: 0.55rem;
+      border: 1px solid #d7dee8;
+      border-radius: 12px;
+      padding: 0.8rem;
+      background: #fbfcfe;
+    }
+    .statement p {
+      margin: 0;
+      line-height: 1.45;
+    }
+    .statement select,
+    .slider-row input {
+      width: 100%;
+    }
+    .statement select {
+      min-height: 2.5rem;
+      border: 1px solid #c9d4e2;
+      border-radius: 9px;
+      padding: 0.45rem 0.55rem;
+      font: inherit;
+      background: #fff;
+    }
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin: 0.6rem 0 0;
+    }
+    .badge {
+      border: 1px solid #c9d4e2;
+      border-radius: 999px;
+      padding: 0.3rem 0.55rem;
+      background: #f7fafc;
+      color: #243447;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 0.85rem;
+    }
+    .check-button {
+      background: #1f6f78;
+      color: #fff;
+      border-color: #1f6f78;
+      text-align: center;
+    }
+    .reset-button {
+      text-align: center;
+    }
+    .result-card,
+    .flag-card {
+      border: 1px solid #d7dee8;
+      border-radius: 12px;
+      background: #f7fafc;
+      padding: 0.85rem;
+    }
+    .result-card strong,
+    .flag-card strong {
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+    .is-correct {
+      border-color: #2e7d55;
+      background: #eef8f1;
+    }
+    .is-missed {
+      border-color: #a15c15;
+      background: #fff6e8;
+    }
+    .slider-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+    .slider-row {
+      display: grid;
+      gap: 0.35rem;
+      border: 1px solid #d7dee8;
+      border-radius: 12px;
+      padding: 0.75rem;
+      background: #fbfcfe;
+    }
+    .bar-track {
+      width: 100%;
+      height: 1rem;
+      border-radius: 999px;
+      background: #e2e8f0;
+      overflow: hidden;
+      margin: 0.4rem 0;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: #1f6f78;
+      transition: width 0.2s ease;
+    }
+    .claim-status {
+      border-left: 5px solid #1f6f78;
+      padding: 0.8rem 0.9rem;
+      background: #f7fafc;
+      border-radius: 10px;
+      line-height: 1.5;
+    }
+    @media (max-width: 980px) {
+      .workbench {
+        grid-template-columns: 1fr;
+      }
+      .slider-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-topbar">
+      <div class="brand-block">
+        <span class="brand-mark">Foundations</span>
+        <a href="/">evo-edu.org</a>
+        <p class="brand-summary">Practice the empirical reasoning behind evolutionary and ecological explanation.</p>
+      </div>
+      <nav class="site-nav" data-evo-nav></nav>
+    </header>
+
+    <section class="hero-card">
+      <p class="eyebrow">Application</p>
+      <div class="hero-grid">
+        <div>
+          <h1>Evidence And Cause Workbench</h1>
+          <p class="lede lede-strong">Classify claims, compare magnitudes, and flag simplifications before assigning biological causes.</p>
+          <div class="hero-actions">
+            <a class="button-link" href="/apps/evidence-cause-workbench/study-guide.html">Study guide</a>
+            <a class="button-link-secondary" href="/apps/evidence-cause-workbench/teacher-guide.html">Teacher guide</a>
+            <a class="button-link-secondary" href="/apps/evidence-cause-workbench/about.html">About</a>
+          </div>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <strong>Use first</strong>
+            <span>Select a scenario, sort the statements, then check what kind of reasoning each statement performs.</span>
+          </div>
+          <div class="stat-card">
+            <strong>Then test sufficiency</strong>
+            <span>Use the magnitude sliders to ask whether a proposed cause could plausibly explain the observed effect.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="workbench" id="workbench">
+      <section class="panel">
+        <p class="section-kicker">Scenario</p>
+        <h2>Choose a pattern</h2>
+        <div class="scenario-list" id="scenarioList"></div>
+        <div id="scenarioDetails"></div>
+      </section>
+
+      <section class="panel">
+        <p class="section-kicker">Claim Sorting</p>
+        <h2>What job is each statement doing?</h2>
+        <p class="muted">Sort each statement into one reasoning category. The goal is not to memorize labels; it is to slow down before turning a pattern into a causal story.</p>
+        <div class="statement-list" id="statementList"></div>
+        <div class="button-row">
+          <button class="check-button" type="button" id="checkButton">Check sorting</button>
+          <button class="reset-button" type="button" id="resetButton">Reset choices</button>
+        </div>
+        <div class="result-grid" id="resultGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="panel">
+        <p class="section-kicker">Magnitude Check</p>
+        <h2>Could this cause be strong enough?</h2>
+        <p class="muted">This toy check does not estimate real parameters. It teaches the habit of matching effect size, time scale, and stochastic noise before naming a cause.</p>
+        <div class="slider-grid">
+          <label class="slider-row">Observed effect size
+            <input id="observedEffect" type="range" min="1" max="100" value="35">
+            <span id="observedLabel"></span>
+          </label>
+          <label class="slider-row">Candidate cause strength
+            <input id="causeStrength" type="range" min="1" max="100" value="18">
+            <span id="causeLabel"></span>
+          </label>
+          <label class="slider-row">Stochastic noise expected
+            <input id="noiseStrength" type="range" min="0" max="100" value="25">
+            <span id="noiseLabel"></span>
+          </label>
+          <label class="slider-row">Independent lines of evidence
+            <input id="evidenceStrength" type="range" min="0" max="5" value="1">
+            <span id="evidenceLabel"></span>
+          </label>
+        </div>
+        <div class="bar-track" aria-hidden="true"><div class="bar-fill" id="causeBar"></div></div>
+        <div class="claim-status" id="claimStatus"></div>
+      </section>
+
+      <section class="panel">
+        <p class="section-kicker">Simplification Flags</p>
+        <h2>What did the exercise make easier?</h2>
+        <div class="flag-grid" id="flagGrid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const categories = [
+      "Observation",
+      "Baseline",
+      "Candidate cause",
+      "Chance mechanism",
+      "Evidence needed",
+      "Overclaim",
+      "Value claim",
+      "Model boundary",
+      "Simplification"
+    ];
+
+    const scenarios = [
+      {
+        title: "Allele frequency shift",
+        pattern: "Allele A rose from 0.20 to 0.35 in one generation.",
+        tags: ["population genetics", "frequency change", "mechanism contrast"],
+        statements: [
+          ["The measured allele frequency changed by 0.15.", "Observation"],
+          ["A drift-only model with the same population size gives a baseline distribution of possible changes.", "Baseline"],
+          ["Chance sampling can be a cause of frequency change, not a claim that nothing caused the result.", "Chance mechanism"],
+          ["Directional selection favoring allele A could be one candidate cause.", "Candidate cause"],
+          ["We need population size, sampling design, fitness differences, and replicate evidence before naming selection.", "Evidence needed"],
+          ["Because A increased, natural selection must have favored it.", "Overclaim"],
+          ["The exercise holds migration and mutation at zero so one mechanism is easier to inspect.", "Simplification"]
+        ],
+        flags: [
+          ["Isolated mechanism", "Only one force may be turned on at a time."],
+          ["Known population size", "Real estimates can be noisy or structured."],
+          ["Perfect allele calls", "Measurement error is ignored."]
+        ]
+      },
+      {
+        title: "Heterozygote deficit",
+        pattern: "Observed heterozygotes are lower than Hardy-Weinberg expectation.",
+        tags: ["null model", "genotype counts", "assumption check"],
+        statements: [
+          ["The observed genotype counts have fewer heterozygotes than expected.", "Observation"],
+          ["Hardy-Weinberg expectation is the baseline under random mating and other assumptions.", "Baseline"],
+          ["Inbreeding, Wahlund structure, selection, or scoring error could contribute.", "Candidate cause"],
+          ["We need sampling locations, mating structure, error checks, and fitness data to distinguish causes.", "Evidence needed"],
+          ["A Hardy-Weinberg departure proves selection.", "Overclaim"],
+          ["The exercise may give exact genotype counts and a single locus to make the null comparison visible.", "Simplification"]
+        ],
+        flags: [
+          ["Single locus", "Genome-wide context is hidden."],
+          ["Clean counts", "Scoring uncertainty is set aside."],
+          ["Closed population", "Migration is assumed absent unless stated."]
+        ]
+      },
+      {
+        title: "Progress claim",
+        pattern: "A fossil series shows a directional increase in average body size.",
+        tags: ["trend", "value claim", "macroevolution"],
+        statements: [
+          ["Average body size increased in the sampled lineage or group.", "Observation"],
+          ["A no-trend, sampling-bias, or branching-history comparison is a baseline for interpreting the series.", "Baseline"],
+          ["Selection, differential extinction, environmental sorting, sampling, or clade replacement could contribute.", "Candidate cause"],
+          ["Calling the trend improvement or progress adds a ranking that the measurement alone does not justify.", "Value claim"],
+          ["We need a measured axis, sampling checks, phylogenetic context, mechanism evidence, and effect magnitude before naming a causal trend.", "Evidence needed"],
+          ["Larger body size proves that evolution moves toward better forms.", "Overclaim"],
+          ["The exercise may make the direction visible and hide extinct branches, unchanged lineages, or traits moving in other directions.", "Simplification"]
+        ],
+        flags: [
+          ["Single measured axis", "Progress language can smuggle in a value ranking."],
+          ["Visible trend", "Sampling and branching history may be simplified."],
+          ["Known direction", "Real datasets need checks for exceptions and reversals."]
+        ]
+      },
+      {
+        title: "Predator removal",
+        pattern: "After predator removal, one prey species becomes dominant while rarer prey decline.",
+        tags: ["ecology", "community", "multiple causes"],
+        statements: [
+          ["Prey relative abundance changed after predator removal.", "Observation"],
+          ["A no-removal control or pre-removal time series is the comparison baseline.", "Baseline"],
+          ["Frequency-dependent predation on common prey could have helped maintain diversity.", "Candidate cause"],
+          ["We need controls, replication, diet data, recruitment data, and disturbance records.", "Evidence needed"],
+          ["Predators always stabilize communities.", "Overclaim"],
+          ["The exercise may remove one predator cleanly even though real food webs have indirect effects.", "Simplification"]
+        ],
+        flags: [
+          ["Clean intervention", "Real removals can disturb more than one pathway."],
+          ["Short food web", "Indirect effects are reduced."],
+          ["Stable environment", "Weather and habitat change are held constant."]
+        ]
+      },
+      {
+        title: "Island richness model",
+        pattern: "Smaller, more isolated habitat patches usually contain fewer species, but several patches are exceptions.",
+        tags: ["model boundary", "multi-cause", "ecology"],
+        statements: [
+          ["Species richness tends to be lower in smaller and more isolated patches, with exceptions.", "Observation"],
+          ["The simple baseline links richness to immigration and extinction rates shaped by isolation and area.", "Baseline"],
+          ["Patch size and isolation could contribute by changing extinction risk and colonization rate.", "Candidate cause"],
+          ["Succession, habitat heterogeneity, disturbance, species interactions, local diversification, or history could also contribute.", "Evidence needed"],
+          ["The model is useful for stating expectations, but it does not explain every exception by itself.", "Model boundary"],
+          ["Area and isolation caused all richness differences because the overall pattern matches the model.", "Overclaim"],
+          ["The exercise may hold source pool, sampling effort, habitat quality, and interaction strength constant.", "Simplification"]
+        ],
+        flags: [
+          ["Rate model", "Immigration and extinction are simplified into broad terms."],
+          ["Omitted processes", "Succession, interactions, and habitat heterogeneity are reduced."],
+          ["Exception handling", "Residuals are evidence to inspect, not failures to ignore."]
+        ]
+      },
+      {
+        title: "Useful-looking trait",
+        pattern: "A common trait appears useful in the current environment.",
+        tags: ["adaptation", "evidence", "guardrail"],
+        statements: [
+          ["The trait is common and appears to improve performance in one setting.", "Observation"],
+          ["A neutral or constraint-based explanation is a baseline alternative to adaptation.", "Baseline"],
+          ["Natural selection could have increased the trait if it was heritable and improved reproductive success.", "Candidate cause"],
+          ["We need heritability, fitness consequences, population history, and alternative explanations.", "Evidence needed"],
+          ["If a trait is useful, it must have evolved for that use.", "Overclaim"],
+          ["The exercise may make the function obvious and ignore historical constraints.", "Simplification"]
+        ],
+        flags: [
+          ["Obvious function", "Real trait function can be context-dependent."],
+          ["Known environment", "Past selective environments may differ."],
+          ["No constraints", "Developmental or phylogenetic constraints are minimized."]
+        ]
+      }
+    ];
+
+    let activeIndex = 0;
+
+    const scenarioList = document.getElementById("scenarioList");
+    const scenarioDetails = document.getElementById("scenarioDetails");
+    const statementList = document.getElementById("statementList");
+    const resultGrid = document.getElementById("resultGrid");
+    const flagGrid = document.getElementById("flagGrid");
+
+    function renderScenarios() {
+      scenarioList.innerHTML = "";
+      scenarios.forEach((scenario, index) => {
+        const button = document.createElement("button");
+        button.className = "scenario-button";
+        button.type = "button";
+        button.setAttribute("aria-pressed", index === activeIndex ? "true" : "false");
+        button.innerHTML = `<strong>${scenario.title}</strong><br><span class="scenario-meta">${scenario.pattern}</span>`;
+        button.addEventListener("click", () => {
+          activeIndex = index;
+          renderAll();
+        });
+        scenarioList.appendChild(button);
+      });
+    }
+
+    function renderDetails() {
+      const scenario = scenarios[activeIndex];
+      scenarioDetails.innerHTML = `
+        <div class="badge-row">${scenario.tags.map(tag => `<span class="badge">${tag}</span>`).join("")}</div>
+        <p class="muted"><strong>Pattern:</strong> ${scenario.pattern}</p>
+      `;
+    }
+
+    function renderStatements() {
+      const scenario = scenarios[activeIndex];
+      statementList.innerHTML = "";
+      scenario.statements.forEach(([text], index) => {
+        const item = document.createElement("article");
+        item.className = "statement";
+        item.innerHTML = `
+          <p>${text}</p>
+          <select aria-label="Reasoning category for statement ${index + 1}" data-answer-index="${index}">
+            <option value="">Choose category</option>
+            ${categories.map(category => `<option value="${category}">${category}</option>`).join("")}
+          </select>
+        `;
+        statementList.appendChild(item);
+      });
+      resultGrid.innerHTML = "";
+    }
+
+    function renderFlags() {
+      const scenario = scenarios[activeIndex];
+      flagGrid.innerHTML = scenario.flags.map(([title, body]) => `
+        <article class="flag-card">
+          <strong>${title}</strong>
+          <span>${body}</span>
+        </article>
+      `).join("");
+    }
+
+    function checkAnswers() {
+      const scenario = scenarios[activeIndex];
+      const selects = [...statementList.querySelectorAll("select")];
+      let correct = 0;
+      selects.forEach((select, index) => {
+        const expected = scenario.statements[index][1];
+        const card = select.closest(".statement");
+        card.classList.remove("is-correct", "is-missed");
+        if (select.value === expected) {
+          correct += 1;
+          card.classList.add("is-correct");
+        } else {
+          card.classList.add("is-missed");
+        }
+      });
+      resultGrid.innerHTML = `
+        <article class="result-card">
+          <strong>${correct} of ${scenario.statements.length} sorted correctly</strong>
+          <span>Expected categories: ${scenario.statements.map(item => item[1]).join(", ")}.</span>
+        </article>
+        <article class="result-card">
+          <strong>Reasoning habit</strong>
+          <span>A causal claim is strongest when it names a baseline, distinguishes alternatives, has enough magnitude, avoids value-language overreach, and survives checks against stochastic, mixed-cause, and model-boundary explanations.</span>
+        </article>
+      `;
+    }
+
+    function resetAnswers() {
+      [...statementList.querySelectorAll("select")].forEach(select => {
+        select.value = "";
+        select.closest(".statement").classList.remove("is-correct", "is-missed");
+      });
+      resultGrid.innerHTML = "";
+    }
+
+    function updateMagnitude() {
+      const observed = Number(document.getElementById("observedEffect").value);
+      const cause = Number(document.getElementById("causeStrength").value);
+      const noise = Number(document.getElementById("noiseStrength").value);
+      const evidence = Number(document.getElementById("evidenceStrength").value);
+      document.getElementById("observedLabel").textContent = `${observed}% observed change`;
+      document.getElementById("causeLabel").textContent = `${cause}% maximum plausible direct effect`;
+      document.getElementById("noiseLabel").textContent = `${noise}% expected stochastic spread`;
+      document.getElementById("evidenceLabel").textContent = `${evidence} independent line${evidence === 1 ? "" : "s"} of evidence`;
+      document.getElementById("causeBar").style.width = `${Math.min(100, cause + noise / 2)}%`;
+
+      let message;
+      if (cause < observed * 0.5 && evidence < 2) {
+        message = "Weak claim: the proposed cause is much smaller than the observed effect and has little independent support.";
+      } else if (cause + noise >= observed && evidence >= 2) {
+        message = "Plausible but still not proven: the proposed cause is large enough to matter and has multiple support lines, but alternatives still need checking.";
+      } else if (noise >= observed && evidence < 2) {
+        message = "Stochastic mechanism remains plausible: expected random spread is large enough that a directional cause is not yet necessary.";
+      } else {
+        message = "Intermediate claim: the cause might contribute, but sufficiency and alternatives need more evidence.";
+      }
+      document.getElementById("claimStatus").textContent = message;
+    }
+
+    function renderAll() {
+      renderScenarios();
+      renderDetails();
+      renderStatements();
+      renderFlags();
+      updateMagnitude();
+    }
+
+    document.getElementById("checkButton").addEventListener("click", checkAnswers);
+    document.getElementById("resetButton").addEventListener("click", resetAnswers);
+    ["observedEffect", "causeStrength", "noiseStrength", "evidenceStrength"].forEach(id => {
+      document.getElementById(id).addEventListener("input", updateMagnitude);
+    });
+
+    renderAll();
+  </script>
+</body>
+</html>
