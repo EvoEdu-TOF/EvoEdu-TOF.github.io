@@ -1,0 +1,445 @@
+{
+  "slug": "blacktip-shark",
+  "source_file": "Blacktip Shark SLH Mote.txt",
+  "title": "Blacktip Shark (Carcharhinus limbatus) Life History",
+  "common_name": "Blacktip shark",
+  "scientific_name": "Carcharhinus limbatus",
+  "flelmr_code": "0933",
+  "legacy_identifiers": [
+    {
+      "authority": "legacy-ecospecies",
+      "identifier": "0933",
+      "label": "FLELMR"
+    }
+  ],
+  "taxon_identifiers": [],
+  "primary_taxon_authority": "",
+  "primary_taxon_identifier": null,
+  "summary": "",
+  "section_count": 15,
+  "citation_count": 10,
+  "publication_status": "published",
+  "is_archived": false,
+  "editor_notes": "",
+  "last_modified_by": "system-import",
+  "diagnostics": [],
+  "citations": [
+    {
+      "id": 506,
+      "position": 1,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "52",
+      "citation_key": "bigelow1948fisheswesternnorth",
+      "entry_type": "misc",
+      "raw_text": "Bigelow, H.B. and W.C. Schroeder. 1948. Fishes of the western North Atlantic. Mem. Sears Found. Mar. Res., Yale Univ. Part 1: 576.",
+      "normalized_text": "Bigelow, H.B. and W.C. Schroeder. 1948. Fishes of the western North Atlantic. Mem. Sears Found. Mar. Res., Yale Univ. Part 1: 576.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{bigelow1948fisheswesternnorth,\n  author = {Bigelow, H.B. and W.C. Schroeder},\n  note = {raw_reference = {Bigelow, H.B. and W.C. Schroeder. 1948. Fishes of the western North Atlantic. Mem. Sears Found. Mar. Res., Yale Univ. Part 1: 576.}; ecospecies_reference_number = {52}},\n  title = {Fishes of the western North Atlantic. Mem. Sears Found. Mar. Res., Yale Univ. Part 1: 576},\n  year = {1948},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 507,
+      "position": 2,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "62",
+      "citation_key": "branstetter1981biologicalnotessharks",
+      "entry_type": "misc",
+      "raw_text": "Branstetter, S. 1981. Biological notes on the sharks of the north central Gulf of Mexico. Cont. Mar. Sci. 24: 13-34.",
+      "normalized_text": "Branstetter, S. 1981. Biological notes on the sharks of the north central Gulf of Mexico. Cont. Mar. Sci. 24: 13-34.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{branstetter1981biologicalnotessharks,\n  author = {Branstetter, S},\n  note = {raw_reference = {Branstetter, S. 1981. Biological notes on the sharks of the north central Gulf of Mexico. Cont. Mar. Sci. 24: 13-34.}; ecospecies_reference_number = {62}},\n  title = {Biological notes on the sharks of the north central Gulf of Mexico. Cont. Mar. Sci. 24: 13-34},\n  year = {1981},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 508,
+      "position": 3,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "101",
+      "citation_key": "castro1983sharksnorthamerican",
+      "entry_type": "misc",
+      "raw_text": "Castro, J.I.. 1983. The sharks of North American Waters. Texas A&M University Press, College Station, TX: 180.",
+      "normalized_text": "Castro, J.I.. 1983. The sharks of North American Waters. Texas A&M University Press, College Station, TX: 180.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{castro1983sharksnorthamerican,\n  author = {Castro, J.I},\n  note = {raw_reference = {Castro, J.I.. 1983. The sharks of North American Waters. Texas A&M University Press, College Station, TX: 180.}; ecospecies_reference_number = {101}},\n  title = {The sharks of North American Waters. Texas A&M University Press, College Station, TX: 180},\n  year = {1983},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 509,
+      "position": 4,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "123",
+      "citation_key": "clark1965sharkscentralgulf",
+      "entry_type": "misc",
+      "raw_text": "Clark, E. and K. von Schmidt. 1965. Sharks of the central Gulf coast of Florida. Bull. Mar. Sci. 15: 13-83.",
+      "normalized_text": "Clark, E. and K. von Schmidt. 1965. Sharks of the central Gulf coast of Florida. Bull. Mar. Sci. 15: 13-83.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{clark1965sharkscentralgulf,\n  author = {Clark, E. and K. von Schmidt},\n  howpublished = {Bull. Mar. Sci},\n  note = {raw_reference = {Clark, E. and K. von Schmidt. 1965. Sharks of the central Gulf coast of Florida. Bull. Mar. Sci. 15: 13-83.}; ecospecies_reference_number = {123}},\n  pages = {13-83},\n  title = {Sharks of the central Gulf coast of Florida},\n  volume = {15},\n  year = {1965},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 510,
+      "position": 5,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "327",
+      "citation_key": "hoese1977fishesgulfmexico",
+      "entry_type": "misc",
+      "raw_text": "Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.",
+      "normalized_text": "Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{hoese1977fishesgulfmexico,\n  author = {Hoese, H.D. and R.H. Moore},\n  note = {raw_reference = {Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.}; ecospecies_reference_number = {327}},\n  title = {Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327},\n  year = {1977},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 511,
+      "position": 6,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "581",
+      "citation_key": "reidjr1954ecologicalstudygulf",
+      "entry_type": "misc",
+      "raw_text": "Reid Jr., G.K. 1954. An ecological study of the Gulf of Mexico fishes, in the vicinity of Cedar Key, Florida. Bull. Mar. Sci. of the Gulf and Carib. 4(1): 1-94.",
+      "normalized_text": "Reid Jr., G.K. 1954. An ecological study of the Gulf of Mexico fishes, in the vicinity of Cedar Key, Florida. Bull. Mar. Sci. of the Gulf and Carib. 4(1): 1-94.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{reidjr1954ecologicalstudygulf,\n  author = {Reid Jr., G.K},\n  howpublished = {Bull. Mar. Sci. of the Gulf and Carib},\n  note = {raw_reference = {Reid Jr., G.K. 1954. An ecological study of the Gulf of Mexico fishes, in the vicinity of Cedar Key, Florida. Bull. Mar. Sci. of the Gulf and Carib. 4(1): 1-94.}; ecospecies_reference_number = {581}},\n  number = {1},\n  pages = {1-94},\n  title = {An ecological study of the Gulf of Mexico fishes, in the vicinity of Cedar Key, Florida},\n  volume = {4},\n  year = {1954},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 512,
+      "position": 7,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "788",
+      "citation_key": "robins1986fieldguideatlantic",
+      "entry_type": "misc",
+      "raw_text": "Robins, C. Richard, G. Carlton Ray, John Douglass and R. Freud. 1986. A Field Guide to Atlantic Coast Fishes of North America. Peterson Field Guide Series No. 32, Houghton Mifflin Co., Boston. 3548..",
+      "normalized_text": "Robins, C. Richard, G. Carlton Ray, John Douglass and R. Freud. 1986. A Field Guide to Atlantic Coast Fishes of North America. Peterson Field Guide Series No. 32, Houghton Mifflin Co., Boston. 3548..",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{robins1986fieldguideatlantic,\n  author = {Robins, C. Richard, G. Carlton Ray, John Douglass and R. Freud},\n  note = {raw_reference = {Robins, C. Richard, G. Carlton Ray, John Douglass and R. Freud. 1986. A Field Guide to Atlantic Coast Fishes of North America. Peterson Field Guide Series No. 32, Houghton Mifflin Co., Boston. 3548..}; ecospecies_reference_number = {788}},\n  title = {A Field Guide to Atlantic Coast Fishes of North America. Peterson Field Guide Series No. 32, Houghton Mifflin Co., Boston. 3548},\n  year = {1986},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 513,
+      "position": 8,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "791",
+      "citation_key": "fischer1978fa0speciesidentification",
+      "entry_type": "misc",
+      "raw_text": "Fischer, W. (Ed.). 1978. FA0 species identification sheets for fishery purposes. Western central Atlantic (Fishing area 31). Volumes 1-7. FA0 United Nations, Rome.",
+      "normalized_text": "Fischer, W. (Ed.). 1978. FA0 species identification sheets for fishery purposes. Western central Atlantic (Fishing area 31). Volumes 1-7. FA0 United Nations, Rome.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{fischer1978fa0speciesidentification,\n  author = {Fischer, W. (Ed.)},\n  note = {raw_reference = {Fischer, W. (Ed.). 1978. FA0 species identification sheets for fishery purposes. Western central Atlantic (Fishing area 31). Volumes 1-7. FA0 United Nations, Rome.}; ecospecies_reference_number = {791}},\n  title = {FA0 species identification sheets for fishery purposes. Western central Atlantic (Fishing area 31). Volumes 1-7. FA0 United Nations, Rome},\n  year = {1978},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 514,
+      "position": 9,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "840",
+      "citation_key": "killam1989agegrowthblacktip",
+      "entry_type": "misc",
+      "raw_text": "Killam, KA and GR Parsons. 1989. Age and growth of the blacktip shark, Carcharhinus limbatus, near Tampa Bay, Florida.. Fish. Bull. 87:845-857",
+      "normalized_text": "Killam, KA and GR Parsons. 1989. Age and growth of the blacktip shark, Carcharhinus limbatus, near Tampa Bay, Florida.. Fish. Bull. 87:845-857",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{killam1989agegrowthblacktip,\n  author = {Killam, KA and GR Parsons},\n  howpublished = {Bull},\n  note = {raw_reference = {Killam, KA and GR Parsons. 1989. Age and growth of the blacktip shark, Carcharhinus limbatus, near Tampa Bay, Florida.. Fish. Bull. 87:845-857}; ecospecies_reference_number = {840}},\n  pages = {845-857},\n  title = {Age and growth of the blacktip shark, Carcharhinus limbatus, near Tampa Bay, Florida.. Fish},\n  volume = {87},\n  year = {1989},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 515,
+      "position": 10,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "860",
+      "citation_key": "branstetter1987agegrowthestimates",
+      "entry_type": "misc",
+      "raw_text": "Branstetter, S. 1987. Age and growth estimates for blacktip, Carcharhinus limbatus, and spinner, C. brevipinna, sharks from the northwestern Gulf of Mexico.  Copeia 1987(4):964-974.",
+      "normalized_text": "Branstetter, S. 1987. Age and growth estimates for blacktip, Carcharhinus limbatus, and spinner, C. brevipinna, sharks from the northwestern Gulf of Mexico. Copeia 1987(4):964-974.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{branstetter1987agegrowthestimates,\n  author = {Branstetter, S},\n  note = {raw_reference = {Branstetter, S. 1987. Age and growth estimates for blacktip, Carcharhinus limbatus, and spinner, C. brevipinna, sharks from the northwestern Gulf of Mexico.  Copeia 1987(4):964-974.}; ecospecies_reference_number = {860}},\n  title = {Age and growth estimates for blacktip, Carcharhinus limbatus, and spinner, C. brevipinna, sharks from the northwestern Gulf of Mexico.  Copeia 1987(4):964-974},\n  year = {1987},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    }
+  ],
+  "structured_document": {
+    "source_format": "ecospecies-markdown-v1",
+    "updated_by": "system-import",
+    "node_count": 14,
+    "ast": {
+      "metadata": {
+        "title": "Blacktip Shark (Carcharhinus limbatus) Life History",
+        "common_name": "Blacktip shark",
+        "scientific_name": "Carcharhinus limbatus",
+        "legacy_identifiers": [
+          {
+            "authority": "legacy-ecospecies",
+            "identifier": "0933",
+            "label": "FLELMR"
+          }
+        ],
+        "taxon_identifiers": [],
+        "primary_taxon_authority": "",
+        "source_file": "Blacktip Shark SLH Mote.txt",
+        "publication_status": "published",
+        "source_format": "ecospecies-markdown-v1"
+      },
+      "nodes": [
+        {
+          "node_type": "section",
+          "title": "Revisions",
+          "body": "January 19, 1993.  T.D. Philipps; Mote Marine Laboratory",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "TAXONOMY",
+          "body": "Common Name:  Blacktip shark\nScientific Name: Carcharhinus limbatus",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Classification",
+          "body": "Phylum: Chordata\n\tClass: Elasmobranchiomorphi\n\tOrder: Lamniformes\n\tFamily: Carcharhinidae\n\nOther Common Names:  spot-fin shark (581) small black-tipped shark (52)",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "VALUE & STATUS",
+          "body": "Commercial:  Marketed fresh or salted, also used for fishmeal (101 791). Various sub-products such as the liver used for oil (791). Skin is also used for leather (101).\n\nRecreational: Often fished for sport (101).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "GEOGRAPHIC RANGE",
+          "body": "Overall:  From Massachusetts to northern Brazil and worldwide in temperate and tropical waters (327 788). Also, northeast Florida through the Gulf of Mexico (101). Reported in the eastern tropical Pacific from Lower California to Peru (52).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "By State",
+          "body": "Florida:  Within Study Area: Distributed throughout Florida waters.\n\nMobility and Migration:",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Life Mode",
+          "body": "Pelagic, often coming into inshore waters in large schools in association with Spanish mackerel, usually found in offshore and coastal waters frequently in aggregations of 6 or more (788 791). Sometimes seen in schools at the surface (52).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "BENTHIC HABITAT",
+          "body": "Habitat Type: Young use shallow beach and bay areas as nursery grounds (860). Frequently the most common shark in clear water cuts and along beaches in Florida and the Bahamas (7881, and one of the commonest pelagic sharks around south Florida (581).\n\nSubstrate: No particular substrate is known to be preferred.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REPRODUCTION",
+          "body": "Reproductive Mode: Fertilization is internal; reproduction is viviparous (101).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Mating/Spawning",
+          "body": "Males mature at a length of 130-135 cm (4-5 ft) and at an age of 4-5 years (52 101 860). Females mature at a length of 150-155 cm (101 123 860) and at an age of 6-6.8 years (860). In Florida, mating occurs in June and July (860). Gestation period extends from 10 to 12 months (62 101).Young are born in late spring through early summer (101 123). In the Tampa Bay area a 3 to 4 week parturition period extends from late May to early June (860).\n\nFecundity: Fecundity has been variously reported as 4-6 embryos (101), 1-10 embryos (791), and 3-9 embryos with 4-6 the most common (52).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Length Range",
+          "body": "Juveniles: Size at birth ranges from 48.8 cm to 60 cm (791 860). Smallest neonates in Florida are 62 cm with rapid neonatal growth (860). Growth rates are 25-30 cm by the first annulus; 20 cm/yr during second year; 10 cm/yr through adolescence; 5-7 cm/yr after maturity (860). Branstetter (860) gave the equation from fork length to total length as\n[eq]\nTL=1.16(FL) + 5.71\n[/eq]\n\nAdults: Maximum size reported is 152-198 cm (52 123) although Robins (788) gives the figure of 2.5 m. Largest males in Florida were 8.6 years of age and largest females ranged from 8 to 9.3 years of age (860).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "FOOD HABITS",
+          "body": "Feeds on small schooling fishes, menhaden, rays, squid, and other schooling fishes (52 62 101 123 791). Remains of crabs have also been found in their stomachs (123). Small blacktips have been found in the stomachs of other sharks (5 2) .",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REFERENCE NUMBERS",
+          "body": "52 62 101 123 327 581 788 791 840 860",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "CITATIONS",
+          "body": "52, Bigelow, H.B. and W.C. Schroeder. 1948. Fishes of the western North Atlantic. Mem. Sears Found. Mar. Res., Yale Univ. Part 1: 576.\n\n62, Branstetter, S. 1981. Biological notes on the sharks of the north central Gulf of Mexico. Cont. Mar. Sci. 24: 13-34.\n\n101, Castro, J.I.. 1983. The sharks of North American Waters. Texas A&M University Press, College Station, TX: 180.\n\n123, Clark, E. and K. von Schmidt. 1965. Sharks of the central Gulf coast of Florida. Bull. Mar. Sci. 15: 13-83.\n\n327, Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.\n\n581, Reid Jr., G.K. 1954. An ecological study of the Gulf of Mexico fishes, in the vicinity of Cedar Key, Florida. Bull. Mar. Sci. of the Gulf and Carib. 4(1): 1-94.\n\n788, Robins, C. Richard, G. Carlton Ray, John Douglass and R. Freud. 1986. A Field Guide to Atlantic Coast Fishes of North America. Peterson Field Guide Series No. 32, Houghton Mifflin Co., Boston. 3548..\n\n791, Fischer, W. (Ed.). 1978. FA0 species identification sheets for fishery purposes. Western central Atlantic (Fishing area 31). Volumes 1-7. FA0 United Nations, Rome.\n\n840, Killam, KA and GR Parsons. 1989. Age and growth of the blacktip shark, Carcharhinus limbatus, near Tampa Bay, Florida.. Fish. Bull. 87:845-857\n\n860, Branstetter, S. 1987. Age and growth estimates for blacktip, Carcharhinus limbatus, and spinner, C. brevipinna, sharks from the northwestern Gulf of Mexico.  Copeia 1987(4):964-974.",
+          "depth": 2,
+          "children": []
+        }
+      ]
+    }
+  },
+  "legacy_source": null,
+  "sections": [
+    {
+      "id": 195,
+      "position": 1,
+      "heading": "HEADER",
+      "content": "Title: Blacktip Shark (Carcharhinus limbatus) Life History\n\nFLELMR CODE: 0933"
+    },
+    {
+      "id": 196,
+      "position": 2,
+      "heading": "Revisions",
+      "content": "January 19, 1993.  T.D. Philipps; Mote Marine Laboratory"
+    },
+    {
+      "id": 197,
+      "position": 3,
+      "heading": "TAXONOMY",
+      "content": "Common Name:  Blacktip shark\nScientific Name: Carcharhinus limbatus"
+    },
+    {
+      "id": 198,
+      "position": 4,
+      "heading": "Classification",
+      "content": "Phylum: Chordata\n\tClass: Elasmobranchiomorphi\n\tOrder: Lamniformes\n\tFamily: Carcharhinidae\n\nOther Common Names:  spot-fin shark (581) small black-tipped shark (52)"
+    },
+    {
+      "id": 199,
+      "position": 5,
+      "heading": "VALUE & STATUS",
+      "content": "Commercial:  Marketed fresh or salted, also used for fishmeal (101 791). Various sub-products such as the liver used for oil (791). Skin is also used for leather (101).\n\nRecreational: Often fished for sport (101)."
+    },
+    {
+      "id": 200,
+      "position": 6,
+      "heading": "GEOGRAPHIC RANGE",
+      "content": "Overall:  From Massachusetts to northern Brazil and worldwide in temperate and tropical waters (327 788). Also, northeast Florida through the Gulf of Mexico (101). Reported in the eastern tropical Pacific from Lower California to Peru (52)."
+    },
+    {
+      "id": 201,
+      "position": 7,
+      "heading": "By State",
+      "content": "Florida:  Within Study Area: Distributed throughout Florida waters.\n\nMobility and Migration:"
+    },
+    {
+      "id": 202,
+      "position": 8,
+      "heading": "Life Mode",
+      "content": "Pelagic, often coming into inshore waters in large schools in association with Spanish mackerel, usually found in offshore and coastal waters frequently in aggregations of 6 or more (788 791). Sometimes seen in schools at the surface (52)."
+    },
+    {
+      "id": 203,
+      "position": 9,
+      "heading": "BENTHIC HABITAT",
+      "content": "Habitat Type: Young use shallow beach and bay areas as nursery grounds (860). Frequently the most common shark in clear water cuts and along beaches in Florida and the Bahamas (7881, and one of the commonest pelagic sharks around south Florida (581).\n\nSubstrate: No particular substrate is known to be preferred."
+    },
+    {
+      "id": 204,
+      "position": 10,
+      "heading": "REPRODUCTION",
+      "content": "Reproductive Mode: Fertilization is internal; reproduction is viviparous (101)."
+    },
+    {
+      "id": 205,
+      "position": 11,
+      "heading": "Mating/Spawning",
+      "content": "Males mature at a length of 130-135 cm (4-5 ft) and at an age of 4-5 years (52 101 860). Females mature at a length of 150-155 cm (101 123 860) and at an age of 6-6.8 years (860). In Florida, mating occurs in June and July (860). Gestation period extends from 10 to 12 months (62 101).Young are born in late spring through early summer (101 123). In the Tampa Bay area a 3 to 4 week parturition period extends from late May to early June (860).\n\nFecundity: Fecundity has been variously reported as 4-6 embryos (101), 1-10 embryos (791), and 3-9 embryos with 4-6 the most common (52)."
+    },
+    {
+      "id": 206,
+      "position": 12,
+      "heading": "Length Range",
+      "content": "Juveniles: Size at birth ranges from 48.8 cm to 60 cm (791 860). Smallest neonates in Florida are 62 cm with rapid neonatal growth (860). Growth rates are 25-30 cm by the first annulus; 20 cm/yr during second year; 10 cm/yr through adolescence; 5-7 cm/yr after maturity (860). Branstetter (860) gave the equation from fork length to total length as\n[eq]\nTL=1.16(FL) + 5.71\n[/eq]\n\nAdults: Maximum size reported is 152-198 cm (52 123) although Robins (788) gives the figure of 2.5 m. Largest males in Florida were 8.6 years of age and largest females ranged from 8 to 9.3 years of age (860)."
+    },
+    {
+      "id": 207,
+      "position": 13,
+      "heading": "FOOD HABITS",
+      "content": "Feeds on small schooling fishes, menhaden, rays, squid, and other schooling fishes (52 62 101 123 791). Remains of crabs have also been found in their stomachs (123). Small blacktips have been found in the stomachs of other sharks (5 2) ."
+    },
+    {
+      "id": 208,
+      "position": 14,
+      "heading": "REFERENCE NUMBERS",
+      "content": "52 62 101 123 327 581 788 791 840 860"
+    },
+    {
+      "id": 209,
+      "position": 15,
+      "heading": "CITATIONS",
+      "content": "52, Bigelow, H.B. and W.C. Schroeder. 1948. Fishes of the western North Atlantic. Mem. Sears Found. Mar. Res., Yale Univ. Part 1: 576.\n\n62, Branstetter, S. 1981. Biological notes on the sharks of the north central Gulf of Mexico. Cont. Mar. Sci. 24: 13-34.\n\n101, Castro, J.I.. 1983. The sharks of North American Waters. Texas A&M University Press, College Station, TX: 180.\n\n123, Clark, E. and K. von Schmidt. 1965. Sharks of the central Gulf coast of Florida. Bull. Mar. Sci. 15: 13-83.\n\n327, Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.\n\n581, Reid Jr., G.K. 1954. An ecological study of the Gulf of Mexico fishes, in the vicinity of Cedar Key, Florida. Bull. Mar. Sci. of the Gulf and Carib. 4(1): 1-94.\n\n788, Robins, C. Richard, G. Carlton Ray, John Douglass and R. Freud. 1986. A Field Guide to Atlantic Coast Fishes of North America. Peterson Field Guide Series No. 32, Houghton Mifflin Co., Boston. 3548..\n\n791, Fischer, W. (Ed.). 1978. FA0 species identification sheets for fishery purposes. Western central Atlantic (Fishing area 31). Volumes 1-7. FA0 United Nations, Rome.\n\n840, Killam, KA and GR Parsons. 1989. Age and growth of the blacktip shark, Carcharhinus limbatus, near Tampa Bay, Florida.. Fish. Bull. 87:845-857\n\n860, Branstetter, S. 1987. Age and growth estimates for blacktip, Carcharhinus limbatus, and spinner, C. brevipinna, sharks from the northwestern Gulf of Mexico.  Copeia 1987(4):964-974."
+    }
+  ]
+}

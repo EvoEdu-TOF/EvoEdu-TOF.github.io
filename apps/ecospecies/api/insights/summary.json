@@ -1,0 +1,9 @@
+{
+  "species_count": 93,
+  "section_count": 1567,
+  "diagnostic_counts": {
+    "missing_flelmr_code": 2,
+    "missing_scientific_name": 2
+  },
+  "source_directory": "static GitHub Pages export"
+}

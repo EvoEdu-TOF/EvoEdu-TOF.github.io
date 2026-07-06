@@ -1,0 +1,552 @@
+{
+  "slug": "bay-whiff",
+  "source_file": "Bay Whiff SLH RGG.txt",
+  "title": "Bay Whiff (Citharichthys spilopterus)",
+  "common_name": "Bay Whiff",
+  "scientific_name": "Citharichthys spilopterus",
+  "flelmr_code": "2073",
+  "legacy_identifiers": [
+    {
+      "authority": "legacy-ecospecies",
+      "identifier": "2073",
+      "label": "FLELMR"
+    }
+  ],
+  "taxon_identifiers": [],
+  "primary_taxon_authority": "",
+  "primary_taxon_identifier": null,
+  "summary": "",
+  "section_count": 14,
+  "citation_count": 16,
+  "publication_status": "published",
+  "is_archived": false,
+  "editor_notes": "",
+  "last_modified_by": "system-import",
+  "diagnostics": [],
+  "citations": [
+    {
+      "id": 410,
+      "position": 1,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "brownpeterson1990ichthyofaunaassociatedspoil",
+      "entry_type": "misc",
+      "raw_text": "Brown-Peterson, Nancy and Ross W. Eames.  1990.  Ichthyofauna associated with spoil islands in the Indian River Lagoon, Florida.   Florida Sci.  53(3): 226-238.  1990.",
+      "normalized_text": "Brown-Peterson, Nancy and Ross W. Eames. 1990. Ichthyofauna associated with spoil islands in the Indian River Lagoon, Florida. Florida Sci. 53(3): 226-238. 1990.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{brownpeterson1990ichthyofaunaassociatedspoil,\n  author = {Brown-Peterson, Nancy and Ross W. Eames},\n  note = {raw_reference = {Brown-Peterson, Nancy and Ross W. Eames.  1990.  Ichthyofauna associated with spoil islands in the Indian River Lagoon, Florida.   Florida Sci.  53(3): 226-238.  1990.}},\n  title = {Ichthyofauna associated with spoil islands in the Indian River Lagoon, Florida.   Florida Sci.  53(3): 226-238.  1990},\n  year = {1990},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 411,
+      "position": 2,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "christensen1965ichthyologicalsurveyjupiter",
+      "entry_type": "misc",
+      "raw_text": "Christensen, Robert W.  1965.  An ichthyological survey of Jupiter Inlet and Loxahatchee River, Florida.  M. S. Thesis.  Florida State University.  318 p.",
+      "normalized_text": "Christensen, Robert W. 1965. An ichthyological survey of Jupiter Inlet and Loxahatchee River, Florida. M. S. Thesis. Florida State University. 318 p.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{christensen1965ichthyologicalsurveyjupiter,\n  author = {Christensen, Robert W},\n  note = {raw_reference = {Christensen, Robert W.  1965.  An ichthyological survey of Jupiter Inlet and Loxahatchee River, Florida.  M. S. Thesis.  Florida State University.  318 p.}},\n  title = {An ichthyological survey of Jupiter Inlet and Loxahatchee River, Florida.  M. S. Thesis.  Florida State University.  318 p},\n  year = {1965},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 412,
+      "position": 3,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "florescoto1991larvaldistributionabundance",
+      "entry_type": "misc",
+      "raw_text": "Flores-Coto, C., F. Abundio-Lopez, and F. Zavala-Garcia.  1991.  Larval distribution and abundance of Pleuronectiformes from the southern Gulf of Mexico.  Estuarine, Coastal and Shelf Science (1991) 32, 439-450.",
+      "normalized_text": "Flores-Coto, C., F. Abundio-Lopez, and F. Zavala-Garcia. 1991. Larval distribution and abundance of Pleuronectiformes from the southern Gulf of Mexico. Estuarine, Coastal and Shelf Science (1991) 32, 439-450.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{florescoto1991larvaldistributionabundance,\n  author = {Flores-Coto, C., F. Abundio-Lopez, and F. Zavala-Garcia},\n  note = {raw_reference = {Flores-Coto, C., F. Abundio-Lopez, and F. Zavala-Garcia.  1991.  Larval distribution and abundance of Pleuronectiformes from the southern Gulf of Mexico.  Estuarine, Coastal and Shelf Science (1991) 32, 439-450.}},\n  title = {Larval distribution and abundance of Pleuronectiformes from the southern Gulf of Mexico.  Estuarine, Coastal and Shelf Science (1991) 32, 439-450},\n  year = {1991},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 413,
+      "position": 4,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "gilmore1988subtropicalseagrassfish",
+      "entry_type": "misc",
+      "raw_text": "Gilmore, R.  Grant.  1988.  Subtropical seagrass fish communities:  Population dynamics, species guilds and microhabitat associations in the Indian River Lagoon, Florida. Ph.D.  Dissertation.  Florida Institute of Technology.  199 p.",
+      "normalized_text": "Gilmore, R. Grant. 1988. Subtropical seagrass fish communities: Population dynamics, species guilds and microhabitat associations in the Indian River Lagoon, Florida. Ph.D. Dissertation. Florida Institute of Technology. 199 p.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gilmore1988subtropicalseagrassfish,\n  author = {Gilmore, R.  Grant},\n  note = {raw_reference = {Gilmore, R.  Grant.  1988.  Subtropical seagrass fish communities:  Population dynamics, species guilds and microhabitat associations in the Indian River Lagoon, Florida. Ph.D.  Dissertation.  Florida Institute of Technology.  199 p.}},\n  title = {Subtropical seagrass fish communities:  Population dynamics, species guilds and microhabitat associations in the Indian River Lagoon, Florida. Ph.D.  Dissertation.  Florida Institute of Technology.  199 p},\n  year = {1988},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 414,
+      "position": 5,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "gilmore1977fishesindianriver",
+      "entry_type": "misc",
+      "raw_text": "Gilmore, R. Grant  Jr., 1977.  Fishes of the Indian River Lagoon and adjacent  waters, Florida.  Bull. Fla. State Mus. Biol. Sci. 22:101-148.",
+      "normalized_text": "Gilmore, R. Grant Jr., 1977. Fishes of the Indian River Lagoon and adjacent waters, Florida. Bull. Fla. State Mus. Biol. Sci. 22:101-148.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gilmore1977fishesindianriver,\n  author = {Gilmore, R. Grant  Jr.,},\n  howpublished = {Bull. Fla. State Mus. Biol. Sci},\n  note = {raw_reference = {Gilmore, R. Grant  Jr., 1977.  Fishes of the Indian River Lagoon and adjacent  waters, Florida.  Bull. Fla. State Mus. Biol. Sci. 22:101-148.}},\n  pages = {101-148},\n  title = {Fishes of the Indian River Lagoon and adjacent  waters, Florida},\n  volume = {22},\n  year = {1977},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 415,
+      "position": 6,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "gunter1963biologicalinvestigationsst",
+      "entry_type": "misc",
+      "raw_text": "Gunter, G. and G. E. Hall.  1963.  Biological investigations of the St. Lucie estuary (Florida) in connection with Lake Okeechobee discharge through the St. Lucie Canal.  Gulf Res. Rept. 2(1): 1-77.",
+      "normalized_text": "Gunter, G. and G. E. Hall. 1963. Biological investigations of the St. Lucie estuary (Florida) in connection with Lake Okeechobee discharge through the St. Lucie Canal. Gulf Res. Rept. 2(1): 1-77.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gunter1963biologicalinvestigationsst,\n  author = {Gunter, G. and G. E. Hall},\n  howpublished = {Rept},\n  note = {raw_reference = {Gunter, G. and G. E. Hall.  1963.  Biological investigations of the St. Lucie estuary (Florida) in connection with Lake Okeechobee discharge through the St. Lucie Canal.  Gulf Res. Rept. 2(1): 1-77.}},\n  number = {1},\n  pages = {1-77},\n  title = {Biological investigations of the St. Lucie estuary (Florida) in connection with Lake Okeechobee discharge through the St. Lucie Canal.  Gulf Res},\n  volume = {2},\n  year = {1963},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 416,
+      "position": 7,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "hoese1977fishesgulfmexico",
+      "entry_type": "misc",
+      "raw_text": "Hoese, H. Dickinson and Richard H. Moore. 1977.  Fishes of the Gulf of Mexico, Texas, Louisiana, and adjacent waters.   Texas A&M Univ. Press, College Station.",
+      "normalized_text": "Hoese, H. Dickinson and Richard H. Moore. 1977. Fishes of the Gulf of Mexico, Texas, Louisiana, and adjacent waters. Texas A&M Univ. Press, College Station.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{hoese1977fishesgulfmexico,\n  author = {Hoese, H. Dickinson and Richard H. Moore},\n  note = {raw_reference = {Hoese, H. Dickinson and Richard H. Moore. 1977.  Fishes of the Gulf of Mexico, Texas, Louisiana, and adjacent waters.   Texas A&M Univ. Press, College Station.}},\n  title = {Fishes of the Gulf of Mexico, Texas, Louisiana, and adjacent waters.   Texas A&M Univ. Press, College Station},\n  year = {1977},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 417,
+      "position": 8,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "martin1978developmentfishesmid",
+      "entry_type": "misc",
+      "raw_text": "Martin, F. Douglas and George E. Drewry.  1978. Development of fishes of the mid-Atlantic bight. An atlas of egg, larval and juvenile stages. Vol. VI.  Stromateidae through Ogcocephalidae. U.S. Fish and Wildlife Service.  FWS/OBS - 78/12.",
+      "normalized_text": "Martin, F. Douglas and George E. Drewry. 1978. Development of fishes of the mid-Atlantic bight. An atlas of egg, larval and juvenile stages. Vol. VI. Stromateidae through Ogcocephalidae. U.S. Fish and Wildlife Service. FWS/OBS - 78/12.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{martin1978developmentfishesmid,\n  author = {Martin, F. Douglas and George E. Drewry},\n  howpublished = {U.S. Fish and Wildlife Service.  FWS/OBS - 78/12},\n  note = {raw_reference = {Martin, F. Douglas and George E. Drewry.  1978. Development of fishes of the mid-Atlantic bight. An atlas of egg, larval and juvenile stages. Vol. VI.  Stromateidae through Ogcocephalidae. U.S. Fish and Wildlife Service.  FWS/OBS - 78/12.}},\n  title = {Development of fishes of the mid-Atlantic bight. An atlas of egg, larval and juvenile stages. Vol. VI.  Stromateidae through Ogcocephalidae},\n  year = {1978},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 418,
+      "position": 9,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "mcneese1982spatialtemporalvariability",
+      "entry_type": "misc",
+      "raw_text": "McNeese, Patricia L.  1982.  Spatial and temporal variability of fish communities inhabiting Halodule wrighti  seagrass beds in the lower Indian River Estuary.  M.S. Thesis.  Florida Institute of Technology.  34 p.",
+      "normalized_text": "McNeese, Patricia L. 1982. Spatial and temporal variability of fish communities inhabiting Halodule wrighti seagrass beds in the lower Indian River Estuary. M.S. Thesis. Florida Institute of Technology. 34 p.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{mcneese1982spatialtemporalvariability,\n  author = {McNeese, Patricia L},\n  note = {raw_reference = {McNeese, Patricia L.  1982.  Spatial and temporal variability of fish communities inhabiting Halodule wrighti  seagrass beds in the lower Indian River Estuary.  M.S. Thesis.  Florida Institute of Technology.  34 p.}},\n  title = {Spatial and temporal variability of fish communities inhabiting Halodule wrighti  seagrass beds in the lower Indian River Estuary.  M.S. Thesis.  Florida Institute of Technology.  34 p},\n  year = {1982},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 419,
+      "position": 10,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "mulligan1981summerseasonpopulations",
+      "entry_type": "misc",
+      "raw_text": "Mulligan, Timothy J.  1981.  Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.  Thesis.  University of Central Florida.  252 p.",
+      "normalized_text": "Mulligan, Timothy J. 1981. Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida. Thesis. University of Central Florida. 252 p.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{mulligan1981summerseasonpopulations,\n  author = {Mulligan, Timothy J},\n  note = {raw_reference = {Mulligan, Timothy J.  1981.  Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.  Thesis.  University of Central Florida.  252 p.}},\n  title = {Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.  Thesis.  University of Central Florida.  252 p},\n  year = {1981},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 420,
+      "position": 11,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "mulligan1983summerseasonpopulations",
+      "entry_type": "misc",
+      "raw_text": "Mulligan, Timothy J. , and Franklin F. Snelson.  1983.  Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.   Florida Sci. 46(3/4): 239-249.  1983.",
+      "normalized_text": "Mulligan, Timothy J. , and Franklin F. Snelson. 1983. Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida. Florida Sci. 46(3/4): 239-249. 1983.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{mulligan1983summerseasonpopulations,\n  author = {Mulligan, Timothy J. , and Franklin F. Snelson},\n  note = {raw_reference = {Mulligan, Timothy J. , and Franklin F. Snelson.  1983.  Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.   Florida Sci. 46(3/4): 239-249.  1983.}},\n  title = {Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.   Florida Sci. 46(3/4): 239-249.  1983},\n  year = {1983},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 421,
+      "position": 12,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "reichert1991settlementabundancegrowth",
+      "entry_type": "misc",
+      "raw_text": "Reichert, M. J. M. and H. W. Van Der Veer.  1991.   Settlement, abundance, growth and mortality of juvenile flatfish in subtropical tidal estuary (Georgia, U.S.A.).  Netherlands Journal of Sea Research.  27 (3/4): 375-391 (1991). Robins, C. Richard, R. M. Bailey, C.E. Bond, J. R. Brooker, E. A. Lachner, R. N. Lea, and W. B. Scott.  1991.  Common and Scientific Names of Fishes  from the United States and Canada.  Fifth Edition.  American Fisheries Society.",
+      "normalized_text": "Reichert, M. J. M. and H. W. Van Der Veer. 1991. Settlement, abundance, growth and mortality of juvenile flatfish in subtropical tidal estuary (Georgia, U.S.A.). Netherlands Journal of Sea Research. 27 (3/4): 375-391 (1991). Robins, C. Richard, R. M. Bailey, C.E. Bond, J. R. Brooker, E. A. Lachner, R. N. Lea, and W. B. Scott. 1991. Common and Scientific Names of Fishes from the United States and Canada. Fifth Edition. American Fisheries Society.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{reichert1991settlementabundancegrowth,\n  author = {Reichert, M. J. M. and H. W. Van Der Veer},\n  journal = {Journal of Sea Research.  27 (3/4): 375-391 (1991). Robins, C. Richard, R. M. Bailey, C.E. Bond, J. R. Brooker, E. A. Lachner, R. N. Lea, and W. B. Scott.  1991.  Common and Scientific Names of Fishes  from the United States and Canada.  Fifth Edition.  American Fisheries Society},\n  note = {raw_reference = {Reichert, M. J. M. and H. W. Van Der Veer.  1991.   Settlement, abundance, growth and mortality of juvenile flatfish in subtropical tidal estuary (Georgia, U.S.A.).  Netherlands Journal of Sea Research.  27 (3/4): 375-391 (1991). Robins, C. Richard, R. M. Bailey, C.E. Bond, J. R. Brooker, E. A. Lachner, R. N. Lea, and W. B. Scott.  1991.  Common and Scientific Names of Fishes  from the United States and Canada.  Fifth Edition.  American Fisheries Society.}},\n  title = {Settlement, abundance, growth and mortality of juvenile flatfish in subtropical tidal estuary (Georgia, U.S.A.).  Netherlands},\n  year = {1991},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 422,
+      "position": 13,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "robins1986fieldguideatlantic",
+      "entry_type": "misc",
+      "raw_text": "Robins, C. Richard, G. Carleton Ray and John Douglass.  1986.  A field guide to Atlantic coast fishes of North America.   The Peterson field guide series; 32.  Houghton Mifflin company, Boston.",
+      "normalized_text": "Robins, C. Richard, G. Carleton Ray and John Douglass. 1986. A field guide to Atlantic coast fishes of North America. The Peterson field guide series; 32. Houghton Mifflin company, Boston.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{robins1986fieldguideatlantic,\n  author = {Robins, C. Richard, G. Carleton Ray and John Douglass},\n  note = {raw_reference = {Robins, C. Richard, G. Carleton Ray and John Douglass.  1986.  A field guide to Atlantic coast fishes of North America.   The Peterson field guide series; 32.  Houghton Mifflin company, Boston.}},\n  title = {A field guide to Atlantic coast fishes of North America.   The Peterson field guide series; 32.  Houghton Mifflin company, Boston},\n  year = {1986},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 423,
+      "position": 14,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "snelson1983ichthyofaunanorthernpart",
+      "entry_type": "misc",
+      "raw_text": "Snelson, Franklin F.  1983.  Ichthyofauna of the northern part of the Indian River Lagoon System, Florida.  Florida Sci. 46(3/4): 187-206.  1983.",
+      "normalized_text": "Snelson, Franklin F. 1983. Ichthyofauna of the northern part of the Indian River Lagoon System, Florida. Florida Sci. 46(3/4): 187-206. 1983.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{snelson1983ichthyofaunanorthernpart,\n  author = {Snelson, Franklin F},\n  note = {raw_reference = {Snelson, Franklin F.  1983.  Ichthyofauna of the northern part of the Indian River Lagoon System, Florida.  Florida Sci. 46(3/4): 187-206.  1983.}},\n  title = {Ichthyofauna of the northern part of the Indian River Lagoon System, Florida.  Florida Sci. 46(3/4): 187-206.  1983},\n  year = {1983},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 424,
+      "position": 15,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "stickney1974foodhabitsgeorgia",
+      "entry_type": "misc",
+      "raw_text": "Stickney, R. W., G. L. Taylor and R. W. Heard III.   1974.  Food habits of Georgia estuarine fishes  I.  four species of flounders (Pleuronectiformes: Bothidae).  Fishery Bulletin:  72 (2): 515-524.",
+      "normalized_text": "Stickney, R. W., G. L. Taylor and R. W. Heard III. 1974. Food habits of Georgia estuarine fishes I. four species of flounders (Pleuronectiformes: Bothidae). Fishery Bulletin: 72 (2): 515-524.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{stickney1974foodhabitsgeorgia,\n  author = {Stickney, R. W., G. L. Taylor and R. W. Heard III},\n  howpublished = {Bulletin:  72 (2): 515-524},\n  note = {raw_reference = {Stickney, R. W., G. L. Taylor and R. W. Heard III.   1974.  Food habits of Georgia estuarine fishes  I.  four species of flounders (Pleuronectiformes: Bothidae).  Fishery Bulletin:  72 (2): 515-524.}},\n  title = {Food habits of Georgia estuarine fishes  I.  four species of flounders (Pleuronectiformes: Bothidae).  Fishery},\n  year = {1974},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 425,
+      "position": 16,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "tuckertuckerjohnw",
+      "entry_type": "misc",
+      "raw_text": "Tucker, John W. Jr.  Larval development of Citharichthys cornutus, C. gymnorhinus, C. spilopterus, and Etropus crossotus (Bothidae), with notes on larval occurrence.  Fishery Bulletin:  80(1):35-73.",
+      "normalized_text": "Tucker, John W. Jr. Larval development of Citharichthys cornutus, C. gymnorhinus, C. spilopterus, and Etropus crossotus (Bothidae), with notes on larval occurrence. Fishery Bulletin: 80(1):35-73.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{tuckertuckerjohnw,\n  note = {raw_reference = {Tucker, John W. Jr.  Larval development of Citharichthys cornutus, C. gymnorhinus, C. spilopterus, and Etropus crossotus (Bothidae), with notes on larval occurrence.  Fishery Bulletin:  80(1):35-73.}},\n  title = {Tucker, John W. Jr.  Larval development of Citharichthys cornutus, C. gymnorhinus, C. spilopterus, and Etropus crossotus (Bothidae), with notes on larval occurrence.  Fishery Bulletin:  80(1):35-73.},\n  year = {},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    }
+  ],
+  "structured_document": {
+    "source_format": "ecospecies-markdown-v1",
+    "updated_by": "system-import",
+    "node_count": 13,
+    "ast": {
+      "metadata": {
+        "title": "Bay Whiff (Citharichthys spilopterus)",
+        "common_name": "Bay Whiff",
+        "scientific_name": "Citharichthys spilopterus",
+        "legacy_identifiers": [
+          {
+            "authority": "legacy-ecospecies",
+            "identifier": "2073",
+            "label": "FLELMR"
+          }
+        ],
+        "taxon_identifiers": [],
+        "primary_taxon_authority": "",
+        "source_file": "Bay Whiff SLH RGG.txt",
+        "publication_status": "published",
+        "source_format": "ecospecies-markdown-v1"
+      },
+      "nodes": [
+        {
+          "node_type": "section",
+          "title": "Revisions",
+          "body": "June 15 1996.  DMS | R. G. Gilmore; Harbor Branch Oceanographic Institution",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "TAXONOMY",
+          "body": "Scientific Name:  Citharichthys spilopterus\nCommon Name:  Bay Whiff",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Classification",
+          "body": "Phylum: Chordata\n\tClass: \tOsteichthyes\n\tOrder: \tPleuronectiformes\n\tFamily:  Bothidae",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Other Common Names",
+          "body": "Other:\tReference for Scientific Name (Gunther 1862).\n\tReference for Classification (Robins et al.1991)",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "VALUE & STATUS",
+          "body": "Commercial: None\nRecreational:  None\nEcological Role:  Due to ubiquity and relative abundance this species may represent a significant component of the estuarine and marine food web (Tucker 1982).\nIndicator:  None known",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "GEOGRAPHIC RANGE",
+          "body": "Overall:  Atlantic, from New Jersey to Brazil, Gulf of Mexico, West Indies, and Caribbean sea (Martin and Drewry 1978).\nWithin Study Area:  Found throughout the Indian River Lagoon System (McNeese 1982; Christensen 1965; Mulligan 1981; Mulligan and Snelson 1983; Snelson 1983; Brown-Peterson and Eames 1990; Gilmore 1977; Gilmore 1988; Gunther and Hall 1963).\nMobility and Migration: Moves offshore in the winter and moves into shallow water during the summer (Martin and Drewry 1978; Hoese and Moore 1977).\nLife Mode:  Common species of open sand/mud bottoms in estuaries and shallow continental shelf waters.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Habitat Type",
+          "body": "From inshore shallow water to 75 m usually over mud bottom.  In very shallow water found frequently near mangroves (Hoese and Moore 1977; Martin and Drewry1978; Robins et al. 1986).\nSubstrate:  Sand and muddy bottoms",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Physical/Chemical",
+          "body": "Temperature: range from 4.1 - 35 C, with reports of 6 C causing mortality.\nSalinity: Considered euryhaline with a preference for higher salinity but found in salinities 0.0 - 37 ppt, with the lower salinities at higher temperatures (Martin and Drewry 1978; Tucker 1982; Gunther and Hall 1963).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REPRODUCTION",
+          "body": "Reproductive Mode:  Gonochoristic, oviparous, pelagic externally fertilized eggs.\nSpawning Strategy:  Spawning can be inferred from the larval collection data of several researchers.  In the southern Gulf of Mexico spawning occurs in the fall, winter, and spring (Flores-Coto et al. 1991).  Off the Atlantic coast, spawning occurs from September through April in North Carolina and as late in May in Georgia (Tucker 1982; Reichert and Van Der Veer 1991).  Spawning most likely takes place in deeper offshore waters as the smaller larvae have been found offshore (Flores-Coto et al. 1991).\nFecundity:  No information.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Length Range",
+          "body": "Egg: No information.\nLarvae:  Larvae are pelagic.  During the early larval stage the right eye has not migrated.  In the later stage the larvae becomes a transforming larvae, where the right eye migrates to the left side of the head.  The right eye starts to migrate as early as 6.8 mm TL and reaches the final position from 9.0 -11.0 mm TL (Tucker 1982). Larvae have been found in temperatures of 4.1 - 26.6 C and salinity of 0.0 - 31.7 ppt in North Carolina (Tucker 1982).\nJuvenile:  Juvenile stage begins after the right eye has migrated to the left side of the head, 9.0 - 11.0 mm TL (Tucker 1982).  The juvenile then settle in the shallow estuaries with a preference for settling on muddy bottoms with some plant material for cover.  In the estuaries juveniles may grow a mean of 0.72 mm per day at 24.5 C (Reichert and Van Der Veer 1991).\nAdult: The adults reach a maximum of 200 mm TL (Martin and Drewry 1978; Hoese and Moore 1977; Robins et al. 1986)",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Food Items",
+          "body": "The primary food item is the mysid shrimp Neomysis americana.  This holds true except for the larger specimens over 125 mm TL where Neomysis is replaced by Trachypenaeus constrictus.  Other food items include other crustaceans and fish remains (Stickney et al. 1974).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "ECOLOGICAL INTERACTIONS",
+          "body": "Due to ubiquity and relative abundance this species may represent a significant component of the estuarine and marine food web (Tucker 1982).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "CITATIONS",
+          "body": "Brown-Peterson, Nancy and Ross W. Eames.  1990.  Ichthyofauna associated with spoil islands in the Indian River Lagoon, Florida.   Florida Sci.  53(3): 226-238.  1990.\n\nChristensen, Robert W.  1965.  An ichthyological survey of Jupiter Inlet and Loxahatchee River, Florida.  M. S. Thesis.  Florida State University.  318 p.\n\nFlores-Coto, C., F. Abundio-Lopez, and F. Zavala-Garcia.  1991.  Larval distribution and abundance of Pleuronectiformes from the southern Gulf of Mexico.  Estuarine, Coastal and Shelf Science (1991) 32, 439-450.\n\nGilmore, R.  Grant.  1988.  Subtropical seagrass fish communities:  Population dynamics, species guilds and microhabitat associations in the Indian River Lagoon, Florida. Ph.D.  Dissertation.  Florida Institute of Technology.  199 p.\n\nGilmore, R. Grant  Jr., 1977.  Fishes of the Indian River Lagoon and adjacent  waters, Florida.  Bull. Fla. State Mus. Biol. Sci. 22:101-148.\n\nGunter, G. and G. E. Hall.  1963.  Biological investigations of the St. Lucie estuary (Florida) in connection with Lake Okeechobee discharge through the St. Lucie Canal.  Gulf Res. Rept. 2(1): 1-77.\n\nHoese, H. Dickinson and Richard H. Moore. 1977.  Fishes of the Gulf of Mexico, Texas, Louisiana, and adjacent waters.   Texas A&M Univ. Press, College Station.\n\nMartin, F. Douglas and George E. Drewry.  1978. Development of fishes of the mid-Atlantic bight. An atlas of egg, larval and juvenile stages. Vol. VI.  Stromateidae through Ogcocephalidae. U.S. Fish and Wildlife Service.  FWS/OBS - 78/12.\n\nMcNeese, Patricia L.  1982.  Spatial and temporal variability of fish communities inhabiting Halodule wrighti  seagrass beds in the lower Indian River Estuary.  M.S. Thesis.  Florida Institute of Technology.  34 p.\n\nMulligan, Timothy J.  1981.  Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.  Thesis.  University of Central Florida.  252 p.\n\nMulligan, Timothy J. , and Franklin F. Snelson.  1983.  Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.   Florida Sci. 46(3/4): 239-249.  1983.\n\nReichert, M. J. M. and H. W. Van Der Veer.  1991.   Settlement, abundance, growth and mortality of juvenile flatfish in subtropical tidal estuary (Georgia, U.S.A.).  Netherlands Journal of Sea Research.  27 (3/4): 375-391 (1991).\nRobins, C. Richard, R. M. Bailey, C.E. Bond, J. R. Brooker, E. A. Lachner, R. N. Lea, and W. B. Scott.  1991.  Common and Scientific Names of Fishes  from the United States and Canada.  Fifth Edition.  American Fisheries Society.\n\nRobins, C. Richard, G. Carleton Ray and John Douglass.  1986.  A field guide to Atlantic coast fishes of North America.   The Peterson field guide series; 32.  Houghton Mifflin company, Boston.\n\nSnelson, Franklin F.  1983.  Ichthyofauna of the northern part of the Indian River Lagoon System, Florida.  Florida Sci. 46(3/4): 187-206.  1983.\n\nStickney, R. W., G. L. Taylor and R. W. Heard III.   1974.  Food habits of Georgia estuarine fishes  I.  four species of flounders (Pleuronectiformes: Bothidae).  Fishery Bulletin:  72 (2): 515-524.\n\nTucker, John W. Jr.  Larval development of Citharichthys cornutus, C. gymnorhinus, C. spilopterus, and Etropus crossotus (Bothidae), with notes on larval occurrence.  Fishery Bulletin:  80(1):35-73.",
+          "depth": 2,
+          "children": []
+        }
+      ]
+    }
+  },
+  "legacy_source": null,
+  "sections": [
+    {
+      "id": 148,
+      "position": 1,
+      "heading": "HEADER",
+      "content": "Title: Bay Whiff (Citharichthys spilopterus)\n\nFLELMR Code: 2073"
+    },
+    {
+      "id": 149,
+      "position": 2,
+      "heading": "Revisions",
+      "content": "June 15 1996.  DMS | R. G. Gilmore; Harbor Branch Oceanographic Institution"
+    },
+    {
+      "id": 150,
+      "position": 3,
+      "heading": "TAXONOMY",
+      "content": "Scientific Name:  Citharichthys spilopterus\nCommon Name:  Bay Whiff"
+    },
+    {
+      "id": 151,
+      "position": 4,
+      "heading": "Classification",
+      "content": "Phylum: Chordata\n\tClass: \tOsteichthyes\n\tOrder: \tPleuronectiformes\n\tFamily:  Bothidae"
+    },
+    {
+      "id": 152,
+      "position": 5,
+      "heading": "Other Common Names",
+      "content": "Other:\tReference for Scientific Name (Gunther 1862).\n\tReference for Classification (Robins et al.1991)"
+    },
+    {
+      "id": 153,
+      "position": 6,
+      "heading": "VALUE & STATUS",
+      "content": "Commercial: None\nRecreational:  None\nEcological Role:  Due to ubiquity and relative abundance this species may represent a significant component of the estuarine and marine food web (Tucker 1982).\nIndicator:  None known"
+    },
+    {
+      "id": 154,
+      "position": 7,
+      "heading": "GEOGRAPHIC RANGE",
+      "content": "Overall:  Atlantic, from New Jersey to Brazil, Gulf of Mexico, West Indies, and Caribbean sea (Martin and Drewry 1978).\nWithin Study Area:  Found throughout the Indian River Lagoon System (McNeese 1982; Christensen 1965; Mulligan 1981; Mulligan and Snelson 1983; Snelson 1983; Brown-Peterson and Eames 1990; Gilmore 1977; Gilmore 1988; Gunther and Hall 1963).\nMobility and Migration: Moves offshore in the winter and moves into shallow water during the summer (Martin and Drewry 1978; Hoese and Moore 1977).\nLife Mode:  Common species of open sand/mud bottoms in estuaries and shallow continental shelf waters."
+    },
+    {
+      "id": 155,
+      "position": 8,
+      "heading": "Habitat Type",
+      "content": "From inshore shallow water to 75 m usually over mud bottom.  In very shallow water found frequently near mangroves (Hoese and Moore 1977; Martin and Drewry1978; Robins et al. 1986).\nSubstrate:  Sand and muddy bottoms"
+    },
+    {
+      "id": 156,
+      "position": 9,
+      "heading": "Physical/Chemical",
+      "content": "Temperature: range from 4.1 - 35 C, with reports of 6 C causing mortality.\nSalinity: Considered euryhaline with a preference for higher salinity but found in salinities 0.0 - 37 ppt, with the lower salinities at higher temperatures (Martin and Drewry 1978; Tucker 1982; Gunther and Hall 1963)."
+    },
+    {
+      "id": 157,
+      "position": 10,
+      "heading": "REPRODUCTION",
+      "content": "Reproductive Mode:  Gonochoristic, oviparous, pelagic externally fertilized eggs.\nSpawning Strategy:  Spawning can be inferred from the larval collection data of several researchers.  In the southern Gulf of Mexico spawning occurs in the fall, winter, and spring (Flores-Coto et al. 1991).  Off the Atlantic coast, spawning occurs from September through April in North Carolina and as late in May in Georgia (Tucker 1982; Reichert and Van Der Veer 1991).  Spawning most likely takes place in deeper offshore waters as the smaller larvae have been found offshore (Flores-Coto et al. 1991).\nFecundity:  No information."
+    },
+    {
+      "id": 158,
+      "position": 11,
+      "heading": "Length Range",
+      "content": "Egg: No information.\nLarvae:  Larvae are pelagic.  During the early larval stage the right eye has not migrated.  In the later stage the larvae becomes a transforming larvae, where the right eye migrates to the left side of the head.  The right eye starts to migrate as early as 6.8 mm TL and reaches the final position from 9.0 -11.0 mm TL (Tucker 1982). Larvae have been found in temperatures of 4.1 - 26.6 C and salinity of 0.0 - 31.7 ppt in North Carolina (Tucker 1982).\nJuvenile:  Juvenile stage begins after the right eye has migrated to the left side of the head, 9.0 - 11.0 mm TL (Tucker 1982).  The juvenile then settle in the shallow estuaries with a preference for settling on muddy bottoms with some plant material for cover.  In the estuaries juveniles may grow a mean of 0.72 mm per day at 24.5 C (Reichert and Van Der Veer 1991).\nAdult: The adults reach a maximum of 200 mm TL (Martin and Drewry 1978; Hoese and Moore 1977; Robins et al. 1986)"
+    },
+    {
+      "id": 159,
+      "position": 12,
+      "heading": "Food Items",
+      "content": "The primary food item is the mysid shrimp Neomysis americana.  This holds true except for the larger specimens over 125 mm TL where Neomysis is replaced by Trachypenaeus constrictus.  Other food items include other crustaceans and fish remains (Stickney et al. 1974)."
+    },
+    {
+      "id": 160,
+      "position": 13,
+      "heading": "ECOLOGICAL INTERACTIONS",
+      "content": "Due to ubiquity and relative abundance this species may represent a significant component of the estuarine and marine food web (Tucker 1982)."
+    },
+    {
+      "id": 161,
+      "position": 14,
+      "heading": "CITATIONS",
+      "content": "Brown-Peterson, Nancy and Ross W. Eames.  1990.  Ichthyofauna associated with spoil islands in the Indian River Lagoon, Florida.   Florida Sci.  53(3): 226-238.  1990.\n\nChristensen, Robert W.  1965.  An ichthyological survey of Jupiter Inlet and Loxahatchee River, Florida.  M. S. Thesis.  Florida State University.  318 p.\n\nFlores-Coto, C., F. Abundio-Lopez, and F. Zavala-Garcia.  1991.  Larval distribution and abundance of Pleuronectiformes from the southern Gulf of Mexico.  Estuarine, Coastal and Shelf Science (1991) 32, 439-450.\n\nGilmore, R.  Grant.  1988.  Subtropical seagrass fish communities:  Population dynamics, species guilds and microhabitat associations in the Indian River Lagoon, Florida. Ph.D.  Dissertation.  Florida Institute of Technology.  199 p.\n\nGilmore, R. Grant  Jr., 1977.  Fishes of the Indian River Lagoon and adjacent  waters, Florida.  Bull. Fla. State Mus. Biol. Sci. 22:101-148.\n\nGunter, G. and G. E. Hall.  1963.  Biological investigations of the St. Lucie estuary (Florida) in connection with Lake Okeechobee discharge through the St. Lucie Canal.  Gulf Res. Rept. 2(1): 1-77.\n\nHoese, H. Dickinson and Richard H. Moore. 1977.  Fishes of the Gulf of Mexico, Texas, Louisiana, and adjacent waters.   Texas A&M Univ. Press, College Station.\n\nMartin, F. Douglas and George E. Drewry.  1978. Development of fishes of the mid-Atlantic bight. An atlas of egg, larval and juvenile stages. Vol. VI.  Stromateidae through Ogcocephalidae. U.S. Fish and Wildlife Service.  FWS/OBS - 78/12.\n\nMcNeese, Patricia L.  1982.  Spatial and temporal variability of fish communities inhabiting Halodule wrighti  seagrass beds in the lower Indian River Estuary.  M.S. Thesis.  Florida Institute of Technology.  34 p.\n\nMulligan, Timothy J.  1981.  Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.  Thesis.  University of Central Florida.  252 p.\n\nMulligan, Timothy J. , and Franklin F. Snelson.  1983.  Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.   Florida Sci. 46(3/4): 239-249.  1983.\n\nReichert, M. J. M. and H. W. Van Der Veer.  1991.   Settlement, abundance, growth and mortality of juvenile flatfish in subtropical tidal estuary (Georgia, U.S.A.).  Netherlands Journal of Sea Research.  27 (3/4): 375-391 (1991).\nRobins, C. Richard, R. M. Bailey, C.E. Bond, J. R. Brooker, E. A. Lachner, R. N. Lea, and W. B. Scott.  1991.  Common and Scientific Names of Fishes  from the United States and Canada.  Fifth Edition.  American Fisheries Society.\n\nRobins, C. Richard, G. Carleton Ray and John Douglass.  1986.  A field guide to Atlantic coast fishes of North America.   The Peterson field guide series; 32.  Houghton Mifflin company, Boston.\n\nSnelson, Franklin F.  1983.  Ichthyofauna of the northern part of the Indian River Lagoon System, Florida.  Florida Sci. 46(3/4): 187-206.  1983.\n\nStickney, R. W., G. L. Taylor and R. W. Heard III.   1974.  Food habits of Georgia estuarine fishes  I.  four species of flounders (Pleuronectiformes: Bothidae).  Fishery Bulletin:  72 (2): 515-524.\n\nTucker, John W. Jr.  Larval development of Citharichthys cornutus, C. gymnorhinus, C. spilopterus, and Etropus crossotus (Bothidae), with notes on larval occurrence.  Fishery Bulletin:  80(1):35-73."
+    }
+  ]
+}

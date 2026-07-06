@@ -1,0 +1,504 @@
+{
+  "slug": "alabama-shad",
+  "source_file": "Alabama Shad SLH NOAA SEA.txt",
+  "title": "Alabama Shad (Alosa alabamae)",
+  "common_name": "Alabama Shad",
+  "scientific_name": "Alosa alabamae",
+  "flelmr_code": "1152",
+  "legacy_identifiers": [
+    {
+      "authority": "legacy-ecospecies",
+      "identifier": "1152",
+      "label": "FLELMR"
+    }
+  ],
+  "taxon_identifiers": [],
+  "primary_taxon_authority": "",
+  "primary_taxon_identifier": null,
+  "summary": "",
+  "section_count": 18,
+  "citation_count": 11,
+  "publication_status": "published",
+  "is_archived": false,
+  "editor_notes": "",
+  "last_modified_by": "system-import",
+  "diagnostics": [],
+  "citations": [
+    {
+      "id": 1,
+      "position": 1,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "26",
+      "citation_key": "bailey1954fishesescambiariver",
+      "entry_type": "misc",
+      "raw_text": "Bailey, R.M., H.E. Winn and C.L. Smith. 1954. Fishes from the Escambia River, Alabama and Florida, with ecologic and taxonomic notes. Proc. Acad. w.`Sci. Philad. 106: 109-1 34.",
+      "normalized_text": "Bailey, R.M., H.E. Winn and C.L. Smith. 1954. Fishes from the Escambia River, Alabama and Florida, with ecologic and taxonomic notes. Proc. Acad. w.`Sci. Philad. 106: 109-1 34.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{bailey1954fishesescambiariver,\n  author = {Bailey, R.M., H.E. Winn and C.L. Smith},\n  journal = {Proc. Acad. w.`Sci. Philad. 106: 109-1 34},\n  note = {raw_reference = {Bailey, R.M., H.E. Winn and C.L. Smith. 1954. Fishes from the Escambia River, Alabama and Florida, with ecologic and taxonomic notes. Proc. Acad. w.`Sci. Philad. 106: 109-1 34.}; ecospecies_reference_number = {26}},\n  title = {Fishes from the Escambia River, Alabama and Florida, with ecologic and taxonomic notes},\n  year = {1954},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 2,
+      "position": 2,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "41",
+      "citation_key": "behre1950annotatedlistfauna",
+      "entry_type": "misc",
+      "raw_text": "Behre, E.H. 1950. Annotated list of the fauna of the Grand Isle region, 1928-1 946. Occas. Pap. Mar. Lab., LSU 6(6): 1-66.",
+      "normalized_text": "Behre, E.H. 1950. Annotated list of the fauna of the Grand Isle region, 1928-1 946. Occas. Pap. Mar. Lab., LSU 6(6): 1-66.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{behre1950annotatedlistfauna,\n  author = {Behre, E.H},\n  journal = {Occas. Pap. Mar. Lab., LSU},\n  note = {raw_reference = {Behre, E.H. 1950. Annotated list of the fauna of the Grand Isle region, 1928-1 946. Occas. Pap. Mar. Lab., LSU 6(6): 1-66.}; ecospecies_reference_number = {41}},\n  number = {6},\n  pages = {1-66},\n  title = {Annotated list of the fauna of the Grand Isle region, 1928-1 946},\n  volume = {6},\n  year = {1950},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 3,
+      "position": 3,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "160",
+      "citation_key": "daniell1872lettersreferringexperiments",
+      "entry_type": "misc",
+      "raw_text": "Daniell, W.C. 1872. Letters referring to experiments of W.C. Daniell, M.D., in introducing shad into the Alabama River. Comm. Rept. U.S. Comm. Fish & Fish. 2: 387-390.",
+      "normalized_text": "Daniell, W.C. 1872. Letters referring to experiments of W.C. Daniell, M.D., in introducing shad into the Alabama River. Comm. Rept. U.S. Comm. Fish & Fish. 2: 387-390.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{daniell1872lettersreferringexperiments,\n  author = {Daniell, W.C},\n  journal = {Comm. Rept. U.S. Comm. Fish & Fish},\n  note = {raw_reference = {Daniell, W.C. 1872. Letters referring to experiments of W.C. Daniell, M.D., in introducing shad into the Alabama River. Comm. Rept. U.S. Comm. Fish & Fish. 2: 387-390.}; ecospecies_reference_number = {160}},\n  pages = {387-390},\n  title = {Letters referring to experiments of W.C. Daniell, M.D., in introducing shad into the Alabama River},\n  volume = {2},\n  year = {1872},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 4,
+      "position": 4,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "186",
+      "citation_key": "douglas1974freshwaterfisheslouisiana",
+      "entry_type": "misc",
+      "raw_text": "Douglas, N.H.. 1974. Freshwater Fishes of Louisiana. Claitor's Publ. Div., Baton Rouge, La.: 443.",
+      "normalized_text": "Douglas, N.H.. 1974. Freshwater Fishes of Louisiana. Claitor's Publ. Div., Baton Rouge, La.: 443.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{douglas1974freshwaterfisheslouisiana,\n  author = {Douglas, N.H},\n  note = {raw_reference = {Douglas, N.H.. 1974. Freshwater Fishes of Louisiana. Claitor's Publ. Div., Baton Rouge, La.: 443.}; ecospecies_reference_number = {186}},\n  title = {Freshwater Fishes of Louisiana. Claitor's Publ. Div., Baton Rouge, La.: 443},\n  year = {1974},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 5,
+      "position": 5,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "196",
+      "citation_key": "eddy1982howknowfreshwater",
+      "entry_type": "misc",
+      "raw_text": "Eddy, S. and J.C. Underhill. 1982. How to Know the Freshwater Fishes. W.C. Brown Co. Dubuque, la.: 2 1 5.",
+      "normalized_text": "Eddy, S. and J.C. Underhill. 1982. How to Know the Freshwater Fishes. W.C. Brown Co. Dubuque, la.: 2 1 5.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{eddy1982howknowfreshwater,\n  author = {Eddy, S. and J.C. Underhill},\n  note = {raw_reference = {Eddy, S. and J.C. Underhill. 1982. How to Know the Freshwater Fishes. W.C. Brown Co. Dubuque, la.: 2 1 5.}; ecospecies_reference_number = {196}},\n  title = {How to Know the Freshwater Fishes. W.C. Brown Co. Dubuque, la.: 2 1 5},\n  year = {1982},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 6,
+      "position": 6,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "307",
+      "citation_key": "hildebrand1963familyclupeidaebigelow",
+      "entry_type": "misc",
+      "raw_text": "Hildebrand, S.F.. 1963. Family Clupeidae. in: Bigelow, H.B. (ed) Fishes of the western North Atlantic, Sears Foun. Mar. Res.Mem., No I, Part Ill, Yale Univ., New Haven.: 257-454.",
+      "normalized_text": "Hildebrand, S.F.. 1963. Family Clupeidae. in: Bigelow, H.B. (ed) Fishes of the western North Atlantic, Sears Foun. Mar. Res.Mem., No I, Part Ill, Yale Univ., New Haven.: 257-454.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{hildebrand1963familyclupeidaebigelow,\n  author = {Hildebrand, S.F},\n  note = {raw_reference = {Hildebrand, S.F.. 1963. Family Clupeidae. in: Bigelow, H.B. (ed) Fishes of the western North Atlantic, Sears Foun. Mar. Res.Mem., No I, Part Ill, Yale Univ., New Haven.: 257-454.}; ecospecies_reference_number = {307}},\n  title = {Family Clupeidae. in: Bigelow, H.B. (ed) Fishes of the western North Atlantic, Sears Foun. Mar. Res.Mem., No I, Part Ill, Yale Univ., New Haven.: 257-454},\n  year = {1963},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 7,
+      "position": 7,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "406",
+      "citation_key": "laurence1966lifehistorystudies",
+      "entry_type": "misc",
+      "raw_text": "Laurence, G.C. and R.W. Yerger. 1966. Life history studies of the Alabama shad, Alosa alabamae, in the Apalachicola River, Florida. Proc. Ann. Conf. S.E. Assoc. Game & Fish Comm. 20: 260-273.",
+      "normalized_text": "Laurence, G.C. and R.W. Yerger. 1966. Life history studies of the Alabama shad, Alosa alabamae, in the Apalachicola River, Florida. Proc. Ann. Conf. S.E. Assoc. Game & Fish Comm. 20: 260-273.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{laurence1966lifehistorystudies,\n  author = {Laurence, G.C. and R.W. Yerger},\n  journal = {Proc. Ann. Conf. S.E. Assoc. Game & Fish Comm},\n  note = {raw_reference = {Laurence, G.C. and R.W. Yerger. 1966. Life history studies of the Alabama shad, Alosa alabamae, in the Apalachicola River, Florida. Proc. Ann. Conf. S.E. Assoc. Game & Fish Comm. 20: 260-273.}; ecospecies_reference_number = {406}},\n  pages = {260-273},\n  title = {Life history studies of the Alabama shad, Alosa alabamae, in the Apalachicola River, Florida},\n  volume = {20},\n  year = {1966},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 8,
+      "position": 8,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "472",
+      "citation_key": "millican1984checklistspeciesfishes",
+      "entry_type": "misc",
+      "raw_text": "Millican, T, D. Turner, G. Thomas. 1984. Checklist of the species of fishes in Lake Maurepas, Louisiana. Proc. La. Acad. Sci. 47: 30-33.",
+      "normalized_text": "Millican, T, D. Turner, G. Thomas. 1984. Checklist of the species of fishes in Lake Maurepas, Louisiana. Proc. La. Acad. Sci. 47: 30-33.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{millican1984checklistspeciesfishes,\n  author = {Millican, T, D. Turner, G. Thomas},\n  journal = {Proc. La. Acad. Sci},\n  note = {raw_reference = {Millican, T, D. Turner, G. Thomas. 1984. Checklist of the species of fishes in Lake Maurepas, Louisiana. Proc. La. Acad. Sci. 47: 30-33.}; ecospecies_reference_number = {472}},\n  pages = {30-33},\n  title = {Checklist of the species of fishes in Lake Maurepas, Louisiana},\n  volume = {47},\n  year = {1984},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 9,
+      "position": 9,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "474",
+      "citation_key": "millsjr1972biologyalabamashad",
+      "entry_type": "misc",
+      "raw_text": "Mills Jr., J.G. 1972. Biology of the Alabama shad in northwest Florida. St. Flor. Dept. Nat. Res. Tech. Ser. No. 68: 24.",
+      "normalized_text": "Mills Jr., J.G. 1972. Biology of the Alabama shad in northwest Florida. St. Flor. Dept. Nat. Res. Tech. Ser. No. 68: 24.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{millsjr1972biologyalabamashad,\n  author = {Mills Jr., J.G},\n  note = {raw_reference = {Mills Jr., J.G. 1972. Biology of the Alabama shad in northwest Florida. St. Flor. Dept. Nat. Res. Tech. Ser. No. 68: 24.}; ecospecies_reference_number = {474}},\n  title = {Biology of the Alabama shad in northwest Florida. St. Flor. Dept. Nat. Res. Tech. Ser. No. 68: 24},\n  year = {1972},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 10,
+      "position": 10,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "486",
+      "citation_key": "moore1968fishesvertebratesunited",
+      "entry_type": "misc",
+      "raw_text": "Moore, G.A. 1968. Fishes. In: Vertebrates of the United States. McGraw-Hill Book Co. New York: 21 -1 65.",
+      "normalized_text": "Moore, G.A. 1968. Fishes. In: Vertebrates of the United States. McGraw-Hill Book Co. New York: 21 -1 65.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{moore1968fishesvertebratesunited,\n  author = {Moore, G.A},\n  note = {raw_reference = {Moore, G.A. 1968. Fishes. In: Vertebrates of the United States. McGraw-Hill Book Co. New York: 21 -1 65.}; ecospecies_reference_number = {486}},\n  title = {Fishes. In: Vertebrates of the United States. McGraw-Hill Book Co. New York: 21 -1 65},\n  year = {1968},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 11,
+      "position": 11,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "694",
+      "citation_key": "swingle1971biologyalabamaestuarine",
+      "entry_type": "misc",
+      "raw_text": "Swingle, H.A. 1971. Biology of Alabama estuarine areas cooperative Gulf of Mexico estuarine inventory. Ala. Res. Bul. No. 5: 1-1 23.",
+      "normalized_text": "Swingle, H.A. 1971. Biology of Alabama estuarine areas cooperative Gulf of Mexico estuarine inventory. Ala. Res. Bul. No. 5: 1-1 23.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{swingle1971biologyalabamaestuarine,\n  author = {Swingle, H.A},\n  note = {raw_reference = {Swingle, H.A. 1971. Biology of Alabama estuarine areas cooperative Gulf of Mexico estuarine inventory. Ala. Res. Bul. No. 5: 1-1 23.}; ecospecies_reference_number = {694}},\n  title = {Biology of Alabama estuarine areas cooperative Gulf of Mexico estuarine inventory. Ala. Res. Bul. No. 5: 1-1 23},\n  year = {1971},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    }
+  ],
+  "structured_document": {
+    "source_format": "ecospecies-markdown-v1",
+    "updated_by": "system-import",
+    "node_count": 17,
+    "ast": {
+      "metadata": {
+        "title": "Alabama Shad (Alosa alabamae)",
+        "common_name": "Alabama Shad",
+        "scientific_name": "Alosa alabamae",
+        "legacy_identifiers": [
+          {
+            "authority": "legacy-ecospecies",
+            "identifier": "1152",
+            "label": "FLELMR"
+          }
+        ],
+        "taxon_identifiers": [],
+        "primary_taxon_authority": "",
+        "source_file": "Alabama Shad SLH NOAA SEA.txt",
+        "publication_status": "published",
+        "source_format": "ecospecies-markdown-v1"
+      },
+      "nodes": [
+        {
+          "node_type": "section",
+          "title": "Revisions",
+          "body": "March 20, 1990.  M. Patillo; NOAA SEA Division",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "TAXONOMY",
+          "body": "Scientific Name:  Alosa alabamae\nCommon Name:  Alabama Shad",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Classification",
+          "body": "Phylum: Chordata\n\tClass: Osteichthyes\n\tOrder: Clupeiformes\n\tFamily: Clupeidae\n\nOther Common Names:  white shad, gulf shad, Ohio shad (160 307).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "VALUE & STATUS",
+          "body": "Commercial:  Not an important food fish and despite large populations, no commercial landings have been reported since 1902 (307 474).\n\nRecreational: This fish possesses good sport fishery potential and its taste compares favorably with the more sought after shad species. Despite this, it is generally considered to be unpalatable and too bony for eating thus receiving little attention from anglers (406 474). Some sportsmen fish for this species to use as bait or as recreation while waiting for more desirable game fish to bite, but generally those fish caught are not kept (307 406 474).\n\nEcological Role: All shad species are important forage fish for predators\n(196).\n\nIndicator: No Information found.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "GEOGRAPHIC RANGE",
+          "body": "Overall:  Found in most principal stream tributaries and major river drainages of the Gulf coast from the Suwanee River in Florida to Grand Isle, Louisiana (41 26 307 406 486 474). It has been reported from the Washita River and Hot Springs in Arkansas, the Mississippi Valley in Iowa, Montgomery in West Virginia, and northward to airport (307 406 474). It is most abundant east of the Mississippi River to the Apalachicola River system in Florida where it occurs in greater numbers (406 474). Within Study Area: Grand Isle, Louisiana to Mobile, Alabama (41 307 406\n486 694 474 472). Occurs in greatest numbers east of the Mississippi River to Mobile, Alabama (307).\n\nMobility and Migration:",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Life Mode",
+          "body": "Eggs/larvae: Pelagic and planktonic; collected only at night (474).\n\nJuveniles/adults: Pelagic and nektonic (406 474).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Movements/Migrations",
+          "body": "The Alabama shad is an anadromous species.  Adults leave salt water and ascend freshwater rivers and streams in the spring to spawn (307 196). Adults first begin to appear in late January and February with numbers present at 170 C. Shad become scarce at 20.50 C and are totally absent by 220 C. At lower temperatures, males enter earlier and in larger numbers than females, but from 17 to 19.50 C females will outnumber males (406 474).\nJuveniles are present in freshwater rivers and streams from late May to early July. They leave these areas to enter saltwater at the end of their first summer when 120 mm FL in size, but will migrate at smaller sizes in cold weather (307 406 474).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Habitat Type",
+          "body": "Eggs/larvae: Riverine; collected only at night in areas with appreciable current (474).\n\nJuveniles: Young juveniles are riverine, nektonic, freshwater fish. Older juveniles leave rivers and move into euhaline Gulf waters (474).\n\nAdults: Occur in fresh and euhaline waters (406 474). Found in both rivers and bays (307 406 486 694 474 186).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Substrate",
+          "body": "Eggs/larvae: collected over coarse sand and gravel (474).\nJuveniles/adults: probably found over a wide variety of substrates due to their anadromous nektonic life style.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Temperature",
+          "body": "Eggs/larvae: collected from 19-23 C (474).\n\nJuveniles: found in a water temperature range of 13.3-28.1 C (474).\n\nAdults: occur in waters 12.1-23 C (406 474). Below 17 C, males outnumber females, but at 19.5 C, females occur in larger numbers than males (406 474).\n\nSalinity: Considered a fresh water fish which also occurs in salt water.\n\nEggs/larvae: freshwater (474).\n\nJuveniles/adults: euryhaline (474 186).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REPRODUCTION",
+          "body": "Reproductive Mode: Fish in the shad family have separate sexes, and fertilization is external through the broadcast of sperm and eggs.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Mating/Spawning",
+          "body": "Spawning occurs during spring months when water temperatures are 19 to 200 C. 1t takes place in freshwater rivers and streams over coarse sand and gravel with water currents of 0.5-1.0 m/sec (406 474). Alabama shad are repeat spawners, but some spawning mortality occurs. The spawning population is dominated by two year old fish. This group produces the most viable offspring and its dominance has been interpreted as an adaptation to increase population density (406 474).\n\nFecundity: Reported fecundity estimates range from 46,400 to 257, 655 eggs produced by female shad (406 474). However, fecundity varies considerably with total length and weight. A decrease in the number of repeat spawners present in the population results in an increase in overall fecundity (406 474).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Length Range",
+          "body": "Egg: Uterine eggs are 1159.0~ (474). Embryonic development for this group of fishes is oviparous. Eggs are released in the spring with partially and completely spent females being collected in April (406).\n\nLarvae: No information found\n\nJuvenile: Range in size from 25 to 142 mm FL. Modal growth of most juveniles is 30 mm/mo and maturity is reached by fish during their first year or shortly after. One fish measuring 128 mm FL was collected with mature gonads, but was considered atypical (474).\n\nAdult: Four year classes can be found in the population. Average sizes for these classes are: 26.9 mm TL for Class I males; 340.4 mm TL for Class II males and 368.3 mm for class II females; 368.3 mm TL for Class III males and 388.6 mm TL for Class III females; and average measurements for Class IV fish were 383.5 and 408.9 mm TL for males and females\nrespectively (406). Females are larger than males in every year class (474). Average sizes and weights for shad are 312 mm FL and 474 g for males and 347 mm FL and 737 g for females. The largest reported fish measured 450 mm TL (186).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "FOOD HABITS",
+          "body": "Adults generally do not feed during their spawning migration (307 406 474).\n\nFood Items: Stomach contents of some migrating adults show insects, plant material, and detritus (307 406).\nJuveniles are opportunists and will feed on whatever is available especially fish and dipterans (406). They also feed on Cladocera, Coleoptera, Copepoda, Trichoptera, Annelida, Arachnids, Hemiptera, Hymenoptera, Isoptera, Odonata, Orthoptera, and plant material.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "ECOLOGICAL INTERACTIONS",
+          "body": "Information on the biology of this fish of the Gulf of Mexico is virtually nonexistent (406). Increasing numbers of dams are barring this species from its spawning grounds and may eventually lead to its decline (307).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REFERENCE NUMBERS",
+          "body": "26 41 160 186 196 307 406 472 474 486 694 327",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "CITATIONS",
+          "body": "26, Bailey, R.M., H.E. Winn and C.L. Smith. 1954. Fishes from the Escambia River, Alabama and Florida, with ecologic and taxonomic notes. Proc. Acad. w.`Sci. Philad. 106: 109-1 34.\n\n41, Behre, E.H. 1950. Annotated list of the fauna of the Grand Isle region, 1928-1 946. Occas. Pap. Mar. Lab., LSU 6(6): 1-66.\n\n160, Daniell, W.C. 1872. Letters referring to experiments of W.C. Daniell, M.D., in introducing shad into the Alabama River. Comm. Rept. U.S. Comm. Fish & Fish. 2: 387-390.\n\n186, Douglas, N.H.. 1974. Freshwater Fishes of Louisiana. Claitor's Publ. Div., Baton Rouge, La.: 443.\n\n196, Eddy, S. and J.C. Underhill. 1982. How to Know the Freshwater Fishes. W.C. Brown Co. Dubuque, la.: 2 1 5.\n\n307, Hildebrand, S.F.. 1963. Family Clupeidae. in: Bigelow, H.B. (ed) Fishes of the western North Atlantic, Sears Foun. Mar. Res.Mem., No I, Part Ill, Yale Univ., New Haven.: 257-454.\n\n406, Laurence, G.C. and R.W. Yerger. 1966. Life history studies of the Alabama shad, Alosa alabamae, in the Apalachicola River, Florida. Proc. Ann. Conf. S.E. Assoc. Game & Fish Comm. 20: 260-273.\n\n472, Millican, T, D. Turner, G. Thomas. 1984. Checklist of the species of fishes in Lake Maurepas, Louisiana. Proc. La. Acad. Sci. 47: 30-33.\n\n474, Mills Jr., J.G. 1972. Biology of the Alabama shad in northwest Florida. St. Flor. Dept. Nat. Res. Tech. Ser. No. 68: 24.\n\n486, Moore, G.A. 1968. Fishes. In: Vertebrates of the United States. McGraw-Hill Book Co. New York: 21 -1 65.\n\n694, Swingle, H.A. 1971. Biology of Alabama estuarine areas cooperative Gulf of Mexico estuarine inventory. Ala. Res. Bul. No. 5: 1-1 23.",
+          "depth": 2,
+          "children": []
+        }
+      ]
+    }
+  },
+  "legacy_source": null,
+  "sections": [
+    {
+      "id": 1,
+      "position": 1,
+      "heading": "HEADER",
+      "content": "Title: Alabama Shad (Alosa alabamae)\n\nFLELMR Code: 1152"
+    },
+    {
+      "id": 2,
+      "position": 2,
+      "heading": "Revisions",
+      "content": "March 20, 1990.  M. Patillo; NOAA SEA Division"
+    },
+    {
+      "id": 3,
+      "position": 3,
+      "heading": "TAXONOMY",
+      "content": "Scientific Name:  Alosa alabamae\nCommon Name:  Alabama Shad"
+    },
+    {
+      "id": 4,
+      "position": 4,
+      "heading": "Classification",
+      "content": "Phylum: Chordata\n\tClass: Osteichthyes\n\tOrder: Clupeiformes\n\tFamily: Clupeidae\n\nOther Common Names:  white shad, gulf shad, Ohio shad (160 307)."
+    },
+    {
+      "id": 5,
+      "position": 5,
+      "heading": "VALUE & STATUS",
+      "content": "Commercial:  Not an important food fish and despite large populations, no commercial landings have been reported since 1902 (307 474).\n\nRecreational: This fish possesses good sport fishery potential and its taste compares favorably with the more sought after shad species. Despite this, it is generally considered to be unpalatable and too bony for eating thus receiving little attention from anglers (406 474). Some sportsmen fish for this species to use as bait or as recreation while waiting for more desirable game fish to bite, but generally those fish caught are not kept (307 406 474).\n\nEcological Role: All shad species are important forage fish for predators\n(196).\n\nIndicator: No Information found."
+    },
+    {
+      "id": 6,
+      "position": 6,
+      "heading": "GEOGRAPHIC RANGE",
+      "content": "Overall:  Found in most principal stream tributaries and major river drainages of the Gulf coast from the Suwanee River in Florida to Grand Isle, Louisiana (41 26 307 406 486 474). It has been reported from the Washita River and Hot Springs in Arkansas, the Mississippi Valley in Iowa, Montgomery in West Virginia, and northward to airport (307 406 474). It is most abundant east of the Mississippi River to the Apalachicola River system in Florida where it occurs in greater numbers (406 474). Within Study Area: Grand Isle, Louisiana to Mobile, Alabama (41 307 406\n486 694 474 472). Occurs in greatest numbers east of the Mississippi River to Mobile, Alabama (307).\n\nMobility and Migration:"
+    },
+    {
+      "id": 7,
+      "position": 7,
+      "heading": "Life Mode",
+      "content": "Eggs/larvae: Pelagic and planktonic; collected only at night (474).\n\nJuveniles/adults: Pelagic and nektonic (406 474)."
+    },
+    {
+      "id": 8,
+      "position": 8,
+      "heading": "Movements/Migrations",
+      "content": "The Alabama shad is an anadromous species.  Adults leave salt water and ascend freshwater rivers and streams in the spring to spawn (307 196). Adults first begin to appear in late January and February with numbers present at 170 C. Shad become scarce at 20.50 C and are totally absent by 220 C. At lower temperatures, males enter earlier and in larger numbers than females, but from 17 to 19.50 C females will outnumber males (406 474).\nJuveniles are present in freshwater rivers and streams from late May to early July. They leave these areas to enter saltwater at the end of their first summer when 120 mm FL in size, but will migrate at smaller sizes in cold weather (307 406 474)."
+    },
+    {
+      "id": 9,
+      "position": 9,
+      "heading": "Habitat Type",
+      "content": "Eggs/larvae: Riverine; collected only at night in areas with appreciable current (474).\n\nJuveniles: Young juveniles are riverine, nektonic, freshwater fish. Older juveniles leave rivers and move into euhaline Gulf waters (474).\n\nAdults: Occur in fresh and euhaline waters (406 474). Found in both rivers and bays (307 406 486 694 474 186)."
+    },
+    {
+      "id": 10,
+      "position": 10,
+      "heading": "Substrate",
+      "content": "Eggs/larvae: collected over coarse sand and gravel (474).\nJuveniles/adults: probably found over a wide variety of substrates due to their anadromous nektonic life style."
+    },
+    {
+      "id": 11,
+      "position": 11,
+      "heading": "Temperature",
+      "content": "Eggs/larvae: collected from 19-23 C (474).\n\nJuveniles: found in a water temperature range of 13.3-28.1 C (474).\n\nAdults: occur in waters 12.1-23 C (406 474). Below 17 C, males outnumber females, but at 19.5 C, females occur in larger numbers than males (406 474).\n\nSalinity: Considered a fresh water fish which also occurs in salt water.\n\nEggs/larvae: freshwater (474).\n\nJuveniles/adults: euryhaline (474 186)."
+    },
+    {
+      "id": 12,
+      "position": 12,
+      "heading": "REPRODUCTION",
+      "content": "Reproductive Mode: Fish in the shad family have separate sexes, and fertilization is external through the broadcast of sperm and eggs."
+    },
+    {
+      "id": 13,
+      "position": 13,
+      "heading": "Mating/Spawning",
+      "content": "Spawning occurs during spring months when water temperatures are 19 to 200 C. 1t takes place in freshwater rivers and streams over coarse sand and gravel with water currents of 0.5-1.0 m/sec (406 474). Alabama shad are repeat spawners, but some spawning mortality occurs. The spawning population is dominated by two year old fish. This group produces the most viable offspring and its dominance has been interpreted as an adaptation to increase population density (406 474).\n\nFecundity: Reported fecundity estimates range from 46,400 to 257, 655 eggs produced by female shad (406 474). However, fecundity varies considerably with total length and weight. A decrease in the number of repeat spawners present in the population results in an increase in overall fecundity (406 474)."
+    },
+    {
+      "id": 14,
+      "position": 14,
+      "heading": "Length Range",
+      "content": "Egg: Uterine eggs are 1159.0~ (474). Embryonic development for this group of fishes is oviparous. Eggs are released in the spring with partially and completely spent females being collected in April (406).\n\nLarvae: No information found\n\nJuvenile: Range in size from 25 to 142 mm FL. Modal growth of most juveniles is 30 mm/mo and maturity is reached by fish during their first year or shortly after. One fish measuring 128 mm FL was collected with mature gonads, but was considered atypical (474).\n\nAdult: Four year classes can be found in the population. Average sizes for these classes are: 26.9 mm TL for Class I males; 340.4 mm TL for Class II males and 368.3 mm for class II females; 368.3 mm TL for Class III males and 388.6 mm TL for Class III females; and average measurements for Class IV fish were 383.5 and 408.9 mm TL for males and females\nrespectively (406). Females are larger than males in every year class (474). Average sizes and weights for shad are 312 mm FL and 474 g for males and 347 mm FL and 737 g for females. The largest reported fish measured 450 mm TL (186)."
+    },
+    {
+      "id": 15,
+      "position": 15,
+      "heading": "FOOD HABITS",
+      "content": "Adults generally do not feed during their spawning migration (307 406 474).\n\nFood Items: Stomach contents of some migrating adults show insects, plant material, and detritus (307 406).\nJuveniles are opportunists and will feed on whatever is available especially fish and dipterans (406). They also feed on Cladocera, Coleoptera, Copepoda, Trichoptera, Annelida, Arachnids, Hemiptera, Hymenoptera, Isoptera, Odonata, Orthoptera, and plant material."
+    },
+    {
+      "id": 16,
+      "position": 16,
+      "heading": "ECOLOGICAL INTERACTIONS",
+      "content": "Information on the biology of this fish of the Gulf of Mexico is virtually nonexistent (406). Increasing numbers of dams are barring this species from its spawning grounds and may eventually lead to its decline (307)."
+    },
+    {
+      "id": 17,
+      "position": 17,
+      "heading": "REFERENCE NUMBERS",
+      "content": "26 41 160 186 196 307 406 472 474 486 694 327"
+    },
+    {
+      "id": 18,
+      "position": 18,
+      "heading": "CITATIONS",
+      "content": "26, Bailey, R.M., H.E. Winn and C.L. Smith. 1954. Fishes from the Escambia River, Alabama and Florida, with ecologic and taxonomic notes. Proc. Acad. w.`Sci. Philad. 106: 109-1 34.\n\n41, Behre, E.H. 1950. Annotated list of the fauna of the Grand Isle region, 1928-1 946. Occas. Pap. Mar. Lab., LSU 6(6): 1-66.\n\n160, Daniell, W.C. 1872. Letters referring to experiments of W.C. Daniell, M.D., in introducing shad into the Alabama River. Comm. Rept. U.S. Comm. Fish & Fish. 2: 387-390.\n\n186, Douglas, N.H.. 1974. Freshwater Fishes of Louisiana. Claitor's Publ. Div., Baton Rouge, La.: 443.\n\n196, Eddy, S. and J.C. Underhill. 1982. How to Know the Freshwater Fishes. W.C. Brown Co. Dubuque, la.: 2 1 5.\n\n307, Hildebrand, S.F.. 1963. Family Clupeidae. in: Bigelow, H.B. (ed) Fishes of the western North Atlantic, Sears Foun. Mar. Res.Mem., No I, Part Ill, Yale Univ., New Haven.: 257-454.\n\n406, Laurence, G.C. and R.W. Yerger. 1966. Life history studies of the Alabama shad, Alosa alabamae, in the Apalachicola River, Florida. Proc. Ann. Conf. S.E. Assoc. Game & Fish Comm. 20: 260-273.\n\n472, Millican, T, D. Turner, G. Thomas. 1984. Checklist of the species of fishes in Lake Maurepas, Louisiana. Proc. La. Acad. Sci. 47: 30-33.\n\n474, Mills Jr., J.G. 1972. Biology of the Alabama shad in northwest Florida. St. Flor. Dept. Nat. Res. Tech. Ser. No. 68: 24.\n\n486, Moore, G.A. 1968. Fishes. In: Vertebrates of the United States. McGraw-Hill Book Co. New York: 21 -1 65.\n\n694, Swingle, H.A. 1971. Biology of Alabama estuarine areas cooperative Gulf of Mexico estuarine inventory. Ala. Res. Bul. No. 5: 1-1 23."
+    }
+  ]
+}

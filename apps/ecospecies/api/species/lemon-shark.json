@@ -1,0 +1,492 @@
+{
+  "slug": "lemon-shark",
+  "source_file": "Lemon Shark SLH Mote.txt",
+  "title": "Lemon Shark (Negaprion brevirostris)",
+  "common_name": "lemon shark",
+  "scientific_name": "Negaprion brevirostris",
+  "flelmr_code": "0942",
+  "legacy_identifiers": [
+    {
+      "authority": "legacy-ecospecies",
+      "identifier": "0942",
+      "label": "FLELMR"
+    }
+  ],
+  "taxon_identifiers": [],
+  "primary_taxon_authority": "",
+  "primary_taxon_identifier": null,
+  "summary": "",
+  "section_count": 14,
+  "citation_count": 13,
+  "publication_status": "published",
+  "is_archived": false,
+  "editor_notes": "",
+  "last_modified_by": "system-import",
+  "diagnostics": [],
+  "citations": [
+    {
+      "id": 1735,
+      "position": 1,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "52",
+      "citation_key": "bigelow1948fisheswesternnorth",
+      "entry_type": "misc",
+      "raw_text": "Bigelow,H.B. and W.C. Schroeder. 1948. Fishes of the western North Atlantic. Mem. Sears Found. Mar. Res., Yale Univ. Part 1: 576.",
+      "normalized_text": "Bigelow,H.B. and W.C. Schroeder. 1948. Fishes of the western North Atlantic. Mem. Sears Found. Mar. Res., Yale Univ. Part 1: 576.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{bigelow1948fisheswesternnorth,\n  author = {Bigelow,H.B. and W.C. Schroeder},\n  note = {raw_reference = {Bigelow,H.B. and W.C. Schroeder. 1948. Fishes of the western North Atlantic. Mem. Sears Found. Mar. Res., Yale Univ. Part 1: 576.}; ecospecies_reference_number = {52}},\n  title = {Fishes of the western North Atlantic. Mem. Sears Found. Mar. Res., Yale Univ. Part 1: 576},\n  year = {1948},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1736,
+      "position": 2,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "101",
+      "citation_key": "castro1983sharksnorthamerican",
+      "entry_type": "misc",
+      "raw_text": "Castro, J.I.. 1983. The sharks of North American Waters. Texas A&M University Press, College Station, TX: 180.",
+      "normalized_text": "Castro, J.I.. 1983. The sharks of North American Waters. Texas A&M University Press, College Station, TX: 180.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{castro1983sharksnorthamerican,\n  author = {Castro, J.I},\n  note = {raw_reference = {Castro, J.I.. 1983. The sharks of North American Waters. Texas A&M University Press, College Station, TX: 180.}; ecospecies_reference_number = {101}},\n  title = {The sharks of North American Waters. Texas A&M University Press, College Station, TX: 180},\n  year = {1983},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1737,
+      "position": 3,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "123",
+      "citation_key": "clark1965sharkscentralgulf",
+      "entry_type": "misc",
+      "raw_text": "Clark, E. and K. von Schmidt. 1965. Sharks of the central Gulf coast of Florida. Bull. Mar. Sci. 15: 13-83.",
+      "normalized_text": "Clark, E. and K. von Schmidt. 1965. Sharks of the central Gulf coast of Florida. Bull. Mar. Sci. 15: 13-83.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{clark1965sharkscentralgulf,\n  author = {Clark, E. and K. von Schmidt},\n  howpublished = {Bull. Mar. Sci},\n  note = {raw_reference = {Clark, E. and K. von Schmidt. 1965. Sharks of the central Gulf coast of Florida. Bull. Mar. Sci. 15: 13-83.}; ecospecies_reference_number = {123}},\n  pages = {13-83},\n  title = {Sharks of the central Gulf coast of Florida},\n  volume = {15},\n  year = {1965},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1738,
+      "position": 4,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "327",
+      "citation_key": "hoese1977fishesgulfmexico",
+      "entry_type": "misc",
+      "raw_text": "Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.",
+      "normalized_text": "Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{hoese1977fishesgulfmexico,\n  author = {Hoese, H.D. and R.H. Moore},\n  note = {raw_reference = {Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.}; ecospecies_reference_number = {327}},\n  title = {Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327},\n  year = {1977},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1739,
+      "position": 5,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "788",
+      "citation_key": "robins1986fieldguideatlantic",
+      "entry_type": "misc",
+      "raw_text": "Robins, C. Richard, G. Carlton Ray, John Douglass and R. Freud. 1986. A Field Guide to Atlantic Coast Fishes of North America. Peterson Field Guide Series No. 32, Houghton Mifflin Co., Boston. 354p..",
+      "normalized_text": "Robins, C. Richard, G. Carlton Ray, John Douglass and R. Freud. 1986. A Field Guide to Atlantic Coast Fishes of North America. Peterson Field Guide Series No. 32, Houghton Mifflin Co., Boston. 354p..",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{robins1986fieldguideatlantic,\n  author = {Robins, C. Richard, G. Carlton Ray, John Douglass and R. Freud},\n  note = {raw_reference = {Robins, C. Richard, G. Carlton Ray, John Douglass and R. Freud. 1986. A Field Guide to Atlantic Coast Fishes of North America. Peterson Field Guide Series No. 32, Houghton Mifflin Co., Boston. 354p..}; ecospecies_reference_number = {788}},\n  title = {A Field Guide to Atlantic Coast Fishes of North America. Peterson Field Guide Series No. 32, Houghton Mifflin Co., Boston. 354p},\n  year = {1986},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1740,
+      "position": 6,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "791",
+      "citation_key": "fischer1978fa0speciesidentification",
+      "entry_type": "misc",
+      "raw_text": "Fischer, W. (Ed.). 1978. FA0 species identification sheets for fishery purposes. Western central Atlantic (Fishing area 31). Volumes 1-7. FA0 United Nations, Rome.",
+      "normalized_text": "Fischer, W. (Ed.). 1978. FA0 species identification sheets for fishery purposes. Western central Atlantic (Fishing area 31). Volumes 1-7. FA0 United Nations, Rome.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{fischer1978fa0speciesidentification,\n  author = {Fischer, W. (Ed.)},\n  note = {raw_reference = {Fischer, W. (Ed.). 1978. FA0 species identification sheets for fishery purposes. Western central Atlantic (Fishing area 31). Volumes 1-7. FA0 United Nations, Rome.}; ecospecies_reference_number = {791}},\n  title = {FA0 species identification sheets for fishery purposes. Western central Atlantic (Fishing area 31). Volumes 1-7. FA0 United Nations, Rome},\n  year = {1978},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1741,
+      "position": 7,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "826",
+      "citation_key": "brown1988ageassessmentlemon",
+      "entry_type": "misc",
+      "raw_text": "Brown, CA and SH Gruber. 1988. Age assessment of the lemon shark, Negaprion brevirostris, using tetracycline validated vertebral centra.. Copeia 1988(3):747-753.",
+      "normalized_text": "Brown, CA and SH Gruber. 1988. Age assessment of the lemon shark, Negaprion brevirostris, using tetracycline validated vertebral centra.. Copeia 1988(3):747-753.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{brown1988ageassessmentlemon,\n  author = {Brown, CA and SH Gruber},\n  note = {raw_reference = {Brown, CA and SH Gruber. 1988. Age assessment of the lemon shark, Negaprion brevirostris, using tetracycline validated vertebral centra.. Copeia 1988(3):747-753.}; ecospecies_reference_number = {826}},\n  title = {Age assessment of the lemon shark, Negaprion brevirostris, using tetracycline validated vertebral centra.. Copeia 1988(3):747-753},\n  year = {1988},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1742,
+      "position": 8,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "838",
+      "citation_key": "springer1950naturalhistorynotes",
+      "entry_type": "misc",
+      "raw_text": "Springer, S. 1950. Natural history notes on the lemon shark, Negaprion brevirostris.. Tex. J. Sci. 2(3):349-359.",
+      "normalized_text": "Springer, S. 1950. Natural history notes on the lemon shark, Negaprion brevirostris.. Tex. J. Sci. 2(3):349-359.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{springer1950naturalhistorynotes,\n  author = {Springer, S},\n  note = {raw_reference = {Springer, S. 1950. Natural history notes on the lemon shark, Negaprion brevirostris.. Tex. J. Sci. 2(3):349-359.}; ecospecies_reference_number = {838}},\n  title = {Natural history notes on the lemon shark, Negaprion brevirostris.. Tex. J. Sci. 2(3):349-359},\n  year = {1950},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1743,
+      "position": 9,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "842",
+      "citation_key": "cortes1990dietfeedinghabits",
+      "entry_type": "misc",
+      "raw_text": "Cortes, E and SH Gruber. 1990. Diet, feeding habits and estimates of daily ration of young lemon sharks, Negaprion brevirostris.. Copeia 1990(1) :204-2 1 8.",
+      "normalized_text": "Cortes, E and SH Gruber. 1990. Diet, feeding habits and estimates of daily ration of young lemon sharks, Negaprion brevirostris.. Copeia 1990(1) :204-2 1 8.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{cortes1990dietfeedinghabits,\n  author = {Cortes, E and SH Gruber},\n  note = {raw_reference = {Cortes, E and SH Gruber. 1990. Diet, feeding habits and estimates of daily ration of young lemon sharks, Negaprion brevirostris.. Copeia 1990(1) :204-2 1 8.}; ecospecies_reference_number = {842}},\n  title = {Diet, feeding habits and estimates of daily ration of young lemon sharks, Negaprion brevirostris.. Copeia 1990(1) :204-2 1 8},\n  year = {1990},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1744,
+      "position": 10,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "843",
+      "citation_key": "gruber1988patternsactivityspace",
+      "entry_type": "misc",
+      "raw_text": "Gruber, SH, DR Nelson and JF Morrissey. 1988. Patterns of activity and space utilization of lemon sharks, Negaprion brevirostris, in a shallow Bahamian lagoon.. Bull. Mar. Sci. 43(1):61-76.",
+      "normalized_text": "Gruber, SH, DR Nelson and JF Morrissey. 1988. Patterns of activity and space utilization of lemon sharks, Negaprion brevirostris, in a shallow Bahamian lagoon.. Bull. Mar. Sci. 43(1):61-76.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gruber1988patternsactivityspace,\n  author = {Gruber, SH, DR Nelson and JF Morrissey},\n  howpublished = {Bull. Mar. Sci},\n  note = {raw_reference = {Gruber, SH, DR Nelson and JF Morrissey. 1988. Patterns of activity and space utilization of lemon sharks, Negaprion brevirostris, in a shallow Bahamian lagoon.. Bull. Mar. Sci. 43(1):61-76.}; ecospecies_reference_number = {843}},\n  number = {1},\n  pages = {61-76},\n  title = {Patterns of activity and space utilization of lemon sharks, Negaprion brevirostris, in a shallow Bahamian lagoon},\n  volume = {43},\n  year = {1988},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1745,
+      "position": 11,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "864",
+      "citation_key": "heller1963newreticuloendothelialsystem",
+      "entry_type": "misc",
+      "raw_text": "Heller, JH, VZ Pasternak, JP Ransom and MS Heller. 1963. A new reticuloendothelial system stimulating agent ('Restim') from shark livers.. Nature 199:904-905.",
+      "normalized_text": "Heller, JH, VZ Pasternak, JP Ransom and MS Heller. 1963. A new reticuloendothelial system stimulating agent ('Restim') from shark livers.. Nature 199:904-905.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{heller1963newreticuloendothelialsystem,\n  author = {Heller, JH, VZ Pasternak, JP Ransom and MS Heller},\n  note = {raw_reference = {Heller, JH, VZ Pasternak, JP Ransom and MS Heller. 1963. A new reticuloendothelial system stimulating agent ('Restim') from shark livers.. Nature 199:904-905.}; ecospecies_reference_number = {864}},\n  title = {A new reticuloendothelial system stimulating agent ('Restim') from shark livers.. Nature 199:904-905},\n  year = {1963},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1746,
+      "position": 12,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "866",
+      "citation_key": "compagno1984sharksworldfa0",
+      "entry_type": "misc",
+      "raw_text": "Compagno, LJ. 1984. Sharks of the world.. FA0 Fisheries Synopsis No. 125, Vol. 4, Part 2, 519-520.",
+      "normalized_text": "Compagno, LJ. 1984. Sharks of the world.. FA0 Fisheries Synopsis No. 125, Vol. 4, Part 2, 519-520.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{compagno1984sharksworldfa0,\n  author = {Compagno, LJ},\n  note = {raw_reference = {Compagno, LJ. 1984. Sharks of the world.. FA0 Fisheries Synopsis No. 125, Vol. 4, Part 2, 519-520.}; ecospecies_reference_number = {866}},\n  title = {Sharks of the world.. FA0 Fisheries Synopsis No. 125, Vol. 4, Part 2, 519-520},\n  year = {1984},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1747,
+      "position": 13,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "884",
+      "citation_key": "gruber1982rolelemonshark",
+      "entry_type": "misc",
+      "raw_text": "Gruber, SH. 1982. Role of the lemon shark, Negaprion brevirostris (Poey) as a predator in the tropical marine environment: a multidisciplinary study.. FI. Sci. 45(1):46-75.",
+      "normalized_text": "Gruber, SH. 1982. Role of the lemon shark, Negaprion brevirostris (Poey) as a predator in the tropical marine environment: a multidisciplinary study.. FI. Sci. 45(1):46-75.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gruber1982rolelemonshark,\n  author = {Gruber, SH},\n  note = {raw_reference = {Gruber, SH. 1982. Role of the lemon shark, Negaprion brevirostris (Poey) as a predator in the tropical marine environment: a multidisciplinary study.. FI. Sci. 45(1):46-75.}; ecospecies_reference_number = {884}},\n  title = {Role of the lemon shark, Negaprion brevirostris (Poey) as a predator in the tropical marine environment: a multidisciplinary study.. FI. Sci. 45(1):46-75},\n  year = {1982},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    }
+  ],
+  "structured_document": {
+    "source_format": "ecospecies-markdown-v1",
+    "updated_by": "system-import",
+    "node_count": 13,
+    "ast": {
+      "metadata": {
+        "title": "Lemon Shark (Negaprion brevirostris)",
+        "common_name": "lemon shark",
+        "scientific_name": "Negaprion brevirostris",
+        "legacy_identifiers": [
+          {
+            "authority": "legacy-ecospecies",
+            "identifier": "0942",
+            "label": "FLELMR"
+          }
+        ],
+        "taxon_identifiers": [],
+        "primary_taxon_authority": "",
+        "source_file": "Lemon Shark SLH Mote.txt",
+        "publication_status": "published",
+        "source_format": "ecospecies-markdown-v1"
+      },
+      "nodes": [
+        {
+          "node_type": "section",
+          "title": "Revisions",
+          "body": "1990 Jan 1. TD Phillips; None Listed",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "TAXONOMY",
+          "body": "Common Name: lemon shark\nScientific Name: Negaprion brevirostris",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Classification",
+          "body": "Phylum: Chordata\n      Class: Elasmobranchiomorphi\n      Order: Larnniformes\n      Family: Carcharhinidae",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "VALUE & STATUS",
+          "body": "Commercial: Caught for their livers which are used for oil (52 791 838) and their fins which are used for gelatine (791). Pursued for their hide which is said to make a leather of good quality (101 838). Also sought for their flesh reported to be a good quality meat (101 838) .\n\nRecreational: Often sought by recreational anglers in marsh channels with the best fishing being at night (101 327).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Indicator",
+          "body": "Ecological Role: Known to be dangerous to man (101 788 791). Are popular for experimental work (101). Lipids from the liver have been shown to increase mammalian resistance to disease (864).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "GEOGRAPHIC RANGE",
+          "body": "Overall:  Found in the temperate and tropical Atlantic from New Jersey (rarely) to Brazil and throughout the Gulf of Mexico (52 327 788). Common from South Carolina to Florida (101). Also occur in western Africa (52 788) and are common in the tropical eastern Pacific (838). Most abundant in the Caribbean Sea (101 791). Not known from Bermuda (52) .\n\nWithin Study Area: Distributed throughout Florida waters.\n\nMobility and Migration:",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Life Mode",
+          "body": "A demersal species found primarily in coastal waters but occasionally entering river mouths (791). Large schools observed in the winter (788). Active at night around docks and other structures (101).\n\nYoung do not migrate during first year of life ( 8 8 4 ) .",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "BENTHIC HABITAT",
+          "body": "Habitat Type: Coastal waters including bays and inlets ( 7 8 8 ) , not found more than a very short distance from land ( 5 2 ) . Strictly an inshore species common around docks and in saltwater creeks ( 5 2 ) .\n\nSubstrate: In shallower waters found over sand, coral and mud, but not partial to brackish waters ( 8 3 8 ) .",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Salinity",
+          "body": "Juvenile/adults: Reported from freshwater in Brazil ( 5 2 ) .",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REPRODUCTION",
+          "body": "Reproductive Mode: Fertilization is internal; reproduction is viviparous (101).\n\nMating/Spawning: Various authors have stated that maturity is reached at 229 cm or more (838), also reported as from 213 to 229 cm ( 5 2 ) . Males mature at about 225 cm and females at 240 cm (866), but Clarke and vonschmidt reported the smallest mature females caught in southwest Florida were 252 cm ( 1 2 3 ) . Two authors reported that maturity occurs at an age of 1.5-2.6 years (123 838), but Brown and Gruber (826) found that males mature at an age of 11.6 years and females at 12.7 years. Mating occurs in spring and summer in southwest Florida (52 101 1 2 3 ) . Gestation is about 12 months (101 1 2 3 ) . Young are born in the spring and summer ( 1 0 1 3 2 7 ) . Florida Bay is said to be an important nursery ground ( 8 3 8 ) .\n\nFecundity: Fecundity ranges from 5 to 19 embryos (101 123 7911, with 11 the average (101).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Length Range",
+          "body": "Juveniles: Young are 61-66 cm at birth and grow as much as 10 cm in their first 40 days (838). Gruber (884) found that juveniles in the wild (72 cm average length) grew at the rate of 0.23 mm/day but captive animals grew at 0.62 mm/day. Brown and Gruber (826) found that data from 110 tagged and recaptured animals provided a good fit to the von Bertalanffy growth equation.\n\nAdults: Maximum size is 3.4 m (52 327 788) but \"rarely reaches 284.5 cm? ( 8 3 8 ). On animal reported by Bigelow and Schroeder (52) was 290 cm long and weighed 120 kg. Adult growth rate has been estimated at 8 cm/month ( 1 2 3 ) . It is a slow growing and long-lived species attaining an age of at least 20 years ( 8 2 6 ) .",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "FOOD HABITS",
+          "body": "Young are known to feed on crustaceans ( 8 3 8 ) . Diet is primarily bony fishes including catfish, mullet and mojarras (52 101 123 7 9 1 ) . Also feed on rays, crab, shrimp, octopus, and carrion (101 123 7 9 1 ) . Small sharks and sea birds have also been found in their stomachs ( 1 0 1 ) .",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "CITATIONS",
+          "body": "52, Bigelow,H.B. and W.C. Schroeder. 1948. Fishes of the western North Atlantic. Mem. Sears Found. Mar. Res., Yale Univ. Part 1: 576.\n\n101, Castro, J.I.. 1983. The sharks of North American Waters. Texas A&M University Press, College Station, TX: 180.\n\n123, Clark, E. and K. von Schmidt. 1965. Sharks of the central Gulf coast of Florida. Bull. Mar. Sci. 15: 13-83.\n\n327, Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.\n\n788, Robins, C. Richard, G. Carlton Ray, John Douglass and R. Freud. 1986. A Field Guide to Atlantic Coast Fishes of North America. Peterson Field Guide Series No. 32, Houghton Mifflin Co., Boston. 354p..\n\n791, Fischer, W. (Ed.). 1978. FA0 species identification sheets for fishery purposes. Western central Atlantic (Fishing area 31). Volumes 1-7. FA0 United Nations, Rome.\n\n826, Brown, CA and SH Gruber. 1988. Age assessment of the lemon shark, Negaprion brevirostris, using tetracycline validated vertebral centra.. Copeia 1988(3):747-753.\n\n838, Springer, S. 1950. Natural history notes on the lemon shark, Negaprion brevirostris.. Tex. J. Sci. 2(3):349-359.\n\n842, Cortes, E and SH Gruber. 1990. Diet, feeding habits and estimates of daily ration of young lemon sharks, Negaprion brevirostris.. Copeia 1990(1) :204-2 1 8.\n\n843, Gruber, SH, DR Nelson and JF Morrissey. 1988. Patterns of activity and space utilization of lemon sharks, Negaprion brevirostris, in a shallow Bahamian lagoon.. Bull. Mar. Sci. 43(1):61-76.\n\n864, Heller, JH, VZ Pasternak, JP Ransom and MS Heller. 1963. A new reticuloendothelial system stimulating agent ('Restim') from shark livers.. Nature 199:904-905.\n\n866, Compagno, LJ. 1984. Sharks of the world.. FA0 Fisheries Synopsis No. 125, Vol. 4, Part 2, 519-520.\n\n884, Gruber, SH. 1982. Role of the lemon shark, Negaprion brevirostris (Poey) as a predator in the tropical marine environment: a multidisciplinary study.. FI. Sci. 45(1):46-75.",
+          "depth": 2,
+          "children": []
+        }
+      ]
+    }
+  },
+  "legacy_source": null,
+  "sections": [
+    {
+      "id": 774,
+      "position": 1,
+      "heading": "HEADER",
+      "content": "Title: Lemon Shark (Negaprion brevirostris)\n\nFLELMR Code: 0942"
+    },
+    {
+      "id": 775,
+      "position": 2,
+      "heading": "Revisions",
+      "content": "1990 Jan 1. TD Phillips; None Listed"
+    },
+    {
+      "id": 776,
+      "position": 3,
+      "heading": "TAXONOMY",
+      "content": "Common Name: lemon shark\nScientific Name: Negaprion brevirostris"
+    },
+    {
+      "id": 777,
+      "position": 4,
+      "heading": "Classification",
+      "content": "Phylum: Chordata\n      Class: Elasmobranchiomorphi\n      Order: Larnniformes\n      Family: Carcharhinidae"
+    },
+    {
+      "id": 778,
+      "position": 5,
+      "heading": "VALUE & STATUS",
+      "content": "Commercial: Caught for their livers which are used for oil (52 791 838) and their fins which are used for gelatine (791). Pursued for their hide which is said to make a leather of good quality (101 838). Also sought for their flesh reported to be a good quality meat (101 838) .\n\nRecreational: Often sought by recreational anglers in marsh channels with the best fishing being at night (101 327)."
+    },
+    {
+      "id": 779,
+      "position": 6,
+      "heading": "Indicator",
+      "content": "Ecological Role: Known to be dangerous to man (101 788 791). Are popular for experimental work (101). Lipids from the liver have been shown to increase mammalian resistance to disease (864)."
+    },
+    {
+      "id": 780,
+      "position": 7,
+      "heading": "GEOGRAPHIC RANGE",
+      "content": "Overall:  Found in the temperate and tropical Atlantic from New Jersey (rarely) to Brazil and throughout the Gulf of Mexico (52 327 788). Common from South Carolina to Florida (101). Also occur in western Africa (52 788) and are common in the tropical eastern Pacific (838). Most abundant in the Caribbean Sea (101 791). Not known from Bermuda (52) .\n\nWithin Study Area: Distributed throughout Florida waters.\n\nMobility and Migration:"
+    },
+    {
+      "id": 781,
+      "position": 8,
+      "heading": "Life Mode",
+      "content": "A demersal species found primarily in coastal waters but occasionally entering river mouths (791). Large schools observed in the winter (788). Active at night around docks and other structures (101).\n\nYoung do not migrate during first year of life ( 8 8 4 ) ."
+    },
+    {
+      "id": 782,
+      "position": 9,
+      "heading": "BENTHIC HABITAT",
+      "content": "Habitat Type: Coastal waters including bays and inlets ( 7 8 8 ) , not found more than a very short distance from land ( 5 2 ) . Strictly an inshore species common around docks and in saltwater creeks ( 5 2 ) .\n\nSubstrate: In shallower waters found over sand, coral and mud, but not partial to brackish waters ( 8 3 8 ) ."
+    },
+    {
+      "id": 783,
+      "position": 10,
+      "heading": "Salinity",
+      "content": "Juvenile/adults: Reported from freshwater in Brazil ( 5 2 ) ."
+    },
+    {
+      "id": 784,
+      "position": 11,
+      "heading": "REPRODUCTION",
+      "content": "Reproductive Mode: Fertilization is internal; reproduction is viviparous (101).\n\nMating/Spawning: Various authors have stated that maturity is reached at 229 cm or more (838), also reported as from 213 to 229 cm ( 5 2 ) . Males mature at about 225 cm and females at 240 cm (866), but Clarke and vonschmidt reported the smallest mature females caught in southwest Florida were 252 cm ( 1 2 3 ) . Two authors reported that maturity occurs at an age of 1.5-2.6 years (123 838), but Brown and Gruber (826) found that males mature at an age of 11.6 years and females at 12.7 years. Mating occurs in spring and summer in southwest Florida (52 101 1 2 3 ) . Gestation is about 12 months (101 1 2 3 ) . Young are born in the spring and summer ( 1 0 1 3 2 7 ) . Florida Bay is said to be an important nursery ground ( 8 3 8 ) .\n\nFecundity: Fecundity ranges from 5 to 19 embryos (101 123 7911, with 11 the average (101)."
+    },
+    {
+      "id": 785,
+      "position": 12,
+      "heading": "Length Range",
+      "content": "Juveniles: Young are 61-66 cm at birth and grow as much as 10 cm in their first 40 days (838). Gruber (884) found that juveniles in the wild (72 cm average length) grew at the rate of 0.23 mm/day but captive animals grew at 0.62 mm/day. Brown and Gruber (826) found that data from 110 tagged and recaptured animals provided a good fit to the von Bertalanffy growth equation.\n\nAdults: Maximum size is 3.4 m (52 327 788) but \"rarely reaches 284.5 cm? ( 8 3 8 ). On animal reported by Bigelow and Schroeder (52) was 290 cm long and weighed 120 kg. Adult growth rate has been estimated at 8 cm/month ( 1 2 3 ) . It is a slow growing and long-lived species attaining an age of at least 20 years ( 8 2 6 ) ."
+    },
+    {
+      "id": 786,
+      "position": 13,
+      "heading": "FOOD HABITS",
+      "content": "Young are known to feed on crustaceans ( 8 3 8 ) . Diet is primarily bony fishes including catfish, mullet and mojarras (52 101 123 7 9 1 ) . Also feed on rays, crab, shrimp, octopus, and carrion (101 123 7 9 1 ) . Small sharks and sea birds have also been found in their stomachs ( 1 0 1 ) ."
+    },
+    {
+      "id": 787,
+      "position": 14,
+      "heading": "CITATIONS",
+      "content": "52, Bigelow,H.B. and W.C. Schroeder. 1948. Fishes of the western North Atlantic. Mem. Sears Found. Mar. Res., Yale Univ. Part 1: 576.\n\n101, Castro, J.I.. 1983. The sharks of North American Waters. Texas A&M University Press, College Station, TX: 180.\n\n123, Clark, E. and K. von Schmidt. 1965. Sharks of the central Gulf coast of Florida. Bull. Mar. Sci. 15: 13-83.\n\n327, Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.\n\n788, Robins, C. Richard, G. Carlton Ray, John Douglass and R. Freud. 1986. A Field Guide to Atlantic Coast Fishes of North America. Peterson Field Guide Series No. 32, Houghton Mifflin Co., Boston. 354p..\n\n791, Fischer, W. (Ed.). 1978. FA0 species identification sheets for fishery purposes. Western central Atlantic (Fishing area 31). Volumes 1-7. FA0 United Nations, Rome.\n\n826, Brown, CA and SH Gruber. 1988. Age assessment of the lemon shark, Negaprion brevirostris, using tetracycline validated vertebral centra.. Copeia 1988(3):747-753.\n\n838, Springer, S. 1950. Natural history notes on the lemon shark, Negaprion brevirostris.. Tex. J. Sci. 2(3):349-359.\n\n842, Cortes, E and SH Gruber. 1990. Diet, feeding habits and estimates of daily ration of young lemon sharks, Negaprion brevirostris.. Copeia 1990(1) :204-2 1 8.\n\n843, Gruber, SH, DR Nelson and JF Morrissey. 1988. Patterns of activity and space utilization of lemon sharks, Negaprion brevirostris, in a shallow Bahamian lagoon.. Bull. Mar. Sci. 43(1):61-76.\n\n864, Heller, JH, VZ Pasternak, JP Ransom and MS Heller. 1963. A new reticuloendothelial system stimulating agent ('Restim') from shark livers.. Nature 199:904-905.\n\n866, Compagno, LJ. 1984. Sharks of the world.. FA0 Fisheries Synopsis No. 125, Vol. 4, Part 2, 519-520.\n\n884, Gruber, SH. 1982. Role of the lemon shark, Negaprion brevirostris (Poey) as a predator in the tropical marine environment: a multidisciplinary study.. FI. Sci. 45(1):46-75."
+    }
+  ]
+}

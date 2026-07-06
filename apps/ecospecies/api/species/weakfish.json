@@ -1,0 +1,479 @@
+{
+  "slug": "weakfish",
+  "source_file": "Weakfish SLH.txt",
+  "title": "Weakfish (Cynoscion regalis)",
+  "common_name": "Weakfish",
+  "scientific_name": "Cynoscion regalis (Bloch and Schneider 1801)",
+  "flelmr_code": "1722",
+  "legacy_identifiers": [
+    {
+      "authority": "legacy-ecospecies",
+      "identifier": "1722",
+      "label": "FLELMR"
+    }
+  ],
+  "taxon_identifiers": [],
+  "primary_taxon_authority": "",
+  "primary_taxon_identifier": null,
+  "summary": "",
+  "section_count": 13,
+  "citation_count": 13,
+  "publication_status": "published",
+  "is_archived": false,
+  "editor_notes": "",
+  "last_modified_by": "system-import",
+  "diagnostics": [],
+  "citations": [
+    {
+      "id": 4679,
+      "position": 1,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "chao1978romefaopag",
+      "entry_type": "misc",
+      "raw_text": "Chao, L. N. Sciaenidae In Fischer,  W.  (Ed.)  1978.  Rome, FAO, pag.var.  FAO species identification sheets for fishery purposes.  Western Central Atlantic (fishing area 31).  Vols. 1-7.",
+      "normalized_text": "Chao, L. N. Sciaenidae In Fischer, W. (Ed.) 1978. Rome, FAO, pag.var. FAO species identification sheets for fishery purposes. Western Central Atlantic (fishing area 31). Vols. 1-7.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{chao1978romefaopag,\n  author = {Chao, L. N. Sciaenidae In Fischer,  W.  (Ed.)},\n  note = {raw_reference = {Chao, L. N. Sciaenidae In Fischer,  W.  (Ed.)  1978.  Rome, FAO, pag.var.  FAO species identification sheets for fishery purposes.  Western Central Atlantic (fishing area 31).  Vols. 1-7.}},\n  title = {Rome, FAO, pag.var.  FAO species identification sheets for fishery purposes.  Western Central Atlantic (fishing area 31).  Vols. 1-7},\n  year = {1978},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 4680,
+      "position": 2,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "gilmore1988subtropicalseagrassfish",
+      "entry_type": "misc",
+      "raw_text": "Gilmore, R.  Grant.  1988.  Subtropical seagrass fish communities:  Population dynamics, species guilds and microhabitat associations in the Indian River Lagoon, Florida.  Dissertation.  Florida Institute of Technology.  199 p.",
+      "normalized_text": "Gilmore, R. Grant. 1988. Subtropical seagrass fish communities: Population dynamics, species guilds and microhabitat associations in the Indian River Lagoon, Florida. Dissertation. Florida Institute of Technology. 199 p.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gilmore1988subtropicalseagrassfish,\n  author = {Gilmore, R.  Grant},\n  note = {raw_reference = {Gilmore, R.  Grant.  1988.  Subtropical seagrass fish communities:  Population dynamics, species guilds and microhabitat associations in the Indian River Lagoon, Florida.  Dissertation.  Florida Institute of Technology.  199 p.}},\n  title = {Subtropical seagrass fish communities:  Population dynamics, species guilds and microhabitat associations in the Indian River Lagoon, Florida.  Dissertation.  Florida Institute of Technology.  199 p},\n  year = {1988},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 4681,
+      "position": 3,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "gilmore1977fishesindianriver",
+      "entry_type": "misc",
+      "raw_text": "Gilmore, R. Grant  Jr., 1977.  Fishes of the Indian River Lagoon and adjacent  waters, Florida.  Bull. Fla. State Mus. Biol. Sci. 22:101-148.",
+      "normalized_text": "Gilmore, R. Grant Jr., 1977. Fishes of the Indian River Lagoon and adjacent waters, Florida. Bull. Fla. State Mus. Biol. Sci. 22:101-148.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gilmore1977fishesindianriver,\n  author = {Gilmore, R. Grant  Jr.,},\n  howpublished = {Bull. Fla. State Mus. Biol. Sci},\n  note = {raw_reference = {Gilmore, R. Grant  Jr., 1977.  Fishes of the Indian River Lagoon and adjacent  waters, Florida.  Bull. Fla. State Mus. Biol. Sci. 22:101-148.}},\n  pages = {101-148},\n  title = {Fishes of the Indian River Lagoon and adjacent  waters, Florida},\n  volume = {22},\n  year = {1977},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 4682,
+      "position": 4,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "goshorn1990distributionlarvalweakfish",
+      "entry_type": "misc",
+      "raw_text": "Goshorn,  David M.  1990.  Distribution of larval weakfish (Cynoscion regalis) in Delaware Bay and the relationship of field prey concentration to laboratory determined growth and mortality rates.  Dissertation.  University of Delaware.  173 p.",
+      "normalized_text": "Goshorn, David M. 1990. Distribution of larval weakfish (Cynoscion regalis) in Delaware Bay and the relationship of field prey concentration to laboratory determined growth and mortality rates. Dissertation. University of Delaware. 173 p.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{goshorn1990distributionlarvalweakfish,\n  author = {Goshorn,  David M},\n  note = {raw_reference = {Goshorn,  David M.  1990.  Distribution of larval weakfish (Cynoscion regalis) in Delaware Bay and the relationship of field prey concentration to laboratory determined growth and mortality rates.  Dissertation.  University of Delaware.  173 p.}},\n  title = {Distribution of larval weakfish (Cynoscion regalis) in Delaware Bay and the relationship of field prey concentration to laboratory determined growth and mortality rates.  Dissertation.  University of Delaware.  173 p},\n  year = {1990},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 4683,
+      "position": 5,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "goshorn1991dietlarvalweakfish",
+      "entry_type": "misc",
+      "raw_text": "Goshorn,  David M., and C. E. Epifanio.  1991.  Diet of larval weakfish and prey abundance in Delaware Bay.  Transaction of the American Fisheries Society.  120:684-692, 1991.",
+      "normalized_text": "Goshorn, David M., and C. E. Epifanio. 1991. Diet of larval weakfish and prey abundance in Delaware Bay. Transaction of the American Fisheries Society. 120:684-692, 1991.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{goshorn1991dietlarvalweakfish,\n  author = {Goshorn,  David M., and C. E. Epifanio},\n  note = {raw_reference = {Goshorn,  David M., and C. E. Epifanio.  1991.  Diet of larval weakfish and prey abundance in Delaware Bay.  Transaction of the American Fisheries Society.  120:684-692, 1991.}},\n  title = {Diet of larval weakfish and prey abundance in Delaware Bay.  Transaction of the American Fisheries Society.  120:684-692, 1991},\n  year = {1991},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 4684,
+      "position": 6,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "grecay1990factorsaffectingspatial",
+      "entry_type": "misc",
+      "raw_text": "Grecay, Paul A.  1990.  Factors affecting spatial patterns of feeding success and condition of juvenile weakfish (Cynoscion regalis) in Delaware Bay: Field and laboratory assessment.  Dissertation.   University of Delaware.  179 p.",
+      "normalized_text": "Grecay, Paul A. 1990. Factors affecting spatial patterns of feeding success and condition of juvenile weakfish (Cynoscion regalis) in Delaware Bay: Field and laboratory assessment. Dissertation. University of Delaware. 179 p.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{grecay1990factorsaffectingspatial,\n  author = {Grecay, Paul A},\n  note = {raw_reference = {Grecay, Paul A.  1990.  Factors affecting spatial patterns of feeding success and condition of juvenile weakfish (Cynoscion regalis) in Delaware Bay: Field and laboratory assessment.  Dissertation.   University of Delaware.  179 p.}},\n  title = {Factors affecting spatial patterns of feeding success and condition of juvenile weakfish (Cynoscion regalis) in Delaware Bay: Field and laboratory assessment.  Dissertation.   University of Delaware.  179 p},\n  year = {1990},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 4685,
+      "position": 7,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "herrema1985spawningperiodscommon",
+      "entry_type": "misc",
+      "raw_text": "Herrema, David J., Bruce D. Perry, Nancy Williams-Walls, and J. Ross Wilcox.  1985.  Spawning periods of common inshore fishes on the Florida east coast. Northeast Gulf Sci. 7:153-155.",
+      "normalized_text": "Herrema, David J., Bruce D. Perry, Nancy Williams-Walls, and J. Ross Wilcox. 1985. Spawning periods of common inshore fishes on the Florida east coast. Northeast Gulf Sci. 7:153-155.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{herrema1985spawningperiodscommon,\n  author = {Herrema, David J., Bruce D. Perry, Nancy Williams-Walls, and J. Ross Wilcox},\n  note = {raw_reference = {Herrema, David J., Bruce D. Perry, Nancy Williams-Walls, and J. Ross Wilcox.  1985.  Spawning periods of common inshore fishes on the Florida east coast. Northeast Gulf Sci. 7:153-155.}},\n  title = {Spawning periods of common inshore fishes on the Florida east coast. Northeast Gulf Sci. 7:153-155},\n  year = {1985},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 4686,
+      "position": 8,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "hildebrand1928fisheschesapeakebay",
+      "entry_type": "misc",
+      "raw_text": "Hildebrand, S. F. and W. C. Schroeder. 1928.  Fishes of Chesapeake Bay.  U.S. Bur. Fish. Bull. 43, Pt. 1:1 -388.",
+      "normalized_text": "Hildebrand, S. F. and W. C. Schroeder. 1928. Fishes of Chesapeake Bay. U.S. Bur. Fish. Bull. 43, Pt. 1:1 -388.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{hildebrand1928fisheschesapeakebay,\n  author = {Hildebrand, S. F. and W. C. Schroeder},\n  howpublished = {U.S. Bur. Fish. Bull. 43, Pt. 1:1 -388},\n  note = {raw_reference = {Hildebrand, S. F. and W. C. Schroeder. 1928.  Fishes of Chesapeake Bay.  U.S. Bur. Fish. Bull. 43, Pt. 1:1 -388.}},\n  title = {Fishes of Chesapeake Bay},\n  year = {1928},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 4687,
+      "position": 9,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "johnson1978developmentfishesmid",
+      "entry_type": "misc",
+      "raw_text": "Johnson, G. David.  1978. Development of fishes of the mid-Atlantic bight. An atlas of egg, larval and juvenile stages. Vol.  IV; Carangidae through Ephippidae.  U.S. Fish and Wildlife Service.  FWS/OBS -78/12.  314pp.",
+      "normalized_text": "Johnson, G. David. 1978. Development of fishes of the mid-Atlantic bight. An atlas of egg, larval and juvenile stages. Vol. IV; Carangidae through Ephippidae. U.S. Fish and Wildlife Service. FWS/OBS -78/12. 314pp.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{johnson1978developmentfishesmid,\n  author = {Johnson, G. David},\n  howpublished = {U.S. Fish and Wildlife Service.  FWS/OBS -78/12.  314pp},\n  note = {raw_reference = {Johnson, G. David.  1978. Development of fishes of the mid-Atlantic bight. An atlas of egg, larval and juvenile stages. Vol.  IV; Carangidae through Ephippidae.  U.S. Fish and Wildlife Service.  FWS/OBS -78/12.  314pp.}},\n  title = {Development of fishes of the mid-Atlantic bight. An atlas of egg, larval and juvenile stages. Vol.  IV; Carangidae through Ephippidae},\n  year = {1978},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 4688,
+      "position": 10,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "mulligan1981summerseasonpopulations",
+      "entry_type": "misc",
+      "raw_text": "Mulligan, Timothy J.  1981.  Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.  Thesis.  University of Central Florida.  252 p.",
+      "normalized_text": "Mulligan, Timothy J. 1981. Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida. Thesis. University of Central Florida. 252 p.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{mulligan1981summerseasonpopulations,\n  author = {Mulligan, Timothy J},\n  note = {raw_reference = {Mulligan, Timothy J.  1981.  Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.  Thesis.  University of Central Florida.  252 p.}},\n  title = {Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.  Thesis.  University of Central Florida.  252 p},\n  year = {1981},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 4689,
+      "position": 11,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "mulligan1983summerseasonpopulations",
+      "entry_type": "misc",
+      "raw_text": "Mulligan, Timothy J. , and Franklin F. Snelson.  1983.  Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.   Florida Sci. 46(3/4): 239-249.  1983.",
+      "normalized_text": "Mulligan, Timothy J. , and Franklin F. Snelson. 1983. Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida. Florida Sci. 46(3/4): 239-249. 1983.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{mulligan1983summerseasonpopulations,\n  author = {Mulligan, Timothy J. , and Franklin F. Snelson},\n  note = {raw_reference = {Mulligan, Timothy J. , and Franklin F. Snelson.  1983.  Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.   Florida Sci. 46(3/4): 239-249.  1983.}},\n  title = {Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.   Florida Sci. 46(3/4): 239-249.  1983},\n  year = {1983},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 4690,
+      "position": 12,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "robins1991commonscientificnames",
+      "entry_type": "misc",
+      "raw_text": "Robins, C. Richard, R. M. Bailey, C.E. Bond, J. R. Brooker, E. A. Lachner, R. N. Lea, and W. B. Scott.  1991.  Common and Scientific Names of Fishes  from the United States and Canada.  Fifth Edition.  American Fisheries Society.",
+      "normalized_text": "Robins, C. Richard, R. M. Bailey, C.E. Bond, J. R. Brooker, E. A. Lachner, R. N. Lea, and W. B. Scott. 1991. Common and Scientific Names of Fishes from the United States and Canada. Fifth Edition. American Fisheries Society.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{robins1991commonscientificnames,\n  author = {Robins, C. Richard, R. M. Bailey, C.E. Bond, J. R. Brooker, E. A. Lachner, R. N. Lea, and W. B. Scott},\n  note = {raw_reference = {Robins, C. Richard, R. M. Bailey, C.E. Bond, J. R. Brooker, E. A. Lachner, R. N. Lea, and W. B. Scott.  1991.  Common and Scientific Names of Fishes  from the United States and Canada.  Fifth Edition.  American Fisheries Society.}},\n  title = {Common and Scientific Names of Fishes  from the United States and Canada.  Fifth Edition.  American Fisheries Society},\n  year = {1991},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 4691,
+      "position": 13,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "snelson1983ichthyofaunanorthernpart",
+      "entry_type": "misc",
+      "raw_text": "Snelson, Franklin F.  1983.  Ichthyofauna of the northern part of the Indian River Lagoon System, Florida.  Florida Sci. 46(3/4): 187-206.  1983.",
+      "normalized_text": "Snelson, Franklin F. 1983. Ichthyofauna of the northern part of the Indian River Lagoon System, Florida. Florida Sci. 46(3/4): 187-206. 1983.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{snelson1983ichthyofaunanorthernpart,\n  author = {Snelson, Franklin F},\n  note = {raw_reference = {Snelson, Franklin F.  1983.  Ichthyofauna of the northern part of the Indian River Lagoon System, Florida.  Florida Sci. 46(3/4): 187-206.  1983.}},\n  title = {Ichthyofauna of the northern part of the Indian River Lagoon System, Florida.  Florida Sci. 46(3/4): 187-206.  1983},\n  year = {1983},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    }
+  ],
+  "structured_document": {
+    "source_format": "ecospecies-markdown-v1",
+    "updated_by": "system-import",
+    "node_count": 12,
+    "ast": {
+      "metadata": {
+        "title": "Weakfish (Cynoscion regalis)",
+        "common_name": "Weakfish",
+        "scientific_name": "Cynoscion regalis (Bloch and Schneider 1801)",
+        "legacy_identifiers": [
+          {
+            "authority": "legacy-ecospecies",
+            "identifier": "1722",
+            "label": "FLELMR"
+          }
+        ],
+        "taxon_identifiers": [],
+        "primary_taxon_authority": "",
+        "source_file": "Weakfish SLH.txt",
+        "publication_status": "published",
+        "source_format": "ecospecies-markdown-v1"
+      },
+      "nodes": [
+        {
+          "node_type": "section",
+          "title": "Revisions",
+          "body": "1994 Jan 1. RGG; Harbor Branch Oceanographic Institution\nnote: There was no date on the original document so 1994 Jan 1 was assigned since most of the SLHs were prepared from 1994 thru 1997.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "TAXONOMY",
+          "body": "Common Name: Weakfish\nScientific Name: Cynoscion regalis (Bloch and Schneider 1801)\nClassification (Robins et al. 1991)\n\tPhylum: Chordata\n\tClass: Osteichthyes\n\tOrder: Perciformes\n\tFamily: Sciaenidae\n\nOther Common Names - Gray weakfish,  squeteague",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "VALUE & STATUS",
+          "body": "Commercial:  Cynoscion regalis is an important commercial fishery species from northeastern Florida to Cape Cod (Chao 1978; and Grecay 1990).\n\nRecreational: Is considered an important  recreational fish throughout its range (Chao 1978; and Grecay 1990).\n\nEcological Role:   The weakfish plays an important role as predator in seagrass beds and shallow water habitats.\n\nIndicator : Not known",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "GEOGRAPHIC RANGE",
+          "body": "Overall:  The western Atlantic from Nova Scotia to Florida and the west coast of Florida  (uncommon).  Found in greater abundance from North Carolina to New York (Johnson 1978; and Chao 1978)\nWithin Study Area:  Found in the Indian River Lagoon System  from the northern portion to St Lucie Inlet area (Snelson 1983; Mulligan and Snelson 1983; Mulligan 1981; Gilmore 1977; and Gilmore 1988).\n\nMobility and Migration:",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Life Mode",
+          "body": "Cynoscion regalis is a moderate size predaceous euryhaline species that is found principally in near shore neritic waters, estuaries and bays .  During  the winter months adult weakfish are found  distributed along the continental shelf.  In the spring the adults move into the estuaries and bays for spawning and foraging. After spawning they move back offshore.\n\nJuveniles spend the summer in estuaries  and bays (Grecay 1990; Goshorn 1990 and Johnson 1978).  In the fall the juveniles move out of the estuaries and bays and move south for the winter although it is doubtful that this southward movement occurs on the southeast Florida shelf (Gilmore pers obs).\n\nThe younger adults spend the winter months in shallow near shore waters from northern Florida to Cape Fear N. C.  While the larger adults move to deeper waters off North Carolina and Virginia (Grecay 1990; Goshorn 1990; and Johnson 1978).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "BENTHIC HABITAT",
+          "body": "Habitat Type:    Cynoscion regalis is a schooling fish found in shallow coastal waters over sand and sandy mud bottoms, bays, estuaries, seagrass beds, the surf zone, inlets, channels and freshwater tributaries (Chao 1978; Johnson 1978; Gilmore 1988; and Gilmore 1977).\n\nSubstrate: Preference for shallow sandy bottoms  (Johnson 1978; Chao 1978).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Physical/Chemical",
+          "body": "Salinity: range for adults range from 6.6 -32.3 ppt. Juveniles are considered euryhaline and have been taken in freshwater and up to 31.7 ppt.  Spawning may require salinity range of 12 - 32 ppt.\nTemperature: range for adults 9.5 - 30.8 C, with larvae found in ranges of 17.0 - 30.8 C and spawning temperatures with the same range of larvae (Johnson 1978).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REPRODUCTION",
+          "body": "Reproductive Mode: Gonochoristic, polygamous, iterparous, external fertilization.\n\nMating/Spawning: Spawning takes place in estuaries and bays and near inlets  throughout its range (Johnson 1978; and Goshorn 1990; Gilmore per obs.)  The season may start as early as April and continue until October.  With two peak periods the first in May-June and the other peak in July-August.  Spawning takes place in the early evening from dusk to a several hours after (Johnson 1978; and Goshorn 1990).  In the Indian River Lagoon, there is evidence of spawning as early as February and as late as November (Mulligan 1981; and Herrema et al. 1985; Gilmore 1988).  Spawning may require a salinity range of 12 - 32 ppt.  Temperature range for adults 9.5 - 30.8 C.\nFecundity:  Fecundity increases with size.  First year females produce 45,000 eggs to 1.7 million eggs for age IV female.  A 500 mm SL produces over 2 million eggs.  It has been estimated that over a season in Delaware River estuary over 450 billion eggs can be produced by the spawning population (Johnson 1978).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Length Range",
+          "body": "Egg:  Mean egg diameter of  0.84-0.96 mm, with high salinity eggs decreasing in size.  Eggs are buoyant at first and become heavier through development.  At first there are 1-6 oil globules which then coalesce (Johnson 1978). Eggs hatch between 36-48 hrs at 20 C.  Temperature and salinity are important for development with optimum temperature range 18-24 C and salinity range 10-33 ppt.  If temperature or salinity varies over 5-6 units during development results could be detrimental (Johnson 1978).\n\nLarvae:  Larvae hatch at 1.49-1.99 mm TL with a large yolk sac.  At 58-66 hrs yolk sac is absorbed 3.0-4.0 mm TL.  Larval stage lasts 8-18 days with average growth of 0.66 mm per day with the larvae reaching 10.5 mm TL  (Goshorn 1990; and Johnson 1978).  Larvae where found in the northern portion of Indian River Lagoon in the summer (Mulligan 1981).\n\nJuvenile:  The juvenile stage lasts from 10.5-180 mm TL.   In the Indian River Lagoon juveniles are found as early as February and as late as November (Gilmore 1988).\n\nAdult:  Cynoscion regalis can reach maturity in a year while those spawned late in the year may take two years.  The life span of adult Cynoscion regalis may extend past eight years (Johnson 1978; and Goshorn 1990).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "FOOD HABITS",
+          "body": "Larvae feed mostly on copepods, polychaete larvae and pelagic invertebrate eggs (Goshorn and Epifanio 1991).  Juveniles under 70 mm TL feed on mysid shrimp, copepods and nereid polychaetes.  Juveniles over 70 mm TL feed mostly on fish usually anchovies (Grecay 1990; and Goshorn and Epifanio 1991).  Adults feed primarily on fishes such as, anchovies and silversides along with crustaceans (Hildebrand and Schroeder 1928; Chao 1978).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "ECOLOGICAL INTERACTIONS",
+          "body": "The weakfish plays an important role as predator in seagrass beds and shallow water habitats.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "CITATIONS",
+          "body": "Chao, L. N. Sciaenidae In Fischer,  W.  (Ed.)  1978.  Rome, FAO, pag.var.  FAO species identification sheets for fishery purposes.  Western Central Atlantic (fishing area 31).  Vols. 1-7.\n\nGilmore, R.  Grant.  1988.  Subtropical seagrass fish communities:  Population dynamics, species guilds and microhabitat associations in the Indian River Lagoon, Florida.  Dissertation.  Florida Institute of Technology.  199 p.\n\nGilmore, R. Grant  Jr., 1977.  Fishes of the Indian River Lagoon and adjacent  waters, Florida.  Bull. Fla. State Mus. Biol. Sci. 22:101-148.\n\nGoshorn,  David M.  1990.  Distribution of larval weakfish (Cynoscion regalis) in Delaware Bay and the relationship of field prey concentration to laboratory determined growth and mortality rates.  Dissertation.  University of Delaware.  173 p.\n\nGoshorn,  David M., and C. E. Epifanio.  1991.  Diet of larval weakfish and prey abundance in Delaware Bay.  Transaction of the American Fisheries Society.  120:684-692, 1991.\n\nGrecay, Paul A.  1990.  Factors affecting spatial patterns of feeding success and condition of juvenile weakfish (Cynoscion regalis) in Delaware Bay: Field and laboratory assessment.  Dissertation.   University of Delaware.  179 p.\n\nHerrema, David J., Bruce D. Perry, Nancy Williams-Walls, and J. Ross Wilcox.  1985.  Spawning periods of common inshore fishes on the Florida east coast. Northeast Gulf Sci. 7:153-155.\n\nHildebrand, S. F. and W. C. Schroeder. 1928.  Fishes of Chesapeake Bay.  U.S. Bur. Fish. Bull. 43, Pt. 1:1 -388.\n\nJohnson, G. David.  1978. Development of fishes of the mid-Atlantic bight. An atlas of egg, larval and juvenile stages. Vol.  IV; Carangidae through Ephippidae.  U.S. Fish and Wildlife Service.  FWS/OBS -78/12.  314pp.\n\nMulligan, Timothy J.  1981.  Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.  Thesis.  University of Central Florida.  252 p.\n\nMulligan, Timothy J. , and Franklin F. Snelson.  1983.  Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.   Florida Sci. 46(3/4): 239-249.  1983.\n\nRobins, C. Richard, R. M. Bailey, C.E. Bond, J. R. Brooker, E. A. Lachner, R. N. Lea, and W. B. Scott.  1991.  Common and Scientific Names of Fishes  from the United States and Canada.  Fifth Edition.  American Fisheries Society.\n\nSnelson, Franklin F.  1983.  Ichthyofauna of the northern part of the Indian River Lagoon System, Florida.  Florida Sci. 46(3/4): 187-206.  1983.",
+          "depth": 2,
+          "children": []
+        }
+      ]
+    }
+  },
+  "legacy_source": null,
+  "sections": [
+    {
+      "id": 1499,
+      "position": 1,
+      "heading": "HEADER",
+      "content": "Title: Weakfish (Cynoscion regalis)\n\nFLELMR Code:  1722"
+    },
+    {
+      "id": 1500,
+      "position": 2,
+      "heading": "Revisions",
+      "content": "1994 Jan 1. RGG; Harbor Branch Oceanographic Institution\nnote: There was no date on the original document so 1994 Jan 1 was assigned since most of the SLHs were prepared from 1994 thru 1997."
+    },
+    {
+      "id": 1501,
+      "position": 3,
+      "heading": "TAXONOMY",
+      "content": "Common Name: Weakfish\nScientific Name: Cynoscion regalis (Bloch and Schneider 1801)\nClassification (Robins et al. 1991)\n\tPhylum: Chordata\n\tClass: Osteichthyes\n\tOrder: Perciformes\n\tFamily: Sciaenidae\n\nOther Common Names - Gray weakfish,  squeteague"
+    },
+    {
+      "id": 1502,
+      "position": 4,
+      "heading": "VALUE & STATUS",
+      "content": "Commercial:  Cynoscion regalis is an important commercial fishery species from northeastern Florida to Cape Cod (Chao 1978; and Grecay 1990).\n\nRecreational: Is considered an important  recreational fish throughout its range (Chao 1978; and Grecay 1990).\n\nEcological Role:   The weakfish plays an important role as predator in seagrass beds and shallow water habitats.\n\nIndicator : Not known"
+    },
+    {
+      "id": 1503,
+      "position": 5,
+      "heading": "GEOGRAPHIC RANGE",
+      "content": "Overall:  The western Atlantic from Nova Scotia to Florida and the west coast of Florida  (uncommon).  Found in greater abundance from North Carolina to New York (Johnson 1978; and Chao 1978)\nWithin Study Area:  Found in the Indian River Lagoon System  from the northern portion to St Lucie Inlet area (Snelson 1983; Mulligan and Snelson 1983; Mulligan 1981; Gilmore 1977; and Gilmore 1988).\n\nMobility and Migration:"
+    },
+    {
+      "id": 1504,
+      "position": 6,
+      "heading": "Life Mode",
+      "content": "Cynoscion regalis is a moderate size predaceous euryhaline species that is found principally in near shore neritic waters, estuaries and bays .  During  the winter months adult weakfish are found  distributed along the continental shelf.  In the spring the adults move into the estuaries and bays for spawning and foraging. After spawning they move back offshore.\n\nJuveniles spend the summer in estuaries  and bays (Grecay 1990; Goshorn 1990 and Johnson 1978).  In the fall the juveniles move out of the estuaries and bays and move south for the winter although it is doubtful that this southward movement occurs on the southeast Florida shelf (Gilmore pers obs).\n\nThe younger adults spend the winter months in shallow near shore waters from northern Florida to Cape Fear N. C.  While the larger adults move to deeper waters off North Carolina and Virginia (Grecay 1990; Goshorn 1990; and Johnson 1978)."
+    },
+    {
+      "id": 1505,
+      "position": 7,
+      "heading": "BENTHIC HABITAT",
+      "content": "Habitat Type:    Cynoscion regalis is a schooling fish found in shallow coastal waters over sand and sandy mud bottoms, bays, estuaries, seagrass beds, the surf zone, inlets, channels and freshwater tributaries (Chao 1978; Johnson 1978; Gilmore 1988; and Gilmore 1977).\n\nSubstrate: Preference for shallow sandy bottoms  (Johnson 1978; Chao 1978)."
+    },
+    {
+      "id": 1506,
+      "position": 8,
+      "heading": "Physical/Chemical",
+      "content": "Salinity: range for adults range from 6.6 -32.3 ppt. Juveniles are considered euryhaline and have been taken in freshwater and up to 31.7 ppt.  Spawning may require salinity range of 12 - 32 ppt.\nTemperature: range for adults 9.5 - 30.8 C, with larvae found in ranges of 17.0 - 30.8 C and spawning temperatures with the same range of larvae (Johnson 1978)."
+    },
+    {
+      "id": 1507,
+      "position": 9,
+      "heading": "REPRODUCTION",
+      "content": "Reproductive Mode: Gonochoristic, polygamous, iterparous, external fertilization.\n\nMating/Spawning: Spawning takes place in estuaries and bays and near inlets  throughout its range (Johnson 1978; and Goshorn 1990; Gilmore per obs.)  The season may start as early as April and continue until October.  With two peak periods the first in May-June and the other peak in July-August.  Spawning takes place in the early evening from dusk to a several hours after (Johnson 1978; and Goshorn 1990).  In the Indian River Lagoon, there is evidence of spawning as early as February and as late as November (Mulligan 1981; and Herrema et al. 1985; Gilmore 1988).  Spawning may require a salinity range of 12 - 32 ppt.  Temperature range for adults 9.5 - 30.8 C.\nFecundity:  Fecundity increases with size.  First year females produce 45,000 eggs to 1.7 million eggs for age IV female.  A 500 mm SL produces over 2 million eggs.  It has been estimated that over a season in Delaware River estuary over 450 billion eggs can be produced by the spawning population (Johnson 1978)."
+    },
+    {
+      "id": 1508,
+      "position": 10,
+      "heading": "Length Range",
+      "content": "Egg:  Mean egg diameter of  0.84-0.96 mm, with high salinity eggs decreasing in size.  Eggs are buoyant at first and become heavier through development.  At first there are 1-6 oil globules which then coalesce (Johnson 1978). Eggs hatch between 36-48 hrs at 20 C.  Temperature and salinity are important for development with optimum temperature range 18-24 C and salinity range 10-33 ppt.  If temperature or salinity varies over 5-6 units during development results could be detrimental (Johnson 1978).\n\nLarvae:  Larvae hatch at 1.49-1.99 mm TL with a large yolk sac.  At 58-66 hrs yolk sac is absorbed 3.0-4.0 mm TL.  Larval stage lasts 8-18 days with average growth of 0.66 mm per day with the larvae reaching 10.5 mm TL  (Goshorn 1990; and Johnson 1978).  Larvae where found in the northern portion of Indian River Lagoon in the summer (Mulligan 1981).\n\nJuvenile:  The juvenile stage lasts from 10.5-180 mm TL.   In the Indian River Lagoon juveniles are found as early as February and as late as November (Gilmore 1988).\n\nAdult:  Cynoscion regalis can reach maturity in a year while those spawned late in the year may take two years.  The life span of adult Cynoscion regalis may extend past eight years (Johnson 1978; and Goshorn 1990)."
+    },
+    {
+      "id": 1509,
+      "position": 11,
+      "heading": "FOOD HABITS",
+      "content": "Larvae feed mostly on copepods, polychaete larvae and pelagic invertebrate eggs (Goshorn and Epifanio 1991).  Juveniles under 70 mm TL feed on mysid shrimp, copepods and nereid polychaetes.  Juveniles over 70 mm TL feed mostly on fish usually anchovies (Grecay 1990; and Goshorn and Epifanio 1991).  Adults feed primarily on fishes such as, anchovies and silversides along with crustaceans (Hildebrand and Schroeder 1928; Chao 1978)."
+    },
+    {
+      "id": 1510,
+      "position": 12,
+      "heading": "ECOLOGICAL INTERACTIONS",
+      "content": "The weakfish plays an important role as predator in seagrass beds and shallow water habitats."
+    },
+    {
+      "id": 1511,
+      "position": 13,
+      "heading": "CITATIONS",
+      "content": "Chao, L. N. Sciaenidae In Fischer,  W.  (Ed.)  1978.  Rome, FAO, pag.var.  FAO species identification sheets for fishery purposes.  Western Central Atlantic (fishing area 31).  Vols. 1-7.\n\nGilmore, R.  Grant.  1988.  Subtropical seagrass fish communities:  Population dynamics, species guilds and microhabitat associations in the Indian River Lagoon, Florida.  Dissertation.  Florida Institute of Technology.  199 p.\n\nGilmore, R. Grant  Jr., 1977.  Fishes of the Indian River Lagoon and adjacent  waters, Florida.  Bull. Fla. State Mus. Biol. Sci. 22:101-148.\n\nGoshorn,  David M.  1990.  Distribution of larval weakfish (Cynoscion regalis) in Delaware Bay and the relationship of field prey concentration to laboratory determined growth and mortality rates.  Dissertation.  University of Delaware.  173 p.\n\nGoshorn,  David M., and C. E. Epifanio.  1991.  Diet of larval weakfish and prey abundance in Delaware Bay.  Transaction of the American Fisheries Society.  120:684-692, 1991.\n\nGrecay, Paul A.  1990.  Factors affecting spatial patterns of feeding success and condition of juvenile weakfish (Cynoscion regalis) in Delaware Bay: Field and laboratory assessment.  Dissertation.   University of Delaware.  179 p.\n\nHerrema, David J., Bruce D. Perry, Nancy Williams-Walls, and J. Ross Wilcox.  1985.  Spawning periods of common inshore fishes on the Florida east coast. Northeast Gulf Sci. 7:153-155.\n\nHildebrand, S. F. and W. C. Schroeder. 1928.  Fishes of Chesapeake Bay.  U.S. Bur. Fish. Bull. 43, Pt. 1:1 -388.\n\nJohnson, G. David.  1978. Development of fishes of the mid-Atlantic bight. An atlas of egg, larval and juvenile stages. Vol.  IV; Carangidae through Ephippidae.  U.S. Fish and Wildlife Service.  FWS/OBS -78/12.  314pp.\n\nMulligan, Timothy J.  1981.  Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.  Thesis.  University of Central Florida.  252 p.\n\nMulligan, Timothy J. , and Franklin F. Snelson.  1983.  Summer-Season populations of epibenthic marine fishes in the Indian River Lagoon System, Florida.   Florida Sci. 46(3/4): 239-249.  1983.\n\nRobins, C. Richard, R. M. Bailey, C.E. Bond, J. R. Brooker, E. A. Lachner, R. N. Lea, and W. B. Scott.  1991.  Common and Scientific Names of Fishes  from the United States and Canada.  Fifth Edition.  American Fisheries Society.\n\nSnelson, Franklin F.  1983.  Ichthyofauna of the northern part of the Indian River Lagoon System, Florida.  Florida Sci. 46(3/4): 187-206.  1983."
+    }
+  ]
+}

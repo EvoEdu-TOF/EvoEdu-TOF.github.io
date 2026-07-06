@@ -1,0 +1,545 @@
+{
+  "slug": "irish-pompano",
+  "source_file": "Irish Pompano SLH RGG.txt",
+  "title": "Irish pompano (Diapterus auratus)",
+  "common_name": "Irish pompano",
+  "scientific_name": "Diapterus auratus (=olisthostomus)",
+  "flelmr_code": "1670",
+  "legacy_identifiers": [
+    {
+      "authority": "legacy-ecospecies",
+      "identifier": "1670",
+      "label": "FLELMR"
+    }
+  ],
+  "taxon_identifiers": [],
+  "primary_taxon_authority": "",
+  "primary_taxon_identifier": null,
+  "summary": "",
+  "section_count": 15,
+  "citation_count": 15,
+  "publication_status": "published",
+  "is_archived": false,
+  "editor_notes": "",
+  "last_modified_by": "system-import",
+  "diagnostics": [],
+  "citations": [
+    {
+      "id": 1616,
+      "position": 1,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "2326",
+      "citation_key": "austin1971surveyichthyofaunamangroves",
+      "entry_type": "misc",
+      "raw_text": "Austin, H.M.  1971.  A survey of the ichthyofauna of the mangroves of western Puerto Rico during December, 1967 - August, 1968.  Caribbean Journal of Science 11(1-2): 27-39.",
+      "normalized_text": "Austin, H.M. 1971. A survey of the ichthyofauna of the mangroves of western Puerto Rico during December, 1967 - August, 1968. Caribbean Journal of Science 11(1-2): 27-39.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{austin1971surveyichthyofaunamangroves,\n  author = {Austin, H.M},\n  journal = {Journal of Science},\n  note = {raw_reference = {Austin, H.M.  1971.  A survey of the ichthyofauna of the mangroves of western Puerto Rico during December, 1967 - August, 1968.  Caribbean Journal of Science 11(1-2): 27-39.}; ecospecies_reference_number = {2326}},\n  number = {1-2},\n  pages = {27-39},\n  title = {A survey of the ichthyofauna of the mangroves of western Puerto Rico during December, 1967 - August, 1968.  Caribbean},\n  volume = {11},\n  year = {1971},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1617,
+      "position": 2,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "2398",
+      "citation_key": "deckert1987reviewwesternatlantic",
+      "entry_type": "misc",
+      "raw_text": "Deckert, G.D. and D.W. Greenfield.  1987.  A review of the western Atlantic species of the genera Diapterus and Eugerres (Pisces: Gerreidae).  Copeia 1987(1):182-194",
+      "normalized_text": "Deckert, G.D. and D.W. Greenfield. 1987. A review of the western Atlantic species of the genera Diapterus and Eugerres (Pisces: Gerreidae). Copeia 1987(1):182-194",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{deckert1987reviewwesternatlantic,\n  author = {Deckert, G.D. and D.W. Greenfield},\n  note = {raw_reference = {Deckert, G.D. and D.W. Greenfield.  1987.  A review of the western Atlantic species of the genera Diapterus and Eugerres (Pisces: Gerreidae).  Copeia 1987(1):182-194}; ecospecies_reference_number = {2398}},\n  title = {A review of the western Atlantic species of the genera Diapterus and Eugerres (Pisces: Gerreidae).  Copeia 1987(1):182-194},\n  year = {1987},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1618,
+      "position": 3,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "848",
+      "citation_key": "gilmore1977fishesindianriver",
+      "entry_type": "misc",
+      "raw_text": "Gilmore, R.G.  1977.  Fishes of the Indian River Lagoon and adjacent waters, Florida.  Bull. Fla. St. Mus., Biol. Sci., 22(3): 101-147.",
+      "normalized_text": "Gilmore, R.G. 1977. Fishes of the Indian River Lagoon and adjacent waters, Florida. Bull. Fla. St. Mus., Biol. Sci., 22(3): 101-147.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gilmore1977fishesindianriver,\n  author = {Gilmore, R.G},\n  howpublished = {Bull. Fla. St. Mus., Biol. Sci.,},\n  note = {raw_reference = {Gilmore, R.G.  1977.  Fishes of the Indian River Lagoon and adjacent waters, Florida.  Bull. Fla. St. Mus., Biol. Sci., 22(3): 101-147.}; ecospecies_reference_number = {848}},\n  number = {3},\n  pages = {101-147},\n  title = {Fishes of the Indian River Lagoon and adjacent waters, Florida},\n  volume = {22},\n  year = {1977},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1619,
+      "position": 4,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "2146",
+      "citation_key": "gilmore1978hypothermalmortalitymarine",
+      "entry_type": "misc",
+      "raw_text": "Gilmore, R.G., L.H. Bullock, and F.H. Berry.  1978.  Hypothermal mortality in marine fishes of  south-central Florida January, 1977.  N.E. Gulf Sci. 2(2): 77-97.",
+      "normalized_text": "Gilmore, R.G., L.H. Bullock, and F.H. Berry. 1978. Hypothermal mortality in marine fishes of south-central Florida January, 1977. N.E. Gulf Sci. 2(2): 77-97.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gilmore1978hypothermalmortalitymarine,\n  author = {Gilmore, R.G., L.H. Bullock, and F.H. Berry},\n  note = {raw_reference = {Gilmore, R.G., L.H. Bullock, and F.H. Berry.  1978.  Hypothermal mortality in marine fishes of  south-central Florida January, 1977.  N.E. Gulf Sci. 2(2): 77-97.}; ecospecies_reference_number = {2146}},\n  title = {Hypothermal mortality in marine fishes of  south-central Florida January, 1977.  N.E. Gulf Sci. 2(2): 77-97},\n  year = {1978},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1620,
+      "position": 5,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "2362",
+      "citation_key": "gilmore1987fishmacrocrustaceanavian",
+      "entry_type": "misc",
+      "raw_text": "Gilmore, R.G. 1987.  Fish, macrocrustacean & avian population dynamics & cohabitation in tidally influenced impounded subtropical wetlands.  pp. 373-394  In W.R. Whitman & W.H. Meredith, eds.,  Proceedings of a symposium on waterfowl & wetlands management in the coastal zone of the Atlantic flyway.  Delaware Coastal Management Program, Delaware Dept. Nat. Res. and Envir. Control, Dover, Delaware.",
+      "normalized_text": "Gilmore, R.G. 1987. Fish, macrocrustacean & avian population dynamics & cohabitation in tidally influenced impounded subtropical wetlands. pp. 373-394 In W.R. Whitman & W.H. Meredith, eds., Proceedings of a symposium on waterfowl & wetlands management in the coastal zone of the Atlantic flyway. Delaware Coastal Management Program, Delaware Dept. Nat. Res. and Envir. Control, Dover, Delaware.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gilmore1987fishmacrocrustaceanavian,\n  author = {Gilmore, R.G},\n  journal = {Proceedings of a symposium on waterfowl & wetlands management in the coastal zone of the Atlantic flyway.  Delaware Coastal Management Program, Delaware Dept. Nat. Res. and Envir. Control, Dover, Delaware},\n  note = {raw_reference = {Gilmore, R.G. 1987.  Fish, macrocrustacean & avian population dynamics & cohabitation in tidally influenced impounded subtropical wetlands.  pp. 373-394  In W.R. Whitman & W.H. Meredith, eds.,  Proceedings of a symposium on waterfowl & wetlands management in the coastal zone of the Atlantic flyway.  Delaware Coastal Management Program, Delaware Dept. Nat. Res. and Envir. Control, Dover, Delaware.}; ecospecies_reference_number = {2362}},\n  title = {Fish, macrocrustacean & avian population dynamics & cohabitation in tidally influenced impounded subtropical wetlands.  pp. 373-394  In W.R. Whitman & W.H. Meredith, eds.,},\n  year = {1987},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1621,
+      "position": 6,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "993",
+      "citation_key": "gilmore1988subtropicalseagrassfish",
+      "entry_type": "misc",
+      "raw_text": "Gilmore, R.G.  1988.  Subtropical seagrass fish communities:  population dynamics, species guilds, and microhabitat associations in the Indian River Lagoon, Florida.  Ph.D. dissertation, Florida Institute of Technology.  199 pp.",
+      "normalized_text": "Gilmore, R.G. 1988. Subtropical seagrass fish communities: population dynamics, species guilds, and microhabitat associations in the Indian River Lagoon, Florida. Ph.D. dissertation, Florida Institute of Technology. 199 pp.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gilmore1988subtropicalseagrassfish,\n  author = {Gilmore, R.G},\n  note = {raw_reference = {Gilmore, R.G.  1988.  Subtropical seagrass fish communities:  population dynamics, species guilds, and microhabitat associations in the Indian River Lagoon, Florida.  Ph.D. dissertation, Florida Institute of Technology.  199 pp.}; ecospecies_reference_number = {993}},\n  title = {Subtropical seagrass fish communities:  population dynamics, species guilds, and microhabitat associations in the Indian River Lagoon, Florida.  Ph.D. dissertation, Florida Institute of Technology.  199 pp},\n  year = {1988},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1622,
+      "position": 7,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "1814",
+      "citation_key": "gunter1963biologicalinvestigationsst",
+      "entry_type": "misc",
+      "raw_text": "Gunter, G. and G.E. Hall.  1963.  Biological investigations of the St. Lucie estuary (Florida) in connection with Lake Okeechobee discharge through the St. Lucie Canal.  Gulf Res. Rept. 2(1): 1-77.",
+      "normalized_text": "Gunter, G. and G.E. Hall. 1963. Biological investigations of the St. Lucie estuary (Florida) in connection with Lake Okeechobee discharge through the St. Lucie Canal. Gulf Res. Rept. 2(1): 1-77.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gunter1963biologicalinvestigationsst,\n  author = {Gunter, G. and G.E. Hall},\n  howpublished = {Rept},\n  note = {raw_reference = {Gunter, G. and G.E. Hall.  1963.  Biological investigations of the St. Lucie estuary (Florida) in connection with Lake Okeechobee discharge through the St. Lucie Canal.  Gulf Res. Rept. 2(1): 1-77.}; ecospecies_reference_number = {1814}},\n  number = {1},\n  pages = {1-77},\n  title = {Biological investigations of the St. Lucie estuary (Florida) in connection with Lake Okeechobee discharge through the St. Lucie Canal.  Gulf Res},\n  volume = {2},\n  year = {1963},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1623,
+      "position": 8,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "2322",
+      "citation_key": "herrema1985spawningperiodscommon",
+      "entry_type": "misc",
+      "raw_text": "Herrema, D.J., B.D. Peery and N. Williams-walls.  1985.  Spawning periods of common inshore fishes on the Florida east coast.  Northeast Gulf Sci. 7(2): 153-155.",
+      "normalized_text": "Herrema, D.J., B.D. Peery and N. Williams-walls. 1985. Spawning periods of common inshore fishes on the Florida east coast. Northeast Gulf Sci. 7(2): 153-155.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{herrema1985spawningperiodscommon,\n  author = {Herrema, D.J., B.D. Peery and N. Williams-walls},\n  note = {raw_reference = {Herrema, D.J., B.D. Peery and N. Williams-walls.  1985.  Spawning periods of common inshore fishes on the Florida east coast.  Northeast Gulf Sci. 7(2): 153-155.}; ecospecies_reference_number = {2322}},\n  title = {Spawning periods of common inshore fishes on the Florida east coast.  Northeast Gulf Sci. 7(2): 153-155},\n  year = {1985},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1624,
+      "position": 9,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "2399",
+      "citation_key": "ingle1970summaryfloridacommercial",
+      "entry_type": "misc",
+      "raw_text": "Ingle, R.M.  1970.  Summary of Florida commercial marine landings 1970.  Fla. Dept. of Nat. Res., Div. of Mar. Res., Bur. of Mar. Sci. and Tech., Tallahassee, Florida.",
+      "normalized_text": "Ingle, R.M. 1970. Summary of Florida commercial marine landings 1970. Fla. Dept. of Nat. Res., Div. of Mar. Res., Bur. of Mar. Sci. and Tech., Tallahassee, Florida.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{ingle1970summaryfloridacommercial,\n  author = {Ingle, R.M},\n  note = {raw_reference = {Ingle, R.M.  1970.  Summary of Florida commercial marine landings 1970.  Fla. Dept. of Nat. Res., Div. of Mar. Res., Bur. of Mar. Sci. and Tech., Tallahassee, Florida.}; ecospecies_reference_number = {2399}},\n  title = {Summary of Florida commercial marine landings 1970.  Fla. Dept. of Nat. Res., Div. of Mar. Res., Bur. of Mar. Sci. and Tech., Tallahassee, Florida},\n  year = {1970},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1625,
+      "position": 10,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "363",
+      "citation_key": "johnson1978developmentfishesmid",
+      "entry_type": "misc",
+      "raw_text": "Johnson, G.D.  1978.  Development of Fishes of the Mid-Atlantic Bight, an atlas of egg, larval, and juvenile stages, Vol IV, Carangidae through Ephippidae.  U.S. Fish and Wildlife Service, FWS/OBS-78/12.  314 pp.",
+      "normalized_text": "Johnson, G.D. 1978. Development of Fishes of the Mid-Atlantic Bight, an atlas of egg, larval, and juvenile stages, Vol IV, Carangidae through Ephippidae. U.S. Fish and Wildlife Service, FWS/OBS-78/12. 314 pp.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{johnson1978developmentfishesmid,\n  author = {Johnson, G.D},\n  howpublished = {U.S. Fish and Wildlife Service, FWS/OBS-78/12.  314 pp},\n  note = {raw_reference = {Johnson, G.D.  1978.  Development of Fishes of the Mid-Atlantic Bight, an atlas of egg, larval, and juvenile stages, Vol IV, Carangidae through Ephippidae.  U.S. Fish and Wildlife Service, FWS/OBS-78/12.  314 pp.}; ecospecies_reference_number = {363}},\n  title = {Development of Fishes of the Mid-Atlantic Bight, an atlas of egg, larval, and juvenile stages, Vol IV, Carangidae through Ephippidae},\n  year = {1978},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1626,
+      "position": 11,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "2400",
+      "citation_key": "miller1976geographicaldistributioncentral",
+      "entry_type": "misc",
+      "raw_text": "Miller, R.R. 1976.  Geographical distribution of Central American freshwater fishes (Addendum).  p. 154-156.  In  T.B. Thorson, ed.   Investigations of the ichthyofauna of Nicaraguan lakes.  Univ. of Neb., Lincoln, Nebraska.",
+      "normalized_text": "Miller, R.R. 1976. Geographical distribution of Central American freshwater fishes (Addendum). p. 154-156. In T.B. Thorson, ed. Investigations of the ichthyofauna of Nicaraguan lakes. Univ. of Neb., Lincoln, Nebraska.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{miller1976geographicaldistributioncentral,\n  author = {Miller, R.R},\n  note = {raw_reference = {Miller, R.R. 1976.  Geographical distribution of Central American freshwater fishes (Addendum).  p. 154-156.  In  T.B. Thorson, ed.   Investigations of the ichthyofauna of Nicaraguan lakes.  Univ. of Neb., Lincoln, Nebraska.}; ecospecies_reference_number = {2400}},\n  title = {Geographical distribution of Central American freshwater fishes (Addendum).  p. 154-156.  In  T.B. Thorson, ed.   Investigations of the ichthyofauna of Nicaraguan lakes.  Univ. of Neb., Lincoln, Nebraska},\n  year = {1976},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1627,
+      "position": 12,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "788",
+      "citation_key": "robins1986fieldguideatlantic",
+      "entry_type": "misc",
+      "raw_text": "Robins, C.R., G.C. Ray and J. Douglass.  1986.  A field guide to Atlantic coast fishes of North America.  Peterson Field Guide Series No. 32, Houghton Mifflin Co., Boston.",
+      "normalized_text": "Robins, C.R., G.C. Ray and J. Douglass. 1986. A field guide to Atlantic coast fishes of North America. Peterson Field Guide Series No. 32, Houghton Mifflin Co., Boston.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{robins1986fieldguideatlantic,\n  author = {Robins, C.R., G.C. Ray and J. Douglass},\n  note = {raw_reference = {Robins, C.R., G.C. Ray and J. Douglass.  1986.  A field guide to Atlantic coast fishes of North America.  Peterson Field Guide Series No. 32, Houghton Mifflin Co., Boston.}; ecospecies_reference_number = {788}},\n  title = {A field guide to Atlantic coast fishes of North America.  Peterson Field Guide Series No. 32, Houghton Mifflin Co., Boston},\n  year = {1986},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1628,
+      "position": 13,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "1914",
+      "citation_key": "robins1991commonscientificnames",
+      "entry_type": "misc",
+      "raw_text": "Robins, C.R., R.M. Bailey, C.E. Bond, J.R. Brooker, E.A. Lachner, R.N. Lea, and W.B. Scott.  1991.  Common and Scientific Names of Fishes.  American Fisheries Society Special Publication 20.  183 pp.",
+      "normalized_text": "Robins, C.R., R.M. Bailey, C.E. Bond, J.R. Brooker, E.A. Lachner, R.N. Lea, and W.B. Scott. 1991. Common and Scientific Names of Fishes. American Fisheries Society Special Publication 20. 183 pp.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{robins1991commonscientificnames,\n  author = {Robins, C.R., R.M. Bailey, C.E. Bond, J.R. Brooker, E.A. Lachner, R.N. Lea, and W.B. Scott},\n  note = {raw_reference = {Robins, C.R., R.M. Bailey, C.E. Bond, J.R. Brooker, E.A. Lachner, R.N. Lea, and W.B. Scott.  1991.  Common and Scientific Names of Fishes.  American Fisheries Society Special Publication 20.  183 pp.}; ecospecies_reference_number = {1914}},\n  title = {Common and Scientific Names of Fishes.  American Fisheries Society Special Publication 20.  183 pp},\n  year = {1991},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1629,
+      "position": 14,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "1888",
+      "citation_key": "snelson1978mortalityfishesdue",
+      "entry_type": "misc",
+      "raw_text": "Snelson, F.F., Jr.  1978.  Mortality of fishes due to cold on the east coast of Florida, January 1977.  Fla. Sci., 19(1): 1-12.",
+      "normalized_text": "Snelson, F.F., Jr. 1978. Mortality of fishes due to cold on the east coast of Florida, January 1977. Fla. Sci., 19(1): 1-12.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{snelson1978mortalityfishesdue,\n  author = {Snelson, F.F., Jr},\n  note = {raw_reference = {Snelson, F.F., Jr.  1978.  Mortality of fishes due to cold on the east coast of Florida, January 1977.  Fla. Sci., 19(1): 1-12.}; ecospecies_reference_number = {1888}},\n  title = {Mortality of fishes due to cold on the east coast of Florida, January 1977.  Fla. Sci., 19(1): 1-12},\n  year = {1978},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1630,
+      "position": 15,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "2320",
+      "citation_key": "snelson1983ichthyofaunanorthernpart",
+      "entry_type": "misc",
+      "raw_text": "Snelson, F.F., Jr.  1983.  Ichthyofauna of the northern part of the Indian River Lagoon system, Florida.  Florida Sci. 46(3/4): 187-206.",
+      "normalized_text": "Snelson, F.F., Jr. 1983. Ichthyofauna of the northern part of the Indian River Lagoon system, Florida. Florida Sci. 46(3/4): 187-206.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{snelson1983ichthyofaunanorthernpart,\n  author = {Snelson, F.F., Jr},\n  note = {raw_reference = {Snelson, F.F., Jr.  1983.  Ichthyofauna of the northern part of the Indian River Lagoon system, Florida.  Florida Sci. 46(3/4): 187-206.}; ecospecies_reference_number = {2320}},\n  title = {Ichthyofauna of the northern part of the Indian River Lagoon system, Florida.  Florida Sci. 46(3/4): 187-206},\n  year = {1983},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    }
+  ],
+  "structured_document": {
+    "source_format": "ecospecies-markdown-v1",
+    "updated_by": "system-import",
+    "node_count": 14,
+    "ast": {
+      "metadata": {
+        "title": "Irish pompano (Diapterus auratus)",
+        "common_name": "Irish pompano",
+        "scientific_name": "Diapterus auratus (=olisthostomus)",
+        "legacy_identifiers": [
+          {
+            "authority": "legacy-ecospecies",
+            "identifier": "1670",
+            "label": "FLELMR"
+          }
+        ],
+        "taxon_identifiers": [],
+        "primary_taxon_authority": "",
+        "source_file": "Irish Pompano SLH RGG.txt",
+        "publication_status": "published",
+        "source_format": "ecospecies-markdown-v1"
+      },
+      "nodes": [
+        {
+          "node_type": "section",
+          "title": "Revisions",
+          "body": "1994 Jan 1. REB|RGG; Harbor Branch Oceanographic Institution\nnote: There was no date on the original document so 1994 Jan 1 was assigned since most of the SLHs were prepared from 1994 thru 1997.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "TAXONOMY",
+          "body": "Common Name:  Irish pompano\nScientific Name:  Diapterus auratus (=olisthostomus)",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Classification",
+          "body": "Phylum:  Chordata\n\tClass:  Osteichthyes\n\tOrder:  Perciformes\n\tFamily:  Gerreidae\n\nOther Common Names:  Sand perch (1814), silver goatfish\n\nOther:\tReference for Scientific Name (Ranzani 1840).\n\tReference for Classification (1914)\n\tRevision date should be checked",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "VALUE & STATUS",
+          "body": "Commercial: Diapterus auratus is captured with D. plumieri in Indian River Lagoon commercial mojarra fishery (Gilmore pers. obs.).  This fishery has undoubtedly been lumped with the \"sand perch\" category in  Florida's commercial landings reports (e.g.  2399)\n Recreational:  Occasional landings are reported in the recreational fishery.  Small specimens may be used as bait.\nEcological Role:  In an extensive study of seagrass fish communities in the Indian River Lagoon, Gilmore (1988) found the Irish pompano to be an important component of the fauna.  This species was the most abundant mojarra (Gerreidae; 20,986 individuals) within the Indian River Lagoon seagrass meadows, ranked fifth in overall abundance, ranked second in abundance among non-planktivorous species and was found in over 50% of the 310 collections.  It was also ranked eleventh in biomass and is an epibenthic feeder associated with vegetated and sand/mud benthic habitats.  This species is also important in mangrove communities (2362).\nIndicator:  None known.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "GEOGRAPHIC RANGE",
+          "body": "Overall:  Chesapeake Bay to Bahia, Brazil, though absent in the north east Gulf of Mexico (2400; 363; 2146; 2398; Matheson pers. comm.)\nWithin Study Area:  The Irish pompano is found throughout the Indian River Lagoon system, though is considerably more abundant in the southern portion of the Lagoon (848, 2362; 2320).\nMobility and Migration: Although adults and large juveniles of this principally estuarine (seagrass and mangrove) species can be found in freshwater tributaries, only adults are found around shallow coastal reef formations (848, 1987, 1988).\nLife Mode:  The Irish pompano is a euryhaline epibenthic feeder with a wide distribution within the Indian River Lagoon and its freshwater tributaries (1814; 848, 2362, 993, unpub. data;  363).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Habitat Type",
+          "body": "The Irish pompano is found in the Indian River Lagoon from ocean inlets to freshwater tributaries and estuarine wetlands with major collections in seagrass (848, 1988).  Larvae and juveniles from 5 mm have been collected in wetlands fringing the Indian River Lagoon and within seagrass meadows (Gilmore unpub. data).\nSubstrate:  The Irish pompano is generally found over sand, soft silt/sand or mud bottoms generally near or in association with structure or aquatic vegetation (848; 363; 2320).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Physical/Chemical",
+          "body": "Salinity:  This euryhaline species can occur in salinities ranging from fresh water to 39 ppt (363; 993, unpub. data).\nTemperature: tolerance seems to favor a more tropical distribution with cold mortality documented at several locations within the Indian River Lagoon system (1814; 2146; 1888).  Observed temperature range is from 9 to 33.0 C (363; 2146, 993, unpub. data).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REPRODUCTION",
+          "body": "Reproductive Mode:  The Irish pompano is thought to be gonochoristic, oviparous; eggs fertilized externally (363; Matheson pers. comm.)\nMating/Spawning: Ripe adult females have been taken in Puerto Rico in December and April (363).  Herrema et al. (1985) found adults in breeding condition in April through July and September, however due to limited collections of adults this may not represent the entire spawning season.  A more extended spawning season is indicated as larvae and juveniles less than 20 mm (as small as 5 mm) have been collected in estuarine wetland habitats and seagrass meadows of the Indian River Lagoon from May to December with peaks in abundance in early summer and late fall (Gilmore unpub. data).\nFecundity: No information",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Length Range",
+          "body": "Egg:  Planktonic (Matheson pers. comm.)\nLarvae:  Planktonic (Matheson pers. comm.)\nJuvenile:  Settle into benthic habitats throughout the Indian River Lagoon at minimum length of 10 mm (993, unpub. data)\nAdult:  Irish pompano may reach 30 cm in length (788).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "FOOD HABITS",
+          "body": "The gerreid family has mouth morphology specialized for feeding on benthic invertebrates (363; 788).  Austin (1971) reports that the Irish pompano consumes plant material, polychaetes, and pelecypods.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "ECOLOGICAL INTERACTIONS",
+          "body": "Predation:  Due to its great relative abundance, this species is undoubtedly consumed by a variety of predators.  The authors have observed snook predation on this species.\nFactors influencing populations:  In an extensive study of seagrass fish communities in the Indian River Lagoon, Gilmore (1988) found the Irish pompano to be an important component of the fauna.  This species was the most abundant mojarra (Gerreidae; 20,986 individuals) within the Indian River Lagoon seagrass meadows, ranked fifth in overall abundance, ranked second in abundance among non-planktivorous species and was found in over 50% of the 310 collections.  It was also ranked eleventh in biomass and is an epibenthic feeder associated with vegetated and sand/mud benthic habitats.  This species is also important in mangrove communities (2362).  Loss of seagrass and estuarine wetland habitat will result in high juvenile mortality in this species.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "PEOPLE CONSULTED",
+          "body": "Richard E. Matheson, Florida Marine Research Institute, Dept. of Natural Resources, St. Petersburg, Florida.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REFERENCE NUMBERS",
+          "body": "363 788 848 993 1814 1888 1914 2146 2320 2322 2326 2362 2398 2399 2400",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "CITATIONS",
+          "body": "2326 Austin, H.M.  1971.  A survey of the ichthyofauna of the mangroves of western Puerto Rico during December, 1967 - August, 1968.  Caribbean Journal of Science 11(1-2): 27-39.\n\n2398 Deckert, G.D. and D.W. Greenfield.  1987.  A review of the western Atlantic species of the genera Diapterus and Eugerres (Pisces: Gerreidae).  Copeia 1987(1):182-194\n\n848 Gilmore, R.G.  1977.  Fishes of the Indian River Lagoon and adjacent waters, Florida.  Bull. Fla. St. Mus., Biol. Sci., 22(3): 101-147.\n\n2146 Gilmore, R.G., L.H. Bullock, and F.H. Berry.  1978.  Hypothermal mortality in marine fishes of  south-central Florida January, 1977.  N.E. Gulf Sci. 2(2): 77-97.\n\n2362 Gilmore, R.G. 1987.  Fish, macrocrustacean & avian population dynamics & cohabitation in tidally influenced impounded subtropical wetlands.  pp. 373-394  In W.R. Whitman & W.H. Meredith, eds.,  Proceedings of a symposium on waterfowl & wetlands management in the coastal zone of the Atlantic flyway.  Delaware Coastal Management Program, Delaware Dept. Nat. Res. and Envir. Control, Dover, Delaware.\n\n993 Gilmore, R.G.  1988.  Subtropical seagrass fish communities:  population dynamics, species guilds, and microhabitat associations in the Indian River Lagoon, Florida.  Ph.D. dissertation, Florida Institute of Technology.  199 pp.\n\n1814 Gunter, G. and G.E. Hall.  1963.  Biological investigations of the St. Lucie estuary (Florida) in connection with Lake Okeechobee discharge through the St. Lucie Canal.  Gulf Res. Rept. 2(1): 1-77.\n\n2322 Herrema, D.J., B.D. Peery and N. Williams-walls.  1985.  Spawning periods of common inshore fishes on the Florida east coast.  Northeast Gulf Sci. 7(2): 153-155.\n\n2399 Ingle, R.M.  1970.  Summary of Florida commercial marine landings 1970.  Fla. Dept. of Nat. Res., Div. of Mar. Res., Bur. of Mar. Sci. and Tech., Tallahassee, Florida.\n\n363 Johnson, G.D.  1978.  Development of Fishes of the Mid-Atlantic Bight, an atlas of egg, larval, and juvenile stages, Vol IV, Carangidae through Ephippidae.  U.S. Fish and Wildlife Service, FWS/OBS-78/12.  314 pp.\n\n2400 Miller, R.R. 1976.  Geographical distribution of Central American freshwater fishes (Addendum).  p. 154-156.  In  T.B. Thorson, ed.   Investigations of the ichthyofauna of Nicaraguan lakes.  Univ. of Neb., Lincoln, Nebraska.\n\n788 Robins, C.R., G.C. Ray and J. Douglass.  1986.  A field guide to Atlantic coast fishes of North America.  Peterson Field Guide Series No. 32, Houghton Mifflin Co., Boston.\n\n1914 Robins, C.R., R.M. Bailey, C.E. Bond, J.R. Brooker, E.A. Lachner, R.N. Lea, and W.B. Scott.  1991.  Common and Scientific Names of Fishes.  American Fisheries Society Special Publication 20.  183 pp.\n\n1888 Snelson, F.F., Jr.  1978.  Mortality of fishes due to cold on the east coast of Florida, January 1977.  Fla. Sci., 19(1): 1-12.\n\n2320 Snelson, F.F., Jr.  1983.  Ichthyofauna of the northern part of the Indian River Lagoon system, Florida.  Florida Sci. 46(3/4): 187-206.",
+          "depth": 2,
+          "children": []
+        }
+      ]
+    }
+  },
+  "legacy_source": null,
+  "sections": [
+    {
+      "id": 712,
+      "position": 1,
+      "heading": "HEADER",
+      "content": "Title:  Irish pompano (Diapterus auratus)\n\nFLELMR Code:  1670"
+    },
+    {
+      "id": 713,
+      "position": 2,
+      "heading": "Revisions",
+      "content": "1994 Jan 1. REB|RGG; Harbor Branch Oceanographic Institution\nnote: There was no date on the original document so 1994 Jan 1 was assigned since most of the SLHs were prepared from 1994 thru 1997."
+    },
+    {
+      "id": 714,
+      "position": 3,
+      "heading": "TAXONOMY",
+      "content": "Common Name:  Irish pompano\nScientific Name:  Diapterus auratus (=olisthostomus)"
+    },
+    {
+      "id": 715,
+      "position": 4,
+      "heading": "Classification",
+      "content": "Phylum:  Chordata\n\tClass:  Osteichthyes\n\tOrder:  Perciformes\n\tFamily:  Gerreidae\n\nOther Common Names:  Sand perch (1814), silver goatfish\n\nOther:\tReference for Scientific Name (Ranzani 1840).\n\tReference for Classification (1914)\n\tRevision date should be checked"
+    },
+    {
+      "id": 716,
+      "position": 5,
+      "heading": "VALUE & STATUS",
+      "content": "Commercial: Diapterus auratus is captured with D. plumieri in Indian River Lagoon commercial mojarra fishery (Gilmore pers. obs.).  This fishery has undoubtedly been lumped with the \"sand perch\" category in  Florida's commercial landings reports (e.g.  2399)\n Recreational:  Occasional landings are reported in the recreational fishery.  Small specimens may be used as bait.\nEcological Role:  In an extensive study of seagrass fish communities in the Indian River Lagoon, Gilmore (1988) found the Irish pompano to be an important component of the fauna.  This species was the most abundant mojarra (Gerreidae; 20,986 individuals) within the Indian River Lagoon seagrass meadows, ranked fifth in overall abundance, ranked second in abundance among non-planktivorous species and was found in over 50% of the 310 collections.  It was also ranked eleventh in biomass and is an epibenthic feeder associated with vegetated and sand/mud benthic habitats.  This species is also important in mangrove communities (2362).\nIndicator:  None known."
+    },
+    {
+      "id": 717,
+      "position": 6,
+      "heading": "GEOGRAPHIC RANGE",
+      "content": "Overall:  Chesapeake Bay to Bahia, Brazil, though absent in the north east Gulf of Mexico (2400; 363; 2146; 2398; Matheson pers. comm.)\nWithin Study Area:  The Irish pompano is found throughout the Indian River Lagoon system, though is considerably more abundant in the southern portion of the Lagoon (848, 2362; 2320).\nMobility and Migration: Although adults and large juveniles of this principally estuarine (seagrass and mangrove) species can be found in freshwater tributaries, only adults are found around shallow coastal reef formations (848, 1987, 1988).\nLife Mode:  The Irish pompano is a euryhaline epibenthic feeder with a wide distribution within the Indian River Lagoon and its freshwater tributaries (1814; 848, 2362, 993, unpub. data;  363)."
+    },
+    {
+      "id": 718,
+      "position": 7,
+      "heading": "Habitat Type",
+      "content": "The Irish pompano is found in the Indian River Lagoon from ocean inlets to freshwater tributaries and estuarine wetlands with major collections in seagrass (848, 1988).  Larvae and juveniles from 5 mm have been collected in wetlands fringing the Indian River Lagoon and within seagrass meadows (Gilmore unpub. data).\nSubstrate:  The Irish pompano is generally found over sand, soft silt/sand or mud bottoms generally near or in association with structure or aquatic vegetation (848; 363; 2320)."
+    },
+    {
+      "id": 719,
+      "position": 8,
+      "heading": "Physical/Chemical",
+      "content": "Salinity:  This euryhaline species can occur in salinities ranging from fresh water to 39 ppt (363; 993, unpub. data).\nTemperature: tolerance seems to favor a more tropical distribution with cold mortality documented at several locations within the Indian River Lagoon system (1814; 2146; 1888).  Observed temperature range is from 9 to 33.0 C (363; 2146, 993, unpub. data)."
+    },
+    {
+      "id": 720,
+      "position": 9,
+      "heading": "REPRODUCTION",
+      "content": "Reproductive Mode:  The Irish pompano is thought to be gonochoristic, oviparous; eggs fertilized externally (363; Matheson pers. comm.)\nMating/Spawning: Ripe adult females have been taken in Puerto Rico in December and April (363).  Herrema et al. (1985) found adults in breeding condition in April through July and September, however due to limited collections of adults this may not represent the entire spawning season.  A more extended spawning season is indicated as larvae and juveniles less than 20 mm (as small as 5 mm) have been collected in estuarine wetland habitats and seagrass meadows of the Indian River Lagoon from May to December with peaks in abundance in early summer and late fall (Gilmore unpub. data).\nFecundity: No information"
+    },
+    {
+      "id": 721,
+      "position": 10,
+      "heading": "Length Range",
+      "content": "Egg:  Planktonic (Matheson pers. comm.)\nLarvae:  Planktonic (Matheson pers. comm.)\nJuvenile:  Settle into benthic habitats throughout the Indian River Lagoon at minimum length of 10 mm (993, unpub. data)\nAdult:  Irish pompano may reach 30 cm in length (788)."
+    },
+    {
+      "id": 722,
+      "position": 11,
+      "heading": "FOOD HABITS",
+      "content": "The gerreid family has mouth morphology specialized for feeding on benthic invertebrates (363; 788).  Austin (1971) reports that the Irish pompano consumes plant material, polychaetes, and pelecypods."
+    },
+    {
+      "id": 723,
+      "position": 12,
+      "heading": "ECOLOGICAL INTERACTIONS",
+      "content": "Predation:  Due to its great relative abundance, this species is undoubtedly consumed by a variety of predators.  The authors have observed snook predation on this species.\nFactors influencing populations:  In an extensive study of seagrass fish communities in the Indian River Lagoon, Gilmore (1988) found the Irish pompano to be an important component of the fauna.  This species was the most abundant mojarra (Gerreidae; 20,986 individuals) within the Indian River Lagoon seagrass meadows, ranked fifth in overall abundance, ranked second in abundance among non-planktivorous species and was found in over 50% of the 310 collections.  It was also ranked eleventh in biomass and is an epibenthic feeder associated with vegetated and sand/mud benthic habitats.  This species is also important in mangrove communities (2362).  Loss of seagrass and estuarine wetland habitat will result in high juvenile mortality in this species."
+    },
+    {
+      "id": 724,
+      "position": 13,
+      "heading": "PEOPLE CONSULTED",
+      "content": "Richard E. Matheson, Florida Marine Research Institute, Dept. of Natural Resources, St. Petersburg, Florida."
+    },
+    {
+      "id": 725,
+      "position": 14,
+      "heading": "REFERENCE NUMBERS",
+      "content": "363 788 848 993 1814 1888 1914 2146 2320 2322 2326 2362 2398 2399 2400"
+    },
+    {
+      "id": 726,
+      "position": 15,
+      "heading": "CITATIONS",
+      "content": "2326 Austin, H.M.  1971.  A survey of the ichthyofauna of the mangroves of western Puerto Rico during December, 1967 - August, 1968.  Caribbean Journal of Science 11(1-2): 27-39.\n\n2398 Deckert, G.D. and D.W. Greenfield.  1987.  A review of the western Atlantic species of the genera Diapterus and Eugerres (Pisces: Gerreidae).  Copeia 1987(1):182-194\n\n848 Gilmore, R.G.  1977.  Fishes of the Indian River Lagoon and adjacent waters, Florida.  Bull. Fla. St. Mus., Biol. Sci., 22(3): 101-147.\n\n2146 Gilmore, R.G., L.H. Bullock, and F.H. Berry.  1978.  Hypothermal mortality in marine fishes of  south-central Florida January, 1977.  N.E. Gulf Sci. 2(2): 77-97.\n\n2362 Gilmore, R.G. 1987.  Fish, macrocrustacean & avian population dynamics & cohabitation in tidally influenced impounded subtropical wetlands.  pp. 373-394  In W.R. Whitman & W.H. Meredith, eds.,  Proceedings of a symposium on waterfowl & wetlands management in the coastal zone of the Atlantic flyway.  Delaware Coastal Management Program, Delaware Dept. Nat. Res. and Envir. Control, Dover, Delaware.\n\n993 Gilmore, R.G.  1988.  Subtropical seagrass fish communities:  population dynamics, species guilds, and microhabitat associations in the Indian River Lagoon, Florida.  Ph.D. dissertation, Florida Institute of Technology.  199 pp.\n\n1814 Gunter, G. and G.E. Hall.  1963.  Biological investigations of the St. Lucie estuary (Florida) in connection with Lake Okeechobee discharge through the St. Lucie Canal.  Gulf Res. Rept. 2(1): 1-77.\n\n2322 Herrema, D.J., B.D. Peery and N. Williams-walls.  1985.  Spawning periods of common inshore fishes on the Florida east coast.  Northeast Gulf Sci. 7(2): 153-155.\n\n2399 Ingle, R.M.  1970.  Summary of Florida commercial marine landings 1970.  Fla. Dept. of Nat. Res., Div. of Mar. Res., Bur. of Mar. Sci. and Tech., Tallahassee, Florida.\n\n363 Johnson, G.D.  1978.  Development of Fishes of the Mid-Atlantic Bight, an atlas of egg, larval, and juvenile stages, Vol IV, Carangidae through Ephippidae.  U.S. Fish and Wildlife Service, FWS/OBS-78/12.  314 pp.\n\n2400 Miller, R.R. 1976.  Geographical distribution of Central American freshwater fishes (Addendum).  p. 154-156.  In  T.B. Thorson, ed.   Investigations of the ichthyofauna of Nicaraguan lakes.  Univ. of Neb., Lincoln, Nebraska.\n\n788 Robins, C.R., G.C. Ray and J. Douglass.  1986.  A field guide to Atlantic coast fishes of North America.  Peterson Field Guide Series No. 32, Houghton Mifflin Co., Boston.\n\n1914 Robins, C.R., R.M. Bailey, C.E. Bond, J.R. Brooker, E.A. Lachner, R.N. Lea, and W.B. Scott.  1991.  Common and Scientific Names of Fishes.  American Fisheries Society Special Publication 20.  183 pp.\n\n1888 Snelson, F.F., Jr.  1978.  Mortality of fishes due to cold on the east coast of Florida, January 1977.  Fla. Sci., 19(1): 1-12.\n\n2320 Snelson, F.F., Jr.  1983.  Ichthyofauna of the northern part of the Indian River Lagoon system, Florida.  Florida Sci. 46(3/4): 187-206."
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "slug": "tidewater-silversides",
+  "source_file": "Tidewater Silversides SLH.txt",
+  "title": "Inland Silversides (Menidia beryllina)",
+  "common_name": "Tidewater Silversides",
+  "scientific_name": "Menidia beryllina",
+  "flelmr_code": "1447",
+  "legacy_identifiers": [
+    {
+      "authority": "legacy-ecospecies",
+      "identifier": "1447",
+      "label": "FLELMR"
+    }
+  ],
+  "taxon_identifiers": [],
+  "primary_taxon_authority": "",
+  "primary_taxon_identifier": null,
+  "summary": "",
+  "section_count": 16,
+  "citation_count": 0,
+  "publication_status": "published",
+  "is_archived": false,
+  "editor_notes": "",
+  "last_modified_by": "system-import",
+  "diagnostics": [],
+  "citations": [],
+  "structured_document": {
+    "source_format": "ecospecies-markdown-v1",
+    "updated_by": "system-import",
+    "node_count": 15,
+    "ast": {
+      "metadata": {
+        "title": "Inland Silversides (Menidia beryllina)",
+        "common_name": "Tidewater Silversides",
+        "scientific_name": "Menidia beryllina",
+        "legacy_identifiers": [
+          {
+            "authority": "legacy-ecospecies",
+            "identifier": "1447",
+            "label": "FLELMR"
+          }
+        ],
+        "taxon_identifiers": [],
+        "primary_taxon_authority": "",
+        "source_file": "Tidewater Silversides SLH.txt",
+        "publication_status": "published",
+        "source_format": "ecospecies-markdown-v1"
+      },
+      "nodes": [
+        {
+          "node_type": "section",
+          "title": "Revised",
+          "body": "4-21-1994. Steve Traxler",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "TAXONOMY",
+          "body": "Common Name: Tidewater Silversides\nScientific Name: Menidia beryllina",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Classification",
+          "body": "Phylum: Chordata\n\tClass: Osteichthyes\n\tOrder: Perciformes\n\tFamily: Atherinidae\n\nNotes: references for Family are (109 365).\n\nOther Common Names: Tidewater silverside, Mississippi silverside, glassy silverside, glassminnow, plateadito salado, hardhead (347 378 443 466 664).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "VALUE & STATUS",
+          "body": "Commercial:  No commercial value other than providing food for commercially important fish, but are reported to be delicious when properly cooked (47 229).\n\nRecreational: Important food item for game fish, also used as bait (651 229 47 345).\n\nEcological Role: Primarily a secondary consumer that comprises a substantial fraction of the foods consumed by top carnivores particularly in the nearshore area (651 294 229 345 47).  Considered useful as a biological control agent of mosquitoes and gnats (347 466).\n\nIndicator: Eggs and larvae used by the University of Maryland in work funded by U.S. Fish and Wildlife to study the toxic effects of chlorine used as a biocide .  Considered a good indicator for oil pollution (662).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "GEOGRAPHIC RANGE",
+          "body": "Overall:  Quincy, Massachusetts to Vera Cruz, Mexico along the coast and in streams, rivers, and impoundments; found in Mississippi Valley to Reelfoot Lake, Tennessee, and Red and Arkansas River drainages in Oklahoma; introduced in California impoundments (438 466 728).\n\nStudied from Rio Grande to Mobile, Alabama.  Ubiquitous resident of shallow estuarine waters (116 438 466 728).  Common within the Indian River lagoon (997 1006).\n\nMobility and Migration:",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Life Mode",
+          "body": "Eggs demersal; larvae, juveniles, and adults are nektonic and pelagic, and form schools (19 104 308 378 438 777).  All stages have diurnal activity in the study area, although one Florida study reports feeding occurring primarily at night (163 786 515 611 391 466 777).\n\nMovements and Migrations:\nNon-migratory, resident species of estuaries (47 466).   Diel inshore and offshore movements probably related to predator avoidance and feeding (163 391 777).  Young reported to move to shallow waters with increasing size (163).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Habitat Type",
+          "body": "Egg/larvae/juvenile/adult:  Resident estuarine species (751).  All stages are euryhaline and eurythermal enabling them to survive in a diverse set of habitats (466). Appear to prefer polyhaline to euhaline waters although some studies report preferences for lower salinities (26 224 229 255 378 261 651 588 550 694 709 58 140).  Prefer waters less than 2 m deep, but are occasionally found in waters with depths up to 12 m; the greatest majority of specimens are always collected in the top 30 - 45 cm of the water column and near vegetated shorelines (378 70 163 322 770 751 47).  Habitats include: lagoons, estuaries, bays, marshes, beach passes, ponds, rivers, and lakes (255 26 262 19 664 294 728 322 538 550 770 116 751 140).\n\nSubstrate:  Demonstrates little preference for bottom type being found over sand, mud, shell, clay, clay-shell, clay-sand, and silt-clay (47 326 651 694). Particularly common near inundated terrestrial plants and aquatic vegetation such as Thalassia (217 224 308 326 378 696 786), and are often associated with some sort of shelter such as islands, piers, and oyster bars (47).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Temperature",
+          "body": "Eurythermal; Temperature does not seem to be a limiting factor in their distribution (466 664).\n\nEggs: Observed to develop from 13.2 to 34.2 C (217 229 308 347 345 466).  High survival was recorded from 17.0 to 33.5 C and optimum survival occurred from 20.0 to 25.0 C.  Upper lethal limit for eggs is ca. 35.0 C (347).\n\nLarvae: Raised under laboratory conditions and collected in the field in a temperature range of 23 +/- 1 C to 30 +/- 1 C (46 229 308 347).\n\nJuveniles: Collected in the wild from 5.0 to 33 C (229 224 550 561 58).  Peaks in numbers have been reported at 26.5 and 21.8 C (58).  Temperature ranges in which different juvenile size classes were found are: 26.4 to 28.4 C for 14 to 22 mm TL; 21.0 to 31.8 C for 23 to 36 mm TL; and 21.0 to 32.5 C for 40 to 44 mm TL (229).\n\nAdults: Adults taken in the study area have been found from 5.0 C to 34.9 C (104 588 224 550 116 548 561 709 31 466).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Salinity",
+          "body": "Euryhaline (224 261 466 588); salinity appears to have little effect on this species' distribution (378 588 694).\n\nEggs: Observed in the wild at salinities ranging from 0.0 to 31.5 ppt (217 229 347).  One laboratory study noted salinity affecting temperature tolerance limits: no survival at 100% seawater (33 ppt); normal range of 17o to 33o C at 25% seawater; 19o to 33 at 50% seawater; and only 22o to 31.3 C at 75% seawater (347).\n\nLarvae: Recorded salinity range is 0.0 to 30 ppt with larval concentrations occurring at 2 to 8 ppt (46 229 438).\n\nJuveniles: Collected in the wild from 0.0 to 34.5 ppt salinity (255 257 229 224 561 58 438).  Appear to prefer below 25 ppt (255), with concentrations reported at 2 to 8 ppt, 27.2 ppt, and 31.3 ppt (255 58 438).  Reported occurring by size class as the following: 3.3 to 19.4 ppt for fish 14 to 22 mm TL; 2.2 to 23.8 ppt for 23 to 36 mm TL; and 2.2 to 28.3 ppt for 40 to 47 mm TL (229).\n\nAdults: Found in the study area from 0 to 120 ppt salinity (255 257 651 135 224 550 588 694 116 548 696 561 709 31 140 997).  Reported to be extremely abundant to 45 ppt (651) and present in collections made at 120 ppt, but not at 140 ppt (135).  Reported preferences and concentrations occur at the following: 5.0 to 9.9 ppt (709); 0.0 to 4.9 ppt and 15.0 to 19.9 ppt (694); 10.0 to 24.9 (550); 21.0 to 30.0 ppt (140); and 22.5 ppt or higher (224).\n\nOther:  Can tolerate D.O. concentrations as low as 1.7 ppm and survive (466).  Also found at 9.5 and 11.0 ppm D.O. (31).  Collected in a pH range of 7.2 to 9.4 (466).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REPRODUCTION",
+          "body": "Reproductive Mode: External fertilization of broadcast eggs (217).  Sexes separate, but one case of a hermaphroditic individual has been reported (779).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Mating/Spawning",
+          "body": "Spawning occurs during the day at ca. 1000 hr (347) and takes place in the study area in spring and fall as a bimodel peak.  Spasmodic year-round spawning has also been reported.  Ripe adults usually appear by March, but sometimes as early as February, and are collected year round in some areas.  Seasonal peaks usually occur in May to June and September to January (308 255 257 294 322 229 651 694 611 116 751 226 696 561 345).  Salinity has little effect on spawning condition and is probably triggered instead by rising temperatures or possibly changes in water levels (229 322 345 466).  Evidence of spawning was found over a salinity range of 3.6 to 31.5 ppt and a temperature range of 15.0 to 32.7 C, but was found to slow or cease at 30.0 C (229 345 466).  Spawning is probably most abundant in tidal freshwater or brackish water in the upper parts of estuaries (438), and occurs in shallow waters with gently sloping bottoms having an abundance of rooted aquatic and/or inundated terrestrial plants, tree roots, and dead leaves (308 770 217).  It has also been reported in a low to medium salinity tidal pass in Louisiana (614).  Snelson (997) speculated that M. beryllina and M. peninsulae may be hybridizing.\n\nFecundity: Fractional spawner that spawns several times per season and sometimes all year (217 294 308).  Females in one study deposited 10 - 20 eggs in a single spawning pass and were not observed to repeatedly broadcast eggs.  Females stripped of ripe eggs yielded 10 to 200 eggs per individual (217).  Fecundity is size dependent with average sized females (75 mm SL) producing ca. 835 eggs daily, large females ca. 2000 eggs and small females ca. 200.  Over a spawning period of 91 - 122 days an average size female has the capacity to produce 75,985 - 101,879 eggs, a large female 132,860 - 178,210 eggs, and a small female 45,000 - 61.000 eggs (345).  Spawning fish are usually class I fish, but class 0 fish have been found to spawn occasionally in the study area (217 345).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Length Range",
+          "body": "Egg: Demersal, with gelatinous threads that attach to vegetation, other objects, and to each other on or near bottom (308 438).  Clear yellowish appearance with a large fat globule occupying a central position with variously distributed smaller globules ranging from a few to several (308 345).  Chorion with a tuft of 4 to 9 adhesive filaments one of which is enlarged and much longer than the others, ca. 30 - 50 mm in total length.  Not quite spherical when first spawned and range ca. 0.75 - 1.0 mm in diameter (308 438).  Cleavage is meroblastic and equal with second cleavage at right angles to first (438).  Hatch occurs in 10 da at 27.5 C and 5 da in warmer temperatures (347 345).  Larvae present through spring, and in summer and fall months in study area (438).\n\nLarvae: Ca. 3.5 - 4.0 mm TL at hatching (308 438).  Yolk sac oval with single oil globule in anterior end of yolk sac.  Yolk depletion and starvation in 3 - 4 da at 30 C, and 2 - 3 da at 15 C (347 438).  Body elongate and slender with extremely short gut and anus about 1/4 of way from tip of snout to rear of caudal finfold (438).  Highly transparent with 3 - 11 melanophores over brain on head and a cluster above gut and dorsal surface of yolk.  At 7.8 mm TL, ca. 15 caudal rays and 8 anal ray bases visible.  First dorsal fin rudimentary and other median fins with full complement of rays, tending toward adult fin shape; pelvic fins formed.  Aggregating by 8 - 10 mm TL and schooling by 11 - 12 mm TL.  First dorsal fin formed by 11 - 12 mm TL (438).  End of this stage ca. 11 - 12 mm TL (229 438).\n\nJuvenile: Size range for this stage is ca. 12 - 49 mm TL (229).  Length-frequency data unreliable for growth estimate, but one study indicated 5 - 7 mm per month from June to November and that early spawned juveniles grew about 8 mm SL per month from June to September.  Lengths of 75 - 85 mm SL were achieved after 1 year of growth (664).  Winter evidently inhibits growth (438).\n\nAdult: Reach sexual maturity by 45 mm TL or 33 mm SL (294 229 438).  Males are smaller than females with average sizes of 50.9 and 55.0 mm TL for males and 59.5 and 61.0 mm TL for females being reported (308 255).  Maturity usually reached by 1 year, but sometimes as early as 5 mo in the study area (438 345).  Weight ranges from 0.1 - 7.5 g for fish 15 - 87 mm SL with a 95 mm TL fish weighing 11.4 g and a 55 mm TL fish weighing 2.84 g (224 31).  Largest reported size is 125 mm TL (651).  Lifespan for this fish is usually one year with rare survivals to 2 years (255 438 345).\n\n\nTo convert from standard length to total length for this species, multiply SL by 1.2 (345).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "FOOD HABITS",
+          "body": "Trophic Modes: Carnivorous; a secondary consumer feeding mainly during daylight hours especially in early morning with some additional afternoon feeding by adults (163 466 777).  One study reports equal feeding intensity both day and night (611).  Various larval and adult crustaceans are the predominant food items.  Silversides less than 16 mm SL feed primarily on the larval stages of copepods and other crustaceans (515).  Juveniles 15 - 42 mm SL feed on veliger larvae.  Detritus is a major item in small size classes, but is fairly common in larger ones as well, although declining in importance (163 611 98 179).  Detritus is probably obtained as suspended material rather than benthos (98).  Isopods and amphipods form the bulk of food in all size classes with isopods and veligers declining in fish larger than 40 - 54 mm TL to be replaced by insects, especially chironomid pupae and adults (163).  Larger fish also consume more megalops larvae, copepods, and mysids than smaller size classes (98).  Schizopods are present in all size classes, but are most abundant in intermediate size fish.  Miscellaneous items consumed include filamentous algae, vascular plant material, annelids, ostracods, arachnids, eggs, cysts, and fish remains (163 611).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "ECOLOGICAL INTERACTIONS",
+          "body": "Important food fish for many game and recreational fish and other top carnivores (229 345 651).\n\nPredation: Reported predators include: Ictalurus furcatus, Arius felis, Cynoscion nebulosus, Sciaenops ocellata, Morone chrysops, Micropterus salmoides, Pomoxis nigromaculatus (651 163 229 347 179 345 777).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REFERENCE NUMBERS",
+          "body": "19 26 31 46 47 58 70 98 104 109 116 135 140 163 179 217 224 226 229 255 257 261 262 294 308 322 326 335 345 347 365 378 391 438 443 466 515 538 548 550 561 588 611 614 651 662 664 694 696 709 728 751 770 777 779 786",
+          "depth": 2,
+          "children": []
+        }
+      ]
+    }
+  },
+  "legacy_source": null,
+  "sections": [
+    {
+      "id": 1468,
+      "position": 1,
+      "heading": "HEADER",
+      "content": "Title: Inland Silversides (Menidia beryllina)\n\nFLELMR Code: 1447"
+    },
+    {
+      "id": 1469,
+      "position": 2,
+      "heading": "Revised",
+      "content": "4-21-1994. Steve Traxler"
+    },
+    {
+      "id": 1470,
+      "position": 3,
+      "heading": "TAXONOMY",
+      "content": "Common Name: Tidewater Silversides\nScientific Name: Menidia beryllina"
+    },
+    {
+      "id": 1471,
+      "position": 4,
+      "heading": "Classification",
+      "content": "Phylum: Chordata\n\tClass: Osteichthyes\n\tOrder: Perciformes\n\tFamily: Atherinidae\n\nNotes: references for Family are (109 365).\n\nOther Common Names: Tidewater silverside, Mississippi silverside, glassy silverside, glassminnow, plateadito salado, hardhead (347 378 443 466 664)."
+    },
+    {
+      "id": 1472,
+      "position": 5,
+      "heading": "VALUE & STATUS",
+      "content": "Commercial:  No commercial value other than providing food for commercially important fish, but are reported to be delicious when properly cooked (47 229).\n\nRecreational: Important food item for game fish, also used as bait (651 229 47 345).\n\nEcological Role: Primarily a secondary consumer that comprises a substantial fraction of the foods consumed by top carnivores particularly in the nearshore area (651 294 229 345 47).  Considered useful as a biological control agent of mosquitoes and gnats (347 466).\n\nIndicator: Eggs and larvae used by the University of Maryland in work funded by U.S. Fish and Wildlife to study the toxic effects of chlorine used as a biocide .  Considered a good indicator for oil pollution (662)."
+    },
+    {
+      "id": 1473,
+      "position": 6,
+      "heading": "GEOGRAPHIC RANGE",
+      "content": "Overall:  Quincy, Massachusetts to Vera Cruz, Mexico along the coast and in streams, rivers, and impoundments; found in Mississippi Valley to Reelfoot Lake, Tennessee, and Red and Arkansas River drainages in Oklahoma; introduced in California impoundments (438 466 728).\n\nStudied from Rio Grande to Mobile, Alabama.  Ubiquitous resident of shallow estuarine waters (116 438 466 728).  Common within the Indian River lagoon (997 1006).\n\nMobility and Migration:"
+    },
+    {
+      "id": 1474,
+      "position": 7,
+      "heading": "Life Mode",
+      "content": "Eggs demersal; larvae, juveniles, and adults are nektonic and pelagic, and form schools (19 104 308 378 438 777).  All stages have diurnal activity in the study area, although one Florida study reports feeding occurring primarily at night (163 786 515 611 391 466 777).\n\nMovements and Migrations:\nNon-migratory, resident species of estuaries (47 466).   Diel inshore and offshore movements probably related to predator avoidance and feeding (163 391 777).  Young reported to move to shallow waters with increasing size (163)."
+    },
+    {
+      "id": 1475,
+      "position": 8,
+      "heading": "Habitat Type",
+      "content": "Egg/larvae/juvenile/adult:  Resident estuarine species (751).  All stages are euryhaline and eurythermal enabling them to survive in a diverse set of habitats (466). Appear to prefer polyhaline to euhaline waters although some studies report preferences for lower salinities (26 224 229 255 378 261 651 588 550 694 709 58 140).  Prefer waters less than 2 m deep, but are occasionally found in waters with depths up to 12 m; the greatest majority of specimens are always collected in the top 30 - 45 cm of the water column and near vegetated shorelines (378 70 163 322 770 751 47).  Habitats include: lagoons, estuaries, bays, marshes, beach passes, ponds, rivers, and lakes (255 26 262 19 664 294 728 322 538 550 770 116 751 140).\n\nSubstrate:  Demonstrates little preference for bottom type being found over sand, mud, shell, clay, clay-shell, clay-sand, and silt-clay (47 326 651 694). Particularly common near inundated terrestrial plants and aquatic vegetation such as Thalassia (217 224 308 326 378 696 786), and are often associated with some sort of shelter such as islands, piers, and oyster bars (47)."
+    },
+    {
+      "id": 1476,
+      "position": 9,
+      "heading": "Temperature",
+      "content": "Eurythermal; Temperature does not seem to be a limiting factor in their distribution (466 664).\n\nEggs: Observed to develop from 13.2 to 34.2 C (217 229 308 347 345 466).  High survival was recorded from 17.0 to 33.5 C and optimum survival occurred from 20.0 to 25.0 C.  Upper lethal limit for eggs is ca. 35.0 C (347).\n\nLarvae: Raised under laboratory conditions and collected in the field in a temperature range of 23 +/- 1 C to 30 +/- 1 C (46 229 308 347).\n\nJuveniles: Collected in the wild from 5.0 to 33 C (229 224 550 561 58).  Peaks in numbers have been reported at 26.5 and 21.8 C (58).  Temperature ranges in which different juvenile size classes were found are: 26.4 to 28.4 C for 14 to 22 mm TL; 21.0 to 31.8 C for 23 to 36 mm TL; and 21.0 to 32.5 C for 40 to 44 mm TL (229).\n\nAdults: Adults taken in the study area have been found from 5.0 C to 34.9 C (104 588 224 550 116 548 561 709 31 466)."
+    },
+    {
+      "id": 1477,
+      "position": 10,
+      "heading": "Salinity",
+      "content": "Euryhaline (224 261 466 588); salinity appears to have little effect on this species' distribution (378 588 694).\n\nEggs: Observed in the wild at salinities ranging from 0.0 to 31.5 ppt (217 229 347).  One laboratory study noted salinity affecting temperature tolerance limits: no survival at 100% seawater (33 ppt); normal range of 17o to 33o C at 25% seawater; 19o to 33 at 50% seawater; and only 22o to 31.3 C at 75% seawater (347).\n\nLarvae: Recorded salinity range is 0.0 to 30 ppt with larval concentrations occurring at 2 to 8 ppt (46 229 438).\n\nJuveniles: Collected in the wild from 0.0 to 34.5 ppt salinity (255 257 229 224 561 58 438).  Appear to prefer below 25 ppt (255), with concentrations reported at 2 to 8 ppt, 27.2 ppt, and 31.3 ppt (255 58 438).  Reported occurring by size class as the following: 3.3 to 19.4 ppt for fish 14 to 22 mm TL; 2.2 to 23.8 ppt for 23 to 36 mm TL; and 2.2 to 28.3 ppt for 40 to 47 mm TL (229).\n\nAdults: Found in the study area from 0 to 120 ppt salinity (255 257 651 135 224 550 588 694 116 548 696 561 709 31 140 997).  Reported to be extremely abundant to 45 ppt (651) and present in collections made at 120 ppt, but not at 140 ppt (135).  Reported preferences and concentrations occur at the following: 5.0 to 9.9 ppt (709); 0.0 to 4.9 ppt and 15.0 to 19.9 ppt (694); 10.0 to 24.9 (550); 21.0 to 30.0 ppt (140); and 22.5 ppt or higher (224).\n\nOther:  Can tolerate D.O. concentrations as low as 1.7 ppm and survive (466).  Also found at 9.5 and 11.0 ppm D.O. (31).  Collected in a pH range of 7.2 to 9.4 (466)."
+    },
+    {
+      "id": 1478,
+      "position": 11,
+      "heading": "REPRODUCTION",
+      "content": "Reproductive Mode: External fertilization of broadcast eggs (217).  Sexes separate, but one case of a hermaphroditic individual has been reported (779)."
+    },
+    {
+      "id": 1479,
+      "position": 12,
+      "heading": "Mating/Spawning",
+      "content": "Spawning occurs during the day at ca. 1000 hr (347) and takes place in the study area in spring and fall as a bimodel peak.  Spasmodic year-round spawning has also been reported.  Ripe adults usually appear by March, but sometimes as early as February, and are collected year round in some areas.  Seasonal peaks usually occur in May to June and September to January (308 255 257 294 322 229 651 694 611 116 751 226 696 561 345).  Salinity has little effect on spawning condition and is probably triggered instead by rising temperatures or possibly changes in water levels (229 322 345 466).  Evidence of spawning was found over a salinity range of 3.6 to 31.5 ppt and a temperature range of 15.0 to 32.7 C, but was found to slow or cease at 30.0 C (229 345 466).  Spawning is probably most abundant in tidal freshwater or brackish water in the upper parts of estuaries (438), and occurs in shallow waters with gently sloping bottoms having an abundance of rooted aquatic and/or inundated terrestrial plants, tree roots, and dead leaves (308 770 217).  It has also been reported in a low to medium salinity tidal pass in Louisiana (614).  Snelson (997) speculated that M. beryllina and M. peninsulae may be hybridizing.\n\nFecundity: Fractional spawner that spawns several times per season and sometimes all year (217 294 308).  Females in one study deposited 10 - 20 eggs in a single spawning pass and were not observed to repeatedly broadcast eggs.  Females stripped of ripe eggs yielded 10 to 200 eggs per individual (217).  Fecundity is size dependent with average sized females (75 mm SL) producing ca. 835 eggs daily, large females ca. 2000 eggs and small females ca. 200.  Over a spawning period of 91 - 122 days an average size female has the capacity to produce 75,985 - 101,879 eggs, a large female 132,860 - 178,210 eggs, and a small female 45,000 - 61.000 eggs (345).  Spawning fish are usually class I fish, but class 0 fish have been found to spawn occasionally in the study area (217 345)."
+    },
+    {
+      "id": 1480,
+      "position": 13,
+      "heading": "Length Range",
+      "content": "Egg: Demersal, with gelatinous threads that attach to vegetation, other objects, and to each other on or near bottom (308 438).  Clear yellowish appearance with a large fat globule occupying a central position with variously distributed smaller globules ranging from a few to several (308 345).  Chorion with a tuft of 4 to 9 adhesive filaments one of which is enlarged and much longer than the others, ca. 30 - 50 mm in total length.  Not quite spherical when first spawned and range ca. 0.75 - 1.0 mm in diameter (308 438).  Cleavage is meroblastic and equal with second cleavage at right angles to first (438).  Hatch occurs in 10 da at 27.5 C and 5 da in warmer temperatures (347 345).  Larvae present through spring, and in summer and fall months in study area (438).\n\nLarvae: Ca. 3.5 - 4.0 mm TL at hatching (308 438).  Yolk sac oval with single oil globule in anterior end of yolk sac.  Yolk depletion and starvation in 3 - 4 da at 30 C, and 2 - 3 da at 15 C (347 438).  Body elongate and slender with extremely short gut and anus about 1/4 of way from tip of snout to rear of caudal finfold (438).  Highly transparent with 3 - 11 melanophores over brain on head and a cluster above gut and dorsal surface of yolk.  At 7.8 mm TL, ca. 15 caudal rays and 8 anal ray bases visible.  First dorsal fin rudimentary and other median fins with full complement of rays, tending toward adult fin shape; pelvic fins formed.  Aggregating by 8 - 10 mm TL and schooling by 11 - 12 mm TL.  First dorsal fin formed by 11 - 12 mm TL (438).  End of this stage ca. 11 - 12 mm TL (229 438).\n\nJuvenile: Size range for this stage is ca. 12 - 49 mm TL (229).  Length-frequency data unreliable for growth estimate, but one study indicated 5 - 7 mm per month from June to November and that early spawned juveniles grew about 8 mm SL per month from June to September.  Lengths of 75 - 85 mm SL were achieved after 1 year of growth (664).  Winter evidently inhibits growth (438).\n\nAdult: Reach sexual maturity by 45 mm TL or 33 mm SL (294 229 438).  Males are smaller than females with average sizes of 50.9 and 55.0 mm TL for males and 59.5 and 61.0 mm TL for females being reported (308 255).  Maturity usually reached by 1 year, but sometimes as early as 5 mo in the study area (438 345).  Weight ranges from 0.1 - 7.5 g for fish 15 - 87 mm SL with a 95 mm TL fish weighing 11.4 g and a 55 mm TL fish weighing 2.84 g (224 31).  Largest reported size is 125 mm TL (651).  Lifespan for this fish is usually one year with rare survivals to 2 years (255 438 345).\n\n\nTo convert from standard length to total length for this species, multiply SL by 1.2 (345)."
+    },
+    {
+      "id": 1481,
+      "position": 14,
+      "heading": "FOOD HABITS",
+      "content": "Trophic Modes: Carnivorous; a secondary consumer feeding mainly during daylight hours especially in early morning with some additional afternoon feeding by adults (163 466 777).  One study reports equal feeding intensity both day and night (611).  Various larval and adult crustaceans are the predominant food items.  Silversides less than 16 mm SL feed primarily on the larval stages of copepods and other crustaceans (515).  Juveniles 15 - 42 mm SL feed on veliger larvae.  Detritus is a major item in small size classes, but is fairly common in larger ones as well, although declining in importance (163 611 98 179).  Detritus is probably obtained as suspended material rather than benthos (98).  Isopods and amphipods form the bulk of food in all size classes with isopods and veligers declining in fish larger than 40 - 54 mm TL to be replaced by insects, especially chironomid pupae and adults (163).  Larger fish also consume more megalops larvae, copepods, and mysids than smaller size classes (98).  Schizopods are present in all size classes, but are most abundant in intermediate size fish.  Miscellaneous items consumed include filamentous algae, vascular plant material, annelids, ostracods, arachnids, eggs, cysts, and fish remains (163 611)."
+    },
+    {
+      "id": 1482,
+      "position": 15,
+      "heading": "ECOLOGICAL INTERACTIONS",
+      "content": "Important food fish for many game and recreational fish and other top carnivores (229 345 651).\n\nPredation: Reported predators include: Ictalurus furcatus, Arius felis, Cynoscion nebulosus, Sciaenops ocellata, Morone chrysops, Micropterus salmoides, Pomoxis nigromaculatus (651 163 229 347 179 345 777)."
+    },
+    {
+      "id": 1483,
+      "position": 16,
+      "heading": "REFERENCE NUMBERS",
+      "content": "19 26 31 46 47 58 70 98 104 109 116 135 140 163 179 217 224 226 229 255 257 261 262 294 308 322 326 335 345 347 365 378 391 438 443 466 515 538 548 550 561 588 611 614 651 662 664 694 696 709 728 751 770 777 779 786"
+    }
+  ]
+}

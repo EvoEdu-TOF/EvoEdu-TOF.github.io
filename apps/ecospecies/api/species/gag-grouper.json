@@ -1,0 +1,484 @@
+{
+  "slug": "gag-grouper",
+  "source_file": "Gag Grouper SLH RGG.txt",
+  "title": "Mycteroperca microlepis",
+  "common_name": "Gag Grouper",
+  "scientific_name": "Mycteroperca microlepis",
+  "flelmr_code": "1527",
+  "legacy_identifiers": [
+    {
+      "authority": "legacy-ecospecies",
+      "identifier": "1527",
+      "label": "FLELMR"
+    }
+  ],
+  "taxon_identifiers": [],
+  "primary_taxon_authority": "",
+  "primary_taxon_identifier": null,
+  "summary": "",
+  "section_count": 18,
+  "citation_count": 10,
+  "publication_status": "published",
+  "is_archived": false,
+  "editor_notes": "",
+  "last_modified_by": "system-import",
+  "diagnostics": [],
+  "citations": [
+    {
+      "id": 1161,
+      "position": 1,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "38",
+      "citation_key": "beaumariage1969beaumariageds",
+      "entry_type": "misc",
+      "raw_text": "Beaumariage, D.S. 1969 Returns from the 1965 Schlitz tagging program including a cumulative analysis of previous results.  Florida State Board of Conservation,  Marine Research Laboratory, Technical Series 59. 38 pp.",
+      "normalized_text": "Beaumariage, D.S. 1969 Returns from the 1965 Schlitz tagging program including a cumulative analysis of previous results. Florida State Board of Conservation, Marine Research Laboratory, Technical Series 59. 38 pp.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{beaumariage1969beaumariageds,\n  note = {raw_reference = {Beaumariage, D.S. 1969 Returns from the 1965 Schlitz tagging program including a cumulative analysis of previous results.  Florida State Board of Conservation,  Marine Research Laboratory, Technical Series 59. 38 pp.}; ecospecies_reference_number = {38}},\n  title = {Beaumariage, D.S. 1969 Returns from the 1965 Schlitz tagging program including a cumulative analysis of previous results.  Florida State Board of Conservation,  Marine Research Laboratory, Technical Series 59. 38 pp.},\n  year = {1969},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1162,
+      "position": 2,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "312",
+      "citation_key": "hildebrand1928hildebrandsf",
+      "entry_type": "misc",
+      "raw_text": "Hildebrand, S.F., W.C. Schroeder. 1928 Fishes of Chesapeake Bay.  Bulletin of the U.S. Bureau of Fisheries.  43.  1-366.",
+      "normalized_text": "Hildebrand, S.F., W.C. Schroeder. 1928 Fishes of Chesapeake Bay. Bulletin of the U.S. Bureau of Fisheries. 43. 1-366.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{hildebrand1928hildebrandsf,\n  note = {raw_reference = {Hildebrand, S.F., W.C. Schroeder. 1928 Fishes of Chesapeake Bay.  Bulletin of the U.S. Bureau of Fisheries.  43.  1-366.}; ecospecies_reference_number = {312}},\n  title = {Hildebrand, S.F., W.C. Schroeder. 1928 Fishes of Chesapeake Bay.  Bulletin of the U.S. Bureau of Fisheries.  43.  1-366.},\n  year = {1928},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1163,
+      "position": 3,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "327",
+      "citation_key": "hoese1977fishesgulfmexico",
+      "entry_type": "misc",
+      "raw_text": "Hoese, H.D. and R.H. Moore.  1977.  Fishes of the Gulf of Mexico: Texas, Louisiana, and adjacent waters.  College Station, Texas.  Texas A&M University.  327 pp.",
+      "normalized_text": "Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana, and adjacent waters. College Station, Texas. Texas A&M University. 327 pp.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{hoese1977fishesgulfmexico,\n  author = {Hoese, H.D. and R.H. Moore},\n  note = {raw_reference = {Hoese, H.D. and R.H. Moore.  1977.  Fishes of the Gulf of Mexico: Texas, Louisiana, and adjacent waters.  College Station, Texas.  Texas A&M University.  327 pp.}; ecospecies_reference_number = {327}},\n  title = {Fishes of the Gulf of Mexico: Texas, Louisiana, and adjacent waters.  College Station, Texas.  Texas A&M University.  327 pp},\n  year = {1977},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1164,
+      "position": 4,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "581",
+      "citation_key": "reidjr1954ecologicalstudygulf",
+      "entry_type": "misc",
+      "raw_text": "Reid  Jr., G.K.  1954.  An ecological study of the Gulf of Mexico fishes, in the vicinity of Cedar Key, Florida.  Bulletin of Marine Science of the Gulf and Caribbean.  4:1. 1-94",
+      "normalized_text": "Reid Jr., G.K. 1954. An ecological study of the Gulf of Mexico fishes, in the vicinity of Cedar Key, Florida. Bulletin of Marine Science of the Gulf and Caribbean. 4:1. 1-94",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{reidjr1954ecologicalstudygulf,\n  author = {Reid  Jr., G.K},\n  howpublished = {Bulletin of Marine Science of the Gulf and Caribbean.  4:1. 1-94},\n  note = {raw_reference = {Reid  Jr., G.K.  1954.  An ecological study of the Gulf of Mexico fishes, in the vicinity of Cedar Key, Florida.  Bulletin of Marine Science of the Gulf and Caribbean.  4:1. 1-94}; ecospecies_reference_number = {581}},\n  title = {An ecological study of the Gulf of Mexico fishes, in the vicinity of Cedar Key, Florida},\n  year = {1954},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1165,
+      "position": 5,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "664",
+      "citation_key": "springer1960ecologicalstudyfishes",
+      "entry_type": "misc",
+      "raw_text": "Springer, V.G. and K.D. Woodburn.  1960.  An ecological study of the fishes of the Tampa Bay area.  Florida State Board of Conservation,  Marine Research Laboratory, Professional Paper Series.  1.  104 pp.",
+      "normalized_text": "Springer, V.G. and K.D. Woodburn. 1960. An ecological study of the fishes of the Tampa Bay area. Florida State Board of Conservation, Marine Research Laboratory, Professional Paper Series. 1. 104 pp.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{springer1960ecologicalstudyfishes,\n  author = {Springer, V.G. and K.D. Woodburn},\n  note = {raw_reference = {Springer, V.G. and K.D. Woodburn.  1960.  An ecological study of the fishes of the Tampa Bay area.  Florida State Board of Conservation,  Marine Research Laboratory, Professional Paper Series.  1.  104 pp.}; ecospecies_reference_number = {664}},\n  title = {An ecological study of the fishes of the Tampa Bay area.  Florida State Board of Conservation,  Marine Research Laboratory, Professional Paper Series.  1.  104 pp},\n  year = {1960},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1166,
+      "position": 6,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "788",
+      "citation_key": "robins1986fieldguideatlantic",
+      "entry_type": "misc",
+      "raw_text": "Robins, C.R. and G.C. Ray and J. Douglass and R. Freud.  1986.  A field guide to Atlantic coast fishes of North America.  Houghton Mifflin Co.  Boston, MA.",
+      "normalized_text": "Robins, C.R. and G.C. Ray and J. Douglass and R. Freud. 1986. A field guide to Atlantic coast fishes of North America. Houghton Mifflin Co. Boston, MA.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{robins1986fieldguideatlantic,\n  author = {Robins, C.R. and G.C. Ray and J. Douglass and R. Freud},\n  note = {raw_reference = {Robins, C.R. and G.C. Ray and J. Douglass and R. Freud.  1986.  A field guide to Atlantic coast fishes of North America.  Houghton Mifflin Co.  Boston, MA.}; ecospecies_reference_number = {788}},\n  title = {A field guide to Atlantic coast fishes of North America.  Houghton Mifflin Co.  Boston, MA},\n  year = {1986},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1167,
+      "position": 7,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "789",
+      "citation_key": "wang1971charlotteharborestuarine",
+      "entry_type": "misc",
+      "raw_text": "Wang, J.C.S. and E.C. Raney.  1971.  Charlotte Harbor estuarine studies. Distribution and fluctuations in the fish fauna of the Charlotte Harbor estuary, Florida.  Mote Marine Laboratory, Sarasota, Florida.  56 pp. + appendix",
+      "normalized_text": "Wang, J.C.S. and E.C. Raney. 1971. Charlotte Harbor estuarine studies. Distribution and fluctuations in the fish fauna of the Charlotte Harbor estuary, Florida. Mote Marine Laboratory, Sarasota, Florida. 56 pp. + appendix",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{wang1971charlotteharborestuarine,\n  author = {Wang, J.C.S. and E.C. Raney},\n  note = {raw_reference = {Wang, J.C.S. and E.C. Raney.  1971.  Charlotte Harbor estuarine studies. Distribution and fluctuations in the fish fauna of the Charlotte Harbor estuary, Florida.  Mote Marine Laboratory, Sarasota, Florida.  56 pp. + appendix}; ecospecies_reference_number = {789}},\n  title = {Charlotte Harbor estuarine studies. Distribution and fluctuations in the fish fauna of the Charlotte Harbor estuary, Florida.  Mote Marine Laboratory, Sarasota, Florida.  56 pp. + appendix},\n  year = {1971},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1168,
+      "position": 8,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "791",
+      "citation_key": "fisher1978faospeciesidentification",
+      "entry_type": "misc",
+      "raw_text": "Fisher, W. (ed.)  1978.  FAO species identification sheets for fishery purposes. Western Central Atlantic (Fishing area 31).  Food and Agriculture Organization, United Nations.  Rome, Italy.  Vol. IV.",
+      "normalized_text": "Fisher, W. (ed.) 1978. FAO species identification sheets for fishery purposes. Western Central Atlantic (Fishing area 31). Food and Agriculture Organization, United Nations. Rome, Italy. Vol. IV.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{fisher1978faospeciesidentification,\n  author = {Fisher, W. (ed.)},\n  note = {raw_reference = {Fisher, W. (ed.)  1978.  FAO species identification sheets for fishery purposes. Western Central Atlantic (Fishing area 31).  Food and Agriculture Organization, United Nations.  Rome, Italy.  Vol. IV.}; ecospecies_reference_number = {791}},\n  title = {FAO species identification sheets for fishery purposes. Western Central Atlantic (Fishing area 31).  Food and Agriculture Organization, United Nations.  Rome, Italy.  Vol. IV},\n  year = {1978},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1169,
+      "position": 9,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "891",
+      "citation_key": "briggs1958listfloridafishes",
+      "entry_type": "misc",
+      "raw_text": "Briggs, J.C.  1958.  A list of Florida fishes and their distribution.  Bulletin of the Florida State Museum, Biological Science.  2:8. 223-318",
+      "normalized_text": "Briggs, J.C. 1958. A list of Florida fishes and their distribution. Bulletin of the Florida State Museum, Biological Science. 2:8. 223-318",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{briggs1958listfloridafishes,\n  author = {Briggs, J.C},\n  howpublished = {Bulletin of the Florida State Museum, Biological Science.  2:8. 223-318},\n  note = {raw_reference = {Briggs, J.C.  1958.  A list of Florida fishes and their distribution.  Bulletin of the Florida State Museum, Biological Science.  2:8. 223-318}; ecospecies_reference_number = {891}},\n  title = {A list of Florida fishes and their distribution},\n  year = {1958},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1170,
+      "position": 10,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "2380",
+      "citation_key": "gilmore1992colorvariationassociated",
+      "entry_type": "misc",
+      "raw_text": "Gilmore, R.G. and R.S. Jones.  1992.  Color variation and associated behavior in the epinepheline groupers, Mycteroperca microlepis (Goode and Beane) and M. phenax Jordan and Swain.  Bull. of Mar. Sci. 51:83-103.Top piscine predator on continental shelf reef formations.",
+      "normalized_text": "Gilmore, R.G. and R.S. Jones. 1992. Color variation and associated behavior in the epinepheline groupers, Mycteroperca microlepis (Goode and Beane) and M. phenax Jordan and Swain. Bull. of Mar. Sci. 51:83-103.Top piscine predator on continental shelf reef formations.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gilmore1992colorvariationassociated,\n  author = {Gilmore, R.G. and R.S. Jones},\n  howpublished = {Bull. of Mar. Sci. 51:83-103.Top piscine predator on continental shelf reef formations},\n  note = {raw_reference = {Gilmore, R.G. and R.S. Jones.  1992.  Color variation and associated behavior in the epinepheline groupers, Mycteroperca microlepis (Goode and Beane) and M. phenax Jordan and Swain.  Bull. of Mar. Sci. 51:83-103.Top piscine predator on continental shelf reef formations.}; ecospecies_reference_number = {2380}},\n  title = {Color variation and associated behavior in the epinepheline groupers, Mycteroperca microlepis (Goode and Beane) and M. phenax Jordan and Swain},\n  year = {1992},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    }
+  ],
+  "structured_document": {
+    "source_format": "ecospecies-markdown-v1",
+    "updated_by": "system-import",
+    "node_count": 17,
+    "ast": {
+      "metadata": {
+        "title": "Mycteroperca microlepis",
+        "common_name": "Gag Grouper",
+        "scientific_name": "Mycteroperca microlepis",
+        "legacy_identifiers": [
+          {
+            "authority": "legacy-ecospecies",
+            "identifier": "1527",
+            "label": "FLELMR"
+          }
+        ],
+        "taxon_identifiers": [],
+        "primary_taxon_authority": "",
+        "source_file": "Gag Grouper SLH RGG.txt",
+        "publication_status": "published",
+        "source_format": "ecospecies-markdown-v1"
+      },
+      "nodes": [
+        {
+          "node_type": "section",
+          "title": "Revisions",
+          "body": "1993.  T.D. Phillips; Mote Marine Laboratory, Sarasota, Florida.\n4/20/1994.  Grant Gilmore; Harbor Branch Oceanographic Institution, Florida.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "TAXONOMY",
+          "body": "Common Name:  Gag Grouper\nScientific Name: Mycteroperca microlepis",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Classification",
+          "body": "Phylum:  Chordata\n\tClass:  Osteichthyes\n\tOrder: Perciformes\n\tFamily: Serranidae\n\nOther Common Names:  black grouper (664).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "VALUE & STATUS",
+          "body": "Commercial:\tAn important component of the commercial fishery in Florida, caught on both Atlantic and Gulf coasts of the state (844).  The second most abundant grouper on the west coast of Florida.  Usually taken on hook and line and mostly marketed fresh (791).\n\nRecreational:\tRecognized as a common food fish in Florida and sought by anglers (312).  Numerous party boats depend on gag as their main catch (664).  Valued as a food and game fish (898).  An important component of the recreational fishery (844).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Indicator",
+          "body": "Ecological Role: Top piscine predator on continental shelf reef formations (1272).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Overall",
+          "body": "Massachusetts, Bermuda, and the entire Gulf of Mexico to Brazil, but absent in the Bahama Island and West Indies (788 791 891 1038).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Within Study Area",
+          "body": "Throughout Florida waters on both the east and west coasts (891).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Life Mode",
+          "body": "Usually solitary, though spawning aggregations occur on shelf edge reef formations (Gilmore & Jones 1992).\n\nMobility and Migration: Postlarvae are transported into estuarine waters which serve as a juvenile nursery ground (844).  Adults not taken from December through April in Charlotte Harbor which suggests an offshore migration during the winter (789).  Known to enter rivers and creeks during certain times of the year (885 892 893).  Appear to move into shallow water in the winter and spring in Florida (791 894) and the southeast Atlantic (1039).  Requires a period of estuarine residence during early life stages using these areas as nursery grounds (844).  Tagging studies in Florida estimate movement to vary from only 3.2 km in 6 years (895), to from 11 to 88 km in 79 to 1007 days (38).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Habitat Type",
+          "body": "Eggs: Eggs are marine and are probably pelagic (898).\nLarvae: Larvae are unknown but are probably marine and pelagic (to 100 m on Florida's east coast).\nJuveniles: Juveniles associate with seagrasses (887 1006).\nAdults: Adults are demersal and found in deep channels of the Indian River Lagoon, ocean inlets and continental shelf reef formations to 100 m on Florida's East Coast (Gilmore & Jones 1992 327).  On the Campeche Bank, taken in water depths of 48 to 80 m (791), but usually considered a shore species (891).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Substrate",
+          "body": "Found around rock reefs and wrecks, preferring areas beneath ledges or around reef caves, and found associated with holes and gullies (664 868).  Taken over bottoms of bud, rock, coral, hard sand, shells sponges, seagrass and gorgonians (868).  Apparently common in shallow grass beds and rocky areas (791).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Temperature",
+          "body": "Eggs: No information available.\nLarvae: No information available.\nJuvenile: Juveniles collected at temperatures ranging from 17C (896) to 26.7 C (897).  Wang and Raney (789) collected juveniles and adults in Charlotte Harbor between 17.8 and 20.6 C.\nAdults:  Same as Juveniles.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Salinity",
+          "body": "Eggs: No information available.\nLarvae: No information available.\nJuvenile: Juveniles collected at salinities as low as 15.8 % in the St. Johns River, Florida (885)  Wang and Raney (789) collected specimens in Charlotte Harbor at salinities ranging from 16.0 to 37.2 % at Cedar Key (581).\nAdults:  Same as Juveniles.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REPRODUCTION",
+          "body": "Reproductive Mode:\tBroadcast spawner with external fertilization.  Eggs contain a single oil globule and are probably pelagic (898).  Larvae are pelagic for about 43 days, and it is thought that this allows enough time for transport from offshore spawning areas to estuarine nursery grounds (844 898).\n\nMating & spawning:\tSpawning reported to occur from January through March in Florida (898); reported to spawn in the early spring at Cedar Key (581).  A late winter-early spring spawning period with peak activity during late March-early April has been recorded off the southeastern Atlantic coast (845).  This spawning period was confirmed by Keener et al (844) who collected postlarvae from April through June at a South Carolina inlet.  Back calculations indicted a spawning period of mid February to early March in South Carolina (844).  All females mature in their 5th or 6th year and transform into males at the age of 10 or 11 (898 899), but mature females at age 3 and 4 have been also been reported (845).  Collins et al. (845) found fish ranging from 5 through 11 years of age with transitional gonads.\n\nFecundity: Reported to range from 655, 788 from a female 946 mm TL estimated age of 8+, to 1,457,120 eggs from a female 938 mm TL also age 8 (898).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "GROWTH",
+          "body": "Eggs: No information available.\nLarvae: No information available.\nJuvenile: McErlean (898) presented data on young-of-the-year which showed a growth rate of from 81 mm SL in June to 141 mm SL in September.  Growth rates off the southeast Atlantic coast are reported to be rapid during the first 5 years, and have been calculated to be about 239 mm TL during the first year (1039).  McErlean (898), however, reported growth during the first year as about 18 cm, and that increments of 10 and 7.5 cm are added during the second and third years.  One fish tagged on the west coast of Florida during its second year and recaptured six years later was estimated to have grown at an average rate of 4 mm per month (895)  Manooch and Haimovici (1039) presented equations for length weight relationships and von Bertalanffy growth equations from the southeast Atlantic coast, and McErlean (898) presented length weight relationships for fish from the west coast of Florida.  Manooch and Haimovici (1039) also calculated a maximum attainable size of 1,290 mm.  Maximum age in the both the southeast Atlantic and Gulf of Mexico reported as XIII (898 1039).  Collins et al (845), however, found fish that were aged from otoliths to reach an age of XXII.  Robins (788) reported a maximum size of 96 cm, and a maximum size of 23 kg has also been reported (312 788).\nAdults:  Same as Juveniles.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "FOOD HABITS",
+          "body": "Diet includes shrimp and fish (581), but adults are primarily piscivorous (1272).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REFERENCE NUMBERS",
+          "body": "38, 312, 327, 581, 664, 788, 789, 791, 844, 845, 868, 891, 892, 893, 894, 895, 896, 898, 899, 1039, 2380",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "CITATIONS",
+          "body": "38  Beaumariage, D.S. 1969 Returns from the 1965 Schlitz tagging program including a cumulative analysis of previous results.  Florida State Board of Conservation,  Marine Research Laboratory, Technical Series 59. 38 pp.\n\n312  Hildebrand, S.F., W.C. Schroeder. 1928 Fishes of Chesapeake Bay.  Bulletin of the U.S. Bureau of Fisheries.  43.  1-366.\n\n327  Hoese, H.D. and R.H. Moore.  1977.  Fishes of the Gulf of Mexico: Texas, Louisiana, and adjacent waters.  College Station, Texas.  Texas A&M University.  327 pp.\n\n581  Reid  Jr., G.K.  1954.  An ecological study of the Gulf of Mexico fishes, in the vicinity of Cedar Key, Florida.  Bulletin of Marine Science of the Gulf and Caribbean.  4:1. 1-94\n\n664 Springer, V.G. and K.D. Woodburn.  1960.  An ecological study of the fishes of the Tampa Bay area.  Florida State Board of Conservation,  Marine Research Laboratory, Professional Paper Series.  1.  104 pp.\n\n788 Robins, C.R. and G.C. Ray and J. Douglass and R. Freud.  1986.  A field guide to Atlantic coast fishes of North America.  Houghton Mifflin Co.  Boston, MA.\n\n789  Wang, J.C.S. and E.C. Raney.  1971.  Charlotte Harbor estuarine studies. Distribution and fluctuations in the fish fauna of the Charlotte Harbor estuary, Florida.  Mote Marine Laboratory, Sarasota, Florida.  56 pp. + appendix\n\n791  Fisher, W. (ed.)  1978.  FAO species identification sheets for fishery purposes. Western Central Atlantic (Fishing area 31).  Food and Agriculture Organization, United Nations.  Rome, Italy.  Vol. IV.\n\n891  Briggs, J.C.  1958.  A list of Florida fishes and their distribution.  Bulletin of the Florida State Museum, Biological Science.  2:8. 223-318\n\n2380 Gilmore, R.G. and R.S. Jones.  1992.  Color variation and associated behavior in the epinepheline groupers, Mycteroperca microlepis (Goode and Beane) and M. phenax Jordan and Swain.  Bull. of Mar. Sci. 51:83-103.Top piscine predator on continental shelf reef formations.",
+          "depth": 2,
+          "children": []
+        }
+      ]
+    }
+  },
+  "legacy_source": null,
+  "sections": [
+    {
+      "id": 493,
+      "position": 1,
+      "heading": "HEADER",
+      "content": "Title:  Mycteroperca microlepis\n\nFLELMR CODE:\t1527"
+    },
+    {
+      "id": 494,
+      "position": 2,
+      "heading": "Revisions",
+      "content": "1993.  T.D. Phillips; Mote Marine Laboratory, Sarasota, Florida.\n4/20/1994.  Grant Gilmore; Harbor Branch Oceanographic Institution, Florida."
+    },
+    {
+      "id": 495,
+      "position": 3,
+      "heading": "TAXONOMY",
+      "content": "Common Name:  Gag Grouper\nScientific Name: Mycteroperca microlepis"
+    },
+    {
+      "id": 496,
+      "position": 4,
+      "heading": "Classification",
+      "content": "Phylum:  Chordata\n\tClass:  Osteichthyes\n\tOrder: Perciformes\n\tFamily: Serranidae\n\nOther Common Names:  black grouper (664)."
+    },
+    {
+      "id": 497,
+      "position": 5,
+      "heading": "VALUE & STATUS",
+      "content": "Commercial:\tAn important component of the commercial fishery in Florida, caught on both Atlantic and Gulf coasts of the state (844).  The second most abundant grouper on the west coast of Florida.  Usually taken on hook and line and mostly marketed fresh (791).\n\nRecreational:\tRecognized as a common food fish in Florida and sought by anglers (312).  Numerous party boats depend on gag as their main catch (664).  Valued as a food and game fish (898).  An important component of the recreational fishery (844)."
+    },
+    {
+      "id": 498,
+      "position": 6,
+      "heading": "Indicator",
+      "content": "Ecological Role: Top piscine predator on continental shelf reef formations (1272)."
+    },
+    {
+      "id": 499,
+      "position": 7,
+      "heading": "Overall",
+      "content": "Massachusetts, Bermuda, and the entire Gulf of Mexico to Brazil, but absent in the Bahama Island and West Indies (788 791 891 1038)."
+    },
+    {
+      "id": 500,
+      "position": 8,
+      "heading": "Within Study Area",
+      "content": "Throughout Florida waters on both the east and west coasts (891)."
+    },
+    {
+      "id": 501,
+      "position": 9,
+      "heading": "Life Mode",
+      "content": "Usually solitary, though spawning aggregations occur on shelf edge reef formations (Gilmore & Jones 1992).\n\nMobility and Migration: Postlarvae are transported into estuarine waters which serve as a juvenile nursery ground (844).  Adults not taken from December through April in Charlotte Harbor which suggests an offshore migration during the winter (789).  Known to enter rivers and creeks during certain times of the year (885 892 893).  Appear to move into shallow water in the winter and spring in Florida (791 894) and the southeast Atlantic (1039).  Requires a period of estuarine residence during early life stages using these areas as nursery grounds (844).  Tagging studies in Florida estimate movement to vary from only 3.2 km in 6 years (895), to from 11 to 88 km in 79 to 1007 days (38)."
+    },
+    {
+      "id": 502,
+      "position": 10,
+      "heading": "Habitat Type",
+      "content": "Eggs: Eggs are marine and are probably pelagic (898).\nLarvae: Larvae are unknown but are probably marine and pelagic (to 100 m on Florida's east coast).\nJuveniles: Juveniles associate with seagrasses (887 1006).\nAdults: Adults are demersal and found in deep channels of the Indian River Lagoon, ocean inlets and continental shelf reef formations to 100 m on Florida's East Coast (Gilmore & Jones 1992 327).  On the Campeche Bank, taken in water depths of 48 to 80 m (791), but usually considered a shore species (891)."
+    },
+    {
+      "id": 503,
+      "position": 11,
+      "heading": "Substrate",
+      "content": "Found around rock reefs and wrecks, preferring areas beneath ledges or around reef caves, and found associated with holes and gullies (664 868).  Taken over bottoms of bud, rock, coral, hard sand, shells sponges, seagrass and gorgonians (868).  Apparently common in shallow grass beds and rocky areas (791)."
+    },
+    {
+      "id": 504,
+      "position": 12,
+      "heading": "Temperature",
+      "content": "Eggs: No information available.\nLarvae: No information available.\nJuvenile: Juveniles collected at temperatures ranging from 17C (896) to 26.7 C (897).  Wang and Raney (789) collected juveniles and adults in Charlotte Harbor between 17.8 and 20.6 C.\nAdults:  Same as Juveniles."
+    },
+    {
+      "id": 505,
+      "position": 13,
+      "heading": "Salinity",
+      "content": "Eggs: No information available.\nLarvae: No information available.\nJuvenile: Juveniles collected at salinities as low as 15.8 % in the St. Johns River, Florida (885)  Wang and Raney (789) collected specimens in Charlotte Harbor at salinities ranging from 16.0 to 37.2 % at Cedar Key (581).\nAdults:  Same as Juveniles."
+    },
+    {
+      "id": 506,
+      "position": 14,
+      "heading": "REPRODUCTION",
+      "content": "Reproductive Mode:\tBroadcast spawner with external fertilization.  Eggs contain a single oil globule and are probably pelagic (898).  Larvae are pelagic for about 43 days, and it is thought that this allows enough time for transport from offshore spawning areas to estuarine nursery grounds (844 898).\n\nMating & spawning:\tSpawning reported to occur from January through March in Florida (898); reported to spawn in the early spring at Cedar Key (581).  A late winter-early spring spawning period with peak activity during late March-early April has been recorded off the southeastern Atlantic coast (845).  This spawning period was confirmed by Keener et al (844) who collected postlarvae from April through June at a South Carolina inlet.  Back calculations indicted a spawning period of mid February to early March in South Carolina (844).  All females mature in their 5th or 6th year and transform into males at the age of 10 or 11 (898 899), but mature females at age 3 and 4 have been also been reported (845).  Collins et al. (845) found fish ranging from 5 through 11 years of age with transitional gonads.\n\nFecundity: Reported to range from 655, 788 from a female 946 mm TL estimated age of 8+, to 1,457,120 eggs from a female 938 mm TL also age 8 (898)."
+    },
+    {
+      "id": 507,
+      "position": 15,
+      "heading": "GROWTH",
+      "content": "Eggs: No information available.\nLarvae: No information available.\nJuvenile: McErlean (898) presented data on young-of-the-year which showed a growth rate of from 81 mm SL in June to 141 mm SL in September.  Growth rates off the southeast Atlantic coast are reported to be rapid during the first 5 years, and have been calculated to be about 239 mm TL during the first year (1039).  McErlean (898), however, reported growth during the first year as about 18 cm, and that increments of 10 and 7.5 cm are added during the second and third years.  One fish tagged on the west coast of Florida during its second year and recaptured six years later was estimated to have grown at an average rate of 4 mm per month (895)  Manooch and Haimovici (1039) presented equations for length weight relationships and von Bertalanffy growth equations from the southeast Atlantic coast, and McErlean (898) presented length weight relationships for fish from the west coast of Florida.  Manooch and Haimovici (1039) also calculated a maximum attainable size of 1,290 mm.  Maximum age in the both the southeast Atlantic and Gulf of Mexico reported as XIII (898 1039).  Collins et al (845), however, found fish that were aged from otoliths to reach an age of XXII.  Robins (788) reported a maximum size of 96 cm, and a maximum size of 23 kg has also been reported (312 788).\nAdults:  Same as Juveniles."
+    },
+    {
+      "id": 508,
+      "position": 16,
+      "heading": "FOOD HABITS",
+      "content": "Diet includes shrimp and fish (581), but adults are primarily piscivorous (1272)."
+    },
+    {
+      "id": 509,
+      "position": 17,
+      "heading": "REFERENCE NUMBERS",
+      "content": "38, 312, 327, 581, 664, 788, 789, 791, 844, 845, 868, 891, 892, 893, 894, 895, 896, 898, 899, 1039, 2380"
+    },
+    {
+      "id": 510,
+      "position": 18,
+      "heading": "CITATIONS",
+      "content": "38  Beaumariage, D.S. 1969 Returns from the 1965 Schlitz tagging program including a cumulative analysis of previous results.  Florida State Board of Conservation,  Marine Research Laboratory, Technical Series 59. 38 pp.\n\n312  Hildebrand, S.F., W.C. Schroeder. 1928 Fishes of Chesapeake Bay.  Bulletin of the U.S. Bureau of Fisheries.  43.  1-366.\n\n327  Hoese, H.D. and R.H. Moore.  1977.  Fishes of the Gulf of Mexico: Texas, Louisiana, and adjacent waters.  College Station, Texas.  Texas A&M University.  327 pp.\n\n581  Reid  Jr., G.K.  1954.  An ecological study of the Gulf of Mexico fishes, in the vicinity of Cedar Key, Florida.  Bulletin of Marine Science of the Gulf and Caribbean.  4:1. 1-94\n\n664 Springer, V.G. and K.D. Woodburn.  1960.  An ecological study of the fishes of the Tampa Bay area.  Florida State Board of Conservation,  Marine Research Laboratory, Professional Paper Series.  1.  104 pp.\n\n788 Robins, C.R. and G.C. Ray and J. Douglass and R. Freud.  1986.  A field guide to Atlantic coast fishes of North America.  Houghton Mifflin Co.  Boston, MA.\n\n789  Wang, J.C.S. and E.C. Raney.  1971.  Charlotte Harbor estuarine studies. Distribution and fluctuations in the fish fauna of the Charlotte Harbor estuary, Florida.  Mote Marine Laboratory, Sarasota, Florida.  56 pp. + appendix\n\n791  Fisher, W. (ed.)  1978.  FAO species identification sheets for fishery purposes. Western Central Atlantic (Fishing area 31).  Food and Agriculture Organization, United Nations.  Rome, Italy.  Vol. IV.\n\n891  Briggs, J.C.  1958.  A list of Florida fishes and their distribution.  Bulletin of the Florida State Museum, Biological Science.  2:8. 223-318\n\n2380 Gilmore, R.G. and R.S. Jones.  1992.  Color variation and associated behavior in the epinepheline groupers, Mycteroperca microlepis (Goode and Beane) and M. phenax Jordan and Swain.  Bull. of Mar. Sci. 51:83-103.Top piscine predator on continental shelf reef formations."
+    }
+  ]
+}

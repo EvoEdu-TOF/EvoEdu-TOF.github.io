@@ -1,0 +1,511 @@
+{
+  "slug": "atlantic-cutlassfish",
+  "source_file": "Atlantic Cutlass Fish SLH  RGG.txt",
+  "title": "Atlantic cutlassfish (Trichiurus lepturus)",
+  "common_name": "Atlantic Cutlassfish",
+  "scientific_name": "Trichiurus lepturus",
+  "flelmr_code": "1959",
+  "legacy_identifiers": [
+    {
+      "authority": "legacy-ecospecies",
+      "identifier": "1959",
+      "label": "FLELMR"
+    }
+  ],
+  "taxon_identifiers": [],
+  "primary_taxon_authority": "",
+  "primary_taxon_identifier": null,
+  "summary": "",
+  "section_count": 17,
+  "citation_count": 12,
+  "publication_status": "published",
+  "is_archived": false,
+  "editor_notes": "",
+  "last_modified_by": "system-import",
+  "diagnostics": [],
+  "citations": [
+    {
+      "id": 137,
+      "position": 1,
+      "section_heading": "Citations",
+      "legacy_reference_number": "2321",
+      "citation_key": "fritzsche1978developmentfishesmid",
+      "entry_type": "misc",
+      "raw_text": "Fritzsche, Ronald E.  1978. Development of fishes of the mid-Atlantic bight. An atlas of egg, larval and juvenile stages. Vol. V.  Chaetodontidae through Ophidiidae. U.S. Fish and Wildlife Service.  FWS/OBS - 78/12.",
+      "normalized_text": "Fritzsche, Ronald E. 1978. Development of fishes of the mid-Atlantic bight. An atlas of egg, larval and juvenile stages. Vol. V. Chaetodontidae through Ophidiidae. U.S. Fish and Wildlife Service. FWS/OBS - 78/12.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{fritzsche1978developmentfishesmid,\n  author = {Fritzsche, Ronald E},\n  howpublished = {U.S. Fish and Wildlife Service.  FWS/OBS - 78/12},\n  note = {raw_reference = {Fritzsche, Ronald E.  1978. Development of fishes of the mid-Atlantic bight. An atlas of egg, larval and juvenile stages. Vol. V.  Chaetodontidae through Ophidiidae. U.S. Fish and Wildlife Service.  FWS/OBS - 78/12.}; ecospecies_reference_number = {2321}},\n  title = {Development of fishes of the mid-Atlantic bight. An atlas of egg, larval and juvenile stages. Vol. V.  Chaetodontidae through Ophidiidae},\n  year = {1978},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 138,
+      "position": 2,
+      "section_heading": "Citations",
+      "legacy_reference_number": "848",
+      "citation_key": "gilmore1977fishesindianriver",
+      "entry_type": "misc",
+      "raw_text": "Gilmore, R. Grant  Jr., 1977.  Fishes of the Indian River Lagoon and adjacent waters, Florida.   Bull. Fla. State Mus. Biol. Sci. 22:101-148.",
+      "normalized_text": "Gilmore, R. Grant Jr., 1977. Fishes of the Indian River Lagoon and adjacent waters, Florida. Bull. Fla. State Mus. Biol. Sci. 22:101-148.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gilmore1977fishesindianriver,\n  author = {Gilmore, R. Grant  Jr.,},\n  howpublished = {Bull. Fla. State Mus. Biol. Sci},\n  note = {raw_reference = {Gilmore, R. Grant  Jr., 1977.  Fishes of the Indian River Lagoon and adjacent waters, Florida.   Bull. Fla. State Mus. Biol. Sci. 22:101-148.}; ecospecies_reference_number = {848}},\n  pages = {101-148},\n  title = {Fishes of the Indian River Lagoon and adjacent waters, Florida},\n  volume = {22},\n  year = {1977},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 139,
+      "position": 3,
+      "section_heading": "Citations",
+      "legacy_reference_number": "993",
+      "citation_key": "gilmore1988subtropicalseagrassfish",
+      "entry_type": "misc",
+      "raw_text": "Gilmore, R.  Grant Jr.  1988.  Subtropical seagrass fish communities:  Population dynamics, species guilds and microhabitat associations in the Indian River Lagoon, Florida.  Dissertation.  Florida Institute of Technology.  199 p.",
+      "normalized_text": "Gilmore, R. Grant Jr. 1988. Subtropical seagrass fish communities: Population dynamics, species guilds and microhabitat associations in the Indian River Lagoon, Florida. Dissertation. Florida Institute of Technology. 199 p.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gilmore1988subtropicalseagrassfish,\n  author = {Gilmore, R.  Grant Jr},\n  note = {raw_reference = {Gilmore, R.  Grant Jr.  1988.  Subtropical seagrass fish communities:  Population dynamics, species guilds and microhabitat associations in the Indian River Lagoon, Florida.  Dissertation.  Florida Institute of Technology.  199 p.}; ecospecies_reference_number = {993}},\n  title = {Subtropical seagrass fish communities:  Population dynamics, species guilds and microhabitat associations in the Indian River Lagoon, Florida.  Dissertation.  Florida Institute of Technology.  199 p},\n  year = {1988},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 140,
+      "position": 4,
+      "section_heading": "Citations",
+      "legacy_reference_number": "1814",
+      "citation_key": "gunter1963biologicalinvestigationsst",
+      "entry_type": "misc",
+      "raw_text": "Gunter, G. and G. E. Hall.  1963.  Biological investigations of the St. Lucie estuary (Florida) in connection with Lake Okeechobee discharge through the St. Lucie Canal.  Gulf Res. Rept. 2(1): 1-77.",
+      "normalized_text": "Gunter, G. and G. E. Hall. 1963. Biological investigations of the St. Lucie estuary (Florida) in connection with Lake Okeechobee discharge through the St. Lucie Canal. Gulf Res. Rept. 2(1): 1-77.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gunter1963biologicalinvestigationsst,\n  author = {Gunter, G. and G. E. Hall},\n  howpublished = {Rept},\n  note = {raw_reference = {Gunter, G. and G. E. Hall.  1963.  Biological investigations of the St. Lucie estuary (Florida) in connection with Lake Okeechobee discharge through the St. Lucie Canal.  Gulf Res. Rept. 2(1): 1-77.}; ecospecies_reference_number = {1814}},\n  number = {1},\n  pages = {1-77},\n  title = {Biological investigations of the St. Lucie estuary (Florida) in connection with Lake Okeechobee discharge through the St. Lucie Canal.  Gulf Res},\n  volume = {2},\n  year = {1963},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 141,
+      "position": 5,
+      "section_heading": "Citations",
+      "legacy_reference_number": "2322",
+      "citation_key": "herrema1985spawningperiodscommon",
+      "entry_type": "misc",
+      "raw_text": "Herrema, David J., Bruce D. Perry, Nancy Williams-Walls, and J. Ross Wilcox.  1985.  Spawning periods of common inshore fishes on the Florida east coast. Northeast Gulf Sci. 7:153-155.",
+      "normalized_text": "Herrema, David J., Bruce D. Perry, Nancy Williams-Walls, and J. Ross Wilcox. 1985. Spawning periods of common inshore fishes on the Florida east coast. Northeast Gulf Sci. 7:153-155.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{herrema1985spawningperiodscommon,\n  author = {Herrema, David J., Bruce D. Perry, Nancy Williams-Walls, and J. Ross Wilcox},\n  note = {raw_reference = {Herrema, David J., Bruce D. Perry, Nancy Williams-Walls, and J. Ross Wilcox.  1985.  Spawning periods of common inshore fishes on the Florida east coast. Northeast Gulf Sci. 7:153-155.}; ecospecies_reference_number = {2322}},\n  title = {Spawning periods of common inshore fishes on the Florida east coast. Northeast Gulf Sci. 7:153-155},\n  year = {1985},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 142,
+      "position": 6,
+      "section_heading": "Citations",
+      "legacy_reference_number": "327",
+      "citation_key": "hoese1977fishesgulfmexico",
+      "entry_type": "misc",
+      "raw_text": "Hoese, H. Dickinson and Richard H. Moore. 1977.  Fishes of the Gulf of Mexico, Texas, Louisiana, and adjacent waters.   Texas A&M Univ. Press, College Station.",
+      "normalized_text": "Hoese, H. Dickinson and Richard H. Moore. 1977. Fishes of the Gulf of Mexico, Texas, Louisiana, and adjacent waters. Texas A&M Univ. Press, College Station.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{hoese1977fishesgulfmexico,\n  author = {Hoese, H. Dickinson and Richard H. Moore},\n  note = {raw_reference = {Hoese, H. Dickinson and Richard H. Moore. 1977.  Fishes of the Gulf of Mexico, Texas, Louisiana, and adjacent waters.   Texas A&M Univ. Press, College Station.}; ecospecies_reference_number = {327}},\n  title = {Fishes of the Gulf of Mexico, Texas, Louisiana, and adjacent waters.   Texas A&M Univ. Press, College Station},\n  year = {1977},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 143,
+      "position": 7,
+      "section_heading": "Citations",
+      "legacy_reference_number": "2323",
+      "citation_key": "manooch1984fishermansguide",
+      "entry_type": "misc",
+      "raw_text": "Manooch, C. S, III.  1984.  Fisherman's guide to the fishes of the southeastern United States.  North Carolina Museum of Natural History.  Raleigh, North Carolina.",
+      "normalized_text": "Manooch, C. S, III. 1984. Fisherman's guide to the fishes of the southeastern United States. North Carolina Museum of Natural History. Raleigh, North Carolina.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{manooch1984fishermansguide,\n  author = {Manooch, C. S, III},\n  note = {raw_reference = {Manooch, C. S, III.  1984.  Fisherman's guide to the fishes of the southeastern United States.  North Carolina Museum of Natural History.  Raleigh, North Carolina.}; ecospecies_reference_number = {2323}},\n  title = {Fisherman's guide to the fishes of the southeastern United States.  North Carolina Museum of Natural History.  Raleigh, North Carolina},\n  year = {1984},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 144,
+      "position": 8,
+      "section_heading": "Citations",
+      "legacy_reference_number": "2324",
+      "citation_key": "nakamura1981nakamuraitrichiuridae",
+      "entry_type": "misc",
+      "raw_text": "Nakamura, I. Trichiuridae. 1981  In  Fischer, W., G. Bianchi and W. B. Scott (eds), FAO species identification sheets for fishery purposes.  Eastern Central Atlantic: fishing areas 34,47 (in part). Canada Funds-in-Trust. Ottawa, Department of Fisheries and Oceans Canada, by arrangement with the Food and Agriculture Organization of the United Nations, vols. 1-7: pag.var.",
+      "normalized_text": "Nakamura, I. Trichiuridae. 1981 In Fischer, W., G. Bianchi and W. B. Scott (eds), FAO species identification sheets for fishery purposes. Eastern Central Atlantic: fishing areas 34,47 (in part). Canada Funds-in-Trust. Ottawa, Department of Fisheries and Oceans Canada, by arrangement with the Food and Agriculture Organization of the United Nations, vols. 1-7: pag.var.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{nakamura1981nakamuraitrichiuridae,\n  note = {raw_reference = {Nakamura, I. Trichiuridae. 1981  In  Fischer, W., G. Bianchi and W. B. Scott (eds), FAO species identification sheets for fishery purposes.  Eastern Central Atlantic: fishing areas 34,47 (in part). Canada Funds-in-Trust. Ottawa, Department of Fisheries and Oceans Canada, by arrangement with the Food and Agriculture Organization of the United Nations, vols. 1-7: pag.var.}; ecospecies_reference_number = {2324}},\n  title = {Nakamura, I. Trichiuridae. 1981  In  Fischer, W., G. Bianchi and W. B. Scott (eds), FAO species identification sheets for fishery purposes.  Eastern Central Atlantic: fishing areas 34,47 (in part). Canada Funds-in-Trust. Ottawa, Department of Fisheries and Oceans Canada, by arrangement with the Food and Agriculture Organization of the United Nations, vols. 1-7: pag.var.},\n  year = {1981},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 145,
+      "position": 9,
+      "section_heading": "Citations",
+      "legacy_reference_number": "1914",
+      "citation_key": "robins1991commonscientificnames",
+      "entry_type": "misc",
+      "raw_text": "Robins, C. Richard, R. M. Bailey, C.E. Bond, J. R. Brooker, E. A. Lachner, R. N. Lea, and W. B. Scott.  1991.  Common and Scientific Names of Fishes from the United States and Canada.  Fifth Edition.  American Fisheries Society.",
+      "normalized_text": "Robins, C. Richard, R. M. Bailey, C.E. Bond, J. R. Brooker, E. A. Lachner, R. N. Lea, and W. B. Scott. 1991. Common and Scientific Names of Fishes from the United States and Canada. Fifth Edition. American Fisheries Society.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{robins1991commonscientificnames,\n  author = {Robins, C. Richard, R. M. Bailey, C.E. Bond, J. R. Brooker, E. A. Lachner, R. N. Lea, and W. B. Scott},\n  note = {raw_reference = {Robins, C. Richard, R. M. Bailey, C.E. Bond, J. R. Brooker, E. A. Lachner, R. N. Lea, and W. B. Scott.  1991.  Common and Scientific Names of Fishes from the United States and Canada.  Fifth Edition.  American Fisheries Society.}; ecospecies_reference_number = {1914}},\n  title = {Common and Scientific Names of Fishes from the United States and Canada.  Fifth Edition.  American Fisheries Society},\n  year = {1991},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 146,
+      "position": 10,
+      "section_heading": "Citations",
+      "legacy_reference_number": "788",
+      "citation_key": "robins1986fieldguideatlantic",
+      "entry_type": "misc",
+      "raw_text": "Robins, C. Richard, G. Carleton Ray and John Douglass.  1986.  A field guide to Atlantic coast fishes of North America.   The Peterson field guide series; 32.  Houghton Mifflin company, Boston.",
+      "normalized_text": "Robins, C. Richard, G. Carleton Ray and John Douglass. 1986. A field guide to Atlantic coast fishes of North America. The Peterson field guide series; 32. Houghton Mifflin company, Boston.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{robins1986fieldguideatlantic,\n  author = {Robins, C. Richard, G. Carleton Ray and John Douglass},\n  note = {raw_reference = {Robins, C. Richard, G. Carleton Ray and John Douglass.  1986.  A field guide to Atlantic coast fishes of North America.   The Peterson field guide series; 32.  Houghton Mifflin company, Boston.}; ecospecies_reference_number = {788}},\n  title = {A field guide to Atlantic coast fishes of North America.   The Peterson field guide series; 32.  Houghton Mifflin company, Boston},\n  year = {1986},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 147,
+      "position": 11,
+      "section_heading": "Citations",
+      "legacy_reference_number": "2320",
+      "citation_key": "snelson1983ichthyofaunanorthernpart",
+      "entry_type": "misc",
+      "raw_text": "Snelson, Franklin F.  1983.  Ichthyofauna of the northern part of the Indian River Lagoon System, Florida.  Florida Sci. 46(3/4): 187-206.  1983.",
+      "normalized_text": "Snelson, Franklin F. 1983. Ichthyofauna of the northern part of the Indian River Lagoon System, Florida. Florida Sci. 46(3/4): 187-206. 1983.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{snelson1983ichthyofaunanorthernpart,\n  author = {Snelson, Franklin F},\n  note = {raw_reference = {Snelson, Franklin F.  1983.  Ichthyofauna of the northern part of the Indian River Lagoon System, Florida.  Florida Sci. 46(3/4): 187-206.  1983.}; ecospecies_reference_number = {2320}},\n  title = {Ichthyofauna of the northern part of the Indian River Lagoon System, Florida.  Florida Sci. 46(3/4): 187-206.  1983},\n  year = {1983},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 148,
+      "position": 12,
+      "section_heading": "Citations",
+      "legacy_reference_number": "2325",
+      "citation_key": "vergara1978romefaopag",
+      "entry_type": "misc",
+      "raw_text": "Vergara, R.R.  Trichiuridae In Fischer,  W.  (Ed.)  1978.  Rome, FAO, pag. var.  FAO species identification sheets for fishery purposes.  Western Central Atlantic (fishing area 31).  Vols. 1-7.",
+      "normalized_text": "Vergara, R.R. Trichiuridae In Fischer, W. (Ed.) 1978. Rome, FAO, pag. var. FAO species identification sheets for fishery purposes. Western Central Atlantic (fishing area 31). Vols. 1-7.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{vergara1978romefaopag,\n  author = {Vergara, R.R.  Trichiuridae In Fischer,  W.  (Ed.)},\n  note = {raw_reference = {Vergara, R.R.  Trichiuridae In Fischer,  W.  (Ed.)  1978.  Rome, FAO, pag. var.  FAO species identification sheets for fishery purposes.  Western Central Atlantic (fishing area 31).  Vols. 1-7.}; ecospecies_reference_number = {2325}},\n  title = {Rome, FAO, pag. var.  FAO species identification sheets for fishery purposes.  Western Central Atlantic (fishing area 31).  Vols. 1-7},\n  year = {1978},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    }
+  ],
+  "structured_document": {
+    "source_format": "ecospecies-markdown-v1",
+    "updated_by": "system-import",
+    "node_count": 16,
+    "ast": {
+      "metadata": {
+        "title": "Atlantic cutlassfish (Trichiurus lepturus)",
+        "common_name": "Atlantic Cutlassfish",
+        "scientific_name": "Trichiurus lepturus",
+        "legacy_identifiers": [
+          {
+            "authority": "legacy-ecospecies",
+            "identifier": "1959",
+            "label": "FLELMR"
+          }
+        ],
+        "taxon_identifiers": [],
+        "primary_taxon_authority": "",
+        "source_file": "Atlantic Cutlass Fish SLH  RGG.txt",
+        "publication_status": "published",
+        "source_format": "ecospecies-markdown-v1"
+      },
+      "nodes": [
+        {
+          "node_type": "section",
+          "title": "Revisions",
+          "body": "June 15, 1994.  D.M. S.; Harbor Branch Oceanograhic Institution\nJuly 20, 1996.  R. G. Gilmore; Harbor Branch Oceanographic Institution\n\nFLELMR CODE:  1959",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "TAXONOMY",
+          "body": "Common Name: Atlantic Cutlassfish\nScientific Name: Trichiurus lepturus",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Classification",
+          "body": "Phylum: Chordata\n\tClass: Osteichthyes\n\tOrder: Perciformes\n\tFamily: Trichiuridae",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Other Common Names",
+          "body": "Ribbonfish (327)\n\nOther:\tReference for Scientific Name (Linneaus 1758)\n\tReference for Classification (1914)",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "VALUE & STATUS",
+          "body": "Commercial:  Some commercial value in the Caribbean mainly Cuba, Jamaica and Venezuela (2325).\nRecreational:  Small Trichiurus are used for trolling bait for kingfish (327).\nEcological:  Seasonally one of the most abundant estuarine predators within the Indian River Lagoon (Gilmore pers. obs.)\nIndicator:  Not known",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "GEOGRAPHIC RANGE",
+          "body": "Overall: Found in tropical and warm temperate waters of the world, except for the eastern Pacific where found only from Mexico to Panama (2325 327).  In the western Atlantic it is found from Cape Cod to Northern Gulf of Mexico and Argentina (788 2325 327).\nWithin Study Area:  Found throughout the Indian River Lagoon (2320 848 993 1814).\nMigrations and Movements:\nTrichiurus is a nocturnal vertical migrator, remaining on the bottom during the day and moving to the surface at night.   Also may move off shore in the fall (2321).\nLife Mode:  A benthopelagic, euryhaline, vertically migrating predatory fish of neritic and estuarine waters.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Habitat Type",
+          "body": "Mostly benthopelagic or bottom-living and pelagic.  Can be found on continental shelf and slope to 500 m or in shallow coastal areas, estuaries and bays with muddy bottom (2325 2321).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Substrate",
+          "body": "Benthic, muddy bottoms (2321).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Physical/Chemical",
+          "body": "Has been collected in water temperatures as low as 16.5 degrees C (1814).  Salinity range from 4.5 ppt ? seawater, but associated with salinity above 16 ppt (1814 2321).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Reproductive Mode",
+          "body": "Gonochoristic, oviparous, iteroparous.\nMating/Spawning::\nSpawning occurs offshore at depths greater than 46 m (2321).  Spawns off the Florida coast April - May and July - December (Herrema 1985).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Fecundity",
+          "body": "Adult females carry 33,000 - 85,000 eggs (2321).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "GROWTH",
+          "body": "Egg:    Eggs are pelagic with a diameter of 1.7 - 1.9 mm (2321).\nLarvae:  Hatch as yolk-sac larvae at 5.5 - 6.5 mm.   Reaches 7 mm in 3 days along with yolk-sac absorption.  Larval stage is from 7.0 - 59 mm (2321).\nJuvenile:  Juvenile stage 59-240 mm (2321).\nAdult:  Trichiurus reaches 250 mm by the end of the first year. After three years can reach 700 mm in Gulf of Mexico.  In the northwest African population Trichiurus can reach 470 mm (47 cm) in the first year and reach 1400 mm (140 cm) in 8 years (2321). Ten to 40% of the population can reach maturity in one year and all of the population is mature by 5 years (2321).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "FOOD HABITS",
+          "body": "Feeds mainly on fish and sometimes on crustaceans and cephalopods (2321 2324).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "ECOLOGICAL INTERACTIONS",
+          "body": "Predation: Large schools of cutlass fish migrate seasonally (spring-summer) through the Indian River Lagoon preying on a variety of fishes (RGG pers. obs.).\nFactors Influencing Populations:  Cutlass fish are in turn consumed by tarpon, Megalops atlanticus and are caught by recreational fisherman (2323).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "References Numbers",
+          "body": "327 788 848 993 1814 1914 2320 2321 2322 2323 2324",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Citations",
+          "body": "2321 Fritzsche, Ronald E.  1978. Development of fishes of the mid-Atlantic bight. An atlas of egg, larval and juvenile stages. Vol. V.  Chaetodontidae through Ophidiidae. U.S. Fish and Wildlife Service.  FWS/OBS - 78/12.\n\n848 Gilmore, R. Grant  Jr., 1977.  Fishes of the Indian River Lagoon and adjacent waters, Florida.   Bull. Fla. State Mus. Biol. Sci. 22:101-148.\n\n993 Gilmore, R.  Grant Jr.  1988.  Subtropical seagrass fish communities:  Population dynamics, species guilds and microhabitat associations in the Indian River Lagoon, Florida.  Dissertation.  Florida Institute of Technology.  199 p.\n\n1814 Gunter, G. and G. E. Hall.  1963.  Biological investigations of the St. Lucie estuary (Florida) in connection with Lake Okeechobee discharge through the St. Lucie Canal.  Gulf Res. Rept. 2(1): 1-77.\n\n2322 Herrema, David J., Bruce D. Perry, Nancy Williams-Walls, and J. Ross Wilcox.  1985.  Spawning periods of common inshore fishes on the Florida east coast. Northeast Gulf Sci. 7:153-155.\n\n327 Hoese, H. Dickinson and Richard H. Moore. 1977.  Fishes of the Gulf of Mexico, Texas, Louisiana, and adjacent waters.   Texas A&M Univ. Press, College Station.\n\n2323 Manooch, C. S, III.  1984.  Fisherman's guide to the fishes of the southeastern United States.  North Carolina Museum of Natural History.  Raleigh, North Carolina.\n\n2324 Nakamura, I. Trichiuridae. 1981  In  Fischer, W., G. Bianchi and W. B. Scott (eds), FAO species identification sheets for fishery purposes.  Eastern Central Atlantic: fishing areas 34,47 (in part). Canada Funds-in-Trust. Ottawa, Department of Fisheries and Oceans Canada, by arrangement with the Food and Agriculture Organization of the United Nations, vols. 1-7: pag.var.\n\n1914 Robins, C. Richard, R. M. Bailey, C.E. Bond, J. R. Brooker, E. A. Lachner, R. N. Lea, and W. B. Scott.  1991.  Common and Scientific Names of Fishes from the United States and Canada.  Fifth Edition.  American Fisheries Society.\n\n788 Robins, C. Richard, G. Carleton Ray and John Douglass.  1986.  A field guide to Atlantic coast fishes of North America.   The Peterson field guide series; 32.  Houghton Mifflin company, Boston.\n\n2320 Snelson, Franklin F.  1983.  Ichthyofauna of the northern part of the Indian River Lagoon System, Florida.  Florida Sci. 46(3/4): 187-206.  1983.\n\n2325 Vergara, R.R.  Trichiuridae In Fischer,  W.  (Ed.)  1978.  Rome, FAO, pag. var.  FAO species identification sheets for fishery purposes.  Western Central Atlantic (fishing area 31).  Vols. 1-7.",
+          "depth": 2,
+          "children": []
+        }
+      ]
+    }
+  },
+  "legacy_source": null,
+  "sections": [
+    {
+      "id": 42,
+      "position": 1,
+      "heading": "HEADER",
+      "content": "Title:  Atlantic cutlassfish (Trichiurus lepturus)"
+    },
+    {
+      "id": 43,
+      "position": 2,
+      "heading": "Revisions",
+      "content": "June 15, 1994.  D.M. S.; Harbor Branch Oceanograhic Institution\nJuly 20, 1996.  R. G. Gilmore; Harbor Branch Oceanographic Institution\n\nFLELMR CODE:  1959"
+    },
+    {
+      "id": 44,
+      "position": 3,
+      "heading": "TAXONOMY",
+      "content": "Common Name: Atlantic Cutlassfish\nScientific Name: Trichiurus lepturus"
+    },
+    {
+      "id": 45,
+      "position": 4,
+      "heading": "Classification",
+      "content": "Phylum: Chordata\n\tClass: Osteichthyes\n\tOrder: Perciformes\n\tFamily: Trichiuridae"
+    },
+    {
+      "id": 46,
+      "position": 5,
+      "heading": "Other Common Names",
+      "content": "Ribbonfish (327)\n\nOther:\tReference for Scientific Name (Linneaus 1758)\n\tReference for Classification (1914)"
+    },
+    {
+      "id": 47,
+      "position": 6,
+      "heading": "VALUE & STATUS",
+      "content": "Commercial:  Some commercial value in the Caribbean mainly Cuba, Jamaica and Venezuela (2325).\nRecreational:  Small Trichiurus are used for trolling bait for kingfish (327).\nEcological:  Seasonally one of the most abundant estuarine predators within the Indian River Lagoon (Gilmore pers. obs.)\nIndicator:  Not known"
+    },
+    {
+      "id": 48,
+      "position": 7,
+      "heading": "GEOGRAPHIC RANGE",
+      "content": "Overall: Found in tropical and warm temperate waters of the world, except for the eastern Pacific where found only from Mexico to Panama (2325 327).  In the western Atlantic it is found from Cape Cod to Northern Gulf of Mexico and Argentina (788 2325 327).\nWithin Study Area:  Found throughout the Indian River Lagoon (2320 848 993 1814).\nMigrations and Movements:\nTrichiurus is a nocturnal vertical migrator, remaining on the bottom during the day and moving to the surface at night.   Also may move off shore in the fall (2321).\nLife Mode:  A benthopelagic, euryhaline, vertically migrating predatory fish of neritic and estuarine waters."
+    },
+    {
+      "id": 49,
+      "position": 8,
+      "heading": "Habitat Type",
+      "content": "Mostly benthopelagic or bottom-living and pelagic.  Can be found on continental shelf and slope to 500 m or in shallow coastal areas, estuaries and bays with muddy bottom (2325 2321)."
+    },
+    {
+      "id": 50,
+      "position": 9,
+      "heading": "Substrate",
+      "content": "Benthic, muddy bottoms (2321)."
+    },
+    {
+      "id": 51,
+      "position": 10,
+      "heading": "Physical/Chemical",
+      "content": "Has been collected in water temperatures as low as 16.5 degrees C (1814).  Salinity range from 4.5 ppt ? seawater, but associated with salinity above 16 ppt (1814 2321)."
+    },
+    {
+      "id": 52,
+      "position": 11,
+      "heading": "Reproductive Mode",
+      "content": "Gonochoristic, oviparous, iteroparous.\nMating/Spawning::\nSpawning occurs offshore at depths greater than 46 m (2321).  Spawns off the Florida coast April - May and July - December (Herrema 1985)."
+    },
+    {
+      "id": 53,
+      "position": 12,
+      "heading": "Fecundity",
+      "content": "Adult females carry 33,000 - 85,000 eggs (2321)."
+    },
+    {
+      "id": 54,
+      "position": 13,
+      "heading": "GROWTH",
+      "content": "Egg:    Eggs are pelagic with a diameter of 1.7 - 1.9 mm (2321).\nLarvae:  Hatch as yolk-sac larvae at 5.5 - 6.5 mm.   Reaches 7 mm in 3 days along with yolk-sac absorption.  Larval stage is from 7.0 - 59 mm (2321).\nJuvenile:  Juvenile stage 59-240 mm (2321).\nAdult:  Trichiurus reaches 250 mm by the end of the first year. After three years can reach 700 mm in Gulf of Mexico.  In the northwest African population Trichiurus can reach 470 mm (47 cm) in the first year and reach 1400 mm (140 cm) in 8 years (2321). Ten to 40% of the population can reach maturity in one year and all of the population is mature by 5 years (2321)."
+    },
+    {
+      "id": 55,
+      "position": 14,
+      "heading": "FOOD HABITS",
+      "content": "Feeds mainly on fish and sometimes on crustaceans and cephalopods (2321 2324)."
+    },
+    {
+      "id": 56,
+      "position": 15,
+      "heading": "ECOLOGICAL INTERACTIONS",
+      "content": "Predation: Large schools of cutlass fish migrate seasonally (spring-summer) through the Indian River Lagoon preying on a variety of fishes (RGG pers. obs.).\nFactors Influencing Populations:  Cutlass fish are in turn consumed by tarpon, Megalops atlanticus and are caught by recreational fisherman (2323)."
+    },
+    {
+      "id": 57,
+      "position": 16,
+      "heading": "References Numbers",
+      "content": "327 788 848 993 1814 1914 2320 2321 2322 2323 2324"
+    },
+    {
+      "id": 58,
+      "position": 17,
+      "heading": "Citations",
+      "content": "2321 Fritzsche, Ronald E.  1978. Development of fishes of the mid-Atlantic bight. An atlas of egg, larval and juvenile stages. Vol. V.  Chaetodontidae through Ophidiidae. U.S. Fish and Wildlife Service.  FWS/OBS - 78/12.\n\n848 Gilmore, R. Grant  Jr., 1977.  Fishes of the Indian River Lagoon and adjacent waters, Florida.   Bull. Fla. State Mus. Biol. Sci. 22:101-148.\n\n993 Gilmore, R.  Grant Jr.  1988.  Subtropical seagrass fish communities:  Population dynamics, species guilds and microhabitat associations in the Indian River Lagoon, Florida.  Dissertation.  Florida Institute of Technology.  199 p.\n\n1814 Gunter, G. and G. E. Hall.  1963.  Biological investigations of the St. Lucie estuary (Florida) in connection with Lake Okeechobee discharge through the St. Lucie Canal.  Gulf Res. Rept. 2(1): 1-77.\n\n2322 Herrema, David J., Bruce D. Perry, Nancy Williams-Walls, and J. Ross Wilcox.  1985.  Spawning periods of common inshore fishes on the Florida east coast. Northeast Gulf Sci. 7:153-155.\n\n327 Hoese, H. Dickinson and Richard H. Moore. 1977.  Fishes of the Gulf of Mexico, Texas, Louisiana, and adjacent waters.   Texas A&M Univ. Press, College Station.\n\n2323 Manooch, C. S, III.  1984.  Fisherman's guide to the fishes of the southeastern United States.  North Carolina Museum of Natural History.  Raleigh, North Carolina.\n\n2324 Nakamura, I. Trichiuridae. 1981  In  Fischer, W., G. Bianchi and W. B. Scott (eds), FAO species identification sheets for fishery purposes.  Eastern Central Atlantic: fishing areas 34,47 (in part). Canada Funds-in-Trust. Ottawa, Department of Fisheries and Oceans Canada, by arrangement with the Food and Agriculture Organization of the United Nations, vols. 1-7: pag.var.\n\n1914 Robins, C. Richard, R. M. Bailey, C.E. Bond, J. R. Brooker, E. A. Lachner, R. N. Lea, and W. B. Scott.  1991.  Common and Scientific Names of Fishes from the United States and Canada.  Fifth Edition.  American Fisheries Society.\n\n788 Robins, C. Richard, G. Carleton Ray and John Douglass.  1986.  A field guide to Atlantic coast fishes of North America.   The Peterson field guide series; 32.  Houghton Mifflin company, Boston.\n\n2320 Snelson, Franklin F.  1983.  Ichthyofauna of the northern part of the Indian River Lagoon System, Florida.  Florida Sci. 46(3/4): 187-206.  1983.\n\n2325 Vergara, R.R.  Trichiuridae In Fischer,  W.  (Ed.)  1978.  Rome, FAO, pag. var.  FAO species identification sheets for fishery purposes.  Western Central Atlantic (fishing area 31).  Vols. 1-7."
+    }
+  ]
+}

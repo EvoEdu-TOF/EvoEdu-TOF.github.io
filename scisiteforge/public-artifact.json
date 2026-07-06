@@ -1,6 +1,6 @@
 {
   "schema": "scisiteforge.public_artifact.v1",
-  "generated_at": "2026-07-06T01:57:13.711073+00:00",
+  "generated_at": "2026-07-06T08:16:40.726295+00:00",
   "site": "evo-edu.org",
   "candidate": "current",
   "dynamic_routes": [
@@ -182,7 +182,7 @@
     "public search and future dynamic learner state should use public-safe corpora or private app directories, not the static artifact as a private data store"
   ],
   "copy_stats": {
-    "copied_files": 426,
+    "copied_files": 523,
     "sanitized_files": [
       "/notebook/bibliography/pe-bib.json",
       "/notebook/bibliography/pe-biblio.json",

@@ -1,0 +1,392 @@
+{
+  "slug": "atlantic-spadefish",
+  "source_file": "Atlantic Spadefish SLH Mote.txt",
+  "title": "Atlantic Spadefish SLH Mote",
+  "common_name": "Atlantic spadefish",
+  "scientific_name": "Chaetodipterus faber",
+  "flelmr_code": "1761",
+  "legacy_identifiers": [
+    {
+      "authority": "legacy-ecospecies",
+      "identifier": "1761",
+      "label": "FLELMR"
+    }
+  ],
+  "taxon_identifiers": [],
+  "primary_taxon_authority": "",
+  "primary_taxon_identifier": null,
+  "summary": "",
+  "section_count": 14,
+  "citation_count": 8,
+  "publication_status": "published",
+  "is_archived": false,
+  "editor_notes": "",
+  "last_modified_by": "system-import",
+  "diagnostics": [],
+  "citations": [
+    {
+      "id": 175,
+      "position": 1,
+      "section_heading": "Citations",
+      "legacy_reference_number": "255",
+      "citation_key": "gunter1945studiesmarinefishes",
+      "entry_type": "misc",
+      "raw_text": "Gunter, G.. 1945. Studies on marine fishes of Texas. Publ. Inst. Mar.Sci. l(1): 190.",
+      "normalized_text": "Gunter, G.. 1945. Studies on marine fishes of Texas. Publ. Inst. Mar.Sci. l(1): 190.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gunter1945studiesmarinefishes,\n  author = {Gunter, G},\n  note = {raw_reference = {Gunter, G.. 1945. Studies on marine fishes of Texas. Publ. Inst. Mar.Sci. l(1): 190.}; ecospecies_reference_number = {255}},\n  title = {Studies on marine fishes of Texas. Publ. Inst. Mar.Sci. l(1): 190},\n  year = {1945},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 176,
+      "position": 2,
+      "section_heading": "Citations",
+      "legacy_reference_number": "312",
+      "citation_key": "hildebrand1928fisheschesapeakebay",
+      "entry_type": "misc",
+      "raw_text": "Hildebrand, S.F. and W.C. Schroeder. 1928. Fishes of Chesapeake Bay.Bull. U.S. Bur. Fish. 43: 1-366.",
+      "normalized_text": "Hildebrand, S.F. and W.C. Schroeder. 1928. Fishes of Chesapeake Bay.Bull. U.S. Bur. Fish. 43: 1-366.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{hildebrand1928fisheschesapeakebay,\n  author = {Hildebrand, S.F. and W.C. Schroeder},\n  howpublished = {U.S. Bur. Fish},\n  note = {raw_reference = {Hildebrand, S.F. and W.C. Schroeder. 1928. Fishes of Chesapeake Bay.Bull. U.S. Bur. Fish. 43: 1-366.}; ecospecies_reference_number = {312}},\n  pages = {1-366},\n  title = {Fishes of Chesapeake Bay.Bull},\n  volume = {43},\n  year = {1928},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 177,
+      "position": 3,
+      "section_heading": "Citations",
+      "legacy_reference_number": "314",
+      "citation_key": "hildebrand1938furthernotesdevelopment",
+      "entry_type": "misc",
+      "raw_text": "Hildebrand, S.F. and L.E. Cable. 1938. Further notes on the development and life history of some teleosts in Beaufort, North Carolina. Fish. Bull. 48: 505-642.",
+      "normalized_text": "Hildebrand, S.F. and L.E. Cable. 1938. Further notes on the development and life history of some teleosts in Beaufort, North Carolina. Fish. Bull. 48: 505-642.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{hildebrand1938furthernotesdevelopment,\n  author = {Hildebrand, S.F. and L.E. Cable},\n  howpublished = {Bull},\n  note = {raw_reference = {Hildebrand, S.F. and L.E. Cable. 1938. Further notes on the development and life history of some teleosts in Beaufort, North Carolina. Fish. Bull. 48: 505-642.}; ecospecies_reference_number = {314}},\n  pages = {505-642},\n  title = {Further notes on the development and life history of some teleosts in Beaufort, North Carolina. Fish},\n  volume = {48},\n  year = {1938},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 178,
+      "position": 4,
+      "section_heading": "Citations",
+      "legacy_reference_number": "327",
+      "citation_key": "hoese1977fishesgulfmexico",
+      "entry_type": "misc",
+      "raw_text": "Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.",
+      "normalized_text": "Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{hoese1977fishesgulfmexico,\n  author = {Hoese, H.D. and R.H. Moore},\n  note = {raw_reference = {Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.}; ecospecies_reference_number = {327}},\n  title = {Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327},\n  year = {1977},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 179,
+      "position": 5,
+      "section_heading": "Citations",
+      "legacy_reference_number": "363",
+      "citation_key": "johnson1978developmentfishesmid",
+      "entry_type": "misc",
+      "raw_text": "Johnson, G.D.. 1978. Development of fishes of the mid-Atlantic Bight, an atlas of egg, larval and juvenile stages. Vol. IV. Carangidae through Ephippidae.. US Fish and Wildlife Biological Service Program FWSIOBS-72/12: 31 1 .",
+      "normalized_text": "Johnson, G.D.. 1978. Development of fishes of the mid-Atlantic Bight, an atlas of egg, larval and juvenile stages. Vol. IV. Carangidae through Ephippidae.. US Fish and Wildlife Biological Service Program FWSIOBS-72/12: 31 1 .",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{johnson1978developmentfishesmid,\n  author = {Johnson, G.D},\n  note = {raw_reference = {Johnson, G.D.. 1978. Development of fishes of the mid-Atlantic Bight, an atlas of egg, larval and juvenile stages. Vol. IV. Carangidae through Ephippidae.. US Fish and Wildlife Biological Service Program FWSIOBS-72/12: 31 1 .}; ecospecies_reference_number = {363}},\n  title = {Development of fishes of the mid-Atlantic Bight, an atlas of egg, larval and juvenile stages. Vol. IV. Carangidae through Ephippidae.. US Fish and Wildlife Biological Service Program FWSIOBS-72/12: 31 1},\n  year = {1978},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 180,
+      "position": 6,
+      "section_heading": "Citations",
+      "legacy_reference_number": "581",
+      "citation_key": "reidjr1954ecologicalstudygulf",
+      "entry_type": "misc",
+      "raw_text": "Reid Jr., G.K. 1954. An ecological study of the Gulf of Mexico fishes, in the vicinity of Cedar Key, Florida. Bull. Mar. Sci. of the Gulf and Carib.4(1): 1-94.",
+      "normalized_text": "Reid Jr., G.K. 1954. An ecological study of the Gulf of Mexico fishes, in the vicinity of Cedar Key, Florida. Bull. Mar. Sci. of the Gulf and Carib.4(1): 1-94.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{reidjr1954ecologicalstudygulf,\n  author = {Reid Jr., G.K},\n  howpublished = {Bull. Mar. Sci. of the Gulf and Carib.4(1): 1-94},\n  note = {raw_reference = {Reid Jr., G.K. 1954. An ecological study of the Gulf of Mexico fishes, in the vicinity of Cedar Key, Florida. Bull. Mar. Sci. of the Gulf and Carib.4(1): 1-94.}; ecospecies_reference_number = {581}},\n  title = {An ecological study of the Gulf of Mexico fishes, in the vicinity of Cedar Key, Florida},\n  year = {1954},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 181,
+      "position": 7,
+      "section_heading": "Citations",
+      "legacy_reference_number": "603",
+      "citation_key": "roessler1970checklistfishesbuttonwood",
+      "entry_type": "misc",
+      "raw_text": "Roessler, M.A. 1970. Checklist of fishes in Buttonwood Canal, Everglades National Park, Florida and observations on the seasonal occurrence and life histories of selected species. Bull. Mar. Sci. 20(4): 860-893.",
+      "normalized_text": "Roessler, M.A. 1970. Checklist of fishes in Buttonwood Canal, Everglades National Park, Florida and observations on the seasonal occurrence and life histories of selected species. Bull. Mar. Sci. 20(4): 860-893.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{roessler1970checklistfishesbuttonwood,\n  author = {Roessler, M.A},\n  howpublished = {Bull. Mar. Sci},\n  note = {raw_reference = {Roessler, M.A. 1970. Checklist of fishes in Buttonwood Canal, Everglades National Park, Florida and observations on the seasonal occurrence and life histories of selected species. Bull. Mar. Sci. 20(4): 860-893.}; ecospecies_reference_number = {603}},\n  number = {4},\n  pages = {860-893},\n  title = {Checklist of fishes in Buttonwood Canal, Everglades National Park, Florida and observations on the seasonal occurrence and life histories of selected species},\n  volume = {20},\n  year = {1970},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 182,
+      "position": 8,
+      "section_heading": "Citations",
+      "legacy_reference_number": "664",
+      "citation_key": "springer1960ecologicalstudyfishes",
+      "entry_type": "misc",
+      "raw_text": "Springer, V.G. and K.D. Woodburn. 1960. An ecological study of the fishes of the Tampa Bay area. Fla. St. Bd. Conser. Prof. Pap. Ser. No. 1: 104.",
+      "normalized_text": "Springer, V.G. and K.D. Woodburn. 1960. An ecological study of the fishes of the Tampa Bay area. Fla. St. Bd. Conser. Prof. Pap. Ser. No. 1: 104.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{springer1960ecologicalstudyfishes,\n  author = {Springer, V.G. and K.D. Woodburn},\n  journal = {Pap. Ser. No},\n  note = {raw_reference = {Springer, V.G. and K.D. Woodburn. 1960. An ecological study of the fishes of the Tampa Bay area. Fla. St. Bd. Conser. Prof. Pap. Ser. No. 1: 104.}; ecospecies_reference_number = {664}},\n  pages = {104},\n  title = {An ecological study of the fishes of the Tampa Bay area. Fla. St. Bd. Conser. Prof},\n  volume = {1},\n  year = {1960},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    }
+  ],
+  "structured_document": {
+    "source_format": "ecospecies-markdown-v1",
+    "updated_by": "system-import",
+    "node_count": 13,
+    "ast": {
+      "metadata": {
+        "title": "Atlantic Spadefish SLH Mote",
+        "common_name": "Atlantic spadefish",
+        "scientific_name": "Chaetodipterus faber",
+        "legacy_identifiers": [
+          {
+            "authority": "legacy-ecospecies",
+            "identifier": "1761",
+            "label": "FLELMR"
+          }
+        ],
+        "taxon_identifiers": [],
+        "primary_taxon_authority": "",
+        "source_file": "Atlantic Spadefish SLH Mote.txt",
+        "publication_status": "published",
+        "source_format": "ecospecies-markdown-v1"
+      },
+      "nodes": [
+        {
+          "node_type": "section",
+          "title": "Updates",
+          "body": "January 7, 1993.  T.D. Phillips; Mote Marine Laboratory\n\nSCIENTIFIC NAME: Chaetodipterus faber\nCOMMON NAME: Atlantic spadefish\nOTHER COMMON NAMES: angelfish (312 327 6641, porgy (3121, moonfish (312 8341, porgee (834).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "CLASSIFICATION",
+          "body": "Phylum: Chordata\n      Class: Osteichthys\n      Order: Perciformes\n      Family: Ephippidae",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "VALUE",
+          "body": "Commercial: Historical information indicates that if was found “frequently” in markets at Norfolk, Virginia (312) and also found in markets in New York and Washington (834) during the early part of this century. It is caught incidentally throughout its range, mainly on hook and line (791). Usually marketed fresh, the flesh is said to be of good quality (791).\n\nRecreational: It is caught by anglers and speared by divers (327); readily takes a baited hook (871). The flesh is said to be firm, to keep well, and to have a fine flavor (871). It is reported to be a good food fish (791 932) and “held in high regard” (327).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "RANGE",
+          "body": "Overall: Distributed from Cape Cod, Massachusetts, through the northern Gulf of Mexico to southeastern Brazil including the Caribbean (327 788 791). Introduced to Bermuda (791 871 932 1037).\n\nWithin Study Area: Found throughout Florida waters (791). Collected year-round in south Florida (1373).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "MOVEMENTS/MIGRATIONS",
+          "body": "Apparently some seasonal onshore-offshore movement. Occur in shallow water during warmer months, but rarely found in waters of less than about 11 m during the cooler, winter months (255 312 833 1030 1387). Appears in May at Beaufort, NC and departs for deeper water in early October (314). Moves offshore in winter in the Tampa Bay area (664). Occurs year-round at Key West but is most common during the summer (314).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "LIFE MODE",
+          "body": "Young float at the surface and mimic debris (327). Juveniles in black phase have been found on white sand in shallow waters, inclined to one side, resembling dead leaves, black gastropods, or black infertile red mangrove seed pods (791 871). Adults often occur in small schools (791 9321, but also are found in “very large schools” in open waters (327 788 791). Bohlke and Chapman (871) reported large schools of 500 or more in water deeper than 35 ft (10.7 m) in the Bahamas.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "HABITAT",
+          "body": "Type: Find in a variety of habitats including harbors, sandy beaches and offshore (788). Hayse (841) collected spadefish from a variety of habitats along the South Carolina coast. He found that fish collected in estuarine habitats were young-of-the-year, fish from nearshore habitats less than 20 m deep were predominantly age 1 although age-0 fish were collected there in increasing numbers from late summer through fall, and fish taken from offshore artificial reefs and the jetties of a coastal inlet were all adults (841).\nSubstrate: Lives near mangroves, on sandy beaches, and around wrecks (788). Also found around jetties and wharves, pilings, and under bridges (327 791 871). Juveniles are frequently found over bottoms consisting of mud or sand and shell with patches of live bottom (841). Larger individuals are often found offshore near artificial and natural reefs, wrecks, and oil rigs (327 841 871).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Temperature",
+          "body": "Eggs/Larvae: No information\nJuvenile/adults: In Texas, collected at temperatures from 12.0 C in Galveston Bay (1383) to 30.6 C in Cedar Bayou (1384). Reported by Gunter (255) at temperatures from 17.1 to 29 C in Texas. In Florida, collected at 10.0-28.9 C at Cedar Key (581), 19.5-32.5 C in Tampa Bay (664), 19.9 - 33.5 C at Matecumbe Key (8001, and 24.5-31.3 C at Jupiter Inlet (887). In south Florida, taken at temperatures from 10.0 to 33.5 C (603).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Salinity",
+          "body": "Eggs/Larvae: No information\nJuvenile/adults: Gunter (255) said the species prefers high salinities, but Wang and\nRaney (789) found spadefish to be common and widespread, particularly at low salinity stations. Collected in Tampa Bay at salinities from 20.3 to 33.4 % (664). In south Florida, taken in salinities from 4.0 to 43.3 % (603). Collected elsewhere in Florida in salinities of 24.0-31.5 % at Cedar Key (5811, 31-35 % in Everglades National Park (702), 18-35 % in the Caloosahatchee river (2651, 18-35 % at Matecumbe Key (8001, and 4.5-43.3 % at Jupiter Inlet (887). Reported in Texas from 4.0 (1385) to 35.8 % (255 1386). Reported from low salinities in other parts of its range including 4 % in North Carolina (936).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REPRODUCTION",
+          "body": "Repro Mode: Fertilization is external, viviparous.\nMating & spawning: Spawning apparently occurs offshore (312). Chapman (1381) described aggregations of spadefish approximately 37 km ESE of Sapelo Sound, Ga. In which pairs of individuals engaged in “mouth pushing` followed by the pair making a helical ascent to the surface, and he concluded that this behavior was associated with spawning. In South Carolina, Hayse (841) found that the male to female sex ratio did not vary significantly from 1:l. Maturity is reportedly reached after age 2 at about 135 mm (314). However, Hayse (841) reported that 64% of age-0 males he collected in South Carolina, and all males age 1 and older were mature. He also found that all age-0 females were immature, but all females age 1 and older were mature (841). He described a May through September spawning period in South Carolina waters, and stated that some females spawned more than once during this period (841). A spring and summer spawning season occurs in the Tampa Bay area (664) and at Alligator Harbor, FL (1030).  Reid (581) also described a spring spawning season at Cedar Key. Along the Atlantic coast spawning probably occurs during summer as far north as Maryland (905) and spawning occurs in the summer in Chesapeake Bay (314).\n\nReproductive capacity: A single female is reported to produce one million eggs in one season (1388).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "GROWTH & DEVELOPMENT",
+          "body": "Eggs/Larvae: Ryder (1388) provided the only information, primarily descriptions, on eggs and early larvae. The identity of the specimens he described, however, is questionable (363).\nJuveniles: In south Florida, Roessler (1373) reported that monthly length varied from 25-33mm in summer to 75-85mm in October, and he collected a group of larger fish (198mm) in November. Reported to reach a length of 55-100 mm during first summer in North Carolina waters (314).\nAdults: Hayse (841) reported the following mean standard lengths-at-age for South Carolina fish: age 0 - 67mm, age 1 - 133mm, age 2 - 216mm, age 3 - 250mm, age 4 - 332mm, age 5 - 367mm, age 6 - 369mm, age 7 - no fish collected, and age 8 - 405mm.  The following geometric mean regression equations for weight (gms) vs. length (mm) and for TL vs. SL have been calculated for fish collected in South Carolina (841):\n\nAn equation for TL (mm) vs. otolith radius (OR) expressed as ocular units (1 ocular unit = 0.04mm) was also calculated (841):\n\n[eq]\n \tTL = 13.5 + 0.1 (OR) ;\tr^2=0.9 3;\t n=634\n[/eq]\n\nSpadefish growth rates were found to differ little between sexes. A von Bertalanffy growth equation derived from back-calculated mean total length at age was also calculated (841):\n\n[eqcheck]\n \t l(t) = 490(1-Ea(-0.34(t+O.l8)1)\n[/eqcheck]\nwhere t is age in years and l(t) is total length at age.\n\nThe oldest fish collected in South Carolina waters was age 8 (841). Said to attain a maximum size of 91 cm (327 788 871 932 9451, and a maximum weight of 9.lkg (871 932).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "FOOD & FEEDING",
+          "body": "No information available about food habits of larvae (841). Juveniles feed upon plant debris and minute crustaceans (312). In South Carolina, spadefish eat mostly hydroids, anthozoans such as sea anemones and sea pansies, and polychaete tentacles (841). Major changes in diet with increasing size were not apparent; fish as small as 19mm SL fed primarily on hydroids (841). Hayse (841) collected many of his specimens by hook-and-line baited with the jellyfish Stomolophus meleagris. Only one of his specimens collected by spear fishing and nets contained jellyfish, leading him to conclude that while jellyfish are part of the diet, they may not be as important as indicated by hook-and-line sampling. Randall and Hartman (1382) found that spadefish feed on zoantharians, polychaetes, and tunicates. Sponges also form a portion of the diet (841 1382). Adults are also reported to eat small crustaceans and worms (834), and shellfish (788)\n\nReference Numbers: 255 312 314 327 363 581 603 664",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Citations",
+          "body": "255, Gunter, G.. 1945. Studies on marine fishes of Texas. Publ. Inst. Mar.Sci. l(1): 190.\n\n312, Hildebrand, S.F. and W.C. Schroeder. 1928. Fishes of Chesapeake Bay.Bull. U.S. Bur. Fish. 43: 1-366.\n\n314, Hildebrand, S.F. and L.E. Cable. 1938. Further notes on the development and life history of some teleosts in Beaufort, North Carolina. Fish. Bull. 48: 505-642.\n\n327, Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.\n\n363, Johnson, G.D.. 1978. Development of fishes of the mid-Atlantic Bight, an atlas of egg, larval and juvenile stages. Vol. IV. Carangidae through Ephippidae.. US Fish and Wildlife Biological Service Program FWSIOBS-72/12: 31 1 .\n\n581, Reid Jr., G.K. 1954. An ecological study of the Gulf of Mexico fishes, in the vicinity of Cedar Key, Florida. Bull. Mar. Sci. of the Gulf and Carib.4(1): 1-94.\n\n603, Roessler, M.A. 1970. Checklist of fishes in Buttonwood Canal, Everglades National Park, Florida and observations on the seasonal occurrence and life histories of selected species. Bull. Mar. Sci. 20(4): 860-893.\n\n664, Springer, V.G. and K.D. Woodburn. 1960. An ecological study of the fishes of the Tampa Bay area. Fla. St. Bd. Conser. Prof. Pap. Ser. No. 1: 104.",
+          "depth": 2,
+          "children": []
+        }
+      ]
+    }
+  },
+  "legacy_source": null,
+  "sections": [
+    {
+      "id": 74,
+      "position": 1,
+      "heading": "HEADER",
+      "content": "SPECIES PROFILE:  Atlantic Spadefish (Chaetodipterus faber)\nFLELMR CODE: 1761"
+    },
+    {
+      "id": 75,
+      "position": 2,
+      "heading": "Updates",
+      "content": "January 7, 1993.  T.D. Phillips; Mote Marine Laboratory\n\nSCIENTIFIC NAME: Chaetodipterus faber\nCOMMON NAME: Atlantic spadefish\nOTHER COMMON NAMES: angelfish (312 327 6641, porgy (3121, moonfish (312 8341, porgee (834)."
+    },
+    {
+      "id": 76,
+      "position": 3,
+      "heading": "CLASSIFICATION",
+      "content": "Phylum: Chordata\n      Class: Osteichthys\n      Order: Perciformes\n      Family: Ephippidae"
+    },
+    {
+      "id": 77,
+      "position": 4,
+      "heading": "VALUE",
+      "content": "Commercial: Historical information indicates that if was found “frequently” in markets at Norfolk, Virginia (312) and also found in markets in New York and Washington (834) during the early part of this century. It is caught incidentally throughout its range, mainly on hook and line (791). Usually marketed fresh, the flesh is said to be of good quality (791).\n\nRecreational: It is caught by anglers and speared by divers (327); readily takes a baited hook (871). The flesh is said to be firm, to keep well, and to have a fine flavor (871). It is reported to be a good food fish (791 932) and “held in high regard” (327)."
+    },
+    {
+      "id": 78,
+      "position": 5,
+      "heading": "RANGE",
+      "content": "Overall: Distributed from Cape Cod, Massachusetts, through the northern Gulf of Mexico to southeastern Brazil including the Caribbean (327 788 791). Introduced to Bermuda (791 871 932 1037).\n\nWithin Study Area: Found throughout Florida waters (791). Collected year-round in south Florida (1373)."
+    },
+    {
+      "id": 79,
+      "position": 6,
+      "heading": "MOVEMENTS/MIGRATIONS",
+      "content": "Apparently some seasonal onshore-offshore movement. Occur in shallow water during warmer months, but rarely found in waters of less than about 11 m during the cooler, winter months (255 312 833 1030 1387). Appears in May at Beaufort, NC and departs for deeper water in early October (314). Moves offshore in winter in the Tampa Bay area (664). Occurs year-round at Key West but is most common during the summer (314)."
+    },
+    {
+      "id": 80,
+      "position": 7,
+      "heading": "LIFE MODE",
+      "content": "Young float at the surface and mimic debris (327). Juveniles in black phase have been found on white sand in shallow waters, inclined to one side, resembling dead leaves, black gastropods, or black infertile red mangrove seed pods (791 871). Adults often occur in small schools (791 9321, but also are found in “very large schools” in open waters (327 788 791). Bohlke and Chapman (871) reported large schools of 500 or more in water deeper than 35 ft (10.7 m) in the Bahamas."
+    },
+    {
+      "id": 81,
+      "position": 8,
+      "heading": "HABITAT",
+      "content": "Type: Find in a variety of habitats including harbors, sandy beaches and offshore (788). Hayse (841) collected spadefish from a variety of habitats along the South Carolina coast. He found that fish collected in estuarine habitats were young-of-the-year, fish from nearshore habitats less than 20 m deep were predominantly age 1 although age-0 fish were collected there in increasing numbers from late summer through fall, and fish taken from offshore artificial reefs and the jetties of a coastal inlet were all adults (841).\nSubstrate: Lives near mangroves, on sandy beaches, and around wrecks (788). Also found around jetties and wharves, pilings, and under bridges (327 791 871). Juveniles are frequently found over bottoms consisting of mud or sand and shell with patches of live bottom (841). Larger individuals are often found offshore near artificial and natural reefs, wrecks, and oil rigs (327 841 871)."
+    },
+    {
+      "id": 82,
+      "position": 9,
+      "heading": "Temperature",
+      "content": "Eggs/Larvae: No information\nJuvenile/adults: In Texas, collected at temperatures from 12.0 C in Galveston Bay (1383) to 30.6 C in Cedar Bayou (1384). Reported by Gunter (255) at temperatures from 17.1 to 29 C in Texas. In Florida, collected at 10.0-28.9 C at Cedar Key (581), 19.5-32.5 C in Tampa Bay (664), 19.9 - 33.5 C at Matecumbe Key (8001, and 24.5-31.3 C at Jupiter Inlet (887). In south Florida, taken at temperatures from 10.0 to 33.5 C (603)."
+    },
+    {
+      "id": 83,
+      "position": 10,
+      "heading": "Salinity",
+      "content": "Eggs/Larvae: No information\nJuvenile/adults: Gunter (255) said the species prefers high salinities, but Wang and\nRaney (789) found spadefish to be common and widespread, particularly at low salinity stations. Collected in Tampa Bay at salinities from 20.3 to 33.4 % (664). In south Florida, taken in salinities from 4.0 to 43.3 % (603). Collected elsewhere in Florida in salinities of 24.0-31.5 % at Cedar Key (5811, 31-35 % in Everglades National Park (702), 18-35 % in the Caloosahatchee river (2651, 18-35 % at Matecumbe Key (8001, and 4.5-43.3 % at Jupiter Inlet (887). Reported in Texas from 4.0 (1385) to 35.8 % (255 1386). Reported from low salinities in other parts of its range including 4 % in North Carolina (936)."
+    },
+    {
+      "id": 84,
+      "position": 11,
+      "heading": "REPRODUCTION",
+      "content": "Repro Mode: Fertilization is external, viviparous.\nMating & spawning: Spawning apparently occurs offshore (312). Chapman (1381) described aggregations of spadefish approximately 37 km ESE of Sapelo Sound, Ga. In which pairs of individuals engaged in “mouth pushing` followed by the pair making a helical ascent to the surface, and he concluded that this behavior was associated with spawning. In South Carolina, Hayse (841) found that the male to female sex ratio did not vary significantly from 1:l. Maturity is reportedly reached after age 2 at about 135 mm (314). However, Hayse (841) reported that 64% of age-0 males he collected in South Carolina, and all males age 1 and older were mature. He also found that all age-0 females were immature, but all females age 1 and older were mature (841). He described a May through September spawning period in South Carolina waters, and stated that some females spawned more than once during this period (841). A spring and summer spawning season occurs in the Tampa Bay area (664) and at Alligator Harbor, FL (1030).  Reid (581) also described a spring spawning season at Cedar Key. Along the Atlantic coast spawning probably occurs during summer as far north as Maryland (905) and spawning occurs in the summer in Chesapeake Bay (314).\n\nReproductive capacity: A single female is reported to produce one million eggs in one season (1388)."
+    },
+    {
+      "id": 85,
+      "position": 12,
+      "heading": "GROWTH & DEVELOPMENT",
+      "content": "Eggs/Larvae: Ryder (1388) provided the only information, primarily descriptions, on eggs and early larvae. The identity of the specimens he described, however, is questionable (363).\nJuveniles: In south Florida, Roessler (1373) reported that monthly length varied from 25-33mm in summer to 75-85mm in October, and he collected a group of larger fish (198mm) in November. Reported to reach a length of 55-100 mm during first summer in North Carolina waters (314).\nAdults: Hayse (841) reported the following mean standard lengths-at-age for South Carolina fish: age 0 - 67mm, age 1 - 133mm, age 2 - 216mm, age 3 - 250mm, age 4 - 332mm, age 5 - 367mm, age 6 - 369mm, age 7 - no fish collected, and age 8 - 405mm.  The following geometric mean regression equations for weight (gms) vs. length (mm) and for TL vs. SL have been calculated for fish collected in South Carolina (841):\n\nAn equation for TL (mm) vs. otolith radius (OR) expressed as ocular units (1 ocular unit = 0.04mm) was also calculated (841):\n\n[eq]\n \tTL = 13.5 + 0.1 (OR) ;\tr^2=0.9 3;\t n=634\n[/eq]\n\nSpadefish growth rates were found to differ little between sexes. A von Bertalanffy growth equation derived from back-calculated mean total length at age was also calculated (841):\n\n[eqcheck]\n \t l(t) = 490(1-Ea(-0.34(t+O.l8)1)\n[/eqcheck]\nwhere t is age in years and l(t) is total length at age.\n\nThe oldest fish collected in South Carolina waters was age 8 (841). Said to attain a maximum size of 91 cm (327 788 871 932 9451, and a maximum weight of 9.lkg (871 932)."
+    },
+    {
+      "id": 86,
+      "position": 13,
+      "heading": "FOOD & FEEDING",
+      "content": "No information available about food habits of larvae (841). Juveniles feed upon plant debris and minute crustaceans (312). In South Carolina, spadefish eat mostly hydroids, anthozoans such as sea anemones and sea pansies, and polychaete tentacles (841). Major changes in diet with increasing size were not apparent; fish as small as 19mm SL fed primarily on hydroids (841). Hayse (841) collected many of his specimens by hook-and-line baited with the jellyfish Stomolophus meleagris. Only one of his specimens collected by spear fishing and nets contained jellyfish, leading him to conclude that while jellyfish are part of the diet, they may not be as important as indicated by hook-and-line sampling. Randall and Hartman (1382) found that spadefish feed on zoantharians, polychaetes, and tunicates. Sponges also form a portion of the diet (841 1382). Adults are also reported to eat small crustaceans and worms (834), and shellfish (788)\n\nReference Numbers: 255 312 314 327 363 581 603 664"
+    },
+    {
+      "id": 87,
+      "position": 14,
+      "heading": "Citations",
+      "content": "255, Gunter, G.. 1945. Studies on marine fishes of Texas. Publ. Inst. Mar.Sci. l(1): 190.\n\n312, Hildebrand, S.F. and W.C. Schroeder. 1928. Fishes of Chesapeake Bay.Bull. U.S. Bur. Fish. 43: 1-366.\n\n314, Hildebrand, S.F. and L.E. Cable. 1938. Further notes on the development and life history of some teleosts in Beaufort, North Carolina. Fish. Bull. 48: 505-642.\n\n327, Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.\n\n363, Johnson, G.D.. 1978. Development of fishes of the mid-Atlantic Bight, an atlas of egg, larval and juvenile stages. Vol. IV. Carangidae through Ephippidae.. US Fish and Wildlife Biological Service Program FWSIOBS-72/12: 31 1 .\n\n581, Reid Jr., G.K. 1954. An ecological study of the Gulf of Mexico fishes, in the vicinity of Cedar Key, Florida. Bull. Mar. Sci. of the Gulf and Carib.4(1): 1-94.\n\n603, Roessler, M.A. 1970. Checklist of fishes in Buttonwood Canal, Everglades National Park, Florida and observations on the seasonal occurrence and life histories of selected species. Bull. Mar. Sci. 20(4): 860-893.\n\n664, Springer, V.G. and K.D. Woodburn. 1960. An ecological study of the fishes of the Tampa Bay area. Fla. St. Bd. Conser. Prof. Pap. Ser. No. 1: 104."
+    }
+  ]
+}

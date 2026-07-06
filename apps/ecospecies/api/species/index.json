@@ -1,0 +1,1853 @@
+{
+  "items": [
+    {
+      "slug": "alabama-shad",
+      "title": "Alabama Shad (Alosa alabamae)",
+      "common_name": "Alabama Shad",
+      "scientific_name": "Alosa alabamae",
+      "flelmr_code": "1152",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1152",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 18,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "american-oyster",
+      "title": "American Oyster SLH NOAA SEA",
+      "common_name": "American Oyster",
+      "scientific_name": "Crassostrea virginica",
+      "flelmr_code": "5192",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "5192",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 10,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "atlantic-croaker",
+      "title": "Atlantic Croaker SLH NOAA SEA",
+      "common_name": "Atlantic Croaker",
+      "scientific_name": "Micropogonias undulates",
+      "flelmr_code": "1733",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1733",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 13,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "atlantic-cutlassfish",
+      "title": "Atlantic cutlassfish (Trichiurus lepturus)",
+      "common_name": "Atlantic Cutlassfish",
+      "scientific_name": "Trichiurus lepturus",
+      "flelmr_code": "1959",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1959",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 17,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "atlantic-thread-herring",
+      "title": "Atlantic Thread Herring (Opisthonema oglinum)",
+      "common_name": "Atlantic Thread Herring",
+      "scientific_name": "Opisthonema oglinum",
+      "flelmr_code": "1169",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1169",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 13,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "atlantic-menhaden",
+      "title": "Atlantic Menhaden (Brevoortia tyrannus)",
+      "common_name": "Atlantic menhaden",
+      "scientific_name": "Brevoortia tyrannus",
+      "flelmr_code": "1160",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1160",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "atlantic-spadefish",
+      "title": "Atlantic Spadefish SLH Mote",
+      "common_name": "Atlantic spadefish",
+      "scientific_name": "Chaetodipterus faber",
+      "flelmr_code": "1761",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1761",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 14,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "bay-scallop",
+      "title": "Bay Scallop SLH NOAA SEA",
+      "common_name": "Bay Scallop",
+      "scientific_name": "Argopecten irradians",
+      "flelmr_code": "5190",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "5190",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 12,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "bay-squid",
+      "title": "Bay Squid SLH  NOAA SEA",
+      "common_name": "Bay Squid",
+      "scientific_name": "Loliguncula brevis",
+      "flelmr_code": "5186",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "5186",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 9,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "bay-whiff",
+      "title": "Bay Whiff (Citharichthys spilopterus)",
+      "common_name": "Bay Whiff",
+      "scientific_name": "Citharichthys spilopterus",
+      "flelmr_code": "2073",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "2073",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 14,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "bay-anchovy",
+      "title": "Bay anchovy (Anchoa mitchilli)",
+      "common_name": "Bay anchovy",
+      "scientific_name": "Anchoa mitchilli (Cuvier and Vanciennes 1848, listed in 1533)",
+      "flelmr_code": "1180",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1180",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 26,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "black-drum",
+      "title": "Black Drum SLH NOAA SEA",
+      "common_name": "Black drum",
+      "scientific_name": "Pogonias cromis",
+      "flelmr_code": "1734",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1734",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 16,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "blacktip-shark",
+      "title": "Blacktip Shark (Carcharhinus limbatus) Life History",
+      "common_name": "Blacktip shark",
+      "scientific_name": "Carcharhinus limbatus",
+      "flelmr_code": "0933",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "0933",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "blue-mussel",
+      "title": "Blue Mussel (Mytilus edulis)",
+      "common_name": "Blue Mussel",
+      "scientific_name": "Mytilus edulis",
+      "flelmr_code": "5196",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "5196",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 16,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "blue-runner",
+      "title": "Blue Runner SLH Mote",
+      "common_name": "Blue Runner",
+      "scientific_name": "Caranx crysos",
+      "flelmr_code": "1624",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1624",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 16,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "blue-crab",
+      "title": "Blue Crab SLH NOAA SEA",
+      "common_name": "Blue crab",
+      "scientific_name": "Callinectes sapidus",
+      "flelmr_code": "5660",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "5660",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 11,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "bluefish",
+      "title": "Bluefish SLH Mote",
+      "common_name": "Bluefish",
+      "scientific_name": "Pomatomus saltatrix",
+      "flelmr_code": "1609",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1609",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 12,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "bonnethead-shark",
+      "title": "Bonnethead Shark (Sphyrna tiburo)",
+      "common_name": "Bonnethead shark",
+      "scientific_name": "Sphyrna tiburo",
+      "flelmr_code": "0948",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "0948",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 19,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "brown-shrimp",
+      "title": "Brown Shrimp SLH NOAA SEA",
+      "common_name": "Brown Shrimp",
+      "scientific_name": "Penaeus aztecus",
+      "flelmr_code": "5588",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "5588",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 11,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "bull-shark",
+      "title": "Bull Shark (Carcharhinus leucas)",
+      "common_name": "Bull shark",
+      "scientific_name": "Carcharhinus leucas",
+      "flelmr_code": "0932",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "0932",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 18,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "clown-goby",
+      "title": "Clown goby (Microgobius gulosus)",
+      "common_name": "Clown Goby",
+      "scientific_name": "Microgobius gulosus",
+      "flelmr_code": "1948",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1948",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "cobia",
+      "title": "Cobia (Rachycentron canadum)",
+      "common_name": "Cobia",
+      "scientific_name": "Rachycentron canadum",
+      "flelmr_code": "1611",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1611",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 17,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "code-goby",
+      "title": "Code Goby (Gobiosoma robustum)",
+      "common_name": "Code Goby",
+      "scientific_name": "Gobiosoma robustum",
+      "flelmr_code": "1946",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1946",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 17,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "common-rangia",
+      "title": "Common Rangia (Rangia cuneata)",
+      "common_name": "Common Rangia",
+      "scientific_name": "Rangia cuneata",
+      "flelmr_code": "5198",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "5198",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 16,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "common-snook",
+      "title": "Common Snook (Centropomus undecimalis)",
+      "common_name": "Common Snook",
+      "scientific_name": "Centropomus undecimalis",
+      "flelmr_code": "1499",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1499",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 37,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "crevalle-jack",
+      "title": "Crevalle jack (Caranx hippos)",
+      "common_name": "Crevalle Jack",
+      "scientific_name": "Caranx hippos",
+      "flelmr_code": "1625",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1625",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 18,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "darter-goby",
+      "title": "Darter goby (Ctenogobius boleosoma)",
+      "common_name": "Darter goby",
+      "scientific_name": "Ctenogobius boleosoma",
+      "flelmr_code": "1927",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1927",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 13,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "eastern-mosquitofish",
+      "title": "Eastern mosquitofish (Gambusia holbrooki)",
+      "common_name": "Eastern mosquitofish",
+      "scientific_name": "Gambusia holbrooki",
+      "flelmr_code": "1432",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1432",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "florida-pompano",
+      "title": "Florida pompano (Trachinotus carolinus)",
+      "common_name": "Florida Pompano",
+      "scientific_name": "Trachinotus carolinus",
+      "flelmr_code": "1644",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1644",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 16,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "gafftopsail-catfish",
+      "title": "Gafftopsail catfish (Bagre marinus)",
+      "common_name": "Gafftopsail catfish",
+      "scientific_name": "Bagre marinus",
+      "flelmr_code": "1302",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1302",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 16,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "gag-grouper",
+      "title": "Mycteroperca microlepis",
+      "common_name": "Gag Grouper",
+      "scientific_name": "Mycteroperca microlepis",
+      "flelmr_code": "1527",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1527",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 18,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "gizzard-shad",
+      "title": "Gizzard shad (Dorosoma cepedianum)",
+      "common_name": "Gizzard shad",
+      "scientific_name": "Dorosoma cepedianum",
+      "flelmr_code": "1162",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1162",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "goldspotted-killifish",
+      "title": "Goldspotted Killifish (Floridichthys carpio)",
+      "common_name": "Goldspotted Killifish",
+      "scientific_name": "Floridichthys carpio",
+      "flelmr_code": "1398",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1398",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "grass-shrimp",
+      "title": "Grass shrimp (Palaemonetes pugio)",
+      "common_name": "Grass Shrimp",
+      "scientific_name": "Palaemonetes pugio",
+      "flelmr_code": "5575",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "5575",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 14,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "gray-snapper",
+      "title": "Gray snapper (Lutjanus griseus)",
+      "common_name": "Gray Snapper",
+      "scientific_name": "Lutjanus griseus",
+      "flelmr_code": "1659",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1659",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 17,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "gulf-killifish",
+      "title": "Gulf Killifish (Fundulus grandis)",
+      "common_name": "Gulf Killifish",
+      "scientific_name": "Fundulus grandis",
+      "flelmr_code": "1406",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1406",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "gulf-menhaden",
+      "title": "Gulf Menhaden (Brevoortia patronus)",
+      "common_name": "Gulf Menhaden",
+      "scientific_name": "Brevoortia patronus",
+      "flelmr_code": "1158",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1158",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 16,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "gulf-flounder",
+      "title": "Gulf Flounder (Paralichthys albigutta)",
+      "common_name": "Gulf flounder",
+      "scientific_name": "Paralichthys albigutta",
+      "flelmr_code": "2990",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "2990",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 14,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "gulf-pipefish",
+      "title": "Gulf Pipefish (Syngnathus scovelli)",
+      "common_name": "Gulf pipefish",
+      "scientific_name": "Syngnathus scovelli",
+      "flelmr_code": "1493",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1493",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "gulf-stone-crab",
+      "title": "Gulf Stone Crab (Menippe adina)",
+      "common_name": "Gulf stone crab",
+      "scientific_name": "Menippe adina",
+      "flelmr_code": "5679",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "5679",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 17,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "hard-clam",
+      "title": "Hard Clam (Mercenaria mercenaria)",
+      "common_name": "Hard Clam",
+      "scientific_name": "Mercenaria mercenaria",
+      "flelmr_code": "5194",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "5194",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 11,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "hardhead-catfish",
+      "title": "Hardhead Catfish (Arius felis)",
+      "common_name": "Hardhead catfish",
+      "scientific_name": "Arius felis",
+      "flelmr_code": "1301",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1301",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 17,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "hogchoker",
+      "title": "Hogchoker (Trinectes maculatus)",
+      "common_name": "Hogchoker",
+      "scientific_name": "Trinectes maculatus",
+      "flelmr_code": "3035",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "3035",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 19,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "irish-pompano",
+      "title": "Irish pompano (Diapterus auratus)",
+      "common_name": "Irish pompano",
+      "scientific_name": "Diapterus auratus (=olisthostomus)",
+      "flelmr_code": "1670",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1670",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "jewfish",
+      "title": "Jewfish (Epinephelus itajara)",
+      "common_name": "Jewfish",
+      "scientific_name": "Epinephelus itajara",
+      "flelmr_code": "1520",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1520",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "ladyfish",
+      "title": "Ladyfish (Elops saurus)",
+      "common_name": "Ladyfish",
+      "scientific_name": "Elops saurus",
+      "flelmr_code": "1051",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1051",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 17,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "lane-snapper",
+      "title": "Lane Snapper (Lutjanus synagris)",
+      "common_name": "Lane Snapper",
+      "scientific_name": "Lutjanus synagris",
+      "flelmr_code": "1662",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1662",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "lined-sole",
+      "title": "Lined Sole (Achirus lineatus)",
+      "common_name": "Lined Sole",
+      "scientific_name": "Achirus lineatus",
+      "flelmr_code": "3031",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "3031",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 16,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "marsh-killifish",
+      "title": "Marsh Killifish (Fundulus confluentus)",
+      "common_name": "Marsh Killifish",
+      "scientific_name": "Fundulus confluentus",
+      "flelmr_code": "1404",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1404",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "mutton-snapper",
+      "title": "Mutton Snapper (Lutjanus analis)",
+      "common_name": "Mutton Snapper",
+      "scientific_name": "Lutjanus analis",
+      "flelmr_code": "1654",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1654",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "naked-goby",
+      "title": "Naked goby",
+      "common_name": "Naked goby",
+      "scientific_name": "Gobiosoma bosci",
+      "flelmr_code": "1939",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1939",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "pigfish",
+      "title": "Pigfish (Orthopristis chrysoptera)",
+      "common_name": "Pigfish",
+      "scientific_name": "Orthopristes chrysoptera",
+      "flelmr_code": "1696",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1696",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 16,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "pinfish",
+      "title": "Pinfish (Lagodon rhomboides)",
+      "common_name": "Pinfish",
+      "scientific_name": "Lagodon rhomboides",
+      "flelmr_code": "1712",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1712",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 27,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "pink-shrimp",
+      "title": "Pink shrimp (Penaeus duorarum)",
+      "common_name": "Pink shrimp",
+      "scientific_name": "Penaeus duoraum",
+      "flelmr_code": "5590",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "5590",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 16,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "rainwater-killifish",
+      "title": "Rainwater Killifish (Lucania parva)",
+      "common_name": "Rainwater Killifish",
+      "scientific_name": "Lucania parva",
+      "flelmr_code": "1428",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1428",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 14,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "red-drum",
+      "title": "Red drum (Sciaenops ocellatus)",
+      "common_name": "Red Drum",
+      "scientific_name": "Sciaenops ocellatus",
+      "flelmr_code": "1735",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1735",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 18,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "red-grouper",
+      "title": "Red Grouper (Epinephelus morio)",
+      "common_name": "Red Grouper",
+      "scientific_name": "Epinephelus morio",
+      "flelmr_code": "1521",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1521",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 16,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "red-snapper-red-snapper-slh-outline2012-0722",
+      "title": "Species Profile Red Snapper (Lutjanus campechanus)",
+      "common_name": "Red Snapper",
+      "scientific_name": "Lutjanus campechanus (Poey, 1860)",
+      "flelmr_code": "",
+      "legacy_identifiers": [],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 47,
+      "diagnostic_count": 1
+    },
+    {
+      "slug": "red-snapper-redsnapper-slh-2012-0830-combined",
+      "title": "Species Profile Red Snapper (Lutjanus campechanus)",
+      "common_name": "Red Snapper",
+      "scientific_name": "Lutjanus campechanus (2794)",
+      "flelmr_code": "168853",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "168853",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 56,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "sailfin-molly-sailfin-molly-slh-rgg",
+      "title": "Sailfin molly (Poecilia latipinna)",
+      "common_name": "Sailfin molly",
+      "scientific_name": "Poecilia latipinna",
+      "flelmr_code": "1436",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1436",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 14,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "sailfin-molly-sailfin-molly-slh-rgg-7695590c",
+      "title": "Sailfin molly (Poecilia latipinna)",
+      "common_name": "Sailfin molly",
+      "scientific_name": "Poecilia latipinna",
+      "flelmr_code": "1436",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1436",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "sailor-s-choice",
+      "title": "Sailor's choice (Haemulon parra)",
+      "common_name": "Sailor's choice",
+      "scientific_name": "Haemulon parra",
+      "flelmr_code": "1692",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1692",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "sand-seatrout",
+      "title": "Sand Seatrout (Cynoscion arenarius).",
+      "common_name": "Sand Seatrout",
+      "scientific_name": "Cynoscion arenarlus",
+      "flelmr_code": "",
+      "legacy_identifiers": [],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 16,
+      "diagnostic_count": 1
+    },
+    {
+      "slug": "scaled-sardine",
+      "title": "Scaled sardine (Harengula jaguana)",
+      "common_name": "Scaled sardine",
+      "scientific_name": "Harengula jaguana",
+      "flelmr_code": "1167",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1167",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 17,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "sheepshead",
+      "title": "Sheepshead (Archosargus probatocephalus)",
+      "common_name": "Sheepshead",
+      "scientific_name": "Archosargus probatocephalus",
+      "flelmr_code": "1701",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1701",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 28,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "sheepshead-minnow",
+      "title": "Sheepshead minnow (Cyprinodon variegatus)",
+      "common_name": "Sheepshead minnow",
+      "scientific_name": "Cyprinodon variegatus",
+      "flelmr_code": "1396",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1396",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 13,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "silver-jenny",
+      "title": "Silver Jenny (Eucinostomus gula)",
+      "common_name": "Silver Jenny",
+      "scientific_name": "Eucinostomus gula",
+      "flelmr_code": "1673",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1673",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 17,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "silver-perch",
+      "title": "Silver Perch (Bairdiella chrysoura)",
+      "common_name": "Silver Perch",
+      "scientific_name": "",
+      "flelmr_code": "1717",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1717",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 17,
+      "diagnostic_count": 1
+    },
+    {
+      "slug": "silverstripe-halfbeak",
+      "title": "Silverstripe halfbeak (Hyporhamphus unifasciatus)",
+      "common_name": "Silverstripe halfbeak",
+      "scientific_name": "Hyporhamphus unifasciatus",
+      "flelmr_code": "1368",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1368",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 16,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "southern-flounder",
+      "title": "Southern flounder (Paralichthys lethostigma)",
+      "common_name": "Southern flounder",
+      "scientific_name": "Paralichthys lethostigma",
+      "flelmr_code": "2992",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "2992",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 18,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "spanish-mackerel",
+      "title": "Spanish Mackerel (Scomberomorus maculatus)",
+      "common_name": "Spanish Mackerel",
+      "scientific_name": "Scomberomorus maculatus",
+      "flelmr_code": "1970",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1970",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 17,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "spanish-sardine",
+      "title": "Spanish sardine, Sardinella aurita",
+      "common_name": "Spanish sardine",
+      "scientific_name": "Sardinella aurita Valenciennes 1847",
+      "flelmr_code": "1170",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1170",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 14,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "spiny-lobster",
+      "title": "Spiny Lobster (Panulirus argus)",
+      "common_name": "Spiny Lobster",
+      "scientific_name": "Panulirus argus",
+      "flelmr_code": "5585",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "5585",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 17,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "spot",
+      "title": "Spot (Leiostomus xanthurus)",
+      "common_name": "Spot",
+      "scientific_name": "Leiostomus xanthurus",
+      "flelmr_code": "1728",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1728",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 16,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "spotfin-mojarra",
+      "title": "spotfin mojarra (Eucinostomus argenteus)",
+      "common_name": "Spotfin mojarra",
+      "scientific_name": "Eucinostomus argenteus",
+      "flelmr_code": "1672",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1672",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 14,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "stone-crab",
+      "title": "Stone crab (Menippe mercenaria)",
+      "common_name": "Stone Crab",
+      "scientific_name": "Menippe mercenaria",
+      "flelmr_code": "5680",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "5680",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "striped-mullet",
+      "title": "Striped mullet (Mugil cephalus)",
+      "common_name": "Striped Mullet",
+      "scientific_name": "Mugil cephalus",
+      "flelmr_code": "1832",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1832",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 16,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "striped-mojarra",
+      "title": "Striped mojarra (Eugerres plumieri)",
+      "common_name": "Striped mojarra",
+      "scientific_name": "Eugerres plumieri",
+      "flelmr_code": "1671",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1671",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 17,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "summer-flounder",
+      "title": "Summer flounder (Paralichthys dentatus)",
+      "common_name": "Summer flounder",
+      "scientific_name": "Paralichthys dentatus",
+      "flelmr_code": "2991",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "2991",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 14,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "tarpon",
+      "title": "Tarpon (Megalops atlanticus)",
+      "common_name": "Tarpon",
+      "scientific_name": "Megalops atlanticus",
+      "flelmr_code": "1052",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1052",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 17,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "tidewater-silversides",
+      "title": "Inland Silversides (Menidia beryllina)",
+      "common_name": "Tidewater Silversides",
+      "scientific_name": "Menidia beryllina",
+      "flelmr_code": "1447",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1447",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 16,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "tripletail",
+      "title": "Tripletail (Lobotes surinamensis)",
+      "common_name": "Tripletail",
+      "scientific_name": "Lobotes surinamensis",
+      "flelmr_code": "1668",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1668",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "weakfish",
+      "title": "Weakfish (Cynoscion regalis)",
+      "common_name": "Weakfish",
+      "scientific_name": "Cynoscion regalis (Bloch and Schneider 1801)",
+      "flelmr_code": "1722",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1722",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 13,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "white-shrimp",
+      "title": "White Shrimp (Penaeus setiferus)",
+      "common_name": "White Shrimp",
+      "scientific_name": "Penaeus setiferus",
+      "flelmr_code": "5591",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "5591",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 14,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "white-grunt",
+      "title": "White grunt (Haemulon plumieri)",
+      "common_name": "White grunt",
+      "scientific_name": "Haemulon plumieri",
+      "flelmr_code": "1693",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1693",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "white-mullet",
+      "title": "White mullet (Mugil curema)",
+      "common_name": "White mullet",
+      "scientific_name": "Mugil curema",
+      "flelmr_code": "1833",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1833",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 13,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "yellowfin-menhaden",
+      "title": "Yellowfin menhaden (Brevoortia smithi)",
+      "common_name": "Yellowfin menhaden",
+      "scientific_name": "Brevoortia smithi",
+      "flelmr_code": "1159",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1159",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 14,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "black-sea-bass",
+      "title": "Black Sea Bass SLH Mote",
+      "common_name": "black sea bass",
+      "scientific_name": "",
+      "flelmr_code": "1515",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1515",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 17,
+      "diagnostic_count": 1
+    },
+    {
+      "slug": "great-barracuda",
+      "title": "Great Barracuda (Sphyraena barracuda)",
+      "common_name": "great barracuda",
+      "scientific_name": "Sphyraena barracuda",
+      "flelmr_code": "1838",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1838",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 16,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "lemon-shark",
+      "title": "Lemon Shark (Negaprion brevirostris)",
+      "common_name": "lemon shark",
+      "scientific_name": "Negaprion brevirostris",
+      "flelmr_code": "0942",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "0942",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 14,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "permit",
+      "title": "Permit (Trachinotus falcatus)",
+      "common_name": "permit",
+      "scientific_name": "Trachinotus falcatus",
+      "flelmr_code": "1645",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1645",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 16,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "southern-kingfish",
+      "title": "Southern Kingfish (Menticirrhus americanus)",
+      "common_name": "southern kingfish",
+      "scientific_name": "Menticirrhus americanus",
+      "flelmr_code": "1729",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1729",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 15,
+      "diagnostic_count": 0
+    },
+    {
+      "slug": "spotted-seatrout",
+      "title": "Spotted Seatrout (Cynoscion nebulosus)",
+      "common_name": "spotted Seatrout",
+      "scientific_name": "Cynoscion nebulosus",
+      "flelmr_code": "1720",
+      "legacy_identifiers": [
+        {
+          "authority": "legacy-ecospecies",
+          "identifier": "1720",
+          "label": "FLELMR"
+        }
+      ],
+      "taxon_identifiers": [],
+      "primary_taxon_authority": "",
+      "primary_taxon_identifier": null,
+      "summary": "",
+      "section_count": 35,
+      "diagnostic_count": 0
+    }
+  ],
+  "count": 93
+}

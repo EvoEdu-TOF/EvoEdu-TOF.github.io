@@ -16,6 +16,40 @@ const bibliographyStatus = document.querySelector("#bibliography-status");
 const bibliographyDownload = document.querySelector("#bibliography-download");
 let currentBibliographyItems = [];
 
+function resolveStaticApiPath(path) {
+  const [route] = String(path || "").split("?");
+  if (route === "/api/bibliography") {
+    return "/api/bibliography/index.json";
+  }
+  return null;
+}
+
+async function readJsonResponse(response) {
+  const text = await response.text();
+  try {
+    return { data: text ? JSON.parse(text) : {}, jsonOk: true };
+  } catch (error) {
+    return { data: { error: text || String(error) }, jsonOk: false };
+  }
+}
+
+async function fetchJsonWithStaticFallback(path) {
+  const response = await fetch(`${apiBase}${path}`);
+  const { data, jsonOk } = await readJsonResponse(response);
+  if (response.ok && jsonOk) {
+    return { response, data, staticFallback: false };
+  }
+
+  const staticPath = resolveStaticApiPath(path);
+  if (!staticPath) {
+    return { response, data, staticFallback: false };
+  }
+
+  const staticResponse = await fetch(`${apiBase}${staticPath}`);
+  const { data: staticData } = await readJsonResponse(staticResponse);
+  return { response: staticResponse, data: staticData, staticFallback: staticResponse.ok };
+}
+
 function escapeHtml(value) {
   return String(value)
     .replaceAll("&", "&amp;")
@@ -197,8 +231,7 @@ function renderBibliography(items) {
 async function loadBibliography(search = "") {
   bibliographyStatus.textContent = "Loading bibliography...";
   const query = search ? `?search=${encodeURIComponent(search)}` : "";
-  const response = await fetch(`${apiBase}/api/bibliography${query}`);
-  const data = await response.json();
+  const { response, data, staticFallback } = await fetchJsonWithStaticFallback(`/api/bibliography${query}`);
   if (!response.ok) {
     bibliographyList.innerHTML = `<p class="error">${escapeHtml(data.error || "Unable to load bibliography.")}</p>`;
     bibliographyStatus.textContent = data.error || "Bibliography load failed";
@@ -206,9 +239,22 @@ async function loadBibliography(search = "") {
   }
 
   currentBibliographyItems = data.items || [];
+  if (staticFallback && search) {
+    const needle = search.toLowerCase();
+    currentBibliographyItems = currentBibliographyItems.filter((item) => {
+      return [
+        item.normalized_text || "",
+        item.raw_text || "",
+        item.citation_key || "",
+        item.doi || "",
+        item.abstract_text || "",
+        item.draft_bibtex || "",
+      ].some((value) => String(value).toLowerCase().includes(needle));
+    });
+  }
   renderBibliography(currentBibliographyItems);
   syncDownloadButton(currentBibliographyItems);
-  bibliographyStatus.textContent = `${data.count || 0} bibliography entr${data.count === 1 ? "y" : "ies"}`;
+  bibliographyStatus.textContent = `${currentBibliographyItems.length} bibliography entr${currentBibliographyItems.length === 1 ? "y" : "ies"}`;
 }
 
 bibliographySearch.addEventListener("input", async (event) => {

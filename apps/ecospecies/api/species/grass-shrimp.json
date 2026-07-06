@@ -1,0 +1,332 @@
+{
+  "slug": "grass-shrimp",
+  "source_file": "Grass Shrimp SLH NOAA SEA.txt",
+  "title": "Grass shrimp (Palaemonetes pugio)",
+  "common_name": "Grass Shrimp",
+  "scientific_name": "Palaemonetes pugio",
+  "flelmr_code": "5575",
+  "legacy_identifiers": [
+    {
+      "authority": "legacy-ecospecies",
+      "identifier": "5575",
+      "label": "FLELMR"
+    }
+  ],
+  "taxon_identifiers": [],
+  "primary_taxon_authority": "",
+  "primary_taxon_identifier": null,
+  "summary": "",
+  "section_count": 14,
+  "citation_count": 5,
+  "publication_status": "published",
+  "is_archived": false,
+  "editor_notes": "",
+  "last_modified_by": "system-import",
+  "diagnostics": [],
+  "citations": [
+    {
+      "id": 1209,
+      "position": 1,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "10",
+      "citation_key": "anderson1986speciesprofileslife",
+      "entry_type": "misc",
+      "raw_text": "Anderson, G.. 1986. Species profiles: life histories and environmental requirements of coastal fishes and invertebrates (Gulf of Mexico) -- grass shrimp. USFWSIBR-82(11.35).",
+      "normalized_text": "Anderson, G.. 1986. Species profiles: life histories and environmental requirements of coastal fishes and invertebrates (Gulf of Mexico) -- grass shrimp. USFWSIBR-82(11.35).",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{anderson1986speciesprofileslife,\n  author = {Anderson, G},\n  note = {raw_reference = {Anderson, G.. 1986. Species profiles: life histories and environmental requirements of coastal fishes and invertebrates (Gulf of Mexico) -- grass shrimp. USFWSIBR-82(11.35).}; ecospecies_reference_number = {10}},\n  title = {Species profiles: life histories and environmental requirements of coastal fishes and invertebrates (Gulf of Mexico) -- grass shrimp. USFWSIBR-82(11.35)},\n  year = {1986},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1210,
+      "position": 2,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "73",
+      "citation_key": "broad1957larvaldevelopmentpalaemonetes",
+      "entry_type": "misc",
+      "raw_text": "Broad, A.C. 1957. Larval development of Palaemonetes pugio Holthuis. Biological Bulletin (Woods Hole) 1 12: 144-1 61.",
+      "normalized_text": "Broad, A.C. 1957. Larval development of Palaemonetes pugio Holthuis. Biological Bulletin (Woods Hole) 1 12: 144-1 61.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{broad1957larvaldevelopmentpalaemonetes,\n  author = {Broad, A.C},\n  howpublished = {Bulletin (Woods Hole) 1 12: 144-1 61},\n  note = {raw_reference = {Broad, A.C. 1957. Larval development of Palaemonetes pugio Holthuis. Biological Bulletin (Woods Hole) 1 12: 144-1 61.}; ecospecies_reference_number = {73}},\n  title = {Larval development of Palaemonetes pugio Holthuis. Biological},\n  year = {1957},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1211,
+      "position": 3,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "288",
+      "citation_key": "heard1982guidecommontidal",
+      "entry_type": "misc",
+      "raw_text": "Heard, R.W.. 1982. Guide to common tidal marsh invertebrates of the northeastern Gulf of Mexico. Mississippi Alabama Sea Grant Consortium MASG P-79-004.",
+      "normalized_text": "Heard, R.W.. 1982. Guide to common tidal marsh invertebrates of the northeastern Gulf of Mexico. Mississippi Alabama Sea Grant Consortium MASG P-79-004.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{heard1982guidecommontidal,\n  author = {Heard, R.W},\n  note = {raw_reference = {Heard, R.W.. 1982. Guide to common tidal marsh invertebrates of the northeastern Gulf of Mexico. Mississippi Alabama Sea Grant Consortium MASG P-79-004.}; ecospecies_reference_number = {288}},\n  title = {Guide to common tidal marsh invertebrates of the northeastern Gulf of Mexico. Mississippi Alabama Sea Grant Consortium MASG P-79-004},\n  year = {1982},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1212,
+      "position": 4,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "727",
+      "citation_key": "thorp1976mechanismscoexistencebetween",
+      "entry_type": "misc",
+      "raw_text": "Thorp, J.H., 111. 1976. Mechanisms of coexistence between two sympatric species of the grass shrimp Palaemonetes (Decapoda: Palaemonidae). Ph.D. diss., North Carolina State University, Raleigh.",
+      "normalized_text": "Thorp, J.H., 111. 1976. Mechanisms of coexistence between two sympatric species of the grass shrimp Palaemonetes (Decapoda: Palaemonidae). Ph.D. diss., North Carolina State University, Raleigh.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{thorp1976mechanismscoexistencebetween,\n  author = {Thorp, J.H., 111},\n  note = {raw_reference = {Thorp, J.H., 111. 1976. Mechanisms of coexistence between two sympatric species of the grass shrimp Palaemonetes (Decapoda: Palaemonidae). Ph.D. diss., North Carolina State University, Raleigh.}; ecospecies_reference_number = {727}},\n  title = {Mechanisms of coexistence between two sympatric species of the grass shrimp Palaemonetes (Decapoda: Palaemonidae). Ph.D. diss., North Carolina State University, Raleigh},\n  year = {1976},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 1213,
+      "position": 5,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "767",
+      "citation_key": "williams1984shrimpslobsterscrabs",
+      "entry_type": "misc",
+      "raw_text": "Williams, A.B.. 1984. Shrimps, lobsters and crabs of the Atlantic coast of the Eastern United States, Maine to Florida. Smithsonian Institution Press, Washington, D.C.: 550.",
+      "normalized_text": "Williams, A.B.. 1984. Shrimps, lobsters and crabs of the Atlantic coast of the Eastern United States, Maine to Florida. Smithsonian Institution Press, Washington, D.C.: 550.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{williams1984shrimpslobsterscrabs,\n  author = {Williams, A.B},\n  note = {raw_reference = {Williams, A.B.. 1984. Shrimps, lobsters and crabs of the Atlantic coast of the Eastern United States, Maine to Florida. Smithsonian Institution Press, Washington, D.C.: 550.}; ecospecies_reference_number = {767}},\n  title = {Shrimps, lobsters and crabs of the Atlantic coast of the Eastern United States, Maine to Florida. Smithsonian Institution Press, Washington, D.C.: 550},\n  year = {1984},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    }
+  ],
+  "structured_document": {
+    "source_format": "ecospecies-markdown-v1",
+    "updated_by": "system-import",
+    "node_count": 13,
+    "ast": {
+      "metadata": {
+        "title": "Grass shrimp (Palaemonetes pugio)",
+        "common_name": "Grass Shrimp",
+        "scientific_name": "Palaemonetes pugio",
+        "legacy_identifiers": [
+          {
+            "authority": "legacy-ecospecies",
+            "identifier": "5575",
+            "label": "FLELMR"
+          }
+        ],
+        "taxon_identifiers": [],
+        "primary_taxon_authority": "",
+        "source_file": "Grass Shrimp SLH NOAA SEA.txt",
+        "publication_status": "published",
+        "source_format": "ecospecies-markdown-v1"
+      },
+      "nodes": [
+        {
+          "node_type": "section",
+          "title": "Revisions",
+          "body": "03-17-89. Thomas Czapla; NOAA SEA Division, Silver Spring, MD.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "TAXONOMY",
+          "body": "Common Name: Grass Shrimp\nScientific Name: Palaemonetes pugio",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Classification",
+          "body": "Kingdom: Animalia\n\tPhylum: Arthropoda\n\tClass: Malacostraca\n\tOrder: Decapoda\n\tFamily: Palaemonidae\n\nOther Common Names: Glass shrimp.\n\nNote: \tSubphylum: Crustacea",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "VALUE & STATUS",
+          "body": "Commercial:  No commercial value. Although sometimes sold in pet stores as live food.\n\nRecreational: No recreational value.\n\nIndicator: Often used for LC-50 bioassays for petroleum hydrocarbons because of it is usually a common inhabitant of estuarine systems.\n\nEcological Role: This species is of ecological value as an important prey item in the diet of many estuarine fishes. It is also important in estuarine trophic dynamics by speeding the detrital breakdown by macerating large detrital particles.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "GEOGRAPHIC RANGE",
+          "body": "Overall:  Verte River, Quebec to near Yarmouth Nova Scotia, New Castle and East Brunswick, Maine to Corpus Christi, Texas (767).\n\nWithin Study Area: A ubiquitous character throughout the estuaries of the Gulf coast often replaced in higher salinities by Palaemonetes vulgaris and/or P. intermedius.\n\nMobility and Migration:",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Life Mode",
+          "body": "Eggs are carried by the female the larvae are planktonic. Juveniles and adults are littoral or estuarine and benthic and seem to prefer vegetated areas.\n\n\nThere is little indication of extensive migrations. The extent of the movement of grass shrimp among various depths often coincides with the distribution of oyster shell substrates. They tend to avoid fast currents and migrate in the direction of tidal currents (727 10).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "BENTHIC HABITAT",
+          "body": "Habitat Type: Grass shrimp are estuarine to riverine. They are usually found in shallows of bays, creeks or around marshes, submerged vegetation and oyster reefs. During periods of extreme heat or cold they retreat to deeper channel areas (767 10).\n\nSubstrate: Vegetated or oyster shell substrate is preferred. High turbidity habitats are preferred (767 10).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Physical/Chemical",
+          "body": "Salinity: Salinities of 0-55 ppt are tolerated, but the shrimp are most common at 10-20 ppt (meso- to polyhaline). Some studies show poor survival at < 10 ppt. Optimum salinity for larval development is 20-25 ppt (polyhaline); for adults it is 4-16 ppt (mesohaline) (10).\n\nTemperature: Palaemonetes pugio tolerates 5-38 C, but survives best at 18-25 C. Optimum growth occurs at 14-30 C.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REPRODUCTION",
+          "body": "Reproductive Mode: Sexual; external fertilization, oviparous.\n\nMating/Spawning:: Breeding usually occurs at 10-15 ppt and 15-32 ppt. Mating must occur within 7 h of the female's molting and oviposition must occur within 7 h after transfer of sperm. Eggs are extruded unto the female's pleopods and are held there until hatching in 12-60 d depending on temperature. The spawning season is from February to October, but may vary within geographic location. It is probably year round in southwest Florida (767 10).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Development",
+          "body": "Egg: Eggs are 0.5-0.6 to 0.6-0.9 mm in size (73).\n\nLarvae: Larvae hatch in 12-60 d at 2.6 mm. They go through 3-11 zoeal stages (molts) ending at about 6.3 mm. The zoeal stage lasts from 11 days to several months depending on environmental conditions including the amount of food.\n\nJuveniles: Juveniles mature in 1.5 to 2 months at 15-18 mm (73).\n\nAdults: Growth to maturity in Texas is reported to take 2-3 months in summer and 4-6 months in winter. Their life span is 6-13 months. The older, overwintering shrimp usually spawn early in the year as adults and postlarvae that survive the winter spawn the following spring.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "FOOD HABITS",
+          "body": "These shrimp are opportunistic feeders and eat a variety of animal and plant matter including detritus, meiofauna, alga and dead animal matter (288 10).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REFERENCE NUMBERS",
+          "body": "10 73 288 727 767",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "CITATIONS",
+          "body": "10, Anderson, G.. 1986. Species profiles: life histories and environmental requirements of coastal fishes and invertebrates (Gulf of Mexico) -- grass shrimp. USFWSIBR-82(11.35).\n\n73, Broad, A.C. 1957. Larval development of Palaemonetes pugio Holthuis. Biological Bulletin (Woods Hole) 1 12: 144-1 61.\n\n288, Heard, R.W.. 1982. Guide to common tidal marsh invertebrates of the northeastern Gulf of Mexico. Mississippi Alabama Sea Grant Consortium MASG P-79-004.\n\n727, Thorp, J.H., 111. 1976. Mechanisms of coexistence between two sympatric species of the grass shrimp Palaemonetes (Decapoda: Palaemonidae). Ph.D. diss., North Carolina State University, Raleigh.\n\n767, Williams, A.B.. 1984. Shrimps, lobsters and crabs of the Atlantic coast of the Eastern United States, Maine to Florida. Smithsonian Institution Press, Washington, D.C.: 550.",
+          "depth": 2,
+          "children": []
+        }
+      ]
+    }
+  },
+  "legacy_source": null,
+  "sections": [
+    {
+      "id": 541,
+      "position": 1,
+      "heading": "HEADER",
+      "content": "Title: Grass shrimp (Palaemonetes pugio)\n\nFLELMR Code:  5575"
+    },
+    {
+      "id": 542,
+      "position": 2,
+      "heading": "Revisions",
+      "content": "03-17-89. Thomas Czapla; NOAA SEA Division, Silver Spring, MD."
+    },
+    {
+      "id": 543,
+      "position": 3,
+      "heading": "TAXONOMY",
+      "content": "Common Name: Grass Shrimp\nScientific Name: Palaemonetes pugio"
+    },
+    {
+      "id": 544,
+      "position": 4,
+      "heading": "Classification",
+      "content": "Kingdom: Animalia\n\tPhylum: Arthropoda\n\tClass: Malacostraca\n\tOrder: Decapoda\n\tFamily: Palaemonidae\n\nOther Common Names: Glass shrimp.\n\nNote: \tSubphylum: Crustacea"
+    },
+    {
+      "id": 545,
+      "position": 5,
+      "heading": "VALUE & STATUS",
+      "content": "Commercial:  No commercial value. Although sometimes sold in pet stores as live food.\n\nRecreational: No recreational value.\n\nIndicator: Often used for LC-50 bioassays for petroleum hydrocarbons because of it is usually a common inhabitant of estuarine systems.\n\nEcological Role: This species is of ecological value as an important prey item in the diet of many estuarine fishes. It is also important in estuarine trophic dynamics by speeding the detrital breakdown by macerating large detrital particles."
+    },
+    {
+      "id": 546,
+      "position": 6,
+      "heading": "GEOGRAPHIC RANGE",
+      "content": "Overall:  Verte River, Quebec to near Yarmouth Nova Scotia, New Castle and East Brunswick, Maine to Corpus Christi, Texas (767).\n\nWithin Study Area: A ubiquitous character throughout the estuaries of the Gulf coast often replaced in higher salinities by Palaemonetes vulgaris and/or P. intermedius.\n\nMobility and Migration:"
+    },
+    {
+      "id": 547,
+      "position": 7,
+      "heading": "Life Mode",
+      "content": "Eggs are carried by the female the larvae are planktonic. Juveniles and adults are littoral or estuarine and benthic and seem to prefer vegetated areas.\n\n\nThere is little indication of extensive migrations. The extent of the movement of grass shrimp among various depths often coincides with the distribution of oyster shell substrates. They tend to avoid fast currents and migrate in the direction of tidal currents (727 10)."
+    },
+    {
+      "id": 548,
+      "position": 8,
+      "heading": "BENTHIC HABITAT",
+      "content": "Habitat Type: Grass shrimp are estuarine to riverine. They are usually found in shallows of bays, creeks or around marshes, submerged vegetation and oyster reefs. During periods of extreme heat or cold they retreat to deeper channel areas (767 10).\n\nSubstrate: Vegetated or oyster shell substrate is preferred. High turbidity habitats are preferred (767 10)."
+    },
+    {
+      "id": 549,
+      "position": 9,
+      "heading": "Physical/Chemical",
+      "content": "Salinity: Salinities of 0-55 ppt are tolerated, but the shrimp are most common at 10-20 ppt (meso- to polyhaline). Some studies show poor survival at < 10 ppt. Optimum salinity for larval development is 20-25 ppt (polyhaline); for adults it is 4-16 ppt (mesohaline) (10).\n\nTemperature: Palaemonetes pugio tolerates 5-38 C, but survives best at 18-25 C. Optimum growth occurs at 14-30 C."
+    },
+    {
+      "id": 550,
+      "position": 10,
+      "heading": "REPRODUCTION",
+      "content": "Reproductive Mode: Sexual; external fertilization, oviparous.\n\nMating/Spawning:: Breeding usually occurs at 10-15 ppt and 15-32 ppt. Mating must occur within 7 h of the female's molting and oviposition must occur within 7 h after transfer of sperm. Eggs are extruded unto the female's pleopods and are held there until hatching in 12-60 d depending on temperature. The spawning season is from February to October, but may vary within geographic location. It is probably year round in southwest Florida (767 10)."
+    },
+    {
+      "id": 551,
+      "position": 11,
+      "heading": "Development",
+      "content": "Egg: Eggs are 0.5-0.6 to 0.6-0.9 mm in size (73).\n\nLarvae: Larvae hatch in 12-60 d at 2.6 mm. They go through 3-11 zoeal stages (molts) ending at about 6.3 mm. The zoeal stage lasts from 11 days to several months depending on environmental conditions including the amount of food.\n\nJuveniles: Juveniles mature in 1.5 to 2 months at 15-18 mm (73).\n\nAdults: Growth to maturity in Texas is reported to take 2-3 months in summer and 4-6 months in winter. Their life span is 6-13 months. The older, overwintering shrimp usually spawn early in the year as adults and postlarvae that survive the winter spawn the following spring."
+    },
+    {
+      "id": 552,
+      "position": 12,
+      "heading": "FOOD HABITS",
+      "content": "These shrimp are opportunistic feeders and eat a variety of animal and plant matter including detritus, meiofauna, alga and dead animal matter (288 10)."
+    },
+    {
+      "id": 553,
+      "position": 13,
+      "heading": "REFERENCE NUMBERS",
+      "content": "10 73 288 727 767"
+    },
+    {
+      "id": 554,
+      "position": 14,
+      "heading": "CITATIONS",
+      "content": "10, Anderson, G.. 1986. Species profiles: life histories and environmental requirements of coastal fishes and invertebrates (Gulf of Mexico) -- grass shrimp. USFWSIBR-82(11.35).\n\n73, Broad, A.C. 1957. Larval development of Palaemonetes pugio Holthuis. Biological Bulletin (Woods Hole) 1 12: 144-1 61.\n\n288, Heard, R.W.. 1982. Guide to common tidal marsh invertebrates of the northeastern Gulf of Mexico. Mississippi Alabama Sea Grant Consortium MASG P-79-004.\n\n727, Thorp, J.H., 111. 1976. Mechanisms of coexistence between two sympatric species of the grass shrimp Palaemonetes (Decapoda: Palaemonidae). Ph.D. diss., North Carolina State University, Raleigh.\n\n767, Williams, A.B.. 1984. Shrimps, lobsters and crabs of the Atlantic coast of the Eastern United States, Maine to Florida. Smithsonian Institution Press, Washington, D.C.: 550."
+    }
+  ]
+}

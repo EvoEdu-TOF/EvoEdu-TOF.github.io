@@ -84,6 +84,50 @@ let workflowPanelState = {
   "audit-panel": false,
 };
 
+function resolveStaticApiPath(path) {
+  const [route] = String(path || "").split("?");
+  if (route === "/api/auth/session") {
+    return "/api/auth/session.json";
+  }
+  if (route === "/api/insights/summary") {
+    return "/api/insights/summary.json";
+  }
+  if (route === "/api/species") {
+    return "/api/species/index.json";
+  }
+  if (route.startsWith("/api/species/")) {
+    const slug = route.slice("/api/species/".length).replace(/\/+$/, "");
+    return slug ? `/api/species/${encodeURIComponent(slug)}.json` : null;
+  }
+  return null;
+}
+
+async function readJsonResponse(response) {
+  const text = await response.text();
+  try {
+    return { data: text ? JSON.parse(text) : {}, jsonOk: true };
+  } catch (error) {
+    return { data: { error: text || String(error) }, jsonOk: false };
+  }
+}
+
+async function fetchJsonWithStaticFallback(path, options = {}) {
+  const response = await fetch(`${apiBase}${path}`, options);
+  const { data, jsonOk } = await readJsonResponse(response);
+  if (response.ok && jsonOk) {
+    return { response, data, staticFallback: false };
+  }
+
+  const staticPath = resolveStaticApiPath(path);
+  if (!staticPath || (options.method && options.method !== "GET")) {
+    return { response, data, staticFallback: false };
+  }
+
+  const staticResponse = await fetch(`${apiBase}${staticPath}`);
+  const { data: staticData } = await readJsonResponse(staticResponse);
+  return { response: staticResponse, data: staticData, staticFallback: staticResponse.ok };
+}
+
 function setCollapsibleState(panel, expanded) {
   if (!panel) {
     return;
@@ -933,9 +977,7 @@ async function requestJson(path, options = {}) {
   if (options.body && !headers.has("Content-Type")) {
     headers.set("Content-Type", "application/json");
   }
-  const response = await fetch(`${apiBase}${path}`, { ...options, headers });
-  const data = await response.json();
-  return { response, data };
+  return fetchJsonWithStaticFallback(path, { ...options, headers });
 }
 
 function isEditorSession() {
@@ -1043,8 +1085,18 @@ async function loadSpeciesList(search = "") {
     : isContributorSession()
       ? `/api/contributor/species${query}`
       : `/api/species${query}`;
-  const { data } = await requestJson(path);
-  currentItems = data.items;
+  const { data, staticFallback } = await requestJson(path);
+  currentItems = data.items || [];
+  if (staticFallback && search) {
+    const needle = search.toLowerCase();
+    currentItems = currentItems.filter((item) => {
+      return [
+        item.common_name || "",
+        item.scientific_name || "",
+        item.title || "",
+      ].some((value) => String(value).toLowerCase().includes(needle));
+    });
+  }
   syncArchiveFilterUi();
   renderSpecies(currentItems);
 }

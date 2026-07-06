@@ -1,0 +1,591 @@
+{
+  "slug": "spiny-lobster",
+  "source_file": "Spiny Lobster SLH.txt",
+  "title": "Spiny Lobster (Panulirus argus)",
+  "common_name": "Spiny Lobster",
+  "scientific_name": "Panulirus argus",
+  "flelmr_code": "5585",
+  "legacy_identifiers": [
+    {
+      "authority": "legacy-ecospecies",
+      "identifier": "5585",
+      "label": "FLELMR"
+    }
+  ],
+  "taxon_identifiers": [],
+  "primary_taxon_authority": "",
+  "primary_taxon_identifier": null,
+  "summary": "",
+  "section_count": 17,
+  "citation_count": 16,
+  "publication_status": "published",
+  "is_archived": false,
+  "editor_notes": "",
+  "last_modified_by": "system-import",
+  "diagnostics": [],
+  "citations": [
+    {
+      "id": 3681,
+      "position": 1,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "681",
+      "citation_key": "strategicassessmentbranchsab1985strategicassessmentbranch",
+      "entry_type": "misc",
+      "raw_text": "Strategic Assessment Branch (SAB), NOAA/NOS and Southeast Fisheries Center, NOAA/NMFS     1985      Gulf of Mexico, coastal and ocean zone strategic assessment: Data Atlas Strategic Assessment Branch, Ocean Assessments Division, NOS/NOAA: 161",
+      "normalized_text": "Strategic Assessment Branch (SAB), NOAA/NOS and Southeast Fisheries Center, NOAA/NMFS 1985 Gulf of Mexico, coastal and ocean zone strategic assessment: Data Atlas Strategic Assessment Branch, Ocean Assessments Division, NOS/NOAA: 161",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{strategicassessmentbranchsab1985strategicassessmentbranch,\n  note = {raw_reference = {Strategic Assessment Branch (SAB), NOAA/NOS and Southeast Fisheries Center, NOAA/NMFS     1985      Gulf of Mexico, coastal and ocean zone strategic assessment: Data Atlas Strategic Assessment Branch, Ocean Assessments Division, NOS/NOAA: 161}; ecospecies_reference_number = {681}},\n  title = {Strategic Assessment Branch (SAB), NOAA/NOS and Southeast Fisheries Center, NOAA/NMFS     1985      Gulf of Mexico, coastal and ocean zone strategic assessment: Data Atlas Strategic Assessment Branch, Ocean Assessments Division, NOS/NOAA: 161},\n  year = {1985},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 3682,
+      "position": 2,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "767",
+      "citation_key": "williams1984williamsbshrimps",
+      "entry_type": "misc",
+      "raw_text": "Williams, A.B.    1984      Shrimps, lobsters and crabs of the Atlantic coast of the Eastern United States, Maine to Florida    Smithsonian Institution Press, Washington, D.C.: 550",
+      "normalized_text": "Williams, A.B. 1984 Shrimps, lobsters and crabs of the Atlantic coast of the Eastern United States, Maine to Florida Smithsonian Institution Press, Washington, D.C.: 550",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{williams1984williamsbshrimps,\n  note = {raw_reference = {Williams, A.B.    1984      Shrimps, lobsters and crabs of the Atlantic coast of the Eastern United States, Maine to Florida    Smithsonian Institution Press, Washington, D.C.: 550}; ecospecies_reference_number = {767}},\n  title = {Williams, A.B.    1984      Shrimps, lobsters and crabs of the Atlantic coast of the Eastern United States, Maine to Florida    Smithsonian Institution Press, Washington, D.C.: 550},\n  year = {1984},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 3683,
+      "position": 3,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "808",
+      "citation_key": "crawford1923crawforddr",
+      "entry_type": "misc",
+      "raw_text": "Crawford, D.R., and W.J. DeSmidt.     1923      The spiny lobster, Panulirus argus, of southern Florida: its natural history and utilization    Bul. U.S. Bur. Fish. 38: 281 310.",
+      "normalized_text": "Crawford, D.R., and W.J. DeSmidt. 1923 The spiny lobster, Panulirus argus, of southern Florida: its natural history and utilization Bul. U.S. Bur. Fish. 38: 281 310.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{crawford1923crawforddr,\n  note = {raw_reference = {Crawford, D.R., and W.J. DeSmidt.     1923      The spiny lobster, Panulirus argus, of southern Florida: its natural history and utilization    Bul. U.S. Bur. Fish. 38: 281 310.}; ecospecies_reference_number = {808}},\n  title = {Crawford, D.R., and W.J. DeSmidt.     1923      The spiny lobster, Panulirus argus, of southern Florida: its natural history and utilization    Bul. U.S. Bur. Fish. 38: 281 310.},\n  year = {1923},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 3684,
+      "position": 4,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "809",
+      "citation_key": "eldred1972eldredbc",
+      "entry_type": "misc",
+      "raw_text": "Eldred, B., C.R. Futch, and R.M Ingle.    1972      Studies of juvenile spiny lobsters, Panulirus argus, in Biscayne Bay, Florida   Flor. Dept. Nat. Res. Mar. Res. Lab Spec. Scien. Rep. No. 35.",
+      "normalized_text": "Eldred, B., C.R. Futch, and R.M Ingle. 1972 Studies of juvenile spiny lobsters, Panulirus argus, in Biscayne Bay, Florida Flor. Dept. Nat. Res. Mar. Res. Lab Spec. Scien. Rep. No. 35.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{eldred1972eldredbc,\n  note = {raw_reference = {Eldred, B., C.R. Futch, and R.M Ingle.    1972      Studies of juvenile spiny lobsters, Panulirus argus, in Biscayne Bay, Florida   Flor. Dept. Nat. Res. Mar. Res. Lab Spec. Scien. Rep. No. 35.}; ecospecies_reference_number = {809}},\n  title = {Eldred, B., C.R. Futch, and R.M Ingle.    1972      Studies of juvenile spiny lobsters, Panulirus argus, in Biscayne Bay, Florida   Flor. Dept. Nat. Res. Mar. Res. Lab Spec. Scien. Rep. No. 35.},\n  year = {1972},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 3685,
+      "position": 5,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "810",
+      "citation_key": "gregory1982gregoryjrd",
+      "entry_type": "misc",
+      "raw_text": "Gregory, Jr., D.R., R.F. Labisky, and C.L. Combs.     1982      Reproductive dynamics of the spiny lobster Panulirus argus in south Florida Trans. Amer. Fish Soc.  111(5): 575 584.",
+      "normalized_text": "Gregory, Jr., D.R., R.F. Labisky, and C.L. Combs. 1982 Reproductive dynamics of the spiny lobster Panulirus argus in south Florida Trans. Amer. Fish Soc. 111(5): 575 584.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gregory1982gregoryjrd,\n  note = {raw_reference = {Gregory, Jr., D.R., R.F. Labisky, and C.L. Combs.     1982      Reproductive dynamics of the spiny lobster Panulirus argus in south Florida Trans. Amer. Fish Soc.  111(5): 575 584.}; ecospecies_reference_number = {810}},\n  title = {Gregory, Jr., D.R., R.F. Labisky, and C.L. Combs.     1982      Reproductive dynamics of the spiny lobster Panulirus argus in south Florida Trans. Amer. Fish Soc.  111(5): 575 584.},\n  year = {1982},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 3686,
+      "position": 6,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "811",
+      "citation_key": "gulfofmexicoandsouthatlanticfisherymanagementcouncilsgmfmc1982fisherymanagementplanenvironmentalimpactstatementandregulatoryimpactreviewforspinylobsterinthegulfofmexicoandsouthatlanticgulfofmexicofisherymanagementcouncil1982gulfmexicosouth",
+      "entry_type": "misc",
+      "raw_text": "Gulf of Mexico and South Atlantic Fishery Management Councils (GMFMC).    1982      Fishery management plan environmental impact statement and regulatory impact review for spiny lobster in the Gulf of Mexico and south Atlantic  Gulf of Mexico Fishery Management Council, Tampa, Florida and South Atlantic Fishery Management Council, Charleston, South Carolina.",
+      "normalized_text": "Gulf of Mexico and South Atlantic Fishery Management Councils (GMFMC). 1982 Fishery management plan environmental impact statement and regulatory impact review for spiny lobster in the Gulf of Mexico and south Atlantic Gulf of Mexico Fishery Management Council, Tampa, Florida and South Atlantic Fishery Management Council, Charleston, South Carolina.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gulfofmexicoandsouthatlanticfisherymanagementcouncilsgmfmc1982fisherymanagementplanenvironmentalimpactstatementandregulatoryimpactreviewforspinylobsterinthegulfofmexicoandsouthatlanticgulfofmexicofisherymanagementcouncil1982gulfmexicosouth,\n  note = {raw_reference = {Gulf of Mexico and South Atlantic Fishery Management Councils (GMFMC).    1982      Fishery management plan environmental impact statement and regulatory impact review for spiny lobster in the Gulf of Mexico and south Atlantic  Gulf of Mexico Fishery Management Council, Tampa, Florida and South Atlantic Fishery Management Council, Charleston, South Carolina.}; ecospecies_reference_number = {811}},\n  title = {Gulf of Mexico and South Atlantic Fishery Management Councils (GMFMC).    1982      Fishery management plan environmental impact statement and regulatory impact review for spiny lobster in the Gulf of Mexico and south Atlantic  Gulf of Mexico Fishery Management Council, Tampa, Florida and South Atlantic Fishery Management Council, Charleston, South Carolina.},\n  year = {1982},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 3687,
+      "position": 7,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "812",
+      "citation_key": "gulfofmexicofisherymanagementcouncilandsouthatlanticfisherymanagementcouncilgmfmc1987amendmentnumber1tospinylobsterfisherymanagementplanforthegulfofmexicoandsouthatlanticgulfofmexicofisherymanagementcouncil1987gulfmexicofishery",
+      "entry_type": "misc",
+      "raw_text": "Gulf of Mexico Fishery Management Council and South Atlantic Fishery Management Council (GMFMC).      1987      Amendment number 1 to spiny lobster fishery management plan for the Gulf of Mexico and South Atlantic   Gulf of Mexico Fishery Management Council, Tampa, Florida, and South Atlantic Fishery Management Council, Charleston, South Carolina",
+      "normalized_text": "Gulf of Mexico Fishery Management Council and South Atlantic Fishery Management Council (GMFMC). 1987 Amendment number 1 to spiny lobster fishery management plan for the Gulf of Mexico and South Atlantic Gulf of Mexico Fishery Management Council, Tampa, Florida, and South Atlantic Fishery Management Council, Charleston, South Carolina",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{gulfofmexicofisherymanagementcouncilandsouthatlanticfisherymanagementcouncilgmfmc1987amendmentnumber1tospinylobsterfisherymanagementplanforthegulfofmexicoandsouthatlanticgulfofmexicofisherymanagementcouncil1987gulfmexicofishery,\n  note = {raw_reference = {Gulf of Mexico Fishery Management Council and South Atlantic Fishery Management Council (GMFMC).      1987      Amendment number 1 to spiny lobster fishery management plan for the Gulf of Mexico and South Atlantic   Gulf of Mexico Fishery Management Council, Tampa, Florida, and South Atlantic Fishery Management Council, Charleston, South Carolina}; ecospecies_reference_number = {812}},\n  title = {Gulf of Mexico Fishery Management Council and South Atlantic Fishery Management Council (GMFMC).      1987      Amendment number 1 to spiny lobster fishery management plan for the Gulf of Mexico and South Atlantic   Gulf of Mexico Fishery Management Council, Tampa, Florida, and South Atlantic Fishery Management Council, Charleston, South Carolina},\n  year = {1987},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 3688,
+      "position": 8,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "813",
+      "citation_key": "hunt1986huntjh",
+      "entry_type": "misc",
+      "raw_text": "Hunt, J.H., and W.G. Lyons.   1986      Factors affecting growth and maturation of spiny lobsters, Panulirus argus, in the Florida Keys     Can. J. Aquat. Sci.  43:2243 2247.",
+      "normalized_text": "Hunt, J.H., and W.G. Lyons. 1986 Factors affecting growth and maturation of spiny lobsters, Panulirus argus, in the Florida Keys Can. J. Aquat. Sci. 43:2243 2247.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{hunt1986huntjh,\n  note = {raw_reference = {Hunt, J.H., and W.G. Lyons.   1986      Factors affecting growth and maturation of spiny lobsters, Panulirus argus, in the Florida Keys     Can. J. Aquat. Sci.  43:2243 2247.}; ecospecies_reference_number = {813}},\n  title = {Hunt, J.H., and W.G. Lyons.   1986      Factors affecting growth and maturation of spiny lobsters, Panulirus argus, in the Florida Keys     Can. J. Aquat. Sci.  43:2243 2247.},\n  year = {1986},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 3689,
+      "position": 9,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "814",
+      "citation_key": "lewis1951lewisjb",
+      "entry_type": "misc",
+      "raw_text": "Lewis, J.B.   1951      The phyllosoma larvae of the spiny lobster Panulirus argus  Bull. Mar. Sci. Gulf and Carib.  1: 89 103",
+      "normalized_text": "Lewis, J.B. 1951 The phyllosoma larvae of the spiny lobster Panulirus argus Bull. Mar. Sci. Gulf and Carib. 1: 89 103",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{lewis1951lewisjb,\n  note = {raw_reference = {Lewis, J.B.   1951      The phyllosoma larvae of the spiny lobster Panulirus argus  Bull. Mar. Sci. Gulf and Carib.  1: 89 103}; ecospecies_reference_number = {814}},\n  title = {Lewis, J.B.   1951      The phyllosoma larvae of the spiny lobster Panulirus argus  Bull. Mar. Sci. Gulf and Carib.  1: 89 103},\n  year = {1951},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 3690,
+      "position": 10,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "815",
+      "citation_key": "lyons1981lyonswpossible",
+      "entry_type": "misc",
+      "raw_text": "Lyons, W.     1981      Possible sources of Florida's spiny lobster population  Proc. Ann Gulf Carib. Fish.  33: 253 266.",
+      "normalized_text": "Lyons, W. 1981 Possible sources of Florida's spiny lobster population Proc. Ann Gulf Carib. Fish. 33: 253 266.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{lyons1981lyonswpossible,\n  note = {raw_reference = {Lyons, W.     1981      Possible sources of Florida's spiny lobster population  Proc. Ann Gulf Carib. Fish.  33: 253 266.}; ecospecies_reference_number = {815}},\n  title = {Lyons, W.     1981      Possible sources of Florida's spiny lobster population  Proc. Ann Gulf Carib. Fish.  33: 253 266.},\n  year = {1981},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 3691,
+      "position": 11,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "816",
+      "citation_key": "lyons1981lyonswg",
+      "entry_type": "misc",
+      "raw_text": "Lyons, W.G., D.G. Barbeer, S.M. Foster, F.S. Kennedy, Jr., and G.R. Milano.   1981      The spiny lobster, Panulirus argus, in the middle and upper Florida Keys: population structure, seasonal dynamics, and reproduction     Flor. Dept. Nat. Res. Mar. Res. Lab., No. 38.",
+      "normalized_text": "Lyons, W.G., D.G. Barbeer, S.M. Foster, F.S. Kennedy, Jr., and G.R. Milano. 1981 The spiny lobster, Panulirus argus, in the middle and upper Florida Keys: population structure, seasonal dynamics, and reproduction Flor. Dept. Nat. Res. Mar. Res. Lab., No. 38.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{lyons1981lyonswg,\n  note = {raw_reference = {Lyons, W.G., D.G. Barbeer, S.M. Foster, F.S. Kennedy, Jr., and G.R. Milano.   1981      The spiny lobster, Panulirus argus, in the middle and upper Florida Keys: population structure, seasonal dynamics, and reproduction     Flor. Dept. Nat. Res. Mar. Res. Lab., No. 38.}; ecospecies_reference_number = {816}},\n  title = {Lyons, W.G., D.G. Barbeer, S.M. Foster, F.S. Kennedy, Jr., and G.R. Milano.   1981      The spiny lobster, Panulirus argus, in the middle and upper Florida Keys: population structure, seasonal dynamics, and reproduction     Flor. Dept. Nat. Res. Mar. Res. Lab., No. 38.},\n  year = {1981},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 3692,
+      "position": 12,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "817",
+      "citation_key": "marx1986marxjm",
+      "entry_type": "misc",
+      "raw_text": "Marx, J.M., and W.F. Herrnkind.   1986      Species profiles: life histories and environmental requirements of coastal fishes and invertebrates (south Florida) spiny lobster     U.S. Fish & Wildl. Serv. Biol. Rep. 82(11.61)",
+      "normalized_text": "Marx, J.M., and W.F. Herrnkind. 1986 Species profiles: life histories and environmental requirements of coastal fishes and invertebrates (south Florida) spiny lobster U.S. Fish & Wildl. Serv. Biol. Rep. 82(11.61)",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{marx1986marxjm,\n  note = {raw_reference = {Marx, J.M., and W.F. Herrnkind.   1986      Species profiles: life histories and environmental requirements of coastal fishes and invertebrates (south Florida) spiny lobster     U.S. Fish & Wildl. Serv. Biol. Rep. 82(11.61)}; ecospecies_reference_number = {817}},\n  title = {Marx, J.M., and W.F. Herrnkind.   1986      Species profiles: life histories and environmental requirements of coastal fishes and invertebrates (south Florida) spiny lobster     U.S. Fish & Wildl. Serv. Biol. Rep. 82(11.61)},\n  year = {1986},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 3693,
+      "position": 13,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "818",
+      "citation_key": "noaa1990fishingtrendsandconditionsinthesoutheastregion1990noaafishingtrends",
+      "entry_type": "misc",
+      "raw_text": "NOAA.     1990      Fishing trends and conditions in the southeast region, 1989 U.S. Dept. Comm., NOAA, NMFS.  70 pp.",
+      "normalized_text": "NOAA. 1990 Fishing trends and conditions in the southeast region, 1989 U.S. Dept. Comm., NOAA, NMFS. 70 pp.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{noaa1990fishingtrendsandconditionsinthesoutheastregion1990noaafishingtrends,\n  note = {raw_reference = {NOAA.     1990      Fishing trends and conditions in the southeast region, 1989 U.S. Dept. Comm., NOAA, NMFS.  70 pp.}; ecospecies_reference_number = {818}},\n  title = {NOAA.     1990      Fishing trends and conditions in the southeast region, 1989 U.S. Dept. Comm., NOAA, NMFS.  70 pp.},\n  year = {1990},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 3694,
+      "position": 14,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "819",
+      "citation_key": "richards1981richardswj",
+      "entry_type": "misc",
+      "raw_text": "Richards, W.J., and T. Potthoff.      1981      Distribution and seasonal occurrence of larval pelagic stages of spiny lobsters (Palinuridae, Panulirus) in the western tropical Atlantic   Proc. Ann Gulf Carib. Fish. Inst.  33: 244 252.",
+      "normalized_text": "Richards, W.J., and T. Potthoff. 1981 Distribution and seasonal occurrence of larval pelagic stages of spiny lobsters (Palinuridae, Panulirus) in the western tropical Atlantic Proc. Ann Gulf Carib. Fish. Inst. 33: 244 252.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{richards1981richardswj,\n  note = {raw_reference = {Richards, W.J., and T. Potthoff.      1981      Distribution and seasonal occurrence of larval pelagic stages of spiny lobsters (Palinuridae, Panulirus) in the western tropical Atlantic   Proc. Ann Gulf Carib. Fish. Inst.  33: 244 252.}; ecospecies_reference_number = {819}},\n  title = {Richards, W.J., and T. Potthoff.      1981      Distribution and seasonal occurrence of larval pelagic stages of spiny lobsters (Palinuridae, Panulirus) in the western tropical Atlantic   Proc. Ann Gulf Carib. Fish. Inst.  33: 244 252.},\n  year = {1981},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 3695,
+      "position": 15,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "820",
+      "citation_key": "schomer1982schomerns",
+      "entry_type": "misc",
+      "raw_text": "Schomer, N.S., and R.D. Drew.     1982      An ecological characterization of the lower Everglades, Florida Bay and Florida Keys    U.S. Fish & Wildl. Serv.  FWS/OBS 82/58.1.",
+      "normalized_text": "Schomer, N.S., and R.D. Drew. 1982 An ecological characterization of the lower Everglades, Florida Bay and Florida Keys U.S. Fish & Wildl. Serv. FWS/OBS 82/58.1.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{schomer1982schomerns,\n  note = {raw_reference = {Schomer, N.S., and R.D. Drew.     1982      An ecological characterization of the lower Everglades, Florida Bay and Florida Keys    U.S. Fish & Wildl. Serv.  FWS/OBS 82/58.1.}; ecospecies_reference_number = {820}},\n  title = {Schomer, N.S., and R.D. Drew.     1982      An ecological characterization of the lower Everglades, Florida Bay and Florida Keys    U.S. Fish & Wildl. Serv.  FWS/OBS 82/58.1.},\n  year = {1982},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 3696,
+      "position": 16,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "821",
+      "citation_key": "warner1977warnerre",
+      "entry_type": "misc",
+      "raw_text": "Warner, R.E., C.L. Combs, and D.R. Gregory, Jr.   1977      Biological studies of the spiny lobster, Panulirus argus (Decapoda: Palinuridae) in south Florida   Proc. Ann. Gulf and Carib. Fish. Inst.  29: 166 183.",
+      "normalized_text": "Warner, R.E., C.L. Combs, and D.R. Gregory, Jr. 1977 Biological studies of the spiny lobster, Panulirus argus (Decapoda: Palinuridae) in south Florida Proc. Ann. Gulf and Carib. Fish. Inst. 29: 166 183.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{warner1977warnerre,\n  note = {raw_reference = {Warner, R.E., C.L. Combs, and D.R. Gregory, Jr.   1977      Biological studies of the spiny lobster, Panulirus argus (Decapoda: Palinuridae) in south Florida   Proc. Ann. Gulf and Carib. Fish. Inst.  29: 166 183.}; ecospecies_reference_number = {821}},\n  title = {Warner, R.E., C.L. Combs, and D.R. Gregory, Jr.   1977      Biological studies of the spiny lobster, Panulirus argus (Decapoda: Palinuridae) in south Florida   Proc. Ann. Gulf and Carib. Fish. Inst.  29: 166 183.},\n  year = {1977},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    }
+  ],
+  "structured_document": {
+    "source_format": "ecospecies-markdown-v1",
+    "updated_by": "system-import",
+    "node_count": 16,
+    "ast": {
+      "metadata": {
+        "title": "Spiny Lobster (Panulirus argus)",
+        "common_name": "Spiny Lobster",
+        "scientific_name": "Panulirus argus",
+        "legacy_identifiers": [
+          {
+            "authority": "legacy-ecospecies",
+            "identifier": "5585",
+            "label": "FLELMR"
+          }
+        ],
+        "taxon_identifiers": [],
+        "primary_taxon_authority": "",
+        "source_file": "Spiny Lobster SLH.txt",
+        "publication_status": "published",
+        "source_format": "ecospecies-markdown-v1"
+      },
+      "nodes": [
+        {
+          "node_type": "section",
+          "title": "Revisions",
+          "body": "07-18-91.  Thomas Czapla; NOAA SEA Division, Silver Spring, MD.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "TAXONOMY",
+          "body": "Common Name: Spiny Lobster\nScientific Name: Panulirus argus",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Classification",
+          "body": "Kingdom: Animalia\n \tPhylum: Arthropoda\n\tClass:\tMalacostraca\n\tOrder:\tDecapoda\n\tFamily: Palinuridae\n\nNote: \tSubphylum: Crustacea\n\nOther Common Names: crawfish, Florida spiny lobster, western Atlantic spiny lobster, Caribbean spiny lobster, rock lobster, bug.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "VALUE & STATUS",
+          "body": "Commercial:  Spiny lobster is a valuable commercial species and supports Florida's second most valuable shellfishery (820 817).  Lobsters must measure at least 75 mm CL and tails must be at least 138 mm in length.  U.S. landings of spiny lobster in 1989 were 6.0 million pounds valued at $17.2 million.  All landings except for 1,000 pounds from Alabama were from the west coast of Florida (818).  Fisherman use top-entry wood-slat traps.  A few are harvested by divers and as incidental catch by shrimp trawlers (817).  A special permit is required for the commercial harvest of this species (812).\n\nRecreational:  Recreational fishing is closed from April 1 to August 5 (811).  There is a 2 day special non-trap recreation season during the first Saturday and Sunday preceding August 1.  Lobster must measure at least 75 mm CL and tails must be at least 138 mm in length.  Possession limit is 6 per person.  Sport divers use skin- or scuba-diving gear, gloves, and small hand-held nets to catch lobsters (817).  The sport catch is about 10% of the commercial catch.  Most of this fishery is in the Florida Keys (817).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "GEOGRAPHIC RANGE",
+          "body": "Overall:  The spiny lobster is found in coastal and shallow continental shelf waters along the western Atlantic coast from North Carolina to Brazil, including Bermuda, and throughout the Gulf of Mexico.  A few specimens have been collected in the Gulf of Guinea, West Africa (814 767 681 817).\n\nWithin Study area: The species is abundant off the southern Florida coast from Florida Bay to Dry Tortugas and is found throughout the Gulf of Mexico in warm offshore waters.  Rare collections are made in inshore waters of south Texas (817, Tunnell pers. comm., Hockeday pers. comm.)\n\nMobility and Migration:",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Life Mode",
+          "body": "Egg: are carried on the female's pleopods.  Egg bearing females are found in reef areas at about 24 C.\nLarvae: (phyllosoma stage) are planktonic and their distribution is regulated by ocean currents.\nPostlarvae and early juvenile: metamorphose offshore and swim shoreward by night at the water's surface.  Juveniles move inshore to seagrass and mangrove nursery areas until they approach maturity, and then move out to deep reef habitats.\nAdult: Offshore populations are all adult (Zieman 1982 767 817).\n\nMovements and Migrations: Local movements are reported in response to temperature and food availability.  Mating triggers an inshore migration, and spawning is preceded by an offshore movement of females.  Offshore movement is also prompted by periods of cold temperatures.  Larvae are dispersed by oceanic currents.  Pueruli swim shoreward at night, then settle out of the water column.  Throughout its benthic life, the lobster is influenced by currents, wave surge, and turbulence (816 820 684 817).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "BENTHIC HABITAT",
+          "body": "Habitat Type: Phyllosoma are planktonic and are found in the epipelagic zone of the Caribbean Sea, Gulf of Mexico, and the Straits of Florida (812).  The pueruli settle in oceanic banks greater than 10 m deep.  After the puerulus molt, the young lobster becomes demersal and littoral, and utilize state coastal waters of bays, lagoons, and reef flats seeking shelter associated with the substrate.  Adults are benthic and occur on reefs and rubble areas from shore to 80 m (809 767 681 817).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Substrate",
+          "body": "Adult: are found over reefs, jetties, offshore oil platforms, and rubble.\nJuvenile: young pueruli and juveniles occur among the seagrasses, algal beds, jetties, and corals (820 767 684 Tunnell pers. comm., Hockeday pers. comm.).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Physical/Chemical",
+          "body": "Temperature: The spiny lobster can survive 13 C, but generally inhabit areas with an annual minimum temperature that exceeds 20 C (817).  Early juveniles do not survive below 10 C nor above 3 C (811).  Growth is optimal at 26-28 C, and temperature regulates spawning.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Salinity",
+          "body": "Postlarvae do not tolerate salinities less than 19 ppt.\nJuveniles and adults are mesohaline to euhaline (5-40 ppt).  Older juveniles are able to use marginal inshore habitats because they are highly mobile and can retreat from unsuitable conditions (817).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REPRODUCTION",
+          "body": "Reproductive Mode: Reproduction is sexual, dioecious, and fertilization is external.  No signs of hermaphrodism have been found (811).\n\nMating/Spawning: Mating may occur up to a month prior to spawning.  In Florida, the mating season is principally from February to April, but some occurs year round (814 811).  After mating, the spermatophore adheres to the female's sternum; at spawning she scratches it to achieve fertilization.  Spawning occurs offshore in open Gulf waters and is principally associated with reef habitats.  The season extends from March to July with some spawning occurring in August.  In the Florida Keys, it peaks  in May-June.  Some year-round spawning has been reported (821 815 816 811 810 767 684 817).\n\nFecundity: Estimates show that a 23 cm female can lay 500,000 eggs, a 30 cm female 1,118,656, and a 33 cm female 2,566,916.  A second mating and spawning may occur during a season; therefore, it is estimated that a 38 cm female might lay 4 million eggs a season (810 767).  Nearly half of the egg pool is contributed by females in the 75-85 mm size class (810).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Length Range",
+          "body": "Egg:  Eggs are spherical and about 0.5 mm in diameter.  Embryonic development lasts about 3 weeks.  During this time the eggs adhere to pleopodal setae on the underside of the female's abdomen.  The phyllosomes emerge from the egg membrane and disperse in the water column (817).\n\nLarvae: Phyllosomes develop through about 11 stages increasing in size from 2 mm total length at hatching to nearly 34 mm before metamorphoses.  Duration of the phyllosome stage is about 6-12 months (819 817).\n\nJuvenile: The larvae metamorphose into a puerulus stage which lasts several weeks.  They begin to acquire reddish-brown pigment and within days molt into the first juvenile stage.  During the juvenile stage growth is estimated at 5 mm carapace length (CL) per month (809).  Other estimates are 12 mm in first year of benthic existence (811), from 6 mm to 90 mm in the first year (Witham et al. 1968), and 5.4 mm per molt (821).  In general, there are 4 molts per year (811).  Injury results in a reduced growth rate (811 813).\n\nAdults: Onset of maturation is near 70 mm CL in south Florida, but a few are reproductively functional at 66 mm CL (821 810 813).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "FOOD HABITS",
+          "body": "Trophic Modes: Carnivore\n\nFood Items: Spiny lobster phyllosomes are assumed to feed on plankton, based on laboratory cultured phyllosomes feeding on chaetognaths, euphasiids, fish larvae, medusae and ctenophores (817).  There is no indication that pueruli feed at all (817).  The lobster is a nocturnal forager throughout the benthic phase.  It preys on a wide variety of slow-moving and sedentary animals such as mollusks, crustaceans, and echinoderms.\n\nYoung juveniles: were found to feed on molluscs (811).\nLarge juveniles and adults:  are higher carnivores of coral reef systems feeding on algae, foraminifera, sponge spicules, polychaetes, bivalves, conchs, hermit crabs and other crustaceans, and fish (808 811 820 817).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "ECOLOGICAL INTERACTIONS",
+          "body": "Predation: Larvae are preyed on by a number of pelagic fishes that include tunas, Katsuwonus pelanus and Thunnus atlanticus (811).  Juveniles are presumably subject to predation by numerous fishes while occupying the mangrove and grass flat habitats.   Major predators of adult and sub-adult stages include skates (Dasyatis spp.), sharks (especially Ginglyostoma cirratum), various snappers (Lujanus), grouper (Mycteroperca spp. and Epinephelus spp.), and octopus.  Dolphins (Tursiops) and loggerhead turtles (Caretta caretta) also prey on lobster.  A small snail, Murex pomum, kills lobsters in traps and presumably in nature by boring through the carapace.\n\nFactors Influencing Populations: The high incidence of out-of-season harvest and the taking of lobsters under the legal size (shorts) has a serious effect on the adult breeding population.  Oil and tar pollution of marine waters can potentially impact the open ocean epipelagic habitat of larvae.  Ocean dumping creates silt that settles over larvae and suffocates them.  Shallow water mangrove and grass flat nursery areas are subject to abuses of dredge and fill, modified discharges, and development all of which destroy necessary habitat needed to sustain spiny lobster population levels.  Damage to reef areas from pollution, ship groundings, anchors, and collectors also remove habitat necessary for sustaining this species (811).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REFERENCE NUMBERS",
+          "body": "681 767 808 809 810 811 812 813 814 815 816 817 818 819 820 821",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "CITATIONS",
+          "body": "681      Strategic Assessment Branch (SAB), NOAA/NOS and Southeast Fisheries Center, NOAA/NMFS     1985      Gulf of Mexico, coastal and ocean zone strategic assessment: Data Atlas Strategic Assessment Branch, Ocean Assessments Division, NOS/NOAA: 161\n\n   767      Williams, A.B.    1984      Shrimps, lobsters and crabs of the Atlantic coast of the Eastern United States, Maine to Florida    Smithsonian Institution Press, Washington, D.C.: 550\n\n808      Crawford, D.R., and W.J. DeSmidt.     1923      The spiny lobster, Panulirus argus, of southern Florida: its natural history and utilization    Bul. U.S. Bur. Fish. 38: 281\u001e310.\n\n   809      Eldred, B., C.R. Futch, and R.M Ingle.    1972      Studies of juvenile spiny lobsters, Panulirus argus, in Biscayne Bay, Florida   Flor. Dept. Nat. Res. Mar. Res. Lab Spec. Scien. Rep. No. 35.\n\n\n   810      Gregory, Jr., D.R., R.F. Labisky, and C.L. Combs.     1982      Reproductive dynamics of the spiny lobster Panulirus argus in south Florida Trans. Amer. Fish Soc.  111(5): 575\u001e584.\n\n\n   811      Gulf of Mexico and South Atlantic Fishery Management Councils (GMFMC).    1982      Fishery management plan environmental impact statement and regulatory impact review for spiny lobster in the Gulf of Mexico and south Atlantic  Gulf of Mexico Fishery Management Council, Tampa, Florida and South Atlantic Fishery Management Council, Charleston, South Carolina.\n\n   812      Gulf of Mexico Fishery Management Council and South Atlantic Fishery Management Council (GMFMC).      1987      Amendment number 1 to spiny lobster fishery management plan for the Gulf of Mexico and South Atlantic   Gulf of Mexico Fishery Management Council, Tampa, Florida, and South Atlantic Fishery Management Council, Charleston, South Carolina\n\n\n   813      Hunt, J.H., and W.G. Lyons.   1986      Factors affecting growth and maturation of spiny lobsters, Panulirus argus, in the Florida Keys     Can. J. Aquat. Sci.  43:2243\u001e2247.\n\n\n   814      Lewis, J.B.   1951      The phyllosoma larvae of the spiny lobster Panulirus argus  Bull. Mar. Sci. Gulf and Carib.  1: 89\u001e103\n\n\n   815      Lyons, W.     1981      Possible sources of Florida's spiny lobster population  Proc. Ann Gulf Carib. Fish.  33: 253\u001e266.\n\n\n   816      Lyons, W.G., D.G. Barbeer, S.M. Foster, F.S. Kennedy, Jr., and G.R. Milano.   1981      The spiny lobster, Panulirus argus, in the middle and upper Florida Keys: population structure, seasonal dynamics, and reproduction     Flor. Dept. Nat. Res. Mar. Res. Lab., No. 38.\n\n\n   817      Marx, J.M., and W.F. Herrnkind.   1986      Species profiles: life histories and environmental requirements of coastal fishes and invertebrates (south Florida) \u001e spiny lobster     U.S. Fish & Wildl. Serv. Biol. Rep. 82(11.61)\n\n\n   818      NOAA.     1990      Fishing trends and conditions in the southeast region, 1989 U.S. Dept. Comm., NOAA, NMFS.  70 pp.\n\n\n   819      Richards, W.J., and T. Potthoff.      1981      Distribution and seasonal occurrence of larval pelagic stages of spiny lobsters (Palinuridae, Panulirus) in the western tropical Atlantic   Proc. Ann Gulf Carib. Fish. Inst.  33: 244\u001e252.\n\n\n   820      Schomer, N.S., and R.D. Drew.     1982      An ecological characterization of the lower Everglades, Florida Bay and Florida Keys    U.S. Fish & Wildl. Serv.  FWS/OBS\u001e82/58.1.\n\n\n   821      Warner, R.E., C.L. Combs, and D.R. Gregory, Jr.   1977      Biological studies of the spiny lobster, Panulirus argus (Decapoda: Palinuridae) in south Florida   Proc. Ann. Gulf and Carib. Fish. Inst.  29: 166\u001e183.",
+          "depth": 2,
+          "children": []
+        }
+      ]
+    }
+  },
+  "legacy_source": null,
+  "sections": [
+    {
+      "id": 1307,
+      "position": 1,
+      "heading": "HEADER",
+      "content": "Title: Spiny Lobster (Panulirus argus)\n\nFLELMR Code:  5585"
+    },
+    {
+      "id": 1308,
+      "position": 2,
+      "heading": "Revisions",
+      "content": "07-18-91.  Thomas Czapla; NOAA SEA Division, Silver Spring, MD."
+    },
+    {
+      "id": 1309,
+      "position": 3,
+      "heading": "TAXONOMY",
+      "content": "Common Name: Spiny Lobster\nScientific Name: Panulirus argus"
+    },
+    {
+      "id": 1310,
+      "position": 4,
+      "heading": "Classification",
+      "content": "Kingdom: Animalia\n \tPhylum: Arthropoda\n\tClass:\tMalacostraca\n\tOrder:\tDecapoda\n\tFamily: Palinuridae\n\nNote: \tSubphylum: Crustacea\n\nOther Common Names: crawfish, Florida spiny lobster, western Atlantic spiny lobster, Caribbean spiny lobster, rock lobster, bug."
+    },
+    {
+      "id": 1311,
+      "position": 5,
+      "heading": "VALUE & STATUS",
+      "content": "Commercial:  Spiny lobster is a valuable commercial species and supports Florida's second most valuable shellfishery (820 817).  Lobsters must measure at least 75 mm CL and tails must be at least 138 mm in length.  U.S. landings of spiny lobster in 1989 were 6.0 million pounds valued at $17.2 million.  All landings except for 1,000 pounds from Alabama were from the west coast of Florida (818).  Fisherman use top-entry wood-slat traps.  A few are harvested by divers and as incidental catch by shrimp trawlers (817).  A special permit is required for the commercial harvest of this species (812).\n\nRecreational:  Recreational fishing is closed from April 1 to August 5 (811).  There is a 2 day special non-trap recreation season during the first Saturday and Sunday preceding August 1.  Lobster must measure at least 75 mm CL and tails must be at least 138 mm in length.  Possession limit is 6 per person.  Sport divers use skin- or scuba-diving gear, gloves, and small hand-held nets to catch lobsters (817).  The sport catch is about 10% of the commercial catch.  Most of this fishery is in the Florida Keys (817)."
+    },
+    {
+      "id": 1312,
+      "position": 6,
+      "heading": "GEOGRAPHIC RANGE",
+      "content": "Overall:  The spiny lobster is found in coastal and shallow continental shelf waters along the western Atlantic coast from North Carolina to Brazil, including Bermuda, and throughout the Gulf of Mexico.  A few specimens have been collected in the Gulf of Guinea, West Africa (814 767 681 817).\n\nWithin Study area: The species is abundant off the southern Florida coast from Florida Bay to Dry Tortugas and is found throughout the Gulf of Mexico in warm offshore waters.  Rare collections are made in inshore waters of south Texas (817, Tunnell pers. comm., Hockeday pers. comm.)\n\nMobility and Migration:"
+    },
+    {
+      "id": 1313,
+      "position": 7,
+      "heading": "Life Mode",
+      "content": "Egg: are carried on the female's pleopods.  Egg bearing females are found in reef areas at about 24 C.\nLarvae: (phyllosoma stage) are planktonic and their distribution is regulated by ocean currents.\nPostlarvae and early juvenile: metamorphose offshore and swim shoreward by night at the water's surface.  Juveniles move inshore to seagrass and mangrove nursery areas until they approach maturity, and then move out to deep reef habitats.\nAdult: Offshore populations are all adult (Zieman 1982 767 817).\n\nMovements and Migrations: Local movements are reported in response to temperature and food availability.  Mating triggers an inshore migration, and spawning is preceded by an offshore movement of females.  Offshore movement is also prompted by periods of cold temperatures.  Larvae are dispersed by oceanic currents.  Pueruli swim shoreward at night, then settle out of the water column.  Throughout its benthic life, the lobster is influenced by currents, wave surge, and turbulence (816 820 684 817)."
+    },
+    {
+      "id": 1314,
+      "position": 8,
+      "heading": "BENTHIC HABITAT",
+      "content": "Habitat Type: Phyllosoma are planktonic and are found in the epipelagic zone of the Caribbean Sea, Gulf of Mexico, and the Straits of Florida (812).  The pueruli settle in oceanic banks greater than 10 m deep.  After the puerulus molt, the young lobster becomes demersal and littoral, and utilize state coastal waters of bays, lagoons, and reef flats seeking shelter associated with the substrate.  Adults are benthic and occur on reefs and rubble areas from shore to 80 m (809 767 681 817)."
+    },
+    {
+      "id": 1315,
+      "position": 9,
+      "heading": "Substrate",
+      "content": "Adult: are found over reefs, jetties, offshore oil platforms, and rubble.\nJuvenile: young pueruli and juveniles occur among the seagrasses, algal beds, jetties, and corals (820 767 684 Tunnell pers. comm., Hockeday pers. comm.)."
+    },
+    {
+      "id": 1316,
+      "position": 10,
+      "heading": "Physical/Chemical",
+      "content": "Temperature: The spiny lobster can survive 13 C, but generally inhabit areas with an annual minimum temperature that exceeds 20 C (817).  Early juveniles do not survive below 10 C nor above 3 C (811).  Growth is optimal at 26-28 C, and temperature regulates spawning."
+    },
+    {
+      "id": 1317,
+      "position": 11,
+      "heading": "Salinity",
+      "content": "Postlarvae do not tolerate salinities less than 19 ppt.\nJuveniles and adults are mesohaline to euhaline (5-40 ppt).  Older juveniles are able to use marginal inshore habitats because they are highly mobile and can retreat from unsuitable conditions (817)."
+    },
+    {
+      "id": 1318,
+      "position": 12,
+      "heading": "REPRODUCTION",
+      "content": "Reproductive Mode: Reproduction is sexual, dioecious, and fertilization is external.  No signs of hermaphrodism have been found (811).\n\nMating/Spawning: Mating may occur up to a month prior to spawning.  In Florida, the mating season is principally from February to April, but some occurs year round (814 811).  After mating, the spermatophore adheres to the female's sternum; at spawning she scratches it to achieve fertilization.  Spawning occurs offshore in open Gulf waters and is principally associated with reef habitats.  The season extends from March to July with some spawning occurring in August.  In the Florida Keys, it peaks  in May-June.  Some year-round spawning has been reported (821 815 816 811 810 767 684 817).\n\nFecundity: Estimates show that a 23 cm female can lay 500,000 eggs, a 30 cm female 1,118,656, and a 33 cm female 2,566,916.  A second mating and spawning may occur during a season; therefore, it is estimated that a 38 cm female might lay 4 million eggs a season (810 767).  Nearly half of the egg pool is contributed by females in the 75-85 mm size class (810)."
+    },
+    {
+      "id": 1319,
+      "position": 13,
+      "heading": "Length Range",
+      "content": "Egg:  Eggs are spherical and about 0.5 mm in diameter.  Embryonic development lasts about 3 weeks.  During this time the eggs adhere to pleopodal setae on the underside of the female's abdomen.  The phyllosomes emerge from the egg membrane and disperse in the water column (817).\n\nLarvae: Phyllosomes develop through about 11 stages increasing in size from 2 mm total length at hatching to nearly 34 mm before metamorphoses.  Duration of the phyllosome stage is about 6-12 months (819 817).\n\nJuvenile: The larvae metamorphose into a puerulus stage which lasts several weeks.  They begin to acquire reddish-brown pigment and within days molt into the first juvenile stage.  During the juvenile stage growth is estimated at 5 mm carapace length (CL) per month (809).  Other estimates are 12 mm in first year of benthic existence (811), from 6 mm to 90 mm in the first year (Witham et al. 1968), and 5.4 mm per molt (821).  In general, there are 4 molts per year (811).  Injury results in a reduced growth rate (811 813).\n\nAdults: Onset of maturation is near 70 mm CL in south Florida, but a few are reproductively functional at 66 mm CL (821 810 813)."
+    },
+    {
+      "id": 1320,
+      "position": 14,
+      "heading": "FOOD HABITS",
+      "content": "Trophic Modes: Carnivore\n\nFood Items: Spiny lobster phyllosomes are assumed to feed on plankton, based on laboratory cultured phyllosomes feeding on chaetognaths, euphasiids, fish larvae, medusae and ctenophores (817).  There is no indication that pueruli feed at all (817).  The lobster is a nocturnal forager throughout the benthic phase.  It preys on a wide variety of slow-moving and sedentary animals such as mollusks, crustaceans, and echinoderms.\n\nYoung juveniles: were found to feed on molluscs (811).\nLarge juveniles and adults:  are higher carnivores of coral reef systems feeding on algae, foraminifera, sponge spicules, polychaetes, bivalves, conchs, hermit crabs and other crustaceans, and fish (808 811 820 817)."
+    },
+    {
+      "id": 1321,
+      "position": 15,
+      "heading": "ECOLOGICAL INTERACTIONS",
+      "content": "Predation: Larvae are preyed on by a number of pelagic fishes that include tunas, Katsuwonus pelanus and Thunnus atlanticus (811).  Juveniles are presumably subject to predation by numerous fishes while occupying the mangrove and grass flat habitats.   Major predators of adult and sub-adult stages include skates (Dasyatis spp.), sharks (especially Ginglyostoma cirratum), various snappers (Lujanus), grouper (Mycteroperca spp. and Epinephelus spp.), and octopus.  Dolphins (Tursiops) and loggerhead turtles (Caretta caretta) also prey on lobster.  A small snail, Murex pomum, kills lobsters in traps and presumably in nature by boring through the carapace.\n\nFactors Influencing Populations: The high incidence of out-of-season harvest and the taking of lobsters under the legal size (shorts) has a serious effect on the adult breeding population.  Oil and tar pollution of marine waters can potentially impact the open ocean epipelagic habitat of larvae.  Ocean dumping creates silt that settles over larvae and suffocates them.  Shallow water mangrove and grass flat nursery areas are subject to abuses of dredge and fill, modified discharges, and development all of which destroy necessary habitat needed to sustain spiny lobster population levels.  Damage to reef areas from pollution, ship groundings, anchors, and collectors also remove habitat necessary for sustaining this species (811)."
+    },
+    {
+      "id": 1322,
+      "position": 16,
+      "heading": "REFERENCE NUMBERS",
+      "content": "681 767 808 809 810 811 812 813 814 815 816 817 818 819 820 821"
+    },
+    {
+      "id": 1323,
+      "position": 17,
+      "heading": "CITATIONS",
+      "content": "681      Strategic Assessment Branch (SAB), NOAA/NOS and Southeast Fisheries Center, NOAA/NMFS     1985      Gulf of Mexico, coastal and ocean zone strategic assessment: Data Atlas Strategic Assessment Branch, Ocean Assessments Division, NOS/NOAA: 161\n\n   767      Williams, A.B.    1984      Shrimps, lobsters and crabs of the Atlantic coast of the Eastern United States, Maine to Florida    Smithsonian Institution Press, Washington, D.C.: 550\n\n808      Crawford, D.R., and W.J. DeSmidt.     1923      The spiny lobster, Panulirus argus, of southern Florida: its natural history and utilization    Bul. U.S. Bur. Fish. 38: 281\u001e310.\n\n   809      Eldred, B., C.R. Futch, and R.M Ingle.    1972      Studies of juvenile spiny lobsters, Panulirus argus, in Biscayne Bay, Florida   Flor. Dept. Nat. Res. Mar. Res. Lab Spec. Scien. Rep. No. 35.\n\n\n   810      Gregory, Jr., D.R., R.F. Labisky, and C.L. Combs.     1982      Reproductive dynamics of the spiny lobster Panulirus argus in south Florida Trans. Amer. Fish Soc.  111(5): 575\u001e584.\n\n\n   811      Gulf of Mexico and South Atlantic Fishery Management Councils (GMFMC).    1982      Fishery management plan environmental impact statement and regulatory impact review for spiny lobster in the Gulf of Mexico and south Atlantic  Gulf of Mexico Fishery Management Council, Tampa, Florida and South Atlantic Fishery Management Council, Charleston, South Carolina.\n\n   812      Gulf of Mexico Fishery Management Council and South Atlantic Fishery Management Council (GMFMC).      1987      Amendment number 1 to spiny lobster fishery management plan for the Gulf of Mexico and South Atlantic   Gulf of Mexico Fishery Management Council, Tampa, Florida, and South Atlantic Fishery Management Council, Charleston, South Carolina\n\n\n   813      Hunt, J.H., and W.G. Lyons.   1986      Factors affecting growth and maturation of spiny lobsters, Panulirus argus, in the Florida Keys     Can. J. Aquat. Sci.  43:2243\u001e2247.\n\n\n   814      Lewis, J.B.   1951      The phyllosoma larvae of the spiny lobster Panulirus argus  Bull. Mar. Sci. Gulf and Carib.  1: 89\u001e103\n\n\n   815      Lyons, W.     1981      Possible sources of Florida's spiny lobster population  Proc. Ann Gulf Carib. Fish.  33: 253\u001e266.\n\n\n   816      Lyons, W.G., D.G. Barbeer, S.M. Foster, F.S. Kennedy, Jr., and G.R. Milano.   1981      The spiny lobster, Panulirus argus, in the middle and upper Florida Keys: population structure, seasonal dynamics, and reproduction     Flor. Dept. Nat. Res. Mar. Res. Lab., No. 38.\n\n\n   817      Marx, J.M., and W.F. Herrnkind.   1986      Species profiles: life histories and environmental requirements of coastal fishes and invertebrates (south Florida) \u001e spiny lobster     U.S. Fish & Wildl. Serv. Biol. Rep. 82(11.61)\n\n\n   818      NOAA.     1990      Fishing trends and conditions in the southeast region, 1989 U.S. Dept. Comm., NOAA, NMFS.  70 pp.\n\n\n   819      Richards, W.J., and T. Potthoff.      1981      Distribution and seasonal occurrence of larval pelagic stages of spiny lobsters (Palinuridae, Panulirus) in the western tropical Atlantic   Proc. Ann Gulf Carib. Fish. Inst.  33: 244\u001e252.\n\n\n   820      Schomer, N.S., and R.D. Drew.     1982      An ecological characterization of the lower Everglades, Florida Bay and Florida Keys    U.S. Fish & Wildl. Serv.  FWS/OBS\u001e82/58.1.\n\n\n   821      Warner, R.E., C.L. Combs, and D.R. Gregory, Jr.   1977      Biological studies of the spiny lobster, Panulirus argus (Decapoda: Palinuridae) in south Florida   Proc. Ann. Gulf and Carib. Fish. Inst.  29: 166\u001e183."
+    }
+  ]
+}

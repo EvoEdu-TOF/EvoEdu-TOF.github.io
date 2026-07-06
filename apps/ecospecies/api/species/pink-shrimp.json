@@ -1,0 +1,498 @@
+{
+  "slug": "pink-shrimp",
+  "source_file": "Pink Shrimp SLH  NOAA SEA.txt",
+  "title": "Pink shrimp (Penaeus duorarum)",
+  "common_name": "Pink shrimp",
+  "scientific_name": "Penaeus duoraum",
+  "flelmr_code": "5590",
+  "legacy_identifiers": [
+    {
+      "authority": "legacy-ecospecies",
+      "identifier": "5590",
+      "label": "FLELMR"
+    }
+  ],
+  "taxon_identifiers": [],
+  "primary_taxon_authority": "",
+  "primary_taxon_identifier": null,
+  "summary": "",
+  "section_count": 16,
+  "citation_count": 12,
+  "publication_status": "published",
+  "is_archived": false,
+  "editor_notes": "",
+  "last_modified_by": "system-import",
+  "diagnostics": [],
+  "citations": [
+    {
+      "id": 2118,
+      "position": 1,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "50",
+      "citation_key": "biesla1983speciesprofileslife",
+      "entry_type": "misc",
+      "raw_text": "Biesla, L.M., W.H. Murdich, and R.F. Labisky.  1983.  Species profiles: Life histories and environmental requirements of coastal fishes and invertebrates (South Atlantic) pink shrimp. U.S. Fish and Wildlife Service FWC/OBS-82/11.17: 1-21.",
+      "normalized_text": "Biesla, L.M., W.H. Murdich, and R.F. Labisky. 1983. Species profiles: Life histories and environmental requirements of coastal fishes and invertebrates (South Atlantic) pink shrimp. U.S. Fish and Wildlife Service FWC/OBS-82/11.17: 1-21.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{biesla1983speciesprofileslife,\n  author = {Biesla, L.M., W.H. Murdich, and R.F. Labisky},\n  howpublished = {U.S. Fish and Wildlife Service FWC/OBS-82/11.17: 1-21},\n  note = {raw_reference = {Biesla, L.M., W.H. Murdich, and R.F. Labisky.  1983.  Species profiles: Life histories and environmental requirements of coastal fishes and invertebrates (South Atlantic) pink shrimp. U.S. Fish and Wildlife Service FWC/OBS-82/11.17: 1-21.}; ecospecies_reference_number = {50}},\n  title = {Species profiles: Life histories and environmental requirements of coastal fishes and invertebrates (South Atlantic) pink shrimp},\n  year = {1983},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 2119,
+      "position": 2,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "142",
+      "citation_key": "costello1966migrationsgeographicdistributions",
+      "entry_type": "misc",
+      "raw_text": "Costello, T.J.,  and D.M. Allen.  1966.  Migrations and geographic distributions of pink shrimp, Penaeus duorarum, of the Tortugas and Sannibel grounds, Florida.  Unites States Fish and Wildlife Service, Fishery Bulletin 65: 449-459.",
+      "normalized_text": "Costello, T.J., and D.M. Allen. 1966. Migrations and geographic distributions of pink shrimp, Penaeus duorarum, of the Tortugas and Sannibel grounds, Florida. Unites States Fish and Wildlife Service, Fishery Bulletin 65: 449-459.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{costello1966migrationsgeographicdistributions,\n  author = {Costello, T.J.,  and D.M. Allen},\n  howpublished = {Bulletin},\n  note = {raw_reference = {Costello, T.J.,  and D.M. Allen.  1966.  Migrations and geographic distributions of pink shrimp, Penaeus duorarum, of the Tortugas and Sannibel grounds, Florida.  Unites States Fish and Wildlife Service, Fishery Bulletin 65: 449-459.}; ecospecies_reference_number = {142}},\n  pages = {449-459},\n  title = {Migrations and geographic distributions of pink shrimp, Penaeus duorarum, of the Tortugas and Sannibel grounds, Florida.  Unites States Fish and Wildlife Service, Fishery},\n  volume = {65},\n  year = {1966},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 2120,
+      "position": 3,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "143",
+      "citation_key": "costello1970synopsisbiologicaldata",
+      "entry_type": "misc",
+      "raw_text": "Costello, T.J., and D.M. Allen.  1970.  Synopsis of biological data on the pink shrimp Penaeus duorarum duorarum Burkenroad, 1939.  FAO Fisheries Report 5v7: 1499-1538.",
+      "normalized_text": "Costello, T.J., and D.M. Allen. 1970. Synopsis of biological data on the pink shrimp Penaeus duorarum duorarum Burkenroad, 1939. FAO Fisheries Report 5v7: 1499-1538.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{costello1970synopsisbiologicaldata,\n  author = {Costello, T.J., and D.M. Allen},\n  note = {raw_reference = {Costello, T.J., and D.M. Allen.  1970.  Synopsis of biological data on the pink shrimp Penaeus duorarum duorarum Burkenroad, 1939.  FAO Fisheries Report 5v7: 1499-1538.}; ecospecies_reference_number = {143}},\n  title = {Synopsis of biological data on the pink shrimp Penaeus duorarum duorarum Burkenroad, 1939.  FAO Fisheries Report 5v7: 1499-1538},\n  year = {1970},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 2121,
+      "position": 4,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "144",
+      "citation_key": "costello1986distributionseasonalabundance",
+      "entry_type": "misc",
+      "raw_text": "Costello, T.J., D.M. Allen, and J.H. Hudson.  1986.  Distribution, seasonal abundance and ecology of juvenile northern pink shrimp, Penaeus duorarum, in the Florida Bay area.  NOAA Technical Memorandum NMFS-SEFC-161.",
+      "normalized_text": "Costello, T.J., D.M. Allen, and J.H. Hudson. 1986. Distribution, seasonal abundance and ecology of juvenile northern pink shrimp, Penaeus duorarum, in the Florida Bay area. NOAA Technical Memorandum NMFS-SEFC-161.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{costello1986distributionseasonalabundance,\n  author = {Costello, T.J., D.M. Allen, and J.H. Hudson},\n  howpublished = {NOAA Technical Memorandum NMFS-SEFC-161},\n  note = {raw_reference = {Costello, T.J., D.M. Allen, and J.H. Hudson.  1986.  Distribution, seasonal abundance and ecology of juvenile northern pink shrimp, Penaeus duorarum, in the Florida Bay area.  NOAA Technical Memorandum NMFS-SEFC-161.}; ecospecies_reference_number = {144}},\n  title = {Distribution, seasonal abundance and ecology of juvenile northern pink shrimp, Penaeus duorarum, in the Florida Bay area},\n  year = {1986},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 2122,
+      "position": 5,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "156",
+      "citation_key": "cummings1961maturationspawningpink",
+      "entry_type": "misc",
+      "raw_text": "Cummings, W.C.  1961.  Maturation and spawning of the pink shrimp, Penaeus duorarum Burkenroad.  Transactions of the American Fisheries Society 90: 462-468.",
+      "normalized_text": "Cummings, W.C. 1961. Maturation and spawning of the pink shrimp, Penaeus duorarum Burkenroad. Transactions of the American Fisheries Society 90: 462-468.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{cummings1961maturationspawningpink,\n  author = {Cummings, W.C},\n  journal = {Transactions of the American Fisheries Society},\n  note = {raw_reference = {Cummings, W.C.  1961.  Maturation and spawning of the pink shrimp, Penaeus duorarum Burkenroad.  Transactions of the American Fisheries Society 90: 462-468.}; ecospecies_reference_number = {156}},\n  pages = {462-468},\n  title = {Maturation and spawning of the pink shrimp, Penaeus duorarum Burkenroad},\n  volume = {90},\n  year = {1961},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 2123,
+      "position": 6,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "183",
+      "citation_key": "dobkin1961earlydevelopmentalstages",
+      "entry_type": "misc",
+      "raw_text": "Dobkin, S. 1961.  Early developmental stages of pink shrimp, Penaeus duorarum, from Florida Waters. Fishery Bulletin 61: 321-349.",
+      "normalized_text": "Dobkin, S. 1961. Early developmental stages of pink shrimp, Penaeus duorarum, from Florida Waters. Fishery Bulletin 61: 321-349.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{dobkin1961earlydevelopmentalstages,\n  author = {Dobkin, S},\n  howpublished = {Bulletin},\n  note = {raw_reference = {Dobkin, S. 1961.  Early developmental stages of pink shrimp, Penaeus duorarum, from Florida Waters. Fishery Bulletin 61: 321-349.}; ecospecies_reference_number = {183}},\n  pages = {321-349},\n  title = {Early developmental stages of pink shrimp, Penaeus duorarum, from Florida Waters. Fishery},\n  volume = {61},\n  year = {1961},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 2124,
+      "position": 7,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "348",
+      "citation_key": "hughes1967factorscontrollingtime",
+      "entry_type": "misc",
+      "raw_text": "Hughes, D.A.  1967.  Factors controlling the time of emergence of pink shrimp, Penaeus duorarum.  FAO of the United Nations: 1-10.",
+      "normalized_text": "Hughes, D.A. 1967. Factors controlling the time of emergence of pink shrimp, Penaeus duorarum. FAO of the United Nations: 1-10.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{hughes1967factorscontrollingtime,\n  author = {Hughes, D.A},\n  note = {raw_reference = {Hughes, D.A.  1967.  Factors controlling the time of emergence of pink shrimp, Penaeus duorarum.  FAO of the United Nations: 1-10.}; ecospecies_reference_number = {348}},\n  title = {Factors controlling the time of emergence of pink shrimp, Penaeus duorarum.  FAO of the United Nations: 1-10},\n  year = {1967},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 2125,
+      "position": 8,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "385",
+      "citation_key": "klima1982reviewoffshorepink",
+      "entry_type": "misc",
+      "raw_text": "Klima, E.F., K.N.  Baxter, and F.J. Patella.  1982.  A review of the offshore pink shrimp fishery and the1981 Texas closure. Marine Fisheries Review 44: 16-30.",
+      "normalized_text": "Klima, E.F., K.N. Baxter, and F.J. Patella. 1982. A review of the offshore pink shrimp fishery and the1981 Texas closure. Marine Fisheries Review 44: 16-30.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{klima1982reviewoffshorepink,\n  author = {Klima, E.F., K.N.  Baxter, and F.J. Patella},\n  note = {raw_reference = {Klima, E.F., K.N.  Baxter, and F.J. Patella.  1982.  A review of the offshore pink shrimp fishery and the1981 Texas closure. Marine Fisheries Review 44: 16-30.}; ecospecies_reference_number = {385}},\n  title = {A review of the offshore pink shrimp fishery and the1981 Texas closure. Marine Fisheries Review 44: 16-30},\n  year = {1982},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 2126,
+      "position": 9,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "441",
+      "citation_key": "martosubroto1974fecunditypinkshrimp",
+      "entry_type": "misc",
+      "raw_text": "Martosubroto, P.  1974.  Fecundity of pink  shrimp, Penaeus duorarum Burkenroad.  Bulletin of Marine Science 24: 606-627.",
+      "normalized_text": "Martosubroto, P. 1974. Fecundity of pink shrimp, Penaeus duorarum Burkenroad. Bulletin of Marine Science 24: 606-627.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{martosubroto1974fecunditypinkshrimp,\n  author = {Martosubroto, P},\n  howpublished = {Bulletin of Marine Science},\n  note = {raw_reference = {Martosubroto, P.  1974.  Fecundity of pink  shrimp, Penaeus duorarum Burkenroad.  Bulletin of Marine Science 24: 606-627.}; ecospecies_reference_number = {441}},\n  pages = {606-627},\n  title = {Fecundity of pink  shrimp, Penaeus duorarum Burkenroad},\n  volume = {24},\n  year = {1974},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 2127,
+      "position": 10,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "495",
+      "citation_key": "motoh1977annotatedlistscientific",
+      "entry_type": "misc",
+      "raw_text": "Motoh, H.   1977.  An annotated list of scientific and English common names of commercially important penaeid prawns and shrimps.  Southeast Asian Fisheries Development Center, Aquaculture Department Technical Report 2:  1-14.",
+      "normalized_text": "Motoh, H. 1977. An annotated list of scientific and English common names of commercially important penaeid prawns and shrimps. Southeast Asian Fisheries Development Center, Aquaculture Department Technical Report 2: 1-14.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{motoh1977annotatedlistscientific,\n  author = {Motoh, H},\n  howpublished = {Technical Report},\n  note = {raw_reference = {Motoh, H.   1977.  An annotated list of scientific and English common names of commercially important penaeid prawns and shrimps.  Southeast Asian Fisheries Development Center, Aquaculture Department Technical Report 2:  1-14.}; ecospecies_reference_number = {495}},\n  pages = {1-14},\n  title = {An annotated list of scientific and English common names of commercially important penaeid prawns and shrimps.  Southeast Asian Fisheries Development Center, Aquaculture Department},\n  volume = {2},\n  year = {1977},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 2128,
+      "position": 11,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "589",
+      "citation_key": "renfro1982seasonalabundancesize",
+      "entry_type": "misc",
+      "raw_text": "Renfro, W.C.,  and H.A. Brusher.  1982.  Seasonal  abundance,  size distribution and spawning of three shrimps (Penaeus aztecus, P. setiferus, and P.  duorarum) in the northern Gulf of Mexico, 1961-1962.  NOAA Tech. Mem. NMFS-SEFC-94: 1-47.",
+      "normalized_text": "Renfro, W.C., and H.A. Brusher. 1982. Seasonal abundance, size distribution and spawning of three shrimps (Penaeus aztecus, P. setiferus, and P. duorarum) in the northern Gulf of Mexico, 1961-1962. NOAA Tech. Mem. NMFS-SEFC-94: 1-47.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{renfro1982seasonalabundancesize,\n  author = {Renfro, W.C.,  and H.A. Brusher},\n  howpublished = {NOAA Tech. Mem. NMFS-SEFC-94: 1-47},\n  note = {raw_reference = {Renfro, W.C.,  and H.A. Brusher.  1982.  Seasonal  abundance,  size distribution and spawning of three shrimps (Penaeus aztecus, P. setiferus, and P.  duorarum) in the northern Gulf of Mexico, 1961-1962.  NOAA Tech. Mem. NMFS-SEFC-94: 1-47.}; ecospecies_reference_number = {589}},\n  title = {Seasonal  abundance,  size distribution and spawning of three shrimps (Penaeus aztecus, P. setiferus, and P.  duorarum) in the northern Gulf of Mexico, 1961-1962},\n  year = {1982},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 2129,
+      "position": 12,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "767",
+      "citation_key": "williamswilliamsbshrimps",
+      "entry_type": "misc",
+      "raw_text": "Williams, A.B.  984.  Shrimps, lobsters and crabs of the Atlantic coast of the eastern United States, Maine to Florida.  Smithsonian Institution Press, Washington, D.C., 550 pp.",
+      "normalized_text": "Williams, A.B. 984. Shrimps, lobsters and crabs of the Atlantic coast of the eastern United States, Maine to Florida. Smithsonian Institution Press, Washington, D.C., 550 pp.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{williamswilliamsbshrimps,\n  note = {raw_reference = {Williams, A.B.  984.  Shrimps, lobsters and crabs of the Atlantic coast of the eastern United States, Maine to Florida.  Smithsonian Institution Press, Washington, D.C., 550 pp.}; ecospecies_reference_number = {767}},\n  title = {Williams, A.B.  984.  Shrimps, lobsters and crabs of the Atlantic coast of the eastern United States, Maine to Florida.  Smithsonian Institution Press, Washington, D.C., 550 pp.},\n  year = {},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    }
+  ],
+  "structured_document": {
+    "source_format": "ecospecies-markdown-v1",
+    "updated_by": "system-import",
+    "node_count": 15,
+    "ast": {
+      "metadata": {
+        "title": "Pink shrimp (Penaeus duorarum)",
+        "common_name": "Pink shrimp",
+        "scientific_name": "Penaeus duoraum",
+        "legacy_identifiers": [
+          {
+            "authority": "legacy-ecospecies",
+            "identifier": "5590",
+            "label": "FLELMR"
+          }
+        ],
+        "taxon_identifiers": [],
+        "primary_taxon_authority": "",
+        "source_file": "Pink Shrimp SLH  NOAA SEA.txt",
+        "publication_status": "published",
+        "source_format": "ecospecies-markdown-v1"
+      },
+      "nodes": [
+        {
+          "node_type": "section",
+          "title": "Revisions",
+          "body": "03-15-90.  Thomas Czapla; NOAA SEA Division",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "TAXONOMY",
+          "body": "Common Name:  Pink shrimp\nScientific Name:  Penaeus duoraum\n\tKingdom: Animalia\n\tPhylum: Arthropoda\n\tClass: Malacostraca\n\tOrder: Decapoda\n\tFamily: Penaeidae\n\nNote: \tSubphylum: Crustacea\n\n\nOther Common Names:  Brown spotted shrimp; Green shrimp; Grooved shrimp; Hopper; Pink spotted shrimp; Pink night shrimp; Pushed shrimp; Red shrimp; Skipper; Spotted shrimp (495).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "VALUE & STATUS",
+          "body": "Commercial:  The pink shrimp is a commercially important species throughout the Gulf of Mexico.  The major fishery is in the Tortuga and Sanibel grounds of Florida.  In Texas there is also a major fishery, but because they are often difficult to distinguish from brown shrimp they are often lumped in with the brown shrimp fishery statistic.  Texas and Louisiana landed over 40,000 pounds heads off in 1987 (M. Hightower, per. comm.).  The pink shrimp fishery probably does not contribute more than 10 % of the total catch off Texas (385).\n\nEcological Role:  Pink shrimp distributions appear to correlate with shoalgrass, Halodule wrightii, and appear to actively select this habit as postlarvae (144).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "GEOGRAPHIC RANGE",
+          "body": "Overall:  Pink shrimp range from lower Chesapeake Bay to southern Florida, through the Gulf of Mexico to Cape Catoche and the Isla Mujeres at the tip of the Yucatan Peninsula.  Maximum densities occur along the coasts of Florida and the Yucatan, in the Gulf of Mexico (50).\n\nWithin Study Area:  Concentrated areas of abundance of pink shrimp occur in the Laguna Madre and offshore from Brownsville and Galveston, often associated with coarse substrate (P. Sheridan, per. comm.)\n\nMobility and Migration:",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Life Mode",
+          "body": "Eggs are demersal.\nLarvae are planktonic through the postlarval stage (143).\nJuvenile pink shrimp burrow during the day and are active nocturnally.  The nocturnal activity is most obvious during new and full moons (348).\n\nPink shrimp enter estuarine nursery areas after 21-28 days of larval and postlarval development and remain there for 2-6 months.  Late juveniles and early adults (95-100 mm TL) emigrate to deeper offshore waters, often migrating 150 nautical miles.  The intensity of the migrations at the surface appears to be correlated to the phase of the moon.  Although this emigration occurs year-round, the main activity peak occurs in the fall with a secondary peak in the spring.  Decreasing water temperature triggers the pink shrimp to move deeper (143 50).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "BENTHIC HABITAT",
+          "body": "Habitat Type:  Early life stages of pink shrimp are marine.  Immature pink shrimp occupy shallow and estuarine areas.  Costello et al. (144) indicate optimum habitats have daily tidal flushing with marine water and large seagrass beds with high blade densities.  Mature pink shrimp inhabit deep offshore marine waters with the highest concentrations from 9-44 m.\n\nSubstrate:  Pink shrimp inhabit a range of bottom substrates including shell-sand, sand, coral-mud, and mud.  Immature pink shrimp prefer shell-sand or loose peat, adults prefer shell-sand over loose peat (767).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Temperature",
+          "body": "Juvenile: pink shrimp tolerate temperatures between 4-34 C.\nAdult: pink shrimp tolerate temperatures between 10-35.5 C.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Salinity",
+          "body": "Postlarvae: have been observed in salinity of 12-43 ppt.\nJuveniles: have been observed between 5-47 ppt although they prefer salinities greater than 20 ppt (Note: This range (freshwater) may be too narrow, i.e. found in <5 ppt?).\nAdults: are generally found in 25-45 ppt; although they have been found in salinities as high as 69 ppt.  Abundances are reduced above 45 ppt.  At their lower salinity tolerance, pink shrimp have been observed in 2.7 ppt in the northern Gulf of Mexico; and close to 1 ppt in the Calooshshachee River (NOTE:  Verify lower salinity tolerance).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REPRODUCTION",
+          "body": "Reproductive Mode: Sexual reproduction with external fertilization, the male attaches a spermatophore to the abdomen of the female (143).\n\nMating/Spawning:  Spawning occurs in the sea water at depths of 4-48 meters.  The smallest impregnated female which has been observed is 89 mm.  The smallest ripe female is 101 mm.  In the Gulf of Mexico, the two principal spawning grounds are the Sanibel and Tortuga shelf regions between depths of 15-48 meters.  The Dry Tortugas shrimp ground receives emigrants from nursery areas between Florida Bay and the Indian Key, and the Sanibel grounds receives shrimp from nursery areas between Indian Key and Pine Island Sound.  Although ripening females have been observed throughout the year, the presence of larvae indicates the height of spawning activity occurs from April through July.  Spawning is induced by water temperature (156 142 50).\nFecundity: Shrimp with a weight of 10.1-66.8 g contain 44,000 to 534,000 developing ova (441).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Length Range",
+          "body": "Egg:  The average egg diameter is 0.31-0.33 mm.  At 27-29 C, nauplii emerge 13-14 hours after the eggs are spawned (183).\n\nLarval and Juvenile:  Pink shrimp larvae undergo 5 naupliar stages with the following length ranges: 0.35-0.40, 0.40-0.45, 0.45-0.49, 0.48-0.55, and 0.53-0.61 mm.  There are 3 protozoeal stages which have the following length ranges: 0.86-1.02, 1.5-1.9, 2.2-2.7 mm.  There are 3 mysis stages with length ranges of 2.9-3.4, 3.3-3.9, and 3.7-4.4 mm.  The pink shrimp grow from nauplii to postlarvae in 2-3 weeks depending on the temperature and location.  The duration of the larval stage is 15 days in 26 C and 21 days in 21 C.  Sexual maturity occurs at 85 mm TL for females and 74 mm Tl for males (183 50).\n\nAdults:  The average sizes of large male and female pink shrimp are 170 mm and 210 mm Tl, respectively.  The average maximum age is 83 weeks with an absolute maximum age of 2 years (50).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "FOOD HABITS",
+          "body": "Pink shrimp are omnivorous consumers in marine and estuarine systems.  Larvae and postlarvae feed on various plankton.  Juveniles and adults forage primarily at night, on benthic prey, in shallow grass beds.  Typical juvenile and adult prey includes nematodes, polychaetes, ostracods, copepods, dinoflagellates, annelids, gastropods, and mollusks (50).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "ECOLOGICAL INTERACTIONS",
+          "body": "Pink shrimp are very difficult to distinguish from brown shrimp, often resulting in unreliable data.  Pink shrimp may compete for or be displaced by brown shrimp from habitats (P. Sheridan, per. comm.).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "PEOPLE CONSULTED",
+          "body": "Margot Hightower, Chief; NOAA/NMFS/Statistical Field Office, Galveston, Texas.\nPeter Sheridan, Ecologist; NOAA/NMFS/SEFC/Galveston Laboratory, Texas.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REFERENCE NUMBERS",
+          "body": "50 142 143 144 156 183 348 385 441 495 589 767",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "CITATIONS",
+          "body": "50.   Biesla, L.M., W.H. Murdich, and R.F. Labisky.  1983.  Species profiles: Life histories and environmental requirements of coastal fishes and invertebrates (South Atlantic) pink shrimp. U.S. Fish and Wildlife Service FWC/OBS-82/11.17: 1-21.\n\n142. Costello, T.J.,  and D.M. Allen.  1966.  Migrations and geographic distributions of pink shrimp, Penaeus duorarum, of the Tortugas and Sannibel grounds, Florida.  Unites States Fish and Wildlife Service, Fishery Bulletin 65: 449-459.\n\n143.  Costello, T.J., and D.M. Allen.  1970.  Synopsis of biological data on the pink shrimp Penaeus duorarum duorarum Burkenroad, 1939.  FAO Fisheries Report 5v7: 1499-1538.\n\n144.  Costello, T.J., D.M. Allen, and J.H. Hudson.  1986.  Distribution, seasonal abundance and ecology of juvenile northern pink shrimp, Penaeus duorarum, in the Florida Bay area.  NOAA Technical Memorandum NMFS-SEFC-161.\n\n156.  Cummings, W.C.  1961.  Maturation and spawning of the pink shrimp, Penaeus duorarum Burkenroad.  Transactions of the American Fisheries Society 90: 462-468.\n\n183. Dobkin, S. 1961.  Early developmental stages of pink shrimp, Penaeus duorarum, from Florida Waters. Fishery Bulletin 61: 321-349.\n\n348.  Hughes, D.A.  1967.  Factors controlling the time of emergence of pink shrimp, Penaeus duorarum.  FAO of the United Nations: 1-10.\n\n385. Klima, E.F., K.N.  Baxter, and F.J. Patella.  1982.  A review of the offshore pink shrimp fishery and the1981 Texas closure. Marine Fisheries Review 44: 16-30.\n\n441.  Martosubroto, P.  1974.  Fecundity of pink  shrimp, Penaeus duorarum Burkenroad.  Bulletin of Marine Science 24: 606-627.\n\n495.  Motoh, H.   1977.  An annotated list of scientific and English common names of commercially important penaeid prawns and shrimps.  Southeast Asian Fisheries Development Center, Aquaculture Department Technical Report 2:  1-14.\n\n589.  Renfro, W.C.,  and H.A. Brusher.  1982.  Seasonal  abundance,  size distribution and spawning of three shrimps (Penaeus aztecus, P. setiferus, and P.  duorarum) in the northern Gulf of Mexico, 1961-1962.  NOAA Tech. Mem. NMFS-SEFC-94: 1-47.\n\n767.  Williams, A.B.  984.  Shrimps, lobsters and crabs of the Atlantic coast of the eastern United States, Maine to Florida.  Smithsonian Institution Press, Washington, D.C., 550 pp.",
+          "depth": 2,
+          "children": []
+        }
+      ]
+    }
+  },
+  "legacy_source": null,
+  "sections": [
+    {
+      "id": 908,
+      "position": 1,
+      "heading": "HEADER",
+      "content": "Title:  Pink shrimp (Penaeus duorarum)\n\nFLELMR Code:  5590"
+    },
+    {
+      "id": 909,
+      "position": 2,
+      "heading": "Revisions",
+      "content": "03-15-90.  Thomas Czapla; NOAA SEA Division"
+    },
+    {
+      "id": 910,
+      "position": 3,
+      "heading": "TAXONOMY",
+      "content": "Common Name:  Pink shrimp\nScientific Name:  Penaeus duoraum\n\tKingdom: Animalia\n\tPhylum: Arthropoda\n\tClass: Malacostraca\n\tOrder: Decapoda\n\tFamily: Penaeidae\n\nNote: \tSubphylum: Crustacea\n\n\nOther Common Names:  Brown spotted shrimp; Green shrimp; Grooved shrimp; Hopper; Pink spotted shrimp; Pink night shrimp; Pushed shrimp; Red shrimp; Skipper; Spotted shrimp (495)."
+    },
+    {
+      "id": 911,
+      "position": 4,
+      "heading": "VALUE & STATUS",
+      "content": "Commercial:  The pink shrimp is a commercially important species throughout the Gulf of Mexico.  The major fishery is in the Tortuga and Sanibel grounds of Florida.  In Texas there is also a major fishery, but because they are often difficult to distinguish from brown shrimp they are often lumped in with the brown shrimp fishery statistic.  Texas and Louisiana landed over 40,000 pounds heads off in 1987 (M. Hightower, per. comm.).  The pink shrimp fishery probably does not contribute more than 10 % of the total catch off Texas (385).\n\nEcological Role:  Pink shrimp distributions appear to correlate with shoalgrass, Halodule wrightii, and appear to actively select this habit as postlarvae (144)."
+    },
+    {
+      "id": 912,
+      "position": 5,
+      "heading": "GEOGRAPHIC RANGE",
+      "content": "Overall:  Pink shrimp range from lower Chesapeake Bay to southern Florida, through the Gulf of Mexico to Cape Catoche and the Isla Mujeres at the tip of the Yucatan Peninsula.  Maximum densities occur along the coasts of Florida and the Yucatan, in the Gulf of Mexico (50).\n\nWithin Study Area:  Concentrated areas of abundance of pink shrimp occur in the Laguna Madre and offshore from Brownsville and Galveston, often associated with coarse substrate (P. Sheridan, per. comm.)\n\nMobility and Migration:"
+    },
+    {
+      "id": 913,
+      "position": 6,
+      "heading": "Life Mode",
+      "content": "Eggs are demersal.\nLarvae are planktonic through the postlarval stage (143).\nJuvenile pink shrimp burrow during the day and are active nocturnally.  The nocturnal activity is most obvious during new and full moons (348).\n\nPink shrimp enter estuarine nursery areas after 21-28 days of larval and postlarval development and remain there for 2-6 months.  Late juveniles and early adults (95-100 mm TL) emigrate to deeper offshore waters, often migrating 150 nautical miles.  The intensity of the migrations at the surface appears to be correlated to the phase of the moon.  Although this emigration occurs year-round, the main activity peak occurs in the fall with a secondary peak in the spring.  Decreasing water temperature triggers the pink shrimp to move deeper (143 50)."
+    },
+    {
+      "id": 914,
+      "position": 7,
+      "heading": "BENTHIC HABITAT",
+      "content": "Habitat Type:  Early life stages of pink shrimp are marine.  Immature pink shrimp occupy shallow and estuarine areas.  Costello et al. (144) indicate optimum habitats have daily tidal flushing with marine water and large seagrass beds with high blade densities.  Mature pink shrimp inhabit deep offshore marine waters with the highest concentrations from 9-44 m.\n\nSubstrate:  Pink shrimp inhabit a range of bottom substrates including shell-sand, sand, coral-mud, and mud.  Immature pink shrimp prefer shell-sand or loose peat, adults prefer shell-sand over loose peat (767)."
+    },
+    {
+      "id": 915,
+      "position": 8,
+      "heading": "Temperature",
+      "content": "Juvenile: pink shrimp tolerate temperatures between 4-34 C.\nAdult: pink shrimp tolerate temperatures between 10-35.5 C."
+    },
+    {
+      "id": 916,
+      "position": 9,
+      "heading": "Salinity",
+      "content": "Postlarvae: have been observed in salinity of 12-43 ppt.\nJuveniles: have been observed between 5-47 ppt although they prefer salinities greater than 20 ppt (Note: This range (freshwater) may be too narrow, i.e. found in <5 ppt?).\nAdults: are generally found in 25-45 ppt; although they have been found in salinities as high as 69 ppt.  Abundances are reduced above 45 ppt.  At their lower salinity tolerance, pink shrimp have been observed in 2.7 ppt in the northern Gulf of Mexico; and close to 1 ppt in the Calooshshachee River (NOTE:  Verify lower salinity tolerance)."
+    },
+    {
+      "id": 917,
+      "position": 10,
+      "heading": "REPRODUCTION",
+      "content": "Reproductive Mode: Sexual reproduction with external fertilization, the male attaches a spermatophore to the abdomen of the female (143).\n\nMating/Spawning:  Spawning occurs in the sea water at depths of 4-48 meters.  The smallest impregnated female which has been observed is 89 mm.  The smallest ripe female is 101 mm.  In the Gulf of Mexico, the two principal spawning grounds are the Sanibel and Tortuga shelf regions between depths of 15-48 meters.  The Dry Tortugas shrimp ground receives emigrants from nursery areas between Florida Bay and the Indian Key, and the Sanibel grounds receives shrimp from nursery areas between Indian Key and Pine Island Sound.  Although ripening females have been observed throughout the year, the presence of larvae indicates the height of spawning activity occurs from April through July.  Spawning is induced by water temperature (156 142 50).\nFecundity: Shrimp with a weight of 10.1-66.8 g contain 44,000 to 534,000 developing ova (441)."
+    },
+    {
+      "id": 918,
+      "position": 11,
+      "heading": "Length Range",
+      "content": "Egg:  The average egg diameter is 0.31-0.33 mm.  At 27-29 C, nauplii emerge 13-14 hours after the eggs are spawned (183).\n\nLarval and Juvenile:  Pink shrimp larvae undergo 5 naupliar stages with the following length ranges: 0.35-0.40, 0.40-0.45, 0.45-0.49, 0.48-0.55, and 0.53-0.61 mm.  There are 3 protozoeal stages which have the following length ranges: 0.86-1.02, 1.5-1.9, 2.2-2.7 mm.  There are 3 mysis stages with length ranges of 2.9-3.4, 3.3-3.9, and 3.7-4.4 mm.  The pink shrimp grow from nauplii to postlarvae in 2-3 weeks depending on the temperature and location.  The duration of the larval stage is 15 days in 26 C and 21 days in 21 C.  Sexual maturity occurs at 85 mm TL for females and 74 mm Tl for males (183 50).\n\nAdults:  The average sizes of large male and female pink shrimp are 170 mm and 210 mm Tl, respectively.  The average maximum age is 83 weeks with an absolute maximum age of 2 years (50)."
+    },
+    {
+      "id": 919,
+      "position": 12,
+      "heading": "FOOD HABITS",
+      "content": "Pink shrimp are omnivorous consumers in marine and estuarine systems.  Larvae and postlarvae feed on various plankton.  Juveniles and adults forage primarily at night, on benthic prey, in shallow grass beds.  Typical juvenile and adult prey includes nematodes, polychaetes, ostracods, copepods, dinoflagellates, annelids, gastropods, and mollusks (50)."
+    },
+    {
+      "id": 920,
+      "position": 13,
+      "heading": "ECOLOGICAL INTERACTIONS",
+      "content": "Pink shrimp are very difficult to distinguish from brown shrimp, often resulting in unreliable data.  Pink shrimp may compete for or be displaced by brown shrimp from habitats (P. Sheridan, per. comm.)."
+    },
+    {
+      "id": 921,
+      "position": 14,
+      "heading": "PEOPLE CONSULTED",
+      "content": "Margot Hightower, Chief; NOAA/NMFS/Statistical Field Office, Galveston, Texas.\nPeter Sheridan, Ecologist; NOAA/NMFS/SEFC/Galveston Laboratory, Texas."
+    },
+    {
+      "id": 922,
+      "position": 15,
+      "heading": "REFERENCE NUMBERS",
+      "content": "50 142 143 144 156 183 348 385 441 495 589 767"
+    },
+    {
+      "id": 923,
+      "position": 16,
+      "heading": "CITATIONS",
+      "content": "50.   Biesla, L.M., W.H. Murdich, and R.F. Labisky.  1983.  Species profiles: Life histories and environmental requirements of coastal fishes and invertebrates (South Atlantic) pink shrimp. U.S. Fish and Wildlife Service FWC/OBS-82/11.17: 1-21.\n\n142. Costello, T.J.,  and D.M. Allen.  1966.  Migrations and geographic distributions of pink shrimp, Penaeus duorarum, of the Tortugas and Sannibel grounds, Florida.  Unites States Fish and Wildlife Service, Fishery Bulletin 65: 449-459.\n\n143.  Costello, T.J., and D.M. Allen.  1970.  Synopsis of biological data on the pink shrimp Penaeus duorarum duorarum Burkenroad, 1939.  FAO Fisheries Report 5v7: 1499-1538.\n\n144.  Costello, T.J., D.M. Allen, and J.H. Hudson.  1986.  Distribution, seasonal abundance and ecology of juvenile northern pink shrimp, Penaeus duorarum, in the Florida Bay area.  NOAA Technical Memorandum NMFS-SEFC-161.\n\n156.  Cummings, W.C.  1961.  Maturation and spawning of the pink shrimp, Penaeus duorarum Burkenroad.  Transactions of the American Fisheries Society 90: 462-468.\n\n183. Dobkin, S. 1961.  Early developmental stages of pink shrimp, Penaeus duorarum, from Florida Waters. Fishery Bulletin 61: 321-349.\n\n348.  Hughes, D.A.  1967.  Factors controlling the time of emergence of pink shrimp, Penaeus duorarum.  FAO of the United Nations: 1-10.\n\n385. Klima, E.F., K.N.  Baxter, and F.J. Patella.  1982.  A review of the offshore pink shrimp fishery and the1981 Texas closure. Marine Fisheries Review 44: 16-30.\n\n441.  Martosubroto, P.  1974.  Fecundity of pink  shrimp, Penaeus duorarum Burkenroad.  Bulletin of Marine Science 24: 606-627.\n\n495.  Motoh, H.   1977.  An annotated list of scientific and English common names of commercially important penaeid prawns and shrimps.  Southeast Asian Fisheries Development Center, Aquaculture Department Technical Report 2:  1-14.\n\n589.  Renfro, W.C.,  and H.A. Brusher.  1982.  Seasonal  abundance,  size distribution and spawning of three shrimps (Penaeus aztecus, P. setiferus, and P.  duorarum) in the northern Gulf of Mexico, 1961-1962.  NOAA Tech. Mem. NMFS-SEFC-94: 1-47.\n\n767.  Williams, A.B.  984.  Shrimps, lobsters and crabs of the Atlantic coast of the eastern United States, Maine to Florida.  Smithsonian Institution Press, Washington, D.C., 550 pp."
+    }
+  ]
+}

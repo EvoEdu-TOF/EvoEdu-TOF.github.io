@@ -1,0 +1,571 @@
+{
+  "slug": "cobia",
+  "source_file": "Cobia SLH Mote.txt",
+  "title": "Cobia (Rachycentron canadum)",
+  "common_name": "Cobia",
+  "scientific_name": "Rachycentron canadum",
+  "flelmr_code": "1611",
+  "legacy_identifiers": [
+    {
+      "authority": "legacy-ecospecies",
+      "identifier": "1611",
+      "label": "FLELMR"
+    }
+  ],
+  "taxon_identifiers": [],
+  "primary_taxon_authority": "",
+  "primary_taxon_identifier": null,
+  "summary": "",
+  "section_count": 17,
+  "citation_count": 15,
+  "publication_status": "published",
+  "is_archived": false,
+  "editor_notes": "",
+  "last_modified_by": "system-import",
+  "diagnostics": [],
+  "citations": [
+    {
+      "id": 792,
+      "position": 1,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "",
+      "citation_key": "3121928fisheschesapeakebay",
+      "entry_type": "misc",
+      "raw_text": "31 2, Hildebrand, S.F. and W.C. Schroeder. 1928. Fishes of Chesapeake Bay. Bull. U.S. Bur. Fish. 43: 1-366.",
+      "normalized_text": "31 2, Hildebrand, S.F. and W.C. Schroeder. 1928. Fishes of Chesapeake Bay. Bull. U.S. Bur. Fish. 43: 1-366.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{3121928fisheschesapeakebay,\n  author = {31 2, Hildebrand, S.F. and W.C. Schroeder},\n  howpublished = {Bull. U.S. Bur. Fish},\n  note = {raw_reference = {31 2, Hildebrand, S.F. and W.C. Schroeder. 1928. Fishes of Chesapeake Bay. Bull. U.S. Bur. Fish. 43: 1-366.}},\n  pages = {1-366},\n  title = {Fishes of Chesapeake Bay},\n  volume = {43},\n  year = {1928},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 793,
+      "position": 2,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "327",
+      "citation_key": "hoese1977fishesgulfmexico",
+      "entry_type": "misc",
+      "raw_text": "Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.",
+      "normalized_text": "Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{hoese1977fishesgulfmexico,\n  author = {Hoese, H.D. and R.H. Moore},\n  note = {raw_reference = {Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.}; ecospecies_reference_number = {327}},\n  title = {Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327},\n  year = {1977},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 794,
+      "position": 3,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "603",
+      "citation_key": "roessler1970checklistfishesbuttonwood",
+      "entry_type": "misc",
+      "raw_text": "Roessler, M.A. 1970. Checklist of fishes in Buttonwood Canal, Everglades National Park, Florida and observations on the seasonal occurrence and life histories of selected species. Bull. Mar. Sci. 20(4): 860-893.",
+      "normalized_text": "Roessler, M.A. 1970. Checklist of fishes in Buttonwood Canal, Everglades National Park, Florida and observations on the seasonal occurrence and life histories of selected species. Bull. Mar. Sci. 20(4): 860-893.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{roessler1970checklistfishesbuttonwood,\n  author = {Roessler, M.A},\n  howpublished = {Bull. Mar. Sci},\n  note = {raw_reference = {Roessler, M.A. 1970. Checklist of fishes in Buttonwood Canal, Everglades National Park, Florida and observations on the seasonal occurrence and life histories of selected species. Bull. Mar. Sci. 20(4): 860-893.}; ecospecies_reference_number = {603}},\n  number = {4},\n  pages = {860-893},\n  title = {Checklist of fishes in Buttonwood Canal, Everglades National Park, Florida and observations on the seasonal occurrence and life histories of selected species},\n  volume = {20},\n  year = {1970},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 795,
+      "position": 4,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "664",
+      "citation_key": "springer1960ecologicalstudyfishes",
+      "entry_type": "misc",
+      "raw_text": "Springer, V.G. and K.D. Woodburn. 1960. An ecological study of the fishes of the Tampa Bay area. Fla. St. Bd. Conser. Prof. Pap. Ser. No. 1: 104.",
+      "normalized_text": "Springer, V.G. and K.D. Woodburn. 1960. An ecological study of the fishes of the Tampa Bay area. Fla. St. Bd. Conser. Prof. Pap. Ser. No. 1: 104.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{springer1960ecologicalstudyfishes,\n  author = {Springer, V.G. and K.D. Woodburn},\n  journal = {Pap. Ser. No},\n  note = {raw_reference = {Springer, V.G. and K.D. Woodburn. 1960. An ecological study of the fishes of the Tampa Bay area. Fla. St. Bd. Conser. Prof. Pap. Ser. No. 1: 104.}; ecospecies_reference_number = {664}},\n  pages = {104},\n  title = {An ecological study of the fishes of the Tampa Bay area. Fla. St. Bd. Conser. Prof},\n  volume = {1},\n  year = {1960},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 796,
+      "position": 5,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "788",
+      "citation_key": "robins1986fieldguideatlantic",
+      "entry_type": "misc",
+      "raw_text": "Robins, C. Richard, G. Carlton Ray, John Douglass and R. Freud. 1986. A Field Guide to Atlantic Coast Fishes of North America. Peterson Field 1 Guide Series No. 32, Houghton Mifflin Co., Boston. 354p..",
+      "normalized_text": "Robins, C. Richard, G. Carlton Ray, John Douglass and R. Freud. 1986. A Field Guide to Atlantic Coast Fishes of North America. Peterson Field 1 Guide Series No. 32, Houghton Mifflin Co., Boston. 354p..",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{robins1986fieldguideatlantic,\n  author = {Robins, C. Richard, G. Carlton Ray, John Douglass and R. Freud},\n  note = {raw_reference = {Robins, C. Richard, G. Carlton Ray, John Douglass and R. Freud. 1986. A Field Guide to Atlantic Coast Fishes of North America. Peterson Field 1 Guide Series No. 32, Houghton Mifflin Co., Boston. 354p..}; ecospecies_reference_number = {788}},\n  title = {A Field Guide to Atlantic Coast Fishes of North America. Peterson Field 1 Guide Series No. 32, Houghton Mifflin Co., Boston. 354p},\n  year = {1986},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 797,
+      "position": 6,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "834",
+      "citation_key": "smith1907fishesnorthcarolina",
+      "entry_type": "misc",
+      "raw_text": "Smith, HR. 1907. The fishes of North Carolina.. NC Geol. and Econ. Surv. 2:454p..",
+      "normalized_text": "Smith, HR. 1907. The fishes of North Carolina.. NC Geol. and Econ. Surv. 2:454p..",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{smith1907fishesnorthcarolina,\n  author = {Smith, HR},\n  note = {raw_reference = {Smith, HR. 1907. The fishes of North Carolina.. NC Geol. and Econ. Surv. 2:454p..}; ecospecies_reference_number = {834}},\n  title = {The fishes of North Carolina.. NC Geol. and Econ. Surv. 2:454p},\n  year = {1907},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 798,
+      "position": 7,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "849",
+      "citation_key": "shaffer1989synopsisbiologicaldata",
+      "entry_type": "misc",
+      "raw_text": "Shaffer, RV and EL Nakamura. 1989. Synopsis of biological data on the cobia Rachycentron canadum (Pisces: Rachycentridae). . NOAA Tech. Rep. NMFS 82.",
+      "normalized_text": "Shaffer, RV and EL Nakamura. 1989. Synopsis of biological data on the cobia Rachycentron canadum (Pisces: Rachycentridae). . NOAA Tech. Rep. NMFS 82.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{shaffer1989synopsisbiologicaldata,\n  author = {Shaffer, RV and EL Nakamura},\n  howpublished = {NOAA Tech. Rep. NMFS 82},\n  note = {raw_reference = {Shaffer, RV and EL Nakamura. 1989. Synopsis of biological data on the cobia Rachycentron canadum (Pisces: Rachycentridae). . NOAA Tech. Rep. NMFS 82.}; ecospecies_reference_number = {849}},\n  title = {Synopsis of biological data on the cobia Rachycentron canadum (Pisces: Rachycentridae)},\n  year = {1989},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 799,
+      "position": 8,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "868",
+      "citation_key": "hardyjrjd1978developmentoffishesofthemidatlanticbight1978developmentfishesmid",
+      "entry_type": "misc",
+      "raw_text": "Hardy Jr. JD. 1978. Development of fishes of the Mid-Atlantic bight, an atlas of egg, larval, and juvenile stages. Vol Ill.. US Fish and Wildl. Serv. FWSIOBS-78/12:394p..",
+      "normalized_text": "Hardy Jr. JD. 1978. Development of fishes of the Mid-Atlantic bight, an atlas of egg, larval, and juvenile stages. Vol Ill.. US Fish and Wildl. Serv. FWSIOBS-78/12:394p..",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{hardyjrjd1978developmentoffishesofthemidatlanticbight1978developmentfishesmid,\n  author = {Hardy Jr. JD},\n  note = {raw_reference = {Hardy Jr. JD. 1978. Development of fishes of the Mid-Atlantic bight, an atlas of egg, larval, and juvenile stages. Vol Ill.. US Fish and Wildl. Serv. FWSIOBS-78/12:394p..}; ecospecies_reference_number = {868}},\n  title = {Development of fishes of the Mid-Atlantic bight, an atlas of egg, larval, and juvenile stages. Vol Ill.. US Fish and Wildl. Serv. FWSIOBS-78/12:394p},\n  year = {1978},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 800,
+      "position": 9,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "871",
+      "citation_key": "bohlke1968fishesbahamasadjacent",
+      "entry_type": "misc",
+      "raw_text": "Bohlke, JE and CCG Chaplin. 1968. Fishes of the Bahamas and adjacent tropical waters.. Acad. Nat. Sci. Phila. xxi+771p, 36 pls..",
+      "normalized_text": "Bohlke, JE and CCG Chaplin. 1968. Fishes of the Bahamas and adjacent tropical waters.. Acad. Nat. Sci. Phila. xxi+771p, 36 pls..",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{bohlke1968fishesbahamasadjacent,\n  author = {Bohlke, JE and CCG Chaplin},\n  note = {raw_reference = {Bohlke, JE and CCG Chaplin. 1968. Fishes of the Bahamas and adjacent tropical waters.. Acad. Nat. Sci. Phila. xxi+771p, 36 pls..}; ecospecies_reference_number = {871}},\n  title = {Fishes of the Bahamas and adjacent tropical waters.. Acad. Nat. Sci. Phila. xxi+771p, 36 pls},\n  year = {1968},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 801,
+      "position": 10,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "888",
+      "citation_key": "joseph1964spawningcobiarachycentron",
+      "entry_type": "misc",
+      "raw_text": "Joseph, EB, JJ Norcross and WH Massmann. 1964. Spawning of the cobia, Rachycentron canadum, in the Chesapeake Bay area, with observations of juvenile specimens.. Ches. Sci. 5(1-2):67-71.",
+      "normalized_text": "Joseph, EB, JJ Norcross and WH Massmann. 1964. Spawning of the cobia, Rachycentron canadum, in the Chesapeake Bay area, with observations of juvenile specimens.. Ches. Sci. 5(1-2):67-71.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{joseph1964spawningcobiarachycentron,\n  author = {Joseph, EB, JJ Norcross and WH Massmann},\n  note = {raw_reference = {Joseph, EB, JJ Norcross and WH Massmann. 1964. Spawning of the cobia, Rachycentron canadum, in the Chesapeake Bay area, with observations of juvenile specimens.. Ches. Sci. 5(1-2):67-71.}; ecospecies_reference_number = {888}},\n  title = {Spawning of the cobia, Rachycentron canadum, in the Chesapeake Bay area, with observations of juvenile specimens.. Ches. Sci. 5(1-2):67-71},\n  year = {1964},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 802,
+      "position": 11,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "900",
+      "citation_key": "fisher1891notesoccurrenceyoung",
+      "entry_type": "misc",
+      "raw_text": "Fisher, AK. 1891. Notes on the occurrence of a young crab-eater (Elacate canada) from the lower Hudson Valley, New York.. Proc. US Nat. Mus. 13(881):195.",
+      "normalized_text": "Fisher, AK. 1891. Notes on the occurrence of a young crab-eater (Elacate canada) from the lower Hudson Valley, New York.. Proc. US Nat. Mus. 13(881):195.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{fisher1891notesoccurrenceyoung,\n  author = {Fisher, AK},\n  journal = {Proc. US Nat. Mus},\n  note = {raw_reference = {Fisher, AK. 1891. Notes on the occurrence of a young crab-eater (Elacate canada) from the lower Hudson Valley, New York.. Proc. US Nat. Mus. 13(881):195.}; ecospecies_reference_number = {900}},\n  number = {881},\n  pages = {195},\n  title = {Notes on the occurrence of a young crab-eater (Elacate canada) from the lower Hudson Valley, New York},\n  volume = {13},\n  year = {1891},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 803,
+      "position": 12,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "901",
+      "citation_key": "richards1967agegrowthfecundity",
+      "entry_type": "misc",
+      "raw_text": "Richards, CE. 1967. Age, growth and fecundity of the cobia, Rachycentron canadum, from Chesapeake Bay and adjacent mid-Atlantic waters.. Trans. Amer. Fish. Soc. 96(3):343-350.",
+      "normalized_text": "Richards, CE. 1967. Age, growth and fecundity of the cobia, Rachycentron canadum, from Chesapeake Bay and adjacent mid-Atlantic waters.. Trans. Amer. Fish. Soc. 96(3):343-350.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{richards1967agegrowthfecundity,\n  author = {Richards, CE},\n  note = {raw_reference = {Richards, CE. 1967. Age, growth and fecundity of the cobia, Rachycentron canadum, from Chesapeake Bay and adjacent mid-Atlantic waters.. Trans. Amer. Fish. Soc. 96(3):343-350.}; ecospecies_reference_number = {901}},\n  title = {Age, growth and fecundity of the cobia, Rachycentron canadum, from Chesapeake Bay and adjacent mid-Atlantic waters.. Trans. Amer. Fish. Soc. 96(3):343-350},\n  year = {1967},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 804,
+      "position": 13,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "902",
+      "citation_key": "floridadepartmentofnaturalresources1991summaryoffloridacommerciallandings1991summaryfloridacommercial",
+      "entry_type": "misc",
+      "raw_text": "Florida Department of Natural Resources. 1991. Summary of Florida Commercial Landings, 1976-1991.. FL. Dept. Nat Res. -- pages.",
+      "normalized_text": "Florida Department of Natural Resources. 1991. Summary of Florida Commercial Landings, 1976-1991.. FL. Dept. Nat Res. -- pages.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{floridadepartmentofnaturalresources1991summaryoffloridacommerciallandings1991summaryfloridacommercial,\n  author = {Florida Department of Natural Resources},\n  note = {raw_reference = {Florida Department of Natural Resources. 1991. Summary of Florida Commercial Landings, 1976-1991.. FL. Dept. Nat Res. -- pages.}; ecospecies_reference_number = {902}},\n  title = {Summary of Florida Commercial Landings, 1976-1991.. FL. Dept. Nat Res. -- pages},\n  year = {1991},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 805,
+      "position": 14,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "903",
+      "citation_key": "lewis1988ecologytampabay",
+      "entry_type": "misc",
+      "raw_text": "Lewis, RR and ED Estevez. 1988. The ecology of Tampa Bay: an estuarine profile.. US Fish & Wildl. Serv. Biol. Rep. 85(7.18). 132p..",
+      "normalized_text": "Lewis, RR and ED Estevez. 1988. The ecology of Tampa Bay: an estuarine profile.. US Fish & Wildl. Serv. Biol. Rep. 85(7.18). 132p..",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{lewis1988ecologytampabay,\n  author = {Lewis, RR and ED Estevez},\n  note = {raw_reference = {Lewis, RR and ED Estevez. 1988. The ecology of Tampa Bay: an estuarine profile.. US Fish & Wildl. Serv. Biol. Rep. 85(7.18). 132p..}; ecospecies_reference_number = {903}},\n  title = {The ecology of Tampa Bay: an estuarine profile.. US Fish & Wildl. Serv. Biol. Rep. 85(7.18). 132p},\n  year = {1988},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    },
+    {
+      "id": 806,
+      "position": 15,
+      "section_heading": "CITATIONS",
+      "legacy_reference_number": "904",
+      "citation_key": "dawson1971occurrencedistributionprejuvenile",
+      "entry_type": "misc",
+      "raw_text": "Dawson, CE. 1971. Occurrence and distribution of prejuvenile Gulf of Mexico cobia, Rachycentron canadum.. Copeia 1 :65-71.",
+      "normalized_text": "Dawson, CE. 1971. Occurrence and distribution of prejuvenile Gulf of Mexico cobia, Rachycentron canadum.. Copeia 1 :65-71.",
+      "abstract_text": "",
+      "draft_bibtex": "@misc{dawson1971occurrencedistributionprejuvenile,\n  author = {Dawson, CE},\n  note = {raw_reference = {Dawson, CE. 1971. Occurrence and distribution of prejuvenile Gulf of Mexico cobia, Rachycentron canadum.. Copeia 1 :65-71.}; ecospecies_reference_number = {904}},\n  title = {Occurrence and distribution of prejuvenile Gulf of Mexico cobia, Rachycentron canadum.. Copeia 1 :65-71},\n  year = {1971},\n}",
+      "doi": "",
+      "source_url": "",
+      "openalex_id": "",
+      "resolver_source_label": "",
+      "enrichment_status": "pending",
+      "enrichment_error": "",
+      "source_type": "document_extract",
+      "review_status": "draft"
+    }
+  ],
+  "structured_document": {
+    "source_format": "ecospecies-markdown-v1",
+    "updated_by": "system-import",
+    "node_count": 16,
+    "ast": {
+      "metadata": {
+        "title": "Cobia (Rachycentron canadum)",
+        "common_name": "Cobia",
+        "scientific_name": "Rachycentron canadum",
+        "legacy_identifiers": [
+          {
+            "authority": "legacy-ecospecies",
+            "identifier": "1611",
+            "label": "FLELMR"
+          }
+        ],
+        "taxon_identifiers": [],
+        "primary_taxon_authority": "",
+        "source_file": "Cobia SLH Mote.txt",
+        "publication_status": "published",
+        "source_format": "ecospecies-markdown-v1"
+      },
+      "nodes": [
+        {
+          "node_type": "section",
+          "title": "Revisions",
+          "body": "1994 Jan 1. RGG; Harbor Branch Oceanographic Institution\n\nnote: There was no date on the original document so 1994 Jan 1 was assigned since most of the SLHs were prepared from 1994 thru 1997.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "TAXONOMY",
+          "body": "Scientific Name:  Rachycentron canadum\nCommon Name: Cobia",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Classification",
+          "body": "Phylum: Chordata\n\tClass: Ostiechthys\n\tOrder: Perciformes\n\tFamily: Rachycentridae\n\nOther Common Names:  cabio , sergeantfish (312 327 834), ling, lemonfish (327), black bonito (312), crab-eater (834)",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "VALUE & STATUS",
+          "body": "Commercial:  In the United states, cobia are caught in pound nets, gill nets, and seines (903). Also taken incidentally by shrimp trawlers in the Gulf of Mexico (849).  Smith (834) reported that it was sometimes sold as cero in North Carolina and commercial landings in Chesapeake Bay were reported at 3000 pounds in 1921 (312).  In Florida, 1983 landings were reported as 128,940 pounds worth $82,074 (902).\n\nRecreational:  Cobia is considered to be a favorite game and food fish (327 788) and is caught from boats, beaches, piers, and jetties (849). Reported to be a superb game fish caught trolling, casting, or by baited handline (871).  Baits used for cobia include live fish, squid, cut bait, large shrimp, and artificial spoons (849).  It is said to be especially good smoked (788).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "GEOGRAPHIC RANGE",
+          "body": "Overall:  In the western Atlantic from Massachusetts to Brazil and Argentina, worldwide in warm waters (788 904).\n\nWithin Study Area:  Ranges throughout Florida waters.\n\n\nMobility and Migration:",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Life Mode",
+          "body": "Cobia are nektonic.  Most often found singly but they are also known to school, especially for spawning (788 849)",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Movements/Migrations",
+          "body": "Cobia move north and west on the gulf coast of Florida in the spring and reported to winter in the Florida Keys (849).  Along the east coast of Florida, cobia exhibit a north-south/spring-fall migration pattern (849)",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "BENTHIC HABITAT",
+          "body": "Habitat Type: Usually found in coastal to open ocean waters (788 871), but smaller individuals are found in saltier bays in the summer (327).  Also found in inlets, bays and among mangroves (871).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Substrate",
+          "body": "No particular substrate preference has been noted, but cobia often congregate around drifting and floating objects (327).  They are common around sea bouys and other floating shelter (788).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Physical/Chemical",
+          "body": "Temperature:  Cobia (size unstated) have been collected from waters of 16.8-32.0 C (849).  Juveniles have been collected in temperatures ranging from 28.0 C (664) to 30 C (603), but larvae have been found in waters with temperatures ranging from 25.9 - 32.0 C (904).\n\nSalinity:  Minimum salinity required by eggs has been stated as 23 ppt (888).  Larvae have been collected in salinities from 27.8 - 37.7 ppt (904).  Juveniles and adults have been reported from freshwater in the Hudson Valley (900) to salinities of 44.5 ppt (603).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REPRODUCTION",
+          "body": "Reproductive Mode:  Reproduction is sexual.  Fertilization is by means of externally broadcast sexual products.  There is no evidence of egg guarding.",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Mating/Spawning",
+          "body": "Smith (834) reported that spawning occurs in summer in Chesapeake Bay, but Hildebrand and Schroeder (312) could not confirm that assertion.  In the Gulf of Mexico, spawning apparently occurs from May or June through September (849).\n\nFecundity: Fecundity has been reported as 1,935,000 to 5,439,000 eggs per female (901).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "Length Range",
+          "body": "Larvae/Juveniles/Adults:  Larval development, morphometrics, and pigmentation have been described by Hardy (868).  Cobia apparently grow rapidly and have a moderately long life span (849).  Length-weight relationships and growth equations for cobia from the Chesapeake Bay are also available (849 901).  Females appear to grow faster and attain greater size than males (849).  Maximum size has been variously reported as 84 pounds (312) to 150 pounds (68 kg)(788). maximum length is 1.8 m (6 feet)(788).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "FOOD HABITS",
+          "body": "Little is known of the diet of larval and young juvenile cobia (849).  The primary diet of adults consists of crustaceans including crabs and shrimp and small fish (312 834).  Squid, small demersal fish such as eels, sea catfish, and sciaenids also form part of the diet (849).",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "REFERENCE NUMBERS",
+          "body": "312 327 603 664 788 834 849 868 871 888 900 901 902 903 904",
+          "depth": 2,
+          "children": []
+        },
+        {
+          "node_type": "section",
+          "title": "CITATIONS",
+          "body": "31 2, Hildebrand, S.F. and W.C. Schroeder. 1928. Fishes of Chesapeake Bay. Bull. U.S. Bur. Fish. 43: 1-366.\n\n327, Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.\n\n603, Roessler, M.A. 1970. Checklist of fishes in Buttonwood Canal, Everglades National Park, Florida and observations on the seasonal occurrence and life histories of selected species. Bull. Mar. Sci. 20(4): 860-893.\n\n664, Springer, V.G. and K.D. Woodburn. 1960. An ecological study of the fishes of the Tampa Bay area. Fla. St. Bd. Conser. Prof. Pap. Ser. No. 1: 104.\n\n788, Robins, C. Richard, G. Carlton Ray, John Douglass and R. Freud. 1986. A Field Guide to Atlantic Coast Fishes of North America. Peterson Field 1 Guide Series No. 32, Houghton Mifflin Co., Boston. 354p..\n\n834, Smith, HR. 1907. The fishes of North Carolina.. NC Geol. and Econ. Surv. 2:454p..\n\n849, Shaffer, RV and EL Nakamura. 1989. Synopsis of biological data on the cobia Rachycentron canadum (Pisces: Rachycentridae). . NOAA Tech. Rep. NMFS 82.\n\n868, Hardy Jr. JD. 1978. Development of fishes of the Mid-Atlantic bight, an atlas of egg, larval, and juvenile stages. Vol Ill.. US Fish and Wildl. Serv. FWSIOBS-78/12:394p..\n\n871, Bohlke, JE and CCG Chaplin. 1968. Fishes of the Bahamas and adjacent tropical waters.. Acad. Nat. Sci. Phila. xxi+771p, 36 pls..\n\n888, Joseph, EB, JJ Norcross and WH Massmann. 1964. Spawning of the cobia, Rachycentron canadum, in the Chesapeake Bay area, with observations of juvenile specimens.. Ches. Sci. 5(1-2):67-71.\n\n900, Fisher, AK. 1891. Notes on the occurrence of a young crab-eater (Elacate canada) from the lower Hudson Valley, New York.. Proc. US Nat. Mus. 13(881):195.\n\n901, Richards, CE. 1967. Age, growth and fecundity of the cobia, Rachycentron canadum, from Chesapeake Bay and adjacent mid-Atlantic waters.. Trans. Amer. Fish. Soc. 96(3):343-350.\n\n902, Florida Department of Natural Resources. 1991. Summary of Florida Commercial Landings, 1976-1991.. FL. Dept. Nat Res. -- pages.\n\n903, Lewis, RR and ED Estevez. 1988. The ecology of Tampa Bay: an estuarine profile.. US Fish & Wildl. Serv. Biol. Rep. 85(7.18). 132p..\n\n904, Dawson, CE. 1971. Occurrence and distribution of prejuvenile Gulf of Mexico cobia, Rachycentron canadum.. Copeia 1 :65-71.",
+          "depth": 2,
+          "children": []
+        }
+      ]
+    }
+  },
+  "legacy_source": null,
+  "sections": [
+    {
+      "id": 328,
+      "position": 1,
+      "heading": "HEADER",
+      "content": "Title:  Cobia (Rachycentron canadum)\n\nFLELMR CODE:  1611"
+    },
+    {
+      "id": 329,
+      "position": 2,
+      "heading": "Revisions",
+      "content": "1994 Jan 1. RGG; Harbor Branch Oceanographic Institution\n\nnote: There was no date on the original document so 1994 Jan 1 was assigned since most of the SLHs were prepared from 1994 thru 1997."
+    },
+    {
+      "id": 330,
+      "position": 3,
+      "heading": "TAXONOMY",
+      "content": "Scientific Name:  Rachycentron canadum\nCommon Name: Cobia"
+    },
+    {
+      "id": 331,
+      "position": 4,
+      "heading": "Classification",
+      "content": "Phylum: Chordata\n\tClass: Ostiechthys\n\tOrder: Perciformes\n\tFamily: Rachycentridae\n\nOther Common Names:  cabio , sergeantfish (312 327 834), ling, lemonfish (327), black bonito (312), crab-eater (834)"
+    },
+    {
+      "id": 332,
+      "position": 5,
+      "heading": "VALUE & STATUS",
+      "content": "Commercial:  In the United states, cobia are caught in pound nets, gill nets, and seines (903). Also taken incidentally by shrimp trawlers in the Gulf of Mexico (849).  Smith (834) reported that it was sometimes sold as cero in North Carolina and commercial landings in Chesapeake Bay were reported at 3000 pounds in 1921 (312).  In Florida, 1983 landings were reported as 128,940 pounds worth $82,074 (902).\n\nRecreational:  Cobia is considered to be a favorite game and food fish (327 788) and is caught from boats, beaches, piers, and jetties (849). Reported to be a superb game fish caught trolling, casting, or by baited handline (871).  Baits used for cobia include live fish, squid, cut bait, large shrimp, and artificial spoons (849).  It is said to be especially good smoked (788)."
+    },
+    {
+      "id": 333,
+      "position": 6,
+      "heading": "GEOGRAPHIC RANGE",
+      "content": "Overall:  In the western Atlantic from Massachusetts to Brazil and Argentina, worldwide in warm waters (788 904).\n\nWithin Study Area:  Ranges throughout Florida waters.\n\n\nMobility and Migration:"
+    },
+    {
+      "id": 334,
+      "position": 7,
+      "heading": "Life Mode",
+      "content": "Cobia are nektonic.  Most often found singly but they are also known to school, especially for spawning (788 849)"
+    },
+    {
+      "id": 335,
+      "position": 8,
+      "heading": "Movements/Migrations",
+      "content": "Cobia move north and west on the gulf coast of Florida in the spring and reported to winter in the Florida Keys (849).  Along the east coast of Florida, cobia exhibit a north-south/spring-fall migration pattern (849)"
+    },
+    {
+      "id": 336,
+      "position": 9,
+      "heading": "BENTHIC HABITAT",
+      "content": "Habitat Type: Usually found in coastal to open ocean waters (788 871), but smaller individuals are found in saltier bays in the summer (327).  Also found in inlets, bays and among mangroves (871)."
+    },
+    {
+      "id": 337,
+      "position": 10,
+      "heading": "Substrate",
+      "content": "No particular substrate preference has been noted, but cobia often congregate around drifting and floating objects (327).  They are common around sea bouys and other floating shelter (788)."
+    },
+    {
+      "id": 338,
+      "position": 11,
+      "heading": "Physical/Chemical",
+      "content": "Temperature:  Cobia (size unstated) have been collected from waters of 16.8-32.0 C (849).  Juveniles have been collected in temperatures ranging from 28.0 C (664) to 30 C (603), but larvae have been found in waters with temperatures ranging from 25.9 - 32.0 C (904).\n\nSalinity:  Minimum salinity required by eggs has been stated as 23 ppt (888).  Larvae have been collected in salinities from 27.8 - 37.7 ppt (904).  Juveniles and adults have been reported from freshwater in the Hudson Valley (900) to salinities of 44.5 ppt (603)."
+    },
+    {
+      "id": 339,
+      "position": 12,
+      "heading": "REPRODUCTION",
+      "content": "Reproductive Mode:  Reproduction is sexual.  Fertilization is by means of externally broadcast sexual products.  There is no evidence of egg guarding."
+    },
+    {
+      "id": 340,
+      "position": 13,
+      "heading": "Mating/Spawning",
+      "content": "Smith (834) reported that spawning occurs in summer in Chesapeake Bay, but Hildebrand and Schroeder (312) could not confirm that assertion.  In the Gulf of Mexico, spawning apparently occurs from May or June through September (849).\n\nFecundity: Fecundity has been reported as 1,935,000 to 5,439,000 eggs per female (901)."
+    },
+    {
+      "id": 341,
+      "position": 14,
+      "heading": "Length Range",
+      "content": "Larvae/Juveniles/Adults:  Larval development, morphometrics, and pigmentation have been described by Hardy (868).  Cobia apparently grow rapidly and have a moderately long life span (849).  Length-weight relationships and growth equations for cobia from the Chesapeake Bay are also available (849 901).  Females appear to grow faster and attain greater size than males (849).  Maximum size has been variously reported as 84 pounds (312) to 150 pounds (68 kg)(788). maximum length is 1.8 m (6 feet)(788)."
+    },
+    {
+      "id": 342,
+      "position": 15,
+      "heading": "FOOD HABITS",
+      "content": "Little is known of the diet of larval and young juvenile cobia (849).  The primary diet of adults consists of crustaceans including crabs and shrimp and small fish (312 834).  Squid, small demersal fish such as eels, sea catfish, and sciaenids also form part of the diet (849)."
+    },
+    {
+      "id": 343,
+      "position": 16,
+      "heading": "REFERENCE NUMBERS",
+      "content": "312 327 603 664 788 834 849 868 871 888 900 901 902 903 904"
+    },
+    {
+      "id": 344,
+      "position": 17,
+      "heading": "CITATIONS",
+      "content": "31 2, Hildebrand, S.F. and W.C. Schroeder. 1928. Fishes of Chesapeake Bay. Bull. U.S. Bur. Fish. 43: 1-366.\n\n327, Hoese, H.D. and R.H. Moore. 1977. Fishes of the Gulf of Mexico: Texas, Louisiana and Adjacent Waters. Texas A&M University Press, College Station, Texas: 327.\n\n603, Roessler, M.A. 1970. Checklist of fishes in Buttonwood Canal, Everglades National Park, Florida and observations on the seasonal occurrence and life histories of selected species. Bull. Mar. Sci. 20(4): 860-893.\n\n664, Springer, V.G. and K.D. Woodburn. 1960. An ecological study of the fishes of the Tampa Bay area. Fla. St. Bd. Conser. Prof. Pap. Ser. No. 1: 104.\n\n788, Robins, C. Richard, G. Carlton Ray, John Douglass and R. Freud. 1986. A Field Guide to Atlantic Coast Fishes of North America. Peterson Field 1 Guide Series No. 32, Houghton Mifflin Co., Boston. 354p..\n\n834, Smith, HR. 1907. The fishes of North Carolina.. NC Geol. and Econ. Surv. 2:454p..\n\n849, Shaffer, RV and EL Nakamura. 1989. Synopsis of biological data on the cobia Rachycentron canadum (Pisces: Rachycentridae). . NOAA Tech. Rep. NMFS 82.\n\n868, Hardy Jr. JD. 1978. Development of fishes of the Mid-Atlantic bight, an atlas of egg, larval, and juvenile stages. Vol Ill.. US Fish and Wildl. Serv. FWSIOBS-78/12:394p..\n\n871, Bohlke, JE and CCG Chaplin. 1968. Fishes of the Bahamas and adjacent tropical waters.. Acad. Nat. Sci. Phila. xxi+771p, 36 pls..\n\n888, Joseph, EB, JJ Norcross and WH Massmann. 1964. Spawning of the cobia, Rachycentron canadum, in the Chesapeake Bay area, with observations of juvenile specimens.. Ches. Sci. 5(1-2):67-71.\n\n900, Fisher, AK. 1891. Notes on the occurrence of a young crab-eater (Elacate canada) from the lower Hudson Valley, New York.. Proc. US Nat. Mus. 13(881):195.\n\n901, Richards, CE. 1967. Age, growth and fecundity of the cobia, Rachycentron canadum, from Chesapeake Bay and adjacent mid-Atlantic waters.. Trans. Amer. Fish. Soc. 96(3):343-350.\n\n902, Florida Department of Natural Resources. 1991. Summary of Florida Commercial Landings, 1976-1991.. FL. Dept. Nat Res. -- pages.\n\n903, Lewis, RR and ED Estevez. 1988. The ecology of Tampa Bay: an estuarine profile.. US Fish & Wildl. Serv. Biol. Rep. 85(7.18). 132p..\n\n904, Dawson, CE. 1971. Occurrence and distribution of prejuvenile Gulf of Mexico cobia, Rachycentron canadum.. Copeia 1 :65-71."
+    }
+  ]
+}
