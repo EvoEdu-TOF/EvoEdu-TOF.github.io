@@ -1,0 +1,195 @@
+{
+  "schema": "evo-edu.adaptive-capability.learning-path.v1",
+  "title": "From living systems to no free lunch",
+  "basis": "Conceptual dependencies plus pedagogical ordering; no measured learner validation.",
+  "steps": [
+    {
+      "position": 1,
+      "id": "constraints",
+      "title": "Living systems have costs",
+      "url": "index.html#constraints",
+      "claim_ids": [
+        "C01",
+        "C03",
+        "C05"
+      ],
+      "learner_question": "Why is energy not identical to fitness?",
+      "verification_prompt": "Specify the reproductive endpoint and any intervening life-history assumptions.",
+      "depends_on_claim_ids": [
+        "C04"
+      ]
+    },
+    {
+      "position": 2,
+      "id": "selection",
+      "title": "What makes a difference evolutionary?",
+      "url": "index.html#selection",
+      "claim_ids": [
+        "C02",
+        "C04",
+        "C10"
+      ],
+      "learner_question": "What makes improved performance an evolutionary response?",
+      "verification_prompt": "Distinguish heritable population change from individual learning and drift.",
+      "depends_on_claim_ids": [
+        "C02",
+        "C03"
+      ]
+    },
+    {
+      "position": 3,
+      "id": "foraging",
+      "title": "A home, resources, and a route",
+      "url": "index.html#foraging",
+      "claim_ids": [
+        "C06",
+        "C07",
+        "C08",
+        "C09"
+      ],
+      "learner_question": "Does a route penalty require a search for an evaluator?",
+      "verification_prompt": "State the physical cost model and separate it from the reproductive bridge.",
+      "depends_on_claim_ids": [
+        "C01",
+        "C02",
+        "C03",
+        "C06",
+        "C07",
+        "C08"
+      ]
+    },
+    {
+      "position": 4,
+      "id": "landscapes",
+      "title": "From a physical mechanism to a landscape",
+      "url": "index.html#landscapes",
+      "claim_ids": [
+        "C11",
+        "C24",
+        "C31"
+      ],
+      "learner_question": "Which landscape assignments can this mechanism produce?",
+      "verification_prompt": "Identify the geometry and physical constraints before proposing a probability law.",
+      "depends_on_claim_ids": [
+        "C03",
+        "C08"
+      ]
+    },
+    {
+      "position": 5,
+      "id": "nfl",
+      "title": "What no free lunch actually averages",
+      "url": "index.html#nfl",
+      "claim_ids": [
+        "C12",
+        "C14",
+        "C15",
+        "C13"
+      ],
+      "learner_question": "What changes when the function orbit is completed?",
+      "verification_prompt": "Compare the two explicit non-repeating policies and keep the ensemble weights fixed.",
+      "depends_on_claim_ids": [
+        "C11",
+        "C12",
+        "C14",
+        "C15"
+      ]
+    },
+    {
+      "position": 6,
+      "id": "coevolution",
+      "title": "Changing the contest changes the theorem",
+      "url": "index.html#coevolution",
+      "claim_ids": [
+        "C16",
+        "C17",
+        "C18"
+      ],
+      "learner_question": "Is absence of a champion a sufficient biological NFL premise?",
+      "verification_prompt": "State the endpoint, averaging law and revisiting assumptions; distinguish organism design from natural evolution.",
+      "depends_on_claim_ids": [
+        "C13",
+        "C16",
+        "C17"
+      ]
+    },
+    {
+      "position": 7,
+      "id": "oracles",
+      "title": "Information access has a price",
+      "url": "index.html#oracles",
+      "claim_ids": [
+        "C19",
+        "C20",
+        "C27"
+      ],
+      "learner_question": "Why can the better information interface cost more?",
+      "verification_prompt": "Hold the discovery endpoint fixed and state whether the budget counts calls or elementary tests.",
+      "depends_on_claim_ids": [
+        "C11",
+        "C14",
+        "C19",
+        "C20"
+      ]
+    },
+    {
+      "position": 8,
+      "id": "s4s",
+      "title": "Which distribution over searches?",
+      "url": "index.html#s4s",
+      "claim_ids": [
+        "C21",
+        "C22",
+        "C23",
+        "C26",
+        "C25"
+      ],
+      "learner_question": "Does uniform simplex volume describe a physical generator?",
+      "verification_prompt": "Identify the random object, target event, probability measure and missing measure-transfer premise.",
+      "depends_on_claim_ids": [
+        "C12",
+        "C14",
+        "C21",
+        "C22",
+        "C23",
+        "C24",
+        "C26"
+      ]
+    },
+    {
+      "position": 9,
+      "id": "results",
+      "title": "What the present work adds",
+      "url": "index.html#results",
+      "claim_ids": [
+        "C28",
+        "C29",
+        "C30"
+      ],
+      "learner_question": "Which results establish tracking, and which establish complexity?",
+      "verification_prompt": "Keep model endpoints separate and identify established prior criticism.",
+      "depends_on_claim_ids": [
+        "C04",
+        "C05",
+        "C22",
+        "C25",
+        "C29"
+      ]
+    },
+    {
+      "position": 10,
+      "id": "limits",
+      "title": "What remains unresolved",
+      "url": "index.html#limits",
+      "claim_ids": [
+        "C32"
+      ],
+      "learner_question": "Which conclusion requires an additional premise?",
+      "verification_prompt": "Name a missing empirical, mathematical or causal-identification bridge rather than asserting a universal result.",
+      "depends_on_claim_ids": [
+        "C09",
+        "C28"
+      ]
+    }
+  ]
+}

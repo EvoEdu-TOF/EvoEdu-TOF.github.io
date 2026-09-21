@@ -1,0 +1,139 @@
+{
+  "id": "foraging-physical-feedback-v1",
+  "status": "illustrative_model_not_empirical_fit",
+  "coordinate_units": "arbitrary length units",
+  "energy_units": "arbitrary energy units",
+  "points": [
+    {
+      "id": "H",
+      "x": 0,
+      "y": 0,
+      "role": "home",
+      "reward": 0
+    },
+    {
+      "id": "A",
+      "x": 3,
+      "y": 0,
+      "role": "resource",
+      "reward": 10
+    },
+    {
+      "id": "B",
+      "x": 3,
+      "y": 4,
+      "role": "resource",
+      "reward": 10
+    },
+    {
+      "id": "C",
+      "x": 0,
+      "y": 4,
+      "role": "resource",
+      "reward": 10
+    },
+    {
+      "id": "D",
+      "x": 6,
+      "y": 4,
+      "role": "resource",
+      "reward": 10
+    }
+  ],
+  "routes": [
+    {
+      "id": "short",
+      "nodes": [
+        "H",
+        "A",
+        "D",
+        "B",
+        "C",
+        "H"
+      ],
+      "length": 18,
+      "gross_reward": 40,
+      "metabolic_cost": 18,
+      "net_energy": 22,
+      "expected_reproductive_weight": 6.5
+    },
+    {
+      "id": "long",
+      "nodes": [
+        "H",
+        "B",
+        "A",
+        "D",
+        "C",
+        "H"
+      ],
+      "length": 24,
+      "gross_reward": 40,
+      "metabolic_cost": 24,
+      "net_energy": 16,
+      "expected_reproductive_weight": 5.0
+    }
+  ],
+  "defaults": {
+    "cost_per_distance": 1,
+    "baseline_reproductive_weight": 1,
+    "energy_to_reproduction_slope": 0.25,
+    "initial_short_frequency": 0.5,
+    "mutation_probability": 0,
+    "offspring_census": 4
+  },
+  "controls": [
+    {
+      "id": "cost_per_distance",
+      "min": 0,
+      "max": 1.5,
+      "step": 0.05,
+      "default": 1
+    },
+    {
+      "id": "energy_to_reproduction_slope",
+      "min": 0,
+      "max": 0.5,
+      "step": 0.025,
+      "default": 0.25
+    },
+    {
+      "id": "heredity",
+      "type": "boolean",
+      "default": true,
+      "mapping": {
+        "true_mutation_probability": 0,
+        "false_mutation_probability": 0.5
+      }
+    }
+  ],
+  "equations": {
+    "net_energy": "U_g = 40 - cost_per_distance * L_g",
+    "reproductive_weight": "w_g = 1 + energy_to_reproduction_slope * U_g",
+    "selected_parent_frequency": "p_s = p*w_short / (p*w_short + (1-p)*w_long)",
+    "selected_offspring_frequency": "p_next_s = mu + (1-2*mu)*p_s",
+    "neutral_offspring_frequency": "p_next_0 = mu + (1-2*mu)*p",
+    "payoff_gain": "(p_next_s-p_next_0)*(U_short-U_long)"
+  },
+  "computed_default": {
+    "selected_offspring_short_frequency": 0.5652173913043478,
+    "selected_offspring_short_frequency_exact": "13/23",
+    "neutral_offspring_short_frequency": 0.5,
+    "expected_net_energy_selected": 19.391304347826086,
+    "expected_net_energy_neutral": 19,
+    "expected_net_energy_gain": 0.391304347826087,
+    "expected_net_energy_gain_exact": "9/23"
+  },
+  "labels": {
+    "route_comparison": "Two candidate routes; no global-optimum claim",
+    "selection": "Hypothetical heritable route policies; expected finite-census response",
+    "empirical_boundary": "Bee studies demonstrate within-lifetime route learning, not this genetic response"
+  },
+  "assumptions": [
+    "Same four resources and rewards; no reward depletion or timing differences",
+    "Constant effective energy cost per distance; load, speed, terrain and risk held fixed",
+    "Positive affine mapping from net energy to expected reproductive weight is assumed",
+    "Route-policy variation is inherited when the heredity control is on",
+    "Selected and neutral comparisons produce the same number of offspring"
+  ]
+}

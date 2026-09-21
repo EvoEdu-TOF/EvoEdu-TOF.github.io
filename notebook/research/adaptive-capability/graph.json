@@ -1,0 +1,3947 @@
+{
+  "schema": "evo-edu.adaptive-capability.graph.v1",
+  "date": "2026-09-20",
+  "semantics": {
+    "prerequisite_for": "Conceptual dependency; not a sufficiency assertion.",
+    "documents": "Source attribution, including passages being criticized.",
+    "supports": "Explicit evidential or argument support within declared scope.",
+    "qualifies": "Restricts interpretation; not necessarily contradiction.",
+    "influences": "Causal model relationship; feedback cycles allowed.",
+    "requires_bridge": "Applying one result to another domain needs an additional premise."
+  },
+  "nodes": [
+    {
+      "id": "C01",
+      "node_type": "claim",
+      "title": "Organisms face material and energetic constraints",
+      "statement": "Organisms obtain and allocate resources; movement, maintenance, growth and reproduction can compete for those resources.",
+      "qualification": "Resource budgets alone do not identify the fitness consequences of every behavior.",
+      "category": "biology",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "pianka-evolutionary-ecology-1988"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "Printed pp.85–86; part 000 PDF pp.96–97; resource budgets and allocation."
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C02",
+      "node_type": "claim",
+      "title": "Heritable variation enables an evolutionary response",
+      "statement": "An evolutionary response to selection depends on transmissible differences associated with reproductive outcomes.",
+      "qualification": "Phenotypic sorting or within-lifetime learning alone does not establish a heritable response.",
+      "category": "biology",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "gregory-natural-selection-2009"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "gregory-natural-selection-2009",
+          "reference": "Printed pp.158,161; PDF pp.3,6; variation, inheritance and population evolution."
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C03",
+      "node_type": "claim",
+      "title": "Fitness concerns reproductive contribution in context",
+      "statement": "Natural selection concerns differential reproductive contribution among variants in a specified population and environment.",
+      "qualification": "A fitness measure must name its life-cycle endpoint; survival, speed and energy intake are not interchangeable.",
+      "category": "biology",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "gregory-natural-selection-2009",
+        "dobzhansky-ayala-stebbins-valentine-evolution-1977"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "gregory-natural-selection-2009",
+          "reference": "Printed p.159; PDF p.4; Darwinian fitness."
+        },
+        {
+          "source_id": "dobzhansky-ayala-stebbins-valentine-evolution-1977",
+          "reference": "Printed p.101; selected part PDF p.7; fitness components."
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C04",
+      "node_type": "claim",
+      "title": "Selection is a population process",
+      "statement": "Heritable variants can change frequency because their reproductive contributions differ; drift and other processes can also change frequencies.",
+      "qualification": "An observed frequency change alone is not evidence that selection caused it.",
+      "category": "biology",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "dobzhansky-ayala-stebbins-valentine-evolution-1977",
+        "pianka-evolutionary-ecology-1988"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "dobzhansky-ayala-stebbins-valentine-evolution-1977",
+          "reference": "Printed pp.97–98; selected part PDF pp.3–4; differential reproduction."
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "Printed pp.24–25; part 000 PDF pp.35–36; population genetics and mechanism comparison."
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C05",
+      "node_type": "claim",
+      "title": "Adaptation has limits and tradeoffs",
+      "statement": "Adaptation is environment-relative and constrained by tradeoffs, history, available variation and stochastic population processes.",
+      "qualification": "It is not a guarantee of perfection, survival, or ever-increasing complexity.",
+      "category": "biology",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "gregory-natural-selection-2009",
+        "pianka-evolutionary-ecology-1988"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "gregory-natural-selection-2009",
+          "reference": "Printed p.163; PDF p.8; limits, history and tradeoffs."
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "Printed pp.24–25; part 000 PDF pp.35–36; stochastic population processes."
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C06",
+      "node_type": "claim",
+      "title": "A home and dispersed resources create a routing problem",
+      "statement": "Travel between a home location and resources can generate route-dependent time and energetic costs through ordinary physical processes.",
+      "qualification": "Central-place foraging is broader than TSP: visits, rewards, loading, risk, depletion and return conditions may vary.",
+      "category": "model",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "foraging2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C07",
+      "node_type": "claim",
+      "title": "Energy is a conditional proxy for fitness",
+      "statement": "More net energy implies greater reproductive output only under an additional life-history relationship, with other relevant effects controlled.",
+      "qualification": "Nutrient balance, predation, mating opportunities and saturation can alter or reverse the comparison.",
+      "category": "model",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "pianka-evolutionary-ecology-1988",
+        "foraging2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "Printed p.85; part 000 PDF p.96; energy as a fitness proxy."
+        },
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C08",
+      "node_type": "claim",
+      "title": "Physical costs can define the payoff map",
+      "statement": "A specified route cost and energy-to-reproduction map produce comparative payoffs without an extra mechanism that searches among arbitrary payoff functions.",
+      "qualification": "The payoff-generating conditions are explicit assumptions; this does not establish their ultimate origin or frequency in nature.",
+      "category": "model",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "foraging2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C09",
+      "node_type": "claim",
+      "title": "A route advantage can yield a selection response",
+      "statement": "If two heritable route policies have expected outputs wA>wB, then p′=p wA/[p wA+(1−p)wB] exceeds p for 0<p<1.",
+      "qualification": "This is a conditional deterministic frequency update, not a proof of global route optimization or fixation in finite populations.",
+      "category": "model",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "foraging2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C10",
+      "node_type": "claim",
+      "title": "Route learning is a different empirical endpoint",
+      "statement": "Foraging experiments can measure improvement within an individual’s lifetime without demonstrating a change in inherited population traits.",
+      "qualification": "Evidence for behavioral flexibility must not be relabeled as an experiment demonstrating genetic adaptation.",
+      "category": "biology",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "foraging-lihoreau-2012",
+        "foraging2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "foraging-lihoreau-2012",
+          "reference": "Publisher full text: Results and Methods; visitation sequences, radar trajectories and route development."
+        },
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C11",
+      "node_type": "claim",
+      "title": "A fitness landscape is a model of a relation",
+      "statement": "A landscape maps candidate states to an evaluated quantity for specified ecological and observational conditions.",
+      "qualification": "Biological fitness can be stochastic, frequency-dependent and time-dependent; a fixed scalar landscape is a simplification.",
+      "category": "model",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "formal2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C12",
+      "node_type": "claim",
+      "title": "An ensemble requires a probability law",
+      "statement": "A statement averaged over possible problems requires a specified space of problems and weights over that space.",
+      "qualification": "Possible does not mean equally probable or physically realizable.",
+      "category": "definition",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "igel2004",
+        "book2017"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "igel2004",
+          "reference": "Theorem 5; pp.317–321"
+        },
+        {
+          "source_id": "book2017",
+          "reference": "Sections 5.8–5.9, especially printed pages 177–181"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C13",
+      "node_type": "claim",
+      "title": "NFL is a qualified averaging theorem",
+      "statement": "Classical finite-domain NFL equality compares appropriately matched non-repeating searches under its function-ensemble and performance assumptions.",
+      "qualification": "Equality under that average does not assert equal performance on every individual problem or every restricted ecological family.",
+      "category": "theorem",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "igel2004"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "igel2004",
+          "reference": "Theorem 5; pp.317–321"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C14",
+      "node_type": "claim",
+      "title": "Comparisons need matched endpoints and budgets",
+      "statement": "A search comparison must specify information access, costs, stopping rules, performance measures and treatment of repeated queries.",
+      "qualification": "Changing these can change the comparison even when the algorithms have the same informal goal.",
+      "category": "definition",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "em2017",
+        "formal2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "em2017",
+          "reference": "p.5, Theorems 1–2 and cost qualification"
+        },
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C15",
+      "node_type": "claim",
+      "title": "Permutation symmetry is about complete input relabelings",
+      "statement": "For the relevant weighted finite NFL characterization, probabilities must be equal within complete input-permutation orbits.",
+      "qualification": "Uniform genotype labels or symmetry of coordinates is weaker. Non-closure alone does not identify which chosen algorithm will win.",
+      "category": "theorem",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "igel2004",
+        "formal2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "igel2004",
+          "reference": "Theorem 5; pp.317–321"
+        },
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C16",
+      "node_type": "claim",
+      "title": "Coevolution changes what is being evaluated",
+      "statement": "When outcomes depend on interacting evolving participants, performance depends on the interaction rule and how results are aggregated.",
+      "qualification": "Coevolution is not itself a guarantee of a champion, improvement, or a free lunch.",
+      "category": "definition",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "wm2005"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "wm2005",
+          "reference": "Printed pp.724–726; PDF pp.4–6; generalized optimization examples."
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C17",
+      "node_type": "claim",
+      "title": "Champion selection changes the mathematical question",
+      "statement": "Wolpert and Macready distinguish selecting a champion through self-play from performance measures over biological participants without that champion construction.",
+      "qualification": "The existence and scope of a free lunch depend on the precise generalized-optimization cost and protocol.",
+      "category": "application",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "wm2005"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "wm2005",
+          "reference": "Printed pp.724–725,727; PDF pp.4–5,7; self-play evaluation and champion selection."
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C18",
+      "node_type": "claim",
+      "title": "The 2005 biological limitation has stated boundaries",
+      "statement": "The biological NFL discussion retains averaging and performance assumptions; the original paper also discusses an organism-design objective involving extinction avoidance where NFL may not hold.",
+      "qualification": "That example is a qualified modeling exception, not a theorem that all ecological coevolution has a free lunch.",
+      "category": "application",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "wm2005"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "wm2005",
+          "reference": "Printed pp.725–726; PDF pp.5–6; Example 4 and its final organism-design exception."
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C19",
+      "node_type": "claim",
+      "title": "An oracle formalizes an observation interface",
+      "statement": "A mathematical oracle specifies the information an algorithm may obtain; it need not denote a conscious evaluator.",
+      "qualification": "A biological interpretation still needs a mechanism that realizes the interface and accounts for its costs.",
+      "category": "definition",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "em2017",
+        "book2017"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "em2017",
+          "reference": "p.5, Theorems 1–2 and cost qualification"
+        },
+        {
+          "source_id": "book2017",
+          "reference": "Sections 5.8–5.9, especially printed pages 177–181"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C20",
+      "node_type": "claim",
+      "title": "Full-row simulation preserves equal-call dominance",
+      "statement": "In Ewert and Marks’s static matrix setting, a full-row policy can simulate a partial-cell policy at the same call count.",
+      "qualification": "For every partial policy there exists a simulator; it is not a claim that all full-row policies outperform all partial policies.",
+      "category": "theorem",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "em2017"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "em2017",
+          "reference": "p.5, Theorems 1–2 and cost qualification"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C21",
+      "node_type": "claim",
+      "title": "Active information is relative to a baseline",
+      "statement": "For a fixed success event with baseline probability p and achieved probability q, active information in bits is log2(q/p).",
+      "qualification": "It is not a context-free physical inventory, nor identical to Shannon mutual information.",
+      "category": "definition",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "book2017"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "book2017",
+          "reference": "Section 5.4.2, printed pp.130ff; active information relative to a baseline."
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C22",
+      "node_type": "claim",
+      "title": "The weak search-for-search bound needs a mean premise",
+      "statement": "For fixed T and a>0, Pr[Q(T)≥a]≤E[Q(T)]/a. Substituting |T|/N requires that mean for T; a uniform barycenter supplies it for every T.",
+      "qualification": "The inequality survives many nonuniform mechanisms; it does not establish their causal origin.",
+      "category": "theorem",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "book2017",
+        "formal2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "book2017",
+          "reference": "Printed p.177; weak search-for-search mean premise."
+        },
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C23",
+      "node_type": "claim",
+      "title": "The strict simplex tail uses a stronger measure",
+      "statement": "Uniform volume on the N-category probability simplex gives a singleton tail Pr[Q(x)≥a]=(1−a)^(N−1).",
+      "qualification": "It is a distribution over distributions, not an empirically measured distribution of ecological mechanisms.",
+      "category": "theorem",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "book2017",
+        "formal2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "book2017",
+          "reference": "Printed pp.178–180; strict uniform-simplex derivation."
+        },
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C24",
+      "node_type": "claim",
+      "title": "Physics can induce a structured problem distribution",
+      "statement": "Local interactions and resource geometry can constrain which payoff relations a mechanism generates.",
+      "qualification": "The induced probability law must be supplied or investigated; invoking physical structure alone does not quantify its natural prevalence.",
+      "category": "application",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "foraging2026",
+        "formal2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks"
+        },
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C25",
+      "node_type": "claim",
+      "title": "A mechanism measure need not have simplex tails",
+      "statement": "The project’s explicit environmental family has a uniform mean output law but fixed-target tails that differ greatly from uniform-simplex tails.",
+      "qualification": "This is a countermodel to measure-independent extrapolation, preserving the valid weak bound.",
+      "category": "application",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "formal2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C26",
+      "node_type": "claim",
+      "title": "Fixed targets differ from environmental alignment",
+      "statement": "Matching an independently fixed genotype and matching the genotype favored by a realized environment are different probability events.",
+      "qualification": "Correlations between environment, target and process must remain in the calculation.",
+      "category": "definition",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "formal2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C27",
+      "node_type": "claim",
+      "title": "Elementary costs can reverse oracle comparisons",
+      "statement": "Early rejection can outperform indivisible full-row testing when charged per elementary assay, with an unbounded multiplicative expected-cost ratio in the IID example.",
+      "qualification": "Both costs remain exponential; the paper already acknowledges cheaper partial queries as a practical qualification.",
+      "category": "application",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "em2017",
+        "formal2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "em2017",
+          "reference": "p.5, Theorems 1–2 and cost qualification"
+        },
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C28",
+      "node_type": "claim",
+      "title": "Finite populations can track persistent environments",
+      "statement": "A finite Wright–Fisher model yields a strict expected selection advantage over matched neutrality under stated heredity, feedback, persistence and variation assumptions.",
+      "qualification": "A two-type tracking result is not open-ended complexity and does not price microscopic ecological encounters.",
+      "category": "application",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "formal2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C29",
+      "node_type": "claim",
+      "title": "A success statistic does not identify causal provenance",
+      "statement": "If two causal accounts induce the same observable law, statistics of those observations cannot distinguish the accounts.",
+      "qualification": "Equal observable laws are the premise; this does not establish actual equivalence of every natural and designed origin account.",
+      "category": "critique",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "blancke2011",
+        "formal2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "blancke2011",
+          "reference": "Author-hosted PDF pp.3–5"
+        },
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C30",
+      "node_type": "claim",
+      "title": "The literature dispute concerns applicability as well as algebra",
+      "statement": "Earlier critics distinguish valid search theorems from biological or design conclusions that require additional premises.",
+      "qualification": "English–Felsenstein 2015 targets the earlier search-for-search argument, not the 2017 coevolution simulator.",
+      "category": "critique",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "ef2015"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "ef2015",
+          "reference": "29 March 2015; landscape/search-distribution distinction"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C31",
+      "node_type": "claim",
+      "title": "Ecological feedback can alter future conditions",
+      "statement": "Resource use and interacting populations can change the conditions that determine later outcomes.",
+      "qualification": "A causal feedback loop is not a circular mathematical proof or an invalid teaching sequence.",
+      "category": "biology",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "foraging2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "C32",
+      "node_type": "claim",
+      "title": "Increasing coordinated complexity remains a separate question",
+      "statement": "Route improvement, local optimization and two-type tracking do not establish increasing coordinated complexity within an organism.",
+      "qualification": "Operational complexity measures, mechanisms and evidence are needed to evaluate that stronger claim.",
+      "category": "open",
+      "evidence_status": "editorial_synthesis_checked",
+      "source_ids": [
+        "book2017",
+        "formal2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "book2017",
+          "reference": "Printed pp.67–68; increasing sophistication and human-scale complexity."
+        },
+        {
+          "source_id": "formal2026",
+          "reference": "SYNTHESIS: dispositions and remaining limits; BIOLOGICAL_COUNTERS: scope of two-type tracking."
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "inherited:staged.claim.dobzhansky.selection-not-purposeful-selector.001",
+      "node_type": "claim",
+      "title": "Natural Selection Is Differential Reproduction, Not A Purposeful Selector",
+      "statement": "Dobzhansky, Ayala, Stebbins, and Valentine support a guardrail that natural selection is an outcome of organism-environment interactions and differential reproduction, not a purposeful chooser and not necessarily literal combat among organisms.",
+      "qualification": "Promote as a misconception guard for natural selection and adaptation pages.",
+      "category": "inherited",
+      "evidence_status": "inherited_review_not_freshly_rechecked",
+      "source_ids": [
+        "dobzhansky-ayala-stebbins-valentine-evolution-1977"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "dobzhansky-ayala-stebbins-valentine-evolution-1977",
+          "reference": "Inherited source review; exact extraction coordinates retained privately; public page anchor not verified.",
+          "status": "reviewed"
+        }
+      ],
+      "reviewed_on": "2026-05-16",
+      "notebook_record": "staged.claim.dobzhansky.selection-not-purposeful-selector.001",
+      "original_review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Promote as a misconception guard for natural selection and adaptation pages."
+      },
+      "imported_on": "2026-09-20"
+    },
+    {
+      "id": "inherited:staged.claim.futuyma.adaptation-extinction-boundary.001",
+      "node_type": "claim",
+      "title": "Adaptation Does Not Guarantee Resistance To Extinction",
+      "statement": "Futuyma's macroevolution and diversity chapters support a guardrail for adaptation: local adaptedness does not mean a lineage evolves to avoid extinction, because environmental change, habitat loss, random origination and extinction, and lineage-level sorting can shape survival independently of organism-level fit.",
+      "qualification": "Use as an advanced adaptation/macroevolution guardrail. It should not weaken the basic claim that selection can improve fit to local environments; it separates local adaptedness from lineage persistence.",
+      "category": "inherited",
+      "evidence_status": "inherited_review_not_freshly_rechecked",
+      "source_ids": [
+        "futuyma-evolutionary-biology-1979"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "reference": "Inherited scan-review pages 97-105; correspondence to printed pagination not freshly verified.",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "reference": "Inherited scan-review pages 447-450; correspondence to printed pagination not freshly verified.",
+          "status": "reviewed"
+        }
+      ],
+      "reviewed_on": "2026-05-16",
+      "notebook_record": "staged.claim.futuyma.adaptation-extinction-boundary.001",
+      "original_review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as an advanced adaptation/macroevolution guardrail. It should not weaken the basic claim that selection can improve fit to local environments; it separates local adaptedness from lineage persistence."
+      },
+      "imported_on": "2026-09-20"
+    },
+    {
+      "id": "inherited:staged.claim.futuyma.mutation-undirected-variation.001",
+      "node_type": "claim",
+      "title": "Mutation Is Not Directed By Future Usefulness",
+      "statement": "Futuyma supports a core mutation guardrail for the Notebook: variants arise without regard to future usefulness, while selection changes which variants persist under the conditions organisms actually encounter.",
+      "qualification": "Use as a misconception guard against need-directed mutation and future-looking explanations.",
+      "category": "inherited",
+      "evidence_status": "inherited_review_not_freshly_rechecked",
+      "source_ids": [
+        "futuyma-evolutionary-biology-1979"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "reference": "Inherited source review; recorded p. 15; pagination not freshly checked.",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "futuyma-evolutionary-biology-1979",
+          "reference": "Inherited source review; recorded p. 34; pagination not freshly checked.",
+          "status": "reviewed"
+        }
+      ],
+      "reviewed_on": "2026-05-16",
+      "notebook_record": "staged.claim.futuyma.mutation-undirected-variation.001",
+      "original_review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as a misconception guard against need-directed mutation and future-looking explanations."
+      },
+      "imported_on": "2026-09-20"
+    },
+    {
+      "id": "inherited:staged.claim.natural-selection.evidence-check.001",
+      "node_type": "claim",
+      "title": "Selection Claims Need Trait and Fitness Evidence",
+      "statement": "A frequency increase alone does not establish that an allele is adaptive; the explanation also needs evidence connecting the variant to heritable trait differences, fitness differences, and relevant environmental conditions.",
+      "qualification": "Pianka OCR import anchors the distinction between selection, evolution, alternative mechanisms, and caution against circular adaptive explanations. Keep citation-specific page text out of public pages until final bibliography review.",
+      "category": "inherited",
+      "evidence_status": "inherited_review_not_freshly_rechecked",
+      "source_ids": [
+        "pianka-evolutionary-ecology-1988"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "Inherited source review; recorded p. 20; section Natural Selection; pagination not freshly checked.",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "Inherited source review; recorded p. 23; section Phenotype; pagination not freshly checked.",
+          "status": "reviewed"
+        }
+      ],
+      "reviewed_on": "2026-05-16",
+      "notebook_record": "staged.claim.natural-selection.evidence-check.001",
+      "original_review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Pianka OCR import anchors the distinction between selection, evolution, alternative mechanisms, and caution against circular adaptive explanations. Keep citation-specific page text out of public pages until final bibliography review."
+      },
+      "imported_on": "2026-09-20"
+    },
+    {
+      "id": "inherited:staged.claim.pianka.adaptation-multidimensional-compromise.001",
+      "node_type": "claim",
+      "title": "Adaptation Often Requires Multidimensional Compromise",
+      "statement": "Pianka supports presenting adaptation as conformity to many environmental dimensions at once, where physical conditions, competitors, predators, prey, and energetic tradeoffs can require compromise rather than perfection.",
+      "qualification": "Use as a guard against single-axis or perfectionist accounts of adaptation.",
+      "category": "inherited",
+      "evidence_status": "inherited_review_not_freshly_rechecked",
+      "source_ids": [
+        "pianka-evolutionary-ecology-1988"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "Inherited source review; recorded p. 116; pagination not freshly checked.",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "Inherited source review; recorded p. 111; pagination not freshly checked.",
+          "status": "reviewed"
+        }
+      ],
+      "reviewed_on": "2026-05-16",
+      "notebook_record": "staged.claim.pianka.adaptation-multidimensional-compromise.001",
+      "original_review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as a guard against single-axis or perfectionist accounts of adaptation."
+      },
+      "imported_on": "2026-09-20"
+    },
+    {
+      "id": "inherited:staged.claim.pianka.allele-frequency-change.001",
+      "node_type": "claim",
+      "title": "Evolution Can Be Framed As Gene Frequency Change",
+      "statement": "Pianka's population-genetics treatment supports the Notebook framing that allele-frequency change connects gene pools, Mendelian populations, genotype expectations, and evolutionary change over time.",
+      "qualification": "Reviewed as a source-backed sidecar for the allele-frequency concept. OCR text should still be checked against the scanned page before direct quotation.",
+      "category": "inherited",
+      "evidence_status": "inherited_review_not_freshly_rechecked",
+      "source_ids": [
+        "pianka-evolutionary-ecology-1988"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "Inherited source review; recorded p. 35; section Population Genetics; pagination not freshly checked.",
+          "status": "reviewed"
+        }
+      ],
+      "reviewed_on": "2026-05-16",
+      "notebook_record": "staged.claim.pianka.allele-frequency-change.001",
+      "original_review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Reviewed as a source-backed sidecar for the allele-frequency concept. OCR text should still be checked against the scanned page before direct quotation."
+      },
+      "imported_on": "2026-09-20"
+    },
+    {
+      "id": "inherited:staged.claim.pianka.genetic-variation-maintenance.001",
+      "node_type": "claim",
+      "title": "Population-Genetic Models Compare Drift, Gene Flow, Mating, and Selection",
+      "statement": "Pianka's population-genetics treatment supports presenting drift, gene flow, nonrandom mating, and frequency-dependent selection as mechanisms modeled against genotype and gene-frequency expectations.",
+      "qualification": "Good source-trail anchor for mechanism comparison. It does not by itself resolve the neutral-theory context slot.",
+      "category": "inherited",
+      "evidence_status": "inherited_review_not_freshly_rechecked",
+      "source_ids": [
+        "pianka-evolutionary-ecology-1988"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "Inherited source review; recorded p. 36; section Population Genetics; pagination not freshly checked.",
+          "status": "reviewed"
+        }
+      ],
+      "reviewed_on": "2026-05-16",
+      "notebook_record": "staged.claim.pianka.genetic-variation-maintenance.001",
+      "original_review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Good source-trail anchor for mechanism comparison. It does not by itself resolve the neutral-theory context slot."
+      },
+      "imported_on": "2026-09-20"
+    },
+    {
+      "id": "inherited:staged.claim.pianka.heritability-selection.001",
+      "node_type": "claim",
+      "title": "Selection Requires Heritable Phenotypic Differences",
+      "statement": "Pianka's genetics chapter supports the Notebook guardrail that selection acts on phenotypes, but population change depends on whether phenotypic differences are heritable.",
+      "qualification": "Useful for distinguishing immediate fitness effects from evolutionary response. OCR section heading is noisy, but the page anchor is usable.",
+      "category": "inherited",
+      "evidence_status": "inherited_review_not_freshly_rechecked",
+      "source_ids": [
+        "pianka-evolutionary-ecology-1988"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "Inherited source review; recorded p. 33; pagination not freshly checked.",
+          "status": "reviewed"
+        }
+      ],
+      "reviewed_on": "2026-05-16",
+      "notebook_record": "staged.claim.pianka.heritability-selection.001",
+      "original_review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Useful for distinguishing immediate fitness effects from evolutionary response. OCR section heading is noisy, but the page anchor is usable."
+      },
+      "imported_on": "2026-09-20"
+    },
+    {
+      "id": "inherited:staged.claim.pianka.populations-have-changing-properties.001",
+      "node_type": "claim",
+      "title": "Populations Have Properties Individuals Do Not",
+      "statement": "Pianka supports population thinking by distinguishing individual organisms from populations: individuals live or die with fixed genetic makeups, while populations have gene frequencies, birth rates, and death rates that can change over time.",
+      "qualification": "Good bridge from population thinking into ecology and demographic models.",
+      "category": "inherited",
+      "evidence_status": "inherited_review_not_freshly_rechecked",
+      "source_ids": [
+        "pianka-evolutionary-ecology-1988"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "Inherited source review; recorded p. 18; pagination not freshly checked.",
+          "status": "reviewed"
+        }
+      ],
+      "reviewed_on": "2026-05-16",
+      "notebook_record": "staged.claim.pianka.populations-have-changing-properties.001",
+      "original_review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Good bridge from population thinking into ecology and demographic models."
+      },
+      "imported_on": "2026-09-20"
+    },
+    {
+      "id": "inherited:staged.claim.williams.adaptation-guardrail.001",
+      "node_type": "claim",
+      "title": "Adaptation Claims Need Evidence And A Clear Level Of Selection",
+      "statement": "Williams supports a Notebook guardrail that adaptation should not be invoked casually: a proposed function should be tied to evidence of design by selection and assigned only to the level of organization demanded by the evidence.",
+      "qualification": "Use as a misconception guard for adaptation and natural-selection pages; avoid stronger public wording until additional source review.",
+      "category": "inherited",
+      "evidence_status": "inherited_review_not_freshly_rechecked",
+      "source_ids": [
+        "williams-adaptation-natural-selection-1968"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "williams-adaptation-natural-selection-1968",
+          "reference": "Inherited source review; recorded p. 7; pagination not freshly checked.",
+          "status": "reviewed"
+        }
+      ],
+      "reviewed_on": "2026-05-16",
+      "notebook_record": "staged.claim.williams.adaptation-guardrail.001",
+      "original_review": {
+        "status": "reviewed",
+        "reviewer": "evo-edu source ingestion workflow",
+        "reviewed_on": "2026-05-16",
+        "notes": "Use as a misconception guard for adaptation and natural-selection pages; avoid stronger public wording until additional source review."
+      },
+      "imported_on": "2026-09-20"
+    },
+    {
+      "id": "library:heritable-variation",
+      "node_type": "claim",
+      "title": "Heritable variation permits cumulative selection",
+      "statement": "Differences among organisms can persist between generations when traits have a heritable basis; nonheritable variation alone cannot sustain an inherited evolutionary response.",
+      "qualification": "Heritability is population- and environment-dependent; this does not imply that every phenotypic difference is genetic.",
+      "category": "biological foundation",
+      "evidence_status": "source_checked",
+      "source_ids": [
+        "gregory-natural-selection-2009"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "gregory-natural-selection-2009",
+          "reference": "PDF pages 3, 6; pp. 158, 161; Variation and Inheritance; Natural Selection and the Evolution of Populations"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "epistemic_type": "biological foundation"
+    },
+    {
+      "id": "library:differential-reproduction",
+      "node_type": "claim",
+      "title": "Selection changes representation through reproduction",
+      "statement": "Trait-associated differences in survival and reproduction can cause heritable variants to be represented at different rates in subsequent generations.",
+      "qualification": "A statistical tendency does not guarantee fixation in a finite population; drift and other evolutionary processes also affect outcomes.",
+      "category": "biological foundation",
+      "evidence_status": "source_checked",
+      "source_ids": [
+        "gregory-natural-selection-2009"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "gregory-natural-selection-2009",
+          "reference": "PDF pages 4, 6; pp. 159, 161; Non-random Differences in Survival and Reproduction"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "epistemic_type": "biological foundation"
+    },
+    {
+      "id": "library:fitness-context",
+      "node_type": "claim",
+      "title": "Fitness concerns reproductive output in an environment",
+      "statement": "Biological fitness describes reproductive contribution, commonly relative to alternatives in a specified environment; strength, longevity, or an isolated performance score is not itself fitness.",
+      "qualification": "State the time interval, demographic context, and reproductive endpoint; changing environments can reverse rankings.",
+      "category": "definition",
+      "evidence_status": "source_checked",
+      "source_ids": [
+        "gregory-natural-selection-2009"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "gregory-natural-selection-2009",
+          "reference": "PDF pages 4; p. 159; Darwinian Fitness"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "epistemic_type": "definition"
+    },
+    {
+      "id": "library:no-purposeful-selector",
+      "node_type": "claim",
+      "title": "Organism–environment interactions provide selection",
+      "statement": "Natural selection can arise from the consequences of organism–environment interactions without a purposeful selecting agent.",
+      "qualification": "This concerns the selection mechanism; it is not a proof about the ultimate origin of physical laws or environments.",
+      "category": "mechanistic interpretation",
+      "evidence_status": "source_checked",
+      "source_ids": [
+        "dobzhansky-ayala-stebbins-valentine-evolution-1977"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "dobzhansky-ayala-stebbins-valentine-evolution-1977",
+          "reference": "PDF pages 3; p. 97; The Idea of Natural Selection"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "epistemic_type": "mechanistic interpretation"
+    },
+    {
+      "id": "library:adaptation-without-global-best",
+      "node_type": "claim",
+      "title": "Selection does not require a champion individual",
+      "statement": "Survival and reproduction need not be restricted to one best individual; multiple sufficiently well-suited organisms can contribute to the next generation.",
+      "qualification": "Population success is not identical to the champion evaluation used in particular coevolutionary optimization theorems.",
+      "category": "biological foundation",
+      "evidence_status": "source_checked",
+      "source_ids": [
+        "dobzhansky-ayala-stebbins-valentine-evolution-1977"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "dobzhansky-ayala-stebbins-valentine-evolution-1977",
+          "reference": "PDF pages 4; p. 98; discussion of survival of the fittest"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "epistemic_type": "biological foundation"
+    },
+    {
+      "id": "library:finite-resource-budgets",
+      "node_type": "claim",
+      "title": "Organisms allocate finite resource budgets",
+      "statement": "Time, energy, and material devoted to foraging, maintenance, growth, and reproduction impose allocation constraints and potential tradeoffs.",
+      "qualification": "Tradeoffs depend on context; the text does not establish a universal fixed tradeoff surface for every organism.",
+      "category": "biophysical foundation",
+      "evidence_status": "source_checked",
+      "source_ids": [
+        "pianka-evolutionary-ecology-1988"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "PDF pages 96, 97; pp. 85–86; Resource Budgets and the Principle of Allocation"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "epistemic_type": "biophysical foundation"
+    },
+    {
+      "id": "library:energy-is-fitness-proxy",
+      "node_type": "claim",
+      "title": "Energy intake is an intermediate performance measure",
+      "statement": "Optimal-foraging models often use energy acquired per time as a tractable currency, while lifetime successful offspring would more directly measure reproductive consequences.",
+      "qualification": "Do not silently identify shorter travel or greater intake with higher fitness without a stated energy-to-reproduction link.",
+      "category": "measurement guardrail",
+      "evidence_status": "source_checked",
+      "source_ids": [
+        "pianka-evolutionary-ecology-1988"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "PDF pages 96; p. 85; Resource Acquisition and Allocation, opening discussion"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "epistemic_type": "measurement guardrail"
+    },
+    {
+      "id": "library:repeatable-environment",
+      "node_type": "claim",
+      "title": "Foraging models can exploit environmental regularity",
+      "statement": "The foraging model summarized by Pianka assumes statistically repeatable environmental structure, linking morphology and resource distributions to harvesting performance.",
+      "qualification": "Statistical repeatability is an assumption of this model, not a demonstrated property of all environments. Animals have incomplete information.",
+      "category": "model assumption",
+      "evidence_status": "source_checked",
+      "source_ids": [
+        "pianka-evolutionary-ecology-1988"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "PDF pages 103, 104; pp. 92–93; Foraging Tactics and Feeding Efficiency"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "epistemic_type": "model assumption"
+    },
+    {
+      "id": "library:travel-costs",
+      "node_type": "claim",
+      "title": "Travel consumes time and can impose other costs",
+      "statement": "Moving between food patches can consume energy and time and expose a forager to predation; these consequences affect the value of leaving a depleted patch.",
+      "qualification": "Distance alone does not encode load, speed, terrain, risk, handling, or depletion. These costs need explicit treatment in a route model.",
+      "category": "ecological mechanism",
+      "evidence_status": "source_checked",
+      "source_ids": [
+        "dugatkin-principles-animal-behavior-2014"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "dugatkin-principles-animal-behavior-2014",
+          "reference": "PDF pages 380, 381; pp. 354–355; Where to Eat"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "epistemic_type": "ecological mechanism"
+    },
+    {
+      "id": "library:patch-residence",
+      "node_type": "claim",
+      "title": "Travel time changes a model’s patch-residence prediction",
+      "statement": "Under the marginal-value foraging model described here, increasing travel time between patches increases the predicted optimal time spent in a patch.",
+      "qualification": "This is a conditional model prediction, not a claim that animals calculate the theorem or that every species maximizes this currency.",
+      "category": "model result",
+      "evidence_status": "source_checked",
+      "source_ids": [
+        "dugatkin-principles-animal-behavior-2014"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "dugatkin-principles-animal-behavior-2014",
+          "reference": "PDF pages 381, 382, 383; pp. 355–357; Where to Eat, Figures 11.9–11.10"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "epistemic_type": "model result"
+    },
+    {
+      "id": "library:nutrient-constraints",
+      "node_type": "claim",
+      "title": "Essential nutrients can constrain energy maximization",
+      "statement": "A forager may need low-energy foods to obtain essential nutrients; Dugatkin’s moose example treats sodium requirements as a constraint on energy-oriented diet choice.",
+      "qualification": "The cited moose numbers are not generalized to other species; the original Belovsky study is cited by the textbook but not independently audited here.",
+      "category": "ecological mechanism",
+      "evidence_status": "source_checked",
+      "source_ids": [
+        "dugatkin-principles-animal-behavior-2014"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "dugatkin-principles-animal-behavior-2014",
+          "reference": "PDF pages 383, 384; pp. 357–358; Specific Nutrient Constraints"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "epistemic_type": "ecological mechanism"
+    },
+    {
+      "id": "library:optimization-is-conditional",
+      "node_type": "claim",
+      "title": "Optimal-foraging conclusions inherit their assumptions",
+      "statement": "Optimal-foraging theory derives predictions within explicit constraints; the basic prey-choice example assumes measurable energetic returns, sequential encounters, accurate recognition, and selection favoring energy intake rate.",
+      "qualification": "A model’s assumption that selection favors energy-rate maximization is not independent evidence that fitness always equals that rate.",
+      "category": "model-assumption guardrail",
+      "evidence_status": "source_checked",
+      "source_ids": [
+        "dugatkin-principles-animal-behavior-2014"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "dugatkin-principles-animal-behavior-2014",
+          "reference": "PDF pages 377, 378; pp. 351–352; Optimal Foraging Theory; What to Eat"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "epistemic_type": "model-assumption guardrail"
+    },
+    {
+      "id": "concept.shannon_entropy",
+      "node_type": "concept",
+      "title": "Shannon entropy",
+      "statement": "H(Q)=−Σq log q describes uncertainty in a specified distribution.",
+      "category": "definition",
+      "qualification": "The random variables and logarithm units must be specified.",
+      "source_ids": [],
+      "source_anchors": [],
+      "evidence_status": "mathematical_definition"
+    },
+    {
+      "id": "concept.kl_divergence",
+      "node_type": "concept",
+      "title": "Kullback–Leibler divergence",
+      "statement": "D(Q′||Q)=Σq′ log(q′/q) compares two specified distributions; it is nonnegative where defined.",
+      "category": "definition",
+      "qualification": "The random variables and logarithm units must be specified.",
+      "source_ids": [],
+      "source_anchors": [],
+      "evidence_status": "mathematical_definition"
+    },
+    {
+      "id": "theory.ross.meta_search",
+      "node_type": "claim",
+      "title": "ross · meta search",
+      "statement": "Genetic programming can synthesize problem-specific search algorithms from a declared search language and evaluate them by performance on optimization instances.",
+      "qualification": "This is constructive computational meta-search, not a theorem about the rarity of all output distributions and not a biological-origin demonstration.",
+      "category": "source_audit",
+      "evidence_status": "source reports computational experiments",
+      "source_ids": [
+        "ross2002"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "ross2002",
+          "reference": "Printed pp. 1–2; PDF position 2; Abstract; section1"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "theory.ross.scope",
+      "node_type": "claim",
+      "title": "ross · scope",
+      "statement": "Meta-search results depend on representation, available primitives and computational budget; they do not establish unrestricted algorithm-generation ability.",
+      "qualification": "The report discusses language bias, bloat and limited search horizons. Technical report status retained.",
+      "category": "source_audit",
+      "evidence_status": "source explicitly qualifies experiments",
+      "source_ids": [
+        "ross2002"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "ross2002",
+          "reference": "Printed pp. 21–22; PDF position 22; Conclusion"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "theory.wm.classical_conditions",
+      "node_type": "claim",
+      "title": "wm · classical conditions",
+      "statement": "The classic NFL equality in the paper uses finite-domain black-box searches compared after equal numbers of distinct queries and permutation-invariant problem weighting.",
+      "qualification": "Actual algorithms may revisit; this comparison suppresses repeat costs by counting distinct samples. Do not infer equality for every ecological cost or endpoint.",
+      "category": "source_audit",
+      "evidence_status": "source theorem exposition",
+      "source_ids": [
+        "wm2005"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "wm2005",
+          "reference": "Printed pp. 722; PDF position 2; SectionII; footnotes3–4"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "theory.wm.biological_conditions",
+      "node_type": "claim",
+      "title": "wm · biological conditions",
+      "statement": "The paper derives its general-biological NFL conclusion for specified trace-based population endpoints under a never-revisiting approximation in the GO representation.",
+      "qualification": "Absence of a champion alone is not the complete premise; representation, measure, endpoint and revisit assumptions matter.",
+      "category": "source_audit",
+      "evidence_status": "conditional source claim",
+      "source_ids": [
+        "wm2005"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "wm2005",
+          "reference": "Printed pp. 725–726; PDF position 6; SectionIV-B Example4"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "theory.wm.selfplay_endpoint",
+      "node_type": "claim",
+      "title": "wm · selfplay endpoint",
+      "statement": "Self-play allows the performance criterion to depend directly on the problem beyond the observed trace, permitting free-lunch distinctions under the GO framework.",
+      "qualification": "The paper distinguishes uniform sampling of primitive payoff maps from induced distributions over derived maximin scores; do not collapse these ensembles.",
+      "category": "source_audit",
+      "evidence_status": "source formal mechanism",
+      "source_ids": [
+        "wm2005"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "wm2005",
+          "reference": "Printed pp. 724–725;727; PDF position 4; SectionIV-A; Example2; sectionV"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "theory.wm.biological_exception",
+      "node_type": "claim",
+      "title": "wm · biological exception",
+      "statement": "The paper itself allows that an organism-survival design problem evaluated after an unknown ecosystem change can behave as self-play and need not obey NFL.",
+      "qualification": "This is a biologically framed design objective, not a theorem that unguided biological evolution always obtains a free lunch. It qualifies categorical exclusion of biological subject matter.",
+      "category": "source_audit",
+      "evidence_status": "source explicit exception",
+      "source_ids": [
+        "wm2005"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "wm2005",
+          "reference": "Printed pp. 726; PDF position 6; Example4 final paragraph"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "theory.theobald.valid_identity",
+      "node_type": "claim",
+      "title": "theobald · valid identity",
+      "statement": "For positive initial frequencies and pure reweighting q′=qv with E_q v=1, entropy decline equals Cov_q(v,ln q)+D_KL(q′||q), not the KL term alone.",
+      "qualification": "The nonnegative KL term does not imply nonnegative entropy decline; mutual information needs a specified joint distribution. Source Eq3c lacks that joint-model justification.",
+      "category": "source_audit",
+      "evidence_status": "independently verified algebra; source prose needs correction",
+      "source_ids": [
+        "theobald2005"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "theobald2005",
+          "reference": "Printed pp. 1–2; PDF position 2; Equations3,6–8"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "theory.theobald.false_covariance",
+      "node_type": "claim",
+      "title": "theobald · false covariance",
+      "statement": "The source’s asserted nonnegativity of Σq(q′−q) is false: q=(0.9,0.1), q′=(0.8,0.2) gives −0.08.",
+      "qualification": "Cauchy–Schwarz does not imply the asserted sign; do not import this note as an unrestricted information-increase theorem.",
+      "category": "source_audit",
+      "evidence_status": "counterexample verified; original equation visually checked",
+      "source_ids": [
+        "theobald2005"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "theobald2005",
+          "reference": "Printed pp. 3; PDF position 3; Equations10–15, especially13"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "theory.em.oracle_order",
+      "node_type": "claim",
+      "title": "em · oracle order",
+      "statement": "For every cell-query policy the 2017 theorem constructs a full-row policy with no smaller success at equal call count; its text explicitly allows cell queries to be cheaper in practice.",
+      "qualification": "Exists a dominating simulator is not every row policy dominates; equal calls is not equal elementary work.",
+      "category": "source_audit",
+      "evidence_status": "source theorem plus explicit qualification",
+      "source_ids": [
+        "em2017"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "em2017",
+          "reference": "Printed pp. 5; PDF position 5; Theorem2 and following paragraph"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "theory.mde.s4s_measure",
+      "node_type": "claim",
+      "title": "mde · s4s measure",
+      "statement": "The book’s weak search-for-search step requires a specified mean baseline; its strict singleton-target tail additionally assumes uniform volume on the simplex of output distributions.",
+      "qualification": "This probability-over-distributions result is distinct from Ross’s procedural meta-search and from the 2017 oracle comparison; environment extraction is conceded at pp180–181.",
+      "category": "source_audit",
+      "evidence_status": "source stated assumptions",
+      "source_ids": [
+        "book2017"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "book2017",
+          "reference": "Printed pp. 177–180; PDF position 201; Sections5.8.3.2–5.8.3.3"
+        }
+      ],
+      "reviewed_on": "2026-09-20"
+    },
+    {
+      "id": "foraging.physical_cost",
+      "node_type": "claim",
+      "title": "physical cost",
+      "statement": "Under equal rewards and fixed effective energy cost per distance, a longer foraging route has lower net energy without any computation of the globally shortest route.",
+      "qualification": "Constant cost per distance is a simplifying case of a state-dependent metabolic-cost integral, not a universal empirical law.",
+      "category": "formal_model",
+      "evidence_status": "proved_under_assumptions",
+      "source_ids": [
+        "foraging-combes-2020",
+        "foraging2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "foraging-combes-2020",
+          "reference": "Search-indexed primary full-text methods/results and author-institution PDF abstract inspected; direct PMC open presented a browser check"
+        },
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "assumptions": [
+        "Equal collected rewards and handling costs",
+        "Positive constant effective cost per distance",
+        "Comparable risk, load and speed"
+      ],
+      "measured_endpoint": ""
+    },
+    {
+      "id": "foraging.tsp_special_case",
+      "node_type": "claim",
+      "title": "tsp special case",
+      "statement": "Central-place foraging includes optional visits, variable rewards, replenishment, load and risk; a fixed all-sites shortest tour is a special case.",
+      "qualification": "Neither a generic TSP analogy nor distance alone specifies biological fitness.",
+      "category": "model_scope",
+      "evidence_status": "literature_supported",
+      "source_ids": [
+        "foraging-wetterer-1989",
+        "foraging-elliott-1988",
+        "foraging-lihoreau-2011"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "foraging-wetterer-1989",
+          "reference": "Publisher primary abstract inspected"
+        },
+        {
+          "source_id": "foraging-elliott-1988",
+          "reference": "Publisher primary abstract inspected"
+        },
+        {
+          "source_id": "foraging-lihoreau-2011",
+          "reference": "Search-indexed author-hosted primary PDF summary inspected; direct opening returned an error"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "assumptions": [],
+      "measured_endpoint": ""
+    },
+    {
+      "id": "foraging.learned_route_improvement",
+      "node_type": "claim",
+      "title": "learned route improvement",
+      "statement": "Bumblebees refine multi-destination routes during individual foraging experience while sampling only part of the possible tour set.",
+      "qualification": "Within-lifetime learning; not a measured genetic evolutionary response or direct offspring count.",
+      "category": "empirical_behavior",
+      "evidence_status": "observed_in_studied_conditions",
+      "source_ids": [
+        "foraging-lihoreau-2012"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "foraging-lihoreau-2012",
+          "reference": "Publisher full text inspected, especially abstract, results and methods"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "assumptions": [],
+      "measured_endpoint": "Visitation order and flight trajectories"
+    },
+    {
+      "id": "foraging.no_global_optimum_needed",
+      "node_type": "claim",
+      "title": "no global optimum needed",
+      "statement": "Route improvement does not require, and bee observations do not establish, reliable global-tour optimality across arbitrary arrangements.",
+      "qualification": "The illustrative route pair has a known length difference; no claim is made about the shortest of all tours.",
+      "category": "scope_and_empirical_counterweight",
+      "evidence_status": "supported_scope_limit",
+      "source_ids": [
+        "foraging-woodgate-2017",
+        "foraging-lihoreau-2011"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "foraging-woodgate-2017",
+          "reference": "Primary PubMed metadata and search-indexed PMC full-text discussion inspected; direct PMC open presented a browser check"
+        },
+        {
+          "source_id": "foraging-lihoreau-2011",
+          "reference": "Search-indexed author-hosted primary PDF summary inspected; direct opening returned an error"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "assumptions": [],
+      "measured_endpoint": ""
+    },
+    {
+      "id": "foraging.energy_reproduction_bridge",
+      "node_type": "claim",
+      "title": "energy reproduction bridge",
+      "statement": "A response of inherited foraging policies requires an empirical relationship between net returns, reproductive contribution and transmission; route learning alone does not establish it.",
+      "qualification": "Colony nectar rates, individual lifetime resource collection and reproductive fitness are different endpoints; social-insect workers require a colony-level reproductive model.",
+      "category": "biological_bridge_assumption",
+      "evidence_status": "explicit_assumption_not_measured_here",
+      "source_ids": [
+        "foraging-raine-2008",
+        "foraging-evans-2017"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "foraging-raine-2008",
+          "reference": "Search-indexed primary PMC full-text methods/results/discussion and author PDF abstract inspected"
+        },
+        {
+          "source_id": "foraging-evans-2017",
+          "reference": "Primary PubMed metadata/abstract and author-institution publication record inspected"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "assumptions": [],
+      "measured_endpoint": ""
+    },
+    {
+      "id": "foraging.heritable_selection_response",
+      "node_type": "claim",
+      "title": "heritable selection response",
+      "statement": "For two policy types with positive affine energy-to-reproduction weights, symmetric mutation below one half, and matched finite births, selection raises expected descendant net energy by (1-2mu) beta p(1-p)(UA-UB)^2 / mean_w.",
+      "qualification": "Conditional ordinary selection identity; not measured evolutionary change in the cited bees.",
+      "category": "formal_heritable_population_model",
+      "evidence_status": "proved_and_exactly_checked",
+      "source_ids": [
+        "foraging2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "assumptions": [
+        "Stable exogenous regime",
+        "Frequency-independent policy returns",
+        "Positive affine reproductive map",
+        "Heritable policy variation",
+        "Same census and mutation in neutral comparator"
+      ],
+      "measured_endpoint": ""
+    },
+    {
+      "id": "foraging.s4s_applicability_gap",
+      "node_type": "claim",
+      "title": "s4s applicability gap",
+      "statement": "A uniform-simplex rarity bound cannot determine the frequency of physical foraging payoff maps without a justified mapping from environmental mechanisms to that measure.",
+      "qualification": "The valid stipulated average theorem survives; this model does not estimate ecological prevalence or explain the ultimate origin of physical laws.",
+      "category": "formal_interpretive_criticism",
+      "evidence_status": "mathematical_scope_objection",
+      "source_ids": [
+        "book2017",
+        "foraging2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "book2017",
+          "reference": "Sections 5.8–5.9, especially printed pages 177–181"
+        },
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "assumptions": [],
+      "measured_endpoint": ""
+    },
+    {
+      "id": "foraging.no_recursive_evaluator_prerequisite",
+      "node_type": "claim",
+      "title": "no recursive evaluator prerequisite",
+      "statement": "Metabolic expenditure and resource intake can instantiate feedback about a realized behavior without an independently executed search for an optimal evaluator.",
+      "qualification": "Does not deny the need for environmental regularity, energetic expenditure, or an account of the origin of physical laws. The book already permits environmental extraction.",
+      "category": "formal_interpretive_criticism",
+      "evidence_status": "countermodel_to_blanket_prerequisite",
+      "source_ids": [
+        "foraging2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "assumptions": [],
+      "measured_endpoint": ""
+    },
+    {
+      "id": "foraging.counterregimes",
+      "node_type": "claim",
+      "title": "counterregimes",
+      "statement": "More food, lower mortality risk or a changed environment can favor a longer route; erased heredity or absent variation can eliminate the heritable selection response.",
+      "qualification": "No blanket assertion that shorter routes or faster learning maximize lifetime fitness.",
+      "category": "formal_negative_controls",
+      "evidence_status": "proved_or_exactly_checked_in_declared_models",
+      "source_ids": [
+        "foraging-lihoreau-2011",
+        "foraging-combes-2020",
+        "foraging2026"
+      ],
+      "source_anchors": [
+        {
+          "source_id": "foraging-lihoreau-2011",
+          "reference": "Search-indexed author-hosted primary PDF summary inspected; direct opening returned an error"
+        },
+        {
+          "source_id": "foraging-combes-2020",
+          "reference": "Search-indexed primary full-text methods/results and author-institution PDF abstract inspected; direct PMC open presented a browser check"
+        },
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks"
+        }
+      ],
+      "reviewed_on": "2026-09-20",
+      "assumptions": [],
+      "measured_endpoint": ""
+    },
+    {
+      "id": "source:blancke2011",
+      "node_type": "source",
+      "title": "Simulation of biological evolution under attack, but not really: a response to Meester",
+      "category": "source",
+      "statement": "Full author-hosted original inspected in formal source audit.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:book2017",
+      "node_type": "source",
+      "title": "Introduction to Evolutionary Informatics",
+      "category": "source",
+      "statement": "Retained original and adjacent passages, prior formal audit; p.180 visually checked.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:dobzhansky-ayala-stebbins-valentine-evolution-1977",
+      "node_type": "source",
+      "title": "Evolution",
+      "category": "source",
+      "statement": "Inherited source record; any fresh checks are identified separately.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:dugatkin-principles-animal-behavior-2014",
+      "node_type": "source",
+      "title": "Principles of Animal Behavior",
+      "category": "source",
+      "statement": "See bibliographic record and claim-specific inspection status.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:ef2015",
+      "node_type": "source",
+      "title": "Fitness surfaces and searches: Dembski, Ewert, and Marks’s search for design",
+      "category": "source",
+      "statement": "Original inspected in formal source audit; target is earlier Dembski–Ewert–Marks paper, not EM2017.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:em2017",
+      "node_type": "source",
+      "title": "Conservation of Information in Coevolutionary Searches",
+      "category": "source",
+      "statement": "Retained original; prior formal audit.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:foraging-combes-2020",
+      "node_type": "source",
+      "title": "Kinematic flexibility allows bumblebees to increase energetic efficiency when carrying heavy loads",
+      "category": "source",
+      "statement": "See bibliographic record and claim-specific inspection status.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:foraging-elliott-1988",
+      "node_type": "source",
+      "title": "Foraging Behavior of a Central-Place Forager: Field Tests of Theoretical Predictions",
+      "category": "source",
+      "statement": "See bibliographic record and claim-specific inspection status.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:foraging-evans-2017",
+      "node_type": "source",
+      "title": "Fast learning in free-foraging bumble bees is negatively correlated with lifetime resource collection",
+      "category": "source",
+      "statement": "See bibliographic record and claim-specific inspection status.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:foraging-lihoreau-2011",
+      "node_type": "source",
+      "title": "Trade-off between travel distance and prioritization of high-reward sites in traplining bumblebees",
+      "category": "source",
+      "statement": "See bibliographic record and claim-specific inspection status.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:foraging-lihoreau-2012",
+      "node_type": "source",
+      "title": "Radar Tracking and Motion-Sensitive Cameras on Flowers Reveal the Development of Pollinator Multi-Destination Routes over Large Spatial Scales",
+      "category": "source",
+      "statement": "See bibliographic record and claim-specific inspection status.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:foraging-raine-2008",
+      "node_type": "source",
+      "title": "The correlation of learning speed and natural foraging success in bumble-bees",
+      "category": "source",
+      "statement": "See bibliographic record and claim-specific inspection status.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:foraging-wetterer-1989",
+      "node_type": "source",
+      "title": "Central place foraging theory: When load size affects travel time",
+      "category": "source",
+      "statement": "See bibliographic record and claim-specific inspection status.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:foraging-woodgate-2017",
+      "node_type": "source",
+      "title": "Continuous Radar Tracking Illustrates the Development of Multi-destination Routes of Bumblebees",
+      "category": "source",
+      "statement": "See bibliographic record and claim-specific inspection status.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:foraging2026",
+      "node_type": "source",
+      "title": "Physical foraging costs: conditional selection model and exact checks",
+      "category": "source",
+      "statement": "Independent biological workstream with explicit model assumptions; not empirical bee data.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:formal2026",
+      "node_type": "source",
+      "title": "Formal counters to biological restrictions: proofs, checks, and limits",
+      "category": "source",
+      "statement": "Analytical arguments and executable exact checks with independent agent review; not external peer review.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:futuyma-evolutionary-biology-1979",
+      "node_type": "source",
+      "title": "Evolutionary Biology",
+      "category": "source",
+      "statement": "Inherited source record; any fresh checks are identified separately.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:gregory-natural-selection-2009",
+      "node_type": "source",
+      "title": "Understanding Natural Selection: Essential Concepts and Common Misconceptions",
+      "category": "source",
+      "statement": "See bibliographic record and claim-specific inspection status.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:igel2004",
+      "node_type": "source",
+      "title": "A No-Free-Lunch Theorem for Non-Uniform Distributions of Target Functions",
+      "category": "source",
+      "statement": "Primary full text inspected in formal-countermodel workstream.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:pianka-evolutionary-ecology-1988",
+      "node_type": "source",
+      "title": "Evolutionary Ecology",
+      "category": "source",
+      "statement": "Inherited source record; any fresh checks are identified separately.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:ross2002",
+      "node_type": "source",
+      "title": "Searching for Search Algorithms: Experiments in Meta-search",
+      "category": "source",
+      "statement": "See bibliographic record and claim-specific inspection status.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:theobald2005",
+      "node_type": "source",
+      "title": "On the increase of biological information due to selection",
+      "category": "source",
+      "statement": "See bibliographic record and claim-specific inspection status.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:williams-adaptation-natural-selection-1968",
+      "node_type": "source",
+      "title": "Adaptation and Natural Selection",
+      "category": "source",
+      "statement": "Inherited source record; any fresh checks are identified separately.",
+      "source_ids": [],
+      "source_anchors": []
+    },
+    {
+      "id": "source:wm2005",
+      "node_type": "source",
+      "title": "Coevolutionary Free Lunches",
+      "category": "source",
+      "statement": "See bibliographic record and claim-specific inspection status.",
+      "source_ids": [],
+      "source_anchors": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "source:pianka-evolutionary-ecology-1988",
+      "target": "C01",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0001"
+    },
+    {
+      "source": "source:gregory-natural-selection-2009",
+      "target": "C02",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0002"
+    },
+    {
+      "source": "source:gregory-natural-selection-2009",
+      "target": "C03",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0003"
+    },
+    {
+      "source": "source:dobzhansky-ayala-stebbins-valentine-evolution-1977",
+      "target": "C03",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0004"
+    },
+    {
+      "source": "source:dobzhansky-ayala-stebbins-valentine-evolution-1977",
+      "target": "C04",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0005"
+    },
+    {
+      "source": "source:pianka-evolutionary-ecology-1988",
+      "target": "C04",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0006"
+    },
+    {
+      "source": "source:gregory-natural-selection-2009",
+      "target": "C05",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0007"
+    },
+    {
+      "source": "source:pianka-evolutionary-ecology-1988",
+      "target": "C05",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0008"
+    },
+    {
+      "source": "source:foraging2026",
+      "target": "C06",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0009"
+    },
+    {
+      "source": "source:pianka-evolutionary-ecology-1988",
+      "target": "C07",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0010"
+    },
+    {
+      "source": "source:foraging2026",
+      "target": "C07",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0011"
+    },
+    {
+      "source": "source:foraging2026",
+      "target": "C08",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0012"
+    },
+    {
+      "source": "source:foraging2026",
+      "target": "C09",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0013"
+    },
+    {
+      "source": "source:foraging-lihoreau-2012",
+      "target": "C10",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0014"
+    },
+    {
+      "source": "source:foraging2026",
+      "target": "C10",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0015"
+    },
+    {
+      "source": "source:formal2026",
+      "target": "C11",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0016"
+    },
+    {
+      "source": "source:igel2004",
+      "target": "C12",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0017"
+    },
+    {
+      "source": "source:book2017",
+      "target": "C12",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0018"
+    },
+    {
+      "source": "source:igel2004",
+      "target": "C13",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0019"
+    },
+    {
+      "source": "source:em2017",
+      "target": "C14",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0020"
+    },
+    {
+      "source": "source:formal2026",
+      "target": "C14",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0021"
+    },
+    {
+      "source": "source:igel2004",
+      "target": "C15",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0022"
+    },
+    {
+      "source": "source:formal2026",
+      "target": "C15",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0023"
+    },
+    {
+      "source": "source:wm2005",
+      "target": "C16",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0024"
+    },
+    {
+      "source": "source:wm2005",
+      "target": "C17",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0025"
+    },
+    {
+      "source": "source:wm2005",
+      "target": "C18",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0026"
+    },
+    {
+      "source": "source:em2017",
+      "target": "C19",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0027"
+    },
+    {
+      "source": "source:book2017",
+      "target": "C19",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0028"
+    },
+    {
+      "source": "source:em2017",
+      "target": "C20",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0029"
+    },
+    {
+      "source": "source:book2017",
+      "target": "C21",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0030"
+    },
+    {
+      "source": "source:book2017",
+      "target": "C22",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0031"
+    },
+    {
+      "source": "source:formal2026",
+      "target": "C22",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0032"
+    },
+    {
+      "source": "source:book2017",
+      "target": "C23",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0033"
+    },
+    {
+      "source": "source:formal2026",
+      "target": "C23",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0034"
+    },
+    {
+      "source": "source:foraging2026",
+      "target": "C24",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0035"
+    },
+    {
+      "source": "source:formal2026",
+      "target": "C24",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0036"
+    },
+    {
+      "source": "source:formal2026",
+      "target": "C25",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0037"
+    },
+    {
+      "source": "source:formal2026",
+      "target": "C26",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0038"
+    },
+    {
+      "source": "source:em2017",
+      "target": "C27",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0039"
+    },
+    {
+      "source": "source:formal2026",
+      "target": "C27",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0040"
+    },
+    {
+      "source": "source:formal2026",
+      "target": "C28",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0041"
+    },
+    {
+      "source": "source:blancke2011",
+      "target": "C29",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0042"
+    },
+    {
+      "source": "source:formal2026",
+      "target": "C29",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0043"
+    },
+    {
+      "source": "source:ef2015",
+      "target": "C30",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0044"
+    },
+    {
+      "source": "source:foraging2026",
+      "target": "C31",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0045"
+    },
+    {
+      "source": "source:book2017",
+      "target": "C32",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0046"
+    },
+    {
+      "source": "source:formal2026",
+      "target": "C32",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0047"
+    },
+    {
+      "source": "C02",
+      "target": "C04",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0048"
+    },
+    {
+      "source": "C03",
+      "target": "C04",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0049"
+    },
+    {
+      "source": "C04",
+      "target": "C05",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0050"
+    },
+    {
+      "source": "C01",
+      "target": "C06",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0051"
+    },
+    {
+      "source": "C03",
+      "target": "C07",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0052"
+    },
+    {
+      "source": "C06",
+      "target": "C08",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0053"
+    },
+    {
+      "source": "C07",
+      "target": "C08",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0054"
+    },
+    {
+      "source": "C08",
+      "target": "C09",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0055"
+    },
+    {
+      "source": "C02",
+      "target": "C09",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0056"
+    },
+    {
+      "source": "C03",
+      "target": "C11",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0057"
+    },
+    {
+      "source": "C11",
+      "target": "C12",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0058"
+    },
+    {
+      "source": "C12",
+      "target": "C15",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0059"
+    },
+    {
+      "source": "C15",
+      "target": "C13",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0060"
+    },
+    {
+      "source": "C14",
+      "target": "C13",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0061"
+    },
+    {
+      "source": "C16",
+      "target": "C17",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0062"
+    },
+    {
+      "source": "C17",
+      "target": "C18",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0063"
+    },
+    {
+      "source": "C13",
+      "target": "C18",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0064"
+    },
+    {
+      "source": "C11",
+      "target": "C19",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0065"
+    },
+    {
+      "source": "C19",
+      "target": "C20",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0066"
+    },
+    {
+      "source": "C14",
+      "target": "C20",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0067"
+    },
+    {
+      "source": "C14",
+      "target": "C21",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0068"
+    },
+    {
+      "source": "C21",
+      "target": "C22",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0069"
+    },
+    {
+      "source": "C12",
+      "target": "C22",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0070"
+    },
+    {
+      "source": "C22",
+      "target": "C23",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0071"
+    },
+    {
+      "source": "C08",
+      "target": "C24",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0072"
+    },
+    {
+      "source": "C24",
+      "target": "C25",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0073"
+    },
+    {
+      "source": "C23",
+      "target": "C25",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0074"
+    },
+    {
+      "source": "C26",
+      "target": "C25",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0075"
+    },
+    {
+      "source": "C21",
+      "target": "C26",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0076"
+    },
+    {
+      "source": "C20",
+      "target": "C27",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0077"
+    },
+    {
+      "source": "C14",
+      "target": "C27",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0078"
+    },
+    {
+      "source": "C04",
+      "target": "C28",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0079"
+    },
+    {
+      "source": "C05",
+      "target": "C28",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0080"
+    },
+    {
+      "source": "C25",
+      "target": "C29",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0081"
+    },
+    {
+      "source": "C22",
+      "target": "C30",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0082"
+    },
+    {
+      "source": "C29",
+      "target": "C30",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0083"
+    },
+    {
+      "source": "C28",
+      "target": "C32",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0084"
+    },
+    {
+      "source": "C09",
+      "target": "C32",
+      "relation": "prerequisite_for",
+      "note": "Conceptual prerequisite; not by itself a proof or sufficient causal condition.",
+      "id": "e0085"
+    },
+    {
+      "source": "C10",
+      "target": "C09",
+      "relation": "qualifies",
+      "note": "Behavioral learning alone does not establish inheritance.",
+      "id": "e0086"
+    },
+    {
+      "source": "C05",
+      "target": "C09",
+      "relation": "qualifies",
+      "note": "Tradeoffs can change the payoff ranking.",
+      "id": "e0087"
+    },
+    {
+      "source": "C18",
+      "target": "C13",
+      "relation": "scope_qualification",
+      "note": "The biological application preserves the averaging assumptions.",
+      "id": "e0088"
+    },
+    {
+      "source": "C24",
+      "target": "C23",
+      "relation": "requires_bridge",
+      "note": "Applying the simplex tail to a mechanism requires a relation between their measures.",
+      "id": "e0089"
+    },
+    {
+      "source": "C27",
+      "target": "C20",
+      "relation": "scope_qualification",
+      "note": "Elementary cost differs from the theorem’s equal-call accounting.",
+      "id": "e0090"
+    },
+    {
+      "source": "C30",
+      "target": "C25",
+      "relation": "prior_art",
+      "note": "The broad measure/applicability concern predates this project.",
+      "id": "e0091"
+    },
+    {
+      "source": "C31",
+      "target": "C11",
+      "relation": "influences",
+      "note": "Ecological change can change the payoff relation.",
+      "id": "e0092"
+    },
+    {
+      "source": "C11",
+      "target": "C04",
+      "relation": "influences",
+      "note": "Context-dependent reproductive outcomes affect selection.",
+      "id": "e0093"
+    },
+    {
+      "source": "C04",
+      "target": "C31",
+      "relation": "influences",
+      "note": "Changes in population composition can alter interactions and resource use.",
+      "id": "e0094"
+    },
+    {
+      "source": "source:dobzhansky-ayala-stebbins-valentine-evolution-1977",
+      "target": "inherited:staged.claim.dobzhansky.selection-not-purposeful-selector.001",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0095"
+    },
+    {
+      "source": "inherited:staged.claim.dobzhansky.selection-not-purposeful-selector.001",
+      "target": "C04",
+      "relation": "background_for",
+      "note": "",
+      "id": "e0096"
+    },
+    {
+      "source": "source:futuyma-evolutionary-biology-1979",
+      "target": "inherited:staged.claim.futuyma.adaptation-extinction-boundary.001",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0097"
+    },
+    {
+      "source": "inherited:staged.claim.futuyma.adaptation-extinction-boundary.001",
+      "target": "C05",
+      "relation": "background_for",
+      "note": "",
+      "id": "e0098"
+    },
+    {
+      "source": "source:futuyma-evolutionary-biology-1979",
+      "target": "inherited:staged.claim.futuyma.mutation-undirected-variation.001",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0099"
+    },
+    {
+      "source": "inherited:staged.claim.futuyma.mutation-undirected-variation.001",
+      "target": "C02",
+      "relation": "background_for",
+      "note": "",
+      "id": "e0100"
+    },
+    {
+      "source": "source:pianka-evolutionary-ecology-1988",
+      "target": "inherited:staged.claim.natural-selection.evidence-check.001",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0101"
+    },
+    {
+      "source": "inherited:staged.claim.natural-selection.evidence-check.001",
+      "target": "C04",
+      "relation": "background_for",
+      "note": "",
+      "id": "e0102"
+    },
+    {
+      "source": "source:pianka-evolutionary-ecology-1988",
+      "target": "inherited:staged.claim.pianka.adaptation-multidimensional-compromise.001",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0103"
+    },
+    {
+      "source": "inherited:staged.claim.pianka.adaptation-multidimensional-compromise.001",
+      "target": "C05",
+      "relation": "background_for",
+      "note": "",
+      "id": "e0104"
+    },
+    {
+      "source": "source:pianka-evolutionary-ecology-1988",
+      "target": "inherited:staged.claim.pianka.allele-frequency-change.001",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0105"
+    },
+    {
+      "source": "inherited:staged.claim.pianka.allele-frequency-change.001",
+      "target": "C04",
+      "relation": "background_for",
+      "note": "",
+      "id": "e0106"
+    },
+    {
+      "source": "source:pianka-evolutionary-ecology-1988",
+      "target": "inherited:staged.claim.pianka.genetic-variation-maintenance.001",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0107"
+    },
+    {
+      "source": "inherited:staged.claim.pianka.genetic-variation-maintenance.001",
+      "target": "C04",
+      "relation": "background_for",
+      "note": "",
+      "id": "e0108"
+    },
+    {
+      "source": "source:pianka-evolutionary-ecology-1988",
+      "target": "inherited:staged.claim.pianka.heritability-selection.001",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0109"
+    },
+    {
+      "source": "inherited:staged.claim.pianka.heritability-selection.001",
+      "target": "C04",
+      "relation": "background_for",
+      "note": "",
+      "id": "e0110"
+    },
+    {
+      "source": "source:pianka-evolutionary-ecology-1988",
+      "target": "inherited:staged.claim.pianka.populations-have-changing-properties.001",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0111"
+    },
+    {
+      "source": "inherited:staged.claim.pianka.populations-have-changing-properties.001",
+      "target": "C04",
+      "relation": "background_for",
+      "note": "",
+      "id": "e0112"
+    },
+    {
+      "source": "source:williams-adaptation-natural-selection-1968",
+      "target": "inherited:staged.claim.williams.adaptation-guardrail.001",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0113"
+    },
+    {
+      "source": "inherited:staged.claim.williams.adaptation-guardrail.001",
+      "target": "C05",
+      "relation": "background_for",
+      "note": "",
+      "id": "e0114"
+    },
+    {
+      "source": "source:gregory-natural-selection-2009",
+      "target": "library:heritable-variation",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0115"
+    },
+    {
+      "source": "library:heritable-variation",
+      "target": "C02",
+      "relation": "supports",
+      "note": "Freshly inspected Library passage; model assumptions remain conditional.",
+      "id": "e0116"
+    },
+    {
+      "source": "source:gregory-natural-selection-2009",
+      "target": "library:differential-reproduction",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0117"
+    },
+    {
+      "source": "library:differential-reproduction",
+      "target": "C04",
+      "relation": "supports",
+      "note": "Freshly inspected Library passage; model assumptions remain conditional.",
+      "id": "e0118"
+    },
+    {
+      "source": "library:heritable-variation",
+      "target": "library:differential-reproduction",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0119"
+    },
+    {
+      "source": "library:fitness-context",
+      "target": "library:differential-reproduction",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0120"
+    },
+    {
+      "source": "source:gregory-natural-selection-2009",
+      "target": "library:fitness-context",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0121"
+    },
+    {
+      "source": "library:fitness-context",
+      "target": "C03",
+      "relation": "supports",
+      "note": "Freshly inspected Library passage; model assumptions remain conditional.",
+      "id": "e0122"
+    },
+    {
+      "source": "source:dobzhansky-ayala-stebbins-valentine-evolution-1977",
+      "target": "library:no-purposeful-selector",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0123"
+    },
+    {
+      "source": "library:no-purposeful-selector",
+      "target": "C08",
+      "relation": "background_for",
+      "note": "Freshly inspected Library passage; model assumptions remain conditional.",
+      "id": "e0124"
+    },
+    {
+      "source": "library:differential-reproduction",
+      "target": "library:no-purposeful-selector",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0125"
+    },
+    {
+      "source": "source:dobzhansky-ayala-stebbins-valentine-evolution-1977",
+      "target": "library:adaptation-without-global-best",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0126"
+    },
+    {
+      "source": "library:adaptation-without-global-best",
+      "target": "C05",
+      "relation": "supports",
+      "note": "Freshly inspected Library passage; model assumptions remain conditional.",
+      "id": "e0127"
+    },
+    {
+      "source": "library:fitness-context",
+      "target": "library:adaptation-without-global-best",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0128"
+    },
+    {
+      "source": "source:pianka-evolutionary-ecology-1988",
+      "target": "library:finite-resource-budgets",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0129"
+    },
+    {
+      "source": "library:finite-resource-budgets",
+      "target": "C01",
+      "relation": "supports",
+      "note": "Freshly inspected Library passage; model assumptions remain conditional.",
+      "id": "e0130"
+    },
+    {
+      "source": "source:pianka-evolutionary-ecology-1988",
+      "target": "library:energy-is-fitness-proxy",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0131"
+    },
+    {
+      "source": "library:energy-is-fitness-proxy",
+      "target": "C07",
+      "relation": "supports",
+      "note": "Freshly inspected Library passage; model assumptions remain conditional.",
+      "id": "e0132"
+    },
+    {
+      "source": "library:finite-resource-budgets",
+      "target": "library:energy-is-fitness-proxy",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0133"
+    },
+    {
+      "source": "library:fitness-context",
+      "target": "library:energy-is-fitness-proxy",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0134"
+    },
+    {
+      "source": "source:pianka-evolutionary-ecology-1988",
+      "target": "library:repeatable-environment",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0135"
+    },
+    {
+      "source": "library:repeatable-environment",
+      "target": "C24",
+      "relation": "background_for",
+      "note": "Freshly inspected Library passage; model assumptions remain conditional.",
+      "id": "e0136"
+    },
+    {
+      "source": "library:finite-resource-budgets",
+      "target": "library:repeatable-environment",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0137"
+    },
+    {
+      "source": "source:dugatkin-principles-animal-behavior-2014",
+      "target": "library:travel-costs",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0138"
+    },
+    {
+      "source": "library:travel-costs",
+      "target": "C06",
+      "relation": "supports",
+      "note": "Freshly inspected Library passage; model assumptions remain conditional.",
+      "id": "e0139"
+    },
+    {
+      "source": "library:finite-resource-budgets",
+      "target": "library:travel-costs",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0140"
+    },
+    {
+      "source": "source:dugatkin-principles-animal-behavior-2014",
+      "target": "library:patch-residence",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0141"
+    },
+    {
+      "source": "library:patch-residence",
+      "target": "C06",
+      "relation": "supports",
+      "note": "Freshly inspected Library passage; model assumptions remain conditional.",
+      "id": "e0142"
+    },
+    {
+      "source": "library:travel-costs",
+      "target": "library:patch-residence",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0143"
+    },
+    {
+      "source": "library:repeatable-environment",
+      "target": "library:patch-residence",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0144"
+    },
+    {
+      "source": "source:dugatkin-principles-animal-behavior-2014",
+      "target": "library:nutrient-constraints",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0145"
+    },
+    {
+      "source": "library:nutrient-constraints",
+      "target": "C07",
+      "relation": "supports",
+      "note": "Freshly inspected Library passage; model assumptions remain conditional.",
+      "id": "e0146"
+    },
+    {
+      "source": "library:finite-resource-budgets",
+      "target": "library:nutrient-constraints",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0147"
+    },
+    {
+      "source": "library:energy-is-fitness-proxy",
+      "target": "library:nutrient-constraints",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0148"
+    },
+    {
+      "source": "source:dugatkin-principles-animal-behavior-2014",
+      "target": "library:optimization-is-conditional",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0149"
+    },
+    {
+      "source": "library:optimization-is-conditional",
+      "target": "C05",
+      "relation": "qualifies",
+      "note": "Freshly inspected Library passage; model assumptions remain conditional.",
+      "id": "e0150"
+    },
+    {
+      "source": "library:energy-is-fitness-proxy",
+      "target": "library:optimization-is-conditional",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0151"
+    },
+    {
+      "source": "source:ross2002",
+      "target": "theory.ross.meta_search",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0152"
+    },
+    {
+      "source": "theory.ross.meta_search",
+      "target": "C30",
+      "relation": "compares_with",
+      "note": "Computational precursor, not a response to biological/design inferences.",
+      "id": "e0153"
+    },
+    {
+      "source": "source:ross2002",
+      "target": "theory.ross.scope",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0154"
+    },
+    {
+      "source": "theory.ross.scope",
+      "target": "C14",
+      "relation": "supports",
+      "note": "",
+      "id": "e0155"
+    },
+    {
+      "source": "source:wm2005",
+      "target": "theory.wm.classical_conditions",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0156"
+    },
+    {
+      "source": "theory.wm.classical_conditions",
+      "target": "C13",
+      "relation": "supports",
+      "note": "",
+      "id": "e0157"
+    },
+    {
+      "source": "source:wm2005",
+      "target": "theory.wm.biological_conditions",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0158"
+    },
+    {
+      "source": "theory.wm.biological_conditions",
+      "target": "C18",
+      "relation": "supports",
+      "note": "",
+      "id": "e0159"
+    },
+    {
+      "source": "source:wm2005",
+      "target": "theory.wm.selfplay_endpoint",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0160"
+    },
+    {
+      "source": "theory.wm.selfplay_endpoint",
+      "target": "C17",
+      "relation": "supports",
+      "note": "",
+      "id": "e0161"
+    },
+    {
+      "source": "source:wm2005",
+      "target": "theory.wm.biological_exception",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0162"
+    },
+    {
+      "source": "theory.wm.biological_exception",
+      "target": "C18",
+      "relation": "supports",
+      "note": "",
+      "id": "e0163"
+    },
+    {
+      "source": "source:theobald2005",
+      "target": "theory.theobald.valid_identity",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0164"
+    },
+    {
+      "source": "theory.theobald.valid_identity",
+      "target": "C21",
+      "relation": "contrasts_with",
+      "note": "Shannon entropy and KL divergence differ from active information; its definition is unaffected.",
+      "id": "e0165"
+    },
+    {
+      "source": "source:theobald2005",
+      "target": "theory.theobald.false_covariance",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0166"
+    },
+    {
+      "source": "theory.theobald.false_covariance",
+      "target": "C21",
+      "relation": "contrasts_with",
+      "note": "Shannon entropy and KL divergence differ from active information; its definition is unaffected.",
+      "id": "e0167"
+    },
+    {
+      "source": "source:em2017",
+      "target": "theory.em.oracle_order",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0168"
+    },
+    {
+      "source": "theory.em.oracle_order",
+      "target": "C20",
+      "relation": "supports",
+      "note": "",
+      "id": "e0169"
+    },
+    {
+      "source": "source:book2017",
+      "target": "theory.mde.s4s_measure",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0170"
+    },
+    {
+      "source": "theory.mde.s4s_measure",
+      "target": "C23",
+      "relation": "supports",
+      "note": "",
+      "id": "e0171"
+    },
+    {
+      "source": "theory.ross.scope",
+      "target": "theory.ross.meta_search",
+      "relation": "qualifies",
+      "note": "",
+      "id": "e0172"
+    },
+    {
+      "source": "theory.wm.classical_conditions",
+      "target": "theory.wm.biological_conditions",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0173"
+    },
+    {
+      "source": "theory.wm.biological_exception",
+      "target": "theory.wm.biological_conditions",
+      "relation": "qualifies",
+      "note": "",
+      "id": "e0174"
+    },
+    {
+      "source": "theory.wm.selfplay_endpoint",
+      "target": "theory.wm.biological_exception",
+      "relation": "supports",
+      "note": "",
+      "id": "e0175"
+    },
+    {
+      "source": "theory.theobald.false_covariance",
+      "target": "theory.theobald.valid_identity",
+      "relation": "qualifies",
+      "note": "The entropy identity remains valid; the inferred universally nonnegative entropy decline fails.",
+      "id": "e0176"
+    },
+    {
+      "source": "theory.ross.meta_search",
+      "target": "theory.mde.s4s_measure",
+      "relation": "contrasts_with",
+      "note": "Shared search-for-search vocabulary conceals different mathematical objects.",
+      "id": "e0177"
+    },
+    {
+      "source": "theory.em.oracle_order",
+      "target": "theory.wm.selfplay_endpoint",
+      "relation": "compares_with",
+      "note": "Related coevolution analyses, different observation/cost comparisons.",
+      "id": "e0178"
+    },
+    {
+      "source": "theory.mde.s4s_measure",
+      "target": "theory.wm.classical_conditions",
+      "relation": "compares_with",
+      "note": "Both require an explicit ensemble; their probability spaces differ.",
+      "id": "e0179"
+    },
+    {
+      "source": "C14",
+      "target": "theory.ross.meta_search",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0180"
+    },
+    {
+      "source": "C11",
+      "target": "theory.ross.meta_search",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0181"
+    },
+    {
+      "source": "theory.ross.meta_search",
+      "target": "theory.ross.scope",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0182"
+    },
+    {
+      "source": "C14",
+      "target": "theory.ross.scope",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0183"
+    },
+    {
+      "source": "C11",
+      "target": "theory.wm.classical_conditions",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0184"
+    },
+    {
+      "source": "C12",
+      "target": "theory.wm.classical_conditions",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0185"
+    },
+    {
+      "source": "C15",
+      "target": "theory.wm.classical_conditions",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0186"
+    },
+    {
+      "source": "C04",
+      "target": "theory.wm.biological_conditions",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0187"
+    },
+    {
+      "source": "C14",
+      "target": "theory.wm.biological_conditions",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0188"
+    },
+    {
+      "source": "C14",
+      "target": "theory.wm.selfplay_endpoint",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0189"
+    },
+    {
+      "source": "C12",
+      "target": "theory.wm.selfplay_endpoint",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0190"
+    },
+    {
+      "source": "theory.wm.selfplay_endpoint",
+      "target": "theory.wm.biological_exception",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0191"
+    },
+    {
+      "source": "theory.wm.biological_conditions",
+      "target": "theory.wm.biological_exception",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0192"
+    },
+    {
+      "source": "C03",
+      "target": "theory.theobald.valid_identity",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0193"
+    },
+    {
+      "source": "concept.shannon_entropy",
+      "target": "theory.theobald.valid_identity",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0194"
+    },
+    {
+      "source": "concept.kl_divergence",
+      "target": "theory.theobald.valid_identity",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0195"
+    },
+    {
+      "source": "theory.theobald.valid_identity",
+      "target": "theory.theobald.false_covariance",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0196"
+    },
+    {
+      "source": "C19",
+      "target": "theory.em.oracle_order",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0197"
+    },
+    {
+      "source": "C14",
+      "target": "theory.em.oracle_order",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0198"
+    },
+    {
+      "source": "C12",
+      "target": "theory.mde.s4s_measure",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0199"
+    },
+    {
+      "source": "C26",
+      "target": "theory.mde.s4s_measure",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0200"
+    },
+    {
+      "source": "C21",
+      "target": "theory.mde.s4s_measure",
+      "relation": "prerequisite_for",
+      "note": "",
+      "id": "e0201"
+    },
+    {
+      "source": "source:foraging-combes-2020",
+      "target": "foraging.physical_cost",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0202"
+    },
+    {
+      "source": "source:foraging2026",
+      "target": "foraging.physical_cost",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0203"
+    },
+    {
+      "source": "foraging.physical_cost",
+      "target": "C08",
+      "relation": "supports",
+      "note": "",
+      "id": "e0204"
+    },
+    {
+      "source": "source:foraging-wetterer-1989",
+      "target": "foraging.tsp_special_case",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0205"
+    },
+    {
+      "source": "source:foraging-elliott-1988",
+      "target": "foraging.tsp_special_case",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0206"
+    },
+    {
+      "source": "source:foraging-lihoreau-2011",
+      "target": "foraging.tsp_special_case",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0207"
+    },
+    {
+      "source": "foraging.tsp_special_case",
+      "target": "C06",
+      "relation": "qualifies",
+      "note": "",
+      "id": "e0208"
+    },
+    {
+      "source": "source:foraging-lihoreau-2012",
+      "target": "foraging.learned_route_improvement",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0209"
+    },
+    {
+      "source": "foraging.learned_route_improvement",
+      "target": "C10",
+      "relation": "supports",
+      "note": "",
+      "id": "e0210"
+    },
+    {
+      "source": "source:foraging-woodgate-2017",
+      "target": "foraging.no_global_optimum_needed",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0211"
+    },
+    {
+      "source": "source:foraging-lihoreau-2011",
+      "target": "foraging.no_global_optimum_needed",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0212"
+    },
+    {
+      "source": "foraging.no_global_optimum_needed",
+      "target": "C09",
+      "relation": "qualifies",
+      "note": "",
+      "id": "e0213"
+    },
+    {
+      "source": "source:foraging-raine-2008",
+      "target": "foraging.energy_reproduction_bridge",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0214"
+    },
+    {
+      "source": "source:foraging-evans-2017",
+      "target": "foraging.energy_reproduction_bridge",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0215"
+    },
+    {
+      "source": "foraging.energy_reproduction_bridge",
+      "target": "C07",
+      "relation": "supports",
+      "note": "",
+      "id": "e0216"
+    },
+    {
+      "source": "source:foraging2026",
+      "target": "foraging.heritable_selection_response",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0217"
+    },
+    {
+      "source": "foraging.heritable_selection_response",
+      "target": "C09",
+      "relation": "supports",
+      "note": "",
+      "id": "e0218"
+    },
+    {
+      "source": "source:book2017",
+      "target": "foraging.s4s_applicability_gap",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0219"
+    },
+    {
+      "source": "source:foraging2026",
+      "target": "foraging.s4s_applicability_gap",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0220"
+    },
+    {
+      "source": "foraging.s4s_applicability_gap",
+      "target": "C25",
+      "relation": "supports",
+      "note": "",
+      "id": "e0221"
+    },
+    {
+      "source": "source:foraging2026",
+      "target": "foraging.no_recursive_evaluator_prerequisite",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0222"
+    },
+    {
+      "source": "foraging.no_recursive_evaluator_prerequisite",
+      "target": "C08",
+      "relation": "supports",
+      "note": "",
+      "id": "e0223"
+    },
+    {
+      "source": "source:foraging-lihoreau-2011",
+      "target": "foraging.counterregimes",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0224"
+    },
+    {
+      "source": "source:foraging-combes-2020",
+      "target": "foraging.counterregimes",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0225"
+    },
+    {
+      "source": "source:foraging2026",
+      "target": "foraging.counterregimes",
+      "relation": "documents",
+      "note": "Source attribution; not an automatic truth endorsement.",
+      "id": "e0226"
+    },
+    {
+      "source": "foraging.counterregimes",
+      "target": "C09",
+      "relation": "qualifies",
+      "note": "",
+      "id": "e0227"
+    },
+    {
+      "source": "foraging.physical_cost",
+      "target": "foraging.heritable_selection_response",
+      "relation": "supplies_payoff_component_for",
+      "note": "",
+      "id": "e0228"
+    },
+    {
+      "source": "foraging.energy_reproduction_bridge",
+      "target": "foraging.heritable_selection_response",
+      "relation": "required_assumption_for",
+      "note": "",
+      "id": "e0229"
+    },
+    {
+      "source": "foraging.learned_route_improvement",
+      "target": "foraging.heritable_selection_response",
+      "relation": "distinct_evidence_type_from",
+      "note": "",
+      "id": "e0230"
+    },
+    {
+      "source": "foraging.tsp_special_case",
+      "target": "foraging.physical_cost",
+      "relation": "limits_scope_of",
+      "note": "",
+      "id": "e0231"
+    },
+    {
+      "source": "foraging.no_global_optimum_needed",
+      "target": "foraging.learned_route_improvement",
+      "relation": "qualifies",
+      "note": "",
+      "id": "e0232"
+    },
+    {
+      "source": "foraging.counterregimes",
+      "target": "foraging.heritable_selection_response",
+      "relation": "limits_scope_of",
+      "note": "",
+      "id": "e0233"
+    },
+    {
+      "source": "foraging.physical_cost",
+      "target": "foraging.no_recursive_evaluator_prerequisite",
+      "relation": "supports_countermodel",
+      "note": "",
+      "id": "e0234"
+    },
+    {
+      "source": "foraging.no_recursive_evaluator_prerequisite",
+      "target": "foraging.s4s_applicability_gap",
+      "relation": "illustrates",
+      "note": "",
+      "id": "e0235"
+    }
+  ],
+  "sources": [
+    {
+      "id": "blancke2011",
+      "title": "Simulation of biological evolution under attack, but not really: a response to Meester",
+      "author": "Stefaan Blancke, Maarten Boudry, Johan Braeckman",
+      "year": 2011,
+      "kind": "journal response",
+      "url": "https://doi.org/10.1007/s10539-009-9192-8",
+      "inspected": "Full author-hosted original inspected in formal source audit.",
+      "reference": "Author-hosted PDF pp.3–5"
+    },
+    {
+      "id": "book2017",
+      "title": "Introduction to Evolutionary Informatics",
+      "author": "Robert J. Marks II, William A. Dembski, Winston Ewert",
+      "authors": "Robert J. Marks II; William A. Dembski; Winston Ewert",
+      "year": 2017,
+      "kind": "book",
+      "publication_type": "book; retained author-hosted manuscript PDF",
+      "url": "https://robertmarks.org/REPRINTS/2017-IntroToEvo.pdf",
+      "inspected": "Retained original and adjacent passages, prior formal audit; p.180 visually checked.",
+      "access": "Author-hosted primary PDF and local digitized text checked in preceding formal-counter workstream",
+      "supports": "Uniform-simplex search-for-search result, its environmental extrapolation, and explicit acknowledgment of environmental information extraction.",
+      "does_not_establish": "That a physical route-cost mechanism must be independently sampled from the uniform simplex.",
+      "reference": "Sections 5.8–5.9, especially printed pages 177–181"
+    },
+    {
+      "id": "dobzhansky-ayala-stebbins-valentine-evolution-1977",
+      "title": "Evolution",
+      "author": "Theodosius Dobzhansky; Francisco J. Ayala; G. Ledyard Stebbins; James W. Valentine",
+      "year": "1977",
+      "kind": "inherited Notebook source",
+      "edition": "1977 edition",
+      "inspected": "Inherited source record; any fresh checks are identified separately.",
+      "reference": "PDF pages 3; p. 97; The Idea of Natural Selection; ; PDF pages 4; p. 98; discussion of survival of the fittest"
+    },
+    {
+      "id": "dugatkin-principles-animal-behavior-2014",
+      "title": "Principles of Animal Behavior",
+      "author": "Lee Alan Dugatkin",
+      "year": "2014",
+      "edition": "third edition",
+      "reference": "PDF pages 380, 381; pp. 354–355; Where to Eat; ; PDF pages 381, 382, 383; pp. 355–357; Where to Eat, Figures 11.9–11.10; ; PDF pages 383, 384; pp. 357–358; Specific Nutrient Constraints; ; PDF pages 377, 378; pp. 351–352; Optimal Foraging Theory; What to Eat"
+    },
+    {
+      "id": "ef2015",
+      "title": "Fitness surfaces and searches: Dembski, Ewert, and Marks’s search for design",
+      "author": "Joe Felsenstein and Tom English",
+      "year": 2015,
+      "kind": "primary online mathematical criticism",
+      "url": "https://pandasthumb.org/archives/2015/03/fitness-surface.html",
+      "inspected": "Original inspected in formal source audit; target is earlier Dembski–Ewert–Marks paper, not EM2017.",
+      "reference": "29 March 2015; landscape/search-distribution distinction"
+    },
+    {
+      "id": "em2017",
+      "title": "Conservation of Information in Coevolutionary Searches",
+      "author": "Winston Ewert and Robert J. Marks II",
+      "authors": [
+        "Winston Ewert",
+        "Robert J. Marks II"
+      ],
+      "year": 2017,
+      "kind": "research paper",
+      "publication_type": "journal article",
+      "url": "https://winstonewert.com/pdfs/2017_coevolutionary_lunches.pdf",
+      "doi": "10.5048/BIO-C.2017.1",
+      "venue": "BIO-Complexity",
+      "inspected": "Retained original; prior formal audit.",
+      "reference": "p.5, Theorems 1–2 and cost qualification"
+    },
+    {
+      "id": "foraging-combes-2020",
+      "title": "Kinematic flexibility allows bumblebees to increase energetic efficiency when carrying heavy loads",
+      "authors": "Stacey A. Combes; Susan F. Gagliardi; Callin M. Switzer; Michael E. Dillon",
+      "year": 2020,
+      "url": "https://doi.org/10.1126/sciadv.aay3115",
+      "doi": "10.1126/sciadv.aay3115",
+      "venue": "Science Advances 6(6), eaay3115",
+      "access": "Search-indexed primary full-text methods/results and author-institution PDF abstract inspected; direct PMC open presented a browser check",
+      "measured_endpoint": "Metabolic rate, wingbeat frequency, stroke amplitude under light and heavy loads in worker bumblebees.",
+      "supports": "Loaded flight has metabolic costs whose dependence on load is mediated by kinematics and loading history.",
+      "does_not_establish": "A universal linear joule-per-distance rule, route learning or reproductive response.",
+      "reference": ""
+    },
+    {
+      "id": "foraging-elliott-1988",
+      "title": "Foraging Behavior of a Central-Place Forager: Field Tests of Theoretical Predictions",
+      "authors": "Phillip F. Elliott",
+      "year": 1988,
+      "url": "https://doi.org/10.1086/284784",
+      "doi": "10.1086/284784",
+      "venue": "The American Naturalist 131(2)",
+      "access": "Publisher primary abstract inspected",
+      "measured_endpoint": "Cone choice, quality, handling-related features and distance from a central midden.",
+      "supports": "Pine-squirrel field observations supported some central-place predictions and qualified others.",
+      "does_not_establish": "Global route optimization, direct lifetime fitness or genetic response.",
+      "reference": ""
+    },
+    {
+      "id": "foraging-evans-2017",
+      "title": "Fast learning in free-foraging bumble bees is negatively correlated with lifetime resource collection",
+      "authors": "Lisa J. Evans; Karen E. Smith; Nigel E. Raine",
+      "year": 2017,
+      "url": "https://doi.org/10.1038/s41598-017-00389-0",
+      "doi": "10.1038/s41598-017-00389-0",
+      "venue": "Scientific Reports 7, 496",
+      "access": "Primary PubMed metadata/abstract and author-institution publication record inspected",
+      "measured_endpoint": "Individual laboratory learning and lifetime field resource collection.",
+      "supports": "Individual learning performance and lifetime resource collection can show a different association from colony-level foraging measures.",
+      "does_not_establish": "A universal disadvantage to learning, direct lifetime reproductive fitness or genetic adaptation.",
+      "reference": ""
+    },
+    {
+      "id": "foraging-lihoreau-2011",
+      "title": "Trade-off between travel distance and prioritization of high-reward sites in traplining bumblebees",
+      "authors": "Mathieu Lihoreau; Lars Chittka; Nigel E. Raine",
+      "year": 2011,
+      "url": "https://doi.org/10.1111/j.1365-2435.2011.01881.x",
+      "doi": "10.1111/j.1365-2435.2011.01881.x",
+      "venue": "Functional Ecology 25(6), 1284–1292",
+      "access": "Search-indexed author-hosted primary PDF summary inspected; direct opening returned an error",
+      "measured_endpoint": "Route order and responses to reward heterogeneity.",
+      "supports": "Bumblebee visitation choices trade travel distance against access to high-reward sites.",
+      "does_not_establish": "That distance alone maximizes fitness or a measured evolutionary change.",
+      "reference": ""
+    },
+    {
+      "id": "foraging-lihoreau-2012",
+      "title": "Radar Tracking and Motion-Sensitive Cameras on Flowers Reveal the Development of Pollinator Multi-Destination Routes over Large Spatial Scales",
+      "authors": "Mathieu Lihoreau; Nigel E. Raine; Andrew M. Reynolds; Ralph J. Stelzer; Ka S. Lim; Alan D. Smith; Juliet L. Osborne; Lars Chittka",
+      "year": 2012,
+      "url": "https://doi.org/10.1371/journal.pbio.1001392",
+      "doi": "10.1371/journal.pbio.1001392",
+      "venue": "PLOS Biology 10(9), e1001392",
+      "access": "Publisher full text inspected, especially abstract, results and methods",
+      "measured_endpoint": "Flower visitation sequences, selected radar flight paths, trip lengths and route acquisition.",
+      "supports": "Within-lifetime refinement of bumblebee foraging routes in a five-flower artificial array without trying every possible tour.",
+      "does_not_establish": "Genetic adaptation, direct energetic expenditure or measured reproductive success.",
+      "reference": ""
+    },
+    {
+      "id": "foraging-raine-2008",
+      "title": "The correlation of learning speed and natural foraging success in bumble-bees",
+      "authors": "Nigel E. Raine; Lars Chittka",
+      "year": 2008,
+      "url": "https://doi.org/10.1098/rspb.2007.1652",
+      "doi": "10.1098/rspb.2007.1652",
+      "venue": "Proceedings of the Royal Society B 275, 803–808",
+      "access": "Search-indexed primary PMC full-text methods/results/discussion and author PDF abstract inspected",
+      "measured_endpoint": "Associative learning performance and nectar collection per time; reproductive fitness was a proxy interpretation.",
+      "supports": "Colony-level laboratory learning-speed variation correlated with field nectar collection.",
+      "does_not_establish": "Direct offspring production, heritability or an experimental evolutionary response.",
+      "reference": ""
+    },
+    {
+      "id": "foraging-wetterer-1989",
+      "title": "Central place foraging theory: When load size affects travel time",
+      "authors": "James K. Wetterer",
+      "year": 1989,
+      "url": "https://doi.org/10.1016/0040-5809(89)90034-8",
+      "doi": "10.1016/0040-5809(89)90034-8",
+      "venue": "Theoretical Population Biology 36(3), 267–280",
+      "access": "Publisher primary abstract inspected",
+      "supports": "Changing the dependence of travel time on load changes central-place-foraging predictions.",
+      "does_not_establish": "A universal shortest-distance optimum or measured heritable evolutionary response.",
+      "reference": ""
+    },
+    {
+      "id": "foraging-woodgate-2017",
+      "title": "Continuous Radar Tracking Illustrates the Development of Multi-destination Routes of Bumblebees",
+      "authors": "Joseph L. Woodgate; James C. Makinson; Ka S. Lim; Andrew M. Reynolds; Lars Chittka",
+      "year": 2017,
+      "url": "https://doi.org/10.1038/s41598-017-17553-1",
+      "doi": "10.1038/s41598-017-17553-1",
+      "venue": "Scientific Reports 7, 17323",
+      "access": "Primary PubMed metadata and search-indexed PMC full-text discussion inspected; direct PMC open presented a browser check",
+      "measured_endpoint": "Continuous harmonic-radar flight trajectories and route development.",
+      "supports": "Route development and improved routing need not reliably attain the shortest tour in a more challenging arrangement.",
+      "does_not_establish": "Universal optimization or genetic evolution.",
+      "reference": ""
+    },
+    {
+      "id": "foraging2026",
+      "title": "Physical foraging costs: conditional selection model and exact checks",
+      "author": "More-free-lunches project research supplement",
+      "year": 2026,
+      "kind": "unpublished worked model",
+      "url": "MODEL_NOTES.html#foraging",
+      "inspected": "Independent biological workstream with explicit model assumptions; not empirical bee data.",
+      "reference": "F1–F2; 459 exact finite-census checks"
+    },
+    {
+      "id": "formal2026",
+      "title": "Formal counters to biological restrictions: proofs, checks, and limits",
+      "author": "More-free-lunches project research supplement",
+      "year": 2026,
+      "kind": "unpublished project analysis",
+      "url": "MODEL_NOTES.html#formal-counters",
+      "inspected": "Analytical arguments and executable exact checks with independent agent review; not external peer review.",
+      "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT"
+    },
+    {
+      "id": "futuyma-evolutionary-biology-1979",
+      "title": "Evolutionary Biology",
+      "author": "Douglas J. Futuyma",
+      "year": "1979",
+      "kind": "inherited Notebook source",
+      "inspected": "Inherited source record; any fresh checks are identified separately.",
+      "reference": ""
+    },
+    {
+      "id": "gregory-natural-selection-2009",
+      "title": "Understanding Natural Selection: Essential Concepts and Common Misconceptions",
+      "author": "T. Ryan Gregory",
+      "year": "2009",
+      "url": "https://doi.org/10.1007/s12052-009-0128-1",
+      "doi": "10.1007/s12052-009-0128-1",
+      "edition": "journal article",
+      "journal": "Evolution: Education and Outreach",
+      "volume": "2",
+      "pages": "156–175",
+      "reference": "PDF pages 3, 6; pp. 158, 161; Variation and Inheritance; Natural Selection and the Evolution of Populations; ; PDF pages 4, 6; pp. 159, 161; Non-random Differences in Survival and Reproduction; ; PDF pages 4; p. 159; Darwinian Fitness"
+    },
+    {
+      "id": "igel2004",
+      "title": "A No-Free-Lunch Theorem for Non-Uniform Distributions of Target Functions",
+      "author": "Christian Igel and Marc Toussaint",
+      "year": 2004,
+      "kind": "research paper",
+      "url": "https://christian-igel.github.io/paper/ANFLTfNUDoTF-orig.pdf",
+      "inspected": "Primary full text inspected in formal-countermodel workstream.",
+      "reference": "Theorem 5; pp.317–321"
+    },
+    {
+      "id": "pianka-evolutionary-ecology-1988",
+      "title": "Evolutionary Ecology",
+      "author": "Eric R. Pianka",
+      "year": "1988",
+      "kind": "inherited Notebook source",
+      "edition": "fourth edition",
+      "inspected": "Inherited source record; any fresh checks are identified separately.",
+      "reference": "PDF pages 96, 97; pp. 85–86; Resource Budgets and the Principle of Allocation; ; PDF pages 96; p. 85; Resource Acquisition and Allocation, opening discussion; ; PDF pages 103, 104; pp. 92–93; Foraging Tactics and Feeding Efficiency"
+    },
+    {
+      "id": "ross2002",
+      "title": "Searching for Search Algorithms: Experiments in Meta-search",
+      "author": "Brian J. Ross",
+      "authors": [
+        "Brian J. Ross"
+      ],
+      "year": 2002,
+      "publication_type": "technical report; submitted preprint",
+      "doi": null,
+      "venue": "Brock University Department of Computer Science",
+      "reference": "PDF1 cover; PDF2 abstract/printed1; printed n is PDF n+1"
+    },
+    {
+      "id": "theobald2005",
+      "title": "On the increase of biological information due to selection",
+      "author": "Douglas L. Theobald",
+      "authors": [
+        "Douglas L. Theobald"
+      ],
+      "year": 2005,
+      "publication_type": "three-page mathematical note; publication/peer-review status unverified",
+      "doi": null,
+      "reference": "PDF and printed pages both 1–3"
+    },
+    {
+      "id": "williams-adaptation-natural-selection-1968",
+      "title": "Adaptation and Natural Selection",
+      "author": "George C. Williams",
+      "year": "1968",
+      "kind": "inherited Notebook source",
+      "inspected": "Inherited source record; any fresh checks are identified separately.",
+      "reference": ""
+    },
+    {
+      "id": "wm2005",
+      "title": "Coevolutionary Free Lunches",
+      "author": "David H. Wolpert; William G. Macready",
+      "authors": [
+        "David H. Wolpert",
+        "William G. Macready"
+      ],
+      "year": 2005,
+      "publication_type": "journal article",
+      "url": "https://doi.org/10.1109/TEVC.2005.856205",
+      "doi": "10.1109/TEVC.2005.856205",
+      "venue": "IEEE Transactions on Evolutionary Computation",
+      "volume": 9,
+      "issue": 6,
+      "pages": "721–735",
+      "reference": "printed page = PDF position + 720"
+    }
+  ],
+  "story": [
+    {
+      "id": "constraints",
+      "title": "Living systems have costs",
+      "claim_ids": [
+        "C01",
+        "C03",
+        "C05"
+      ]
+    },
+    {
+      "id": "selection",
+      "title": "What makes a difference evolutionary?",
+      "claim_ids": [
+        "C02",
+        "C04",
+        "C10"
+      ]
+    },
+    {
+      "id": "foraging",
+      "title": "A home, resources, and a route",
+      "claim_ids": [
+        "C06",
+        "C07",
+        "C08",
+        "C09"
+      ]
+    },
+    {
+      "id": "landscapes",
+      "title": "From a physical mechanism to a landscape",
+      "claim_ids": [
+        "C11",
+        "C24",
+        "C31"
+      ]
+    },
+    {
+      "id": "nfl",
+      "title": "What no free lunch actually averages",
+      "claim_ids": [
+        "C12",
+        "C14",
+        "C15",
+        "C13"
+      ]
+    },
+    {
+      "id": "coevolution",
+      "title": "Changing the contest changes the theorem",
+      "claim_ids": [
+        "C16",
+        "C17",
+        "C18"
+      ]
+    },
+    {
+      "id": "oracles",
+      "title": "Information access has a price",
+      "claim_ids": [
+        "C19",
+        "C20",
+        "C27"
+      ]
+    },
+    {
+      "id": "s4s",
+      "title": "Which distribution over searches?",
+      "claim_ids": [
+        "C21",
+        "C22",
+        "C23",
+        "C26",
+        "C25"
+      ]
+    },
+    {
+      "id": "results",
+      "title": "What the present work adds",
+      "claim_ids": [
+        "C28",
+        "C29",
+        "C30"
+      ]
+    },
+    {
+      "id": "limits",
+      "title": "What remains unresolved",
+      "claim_ids": [
+        "C32"
+      ]
+    }
+  ],
+  "limitations": [
+    "Graph topology is not a truth or credibility score.",
+    "Prerequisites are editorial conceptual dependencies, not learner-outcome validation.",
+    "Private source locators remain in staging/research evidence."
+  ]
+}

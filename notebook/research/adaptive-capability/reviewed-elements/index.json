@@ -1,0 +1,1837 @@
+{
+  "schema": "evo-edu.notebook.reviewed_elements_index.v1",
+  "generated": "2026-09-21",
+  "review_statuses_included": [
+    "promoted",
+    "reviewed"
+  ],
+  "items": [
+    {
+      "id": "staged.claim.adaptive-capability.c01",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Organisms face material and energetic constraints",
+      "body": "Organisms obtain and allocate resources; movement, maintenance, growth and reproduction can compete for those resources.",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "Printed pp.85–86; part 000 PDF pp.96–97; resource budgets and allocation.",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Resource budgets alone do not identify the fitness consequences of every behavior."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "biology"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c02",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Heritable variation enables an evolutionary response",
+      "body": "An evolutionary response to selection depends on transmissible differences associated with reproductive outcomes.",
+      "source_anchors": [
+        {
+          "source_id": "gregory-natural-selection-2009",
+          "reference": "Printed pp.158,161; PDF pp.3,6; variation, inheritance and population evolution.",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Phenotypic sorting or within-lifetime learning alone does not establish a heritable response."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "biology"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c03",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Fitness concerns reproductive contribution in context",
+      "body": "Natural selection concerns differential reproductive contribution among variants in a specified population and environment.",
+      "source_anchors": [
+        {
+          "source_id": "gregory-natural-selection-2009",
+          "reference": "Printed p.159; PDF p.4; Darwinian fitness.",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "dobzhansky-ayala-stebbins-valentine-evolution-1977",
+          "reference": "Printed p.101; selected part PDF p.7; fitness components.",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "A fitness measure must name its life-cycle endpoint; survival, speed and energy intake are not interchangeable."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "biology"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c04",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Selection is a population process",
+      "body": "Heritable variants can change frequency because their reproductive contributions differ; drift and other processes can also change frequencies.",
+      "source_anchors": [
+        {
+          "source_id": "dobzhansky-ayala-stebbins-valentine-evolution-1977",
+          "reference": "Printed pp.97–98; selected part PDF pp.3–4; differential reproduction.",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "Printed pp.24–25; part 000 PDF pp.35–36; population genetics and mechanism comparison.",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "An observed frequency change alone is not evidence that selection caused it."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "biology"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c05",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Adaptation has limits and tradeoffs",
+      "body": "Adaptation is environment-relative and constrained by tradeoffs, history, available variation and stochastic population processes.",
+      "source_anchors": [
+        {
+          "source_id": "gregory-natural-selection-2009",
+          "reference": "Printed p.163; PDF p.8; limits, history and tradeoffs.",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "Printed pp.24–25; part 000 PDF pp.35–36; stochastic population processes.",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "It is not a guarantee of perfection, survival, or ever-increasing complexity."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "biology"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c06",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "A home and dispersed resources create a routing problem",
+      "body": "Travel between a home location and resources can generate route-dependent time and energetic costs through ordinary physical processes.",
+      "source_anchors": [
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Central-place foraging is broader than TSP: visits, rewards, loading, risk, depletion and return conditions may vary."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "model"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c07",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Energy is a conditional proxy for fitness",
+      "body": "More net energy implies greater reproductive output only under an additional life-history relationship, with other relevant effects controlled.",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "Printed p.85; part 000 PDF p.96; energy as a fitness proxy.",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Nutrient balance, predation, mating opportunities and saturation can alter or reverse the comparison."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "model"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c08",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Physical costs can define the payoff map",
+      "body": "A specified route cost and energy-to-reproduction map produce comparative payoffs without an extra mechanism that searches among arbitrary payoff functions.",
+      "source_anchors": [
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "The payoff-generating conditions are explicit assumptions; this does not establish their ultimate origin or frequency in nature."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "model"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c09",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "A route advantage can yield a selection response",
+      "body": "If two heritable route policies have expected outputs wA>wB, then p′=p wA/[p wA+(1−p)wB] exceeds p for 0<p<1.",
+      "source_anchors": [
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "This is a conditional deterministic frequency update, not a proof of global route optimization or fixation in finite populations."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "model"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c10",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Route learning is a different empirical endpoint",
+      "body": "Foraging experiments can measure improvement within an individual’s lifetime without demonstrating a change in inherited population traits.",
+      "source_anchors": [
+        {
+          "source_id": "foraging-lihoreau-2012",
+          "reference": "Publisher full text: Results and Methods; visitation sequences, radar trajectories and route development.",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Evidence for behavioral flexibility must not be relabeled as an experiment demonstrating genetic adaptation."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "biology"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c11",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "A fitness landscape is a model of a relation",
+      "body": "A landscape maps candidate states to an evaluated quantity for specified ecological and observational conditions.",
+      "source_anchors": [
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Biological fitness can be stochastic, frequency-dependent and time-dependent; a fixed scalar landscape is a simplification."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "model"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c12",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "An ensemble requires a probability law",
+      "body": "A statement averaged over possible problems requires a specified space of problems and weights over that space.",
+      "source_anchors": [
+        {
+          "source_id": "igel2004",
+          "reference": "Theorem 5; pp.317–321",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "book2017",
+          "reference": "Sections 5.8–5.9, especially printed pages 177–181",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Possible does not mean equally probable or physically realizable."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "definition"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c13",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "NFL is a qualified averaging theorem",
+      "body": "Classical finite-domain NFL equality compares appropriately matched non-repeating searches under its function-ensemble and performance assumptions.",
+      "source_anchors": [
+        {
+          "source_id": "igel2004",
+          "reference": "Theorem 5; pp.317–321",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Equality under that average does not assert equal performance on every individual problem or every restricted ecological family."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "theorem"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c14",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Comparisons need matched endpoints and budgets",
+      "body": "A search comparison must specify information access, costs, stopping rules, performance measures and treatment of repeated queries.",
+      "source_anchors": [
+        {
+          "source_id": "em2017",
+          "reference": "p.5, Theorems 1–2 and cost qualification",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Changing these can change the comparison even when the algorithms have the same informal goal."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "definition"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c15",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Permutation symmetry is about complete input relabelings",
+      "body": "For the relevant weighted finite NFL characterization, probabilities must be equal within complete input-permutation orbits.",
+      "source_anchors": [
+        {
+          "source_id": "igel2004",
+          "reference": "Theorem 5; pp.317–321",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Uniform genotype labels or symmetry of coordinates is weaker. Non-closure alone does not identify which chosen algorithm will win."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "theorem"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c16",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Coevolution changes what is being evaluated",
+      "body": "When outcomes depend on interacting evolving participants, performance depends on the interaction rule and how results are aggregated.",
+      "source_anchors": [
+        {
+          "source_id": "wm2005",
+          "reference": "Printed pp.724–726; PDF pp.4–6; generalized optimization examples.",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Coevolution is not itself a guarantee of a champion, improvement, or a free lunch."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "definition"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c17",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Champion selection changes the mathematical question",
+      "body": "Wolpert and Macready distinguish selecting a champion through self-play from performance measures over biological participants without that champion construction.",
+      "source_anchors": [
+        {
+          "source_id": "wm2005",
+          "reference": "Printed pp.724–725,727; PDF pp.4–5,7; self-play evaluation and champion selection.",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "The existence and scope of a free lunch depend on the precise generalized-optimization cost and protocol."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "application"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c18",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "The 2005 biological limitation has stated boundaries",
+      "body": "The biological NFL discussion retains averaging and performance assumptions; the original paper also discusses an organism-design objective involving extinction avoidance where NFL may not hold.",
+      "source_anchors": [
+        {
+          "source_id": "wm2005",
+          "reference": "Printed pp.725–726; PDF pp.5–6; Example 4 and its final organism-design exception.",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "That example is a qualified modeling exception, not a theorem that all ecological coevolution has a free lunch."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "application"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c19",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "An oracle formalizes an observation interface",
+      "body": "A mathematical oracle specifies the information an algorithm may obtain; it need not denote a conscious evaluator.",
+      "source_anchors": [
+        {
+          "source_id": "em2017",
+          "reference": "p.5, Theorems 1–2 and cost qualification",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "book2017",
+          "reference": "Sections 5.8–5.9, especially printed pages 177–181",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "A biological interpretation still needs a mechanism that realizes the interface and accounts for its costs."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "definition"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c20",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Full-row simulation preserves equal-call dominance",
+      "body": "In Ewert and Marks’s static matrix setting, a full-row policy can simulate a partial-cell policy at the same call count.",
+      "source_anchors": [
+        {
+          "source_id": "em2017",
+          "reference": "p.5, Theorems 1–2 and cost qualification",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "For every partial policy there exists a simulator; it is not a claim that all full-row policies outperform all partial policies."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "theorem"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c21",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Active information is relative to a baseline",
+      "body": "For a fixed success event with baseline probability p and achieved probability q, active information in bits is log2(q/p).",
+      "source_anchors": [
+        {
+          "source_id": "book2017",
+          "reference": "Section 5.4.2, printed pp.130ff; active information relative to a baseline.",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "It is not a context-free physical inventory, nor identical to Shannon mutual information."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "definition"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c22",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "The weak search-for-search bound needs a mean premise",
+      "body": "For fixed T and a>0, Pr[Q(T)≥a]≤E[Q(T)]/a. Substituting |T|/N requires that mean for T; a uniform barycenter supplies it for every T.",
+      "source_anchors": [
+        {
+          "source_id": "book2017",
+          "reference": "Printed p.177; weak search-for-search mean premise.",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "The inequality survives many nonuniform mechanisms; it does not establish their causal origin."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "theorem"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c23",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "The strict simplex tail uses a stronger measure",
+      "body": "Uniform volume on the N-category probability simplex gives a singleton tail Pr[Q(x)≥a]=(1−a)^(N−1).",
+      "source_anchors": [
+        {
+          "source_id": "book2017",
+          "reference": "Printed pp.178–180; strict uniform-simplex derivation.",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "It is a distribution over distributions, not an empirically measured distribution of ecological mechanisms."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "theorem"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c24",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Physics can induce a structured problem distribution",
+      "body": "Local interactions and resource geometry can constrain which payoff relations a mechanism generates.",
+      "source_anchors": [
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "The induced probability law must be supplied or investigated; invoking physical structure alone does not quantify its natural prevalence."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "application"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c25",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "A mechanism measure need not have simplex tails",
+      "body": "The project’s explicit environmental family has a uniform mean output law but fixed-target tails that differ greatly from uniform-simplex tails.",
+      "source_anchors": [
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "This is a countermodel to measure-independent extrapolation, preserving the valid weak bound."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "application"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c26",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Fixed targets differ from environmental alignment",
+      "body": "Matching an independently fixed genotype and matching the genotype favored by a realized environment are different probability events.",
+      "source_anchors": [
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Correlations between environment, target and process must remain in the calculation."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "definition"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c27",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Elementary costs can reverse oracle comparisons",
+      "body": "Early rejection can outperform indivisible full-row testing when charged per elementary assay, with an unbounded multiplicative expected-cost ratio in the IID example.",
+      "source_anchors": [
+        {
+          "source_id": "em2017",
+          "reference": "p.5, Theorems 1–2 and cost qualification",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Both costs remain exponential; the paper already acknowledges cheaper partial queries as a practical qualification."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "application"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c28",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Finite populations can track persistent environments",
+      "body": "A finite Wright–Fisher model yields a strict expected selection advantage over matched neutrality under stated heredity, feedback, persistence and variation assumptions.",
+      "source_anchors": [
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "A two-type tracking result is not open-ended complexity and does not price microscopic ecological encounters."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "application"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c29",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "A success statistic does not identify causal provenance",
+      "body": "If two causal accounts induce the same observable law, statistics of those observations cannot distinguish the accounts.",
+      "source_anchors": [
+        {
+          "source_id": "blancke2011",
+          "reference": "Author-hosted PDF pp.3–5",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "formal2026",
+          "reference": "MEASURE_COUNTERS M1–M5; BIOLOGICAL_COUNTERS B1–B3; RESOURCE_COUNTERS; PROVENANCE_ARGUMENT",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Equal observable laws are the premise; this does not establish actual equivalence of every natural and designed origin account."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "critique"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c30",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "The literature dispute concerns applicability as well as algebra",
+      "body": "Earlier critics distinguish valid search theorems from biological or design conclusions that require additional premises.",
+      "source_anchors": [
+        {
+          "source_id": "ef2015",
+          "reference": "29 March 2015; landscape/search-distribution distinction",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "English–Felsenstein 2015 targets the earlier search-for-search argument, not the 2017 coevolution simulator."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "critique"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c31",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Ecological feedback can alter future conditions",
+      "body": "Resource use and interacting populations can change the conditions that determine later outcomes.",
+      "source_anchors": [
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "A causal feedback loop is not a circular mathematical proof or an invalid teaching sequence."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "biology"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.c32",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Increasing coordinated complexity remains a separate question",
+      "body": "Route improvement, local optimization and two-type tracking do not establish increasing coordinated complexity within an organism.",
+      "source_anchors": [
+        {
+          "source_id": "book2017",
+          "reference": "Printed pp.67–68; increasing sophistication and human-scale complexity.",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "formal2026",
+          "reference": "SYNTHESIS: dispositions and remaining limits; BIOLOGICAL_COUNTERS: scope of two-type tracking.",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Operational complexity measures, mechanisms and evidence are needed to evaluate that stronger claim."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "editorial_synthesis_checked",
+        "category": "open"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.foraging-counterregimes",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "counterregimes",
+      "body": "More food, lower mortality risk or a changed environment can favor a longer route; erased heredity or absent variation can eliminate the heritable selection response.",
+      "source_anchors": [
+        {
+          "source_id": "foraging-lihoreau-2011",
+          "reference": "Search-indexed author-hosted primary PDF summary inspected; direct opening returned an error",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "foraging-combes-2020",
+          "reference": "Search-indexed primary full-text methods/results and author-institution PDF abstract inspected; direct PMC open presented a browser check",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "No blanket assertion that shorter routes or faster learning maximize lifetime fitness."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "proved_or_exactly_checked_in_declared_models",
+        "category": "formal_negative_controls"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.foraging-energy-reproduction-bridge",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "energy reproduction bridge",
+      "body": "A response of inherited foraging policies requires an empirical relationship between net returns, reproductive contribution and transmission; route learning alone does not establish it.",
+      "source_anchors": [
+        {
+          "source_id": "foraging-raine-2008",
+          "reference": "Search-indexed primary PMC full-text methods/results/discussion and author PDF abstract inspected",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "foraging-evans-2017",
+          "reference": "Primary PubMed metadata/abstract and author-institution publication record inspected",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Colony nectar rates, individual lifetime resource collection and reproductive fitness are different endpoints; social-insect workers require a colony-level reproductive model."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "explicit_assumption_not_measured_here",
+        "category": "biological_bridge_assumption"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.foraging-heritable-selection-response",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "heritable selection response",
+      "body": "For two policy types with positive affine energy-to-reproduction weights, symmetric mutation below one half, and matched finite births, selection raises expected descendant net energy by (1-2mu) beta p(1-p)(UA-UB)^2 / mean_w.",
+      "source_anchors": [
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Conditional ordinary selection identity; not measured evolutionary change in the cited bees."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "proved_and_exactly_checked",
+        "category": "formal_heritable_population_model"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.foraging-learned-route-improvement",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "learned route improvement",
+      "body": "Bumblebees refine multi-destination routes during individual foraging experience while sampling only part of the possible tour set.",
+      "source_anchors": [
+        {
+          "source_id": "foraging-lihoreau-2012",
+          "reference": "Publisher full text inspected, especially abstract, results and methods",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Within-lifetime learning; not a measured genetic evolutionary response or direct offspring count."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "observed_in_studied_conditions",
+        "category": "empirical_behavior"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.foraging-no-global-optimum-needed",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "no global optimum needed",
+      "body": "Route improvement does not require, and bee observations do not establish, reliable global-tour optimality across arbitrary arrangements.",
+      "source_anchors": [
+        {
+          "source_id": "foraging-woodgate-2017",
+          "reference": "Primary PubMed metadata and search-indexed PMC full-text discussion inspected; direct PMC open presented a browser check",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "foraging-lihoreau-2011",
+          "reference": "Search-indexed author-hosted primary PDF summary inspected; direct opening returned an error",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "The illustrative route pair has a known length difference; no claim is made about the shortest of all tours."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "supported_scope_limit",
+        "category": "scope_and_empirical_counterweight"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.foraging-no-recursive-evaluator-prerequisite",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "no recursive evaluator prerequisite",
+      "body": "Metabolic expenditure and resource intake can instantiate feedback about a realized behavior without an independently executed search for an optimal evaluator.",
+      "source_anchors": [
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Does not deny the need for environmental regularity, energetic expenditure, or an account of the origin of physical laws. The book already permits environmental extraction."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "countermodel_to_blanket_prerequisite",
+        "category": "formal_interpretive_criticism"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.foraging-physical-cost",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "physical cost",
+      "body": "Under equal rewards and fixed effective energy cost per distance, a longer foraging route has lower net energy without any computation of the globally shortest route.",
+      "source_anchors": [
+        {
+          "source_id": "foraging-combes-2020",
+          "reference": "Search-indexed primary full-text methods/results and author-institution PDF abstract inspected; direct PMC open presented a browser check",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Constant cost per distance is a simplifying case of a state-dependent metabolic-cost integral, not a universal empirical law."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "proved_under_assumptions",
+        "category": "formal_model"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.foraging-s4s-applicability-gap",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "s4s applicability gap",
+      "body": "A uniform-simplex rarity bound cannot determine the frequency of physical foraging payoff maps without a justified mapping from environmental mechanisms to that measure.",
+      "source_anchors": [
+        {
+          "source_id": "book2017",
+          "reference": "Sections 5.8–5.9, especially printed pages 177–181",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "foraging2026",
+          "reference": "F1–F2; 459 exact finite-census checks",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "The valid stipulated average theorem survives; this model does not estimate ecological prevalence or explain the ultimate origin of physical laws."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "mathematical_scope_objection",
+        "category": "formal_interpretive_criticism"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.foraging-tsp-special-case",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "tsp special case",
+      "body": "Central-place foraging includes optional visits, variable rewards, replenishment, load and risk; a fixed all-sites shortest tour is a special case.",
+      "source_anchors": [
+        {
+          "source_id": "foraging-wetterer-1989",
+          "reference": "Publisher primary abstract inspected",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "foraging-elliott-1988",
+          "reference": "Publisher primary abstract inspected",
+          "status": "reviewed"
+        },
+        {
+          "source_id": "foraging-lihoreau-2011",
+          "reference": "Search-indexed author-hosted primary PDF summary inspected; direct opening returned an error",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Neither a generic TSP analogy nor distance alone specifies biological fitness."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "literature_supported",
+        "category": "model_scope"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.library-adaptation-without-global-best",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Selection does not require a champion individual",
+      "body": "Survival and reproduction need not be restricted to one best individual; multiple sufficiently well-suited organisms can contribute to the next generation.",
+      "source_anchors": [
+        {
+          "source_id": "dobzhansky-ayala-stebbins-valentine-evolution-1977",
+          "reference": "PDF pages 4; p. 98; discussion of survival of the fittest",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Population success is not identical to the champion evaluation used in particular coevolutionary optimization theorems."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source_checked",
+        "category": "biological foundation"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.library-differential-reproduction",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Selection changes representation through reproduction",
+      "body": "Trait-associated differences in survival and reproduction can cause heritable variants to be represented at different rates in subsequent generations.",
+      "source_anchors": [
+        {
+          "source_id": "gregory-natural-selection-2009",
+          "reference": "PDF pages 4, 6; pp. 159, 161; Non-random Differences in Survival and Reproduction",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "A statistical tendency does not guarantee fixation in a finite population; drift and other evolutionary processes also affect outcomes."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source_checked",
+        "category": "biological foundation"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.library-energy-is-fitness-proxy",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Energy intake is an intermediate performance measure",
+      "body": "Optimal-foraging models often use energy acquired per time as a tractable currency, while lifetime successful offspring would more directly measure reproductive consequences.",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "PDF pages 96; p. 85; Resource Acquisition and Allocation, opening discussion",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Do not silently identify shorter travel or greater intake with higher fitness without a stated energy-to-reproduction link."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source_checked",
+        "category": "measurement guardrail"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.library-finite-resource-budgets",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Organisms allocate finite resource budgets",
+      "body": "Time, energy, and material devoted to foraging, maintenance, growth, and reproduction impose allocation constraints and potential tradeoffs.",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "PDF pages 96, 97; pp. 85–86; Resource Budgets and the Principle of Allocation",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Tradeoffs depend on context; the text does not establish a universal fixed tradeoff surface for every organism."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source_checked",
+        "category": "biophysical foundation"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.library-fitness-context",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Fitness concerns reproductive output in an environment",
+      "body": "Biological fitness describes reproductive contribution, commonly relative to alternatives in a specified environment; strength, longevity, or an isolated performance score is not itself fitness.",
+      "source_anchors": [
+        {
+          "source_id": "gregory-natural-selection-2009",
+          "reference": "PDF pages 4; p. 159; Darwinian Fitness",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "State the time interval, demographic context, and reproductive endpoint; changing environments can reverse rankings."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source_checked",
+        "category": "definition"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.library-heritable-variation",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Heritable variation permits cumulative selection",
+      "body": "Differences among organisms can persist between generations when traits have a heritable basis; nonheritable variation alone cannot sustain an inherited evolutionary response.",
+      "source_anchors": [
+        {
+          "source_id": "gregory-natural-selection-2009",
+          "reference": "PDF pages 3, 6; pp. 158, 161; Variation and Inheritance; Natural Selection and the Evolution of Populations",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Heritability is population- and environment-dependent; this does not imply that every phenotypic difference is genetic."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source_checked",
+        "category": "biological foundation"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.library-no-purposeful-selector",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Organism–environment interactions provide selection",
+      "body": "Natural selection can arise from the consequences of organism–environment interactions without a purposeful selecting agent.",
+      "source_anchors": [
+        {
+          "source_id": "dobzhansky-ayala-stebbins-valentine-evolution-1977",
+          "reference": "PDF pages 3; p. 97; The Idea of Natural Selection",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "This concerns the selection mechanism; it is not a proof about the ultimate origin of physical laws or environments."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source_checked",
+        "category": "mechanistic interpretation"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.library-nutrient-constraints",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Essential nutrients can constrain energy maximization",
+      "body": "A forager may need low-energy foods to obtain essential nutrients; Dugatkin’s moose example treats sodium requirements as a constraint on energy-oriented diet choice.",
+      "source_anchors": [
+        {
+          "source_id": "dugatkin-principles-animal-behavior-2014",
+          "reference": "PDF pages 383, 384; pp. 357–358; Specific Nutrient Constraints",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "The cited moose numbers are not generalized to other species; the original Belovsky study is cited by the textbook but not independently audited here."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source_checked",
+        "category": "ecological mechanism"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.library-optimization-is-conditional",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Optimal-foraging conclusions inherit their assumptions",
+      "body": "Optimal-foraging theory derives predictions within explicit constraints; the basic prey-choice example assumes measurable energetic returns, sequential encounters, accurate recognition, and selection favoring energy intake rate.",
+      "source_anchors": [
+        {
+          "source_id": "dugatkin-principles-animal-behavior-2014",
+          "reference": "PDF pages 377, 378; pp. 351–352; Optimal Foraging Theory; What to Eat",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "A model’s assumption that selection favors energy-rate maximization is not independent evidence that fitness always equals that rate."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source_checked",
+        "category": "model-assumption guardrail"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.library-patch-residence",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Travel time changes a model’s patch-residence prediction",
+      "body": "Under the marginal-value foraging model described here, increasing travel time between patches increases the predicted optimal time spent in a patch.",
+      "source_anchors": [
+        {
+          "source_id": "dugatkin-principles-animal-behavior-2014",
+          "reference": "PDF pages 381, 382, 383; pp. 355–357; Where to Eat, Figures 11.9–11.10",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "This is a conditional model prediction, not a claim that animals calculate the theorem or that every species maximizes this currency."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source_checked",
+        "category": "model result"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.library-repeatable-environment",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Foraging models can exploit environmental regularity",
+      "body": "The foraging model summarized by Pianka assumes statistically repeatable environmental structure, linking morphology and resource distributions to harvesting performance.",
+      "source_anchors": [
+        {
+          "source_id": "pianka-evolutionary-ecology-1988",
+          "reference": "PDF pages 103, 104; pp. 92–93; Foraging Tactics and Feeding Efficiency",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Statistical repeatability is an assumption of this model, not a demonstrated property of all environments. Animals have incomplete information."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source_checked",
+        "category": "model assumption"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.library-travel-costs",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "Travel consumes time and can impose other costs",
+      "body": "Moving between food patches can consume energy and time and expose a forager to predation; these consequences affect the value of leaving a depleted patch.",
+      "source_anchors": [
+        {
+          "source_id": "dugatkin-principles-animal-behavior-2014",
+          "reference": "PDF pages 380, 381; pp. 354–355; Where to Eat",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Distance alone does not encode load, speed, terrain, risk, handling, or depletion. These costs need explicit treatment in a route model."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source_checked",
+        "category": "ecological mechanism"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.theory-em-oracle-order",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "em · oracle order",
+      "body": "For every cell-query policy the 2017 theorem constructs a full-row policy with no smaller success at equal call count; its text explicitly allows cell queries to be cheaper in practice.",
+      "source_anchors": [
+        {
+          "source_id": "em2017",
+          "reference": "Printed pp. 5; PDF position 5; Theorem2 and following paragraph",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Exists a dominating simulator is not every row policy dominates; equal calls is not equal elementary work."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source theorem plus explicit qualification",
+        "category": "source_audit"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.theory-mde-s4s-measure",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "mde · s4s measure",
+      "body": "The book’s weak search-for-search step requires a specified mean baseline; its strict singleton-target tail additionally assumes uniform volume on the simplex of output distributions.",
+      "source_anchors": [
+        {
+          "source_id": "book2017",
+          "reference": "Printed pp. 177–180; PDF position 201; Sections5.8.3.2–5.8.3.3",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "This probability-over-distributions result is distinct from Ross’s procedural meta-search and from the 2017 oracle comparison; environment extraction is conceded at pp180–181."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source stated assumptions",
+        "category": "source_audit"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.theory-ross-meta-search",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "ross · meta search",
+      "body": "Genetic programming can synthesize problem-specific search algorithms from a declared search language and evaluate them by performance on optimization instances.",
+      "source_anchors": [
+        {
+          "source_id": "ross2002",
+          "reference": "Printed pp. 1–2; PDF position 2; Abstract; section1",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "This is constructive computational meta-search, not a theorem about the rarity of all output distributions and not a biological-origin demonstration."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source reports computational experiments",
+        "category": "source_audit"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.theory-ross-scope",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "ross · scope",
+      "body": "Meta-search results depend on representation, available primitives and computational budget; they do not establish unrestricted algorithm-generation ability.",
+      "source_anchors": [
+        {
+          "source_id": "ross2002",
+          "reference": "Printed pp. 21–22; PDF position 22; Conclusion",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "The report discusses language bias, bloat and limited search horizons. Technical report status retained."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source explicitly qualifies experiments",
+        "category": "source_audit"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.theory-theobald-false-covariance",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "theobald · false covariance",
+      "body": "The source’s asserted nonnegativity of Σq(q′−q) is false: q=(0.9,0.1), q′=(0.8,0.2) gives −0.08.",
+      "source_anchors": [
+        {
+          "source_id": "theobald2005",
+          "reference": "Printed pp. 3; PDF position 3; Equations10–15, especially13",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Cauchy–Schwarz does not imply the asserted sign; do not import this note as an unrestricted information-increase theorem."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "counterexample verified; original equation visually checked",
+        "category": "source_audit"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.theory-theobald-valid-identity",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "theobald · valid identity",
+      "body": "For positive initial frequencies and pure reweighting q′=qv with E_q v=1, entropy decline equals Cov_q(v,ln q)+D_KL(q′||q), not the KL term alone.",
+      "source_anchors": [
+        {
+          "source_id": "theobald2005",
+          "reference": "Printed pp. 1–2; PDF position 2; Equations3,6–8",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "The nonnegative KL term does not imply nonnegative entropy decline; mutual information needs a specified joint distribution. Source Eq3c lacks that joint-model justification."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "independently verified algebra; source prose needs correction",
+        "category": "source_audit"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.theory-wm-biological-conditions",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "wm · biological conditions",
+      "body": "The paper derives its general-biological NFL conclusion for specified trace-based population endpoints under a never-revisiting approximation in the GO representation.",
+      "source_anchors": [
+        {
+          "source_id": "wm2005",
+          "reference": "Printed pp. 725–726; PDF position 6; SectionIV-B Example4",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Absence of a champion alone is not the complete premise; representation, measure, endpoint and revisit assumptions matter."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "conditional source claim",
+        "category": "source_audit"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.theory-wm-biological-exception",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "wm · biological exception",
+      "body": "The paper itself allows that an organism-survival design problem evaluated after an unknown ecosystem change can behave as self-play and need not obey NFL.",
+      "source_anchors": [
+        {
+          "source_id": "wm2005",
+          "reference": "Printed pp. 726; PDF position 6; Example4 final paragraph",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "This is a biologically framed design objective, not a theorem that unguided biological evolution always obtains a free lunch. It qualifies categorical exclusion of biological subject matter."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source explicit exception",
+        "category": "source_audit"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.theory-wm-classical-conditions",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "wm · classical conditions",
+      "body": "The classic NFL equality in the paper uses finite-domain black-box searches compared after equal numbers of distinct queries and permutation-invariant problem weighting.",
+      "source_anchors": [
+        {
+          "source_id": "wm2005",
+          "reference": "Printed pp. 722; PDF position 2; SectionII; footnotes3–4",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "Actual algorithms may revisit; this comparison suppresses repeat costs by counting distinct samples. Do not infer equality for every ecological cost or endpoint."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source theorem exposition",
+        "category": "source_audit"
+      }
+    },
+    {
+      "id": "staged.claim.adaptive-capability.theory-wm-selfplay-endpoint",
+      "kind": "claim",
+      "concept_id": "notebook.concepts.adaptive-capability",
+      "title": "wm · selfplay endpoint",
+      "body": "Self-play allows the performance criterion to depend directly on the problem beyond the observed trace, permitting free-lunch distinctions under the GO framework.",
+      "source_anchors": [
+        {
+          "source_id": "wm2005",
+          "reference": "Printed pp. 724–725;727; PDF position 4; SectionIV-A; Example2; sectionV",
+          "status": "reviewed"
+        }
+      ],
+      "review": {
+        "status": "reviewed",
+        "reviewer": "Source agents and integrating research review",
+        "reviewed_on": "2026-09-20",
+        "notes": "The paper distinguishes uniform sampling of primitive payoff maps from induced distributions over derived maximin scores; do not collapse these ensembles."
+      },
+      "promotion_targets": [
+        "notebook/research/adaptive-capability/index.html"
+      ],
+      "source_context": {
+        "evidence_status": "source formal mechanism",
+        "category": "source_audit"
+      }
+    }
+  ],
+  "by_concept": {
+    "notebook.concepts.adaptive-capability": {
+      "path": "/notebook/research/adaptive-capability/reviewed-elements/adaptive-capability.json",
+      "reviewed_total": 63
+    }
+  },
+  "summary": {
+    "staged_total": 87,
+    "reviewed_total": 63,
+    "pending_total": 0
+  }
+}

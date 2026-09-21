@@ -1,0 +1,214 @@
+{
+  "status": "PASS",
+  "node_count": 99,
+  "edge_count": 235,
+  "source_count": 24,
+  "claim_count": 73,
+  "relation_counts": {
+    "documents": 96,
+    "prerequisite_for": 74,
+    "qualifies": 10,
+    "scope_qualification": 2,
+    "requires_bridge": 1,
+    "prior_art": 1,
+    "influences": 3,
+    "background_for": 12,
+    "supports": 23,
+    "compares_with": 3,
+    "contrasts_with": 3,
+    "supplies_payoff_component_for": 1,
+    "required_assumption_for": 1,
+    "distinct_evidence_type_from": 1,
+    "limits_scope_of": 2,
+    "supports_countermodel": 1,
+    "illustrates": 1
+  },
+  "prerequisite_dag": true,
+  "topological_order": [
+    "C01",
+    "C02",
+    "C03",
+    "C14",
+    "C16",
+    "concept.kl_divergence",
+    "concept.shannon_entropy",
+    "library:finite-resource-budgets",
+    "library:fitness-context",
+    "library:heritable-variation",
+    "C06",
+    "C04",
+    "C07",
+    "C11",
+    "C21",
+    "C17",
+    "theory.theobald.valid_identity",
+    "library:repeatable-environment",
+    "library:travel-costs",
+    "library:adaptation-without-global-best",
+    "library:energy-is-fitness-proxy",
+    "library:differential-reproduction",
+    "C05",
+    "C08",
+    "C12",
+    "C19",
+    "theory.ross.meta_search",
+    "C26",
+    "theory.theobald.false_covariance",
+    "library:patch-residence",
+    "library:nutrient-constraints",
+    "library:optimization-is-conditional",
+    "library:no-purposeful-selector",
+    "C28",
+    "C09",
+    "C24",
+    "C15",
+    "C22",
+    "theory.wm.selfplay_endpoint",
+    "C20",
+    "theory.em.oracle_order",
+    "theory.ross.scope",
+    "theory.mde.s4s_measure",
+    "C32",
+    "C13",
+    "theory.wm.classical_conditions",
+    "C23",
+    "C27",
+    "C18",
+    "theory.wm.biological_conditions",
+    "C25",
+    "theory.wm.biological_exception",
+    "C29",
+    "C30"
+  ],
+  "structural_bridges": [
+    {
+      "id": "C03",
+      "title": "Fitness concerns reproductive contribution in context",
+      "downstream_concepts": 31,
+      "direct_prerequisites": 0
+    },
+    {
+      "id": "C11",
+      "title": "A fitness landscape is a model of a relation",
+      "downstream_concepts": 20,
+      "direct_prerequisites": 1
+    },
+    {
+      "id": "C14",
+      "title": "Comparisons need matched endpoints and budgets",
+      "downstream_concepts": 18,
+      "direct_prerequisites": 0
+    },
+    {
+      "id": "C12",
+      "title": "An ensemble requires a probability law",
+      "downstream_concepts": 13,
+      "direct_prerequisites": 1
+    },
+    {
+      "id": "C01",
+      "title": "Organisms face material and energetic constraints",
+      "downstream_concepts": 8,
+      "direct_prerequisites": 0
+    },
+    {
+      "id": "C02",
+      "title": "Heritable variation enables an evolutionary response",
+      "downstream_concepts": 7,
+      "direct_prerequisites": 0
+    },
+    {
+      "id": "C06",
+      "title": "A home and dispersed resources create a routing problem",
+      "downstream_concepts": 7,
+      "direct_prerequisites": 1
+    },
+    {
+      "id": "C07",
+      "title": "Energy is a conditional proxy for fitness",
+      "downstream_concepts": 7,
+      "direct_prerequisites": 1
+    },
+    {
+      "id": "C21",
+      "title": "Active information is relative to a baseline",
+      "downstream_concepts": 7,
+      "direct_prerequisites": 1
+    },
+    {
+      "id": "C08",
+      "title": "Physical costs can define the payoff map",
+      "downstream_concepts": 6,
+      "direct_prerequisites": 2
+    },
+    {
+      "id": "library:finite-resource-budgets",
+      "title": "Organisms allocate finite resource budgets",
+      "downstream_concepts": 6,
+      "direct_prerequisites": 0
+    },
+    {
+      "id": "library:fitness-context",
+      "title": "Fitness concerns reproductive output in an environment",
+      "downstream_concepts": 6,
+      "direct_prerequisites": 0
+    }
+  ],
+  "uncited_claims": [],
+  "inherited_claims": [
+    "inherited:staged.claim.dobzhansky.selection-not-purposeful-selector.001",
+    "inherited:staged.claim.futuyma.adaptation-extinction-boundary.001",
+    "inherited:staged.claim.futuyma.mutation-undirected-variation.001",
+    "inherited:staged.claim.natural-selection.evidence-check.001",
+    "inherited:staged.claim.pianka.adaptation-multidimensional-compromise.001",
+    "inherited:staged.claim.pianka.allele-frequency-change.001",
+    "inherited:staged.claim.pianka.genetic-variation-maintenance.001",
+    "inherited:staged.claim.pianka.heritability-selection.001",
+    "inherited:staged.claim.pianka.populations-have-changing-properties.001",
+    "inherited:staged.claim.williams.adaptation-guardrail.001"
+  ],
+  "causal_feedback_cycle": [
+    "C31",
+    "C11",
+    "C04",
+    "C31"
+  ],
+  "missing_inference_bridges": [
+    {
+      "from_id": "C06",
+      "to_id": "C03",
+      "missing": "A measured or justified life-history link from route energy to reproductive contribution."
+    },
+    {
+      "from_id": "C10",
+      "to_id": "C09",
+      "missing": "Evidence of heritable variation and intergenerational response, beyond learned route improvement."
+    },
+    {
+      "from_id": "C24",
+      "to_id": "C23",
+      "missing": "A justified relationship between the physical generator measure and uniform-simplex volume."
+    },
+    {
+      "from_id": "C28",
+      "to_id": "C32",
+      "missing": "An operational coordinated-complexity endpoint and a mechanism reaching it."
+    },
+    {
+      "from_id": "C25",
+      "to_id": "C29",
+      "missing": "Additional causal evidence to identify origin beyond a performance statistic."
+    }
+  ],
+  "exact_permutation_check": {
+    "structured": {
+      "adaptive": "3/4",
+      "fixed": "1/2"
+    },
+    "complete_orbit": {
+      "adaptive": "1/2",
+      "fixed": "1/2"
+    }
+  },
+  "interpretation": "Reachability is structural importance for this editorial dependency graph, not truth, novelty, evidence strength or measured pedagogical success."
+}

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A source-linked journey from biological resource constraints to natural selection, no-free-lunch theorems, coevolution and search-for-search arguments.">
+  <title>From living systems to no free lunch · Evolution Notebook</title>
+  <link rel="stylesheet" href="story.css">
+  <script src="data.js" defer></script>
+  <script src="story.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#story">Skip to the explanation</a>
+<header class="masthead">
+  <a href="../../index.html" class="brand">EVOLUTION <span>NOTEBOOK</span></a>
+  <nav aria-label="Page navigation"><a href="#story">The story</a><a href="#graph">The connections</a><a href="#sources">The evidence</a></nav>
+</header>
+<main>
+  <section class="opening">
+    <p class="eyebrow">Ecology → selection → mathematical limits</p>
+    <h1>From living systems<br>to <em>no free lunch.</em></h1>
+    <p class="deck">Physical constraints give organisms consequences to live with. Selection can act on those consequences. What, then, do theorems about search actually rule out?</p>
+    <p class="opening-note">Follow the argument from resource budgets to probability measures. Along the way, separate observations, conditional models, theorems, and claims that need another premise.</p>
+    <a class="start" href="#constraints">Begin with a living system <span aria-hidden="true">↓</span></a>
+    <div class="reading-key" aria-label="Evidence categories"><span>● Established biology</span><span>◇ Conditional model</span><span>□ Mathematical result</span><span>↗ Interpretation</span></div>
+  </section>
+
+  <div class="story" id="story">
+    <aside class="visual" aria-label="Graphic for the current section">
+      <div class="visual-heading"><span id="scene-number">01 / 10</span><span id="scene-label">Resource budgets</span></div>
+      <div id="figure"><p>Resources support maintenance, movement, growth and reproduction. Allocating more to one use can leave less for another.</p></div>
+      <p id="figure-note" class="figure-note">Conceptual diagram. No particular organism’s energy budget is being estimated.</p>
+      <div id="controls"></div>
+      <p class="graphic-status" id="graphic-status" aria-live="polite"></p>
+    </aside>
+    <div class="steps">
+      <section class="step" id="constraints" data-scene="constraints">
+        <p class="step-label">01 · Biological foundations</p>
+        <h2>A living system has a budget.</h2>
+        <p>Organisms acquire resources and use them for maintenance, movement, growth and reproduction. Those uses can compete. An extra journey takes time; movement expends energy; food can replenish it.</p>
+        <p>These are causal relationships in an environment. They do not require an organism to calculate a numerical “fitness score.” Ecological theory models the relationships so that their consequences can be studied.</p>
+        <p>But <strong>energy intake is not fitness itself</strong>. A reproductive advantage depends on what additional energy changes, along with survival, nutrients, mating and other demands.</p>
+        <p class="citations"><a href="#ref-pianka-evolutionary-ecology-1988">Pianka, pp. 85–86</a> · <a href="#ref-gregory-natural-selection-2009">Gregory, p. 159</a></p>
+        <details><summary>What is established, and what still needs a model?</summary><p>Resource use and allocation are biological foundations. A specific conversion from saved energy to expected offspring is a separate empirical or modeling claim. We will state that conversion when we use it.</p></details>
+      </section>
+      <section class="step" id="selection" data-scene="selection">
+        <p class="step-label">02 · Biological foundations</p>
+        <h2>A difference becomes evolutionary through inheritance.</h2>
+        <p>Suppose variants differ in reproductive contribution. If relevant differences are transmitted, their representation can change across generations. Selection describes this population process; it has no need to anticipate a future destination.</p>
+        <p>Three distinctions matter: a better-performing individual is not automatically evidence of a heritable advantage; a frequency change can also reflect drift or migration; and a trait’s advantage depends on context.</p>
+        <p>Learning belongs here too. An animal can improve a route during its lifetime. That observation does not, by itself, demonstrate evolution of inherited route policies or learning rules.</p>
+        <p class="citations"><a href="#ref-gregory-natural-selection-2009">Gregory, pp. 158–161</a> · <a href="#ref-dobzhansky-ayala-stebbins-valentine-evolution-1977">Dobzhansky et al., pp. 97–98</a></p>
+        <details><summary>Prediction to check</summary><p>When reproductive differences are present but policy transmission is erased, the inherited population advantage in the next example disappears. The physical route-cost difference can remain.</p></details>
+      </section>
+      <section class="step" id="foraging" data-scene="foraging">
+        <p class="step-label">03 · A conditional worked model</p>
+        <h2>A home, four resources, two routes.</h2>
+        <p>Both candidate routes visit the same resources and return home. One travels 18 distance units, the other 24. Under an equal-cost-per-distance assumption, they collect the same gross reward but retain different net energy.</p>
+        <p>The interactive model assumes <strong>reproductive weight = 1 + β × net energy</strong>. It then compares selected and neutral offspring under the same census. With the displayed defaults, the expected share of policy A rises from 50% to about 56.5%.</p>
+        <p>No global route optimum is used. No extra process searches for the evaluator. The modeled energy loss follows from the journey, and the reproductive relationship is an explicit assumption.</p>
+        <p class="citations"><a href="#ref-foraging2026">Worked model and exact checks</a> · <a href="#ref-dugatkin-principles-animal-behavior-2014">Dugatkin, pp. 351–358</a></p>
+        <details><summary>Why this is only a special case of foraging</summary><p>Real animals may skip or revisit patches, carry changing loads, encounter risks, or trade distance against food quality. In central-place foraging, a fixed all-sites traveling-salesperson tour is a special case. A longer journey can be more profitable. The scene uses arbitrary units and hypothetical inherited policies; it is not a fitted bee experiment.</p></details>
+        <details><summary>What the bee experiments actually measured</summary><p>Lihoreau and colleagues observed route refinement over individual experience. Woodgate and colleagues show why improvement should not be equated with reliable global optimization. Neither result is a direct measurement of genetic adaptation or offspring production. In social bees, connecting worker foraging to fitness also requires a colony-level reproductive model.</p><p class="citations"><a href="#ref-foraging-lihoreau-2012">Lihoreau et al. 2012</a> · <a href="#ref-foraging-woodgate-2017">Woodgate et al. 2017</a></p></details>
+      </section>
+      <section class="step" id="landscapes" data-scene="landscapes">
+        <p class="step-label">04 · From mechanism to abstraction</p>
+        <h2>The landscape comes from the modeled relationship.</h2>
+        <p>A “fitness landscape” assigns an evaluated outcome to candidate states. In our route example, resource geometry, travel costs and the reproductive relationship generate that assignment.</p>
+        <p>Not every imaginable assignment fits those constraints. Nearby routes may share travel segments; related phenotypes may share physiological properties. That structure can make observations useful for future changes.</p>
+        <p>Biology also supplies complications: resource use can change the environment, other organisms can change the payoffs, and demographic sampling can alter outcomes. A fixed scalar landscape captures only part of that picture.</p>
+        <p class="citations"><a href="#ref-pianka-evolutionary-ecology-1988">Pianka, pp. 92–93</a> · <a href="#ref-formal2026">Environmental-measure model, M2–M4</a></p>
+        <div class="boundary"><strong>The inference we can make:</strong> a specified physical mechanism can generate structured payoffs. How frequently nature generates a particular useful structure is a further question.</div>
+      </section>
+      <section class="step" id="nfl" data-scene="nfl">
+        <p class="step-label">05 · A mathematical result</p>
+        <h2>“No free lunch” comes with an averaging rule.</h2>
+        <p>The classical finite-domain result compares appropriately matched searches that do not repeat queries, under a specified distribution of objective functions. The familiar uniform case includes every assignment of outputs to inputs.</p>
+        <p>A sharper way to inspect the condition is <strong>permutation symmetry</strong>: the relevant weights must agree across complete input-permutation orbits. Symmetry of genotype labels or coordinates alone is weaker.</p>
+        <p>The small example compares two policies, each making two distinct queries. On four oriented matching landscapes their success rates are ¾ and ½. On the complete twelve-function permutation orbit, both are ½.</p>
+        <p class="citations"><a href="#ref-igel2004">Igel &amp; Toussaint, Theorem 5</a> · <a href="#ref-formal2026">Exact non-repeating comparison, M5</a></p>
+        <details><summary>What the example does—and does not—show</summary><p>The performance difference is calculated, not inferred merely from non-closure. It does not contradict NFL: the structured ensemble changes a premise. NFL equality over its full average is compatible with advantages on restricted ecological families.</p></details>
+      </section>
+      <section class="step" id="coevolution" data-scene="coevolution">
+        <p class="step-label">06 · Coevolution and scope</p>
+        <h2>Changing the contest changes the question.</h2>
+        <p>Wolpert and Macready’s generalized optimization framework distinguishes self-play that selects a champion from particular biological population-performance measures. What gets evaluated, and how that evaluation depends on the problem, matters.</p>
+        <p>Their biological NFL construction has specified endpoints and a never-revisiting approximation. <strong>“No champion” is not the complete list of premises.</strong></p>
+        <p>The original paper also considers designing an organism to survive a later ecosystem change and allows that NFL may not hold for that objective. This qualifies a categorical exclusion of biological subject matter. It does not itself demonstrate that unguided evolution solves the design problem.</p>
+        <p class="citations"><a href="#ref-wm2005">Wolpert &amp; Macready 2005, pp. 724–727; especially p. 726</a></p>
+        <div class="boundary">Keep three things separate: the organisms, the interaction protocol, and the mathematical performance criterion.</div>
+      </section>
+      <section class="step" id="oracles" data-scene="oracles">
+        <p class="step-label">07 · Information access and cost</p>
+        <h2>An oracle is an interface. Its price still matters.</h2>
+        <p>In a mathematical model, an oracle tells an algorithm something about a candidate. The word does not imply a conscious evaluator. A biological interpretation needs to explain what physical interaction supplies that information.</p>
+        <p>Ewert and Marks show that a full-row query can simulate partial-cell queries at equal call count in their static matrix model. That information ordering survives our audit.</p>
+        <p>If a full row costs several elementary tests, early rejection can be cheaper: stop testing a candidate as soon as a required condition fails. Their paper explicitly acknowledges the possibility of cheaper partial queries.</p>
+        <p class="citations"><a href="#ref-em2017">Ewert &amp; Marks 2017, p. 5</a> · <a href="#ref-formal2026">Resource comparison</a></p>
+        <details><summary>What is held fixed in the graphic?</summary><p>Each independent candidate must pass all k independent tests, each with pass probability ½. Discovery must be confirmed; there is no free terminal guess. Full rows are indivisible. An unlimited supply is assumed for the expected waiting time. Both expected costs grow exponentially even though their ratio grows without bound.</p></details>
+      </section>
+      <section class="step" id="s4s" data-scene="s4s">
+        <p class="step-label">08 · The disputed inference</p>
+        <h2>Which “search for a search”?</h2>
+        <p>There is genuine computational meta-search: an algorithm can search for another algorithm. Ross’s experiments do that. The conservation-of-information argument instead evaluates probabilities over distributions of search outcomes. Shared words do not make these the same construction.</p>
+        <p>The weak bound uses the mean success probability for a fixed target. A stricter tail comes from <strong>uniform volume over the probability simplex</strong>. An ecological mechanism need not generate distributions according to that volume.</p>
+        <p>In the project’s eight-bit example, after 36 mutation trials, ask which output distributions give a separately fixed target at least a 95% chance of success. The mechanism-induced probability is 1/256; uniform-simplex volume gives 0.05²⁵⁵. Mean output probabilities remain uniform in both cases, so the weak bound survives.</p>
+        <p class="citations"><a href="#ref-book2017">Marks, Dembski &amp; Ewert, pp. 177–181</a> · <a href="#ref-ross2002">Ross 2002</a> · <a href="#ref-formal2026">M1–M4</a></p>
+        <div class="boundary"><strong>The foraging objection, made precise:</strong> ordinary physical consequences can supply a payoff map without a separately executed search for an evaluator. A theorem over simplex volume does not establish the frequency of such physical maps without a measure-transfer argument.</div>
+        <details><summary>Two qualifications the criticism must retain</summary><p>The book already concedes extraction of environmental information. The objection concerns its further rarity and origin inferences. Also, a separately fixed target differs from a target defined by the realized environment; the calculation above uses the fixed-target event.</p></details>
+      </section>
+      <section class="step" id="results" data-scene="results">
+        <p class="step-label">09 · The current research</p>
+        <h2>Specific capabilities, with their conditions attached.</h2>
+        <p>The current work combines several distinct results. A local-search idealization adapts efficiently on a stated structured landscape family. A separate finite-population model maintains an expected advantage in persistent environments. A resource comparison shows why call count is not the same as work.</p>
+        <p>The conceptual criticism has predecessors. English and Felsenstein raised closely related measure and applicability objections in 2015. Blancke and colleagues distinguished an authored simulation from foresight within its modeled mechanism.</p>
+        <p>The graph also records a cautionary case in an argument favoring information gain under selection: a Theobald note asserts a nonnegative expression that can equal −0.08. Selection need not reduce marginal genotype entropy. Useful evidence must survive the same checks regardless of its rhetorical direction.</p>
+        <p class="citations"><a href="#ref-formal2026">Current proofs and limits</a> · <a href="#ref-ef2015">English–Felsenstein 2015</a> · <a href="#ref-blancke2011">Blancke et al. 2011</a> · <a href="#ref-theobald2005">Theobald note: error-audited</a></p>
+      </section>
+      <section class="step" id="limits" data-scene="limits">
+        <p class="step-label">10 · What follows</p>
+        <h2>A theorem can be correct. Its application still needs evidence.</h2>
+        <p>Natural selection’s adaptive capability is compatible with qualified NFL equalities. The decisive questions concern the actual mechanism, the relevant distribution of environments, the observation channel, and the endpoint being measured.</p>
+        <p>The next empirical bridges are concrete: connect resource returns to reproductive contribution; establish inherited differences in the relevant policies; measure environmental regularity; account for feedback costs; and define the coordinated complexity that a stronger claim concerns.</p>
+        <p>Route improvement and two-type tracking do not answer all those questions. Neither does an average over arbitrary functions establish that biological adaptation is excluded.</p>
+        <a class="start" href="#graph">Inspect the conceptual connections <span aria-hidden="true">↓</span></a>
+      </section>
+    </div>
+  </div>
+
+  <section class="graph-section" id="graph">
+    <p class="eyebrow">Follow a claim back to its premises</p>
+    <h2>The connections behind the story.</h2>
+    <p class="section-intro">The graph distinguishes prerequisites, supporting passages, model assumptions, qualifications and causal feedback. A connection is not a numerical confidence score.</p>
+    <div class="graph-toolbar"><label for="claim-select">Inspect a claim <select id="claim-select"></select></label><div class="downloads"><a href="graph.json">Graph JSON</a><a href="graph.graphml">GraphML</a><a href="ANALYSIS.md">Dependency analysis</a></div></div>
+    <div class="graph-layout"><div id="graph-visual" aria-label="Selected claim and its immediate relationships"></div><article id="claim-detail" aria-live="polite"></article></div>
+    <details class="analysis-details"><summary>What did the dependency analysis find?</summary><div id="analysis-summary"></div></details>
+    <noscript><p>The interactive graph requires JavaScript. The complete <a href="graph.json">graph data</a> and <a href="ANALYSIS.md">written dependency analysis</a> remain available.</p></noscript>
+  </section>
+
+  <section class="source-section" id="sources">
+    <p class="eyebrow">Bibliography and source boundaries</p>
+    <h2>Evidence you can trace.</h2>
+    <p class="section-intro">Library books, primary papers, inherited Notebook records and unpublished project models have different roles. Page anchors and access limits appear with each source. Inclusion of a disputed source records the claim being audited; it does not endorse it.</p>
+    <div id="source-list"></div>
+    <noscript><p>Bibliographic records are available in <a href="graph.json">the graph export</a>.</p></noscript>
+  </section>
+</main>
+<footer><p>Evolution Notebook · Research synthesis, 20 September 2026</p><p>Built from the existing EvoEdu/TalkOrigins Notebook basis and a bounded Library expansion. Model scenes use illustrative values. No claim of new priority or universal evolutionary optimization.</p><a href="../../index.html">Return to the Notebook</a></footer>
+</body>
+</html>

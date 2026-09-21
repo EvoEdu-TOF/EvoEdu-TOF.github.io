@@ -1,0 +1,152 @@
+{
+  "schema": "evo-edu.notebook.reasoning_scaffold.v1",
+  "id": "notebook.concepts.adaptive-capability",
+  "title": "Adaptive capability, physical ecology and NFL",
+  "created": "2026-09-20",
+  "updated": "2026-09-20",
+  "status": "source-reviewed-research-synthesis",
+  "records": [
+    {
+      "id": "adaptive-constraints",
+      "type": "scope-and-evidence-check",
+      "question": "Why is energy not identical to fitness?",
+      "answer_summary": "Organisms obtain and allocate resources; movement, maintenance, growth and reproduction can compete for those resources. Natural selection concerns differential reproductive contribution among variants in a specified population and environment. Adaptation is environment-relative and constrained by tradeoffs, history, available variation and stochastic population processes.",
+      "verification_prompt": "Specify the reproductive endpoint and any intervening life-history assumptions.",
+      "misconception_guard": "Resource budgets alone do not identify the fitness consequences of every behavior. A fitness measure must name its life-cycle endpoint; survival, speed and energy intake are not interchangeable. It is not a guarantee of perfection, survival, or ever-increasing complexity.",
+      "didactopus_prompt_seed": "Why is energy not identical to fitness?",
+      "graph_claim_ids": [
+        "C01",
+        "C03",
+        "C05"
+      ]
+    },
+    {
+      "id": "adaptive-selection",
+      "type": "scope-and-evidence-check",
+      "question": "What makes improved performance an evolutionary response?",
+      "answer_summary": "An evolutionary response to selection depends on transmissible differences associated with reproductive outcomes. Heritable variants can change frequency because their reproductive contributions differ; drift and other processes can also change frequencies. Foraging experiments can measure improvement within an individual’s lifetime without demonstrating a change in inherited population traits.",
+      "verification_prompt": "Distinguish heritable population change from individual learning and drift.",
+      "misconception_guard": "Phenotypic sorting or within-lifetime learning alone does not establish a heritable response. An observed frequency change alone is not evidence that selection caused it. Evidence for behavioral flexibility must not be relabeled as an experiment demonstrating genetic adaptation.",
+      "didactopus_prompt_seed": "What makes improved performance an evolutionary response?",
+      "graph_claim_ids": [
+        "C02",
+        "C04",
+        "C10"
+      ]
+    },
+    {
+      "id": "adaptive-foraging",
+      "type": "scope-and-evidence-check",
+      "question": "Does a route penalty require a search for an evaluator?",
+      "answer_summary": "Travel between a home location and resources can generate route-dependent time and energetic costs through ordinary physical processes. More net energy implies greater reproductive output only under an additional life-history relationship, with other relevant effects controlled. A specified route cost and energy-to-reproduction map produce comparative payoffs without an extra mechanism that searches among arbitrary payoff functions. If two heritable route policies have expected outputs wA>wB, then p′=p wA/[p wA+(1−p)wB] exceeds p for 0<p<1.",
+      "verification_prompt": "State the physical cost model and separate it from the reproductive bridge.",
+      "misconception_guard": "Central-place foraging is broader than TSP: visits, rewards, loading, risk, depletion and return conditions may vary. Nutrient balance, predation, mating opportunities and saturation can alter or reverse the comparison. The payoff-generating conditions are explicit assumptions; this does not establish their ultimate origin or frequency in nature. This is a conditional deterministic frequency update, not a proof of global route optimization or fixation in finite populations.",
+      "didactopus_prompt_seed": "Does a route penalty require a search for an evaluator?",
+      "graph_claim_ids": [
+        "C06",
+        "C07",
+        "C08",
+        "C09"
+      ]
+    },
+    {
+      "id": "adaptive-landscapes",
+      "type": "scope-and-evidence-check",
+      "question": "Which landscape assignments can this mechanism produce?",
+      "answer_summary": "A landscape maps candidate states to an evaluated quantity for specified ecological and observational conditions. Local interactions and resource geometry can constrain which payoff relations a mechanism generates. Resource use and interacting populations can change the conditions that determine later outcomes.",
+      "verification_prompt": "Identify the geometry and physical constraints before proposing a probability law.",
+      "misconception_guard": "Biological fitness can be stochastic, frequency-dependent and time-dependent; a fixed scalar landscape is a simplification. The induced probability law must be supplied or investigated; invoking physical structure alone does not quantify its natural prevalence. A causal feedback loop is not a circular mathematical proof or an invalid teaching sequence.",
+      "didactopus_prompt_seed": "Which landscape assignments can this mechanism produce?",
+      "graph_claim_ids": [
+        "C11",
+        "C24",
+        "C31"
+      ]
+    },
+    {
+      "id": "adaptive-nfl",
+      "type": "scope-and-evidence-check",
+      "question": "What changes when the function orbit is completed?",
+      "answer_summary": "A statement averaged over possible problems requires a specified space of problems and weights over that space. A search comparison must specify information access, costs, stopping rules, performance measures and treatment of repeated queries. For the relevant weighted finite NFL characterization, probabilities must be equal within complete input-permutation orbits. Classical finite-domain NFL equality compares appropriately matched non-repeating searches under its function-ensemble and performance assumptions.",
+      "verification_prompt": "Compare the two explicit non-repeating policies and keep the ensemble weights fixed.",
+      "misconception_guard": "Possible does not mean equally probable or physically realizable. Changing these can change the comparison even when the algorithms have the same informal goal. Uniform genotype labels or symmetry of coordinates is weaker. Non-closure alone does not identify which chosen algorithm will win. Equality under that average does not assert equal performance on every individual problem or every restricted ecological family.",
+      "didactopus_prompt_seed": "What changes when the function orbit is completed?",
+      "graph_claim_ids": [
+        "C12",
+        "C14",
+        "C15",
+        "C13"
+      ]
+    },
+    {
+      "id": "adaptive-coevolution",
+      "type": "scope-and-evidence-check",
+      "question": "Is absence of a champion a sufficient biological NFL premise?",
+      "answer_summary": "When outcomes depend on interacting evolving participants, performance depends on the interaction rule and how results are aggregated. Wolpert and Macready distinguish selecting a champion through self-play from performance measures over biological participants without that champion construction. The biological NFL discussion retains averaging and performance assumptions; the original paper also discusses an organism-design objective involving extinction avoidance where NFL may not hold.",
+      "verification_prompt": "State the endpoint, averaging law and revisiting assumptions; distinguish organism design from natural evolution.",
+      "misconception_guard": "Coevolution is not itself a guarantee of a champion, improvement, or a free lunch. The existence and scope of a free lunch depend on the precise generalized-optimization cost and protocol. That example is a qualified modeling exception, not a theorem that all ecological coevolution has a free lunch.",
+      "didactopus_prompt_seed": "Is absence of a champion a sufficient biological NFL premise?",
+      "graph_claim_ids": [
+        "C16",
+        "C17",
+        "C18"
+      ]
+    },
+    {
+      "id": "adaptive-oracles",
+      "type": "scope-and-evidence-check",
+      "question": "Why can the better information interface cost more?",
+      "answer_summary": "A mathematical oracle specifies the information an algorithm may obtain; it need not denote a conscious evaluator. In Ewert and Marks’s static matrix setting, a full-row policy can simulate a partial-cell policy at the same call count. Early rejection can outperform indivisible full-row testing when charged per elementary assay, with an unbounded multiplicative expected-cost ratio in the IID example.",
+      "verification_prompt": "Hold the discovery endpoint fixed and state whether the budget counts calls or elementary tests.",
+      "misconception_guard": "A biological interpretation still needs a mechanism that realizes the interface and accounts for its costs. For every partial policy there exists a simulator; it is not a claim that all full-row policies outperform all partial policies. Both costs remain exponential; the paper already acknowledges cheaper partial queries as a practical qualification.",
+      "didactopus_prompt_seed": "Why can the better information interface cost more?",
+      "graph_claim_ids": [
+        "C19",
+        "C20",
+        "C27"
+      ]
+    },
+    {
+      "id": "adaptive-s4s",
+      "type": "scope-and-evidence-check",
+      "question": "Does uniform simplex volume describe a physical generator?",
+      "answer_summary": "For a fixed success event with baseline probability p and achieved probability q, active information in bits is log2(q/p). For fixed T and a>0, Pr[Q(T)≥a]≤E[Q(T)]/a. Substituting |T|/N requires that mean for T; a uniform barycenter supplies it for every T. Uniform volume on the N-category probability simplex gives a singleton tail Pr[Q(x)≥a]=(1−a)^(N−1). Matching an independently fixed genotype and matching the genotype favored by a realized environment are different probability events. The project’s explicit environmental family has a uniform mean output law but fixed-target tails that differ greatly from uniform-simplex tails.",
+      "verification_prompt": "Identify the random object, target event, probability measure and missing measure-transfer premise.",
+      "misconception_guard": "It is not a context-free physical inventory, nor identical to Shannon mutual information. The inequality survives many nonuniform mechanisms; it does not establish their causal origin. It is a distribution over distributions, not an empirically measured distribution of ecological mechanisms. Correlations between environment, target and process must remain in the calculation. This is a countermodel to measure-independent extrapolation, preserving the valid weak bound.",
+      "didactopus_prompt_seed": "Does uniform simplex volume describe a physical generator?",
+      "graph_claim_ids": [
+        "C21",
+        "C22",
+        "C23",
+        "C26",
+        "C25"
+      ]
+    },
+    {
+      "id": "adaptive-results",
+      "type": "scope-and-evidence-check",
+      "question": "Which results establish tracking, and which establish complexity?",
+      "answer_summary": "A finite Wright–Fisher model yields a strict expected selection advantage over matched neutrality under stated heredity, feedback, persistence and variation assumptions. If two causal accounts induce the same observable law, statistics of those observations cannot distinguish the accounts. Earlier critics distinguish valid search theorems from biological or design conclusions that require additional premises.",
+      "verification_prompt": "Keep model endpoints separate and identify established prior criticism.",
+      "misconception_guard": "A two-type tracking result is not open-ended complexity and does not price microscopic ecological encounters. Equal observable laws are the premise; this does not establish actual equivalence of every natural and designed origin account. English–Felsenstein 2015 targets the earlier search-for-search argument, not the 2017 coevolution simulator.",
+      "didactopus_prompt_seed": "Which results establish tracking, and which establish complexity?",
+      "graph_claim_ids": [
+        "C28",
+        "C29",
+        "C30"
+      ]
+    },
+    {
+      "id": "adaptive-limits",
+      "type": "scope-and-evidence-check",
+      "question": "Which conclusion requires an additional premise?",
+      "answer_summary": "Route improvement, local optimization and two-type tracking do not establish increasing coordinated complexity within an organism.",
+      "verification_prompt": "Name a missing empirical, mathematical or causal-identification bridge rather than asserting a universal result.",
+      "misconception_guard": "Operational complexity measures, mechanisms and evidence are needed to evaluate that stronger claim.",
+      "didactopus_prompt_seed": "Which conclusion requires an additional premise?",
+      "graph_claim_ids": [
+        "C32"
+      ]
+    }
+  ]
+}
